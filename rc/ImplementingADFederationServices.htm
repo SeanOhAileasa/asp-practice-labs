@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ImplementingADFederationServices_files/print-styles.css" rel="stylesheet">
+    <script src="ImplementingADFederationServices_files/jquery.min.js"></script>
+    <script src="ImplementingADFederationServices_files/jspdf.js"></script>
+    <script src="ImplementingADFederationServices_files/from_html.js"></script>
+    <script src="ImplementingADFederationServices_files/addimage.js"></script>
+    <script src="ImplementingADFederationServices_files/filesaver.js"></script>
+    <script src="ImplementingADFederationServices_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="+eruXe6lykDw2gzg7BG/N1eZbM64hB313q8eMUf2GI1x6nohixGwqcOZJ6hpjSfOQqfepK2hEisEjppSiAP4O42WX1WTq62I8muMoivQfis=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Implementing AD Federation Services</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Prepare System Requirements for ADFS Resource Partner</li><li>Exercise 2 - Prepare System Requirements for ADFS Accounts Partner</li><li>Exercise 3 - Enable Name Resolution for Resource and Account Domains</li><li>Exercise 4 - Prepare Requirements for AD FS Server Resource Partner</li><li>Exercise 5 - Install and Configure AD Federation Services</li><li>Exercise 6 - Create AD Federation Services Trusts</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m22-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>ADFS</div>
+<div>IIS</div>
+<div>GPO</div>
+</div>
+<p id="cn-m22-5">Welcome to the <b>Implementing AD Federation Services </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m22-9">In this module, you will complete the following exercises:</p>
+<ul id="cn-m22-10">
+<li id="cn-m22-10">Prepare System Requirements for ADFS Resource Partner</li>
+<li id="cn-m22-11">Prepare System Requirements for ADFS Accounts Partner</li>
+<li id="cn-m22-12">Enable Name Resolution for Resource and Account Domains</li>
+<li id="cn-m22-13">Prepare Requirements for AD FS Server Resource Partner</li>
+<li id="cn-m22-14">Install and Configure AD Federation Services</li>
+<li id="cn-m22-15">Create AD Federation Services Trusts</li>
+</ul>
+<p id="cn-m22-16">After completing this lab, you will be able to:</p>
+<ul id="cn-m22-17">
+<li id="cn-m22-17">Add and install AD Certificate Services</li>
+<li id="cn-m22-18">Export root CA certificate to a file</li>
+<li id="cn-m22-19">Configure custom certificate template on CA server</li>
+<li id="cn-m22-20">Allow issuance of the new template</li>
+<li id="cn-m22-21">Request web certificate for ADFS server</li>
+<li id="cn-m22-22">Install a new AD DS forest</li>
+<li id="cn-m22-23">Install and configure AD Certificate Services</li>
+<li id="cn-m22-24">Export root CA certificate</li>
+<li id="cn-m22-25">Configure custom certificate template on CA server</li>
+<li id="cn-m22-26">Allow issuance of the new template</li>
+<li id="cn-m22-27">Request web certificate for ADFS server</li>
+<li id="cn-m22-28">Create GPO for trusted root CA in PRACTICELABS.COM and PRACTICEIT.CO.UK domains</li>
+<li id="cn-m22-29">Configure alternate DNS and DNS forwarding</li>
+<li id="cn-m22-30">Install IIS on PLABDM01</li>
+<li id="cn-m22-31">Request computer certificate for IIS</li>
+<li id="cn-m22-32">Configure SSL bindings</li>
+<li id="cn-m22-33">Download a sample claims application</li>
+<li id="cn-m22-34">Add web application</li>
+<li id="cn-m22-35">Install IIS on PLABDC01 and PLABSA01 that will run AD FS</li>
+<li id="cn-m22-36">Add ADFS feature in the resource partner</li>
+<li id="cn-m22-37">Configure a standalone federation server</li>
+<li id="cn-m22-38">Verify the availability of federation metadata on AD FS Server</li>
+<li id="cn-m22-39">Install AD FS in accounts partner domain</li>
+<li id="cn-m22-40">Configure a standalone federation server in accounts partner organization</li>
+<li id="cn-m22-41">Verify the availability of federation metadata on AD FS Server on accounts partner</li>
+<li id="cn-m22-42">Enable claims provider trust</li>
+<li id="cn-m22-43">Configure the Windows Identity Foundation Federation Utility</li>
+<li id="cn-m22-44">Configure a relying party trust for the claims web application</li>
+<li id="cn-m22-45">Configure claim rules for the relying party trust</li>
+<li id="cn-m22-46">Create a claims provider trust for the claims web application</li>
+<li id="cn-m22-47">Configure claim rules for the claims provider trust</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m22-49">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m22-50">
+<li id="cn-m22-50"><b>CAS-003 </b>4.3 Given a scenario, integrate and 
+troubleshoot advanced authentication and authorization technologies to 
+support enterprise security objectives.</li>
+</ul>
+<span class="cn-quote" id="cn-m22-51"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m22-53">It will take approximately <b>2 hours </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m22-57">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m22-58">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-60"><b>Lab Topology</b></h2>
+<p id="cn-m22-61">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m22-62">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m22-63">
+<li id="cn-m22-63"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m22-64"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m22-65"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+<li id="cn-m22-66"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+<li id="cn-m22-67"><b>PLABDM02 </b>(Windows Server 2012 R2 - Domain Member Server)</li>
+<li id="cn-m22-68"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m22-69"><img class="cn-img" id="cn-image-m22-c-0" src="ImplementingADFederationServices_files/image-m22-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m22-70">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-71"><b>Exercise 1 - Prepare System Requirements for ADFS Resource Partner</b></h2>
+<p id="cn-m22-72">The administration of network resources such as files,
+ folders, printers or network applications can be managed by setting up 
+access control lists (ACLs) to users, groups in Active Directory Domain 
+Services or AD DS. When a user logs in to the domain by presenting their
+ credential or identity and is successfully signed-in, they are granted 
+access to corporate assets based on their role in the network.</p>
+<p id="cn-m22-73">When two distinct organizations, such as business 
+affiliates, need to share network resources, a federation can be 
+established between the companies. A federation is a collection of 
+realms or security domains with established relationships for sharing 
+corporate assets.</p>
+<p id="cn-m22-74">Active Directory Federation Services or AD FS is a 
+Microsoft technology that provides identity federation that uses 
+claims-based authentication. A claim is a statement regarding a user 
+such as a user’s name, e-mail address among other user attributes that 
+identify the user to the application or resource that they had 
+requested.</p>
+<p id="cn-m22-75">When setting up AD FS, it typically involves two security domains: The Resource Partner and the Accounts Partner.</p>
+<p id="cn-m22-76">The Resource Partner is the domain where the network 
+resource is located. This resource is typically a web application or 
+other type of asset that is shared with an external organization.</p>
+<p id="cn-m22-77">The Account Partner is the domain that holds the 
+accounts, such as users, who will access the corporate assets located in
+ the Resource Partner.</p>
+<p id="cn-m22-78">In this lab, the domain called PRACTICELABS.COM is the resource domain where a sample claims-aware application will be created.</p>
+<p id="cn-m22-79">To get more information about AD FS Resource partner, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m22-81">After completing this exercise, you will be able to:</p>
+<ul id="cn-m22-82">
+<li id="cn-m22-82">Add and install AD Certificate Services</li>
+<li id="cn-m22-83">Export root CA certificate to a file</li>
+<li id="cn-m22-84">Configure custom certificate template on CA server</li>
+<li id="cn-m22-85">Allow issuance of the new template</li>
+<li id="cn-m22-86">Request web certificate for ADFS server</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m22-88">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m22-89">
+<li id="cn-m22-89"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m22-90"><b>PLABDM01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-91"><b>PLABSA01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-92"><b>PLABWIN10 </b>(Windows 10 Enterprise - Domain Workstation)</li>
+</ul>
+<p id="cn-m22-93"><img class="cn-img" id="cn-image-m22-c-1" src="ImplementingADFederationServices_files/image-m22-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m22-94"><b>Task 1 - Add and install AD Certificate Services</b></h3>
+<p id="cn-m22-95">You will now install Certificate Services on 
+PRACTICELABS.COM domain. The AD CS will be configured as the root 
+Certification Authority for the AD domain.</p>
+<p id="cn-m22-96">You will later establish a certificate trust between PRACTICEIT.CO.UK and PRACTICELABS.COM.</p>
+<h4 id="cn-m22-97"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-98">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m22-99">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select Windows PowerShell.</p>
+<h4 id="cn-m22-100"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-101">In the <b>Windows PowerShell </b>window, to install <b>AD Certificate Services</b>, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-102"><code>Add-WindowsFeature -Name ADCS-Cert-Authority -IncludeManagementTools
+</code></pre>
+<p id="cn-m22-103"></p><figure><img class="cn-img" id="cn-image-m22-c-2" src="ImplementingADFederationServices_files/image-m22-c-2.jpg" alt="Figure 1.1 Screenshot of PLABDC01:  A command is entered in Windows PowerShell to install Active Directory Certificate Services."><figcaption>Figure 1.1 Screenshot of PLABDC01:  A command is entered in Windows PowerShell to install Active Directory Certificate Services.</figcaption></figure><p></p>
+<h4 id="cn-m22-105"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-106">The installation of AD Certificate Services is in progress.</p>
+<p id="cn-m22-107">You will get a system notification when the installation is successfully completed.</p>
+<p id="cn-m22-108">In the next prompt, to install AD Certificate Services using default settings, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-109"><code>Install-AdcsCertificationAuthority -CAType EnterpriseRootCA
+</code></pre>
+<h4 id="cn-m22-111"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-112">Then, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-113"><code>a
+</code></pre>
+<p id="cn-m22-114"></p><figure><img class="cn-img" id="cn-image-m22-c-3" src="ImplementingADFederationServices_files/image-m22-c-3.jpg" alt="Figure 1.2 Screenshot of PLABDC01: A system prompt is displayed to install Active Directory Certificate Services."><figcaption>Figure 1.2 Screenshot of PLABDC01: A system prompt is displayed to install Active Directory Certificate Services.</figcaption></figure><p></p>
+<h4 id="cn-m22-116"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-117">After <b>Certification Authority </b>is successfully installed, minimize <b>Windows PowerShell</b>.</p>
+<p id="cn-m22-118"></p><figure><img class="cn-img" id="cn-image-m22-c-4" src="ImplementingADFederationServices_files/image-m22-c-4.jpg" alt="Figure 1.3 Screenshot of PLABDC01: Windows PowerShell confirms the successful installation of Active Directory Certificate Services."><figcaption>Figure
+ 1.3 Screenshot of PLABDC01: Windows PowerShell confirms the successful 
+installation of Active Directory Certificate Services.</figcaption></figure><p></p>
+<h3 id="cn-m22-120"><b>Task 2 -  Export root CA certificate to a file</b></h3>
+<p id="cn-m22-121">In this task, the root CA will be exported to a file 
+and will later be used to create a certificate trust with an external 
+organization.</p>
+<p id="cn-m22-122">To export the root CA certificate, perform the following steps:</p>
+<h4 id="cn-m22-123"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-124">On <b>PLABDC01</b>, resume the <b>Server Manager &gt; Dashboard </b>window from the taskbar.</p>
+<p id="cn-m22-125">Click <b>Tools </b>and select <b>Certification Authority</b>.</p>
+<h4 id="cn-m22-126"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-127">In the <b>Certification Authority </b>console window, click <b>PRACTICELABS-PLABDC01-CA</b>.</p>
+<p id="cn-m22-128">Then, right-click <b>PRACTICELABS-PLABDC01-CA </b>and select <b>Properties</b>.</p>
+<p id="cn-m22-129"></p><figure><img class="cn-img" id="cn-image-m22-c-5" src="ImplementingADFederationServices_files/image-m22-c-5.jpg" alt="Figure 1.4 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.4 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-131"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-132">In the <b>PRACTICELABS-PLABDC01-CA Properties </b>dialog box, click <b>View Certificate</b>.</p>
+<p id="cn-m22-133"></p><figure><img class="cn-img" id="cn-image-m22-c-6" src="ImplementingADFederationServices_files/image-m22-c-6.jpg" alt="Figure 1.5 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.5 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-135"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-136">In the <b>Certificates </b>dialog box, click <b>Details </b>tab.</p>
+<h4 id="cn-m22-137"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-138">Under the <b>Details </b>tab, select <b>Copy to File</b>.</p>
+<p id="cn-m22-139"></p><figure><img class="cn-img" id="cn-image-m22-c-7" src="ImplementingADFederationServices_files/image-m22-c-7.jpg" alt="Figure 1.6 Screenshot of PLABDC01: The Certificates dialog box is displayed."><figcaption>Figure 1.6 Screenshot of PLABDC01: The Certificates dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-141"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-142">In the <b>Certificate Export Wizard </b>window, select the <b>Welcome to the Certificate Export Wizard </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-143"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-144">In the <b>Export File Format </b>page, keep the default selection and click <b>Next</b>.</p>
+<h4 id="cn-m22-145"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-146">In the <b>File to Export </b>page, type the following path and click <b>Next</b>:</p>
+<pre id="cn-m22-147"><code>c:\plabdc01
+</code></pre>
+<p id="cn-m22-148"></p><figure><img class="cn-img" id="cn-image-m22-c-8" src="ImplementingADFederationServices_files/image-m22-c-8.jpg" alt="Figure 1.7 Screenshot of PLABDC01: The Certificate Export Wizard window, File to Export page is displayed."><figcaption>Figure 1.7 Screenshot of PLABDC01: The Certificate Export Wizard window, File to Export page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-150"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-151">In the <b>Completing the Certificate Export Wizard </b>page, click <b>Finish</b>.</p>
+<h4 id="cn-m22-152"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-153">Click <b>OK </b>when prompted that export was successful.</p>
+<p id="cn-m22-154"></p><figure><img class="cn-img" id="cn-image-m22-c-9" src="ImplementingADFederationServices_files/image-m22-c-9.jpg" alt="Figure 1.8 Screenshot of PLABDC01: The Certificate Export Wizard dialog box  is displayed with the OK button highlighted."><figcaption>Figure 1.8 Screenshot of PLABDC01: The Certificate Export Wizard dialog box  is displayed with the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m22-156"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-157">Click <b>OK </b>in the <b>Certificate </b>dialog box.</p>
+<p id="cn-m22-158"></p><figure><img class="cn-img" id="cn-image-m22-c-10" src="ImplementingADFederationServices_files/image-m22-c-10.jpg" alt="Figure 1.9 Screenshot of PLABDC01: The Certificate dialog box is displayed is displayed with the OK button highlighted."><figcaption>Figure 1.9 Screenshot of PLABDC01: The Certificate dialog box is displayed is displayed with the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m22-160"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-161">Similarly, click <b>OK </b>in the <b>PRACTICELABS-PLABDC01-CA Properties </b>dialog box.</p>
+<p id="cn-m22-162"></p><figure><img class="cn-img" id="cn-image-m22-c-11" src="ImplementingADFederationServices_files/image-m22-c-11.jpg" alt="Figure 1.10 Screenshot of PLABDC01: The PRACTICELABS-PLABDC01-CA Properties dialog box is displayed with the OK button highlighted."><figcaption>Figure
+ 1.10 Screenshot of PLABDC01: The PRACTICELABS-PLABDC01-CA Properties 
+dialog box is displayed with the OK button highlighted.</figcaption></figure><p></p>
+<p id="cn-m22-164">Keep the <b>Certification Authority </b>console window open.</p>
+<h3 id="cn-m22-165"><b>Task 3 - Configure custom certificate template on CA server</b></h3>
+<p id="cn-m22-166">A server running the AD FS service must be assigned a
+ custom certificate that supports Subject Alternative Names (SAN). 
+Assigning more than one name to a certificate is the concept of Subject 
+Alternative Names (SANs). Use your preferred search engine to research 
+more information about SAN.</p>
+<p id="cn-m22-167">To setup a custom security template, perform the following steps:</p>
+<h4 id="cn-m22-168"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-169">On <b>PLABDC01</b>, In the <b>Certification Authority </b>window, expand <b>PRACTICELABS</b>-<b>PLABDC01-CA</b>.</p>
+<p id="cn-m22-170">Right-click the <b>Certificate Templates </b>folder and select <b>Manage</b>.</p>
+<p id="cn-m22-171"></p><figure><img class="cn-img" id="cn-image-m22-c-12" src="ImplementingADFederationServices_files/image-m22-c-12.jpg" alt="Figure 1.11 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.11 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-173"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-174">In the <b>Certificate Templates </b>console window, scroll down the list and right-click <b>Web Server</b>.</p>
+<p id="cn-m22-175">Then select <b>Duplicate Template</b>.</p>
+<p id="cn-m22-176"></p><figure><img class="cn-img" id="cn-image-m22-c-13" src="ImplementingADFederationServices_files/image-m22-c-13.jpg" alt="Figure 1.12 Screenshot of PLABDC01: The Certificates Template Console window is displayed."><figcaption>Figure 1.12 Screenshot of PLABDC01: The Certificates Template Console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-178"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-179">In the <b>Properties of New Template </b>dialog box, click the <b>General </b>tab.</p>
+<h4 id="cn-m22-180"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-181">Under the <b>General </b>tab, type-over the <b>Template display name </b>title with the following:</p>
+<pre id="cn-m22-182"><code>Plabs-Web
+</code></pre>
+<p id="cn-m22-183">Select the <b>Publish certificate in Active Directory </b>check box and then click <b>Apply</b>.</p>
+<h4 id="cn-m22-184"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-185">Click the <b>Security </b>tab.</p>
+<p id="cn-m22-186">Under the <b>Security </b>tab, click <b>Add</b>.</p>
+<h4 id="cn-m22-187"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-188">In the <b>Select Users, Computers, Service Accounts, or Groups </b>dialog box, click <b>Object Types</b>.</p>
+<h4 id="cn-m22-189"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-190">In the <b>Object Types </b>dialog box, select the <b>Computers </b>check box.</p>
+<p id="cn-m22-191">Leave the other check boxes in their default state.</p>
+<p id="cn-m22-192">Click <b>OK</b>.</p>
+<p id="cn-m22-193"></p><figure><img class="cn-img" id="cn-image-m22-c-14" src="ImplementingADFederationServices_files/image-m22-c-14.jpg" alt="Figure 1.13 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.13 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-195"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-196">Back in the <b>Select Users, Computers, Service Accounts, or Groups </b>dialog box, in the text box, type the following names and click <b>OK</b>.</p>
+<pre id="cn-m22-197"><code>plabdc01;plabdm01
+</code></pre>
+<p id="cn-m22-198"></p><figure><img class="cn-img" id="cn-image-m22-c-15" src="ImplementingADFederationServices_files/image-m22-c-15.jpg" alt="Figure 1.14 Screenshot of PLABDC01: In the Select Users, Computers, Service Accounts or Groups dialog box, computer names are entered."><figcaption>Figure
+ 1.14 Screenshot of PLABDC01: In the Select Users, Computers, Service 
+Accounts or Groups dialog box, computer names are entered.</figcaption></figure><p></p>
+<h4 id="cn-m22-200"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-201">In the <b>Properties of New Template </b>dialog box, select <b>PLABDC01 </b>and under <b>Allow </b>select the <b>Enroll </b>checkbox.</p>
+<p id="cn-m22-202">Similarly, select <b>PLABDM01 </b>and under <b>Allow </b>select the <b>Enroll </b>checkbox.</p>
+<p id="cn-m22-203">Click <b>OK</b>.</p>
+<p id="cn-m22-204">Keep the <b>Certification Authority </b>window open.</p>
+<p id="cn-m22-205"></p><figure><img class="cn-img" id="cn-image-m22-c-16" src="ImplementingADFederationServices_files/image-m22-c-16.jpg" alt="Figure 1.15 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.15 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-207"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-208">Close <b>Certificate Templates </b>console.</p>
+<h3 id="cn-m22-209"><b>Task 4 - Allow issuance of the New Template</b></h3>
+<p id="cn-m22-210">To make the new certificate template available to 
+requesting users, it must be added into the certificate templates folder
+ in Certification Authority.</p>
+<p id="cn-m22-211">To do this, perform the following steps:</p>
+<h4 id="cn-m22-212"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-213">On <b>PLABDC01</b>, <b>Certification Authority </b>is open.</p>
+<p id="cn-m22-214">Right-click <b>Certificate Templates</b>, point to <b>New </b>and select <b>Certificate Template to Issue</b>.</p>
+<p id="cn-m22-215"></p><figure><img class="cn-img" id="cn-image-m22-c-17" src="ImplementingADFederationServices_files/image-m22-c-17.jpg" alt="Figure 1.16 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.16 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-217"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-218">In the <b>Enable Certificate Templates </b>dialog box, scroll down and select <b>Plabs-Web</b>.</p>
+<p id="cn-m22-219">Click <b>OK</b>.</p>
+<p id="cn-m22-220"></p><figure><img class="cn-img" id="cn-image-m22-c-18" src="ImplementingADFederationServices_files/image-m22-c-18.jpg" alt="Figure 1.17 Screenshot of PLABDC01: The Enable Certificate Templates dialog box is displayed."><figcaption>Figure 1.17 Screenshot of PLABDC01: The Enable Certificate Templates dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-222"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-223">Close <b>Certification Authority</b>.</p>
+<h3 id="cn-m22-224"><b>Task 5 - Request web certificate for ADFS server</b></h3>
+<p id="cn-m22-225">To request a web server certificate for PLABDC01, perform the following steps:</p>
+<h4 id="cn-m22-226"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-227">On <b>PLABDC01</b>, right-click <b>Start </b>and select <b>Run</b>.</p>
+<h4 id="cn-m22-228"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-229">In the <b>Run </b>dialog box, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-230"><code>mmc
+</code></pre>
+<h4 id="cn-m22-231"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-232">In the <b>Console1 </b>window, click <b>File </b>and select <b>Add/Remove snap-in</b>.</p>
+<h4 id="cn-m22-233"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-234">In the <b>Add or Remove Snap-ins </b>dialog box, select <b>Certificates</b>.</p>
+<p id="cn-m22-235">Click <b>Add</b>.</p>
+<h4 id="cn-m22-236"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-237">In the <b>Certificates snap-in </b>dialog box, select <b>Computer </b>account.</p>
+<p id="cn-m22-238">Click <b>Next</b>.</p>
+<p id="cn-m22-239"></p><figure><img class="cn-img" id="cn-image-m22-c-19" src="ImplementingADFederationServices_files/image-m22-c-19.jpg" alt="Figure 1.18 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.18 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-241"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-242">In the <b>Select Computer </b>dialog box, keep the default selection and click <b>Finish</b>.</p>
+<h4 id="cn-m22-243"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-244">Click <b>OK </b>in the <b>Add or Remove Snap-ins </b>dialog box.</p>
+<h4 id="cn-m22-245"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-246">In <b>Console1</b>, expand <b>Certificates (Local Computer) &gt; Personal</b>.</p>
+<p id="cn-m22-247">Right-click <b>Certificates</b>, point to <b>All Tasks </b>and then select <b>Request new certificate</b>.</p>
+<p id="cn-m22-248"></p><figure><img class="cn-img" id="cn-image-m22-c-20" src="ImplementingADFederationServices_files/image-m22-c-20.jpg" alt="Figure 1.19 Screenshot of PLABDC01: Console1 window is displayed."><figcaption>Figure 1.19 Screenshot of PLABDC01: Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-250"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-251">In the <b>Before you begin </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-252"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-253">In the <b>Select Certificate Enrollment Policy </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-254"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-255">In the <b>Request Certificates </b>page, select the <b>Plabs-Web </b>check box.</p>
+<p id="cn-m22-256">Click the blue link: <b>More information is required to enroll for this certificate. Click here to configure settings</b>.</p>
+<p id="cn-m22-257"></p><figure><img class="cn-img" id="cn-image-m22-c-21" src="ImplementingADFederationServices_files/image-m22-c-21.jpg" alt="Figure 1.20 Screenshot of PLABDC01: The Certificates Enrollment window, Request Certificates page is displayed."><figcaption>Figure 1.20 Screenshot of PLABDC01: The Certificates Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-259"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-260">In the <b>Certificate Properties </b>dialog box, under the <b>Subject </b>name section, under <b>Type</b>, select <b>Common Name </b>from the drop-down box.</p>
+<p id="cn-m22-261">Click in the <b>Value </b>text box, type the following name and click <b>Add</b>:</p>
+<pre id="cn-m22-262"><code>plabdc01.practicelabs.com
+</code></pre>
+<p id="cn-m22-263"></p><figure><img class="cn-img" id="cn-image-m22-c-22" src="ImplementingADFederationServices_files/image-m22-c-22.jpg" alt="Figure 1.21 Screenshot of PLABDC01: The Certificate Properties dialog box is displayed with a computer name entered."><figcaption>Figure 1.21 Screenshot of PLABDC01: The Certificate Properties dialog box is displayed with a computer name entered.</figcaption></figure><p></p>
+<h4 id="cn-m22-265"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-266">Go to the <b>Alternative name </b>section, access the <b>Type </b>drop-down list and select <b>DNS</b>.</p>
+<p id="cn-m22-267">In the <b>Value </b>text box, type the following name and click <b>Add</b>:</p>
+<pre id="cn-m22-268"><code>adfs.practicelabs.com
+</code></pre>
+<h4 id="cn-m22-269"><b><i>Step 14</i></b></h4>
+<p id="cn-m22-270">Stil in the <b>Alternative name </b>section, click in the <b>Value </b>text box, type the following name and click <b>Add</b>:</p>
+<pre id="cn-m22-271"><code>certauth.adfs.practicelabs.com
+</code></pre>
+<p id="cn-m22-272">Still in the <b>Alternative name </b>section, click in the <b>Value </b>text box, type the following name and click <b>Add</b>:</p>
+<pre id="cn-m22-273"><code>enterpriseregistration.practicelabs.com
+</code></pre>
+<h4 id="cn-m22-274"><b><i>Step 15</i></b></h4>
+<p id="cn-m22-275">The names <b>adfs.practicelabs.com</b>, <b>certauth.adfs.practicelabs.com </b>and <b>enterpriseregistration.practicelabs.com </b>are now added.</p>
+<p id="cn-m22-276">Click <b>OK</b>.</p>
+<p id="cn-m22-277"></p><figure><img class="cn-img" id="cn-image-m22-c-23" src="ImplementingADFederationServices_files/image-m22-c-23.jpg" alt="Figure 1.22 Screenshot of PLABDC01: The Certificate Properties dialog box is displayed showing the names entered."><figcaption>Figure 1.22 Screenshot of PLABDC01: The Certificate Properties dialog box is displayed showing the names entered.</figcaption></figure><p></p>
+<h4 id="cn-m22-279"><b><i>Step 16</i></b></h4>
+<p id="cn-m22-280">In the <b>Certificate Enrollment </b>page, click <b>Enroll</b>.</p>
+<p id="cn-m22-281"></p><figure><img class="cn-img" id="cn-image-m22-c-24" src="ImplementingADFederationServices_files/image-m22-c-24.jpg" alt="Figure 1.23 Screenshot of PLABDC01: The Certificate Enrollment window, Request Certificates page is displayed."><figcaption>Figure 1.23 Screenshot of PLABDC01: The Certificate Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-283"><b><i>Step 17</i></b></h4>
+<span class="cn-quote" id="cn-m22-284"><b><i>Note: </i></b><i>The green progress bar will show the progress. After the process is completed, STATUS will be marked as Succeeded.</i></span>
+<p id="cn-m22-285"></p><figure><img class="cn-img" id="cn-image-m22-c-25" src="ImplementingADFederationServices_files/image-m22-c-25.jpg" alt="Figure 1.24 Screenshot of PLABDC01: The Certification Authority console window is displayed."><figcaption>Figure 1.24 Screenshot of PLABDC01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m22-289">Click <b>Finish </b>to close the <b>Certificate Enrollment </b>dialog box.</p>
+<p id="cn-m22-290">Minimize the <b>Console1 </b>window.</p>
+<span class="cn-alert" id="cn-m22-291">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-292"><b>Exercise 2 - Prepare System Requirements for ADFS Accounts Partner</b></h2>
+<p id="cn-m22-293">A claim is a statement about a user account that is 
+used for authorizing access to an application residing in the Resource 
+Partner domain. ADFS Accounts Partner domain contains the user accounts 
+that will connect to the network assets found in the Resource Partner 
+domain.</p>
+<p id="cn-m22-294">The Account Partner is the domain that holds the 
+accounts, such as users, who will access the corporate assets located in
+ the Resource Partner.</p>
+<p id="cn-m22-295">In this lab, a new domain called PRACTICEIT.CO.UK 
+will be created. PRACTICEIT.CO.UK will be the accounts domain where 
+users accounts will be accessing network assets found in the 
+PRACTICELABS.COM resource domain.</p>
+<p id="cn-m22-296">To get more information about AD FS Accounts partner,
+ please refer to your course material or use your preferred search 
+engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m22-298">After completing this exercise, you will be able to:</p>
+<ul id="cn-m22-299">
+<li id="cn-m22-299">Install a new AD DS forest</li>
+<li id="cn-m22-300">Install and configure AD Certificate Services</li>
+<li id="cn-m22-301">Export root CA certificate</li>
+<li id="cn-m22-302">Configure custom certificate template on CA server</li>
+<li id="cn-m22-303">Allow issuance of the new template</li>
+<li id="cn-m22-304">Request web certificate for ADFS server</li>
+<li id="cn-m22-305">Create GPO for trusted root CA in PRACTICELABS.COM and PRACTICEIT.CO.UK domains</li>
+<li id="cn-m22-306">Configure alternate DNS and DNS forwarding</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m22-308">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m22-309">
+<li id="cn-m22-309"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m22-310"><b>PLABDM01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-311"><b>PLABSA01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-312"><b>PLABWIN10 </b>(Windows 10 Enterprise - Domain Workstation)</li>
+</ul>
+<p id="cn-m22-313"><img class="cn-img" id="cn-image-m22-c-26" src="ImplementingADFederationServices_files/image-m22-c-26.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m22-314"><b>Task 1 - Install a new AD DS forest</b></h3>
+<p id="cn-m22-315">You will install AD DS on <b>PLABSA01 </b>and place it on a domain called PRACTICEIT.CO.UK.</p>
+<p id="cn-m22-316">PRACTICEIT.CO.UK will be the ADFS accounts partner organization.</p>
+<h4 id="cn-m22-317"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-318">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m22-319">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>Windows PowerShell</b>.</p>
+<h4 id="cn-m22-320"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-321">In the <b>Windows PowerShell </b>window, to install AD Domain Services binaries, type the following and  press <b>Enter</b>:</p>
+<pre id="cn-m22-322"><code>Add-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+</code></pre>
+<h4 id="cn-m22-323"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-324">Please wait while the AD Domain Services binaries are being installed.</p>
+<h4 id="cn-m22-325"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-326">When the addition of the AD Domain Services is complete, you will promote the <b>PLABSA01 </b>as a domain controller of PRACTICEIT.CO.UK domain.</p>
+<p id="cn-m22-327">Now type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-328"><code>Install-ADDSForest -DomainName PRACTICEIT.CO.UK -InstallDNS
+</code></pre>
+<p id="cn-m22-329">In the <b>SafeModeAdministratorPassword </b>prompt, type the following password and press <b>Enter</b>:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m22-331">In the <b>Confirm SafeModeAdministratorPassword </b>prompt, type the following password and press <b>Enter</b>:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m22-333">In the “<b>Do you want to continue with this operation</b>” prompt, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-334"><code>a
+</code></pre>
+<p id="cn-m22-335"></p><figure><img class="cn-img" id="cn-image-m22-c-27" src="ImplementingADFederationServices_files/image-m22-c-27.jpg" alt="Figure 2.1 Screenshot of PLABSA01: A command is entered in Windows PowerShell to install a new domain forest."><figcaption>Figure 2.1 Screenshot of PLABSA01: A command is entered in Windows PowerShell to install a new domain forest.</figcaption></figure><p></p>
+<h4 id="cn-m22-337"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-338">Domain controller role will be installed on <b>PLABSA01</b>.</p>
+<p id="cn-m22-339">This will take a few minutes to finish.</p>
+<h4 id="cn-m22-340"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-341"><b>PLABSA01 </b>will automatically restart when the domain controller role is installed.</p>
+<span class="cn-alert" id="cn-m22-342"><b>Important</b>: Please wait for 2 minutes before reconnecting to <b>PLABSA01</b>. This is to give the device sufficient time to complete its restart.</span>
+<h3 id="cn-m22-343"><b>Task 2 - Install and configure AD Certificate Services</b></h3>
+<p id="cn-m22-344">You will now install Certificate Services on 
+PRACTICEIT.CO.UK domain. The AD CS will be configured as the root 
+Certification Authority for this domain.</p>
+<p id="cn-m22-345">You will later establish a certificate trust between PRACTICEIT.CO.UK and PRACTICELABS.COM.</p>
+<h4 id="cn-m22-346"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-347">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m22-348">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>Windows PowerShell</b>.</p>
+<p id="cn-m22-349">Minimize the <b>Server Manager </b>window.</p>
+<h4 id="cn-m22-350"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-351">In the <b>Windows PowerShell </b>window, to install AD Certificate Services, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-352"><code>Add-WindowsFeature -Name ADCS-Cert-Authority -IncludeManagementTools
+</code></pre>
+<h4 id="cn-m22-353"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-354">In the next prompt, to install AD CS using default settings, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-355"><code>Install-AdcsCertificationAuthority -CAType EnterpriseRootCA
+</code></pre>
+<p id="cn-m22-356">Then type the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-357"><code>a
+</code></pre>
+<h4 id="cn-m22-358"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-359">Minimize <b>Windows PowerShell </b>when the configuration of the Certification Authority is successfully completed.</p>
+<h3 id="cn-m22-360"><b>Task 3 - Export root CA certificate</b></h3>
+<p id="cn-m22-361">To export PLABSA01’s root CA certificate to a file, perform the following steps:</p>
+<h4 id="cn-m22-362"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-363">On <b>PLABSA01</b>, ensure that <b>Server Manager &gt; Dashboard </b>window is open.</p>
+<p id="cn-m22-364">Click <b>Tools </b>menu and select <b>Certification Authority</b>.</p>
+<h4 id="cn-m22-365"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-366">In the <b>Certification Authority </b>console window, expand <b>PRACTICEIT.PLABSA01-CA</b>.</p>
+<p id="cn-m22-367">Then, right-click <b>PRACTICEIT.PLABSA01-CA </b>and select <b>Properties</b>.</p>
+<p id="cn-m22-368"></p><figure><img class="cn-img" id="cn-image-m22-c-28" src="ImplementingADFederationServices_files/image-m22-c-28.jpg" alt="Figure 2.2 Screenshot of PLABSA01: The Certification Authority console window is displayed."><figcaption>Figure 2.2 Screenshot of PLABSA01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-370"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-371">In the <b>PRACTICEIT-PLABSA01-CA Properties </b>dialog box, in the <b>General </b>tab, click the <b>View Certificate </b>button.</p>
+<p id="cn-m22-372"></p><figure><img class="cn-img" id="cn-image-m22-c-29" src="ImplementingADFederationServices_files/image-m22-c-29.jpg" alt="Figure 2.3 Screenshot of PLABSA01: The PRACTICEIT-PLABSA01-CA Properties dialog box is displayed."><figcaption>Figure 2.3 Screenshot of PLABSA01: The PRACTICEIT-PLABSA01-CA Properties dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-374"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-375">In the <b>Certificate </b>dialog box, go to the <b>Details </b>tab.</p>
+<h4 id="cn-m22-376"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-377">Under the <b>Details </b>tab, click <b>Copy to File.</b></p>
+<p id="cn-m22-378"></p><figure><img class="cn-img" id="cn-image-m22-c-30" src="ImplementingADFederationServices_files/image-m22-c-30.jpg" alt="Figure 2.4 Screenshot of PLABSA01: The Certificate dialog box is displayed."><figcaption>Figure 2.4 Screenshot of PLABSA01: The Certificate dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-380"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-381">In the <b>Certificate Export Wizard </b>window, <b>Welcome to the Certificate Export Wizard </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-382"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-383">In the <b>Export File Format </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-384"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-385">In the <b>File to Export </b>page, type the following path and click <b>Next</b>:</p>
+<pre id="cn-m22-386"><code>c:\plabsa01
+</code></pre>
+<h4 id="cn-m22-387"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-388">In the <b>Completing the Certificate Export Wizard </b>page, click <b>Finish</b>.</p>
+<p id="cn-m22-389"></p><figure><img class="cn-img" id="cn-image-m22-c-31" src="ImplementingADFederationServices_files/image-m22-c-31.jpg" alt="Figure 2.5 Screenshot of PLABSA01: The Certificate Export Wizard window, Completing the Certificate Export Wizard page is displayed."><figcaption>Figure
+ 2.5 Screenshot of PLABSA01: The Certificate Export Wizard window, 
+Completing the Certificate Export Wizard page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-391"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-392">On the Certificate Export Wizard, click <b>OK </b>when prompted that export was successful.</p>
+<h4 id="cn-m22-393"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-394">Click <b>OK </b>in the <b>Certificate </b>dialog box.</p>
+<h4 id="cn-m22-395"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-396">Similarly, click <b>OK </b>in the <b>PRACTICEIT-PLABSA01-CA Properties </b>dialog box.</p>
+<p id="cn-m22-397">Keep the <b>Certification Authority </b>console open.</p>
+<h3 id="cn-m22-398"><b>Task 4 - Configure custom certificate template on CA server</b></h3>
+<p id="cn-m22-399">PLABSA01 will be configured as the AD FS server in 
+the Accounts Partner domain. As such, it must have a web server 
+certificate that supports Subject Alternative Names (SAN), or a 
+certificate with multiple names.</p>
+<h4 id="cn-m22-400"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-401">On <b>PLABSA01</b>, in the <b>Certification Authority </b>window, expand <b>PRACTICEIT-PLABSA01-CA </b>if already not expanded.</p>
+<p id="cn-m22-402">Right-click <b>Certificate Templates </b>folder and select <b>Manage</b>.</p>
+<h4 id="cn-m22-403"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-404">In the <b>Certificate Templates </b>console window, scroll down the list and right-click <b>Web Server </b>and select <b>Duplicate Template</b>.</p>
+<p id="cn-m22-405"></p><figure><img class="cn-img" id="cn-image-m22-c-32" src="ImplementingADFederationServices_files/image-m22-c-32.jpg" alt="Figure 2.6 Screenshot of PLABSA01: The Certificate Templates Console window is displayed."><figcaption>Figure 2.6 Screenshot of PLABSA01: The Certificate Templates Console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-407"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-408">In the <b>Properties of New Template </b>dialog box, click the <b>General </b>tab.</p>
+<h4 id="cn-m22-409"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-410">Under the <b>General </b>tab, type-over the <b>Template display name </b>title with the following:</p>
+<pre id="cn-m22-411"><code>Pit-Web
+</code></pre>
+<p id="cn-m22-412">Select the <b>Publish certificate in Active Directory </b>check box and click <b>Apply</b>.</p>
+<p id="cn-m22-413"></p><figure><img class="cn-img" id="cn-image-m22-c-33" src="ImplementingADFederationServices_files/image-m22-c-33.jpg" alt="Figure 2.7 Screenshot of PLABSA01: The Properties of New Template dialog box is displayed."><figcaption>Figure 2.7 Screenshot of PLABSA01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-415"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-416">Click the <b>Security </b>tab.</p>
+<p id="cn-m22-417">Under the <b>Security </b>tab, click <b>Add</b>.</p>
+<h4 id="cn-m22-418"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-419">In the <b>Select Users, Computers, Service Accounts or Groups </b>dialog box, click <b>Object Types</b>.</p>
+<h4 id="cn-m22-420"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-421">In the <b>Object Types, </b>select the <b>Computers </b>check box.</p>
+<p id="cn-m22-422">Click <b>OK</b>.</p>
+<h4 id="cn-m22-423"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-424">Back in the <b>Select Users, Computers, Service Accounts, or Groups </b>dialog box, in the text box, type the following name and click <b>OK</b>:</p>
+<pre id="cn-m22-425"><code>plabsa01
+</code></pre>
+<p id="cn-m22-426"></p><figure><img class="cn-img" id="cn-image-m22-c-34" src="ImplementingADFederationServices_files/image-m22-c-34.jpg" alt="Figure 2.8 Screenshot of PLABSA01: In the Select Users, Computers, Service Accounts or Groups dialog box, a computer name is entered."><figcaption>Figure
+ 2.8 Screenshot of PLABSA01: In the Select Users, Computers, Service 
+Accounts or Groups dialog box, a computer name is entered.</figcaption></figure><p></p>
+<h4 id="cn-m22-428"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-429">In the <b>Properties of New Template </b>dialog box, select <b>PLABSA01</b>.</p>
+<p id="cn-m22-430">Under <b>Allow</b>, select the <b>Enroll </b>checkbox.</p>
+<p id="cn-m22-431">Click <b>OK</b>.</p>
+<p id="cn-m22-432"></p><figure><img class="cn-img" id="cn-image-m22-c-35" src="ImplementingADFederationServices_files/image-m22-c-35.jpg" alt="Figure 2.9 Screenshot of PLABSA01: The Properties of New Template dialog box is displayed."><figcaption>Figure 2.9 Screenshot of PLABSA01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-434"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-435">Close the <b>Certificate Templates </b>console.</p>
+<p id="cn-m22-436">Keep the <b>Certification Authority </b>window open.</p>
+<h3 id="cn-m22-437"><b>Task 5 - Allow issuance of the new template</b></h3>
+<p id="cn-m22-438">To add the customized certificate template that can be issued by PLABSA01 CA server, perform the following steps:</p>
+<h4 id="cn-m22-439"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-440">On <b>PLABSA01</b>, <b>Certification Authority </b>is open.</p>
+<p id="cn-m22-441">Right-click <b>Certificate Templates</b>, point to <b>New </b>and select <b>Certificate Template to Issue</b>.</p>
+<h4 id="cn-m22-442"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-443">In the <b>Enable Certificate Templates </b>dialog box, scroll down and select <b>Pit-Web</b>.</p>
+<p id="cn-m22-444">Click <b>OK</b>.</p>
+<h4 id="cn-m22-445"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-446">Close <b>Certification Authority</b>.</p>
+<h3 id="cn-m22-447"><b>Task 6 - Request web certificate for ADFS server</b></h3>
+<p id="cn-m22-448">To request for a web certificate for PLABSA01, perform the following steps:</p>
+<h4 id="cn-m22-449"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-450">On <b>PLABSA01</b>, right-click <b>Start </b>and select <b>Run</b>.</p>
+<h4 id="cn-m22-451"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-452">In the <b>Run </b>dialog box, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-453"><code>mmc
+</code></pre>
+<h4 id="cn-m22-454"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-455">In the <b>Console1 </b>window, click <b>File </b>and select <b>Add/Remove snap-in</b>.</p>
+<h4 id="cn-m22-456"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-457">In the <b>Add or Remove Snap-ins </b>dialog box, select <b>Certificates</b>.</p>
+<p id="cn-m22-458">Click <b>Add</b>.</p>
+<h4 id="cn-m22-459"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-460">In the <b>Certificates snap-in </b>dialog box, select <b>Computer </b>account.</p>
+<p id="cn-m22-461">Click <b>Next</b>.</p>
+<h4 id="cn-m22-462"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-463">In the <b>Select Computer </b>dialog box, keep the default selection and click <b>Finish</b>.</p>
+<h4 id="cn-m22-464"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-465">Click <b>OK </b>in the <b>Add or Remove Snap-ins </b>dialog box.</p>
+<h4 id="cn-m22-466"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-467">In <b>Console1</b>, expand <b>Certificates (Local Computer) &gt; Personal </b>and click <b>Certificates</b>.</p>
+<p id="cn-m22-468">Right-click <b>Certificates</b>, point to <b>All Tasks </b>and select <b>Request new certificate</b>.</p>
+<h4 id="cn-m22-469"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-470">In the <b>Before you begin </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-471"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-472">In the <b>Select Certificate Enrollment Policy </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-473"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-474">In the <b>Request Certificates </b>page, select <b>Pit-Web </b>check box.</p>
+<p id="cn-m22-475">Click the blue link: <b>More information is required to enroll for this certificate. Click here to configure settings</b>.</p>
+<p id="cn-m22-476"></p><figure><img class="cn-img" id="cn-image-m22-c-36" src="ImplementingADFederationServices_files/image-m22-c-36.jpg" alt="Figure 2.10 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed."><figcaption>Figure 2.10 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-478"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-479">In the <b>Certificate Properties </b>dialog box, under the <b>Subject name</b>, under <b>Type</b>, select <b>Common Name</b>.</p>
+<p id="cn-m22-480">Click in the <b>Value </b>text box and type the following and click <b>Add</b>:</p>
+<pre id="cn-m22-481"><code>plabsa01.practiceit.co.uk
+</code></pre>
+<h4 id="cn-m22-482"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-483">Go to <b>Alternative name </b>section, access the <b>Type </b>drop-down list and select <b>DNS</b>.</p>
+<p id="cn-m22-484">Click in the <b>Value </b>text box, type the following and click <b>Add</b>:</p>
+<pre id="cn-m22-485"><code>adfs.practiceit.co.uk
+</code></pre>
+<h4 id="cn-m22-486"><b><i>Step 14</i></b></h4>
+<p id="cn-m22-487">Still in the <b>Alternative name </b>section, click in the <b>Value </b>text box, type the following and click <b>Add</b>:</p>
+<pre id="cn-m22-488"><code>certauth.adfs.practiceit.co.uk
+</code></pre>
+<p id="cn-m22-489">Back in the <b>Alternative name </b>section, click in the <b>Value </b>text box, type the following and click <b>Add</b>:</p>
+<pre id="cn-m22-490"><code>enterpriseregistration.practiceit.co.uk
+</code></pre>
+<h4 id="cn-m22-491"><b><i>Step 15</i></b></h4>
+<p id="cn-m22-492">The names <b>adfs.practiceit.co.uk</b>, <b>certauth.adfs.practiceit.co.uk </b>and <b>enterpriseregistration.practiceit.co.uk</b>, are now added.</p>
+<p id="cn-m22-493">Click <b>OK</b>.</p>
+<p id="cn-m22-494"></p><figure><img class="cn-img" id="cn-image-m22-c-37" src="ImplementingADFederationServices_files/image-m22-c-37.jpg" alt="Figure 2.11 Screenshot of PLABSA01: The Certificate Properties dialog box is displayed showing all entered names."><figcaption>Figure 2.11 Screenshot of PLABSA01: The Certificate Properties dialog box is displayed showing all entered names.</figcaption></figure><p></p>
+<h4 id="cn-m22-496"><b><i>Step 16</i></b></h4>
+<p id="cn-m22-497">In the <b>Certificate Enrollment </b>page, click <b>Enroll</b>.</p>
+<p id="cn-m22-498"></p><figure><img class="cn-img" id="cn-image-m22-c-38" src="ImplementingADFederationServices_files/image-m22-c-38.jpg" alt="Figure 2.12 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed."><figcaption>Figure 2.12 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-500"><b><i>Step 17</i></b></h4>
+<p id="cn-m22-501">Click <b>Finish </b>to close <b>Certificate Enrollment </b>dialog box.</p>
+<p id="cn-m22-502"></p><figure><img class="cn-img" id="cn-image-m22-c-39" src="ImplementingADFederationServices_files/image-m22-c-39.jpg" alt="Figure 2.13 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed."><figcaption>Figure 2.13 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-504"><b><i>Step 18</i></b></h4>
+<p id="cn-m22-505">Minimize <b>Console1 </b>window.</p>
+<h3 id="cn-m22-506"><b>Task 7 - Create GPO for trusted root CA in PRACTICELABS.COM and PRACTICEIT.CO.UK domains</b></h3>
+<p id="cn-m22-507">In this task, you will need to establish a certificate trust between PRACTICELABS.COM and PRACTICEIT.CO.UK.</p>
+<h4 id="cn-m22-508"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-509">Connect to <b>PLABDC01</b>. The <b>Server Manager </b>window is open.</p>
+<p id="cn-m22-510">Click <b>Tools </b>and select <b>Group Policy Management</b>.</p>
+<h4 id="cn-m22-511"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-512">In the <b>Group Policy Management </b>console, expand <b>Forest: PRACTICELABS.COM &gt; Domains &gt; PRACTICELABS.COM </b>and click <b>Default Domain Policy.</b></p>
+<p id="cn-m22-513">Then right-click <b>Default Domain Policy</b>, and choose <b>Edit</b>.</p>
+<p id="cn-m22-514"></p><figure><img class="cn-img" id="cn-image-m22-c-40" src="ImplementingADFederationServices_files/image-m22-c-40.jpg" alt="Figure 2.14 Screenshot of PLABDC01: The Group Policy Management console window is displayed."><figcaption>Figure 2.14 Screenshot of PLABDC01: The Group Policy Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-516"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-517">In the <b>Group Policy Management Editor </b>window, expand the following:</p>
+<p id="cn-m22-518"><b>Computer Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings &gt; Public Key Policies</b>.</p>
+<p id="cn-m22-519">Click <b>Trusted Root Certification Authorities</b>.</p>
+<p id="cn-m22-520">Right-click on the right-hand details pane and select <b>Import</b>.</p>
+<p id="cn-m22-521"></p><figure><img class="cn-img" id="cn-image-m22-c-41" src="ImplementingADFederationServices_files/image-m22-c-41.jpg" alt="Figure 2.15 Screenshot of PLABDC01: The Group Policy Management Editor window is displayed."><figcaption>Figure 2.15 Screenshot of PLABDC01: The Group Policy Management Editor window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-523"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-524">In the <b>Welcome to the Certificate Import Wizard </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-525"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-526">In the <b>File to Import </b>page, type the following path and click <b>Next</b>:</p>
+<pre id="cn-m22-527"><code>\\plabsa01\c$\plabsa01.cer
+</code></pre>
+<p id="cn-m22-528"></p><figure><img class="cn-img" id="cn-image-m22-c-42" src="ImplementingADFederationServices_files/image-m22-c-42.jpg" alt="Figure 2.16 Screenshot of PLABDC01: The Certificate Import Wizard window, File to Import page is displayed."><figcaption>Figure 2.16 Screenshot of PLABDC01: The Certificate Import Wizard window, File to Import page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-530"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-531">In the <b>Certificate Store </b>page, ensure that the <b>Certificate Store </b>is set to <b>Trusted Root Certification Authorities</b>.</p>
+<p id="cn-m22-532">Click <b>Next</b>.</p>
+<p id="cn-m22-533"></p><figure><img class="cn-img" id="cn-image-m22-c-43" src="ImplementingADFederationServices_files/image-m22-c-43.jpg" alt="Figure 2.17 Screenshot of PLABDC01: The Certificate Import Wizard window, Certificate Store page is displayed."><figcaption>Figure 2.17 Screenshot of PLABDC01: The Certificate Import Wizard window, Certificate Store page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-535"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-536">In the <b>Completing the Certificate Import Wizard </b>page, click <b>Finish</b>.</p>
+<p id="cn-m22-537"></p><figure><img class="cn-img" id="cn-image-m22-c-44" src="ImplementingADFederationServices_files/image-m22-c-44.jpg" alt="Figure 2.18 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed."><figcaption>Figure 2.18 Screenshot of PLABSA01: The Certificate Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-539"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-540">Click <b>OK </b>to acknowledge that the import was successful.</p>
+<p id="cn-m22-541"></p><figure><img class="cn-img" id="cn-image-m22-c-45" src="ImplementingADFederationServices_files/image-m22-c-45.jpg" alt="Figure 2.19 Screenshot of PLABSA01: The Certificate Import Wizard dialog box is displayed with the OK button highlighted."><figcaption>Figure 2.19 Screenshot of PLABSA01: The Certificate Import Wizard dialog box is displayed with the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m22-543"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-544">The certificate of root CA server PLABSA01 has been successfully added.</p>
+<p id="cn-m22-545">Close the <b>Group Policy Management Editor </b>window.</p>
+<p id="cn-m22-546"></p><figure><img class="cn-img" id="cn-image-m22-c-46" src="ImplementingADFederationServices_files/image-m22-c-46.jpg" alt="Figure 2.20 Screenshot of PLABDC01: The Group Policy Management Editor window shows the imported certificate."><figcaption>Figure 2.20 Screenshot of PLABDC01: The Group Policy Management Editor window shows the imported certificate.</figcaption></figure><p></p>
+<p id="cn-m22-548">Minimize <b>Group Policy Management Console </b>window.</p>
+<h4 id="cn-m22-549"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-550">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m22-551">The <b>Server Manager </b>window is open.</p>
+<p id="cn-m22-552">Click <b>Tools </b>and select <b>Group Policy Management</b>.</p>
+<h4 id="cn-m22-553"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-554">In the <b>Group Policy Management </b>console, expand <b>Forest: PRACTICEIT.CO.UK &gt; Domains &gt; PRACTICEIT.CO.UK </b>and click <b>Default Domain Policy.</b></p>
+<p id="cn-m22-555">Then right-click <b>Default Domain Policy</b>, and then choose <b>Edit</b>.</p>
+<p id="cn-m22-556"></p><figure><img class="cn-img" id="cn-image-m22-c-47" src="ImplementingADFederationServices_files/image-m22-c-47.jpg" alt="Figure 2.21 Screenshot of PLABSA01: Showing the Edit option in the context menu of the Default Domain Policy.."><figcaption>Figure 2.21 Screenshot of PLABSA01: Showing the Edit option in the context menu of the Default Domain Policy..</figcaption></figure><p></p>
+<h4 id="cn-m22-558"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-559">In the <b>Group Policy Management Editor </b>window, expand the following:</p>
+<p id="cn-m22-560"><b>Computer Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings &gt; Public Key Policies. </b></p>
+<p id="cn-m22-561">Click <b>Trusted Root Certification Authorities</b>.</p>
+<p id="cn-m22-562">Right-click on the right-hand details pane and select <b>Import</b>.</p>
+<h4 id="cn-m22-563"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-564">In the <b>Welcome to the Certificate Import Wizard </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-565"><b><i>Step 14</i></b></h4>
+<p id="cn-m22-566">In the <b>File to Import </b>page, type the following path and click <b>Next</b>:</p>
+<pre id="cn-m22-567"><code>\\plabdc01\c$\plabdc01.cer
+</code></pre>
+<p id="cn-m22-568"></p><figure><img class="cn-img" id="cn-image-m22-c-48" src="ImplementingADFederationServices_files/image-m22-c-48.jpg" alt="Figure 2.22 Screenshot of PLABSA01: The Certificate Import Wizard window, File to Import page is displayed."><figcaption>Figure 2.22 Screenshot of PLABSA01: The Certificate Import Wizard window, File to Import page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-570"><b><i>Step 15</i></b></h4>
+<p id="cn-m22-571">In the <b>Certificate Store </b>page, verify that the <b>Certificate store </b>is set to <b>Trusted Certification Authorities</b>.</p>
+<p id="cn-m22-572">Click <b>Next</b>.</p>
+<h4 id="cn-m22-573"><b><i>Step 16</i></b></h4>
+<p id="cn-m22-574">In the <b>Completing the Certificate Import Wizard </b>page, click <b>Finish</b>.</p>
+<p id="cn-m22-575">Click <b>OK </b>to acknowledge that the import was successful.</p>
+<h4 id="cn-m22-576"><b><i>Step 17</i></b></h4>
+<p id="cn-m22-577">In the <b>Group Policy Management Editor </b>window, notice that the certificate has been successfully added.</p>
+<p id="cn-m22-578"></p><figure><img class="cn-img" id="cn-image-m22-c-49" src="ImplementingADFederationServices_files/image-m22-c-49.jpg" alt="Figure 2.23 Screenshot of PLABSA01: The Group Policy Management Editor window shows the imported certificate."><figcaption>Figure 2.23 Screenshot of PLABSA01: The Group Policy Management Editor window shows the imported certificate.</figcaption></figure><p></p>
+<span class="atom-code hidden">f4b668ae-6731-4fec-956d-91344aefd689</span>
+<h4 id="cn-m22-582"><b><i>Step 18</i></b></h4>
+<p id="cn-m22-583">Close <b>Group Policy Management Editor </b>window.</p>
+<h4 id="cn-m22-584"><b><i>Step 19</i></b></h4>
+<p id="cn-m22-585">Minimize <b>Group Policy Management </b>console.</p>
+<span class="cn-alert" id="cn-m22-586">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-587"><b>Exercise 3 - Enable Name Resolution for Resource and Account Domains</b></h2>
+<p id="cn-m22-588">Name resolution must be properly configured between 
+two organizations that are joined together with an AD Federation 
+Services trust. In this exercise, you will enable the domain controllers
+ of each domain to have an alternate DNS server that points to the 
+external organization. For example, PRACTICELABS.COM domain controller 
+called PLABDC01 with an IP address 192.168.0.1 will have an alternate 
+DNS server that points to 192.168.0.4 which is PLABSA01 and vice-versa.</p>
+<p id="cn-m22-589">To get more information about setting up name 
+resolution between Active Directory domains, please refer to your course
+ material or use your preferred search engine to research this topic in 
+more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m22-591">After completing this exercise, you will be able to:</p>
+<ul id="cn-m22-592">
+<li id="cn-m22-592">Configure alternate DNS and DNS forwarding</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m22-594">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m22-595">
+<li id="cn-m22-595"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m22-596"><b>PLABDM01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-597"><b>PLABSA01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-598"><b>PLABWIN10 </b>(Windows 10 Enterprise - Domain Workstation)</li>
+</ul>
+<p id="cn-m22-599"><img class="cn-img" id="cn-image-m22-c-50" src="ImplementingADFederationServices_files/image-m22-c-50.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m22-600"><b>Task 1 - Configure alternate DNS and DNS forwarding</b></h3>
+<p id="cn-m22-601">In this task, you will configure the DNS server of 
+PRACTICELABS.COM to forward name resolution requests to PRACTICEIT.CO.UK
+ and vice-versa.</p>
+<h4 id="cn-m22-602"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-603">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m22-604">Right-click <b>Start </b>and select <b>Command Prompt</b>.</p>
+<h4 id="cn-m22-605"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-606">In the <b>Command Prompt </b>window, to set an alternate DNS server for the “Ethernet” connection, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-607"><code>netsh interface ip add dns name=Ethernet addr=192.168.0.4 index=2
+</code></pre>
+<h4 id="cn-m22-608"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-609">Netsh.exe will not return a status to indicate a successful configuration.</p>
+<span class="cn-alert" id="cn-m22-610"><b>Note</b>: If you get an error 
+message saying “The configured DNS server is incorrect or does not 
+exist” re-enter the same command. This error can happen if the computer 
+is unable to detect the other DNS server in the network. You may 
+likewise get a message saying the object is already in the list. You can
+ ignore this error.</span>
+<p id="cn-m22-611"></p><figure><img class="cn-img" id="cn-image-m22-c-51" src="ImplementingADFederationServices_files/image-m22-c-51.jpg" alt="Figure 3.1 Screenshot of PLABDC01: In the Command Prompt window, a command is entered to add an alternate DNS server."><figcaption>Figure 3.1 Screenshot of PLABDC01: In the Command Prompt window, a command is entered to add an alternate DNS server.</figcaption></figure><p></p>
+<p id="cn-m22-613">Close <b>Command Prompt </b>window.</p>
+<h4 id="cn-m22-614"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-615">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>DNS</b>.</p>
+<h4 id="cn-m22-616"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-617">In the <b>DNS Manager </b>console, expand <b>PLABDC01 </b>and click <b>Conditional Forwarders</b>.</p>
+<p id="cn-m22-618">Right-click on <b>Conditional Forwarders </b>and choose <b>New Conditional Forwarder</b>.</p>
+<p id="cn-m22-619"></p><figure><img class="cn-img" id="cn-image-m22-c-52" src="ImplementingADFederationServices_files/image-m22-c-52.jpg" alt="Figure 3.2 Screenshot of PLABDC01: The DNS Manager console window is displayed."><figcaption>Figure 3.2 Screenshot of PLABDC01: The DNS Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-621"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-622">In the New Conditional Forwarder dialog box, in DNS Domain box, type the following name:</p>
+<pre id="cn-m22-623"><code>PRACTICEIT.CO.UK
+</code></pre>
+<p id="cn-m22-624">Under the IP address of the master servers, type the following IP address:</p>
+<pre id="cn-m22-625"><code>192.168.0.4
+</code></pre>
+<p id="cn-m22-626">Select the <b>Store this conditional forwarder in Active Directory and replicate it as follows </b>check box.</p>
+<p id="cn-m22-627">Under the drop-down list, ensure <b>All DNS servers in the forest </b>is selected.</p>
+<span class="cn-quote" id="cn-m22-628"><b><i>Note</i></b><i>: You will get an error about the Server FQDN not being resolved. Ignore this error for now.</i></span>
+<p id="cn-m22-629">Click <b>OK.</b></p>
+<p id="cn-m22-630"></p><figure><img class="cn-img" id="cn-image-m22-c-53" src="ImplementingADFederationServices_files/image-m22-c-53.jpg" alt="Figure 3.3 Screenshot of PLABDC01: The New Conditional Forwarder dialog box is displayed."><figcaption>Figure 3.3 Screenshot of PLABDC01: The New Conditional Forwarder dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-632"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-633">A conditional forwarder for <b>PRACTICEIT.CO.UK </b>is now available.</p>
+<p id="cn-m22-634"></p><figure><img class="cn-img" id="cn-image-m22-c-54" src="ImplementingADFederationServices_files/image-m22-c-54.jpg" alt="Figure 3.4 Screenshot of PLABDC01: The DNS Manager console window is displayed."><figcaption>Figure 3.4 Screenshot of PLABDC01: The DNS Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-636"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-637">In <b>DNS Manager </b>window, expand <b>Forward Lookup Zones &gt; PRACTICELABS.COM</b>.</p>
+<p id="cn-m22-638">Click <b>PRACTICELABS.COM</b>.</p>
+<p id="cn-m22-639">Right-click <b>PRACTICELABS.COM </b>and select <b>New Host (A or AAAA</b>).</p>
+<p id="cn-m22-640"></p><figure><img class="cn-img" id="cn-image-m22-c-55" src="ImplementingADFederationServices_files/image-m22-c-55.jpg" alt="Figure 3.5 Screenshot of PLABDC01: The DNS Manager console window is displayed."><figcaption>Figure 3.5 Screenshot of PLABDC01: The DNS Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-642"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-643">In the <b>New Host </b>dialog box, in the <b>Name (uses parent domain name if blank): </b>text box, type the following:</p>
+<pre id="cn-m22-644"><code>adfs
+</code></pre>
+<p id="cn-m22-645">In the <b>IP address </b>text box, type the following IP address:</p>
+<pre id="cn-m22-646"><code>192.168.0.1
+</code></pre>
+<p id="cn-m22-647">Click <b>Add Host</b>.</p>
+<p id="cn-m22-648"></p><figure><img class="cn-img" id="cn-image-m22-c-56" src="ImplementingADFederationServices_files/image-m22-c-56.jpg" alt="Figure 3.6 Screenshot of PLABDC01: The New Host dialog box shows a new host record is created."><figcaption>Figure 3.6 Screenshot of PLABDC01: The New Host dialog box shows a new host record is created.</figcaption></figure><p></p>
+<h4 id="cn-m22-650"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-651">Click <b>OK </b>in the <b>DNS </b>message box.</p>
+<h4 id="cn-m22-652"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-653">Back in the <b>New Host </b>dialog box, in the Name text box, type the following name:</p>
+<pre id="cn-m22-654"><code>certauth.adfs
+</code></pre>
+<p id="cn-m22-655">In the <b>IP address </b>text box, type the following IP address:</p>
+<pre id="cn-m22-656"><code>192.168.0.1
+</code></pre>
+<p id="cn-m22-657">Click <b>Add Host</b>.</p>
+<p id="cn-m22-658"></p><figure><img class="cn-img" id="cn-image-m22-c-57" src="ImplementingADFederationServices_files/image-m22-c-57.jpg" alt="Figure 3.7 Screenshot of PLABDC01: The New Host dialog box shows a new host record added."><figcaption>Figure 3.7 Screenshot of PLABDC01: The New Host dialog box shows a new host record added.</figcaption></figure><p></p>
+<h4 id="cn-m22-660"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-661">Click <b>OK </b>in the <b>DNS </b>message box.</p>
+<p id="cn-m22-662">Click <b>Done </b>to close the <b>New Host </b>dialog box.</p>
+<p id="cn-m22-663">Close <b>DNS Manager</b>.</p>
+<h4 id="cn-m22-664"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-665">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m22-666">Right-click <b>Start </b>and select <b>Command Prompt</b>.</p>
+<h4 id="cn-m22-667"><b><i>Step 14</i></b></h4>
+<p id="cn-m22-668">In the Command Prompt window, to set an alternate DNS
+ server for the “Ethernet” connection, type the following command and 
+press <b>Enter</b>:</p>
+<pre id="cn-m22-669"><code>netsh interface ip add dns name=Ethernet addr=192.168.0.1 index=2
+</code></pre>
+<h4 id="cn-m22-670"><b><i>Step 15</i></b></h4>
+<p id="cn-m22-671">Netsh.exe will not return a status to indicate a successful configuration.</p>
+<span class="cn-alert" id="cn-m22-672"><b>Note</b>: If you get an error 
+message saying “The configured DNS server is incorrect or does not 
+exist” re-enter the same command. This error can happen if the computer 
+is unable to detect the other DNS server in the network. You may 
+likewise get a message saying the object is already in the list. You can
+ ignore this error.</span>
+<p id="cn-m22-673"></p><figure><img class="cn-img" id="cn-image-m22-c-58" src="ImplementingADFederationServices_files/image-m22-c-58.jpg" alt="Figure 3.8 Screenshot of PLABSA01: The Command Prompt window shows a command to configure an alternate DNS server."><figcaption>Figure 3.8 Screenshot of PLABSA01: The Command Prompt window shows a command to configure an alternate DNS server.</figcaption></figure><p></p>
+<p id="cn-m22-675">Close <b>Command Prompt </b>window.</p>
+<h4 id="cn-m22-676"><b><i>Step 16</i></b></h4>
+<p id="cn-m22-677">In the <b>Server Manager </b>&gt; <b>Dashboard </b>window, click <b>Tools </b>and select <b>DNS</b>.</p>
+<h4 id="cn-m22-678"><b><i>Step 17</i></b></h4>
+<p id="cn-m22-679">In the <b>DNS Manager</b>, expand <b>PLABSA01 </b>and click <b>Conditional Forwarders</b>.</p>
+<p id="cn-m22-680">Right-click on <b>Conditional Forwarders</b>, choose <b>New Conditional Forwarder</b>.</p>
+<p id="cn-m22-681"></p><figure><img class="cn-img" id="cn-image-m22-c-59" src="ImplementingADFederationServices_files/image-m22-c-59.jpg" alt="Figure 3.9 Screenshot of PLABSA01: The DNS Manager console window is displayed."><figcaption>Figure 3.9 Screenshot of PLABSA01: The DNS Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-683"><b><i>Step 18</i></b></h4>
+<p id="cn-m22-684">In the <b>New Conditional Forwarder </b>dialog box, in <b>DNS Domain </b>box, type the following name:</p>
+<pre id="cn-m22-685"><code>PRACTICELABS.COM
+</code></pre>
+<p id="cn-m22-686">Under the <b>IP address </b>of the master servers and type the following IP address:</p>
+<pre id="cn-m22-687"><code>192.168.0.1
+</code></pre>
+<p id="cn-m22-688">Select <b>Store this conditional forwarder in Active Directory, and replicate it as follows </b>check box.</p>
+<p id="cn-m22-689">Ensure that the drop-down list is set to <b>All DNS Servers in this forest</b>.</p>
+<span class="cn-quote" id="cn-m22-690"><b><i>Note</i></b><i>: You will get an error about the Server FQDN not being resolved. Ignore this error for now.</i></span>
+<p id="cn-m22-691">Click <b>OK.</b></p>
+<p id="cn-m22-692"></p><figure><img class="cn-img" id="cn-image-m22-c-60" src="ImplementingADFederationServices_files/image-m22-c-60.jpg" alt="Figure 3.10 Screenshot of PLABSA01: The New Conditional Forwarder dialog box is displayed."><figcaption>Figure 3.10 Screenshot of PLABSA01: The New Conditional Forwarder dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-694"><b><i>Step 19</i></b></h4>
+<p id="cn-m22-695">A conditional forwarder for <b>PRACTICELABS.COM </b>is now available.</p>
+<p id="cn-m22-696"></p><figure><img class="cn-img" id="cn-image-m22-c-61" src="ImplementingADFederationServices_files/image-m22-c-61.jpg" alt="Figure 3.11 Screenshot of PLABSA01: PRACTICELABS.COM is now added in the Conditional Forwarders container."><figcaption>Figure 3.11 Screenshot of PLABSA01: PRACTICELABS.COM is now added in the Conditional Forwarders container.</figcaption></figure><p></p>
+<h4 id="cn-m22-698"><b><i>Step 20</i></b></h4>
+<p id="cn-m22-699">In <b>DNS Manager </b>window, expand <b>Forward Lookup Zones &gt; PRACTICEIT.CO.UK</b>.</p>
+<p id="cn-m22-700">Click <b>PRACTICEIT.CO.UK</b>.</p>
+<p id="cn-m22-701">Right-click <b>PRACTICEIT.CO.UK </b>and select <b>New Host (A or AAAA</b>).</p>
+<p id="cn-m22-702"></p><figure><img class="cn-img" id="cn-image-m22-c-62" src="ImplementingADFederationServices_files/image-m22-c-62.jpg" alt="Figure 3.12 Screenshot of PLABSA01: The DNS Manager console window is displayed."><figcaption>Figure 3.12 Screenshot of PLABSA01: The DNS Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-704"><b><i>Step 21</i></b></h4>
+<p id="cn-m22-705">In the <b>New Host </b>dialog box, in the <b>Name (uses parent domain name if blank): </b>text box, type the following name:</p>
+<pre id="cn-m22-706"><code>adfs
+</code></pre>
+<p id="cn-m22-707">In the <b>IP address </b>text box, type the following IP address:</p>
+<pre id="cn-m22-708"><code>192.168.0.4
+</code></pre>
+<p id="cn-m22-709">Click <b>Add Host</b>.</p>
+<p id="cn-m22-710"></p><figure><img class="cn-img" id="cn-image-m22-c-63" src="ImplementingADFederationServices_files/image-m22-c-63.jpg" alt="Figure 3.13 Screenshot of PLABSA01: The New Host dialog box shows a new host record added."><figcaption>Figure 3.13 Screenshot of PLABSA01: The New Host dialog box shows a new host record added.</figcaption></figure><p></p>
+<h4 id="cn-m22-712"><b><i>Step 22</i></b></h4>
+<p id="cn-m22-713">Click <b>OK </b>in the DNS message box.</p>
+<h4 id="cn-m22-714"><b><i>Step 23</i></b></h4>
+<p id="cn-m22-715">Back in the <b>New Host </b>dialog box, in the <b>Name </b>box, type the following name:</p>
+<pre id="cn-m22-716"><code>certauth.adfs
+</code></pre>
+<p id="cn-m22-717">In the <b>IP address </b>text box, type the following IP address:</p>
+<pre id="cn-m22-718"><code>192.168.0.4
+</code></pre>
+<p id="cn-m22-719">Click <b>Add Host</b>.</p>
+<h4 id="cn-m22-720"><b><i>Step 24</i></b></h4>
+<p id="cn-m22-721">Click <b>OK </b>to close the <b>DNS </b>message box.</p>
+<p id="cn-m22-722">Click <b>Done </b>to close the <b>New Host </b>dialog box.</p>
+<p id="cn-m22-723"></p><figure><img class="cn-img" id="cn-image-m22-c-64" src="ImplementingADFederationServices_files/image-m22-c-64.jpg" alt="Figure 3.14 Screenshot of PLABSA01: The New Conditional Forwarder dialog box is displayed."><figcaption>Figure 3.14 Screenshot of PLABSA01: The New Conditional Forwarder dialog box is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">f4b668ae-6731-4fec-956d-91344aefd689</span>
+<h4 id="cn-m22-727"><b><i>Step 25</i></b></h4>
+<p id="cn-m22-728">Close <b>DNS Manager</b>.</p>
+<span class="cn-alert" id="cn-m22-729">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-730"><b>Exercise 4 - Prepare Requirements for AD FS Server Resource Partner</b></h2>
+<p id="cn-m22-731">The Resource Partner domain in an Active Directory 
+Federation Services infrastructure is the organization that owns the 
+corporate network resource such as web application that is accessed by 
+users from the Account Partner organization.</p>
+<p id="cn-m22-732">To get more information about configuring AD FS 
+Resource partner, please refer to your course material or use your 
+preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m22-734">After completing this exercise, you will be able to:</p>
+<ul id="cn-m22-735">
+<li id="cn-m22-735">Install IIS on PLABDM01</li>
+<li id="cn-m22-736">Request computer certificate for IIS</li>
+<li id="cn-m22-737">Configure SSL bindings</li>
+<li id="cn-m22-738">Download a sample claims application</li>
+<li id="cn-m22-739">Add web application</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m22-741">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m22-742">
+<li id="cn-m22-742"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m22-743"><b>PLABDM01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-744"><b>PLABSA01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-745"><b>PLABWIN10 </b>(Windows 10 Enterprise - Domain Workstation)</li>
+</ul>
+<p id="cn-m22-746"><img class="cn-img" id="cn-image-m22-c-65" src="ImplementingADFederationServices_files/image-m22-c-65.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m22-747"><b>Task 1 - Install IIS on PLABDM01</b></h3>
+<p id="cn-m22-748">For this task, you will install IIS on <b>PLABDM01</b>. This computer will be running a claims-aware web application.</p>
+<h4 id="cn-m22-749"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-750">Connect to <b>PLABDM01</b>.</p>
+<p id="cn-m22-751">When signed on to <b>PLABDM01</b>, in the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>Windows PowerShell</b>.</p>
+<h4 id="cn-m22-752"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-753">In the <b>Windows PowerShell window</b>, to install Web Server and other required components, type the following:</p>
+<pre id="cn-m22-754"><code>Add-WindowsFeature Web-Server,Web-WebServer -IncludeManagementTools
+</code></pre>
+<p id="cn-m22-755">Press <b>Enter</b>.</p>
+<h4 id="cn-m22-756"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-757">Please wait while the Windows features are being installed.</p>
+<h4 id="cn-m22-758"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-759">Windows PowerShell will confirm the successful installation.</p>
+<p id="cn-m22-760">In the next prompt to install the ASP and other development tools, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-761"><code>Add-WindowsFeature Web-Basic-Auth,Web-Asp-Net45,NET-Framework-45-ASPNET,Windows-Identity-Foundation -IncludeManagementTools
+</code></pre>
+<p id="cn-m22-762"></p><figure><img class="cn-img" id="cn-image-m22-c-66" src="ImplementingADFederationServices_files/image-m22-c-66.jpg" alt="Figure 4.1 Screenshot of PLABDM01: Windows PowerShell shows a command to install required Windows features."><figcaption>Figure 4.1 Screenshot of PLABDM01: Windows PowerShell shows a command to install required Windows features.</figcaption></figure><p></p>
+<h4 id="cn-m22-764"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-765">Please wait while installation is in progress.</p>
+<p id="cn-m22-766">In the next prompt, you need to restart <b>PLABDM01 </b>to enable it to detect the newly-installed Certificate Authority server in <b>PLABDC01</b>.</p>
+<p id="cn-m22-767">Now, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-768"><code>shutdown /r /t 0
+</code></pre>
+<p id="cn-m22-769">Press <b>Enter</b>.</p>
+<span class="cn-alert" id="cn-m22-770"><b>Important</b>: Please wait for 2 minutes before reconnecting to <b>PLABDM01</b>. This is to give the computer sufficient time to complete its restart.</span>
+<p id="cn-m22-771"></p><figure><img class="cn-img" id="cn-image-m22-c-67" src="ImplementingADFederationServices_files/image-m22-c-67.jpg" alt="Figure 4.2 Screenshot of PLABDM01: A command is entered in Windows PowerShell to restart the computer."><figcaption>Figure 4.2 Screenshot of PLABDM01: A command is entered in Windows PowerShell to restart the computer.</figcaption></figure><p></p>
+<h3 id="cn-m22-773"><b>Task 2 - Request computer certificate for IIS</b></h3>
+<p id="cn-m22-774">A trusted certification authority was configured earlier on the <b>PLABDC01</b>. To ensure that the <b>PLABDM01 </b>detects the trusted CA you need to update the computer policy.</p>
+<h4 id="cn-m22-775"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-776">Connect to <b>PLABDM01</b>. Minimize the <b>Server Manager window</b>.&nbsp;&nbsp;</p>
+<p id="cn-m22-777">Right-click <b>Start </b>and select <b>Run</b>.</p>
+<h4 id="cn-m22-778"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-779">In the <b>Run </b>dialog box, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-780"><code>mmc
+</code></pre>
+<h4 id="cn-m22-781"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-782">In the <b>Console1 </b>window, click <b>File </b>and select <b>Add/Remove snap-in</b>.</p>
+<h4 id="cn-m22-783"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-784">In the <b>Add or Remove Snap-ins</b>, select <b>Certificates</b>.</p>
+<p id="cn-m22-785">Click <b>Add</b>.</p>
+<h4 id="cn-m22-786"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-787">In the <b>Certificates snap-in </b>page, select <b>Computer account</b>.</p>
+<p id="cn-m22-788">Click <b>Next</b>.</p>
+<h4 id="cn-m22-789"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-790">In the <b>Select Computer </b>page, click <b>Finish</b>.</p>
+<h4 id="cn-m22-791"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-792">Click <b>OK </b>in the <b>Add or Remove Snap-ins </b>dialog box.</p>
+<h4 id="cn-m22-793"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-794">In <b>Console1</b>, expand <b>Certificates (Local Computer) &gt; Personal </b>and click <b>Certificates</b>.</p>
+<p id="cn-m22-795">Right-click <b>Certificates</b>, point to <b>All Tasks </b>and select <b>Request new certificate</b>.</p>
+<p id="cn-m22-796"></p><figure><img class="cn-img" id="cn-image-m22-c-68" src="ImplementingADFederationServices_files/image-m22-c-68.jpg" alt="Figure 4.3 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 4.3 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-798"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-799">In the <b>Before you begin </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-800"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-801">In the <b>Select Certificate Enrollment Policy </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-802"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-803">In the <b>Request Certificates </b>page, select the <b>Plabs-Web </b>check box.</p>
+<p id="cn-m22-804">Click the blue link: <b>More information is required to enroll for this certificate. Click here to configure settings</b>.</p>
+<p id="cn-m22-805"></p><figure><img class="cn-img" id="cn-image-m22-c-69" src="ImplementingADFederationServices_files/image-m22-c-69.jpg" alt="Figure 4.4 Screenshot of PLABDM01: The Certificate Enrollment window, Request Certificates page is displayed."><figcaption>Figure 4.4 Screenshot of PLABDM01: The Certificate Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-807"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-808">In the <b>Certificate Properties </b>dialog box, under the <b>Subject </b>name, access the <b>Type </b>drop-down list and select <b>Common Name</b>.</p>
+<p id="cn-m22-809">Click in the <b>Value </b>text box, type the following name and click <b>Add</b>:</p>
+<pre id="cn-m22-810"><code>plabdm01.practicelabs.com
+</code></pre>
+<p id="cn-m22-811"></p><figure><img class="cn-img" id="cn-image-m22-c-70" src="ImplementingADFederationServices_files/image-m22-c-70.jpg" alt="Figure 4.5 Screenshot of PLABDM01: The Certificate Properties dialog box shows a computer name entered."><figcaption>Figure 4.5 Screenshot of PLABDM01: The Certificate Properties dialog box shows a computer name entered.</figcaption></figure><p></p>
+<h4 id="cn-m22-813"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-814">Go to <b>Alternative name </b>section, access the <b>Type </b>drop-down list and select <b>DNS</b>.</p>
+<p id="cn-m22-815">Click in the <b>Value </b>text box, type the following name and click <b>Add</b>:</p>
+<pre id="cn-m22-816"><code>plabdm01.practicelabs.com
+</code></pre>
+<p id="cn-m22-817"></p><figure><img class="cn-img" id="cn-image-m22-c-71" src="ImplementingADFederationServices_files/image-m22-c-71.jpg" alt="Figure 4.6 Screenshot of PLABDM01: The Certificate Properties dialog box shows a computer name entered."><figcaption>Figure 4.6 Screenshot of PLABDM01: The Certificate Properties dialog box shows a computer name entered.</figcaption></figure><p></p>
+<h4 id="cn-m22-819"><b><i>Step 14</i></b></h4>
+<p id="cn-m22-820">The names <b>plabdm01.practicelabs.com </b>are now added.</p>
+<p id="cn-m22-821">Click <b>OK</b>.</p>
+<p id="cn-m22-822"></p><figure><img class="cn-img" id="cn-image-m22-c-72" src="ImplementingADFederationServices_files/image-m22-c-72.jpg" alt="Figure 4.7 Screenshot of PLABDM01: The Certificate Properties dialog box shows a computer name entered."><figcaption>Figure 4.7 Screenshot of PLABDM01: The Certificate Properties dialog box shows a computer name entered.</figcaption></figure><p></p>
+<h4 id="cn-m22-824"><b><i>Step 15</i></b></h4>
+<p id="cn-m22-825">In the <b>Certificate Enrollment </b>page, click <b>Enroll</b>.</p>
+<p id="cn-m22-826"></p><figure><img class="cn-img" id="cn-image-m22-c-73" src="ImplementingADFederationServices_files/image-m22-c-73.jpg" alt="Figure 4.8 Screenshot of PLABDM01: The Certificate Enrollment window, Request Certificates page is displayed."><figcaption>Figure 4.8 Screenshot of PLABDM01: The Certificate Enrollment window, Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-828"><b><i>Step 16</i></b></h4>
+<p id="cn-m22-829">Click <b>Finish </b>to close <b>Certificate Enrollment </b>dialog box.</p>
+<p id="cn-m22-830"></p><figure><img class="cn-img" id="cn-image-m22-c-74" src="ImplementingADFederationServices_files/image-m22-c-74.jpg" alt="Figure 4.9 Screenshot of PLABDM01: The Certificate Enrollment window, Plabs-web is now added under Active Directory Enrollment Policy."><figcaption>Figure
+ 4.9 Screenshot of PLABDM01: The Certificate Enrollment window, 
+Plabs-web is now added under Active Directory Enrollment Policy.</figcaption></figure><p></p>
+<p id="cn-m22-832">The certificate is now added.</p>
+<p id="cn-m22-833"></p><figure><img class="cn-img" id="cn-image-m22-c-75" src="ImplementingADFederationServices_files/image-m22-c-75.jpg" alt="Figure 4.10 Screenshot of PLABDM01: Showing the newly added certificate under the Certificates node."><figcaption>Figure 4.10 Screenshot of PLABDM01: Showing the newly added certificate under the Certificates node.</figcaption></figure><p></p>
+<h4 id="cn-m22-835"><b><i>Step 17</i></b></h4>
+<p id="cn-m22-836">Minimize <b>Console1 </b>window.</p>
+<h4 id="cn-m22-837"><b><i>Step 18</i></b></h4>
+<p id="cn-m22-838">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>Internet Information Services (IIS) Manager</b>.</p>
+<p id="cn-m22-839">Click <b>PLABDM01 (PRACTICELABS\Administrator).</b></p>
+<p id="cn-m22-840">At the middle pane, double-click <b>Server Certificates</b>.</p>
+<p id="cn-m22-841"></p><figure><img class="cn-img" id="cn-image-m22-c-76" src="ImplementingADFederationServices_files/image-m22-c-76.jpg" alt="Figure 4.11 Screenshot of PLABDM01: The Internet Information Services (IIS) Manager console window is displayed."><figcaption>Figure 4.11 Screenshot of PLABDM01: The Internet Information Services (IIS) Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-843"><b><i>Step 19</i></b></h4>
+<p id="cn-m22-844">A computer certificate is now issued to <b>PLABDM01</b>.</p>
+<p id="cn-m22-845"></p><figure><img class="cn-img" id="cn-image-m22-c-77" src="ImplementingADFederationServices_files/image-m22-c-77.jpg" alt="Figure 4.12 Screenshot of PLABDM01: The Internet Information Services (IIS) Manager console window shows the newly-issued certificate."><figcaption>Figure
+ 4.12 Screenshot of PLABDM01: The Internet Information Services (IIS) 
+Manager console window shows the newly-issued certificate.</figcaption></figure><p></p>
+<p id="cn-m22-847">Keep the <b>Internet Information Services (IIS) Manager </b>window open.</p>
+<h3 id="cn-m22-848"><b>Task 3 - Configure SSL bindings</b></h3>
+<p id="cn-m22-849">To enable websites published in PLABDM01 to use SSL, a certificate must be bound to the default web site.</p>
+<h4 id="cn-m22-850"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-851">On <b>PLABDM01</b>, <b>Internet Information Services (IIS) Manager </b>is open.</p>
+<p id="cn-m22-852">Expand <b>Sites</b>, right-click <b>Default Web Site </b>and choose <b>Edit Bindings</b>.</p>
+<p id="cn-m22-853"></p><figure><img class="cn-img" id="cn-image-m22-c-78" src="ImplementingADFederationServices_files/image-m22-c-78.jpg" alt="Figure 4.13 Screenshot of PLABDM01: The Internet Information Services (IIS) Manager console window is displayed."><figcaption>Figure 4.13 Screenshot of PLABDM01: The Internet Information Services (IIS) Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-855"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-856">In the <b>Site Bindings </b>dialog box, click <b>Add</b>.</p>
+<h4 id="cn-m22-857"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-858">In the <b>Add Site Binding </b>dialog box, change <b>Type </b>to <b>https.</b></p>
+<p id="cn-m22-859">In the <b>Host name </b>text box, type the following name:</p>
+<pre id="cn-m22-860"><code>plabdm01.practicelabs.com
+</code></pre>
+<p id="cn-m22-861">In the <b>SSL certificate </b>drop-down list, select <b>plabdm01.practicelabs.com </b>and click <b>OK</b>.</p>
+<p id="cn-m22-862"></p><figure><img class="cn-img" id="cn-image-m22-c-79" src="ImplementingADFederationServices_files/image-m22-c-79.jpg" alt="Figure 4.14 Screenshot of PLABDM01: The Add Site Binding dialog box is displayed."><figcaption>Figure 4.14 Screenshot of PLABDM01: The Add Site Binding dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-864"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-865">Select <b>Close </b>in the <b>Site Bindings </b>dialog box.</p>
+<p id="cn-m22-866"></p><figure><img class="cn-img" id="cn-image-m22-c-80" src="ImplementingADFederationServices_files/image-m22-c-80.jpg" alt="Figure 4.15 Screenshot of PLABDM01: Showing the Site Bindings dialog box with the newly added certificate and the Close button highlighted."><figcaption>Figure
+ 4.15 Screenshot of PLABDM01: Showing the Site Bindings dialog box with 
+the newly added certificate and the Close button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m22-868"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-869">Minimize <b>Internet Information Services (IIS) Manager </b>console.</p>
+<h3 id="cn-m22-870"><b>Task 4 - Download a sample claims application</b></h3>
+<p id="cn-m22-871">In this task, you will download sample code to create a claims-aware application.</p>
+<p id="cn-m22-872">Please note that this application does not have the 
+full capabilities of a full-fledged claims application and will not be 
+functional in this lab exercise.</p>
+<h4 id="cn-m22-873"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-874">On <b>PLABDM01</b>, click <b>Internet Explorer </b>on the taskbar.</p>
+<h4 id="cn-m22-875"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-876">In the <b>Set up Internet Explorer 11 </b>message box, select <b>Use recommended security and compatibility settings</b>.</p>
+<p id="cn-m22-877">Click <b>OK</b>.</p>
+<h4 id="cn-m22-878"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-879">In the <b>Tools and resources </b>page, click <b>Tools</b>.</p>
+<h4 id="cn-m22-880"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-881">In the <b>[..] </b>&gt;<b>Tools </b>page scroll down and click <b>Windows_Server_2012.</b></p>
+<h4 id="cn-m22-882"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-883">In <b>[..] </b>&gt; <b>Tools </b>&gt; <b>Windows_Server_2012</b>, click on <b>ClaimsApp.zip.</b></p>
+<p id="cn-m22-884">In the notification toolbar at the bottom, click <b>Save</b>.</p>
+<p id="cn-m22-885"></p><figure><img class="cn-img" id="cn-image-m22-c-81" src="ImplementingADFederationServices_files/image-m22-c-81.jpg" alt="Figure 4.16 Screenshot of PLABDM01: Internet Explorer window shows the Tools and resources intranet page."><figcaption>Figure 4.16 Screenshot of PLABDM01: Internet Explorer window shows the Tools and resources intranet page.</figcaption></figure><p></p>
+<h4 id="cn-m22-887"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-888">When file download is complete, click <b>Open folder</b>.</p>
+<h4 id="cn-m22-889"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-890">In the <b>File Explorer </b>window, right-click <b>ClaimsApp.zip </b>and choose <b>Extract All</b>.</p>
+<h4 id="cn-m22-891"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-892">In the <b>Select a destination and extract files </b>page click <b>Extract</b>.</p>
+<h4 id="cn-m22-893"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-894">A new <b>File Explorer </b>window opens.</p>
+<p id="cn-m22-895">In the new File Explorer window, a new folder called <b>ClaimsApp </b>will open.</p>
+<p id="cn-m22-896">Go up by one folder level by clicking on <b>Downloads </b>on the address bar.</p>
+<p id="cn-m22-897"></p><figure><img class="cn-img" id="cn-image-m22-c-82" src="ImplementingADFederationServices_files/image-m22-c-82.jpg" alt="Figure 4.17 Screenshot of PLABDM01: File Explorer window shows the downloaded files."><figcaption>Figure 4.17 Screenshot of PLABDM01: File Explorer window shows the downloaded files.</figcaption></figure><p></p>
+<h4 id="cn-m22-899"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-900">Right-click on the <b>ClaimsApp </b>folder and choose <b>Copy</b>.</p>
+<h4 id="cn-m22-901"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-902">Paste the <b>ClaimsApp </b>folder in the <b>C:\inetpub</b>\<b>wwwroot </b>folder.</p>
+<p id="cn-m22-903"></p><figure><img class="cn-img" id="cn-image-m22-c-83" src="ImplementingADFederationServices_files/image-m22-c-83.jpg" alt="Figure 4.18 Screenshot of PLABDM01: File Explorer window shows the downloaded files."><figcaption>Figure 4.18 Screenshot of PLABDM01: File Explorer window shows the downloaded files.</figcaption></figure><p></p>
+<h4 id="cn-m22-905"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-906">Close <b>File Explorer </b>and <b>Internet Explorer </b>application windows.</p>
+<h3 id="cn-m22-907"><b>Task 5 - Add Web Application</b></h3>
+<p id="cn-m22-908">To add the sample application in IIS, perform the following steps:</p>
+<h4 id="cn-m22-909"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-910">On <b>PLABDM01</b>, restore <b>Internet Information Services (IIS) Manager </b>from the taskbar.</p>
+<h4 id="cn-m22-911"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-912">Expand <b>PLABDM01 &gt; Sites </b>and click <b>Default Web Site</b>.</p>
+<p id="cn-m22-913">Right-click <b>Default Web Site </b>and select <b>Add Application</b>.</p>
+<p id="cn-m22-914"></p><figure><img class="cn-img" id="cn-image-m22-c-84" src="ImplementingADFederationServices_files/image-m22-c-84.jpg" alt="Figure 4.19 Screenshot of PLABDM01: Internet Information Service (IIS) Manager console window is displayed."><figcaption>Figure 4.19 Screenshot of PLABDM01: Internet Information Service (IIS) Manager console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-916"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-917">In the <b>Add Application </b>dialog box, in the <b>Alias </b>text box, type the following:</p>
+<pre id="cn-m22-918"><code>claimsapp
+</code></pre>
+<p id="cn-m22-919">Click in the <b>Physical path </b>text box and type the following path:</p>
+<pre id="cn-m22-920"><code>C:\inetpub\wwwroot\ClaimsApp
+</code></pre>
+<p id="cn-m22-921">Click <b>OK</b>.</p>
+<h4 id="cn-m22-922"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-923"><b>ClaimsApp </b>is now added.</p>
+<p id="cn-m22-924"></p><figure><img class="cn-img" id="cn-image-m22-c-85" src="ImplementingADFederationServices_files/image-m22-c-85.jpg" alt="Figure 4.20 Screenshot of PLABDM01: Showing the ClaimsApp Home window in IIS Manager."><figcaption>Figure 4.20 Screenshot of PLABDM01: Showing the ClaimsApp Home window in IIS Manager.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<h4 id="cn-m22-928"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-929">Minimize <b>Internet Information Services (IIS) Manager</b>.</p>
+<span class="cn-alert" id="cn-m22-930">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-931"><b>Exercise 5 - Install and Configure AD Federation Services</b></h2>
+<p id="cn-m22-932">After successfully setting the up the requirements 
+for the resource and account partner side of the AD FS, you will now 
+install the Active Directory Federation Services on each organization 
+domain.</p>
+<p id="cn-m22-933">To learn more about how to install and configure AD 
+Federation Services, please refer to your course material or use your 
+preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m22-935">After completing this exercise, you will be able to:</p>
+<ul id="cn-m22-936">
+<li id="cn-m22-936">Install IIS on PLABDC01 and PLABSA01 that will run AD FS</li>
+<li id="cn-m22-937">Add ADFS feature in the resource partner</li>
+<li id="cn-m22-938">Configure a standalone federation server</li>
+<li id="cn-m22-939">Verify the availability of federation metadata on AD FS Server</li>
+<li id="cn-m22-940">Install AD FS in accounts partner domain</li>
+<li id="cn-m22-941">Configure a standalone federation server in accounts partner organization</li>
+<li id="cn-m22-942">Verify the availability of federation metadata on AD FS Server on accounts partner</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m22-944">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m22-945">
+<li id="cn-m22-945"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m22-946"><b>PLABDM01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-947"><b>PLABSA01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-948"><b>PLABWIN10 </b>(Windows 10 Enterprise - Domain Workstation)</li>
+</ul>
+<p id="cn-m22-949"><img class="cn-img" id="cn-image-m22-c-86" src="ImplementingADFederationServices_files/image-m22-c-86.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m22-950"><b>Task 1 - Install IIS on PLABDC01 and PLABSA01 that will run AD FS</b></h3>
+<p id="cn-m22-951">To install Web Services on the servers that will run AD FS, perform the following steps:</p>
+<h4 id="cn-m22-952"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-953">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m22-954">Restore <b>PowerShell </b>from the taskbar. Clear the window with the clear command.</p>
+<span class="cn-quote" id="cn-m22-955"><b><i>Note: </i></b><i>If you had closed Server Manager earlier, you need to invoke it from the Tools menu.</i></span>
+<h4 id="cn-m22-956"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-957">In the <b>Windows PowerShell </b>window, to install Web Server and other required components, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-958"><code>Add-WindowsFeature Web-Server, Web-WebServer -IncludeManagementTools
+</code></pre>
+<p id="cn-m22-959"></p><figure><img class="cn-img" id="cn-image-m22-c-87" src="ImplementingADFederationServices_files/image-m22-c-87.jpg" alt="Figure 5.1 Screenshot of PLABDC01: A command is entered in Windows PowerShell to install Web Services."><figcaption>Figure 5.1 Screenshot of PLABDC01: A command is entered in Windows PowerShell to install Web Services.</figcaption></figure><p></p>
+<h4 id="cn-m22-961"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-962">Please wait while the Windows features are being installed.</p>
+<p id="cn-m22-963">Minimize <b>Windows PowerShell </b>when the IIS feature is successfully installed.</p>
+<h4 id="cn-m22-964"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-965">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m22-966">Restore <b>Windows PowerShell </b>from the taskbar.</p>
+<h4 id="cn-m22-967"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-968">In the <b>Windows PowerShell </b>window, to install Web Server and other required components, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-969"><code>Add-WindowsFeature Web-Server, Web-WebServer -IncludeManagementTools
+</code></pre>
+<h4 id="cn-m22-970"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-971">Windows features are now being installed.</p>
+<p id="cn-m22-972">Minimize <b>Windows PowerShell </b>when the IIS feature is successfully installed.</p>
+<h3 id="cn-m22-973"><b>Task 2 - Add ADFS feature in the resource partner</b></h3>
+<p id="cn-m22-974">To install ADFS in the resource partner domain, perform the following steps:</p>
+<h4 id="cn-m22-975"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-976">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m22-977">Restore <b>Windows PowerShell </b>from taskbar if already not invoked.</p>
+<h4 id="cn-m22-978"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-979">To create the KDS root key for Group Managed Services Account (GMSA), type the following command:</p>
+<pre id="cn-m22-980"><code>Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
+</code></pre>
+<p id="cn-m22-981">Press <b>Enter</b>.</p>
+<p id="cn-m22-982"></p><figure><img class="cn-img" id="cn-image-m22-c-88" src="ImplementingADFederationServices_files/image-m22-c-88.jpg" alt="Figure 5.2 Screenshot of PLABDC01: A command is entered in Windows PowerShell to install Web Services."><figcaption>Figure 5.2 Screenshot of PLABDC01: A command is entered in Windows PowerShell to install Web Services.</figcaption></figure><p></p>
+<h4 id="cn-m22-984"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-985">The GUID for the managed service account is created.</p>
+<p id="cn-m22-986">In the next prompt, to install AD Federation Services, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-987"><code>Add-WindowsFeature -Name ADFS-Federation -IncludeManagementTools
+</code></pre>
+<h4 id="cn-m22-988"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-989">Please wait while the Windows feature is being installed.</p>
+<p id="cn-m22-990"></p><figure><img class="cn-img" id="cn-image-m22-c-89" src="ImplementingADFederationServices_files/image-m22-c-89.jpg" alt="Figure 5.3 Screenshot of PLABDC01: A command is entered in Windows PowerShell to install AD Federation Services."><figcaption>Figure 5.3 Screenshot of PLABDC01: A command is entered in Windows PowerShell to install AD Federation Services.</figcaption></figure><p></p>
+<p id="cn-m22-992">You will get a successful confirmation when AD FS is successfully installed.</p>
+<p id="cn-m22-993"></p><figure><img class="cn-img" id="cn-image-m22-c-90" src="ImplementingADFederationServices_files/image-m22-c-90.jpg" alt="Figure 5.4 Screenshot of PLABDC01: Windows PowerShell confirms the successful installation of AD Federation Services."><figcaption>Figure 5.4 Screenshot of PLABDC01: Windows PowerShell confirms the successful installation of AD Federation Services.</figcaption></figure><p></p>
+<h4 id="cn-m22-995"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-996">Minimize the <b>Windows PowerShell </b>window.</p>
+<h3 id="cn-m22-997"><b>Task 3 - Configure a standalone federation server</b></h3>
+<p id="cn-m22-998">To create the first server in the ADFS farm, perform the following steps:</p>
+<h4 id="cn-m22-999"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1000">On <b>PLABDC01</b>, the <b>Server Manager </b>&gt; <b>Dashboard </b>window is open.</p>
+<p id="cn-m22-1001">Press <b>F5 </b>to click the <b>Refresh </b>button to refresh the window.</p>
+<p id="cn-m22-1002">Click on the yellow exclamation point and select <b>Configure the federation service on this server</b>.</p>
+<p id="cn-m22-1003"></p><figure><img class="cn-img" id="cn-image-m22-c-91" src="ImplementingADFederationServices_files/image-m22-c-91.jpg" alt="Figure 5.5 Screenshot of PLABDC01:  The Server Manager &amp;gt; Dashboard window is displayed."><figcaption>Figure 5.5 Screenshot of PLABDC01:  The Server Manager &gt; Dashboard window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1005"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1006">On the <b>Welcome </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-1007"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1008">In the <b>Connect to Active Directory Domain Services </b>page, the current <b>PRACTICELABS\Administrator </b>account is signed-in.</p>
+<p id="cn-m22-1009">Click <b>Next</b>.</p>
+<p id="cn-m22-1010"></p><figure><img class="cn-img" id="cn-image-m22-c-92" src="ImplementingADFederationServices_files/image-m22-c-92.jpg" alt="Figure 5.6 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, Connect to Active Directory Domain Services window is displayed."><figcaption>Figure
+ 5.6 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, Connect to Active Directory Domain Services
+ window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1012"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1013">In the <b>Specify Service Properties </b>page, click the <b>SSL Certificate </b>drop-down list and select <b>plabdc01.practicelabs.com</b>.</p>
+<p id="cn-m22-1014">The <b>Federation Service Name </b>is automatically filled in with the following: <b>adfs.practicelabs.com</b>.</p>
+<p id="cn-m22-1015">Click in the <b>Federation Service Display Name</b>, type the following and click <b>Next</b>:</p>
+<pre id="cn-m22-1016"><code>Practice Labs Federation Service
+</code></pre>
+<p id="cn-m22-1017"></p><figure><img class="cn-img" id="cn-image-m22-c-93" src="ImplementingADFederationServices_files/image-m22-c-93.jpg" alt="Figure 5.7 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, Specify Service Properties page is displayed."><figcaption>Figure
+ 5.7 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, Specify Service Properties page is 
+displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1019"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1020">In the <b>Specify Service Account </b>page, the <b>Create a Group Managed Service Account </b>option is automatically selected.</p>
+<p id="cn-m22-1021">Click in the text box, type the following and click <b>Next</b>:</p>
+<pre id="cn-m22-1022"><code>FS-Gmsa
+</code></pre>
+<p id="cn-m22-1023"></p><figure><img class="cn-img" id="cn-image-m22-c-94" src="ImplementingADFederationServices_files/image-m22-c-94.jpg" alt="Figure 5.8 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, Specify Service Account page is displayed."><figcaption>Figure
+ 5.8 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, Specify Service Account page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1025"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1026">In the <b>Specify Configuration Database </b>page, the <b>Create a database on this server using Windows Internal Database </b>option is selected.</p>
+<p id="cn-m22-1027">Click <b>Next</b>.</p>
+<p id="cn-m22-1028"></p><figure><img class="cn-img" id="cn-image-m22-c-95" src="ImplementingADFederationServices_files/image-m22-c-95.jpg" alt="Figure 5.9 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, Specify Configuration Database page is displayed."><figcaption>Figure
+ 5.9 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, Specify Configuration Database page is 
+displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1030"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1031">In the <b>Review Options </b>page, there will be a momentary pause as the selections are being analyzed.</p>
+<p id="cn-m22-1032">Click <b>Next</b>.</p>
+<p id="cn-m22-1033"></p><figure><img class="cn-img" id="cn-image-m22-c-96" src="ImplementingADFederationServices_files/image-m22-c-96.jpg" alt="Figure 5.10 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, Review Options page is displayed."><figcaption>Figure
+ 5.10 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, Review Options page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1035"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-1036">In the <b>Prerequisite Checks </b>page, when all the checks are successful, click <b>Configure</b>.</p>
+<p id="cn-m22-1037"></p><figure><img class="cn-img" id="cn-image-m22-c-97" src="ImplementingADFederationServices_files/image-m22-c-97.jpg" alt="Figure 5.11 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, Prerequisites Checks page is displayed."><figcaption>Figure
+ 5.11 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, Prerequisites Checks page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1039"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-1040">Please wait for the installation to complete the process as this will take a few minutes.</p>
+<p id="cn-m22-1041"></p><figure><img class="cn-img" id="cn-image-m22-c-98" src="ImplementingADFederationServices_files/image-m22-c-98.jpg" alt="Figure 5.12 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, Installation page is displayed."><figcaption>Figure
+ 5.12 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, Installation page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1043"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-1044">In the <b>Results </b>page, a summary of the configuration settings that were made is displayed.</p>
+<p id="cn-m22-1045">Click <b>Close</b>.</p>
+<p id="cn-m22-1046"></p><figure><img class="cn-img" id="cn-image-m22-c-99" src="ImplementingADFederationServices_files/image-m22-c-99.jpg" alt="Figure 5.13 Screenshot of PLABDC01: The Active Directory Federation Services Configuration Wizard window, the Results page is displayed."><figcaption>Figure
+ 5.13 Screenshot of PLABDC01: The Active Directory Federation Services 
+Configuration Wizard window, the Results page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1048"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-1049">Right-click <b>Start</b>, point to <b>Shut down or sign out </b>and click <b>Restart</b>.</p>
+<p id="cn-m22-1050">Click <b>Continue </b>to proceed with the server restart.</p>
+<span class="cn-alert" id="cn-m22-1051"><b>Important</b>: Please wait for 5 minutes before reconnecting to PLABDC01. This is to let <b>PLABDC01 </b>complete its restart.  Then proceed to the next task. Restart of <b>PLABDC01 </b>may
+ take a while as Windows updates are being installed. If after 5 minutes
+ and you still cannot connect to PLABDC01, mouse-over PLABDC01 in the 
+device list and click <b>Refresh</b>. Then click <b>Power on </b>and connect to PLABDC01.</span>
+<h3 id="cn-m22-1052"><b>Task 4 - Verify the availability of federation metadata on AD FS Server</b></h3>
+<p id="cn-m22-1053">To verify if the ADFS federation metadata is available, perform the following steps:</p>
+<h4 id="cn-m22-1054"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1055">Verify that <b>PLABDC01 </b>has completed its 
+restart and that you can connect to it before you begin working on this 
+task. Since PLABWIN10 is a domain member, you need to ensure PLABDC01, 
+which is the domain controller, is up and running before you start 
+working in PLABWIN10.</p>
+<p id="cn-m22-1056">Connect to <b>PLABWIN10.</b></p>
+<p id="cn-m22-1057">Right-click the network icon in the system tray and select <b>Open Network and Sharing Center</b>.</p>
+<p id="cn-m22-1058"></p><figure><img class="cn-img" id="cn-image-m22-c-100" src="ImplementingADFederationServices_files/image-m22-c-100.jpg" alt="Figure 5.14 Screenshot of PLABWIN10: Right-clicking the network icon and selecting the Open Network and Sharing Center option."><figcaption>Figure 5.14 Screenshot of PLABWIN10: Right-clicking the network icon and selecting the Open Network and Sharing Center option.</figcaption></figure><p></p>
+<h4 id="cn-m22-1060"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1061">In the <b>Network and Sharing Center </b>window, click <b>Internet Options</b>.</p>
+<h4 id="cn-m22-1062"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1063">In the <b>Internet Properties </b>dialog box, click <b>Connections</b>.</p>
+<h4 id="cn-m22-1064"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1065">Under the <b>Connections </b>tab, click <b>LAN settings</b>.</p>
+<h4 id="cn-m22-1066"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1067">In the <b>Local Area Network (LAN) settings </b>dialog box, click <b>Advanced</b>.</p>
+<h4 id="cn-m22-1068"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1069">In the <b>Proxy Settings </b>dialog box, in the <b>Exceptions </b>text box, type the following and click <b>OK</b>:</p>
+<pre id="cn-m22-1070"><code>;adfs*
+</code></pre>
+<p id="cn-m22-1071">Similarly, click <b>OK </b>in the <b>Local Area Network (LAN) Settings</b>, <b>Internet Properties </b>dialog boxes.</p>
+<p id="cn-m22-1072">Close <b>Network and Sharing Center </b>window.</p>
+<h4 id="cn-m22-1073"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1074">Launch <b>Internet Explorer</b>.</p>
+<p id="cn-m22-1075">In the <b>Internet Explorer 11 </b>dialog box, click <b>Use recommended settings </b>and click <b>OK</b>.</p>
+<h4 id="cn-m22-1076"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-1077">In the <b>address bar</b>, type-over the existing entry with the following:</p>
+<pre id="cn-m22-1078"><code>https://plabdc01.practicelabs.com/federationmetadata/2007-06/federationmetadata.xml
+</code></pre>
+<p id="cn-m22-1079">Ensure the .<b>xml </b>file opens and view the contents of the file.</p>
+<p id="cn-m22-1080">Press <b>Enter</b>.</p>
+<p id="cn-m22-1081">If the above URL did not work, type the following URL path:</p>
+<pre id="cn-m22-1082"><code>https://adfs.practicelabs.com/federationmetadata/2007-06/federationmetadata.xml
+</code></pre>
+<p id="cn-m22-1083">Press <b>Enter</b>.</p>
+<h4 id="cn-m22-1084"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-1085">The metadata of the ADFS server is displayed.</p>
+<p id="cn-m22-1086">Close <b>Internet Explorer</b>.</p>
+<p id="cn-m22-1087"></p><figure><img class="cn-img" id="cn-image-m22-c-101" src="ImplementingADFederationServices_files/image-m22-c-101.jpg" alt="Figure 5.15 Screenshot of PLABWIN10: Internet Explorer window shows the AD FS metadata."><figcaption>Figure 5.15 Screenshot of PLABWIN10: Internet Explorer window shows the AD FS metadata.</figcaption></figure><p></p>
+<h3 id="cn-m22-1089"><b>Task 5 -  Install AD FS in Partner Domain</b></h3>
+<p id="cn-m22-1090">To install ADFS in the accounts partner domain, perform the following steps:</p>
+<h4 id="cn-m22-1091"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1092">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m22-1093">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>Windows PowerShell </b>if it is already not opened.</p>
+<h4 id="cn-m22-1094"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1095">To set the property for the managed service account, type the following command:</p>
+<pre id="cn-m22-1096"><code>Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
+</code></pre>
+<p id="cn-m22-1097">Press <b>Enter</b>.</p>
+<h4 id="cn-m22-1098"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1099">Write down the GUID that was generated by the command for your reference.</p>
+<p id="cn-m22-1100">In the next prompt to install AD Federation services, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m22-1101"><code>Add-WindowsFeature -Name ADFS-Federation -IncludeManagementTools
+</code></pre>
+<h4 id="cn-m22-1102"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1103">You will get a successful confirmation when AD FS is successfully installed.</p>
+<p id="cn-m22-1104">Minimize <b>Windows PowerShell </b>window.</p>
+<h3 id="cn-m22-1105"><b>Task 6 - Configure a standalone federation server in accounts partner organization</b></h3>
+<p id="cn-m22-1106">To install the first AD FS server in the accounts partner domain, perform the following steps:</p>
+<h4 id="cn-m22-1107"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1108">On <b>PLABSA01</b>, the <b>Server Manager &gt; Dashboard </b>window is open.</p>
+<p id="cn-m22-1109">Press <b>F5 </b>to click the <b>Refresh </b>button to refresh the window.</p>
+<p id="cn-m22-1110">Click on the yellow exclamation point and select <b>Configure the federation service on this server</b>.</p>
+<h4 id="cn-m22-1111"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1112">In the <b>Welcome </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-1113"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1114">In the <b>Connect to Active Directory Domain Services </b>page, the current <b>PRACTICEIT\Administrator </b>account is signed-in.</p>
+<p id="cn-m22-1115">Click <b>Next</b>.</p>
+<h4 id="cn-m22-1116"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1117">In the <b>Specify Service Properties </b>page, click the <b>SSL Certificate </b>drop-down list and select <b>plabsa01.practiceit.co.uk</b>.</p>
+<p id="cn-m22-1118">The <b>Federation Service Name </b>is automatically filled in with the following: <b>adfs.practiceit.co.uk</b>.</p>
+<p id="cn-m22-1119">Click in the <b>Federation Service Display Name</b>, type the following and click <b>Next</b>:</p>
+<pre id="cn-m22-1120"><code>Practice IT Federation Service
+</code></pre>
+<p id="cn-m22-1121"></p><figure><img class="cn-img" id="cn-image-m22-c-102" src="ImplementingADFederationServices_files/image-m22-c-102.jpg" alt="Figure 5.16 Screenshot of PLABSA01: The Active Directory Federation Services Configuration Wizard window, Specify Service Properties page is displayed."><figcaption>Figure
+ 5.16 Screenshot of PLABSA01: The Active Directory Federation Services 
+Configuration Wizard window, Specify Service Properties page is 
+displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1123"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1124">In the <b>Specify Service Account </b>page, the <b>Create a Group Managed Service Account </b>is automatically selected.</p>
+<p id="cn-m22-1125">Click in the text box, type the following text and click <b>Next</b>:</p>
+<pre id="cn-m22-1126"><code>FS-Gmsa
+</code></pre>
+<h4 id="cn-m22-1127"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1128">In the <b>Specify Database </b>page, select the <b>Create a database on this server using Windows Internal Database </b>option.</p>
+<p id="cn-m22-1129">Click <b>Next</b>.</p>
+<h4 id="cn-m22-1130"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1131">In the <b>Review Options </b>page, there will be a momentary pause as the selections are being analyzed.</p>
+<p id="cn-m22-1132">Click <b>Next </b>when applicable.</p>
+<h4 id="cn-m22-1133"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-1134">In the <b>Prerequisite Checks </b>page, when all the checks are successful, click <b>Configure</b>.</p>
+<h4 id="cn-m22-1135"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-1136">Please wait for the installation to complete the process. This will take a few minutes.</p>
+<p id="cn-m22-1137">In the <b>Results </b>page, a summary of the configuration settings that were made is displayed.</p>
+<p id="cn-m22-1138">Click <b>Close</b>.</p>
+<p id="cn-m22-1139"></p><figure><img class="cn-img" id="cn-image-m22-c-103" src="ImplementingADFederationServices_files/image-m22-c-103.jpg" alt="Figure 5.17 Screenshot of PLABSA01: The Active Directory Federation Services Configuration Wizard window, the Results page is displayed."><figcaption>Figure
+ 5.17 Screenshot of PLABSA01: The Active Directory Federation Services 
+Configuration Wizard window, the Results page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1141"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-1142">Right-click <b>Start</b>, point to <b>Shut down or sign out </b>and click <b>Restart</b>.</p>
+<p id="cn-m22-1143">Click <b>Continue </b>to proceed with the <b>PLABSA01 </b>restart.</p>
+<span class="cn-alert" id="cn-m22-1144"><b>Important</b>: Please wait for 5 minutes and let PLABSA01 complete its restart. Then proceed to the next task.</span>
+<h3 id="cn-m22-1145"><b>Task 7 - Verify the availability of federation metadata on AD FS Server on accounts partner</b></h3>
+<p id="cn-m22-1146">To verify if the ADFS federation metadata is available, perform the following steps:</p>
+<h4 id="cn-m22-1147"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1148">Connect to <b>PLABWIN10.</b></p>
+<p id="cn-m22-1149">Ensure that <b>Internet Explorer </b>is open.</p>
+<h4 id="cn-m22-1150"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1151">In the address bar, type-over the existing entry with the following and press <b>Enter</b>:</p>
+<pre id="cn-m22-1152"><code>https://plabsa01.practiceit.co.uk/federationmetadata/2007-06/federationmetadata.xml
+</code></pre>
+<p id="cn-m22-1153">Ensure the .<b>xml </b>file opens and view the contents of the file.</p>
+<p id="cn-m22-1154">If the above URL did not work, type the following URL path and press <b>Enter</b>:</p>
+<pre id="cn-m22-1155"><code>https://adfs.practiceit.co.uk/federationmetadata/2007-06/federationmetadata.xml
+</code></pre>
+<h4 id="cn-m22-1156"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1157">If the “<b>There is a problem with this website’s security certificate</b>” message appears, click the <b>Continue to this website (not recommended) </b>web link.</p>
+<p id="cn-m22-1158">The metadata of the ADFS server is displayed.</p>
+<p id="cn-m22-1159"></p><figure><img class="cn-img" id="cn-image-m22-c-104" src="ImplementingADFederationServices_files/image-m22-c-104.jpg" alt="Figure 5.18 Screenshot of PLABWIN10: Internet Explorer window shows the AD FS metadata."><figcaption>Figure 5.18 Screenshot of PLABWIN10: Internet Explorer window shows the AD FS metadata.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<h4 id="cn-m22-1163"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1164">Close <b>Internet Explorer</b>.</p>
+<span class="cn-alert" id="cn-m22-1165">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-1166"><b>Exercise 6 - Create AD Federation Services Trusts</b></h2>
+<p id="cn-m22-1167">In Active Directory Domain Services or AD DS, a 
+trust relationship is created between two Active Directory Domains that 
+span two domain forests or two external domains to allow the sharing of 
+network assets or centralize administration of users or groups between 
+domains. The trust relationship is a logical link between two domains 
+relies on a verifiable and permanent network connection to authenticate 
+all identities who access resources in the AD domains.</p>
+<p id="cn-m22-1168">In Active Directory Federation Services or AD FS, a 
+federation trust must be established between the account partner and 
+resource partner domains. The resource partner hosts the application 
+that will be accessed by the account partner organization.</p>
+<p id="cn-m22-1169">To learn more about how to create a federation trust
+ in AD Federation Services, please refer to your course material or use 
+your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m22-1171">After completing this exercise, you will be able to:</p>
+<ul id="cn-m22-1172">
+<li id="cn-m22-1172">Enable claims provider trust</li>
+<li id="cn-m22-1173">Configure the Windows Identity Foundation Federation Utility</li>
+<li id="cn-m22-1174">Configure a relying party trust for the claims web application</li>
+<li id="cn-m22-1175">Configure claim rules for the relying party trust</li>
+<li id="cn-m22-1176">Create a claims provider trust for the claims web application</li>
+<li id="cn-m22-1177">Configure claim rules for the claims provider trust</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m22-1179">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m22-1180">
+<li id="cn-m22-1180"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m22-1181"><b>PLABDM01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-1182"><b>PLABSA01 </b>(Windows Server 2016 - Domain Workstation)</li>
+<li id="cn-m22-1183"><b>PLABWIN10 </b>(Windows 10 Enterprise - Domain Workstation)</li>
+</ul>
+<p id="cn-m22-1184"><img class="cn-img" id="cn-image-m22-c-105" src="ImplementingADFederationServices_files/image-m22-c-105.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m22-1185"><b>Task 1 - Enable claims provider trust</b></h3>
+<p id="cn-m22-1186">The claims provider is the AD FS server that hosts 
+users with signed tokens containing claims. A claim is a statement that 
+describes a user. For example, a name, e-mail address, user principal 
+name (UPN). When a user connects to a network resource found in the 
+partner organization, the user’s claim is authenticated using AD DS and 
+populates the user claim with the attributes required by the partner 
+organization.</p>
+<p id="cn-m22-1187">To enable the claims provider’s trust in the accounts partner, perform the following steps:</p>
+<h4 id="cn-m22-1188"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1189">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m22-1190">The <b>Server Manager </b>window is displayed.</p>
+<h4 id="cn-m22-1191"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1192">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>AD FS Management</b>.</p>
+<p id="cn-m22-1193">In the <b>AD FS </b>Management console, click <b>Claims Provider Trusts </b>folder.</p>
+<p id="cn-m22-1194">In the right details pane, right-click <b>Active Directory </b>and select <b>Edit Claim Rules</b>.</p>
+<p id="cn-m22-1195"></p><figure><img class="cn-img" id="cn-image-m22-c-106" src="ImplementingADFederationServices_files/image-m22-c-106.jpg" alt="Figure 6.1 Screenshot of PLABSA01: The AD FS Management console is displayed."><figcaption>Figure 6.1 Screenshot of PLABSA01: The AD FS Management console is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1197"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1198">In the <b>Edit Claim Rules for Active Directory </b>dialog box, click <b>Add Rule</b>.</p>
+<p id="cn-m22-1199"></p><figure><img class="cn-img" id="cn-image-m22-c-107" src="ImplementingADFederationServices_files/image-m22-c-107.jpg" alt="Figure 6.2 Screenshot of PLABSA01: The Edit Claim Rules for Active Directory dialog box is displayed."><figcaption>Figure 6.2 Screenshot of PLABSA01: The Edit Claim Rules for Active Directory dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1201"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1202">In the <b>Add Transform Claim Rule Wizard </b>window, <b>Select Rule Template </b>page, ensure that the <b>Claim rule template </b>is set to <b>Send LDAP Attributes as Claims</b>.</p>
+<p id="cn-m22-1203">Click <b>Next</b>.</p>
+<p id="cn-m22-1204"></p><figure><img class="cn-img" id="cn-image-m22-c-108" src="ImplementingADFederationServices_files/image-m22-c-108.jpg" alt="Figure 6.3 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Select Rule Template page is displayed."><figcaption>Figure 6.3 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Select Rule Template page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1207"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1208">In the <b>Configure Rule </b>page, in the <b>Claim rule name </b>text box, type the following text:</p>
+<pre id="cn-m22-1209"><code>Outgoing LDAP attributes rule
+</code></pre>
+<p id="cn-m22-1210">In the <b>Attribute store </b>drop-down list, select <b>Active Directory.</b></p>
+<p id="cn-m22-1211">Under the <b>Mapping of LDAP attributes to outgoing claim types </b>section, click under the <b>LDAP Attribute (Select or type to add more) </b>column, then click the drop-down list select <b>E-mail Addresses</b>.</p>
+<p id="cn-m22-1212">Then click under the <b>Outgoing Claim Type (Select or type to add more) </b>column, click the drop-down list and select <b>E-mail Address</b>.</p>
+<p id="cn-m22-1213">Navigate to <b>Mapping of LDAP attributes to outgoing claim </b>types section, click under the <b>LDAP Attribute (Select or type to add more) </b>column, then click the drop-down list select <b>User-Principal-Name</b>.</p>
+<p id="cn-m22-1214">Then click under the <b>Outgoing Claim Type (Select or type to add more) </b>column, click the drop-down list and select <b>UPN</b>.</p>
+<p id="cn-m22-1215">Navigate to <b>Mapping of LDAP attributes to outgoing claim types </b>section, click under the <b>LDAP Attribute (Select or type to add more) </b>column, then click the drop-down list select <b>Display-Name</b>.</p>
+<p id="cn-m22-1216">Then click under the <b>Outgoing Claim Type (Select or type to add more) </b>column, click the drop-down list and select <b>Name</b>.</p>
+<p id="cn-m22-1217">Click <b>Finish</b>.</p>
+<p id="cn-m22-1218"></p><figure><img class="cn-img" id="cn-image-m22-c-109" src="ImplementingADFederationServices_files/image-m22-c-109.jpg" alt="Figure 6.4 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed."><figcaption>Figure 6.4 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1220"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1221">Click <b>OK </b>to close the <b>Edit Claim Rules for Active Directory </b>dialog box.</p>
+<p id="cn-m22-1222"></p><figure><img class="cn-img" id="cn-image-m22-c-110" src="ImplementingADFederationServices_files/image-m22-c-110.jpg" alt="Figure 6.5 Screenshot of PLABSA01: The Edit Claim Rules for Active Directory dialog box is displayed with the OK button highlighted."><figcaption>Figure
+ 6.5 Screenshot of PLABSA01: The Edit Claim Rules for Active Directory 
+dialog box is displayed with the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m22-1224"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1225">Keep the <b>AD FS Management </b>window open.</p>
+<h3 id="cn-m22-1226"><b>Task 2 - Configure the Windows Identity Foundation Federation Utility</b></h3>
+<p id="cn-m22-1227">The Windows Identity Foundation (WIF) Federation Utility is a program for configuring an application for use with ADFS.</p>
+<p id="cn-m22-1228">To use WIF to set up and application, do the following steps:</p>
+<h4 id="cn-m22-1229"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1230">Connect to <b>PLABDM01</b>.</p>
+<p id="cn-m22-1231">Launch <b>Internet Explorer</b>.</p>
+<h4 id="cn-m22-1232"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1233">In the <b>Tools and resources </b>page, click <b>Tools</b>.</p>
+<h4 id="cn-m22-1234"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1235">In the <b>[..] &gt; Tools </b>page, scroll down a bit and click <b>Windows_Server_2012</b>.</p>
+<h4 id="cn-m22-1236"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1237">In the <b>[..] &gt; Tools  &gt; Windows_Server_2012 </b>page, click <b>WindowsIdentityFoundation-SDK-4.0.msi</b>.</p>
+<p id="cn-m22-1238">In the notification toolbar at the bottom of the screen, click <b>Run</b>.</p>
+<p id="cn-m22-1240"></p><figure><img class="cn-img" id="cn-image-m22-c-111" src="ImplementingADFederationServices_files/image-m22-c-111.jpg" alt="Figure 6.6 Screenshot of PLABDM01: Internet Explorer window shows the Tools and resources webpage."><figcaption>Figure 6.6 Screenshot of PLABDM01: Internet Explorer window shows the Tools and resources webpage.</figcaption></figure><p></p>
+<h4 id="cn-m22-1242"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1243">In the <b>Welcome to the Windows Identity Foundation SDK 4.0 Setup Wizard</b>, click <b>Next</b>.</p>
+<h4 id="cn-m22-1244"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1245">In the <b>End User License Agreement </b>page, select <b>I accept the terms in the License Agreement </b>check box, click <b>Next</b>.</p>
+<h4 id="cn-m22-1246"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1247">In the <b>Destination Folder </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-1248"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-1249">In the <b>Ready to install Windows Identity Foundation SDK 4.0 </b>page, click <b>Install</b>.</p>
+<h4 id="cn-m22-1250"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-1251">Please wait while installation is on-going.</p>
+<p id="cn-m22-1252">When the <b>Completed the Windows Identity Foundation SDK 4.0 Setup Wizard </b>is displayed, deselect the <b>Open Readme </b>checkbox and click <b>Finish</b>.</p>
+<p id="cn-m22-1253">Close <b>Internet Explorer</b>.</p>
+<h4 id="cn-m22-1254"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-1255">Ensure that the <b>Server Manager </b>window is open.</p>
+<p id="cn-m22-1256">Click <b>Tools </b>and select <b>Windows Identity Foundation Federation Utility</b>.</p>
+<h4 id="cn-m22-1257"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-1258">In the <b>Welcome to the Federation Utility Wizard </b>dialog box, in the <b>Application configuration location </b>text box, type the following path:</p>
+<pre id="cn-m22-1259"><code>c:\inetpub\wwwroot\ClaimsApp\Web.config
+</code></pre>
+<p id="cn-m22-1260">In the <b>Application URI </b>text box, type the following path:</p>
+<pre id="cn-m22-1261"><code>https://plabdm01.practicelabs.com/claimsapp/
+</code></pre>
+<p id="cn-m22-1262">Click <b>Next</b>.</p>
+<p id="cn-m22-1263"></p><figure><img class="cn-img" id="cn-image-m22-c-112" src="ImplementingADFederationServices_files/image-m22-c-112.jpg" alt="Figure 6.7 Screenshot of PLABDM01: Federation Utility window, Welcome to the Federation Utility wizard page is displayed."><figcaption>Figure 6.7 Screenshot of PLABDM01: Federation Utility window, Welcome to the Federation Utility wizard page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1265"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-1266">In the <b>Security Token Service </b>page, select the option <b>Use an existing STS </b>and type the following path.</p>
+<p id="cn-m22-1267">Click <b>Next</b>:</p>
+<pre id="cn-m22-1268"><code>https://adfs.practicelabs.com/federationmetadata/2007-06/federationmetadata.xml
+</code></pre>
+<p id="cn-m22-1269"></p><figure><img class="cn-img" id="cn-image-m22-c-113" src="ImplementingADFederationServices_files/image-m22-c-113.jpg" alt="Figure 6.8 Screenshot of PLABDM01: Federation Utility window, Security Token Service page is displayed."><figcaption>Figure 6.8 Screenshot of PLABDM01: Federation Utility window, Security Token Service page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1271"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-1272">In the <b>STS signing certificate chain validation error </b>page, keep the default selection of <b>Disable certificate chain validation </b>and click <b>Next</b>.</p>
+<p id="cn-m22-1273"></p><figure><img class="cn-img" id="cn-image-m22-c-114" src="ImplementingADFederationServices_files/image-m22-c-114.jpg" alt="Figure 6.9 Screenshot of PLABDM01: Federation Utility window, STS signing certificate chain validation error page is displayed."><figcaption>Figure 6.9 Screenshot of PLABDM01: Federation Utility window, STS signing certificate chain validation error page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1275"><b><i>Step 14</i></b></h4>
+<p id="cn-m22-1276">In the <b>Security token encryption </b>page, ensure that the <b>No encryption </b>option is selected.</p>
+<p id="cn-m22-1277">Click <b>Next</b>.</p>
+<p id="cn-m22-1278"></p><figure><img class="cn-img" id="cn-image-m22-c-115" src="ImplementingADFederationServices_files/image-m22-c-115.jpg" alt="Figure 6.10 Screenshot of PLABDM01: Federation Utility window, Security token encryption page is displayed."><figcaption>Figure 6.10 Screenshot of PLABDM01: Federation Utility window, Security token encryption page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1280"><b><i>Step 15</i></b></h4>
+<p id="cn-m22-1281">In the <b>Offered claims </b>page, click <b>Next</b>.</p>
+<p id="cn-m22-1282"></p><figure><img class="cn-img" id="cn-image-m22-c-116" src="ImplementingADFederationServices_files/image-m22-c-116.jpg" alt="Figure 6.11 Screenshot of PLABDM01: Federation Utility window, Offered claims page is displayed."><figcaption>Figure 6.11 Screenshot of PLABDM01: Federation Utility window, Offered claims page is displayed.</figcaption></figure><p></p>
+<p id="cn-m22-1286">In the <b>Summary </b>page, click <b>Finish</b>.</p>
+<p id="cn-m22-1287"></p><figure><img class="cn-img" id="cn-image-m22-c-117" src="ImplementingADFederationServices_files/image-m22-c-117.jpg" alt="Figure 6.12 Screenshot of PLABDM01: Federation Utility window, the Summary page is displayed."><figcaption>Figure 6.12 Screenshot of PLABDM01: Federation Utility window, the Summary page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1289"><b><i>Step 17</i></b></h4>
+<p id="cn-m22-1290">You will be notified when the system has successfully configured your application.</p>
+<p id="cn-m22-1291">Click <b>OK</b>.</p>
+<p id="cn-m22-1292"></p><figure><img class="cn-img" id="cn-image-m22-c-118" src="ImplementingADFederationServices_files/image-m22-c-118.jpg" alt="Figure 6.13 Screenshot of PLABDM01: The Success message box is displayed indicating a successful configuration of the application."><figcaption>Figure
+ 6.13 Screenshot of PLABDM01: The Success message box is displayed 
+indicating a successful configuration of the application.</figcaption></figure><p></p>
+<h3 id="cn-m22-1294"><b>Task 3 - Configure a relying party trust for the claims web application</b></h3>
+<p id="cn-m22-1295">The relying party is the organization where the 
+application is located. It functions as the other side of the AD FS 
+authentication and authorization process. In this lab, PRACTICELABS.COM 
+is the organization where the application resides and this application 
+resource will be accessed by PRACTICEIT.CO.UK.</p>
+<h4 id="cn-m22-1296"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1297">Connect to <b>PLABSA01.</b></p>
+<p id="cn-m22-1298">Right-click the network icon in the system tray and select <b>Open Network and Sharing Center</b>.</p>
+<p id="cn-m22-1299"></p><figure><img class="cn-img" id="cn-image-m22-c-119" src="ImplementingADFederationServices_files/image-m22-c-119.jpg" alt="Figure 6.14 Screenshot of PLABSA01: Right-clicking the network icon and selecting the Open Network and Sharing Center option."><figcaption>Figure 6.14 Screenshot of PLABSA01: Right-clicking the network icon and selecting the Open Network and Sharing Center option.</figcaption></figure><p></p>
+<h4 id="cn-m22-1301"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1302">In the <b>Network and Sharing Center </b>window, click <b>Internet Options</b>.</p>
+<h4 id="cn-m22-1303"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1304">In the <b>Internet Properties </b>dialog box, click <b>Connections</b>.</p>
+<h4 id="cn-m22-1305"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1306">Under the <b>Connections </b>tab, click <b>LAN settings</b>.</p>
+<h4 id="cn-m22-1307"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1308">In the <b>Local Area Network (LAN) settings </b>dialog box, click <b>Advanced</b>.</p>
+<h4 id="cn-m22-1309"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1310">In the <b>Proxy Settings </b>dialog box, in the <b>Exceptions </b>text box, type the following text and click <b>OK</b>:</p>
+<pre id="cn-m22-1311"><code>;adfs*
+</code></pre>
+<p id="cn-m22-1312">Similarly, click <b>OK </b>in the <b>Local Area Network (LAN) Settings</b>, <b>Internet Properties </b>dialog boxes.</p>
+<p id="cn-m22-1313">Close <b>Network and Sharing Center </b>window.</p>
+<h4 id="cn-m22-1314"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1315">Ensure that the <b>AD FS </b>window is open.</p>
+<p id="cn-m22-1316">Click the <b>AD FS </b>folder.</p>
+<p id="cn-m22-1317">Navigate to the <b>Actions </b>pane and click the <b>Add relying party trust </b>link.</p>
+<p id="cn-m22-1318"></p><figure><img class="cn-img" id="cn-image-m22-c-120" src="ImplementingADFederationServices_files/image-m22-c-120.jpg" alt="Figure 6.15 Screenshot of PLABSA01: The AD FS Management console window is displayed."><figcaption>Figure 6.15 Screenshot of PLABSA01: The AD FS Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1320"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-1321">In the <b>Welcome to the Add Relying Party Trust Wizard </b>page, click <b>Start</b>.</p>
+<h4 id="cn-m22-1322"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-1323">In the <b>Select Data Source </b>page, choose the <b>Import data about the relying party published online or a local network </b>option, type the following URL and click <b>Next</b>:</p>
+<pre id="cn-m22-1324"><code>https://adfs.practicelabs.com
+</code></pre>
+<p id="cn-m22-1325"></p><figure><img class="cn-img" id="cn-image-m22-c-121" src="ImplementingADFederationServices_files/image-m22-c-121.jpg" alt="Figure 6.16 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Select Data Source page is displayed."><figcaption>Figure 6.16 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Select Data Source page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1327"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-1328">In the <b>Specify Display Name </b>page, type the following text and click <b>Next</b>:</p>
+<pre id="cn-m22-1329"><code>PracticeLabs relying party
+</code></pre>
+<p id="cn-m22-1330"></p><figure><img class="cn-img" id="cn-image-m22-c-122" src="ImplementingADFederationServices_files/image-m22-c-122.jpg" alt="Figure 6.17 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Specify Display Name page is displayed."><figcaption>Figure 6.17 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Specify Display Name page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1332"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-1333">In the <b>Choose Access Control Policy </b>page, <b>Permit everyone </b>is the policy.</p>
+<p id="cn-m22-1334">Click <b>Next</b>.</p>
+<p id="cn-m22-1335"></p><figure><img class="cn-img" id="cn-image-m22-c-123" src="ImplementingADFederationServices_files/image-m22-c-123.jpg" alt="Figure 6.18 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Choose Access Control Policy page is displayed."><figcaption>Figure 6.18 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Choose Access Control Policy page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1337"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-1338">In the <b>Ready to Add Trust </b>page, the <b>Relying party’s federation metadata URL </b>is displayed.</p>
+<p id="cn-m22-1339">Click <b>Next</b>.</p>
+<p id="cn-m22-1340"></p><figure><img class="cn-img" id="cn-image-m22-c-124" src="ImplementingADFederationServices_files/image-m22-c-124.jpg" alt="Figure 6.19 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Ready to Add Trust page is displayed."><figcaption>Figure 6.19 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Ready to Add Trust page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1342"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-1343">In the <b>Finish </b>screen, ensure that <b>Configure claims issuance policy for this application </b>check box is selected.</p>
+<p id="cn-m22-1344">Click <b>Close</b>.</p>
+<p id="cn-m22-1345"></p><figure><img class="cn-img" id="cn-image-m22-c-125" src="ImplementingADFederationServices_files/image-m22-c-125.jpg" alt="Figure 6.20 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Finish page is displayed."><figcaption>Figure 6.20 Screenshot of PLABSA01: The Add Relying Party Trust Wizard window, Finish page is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m22-1347"><b>Task 4 - Configure claim rules for the relying party trust</b></h3>
+<p id="cn-m22-1348">Federation servers use claim rules to process claims
+ presented by a user when accessing an application found in the resource
+ partner organization.  For instance, claim rules might state that an 
+e-mail address is accepted as a valid claim from the accounts partner 
+and this is transformed into a specific role in the resource partner 
+organization.</p>
+<p id="cn-m22-1349">To setup claim rules for the relying party trust, perform the following steps:</p>
+<h4 id="cn-m22-1350"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1351">On <b>PLABSA01</b>, the <b>AD FS </b>window is open.</p>
+<p id="cn-m22-1352">You are automatically redirected to the <b>Relying Party Trusts </b>folder.</p>
+<p id="cn-m22-1353">At the details pane, right-click on <b>PracticeLabs relying party </b>in the centre pane and choose <b>Edit Claim Issuance Policy</b>.</p>
+<p id="cn-m22-1354"></p><figure><img class="cn-img" id="cn-image-m22-c-126" src="ImplementingADFederationServices_files/image-m22-c-126.jpg" alt="Figure 6.21 Screenshot of PLABSA01: The AD FS Management console window is displayed."><figcaption>Figure 6.21 Screenshot of PLABSA01: The AD FS Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1356"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1357">In the <b>Edit Claim Rules for PracticeLabs relying party </b>dialog box, under the <b>Issuance Transform Rules </b>tab, click <b>Add Rule</b>.</p>
+<p id="cn-m22-1358"></p><figure><img class="cn-img" id="cn-image-m22-c-127" src="ImplementingADFederationServices_files/image-m22-c-127.jpg" alt="Figure 6.22 Screenshot of PLABSA01: The Edit Claim Issuance Policy for PracticeLabs relying party dialog box is displayed."><figcaption>Figure 6.22 Screenshot of PLABSA01: The Edit Claim Issuance Policy for PracticeLabs relying party dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1360"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1361">In the <b>Select Rule Template </b>dialog box, from the <b>Claim rule template </b>drop-down list choose <b>Pass Through or Filter an Incoming Claim </b>and then click <b>Next</b>.</p>
+<p id="cn-m22-1362"></p><figure><img class="cn-img" id="cn-image-m22-c-128" src="ImplementingADFederationServices_files/image-m22-c-128.jpg" alt="Figure 6.23 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Select Rule Template page is displayed."><figcaption>Figure 6.23 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Select Rule Template page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1364"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1365">In the <b>Configure Rule </b>page, in the <b>Claim rule name </b>text box, type the following text:</p>
+<pre id="cn-m22-1366"><code>Pass through Windows account name rule
+</code></pre>
+<p id="cn-m22-1367">From the <b>Incoming claim type </b>drop-down list, select <b>Windows account name</b>.</p>
+<p id="cn-m22-1368">Ensure that the <b>Pass through all claims values </b>option is selected.</p>
+<p id="cn-m22-1369">Click <b>Finish</b>.</p>
+<p id="cn-m22-1370"></p><figure><img class="cn-img" id="cn-image-m22-c-129" src="ImplementingADFederationServices_files/image-m22-c-129.jpg" alt="Figure 6.24 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed."><figcaption>Figure 6.24 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1372"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1373">In the <b>Edit Claim Issuance Policy for PracticeLabs relying party </b>dialog box, select <b>Add rule</b>.</p>
+<p id="cn-m22-1374"></p><figure><img class="cn-img" id="cn-image-m22-c-130" src="ImplementingADFederationServices_files/image-m22-c-130.jpg" alt="Figure 6.25 Screenshot of PLABSA01: The Edit Claim Issuance Policy for PracticeLabs relying party dialog box is displayed."><figcaption>Figure 6.25 Screenshot of PLABSA01: The Edit Claim Issuance Policy for PracticeLabs relying party dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1376"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1377">In the <b>Select Rule Template </b>page, from the <b>Claim rule template </b>drop-down list, choose <b>Pass Through or Filter an Incoming Claim.</b></p>
+<p id="cn-m22-1378">Choose <b>Next</b>.</p>
+<p id="cn-m22-1379"></p><figure><img class="cn-img" id="cn-image-m22-c-131" src="ImplementingADFederationServices_files/image-m22-c-131.jpg" alt="Figure 6.26 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Select Rule Template page is displayed."><figcaption>Figure 6.26 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Select Rule Template page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1381"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1382">In the <b>Configure Rule </b>page, in <b>Claim rule name </b>text box, type the following text:</p>
+<pre id="cn-m22-1383"><code>Pass through E-mail address rule
+</code></pre>
+<p id="cn-m22-1384">Click the <b>Incoming claim type </b>drop-down list, choose <b>E-mail Address.</b></p>
+<p id="cn-m22-1385">Ensure that <b>Pass through all claim values </b>option is selected.</p>
+<p id="cn-m22-1386">Click <b>Finish</b>.</p>
+<p id="cn-m22-1387"></p><figure><img class="cn-img" id="cn-image-m22-c-132" src="ImplementingADFederationServices_files/image-m22-c-132.jpg" alt="Figure 6.27 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed."><figcaption>Figure 6.27 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1389"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-1390">Back in the <b>Edit Claim Issuance Policy for PracticeLabs relying party </b>dialog box, two transform rules have been added.</p>
+<p id="cn-m22-1391">Click <b>Add rule</b>.</p>
+<h4 id="cn-m22-1392"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-1393">In the <b>Select Rule Template </b>page, from <b>Claim rule template </b>drop-down list, select <b>Pass Through or Filter an Incoming Claim</b>.</p>
+<p id="cn-m22-1394">Choose <b>Next</b>.</p>
+<h4 id="cn-m22-1395"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-1396">In the <b>Configure Rule </b>dialog box, click in the <b>Claim rule name </b>text box and type the following text:</p>
+<pre id="cn-m22-1397"><code>Pass through UPN rule
+</code></pre>
+<p id="cn-m22-1398">Click the <b>Incoming claim type </b>drop-down list, select <b>UPN.</b></p>
+<p id="cn-m22-1399">Ensure that the <b>Pass through all claim types </b>option is selected.</p>
+<p id="cn-m22-1400">Click <b>Finish</b>.</p>
+<p id="cn-m22-1401"></p><figure><img class="cn-img" id="cn-image-m22-c-133" src="ImplementingADFederationServices_files/image-m22-c-133.jpg" alt="Figure 6.28 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window. Configure Rule page is displayed."><figcaption>Figure 6.28 Screenshot of PLABSA01: The Add Transform Claim Rule Wizard window. Configure Rule page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1403"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-1404">Back in the <b>Edit Claim Rules for PracticeLabs relying party </b>dialog box, you will add the final rule.</p>
+<p id="cn-m22-1405">Click <b>Add rule</b>.</p>
+<h4 id="cn-m22-1406"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-1407">In the <b>Select Rule Template </b>page, click the <b>Claim rule template </b>drop-down list, choose <b>Pass Through or Filter an Incoming Claim</b>.</p>
+<p id="cn-m22-1408">Click <b>Next</b>.</p>
+<h4 id="cn-m22-1409"><b><i>Step 13</i></b></h4>
+<p id="cn-m22-1410">In the <b>Configure Rule </b>page, click in the <b>Claim rule name </b>text box and type the following text:</p>
+<pre id="cn-m22-1411"><code>Pass through Name rule
+</code></pre>
+<p id="cn-m22-1412">Click the <b>Incoming claim type </b>drop-down list, choose <b>Name.</b></p>
+<p id="cn-m22-1413">Ensure that <b>Pass through all claim values </b>option is selected.</p>
+<p id="cn-m22-1414">Click <b>Finish</b>.</p>
+<h4 id="cn-m22-1415"><b><i>Step 14</i></b></h4>
+<p id="cn-m22-1416">You have completed the <b>Rules for Edit Claim Issuance Policy for PracticeLabs relying party</b>.</p>
+<p id="cn-m22-1417">Click <b>OK.</b></p>
+<p id="cn-m22-1418"></p><figure><img class="cn-img" id="cn-image-m22-c-134" src="ImplementingADFederationServices_files/image-m22-c-134.jpg" alt="Figure 6.29 Screenshot of PLABSA01: The Edit Claim Issuance Policy for PracticeLabs relying party dialog box is displayed."><figcaption>Figure 6.29 Screenshot of PLABSA01: The Edit Claim Issuance Policy for PracticeLabs relying party dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1420"><b><i>Step 15</i></b></h4>
+<p id="cn-m22-1421">Minimize the <b>AD FS Management </b>console.</p>
+<h4 id="cn-m22-1422"><b><i>Step 16</i></b></h4>
+<p id="cn-m22-1423">Back in the <b>AD FS </b>console, ensure that the <b>Relying Party Trusts </b>folder is selected.</p>
+<p id="cn-m22-1424">Right-click <b>PracticeLabs relying party </b>and select <b>Properties</b>.</p>
+<p id="cn-m22-1425"></p><figure><img class="cn-img" id="cn-image-m22-c-135" src="ImplementingADFederationServices_files/image-m22-c-135.jpg" alt="Figure 6.30 Screenshot of PLABSA01: The AD FS Management console window is displayed."><figcaption>Figure 6.30 Screenshot of PLABSA01: The AD FS Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1427"><b><i>Step 17</i></b></h4>
+<p id="cn-m22-1428">In the <b>PracticeLabs relying party Properties </b>dialog box, under the <b>Monitoring </b>tab, click <b>Test URL</b>.</p>
+<h4 id="cn-m22-1429"><b><i>Step 18</i></b></h4>
+<p id="cn-m22-1430">You will get a confirmation that the Federation metadata URL was validated successfully.</p>
+<p id="cn-m22-1431">This means that the trust was successfully created.</p>
+<p id="cn-m22-1432">Click <b>OK</b>.</p>
+<p id="cn-m22-1433"></p><figure><img class="cn-img" id="cn-image-m22-c-136" src="ImplementingADFederationServices_files/image-m22-c-136.jpg" alt="Figure 6.31 Screenshot of PLABSA01: The AD FS Management message box is displayed."><figcaption>Figure 6.31 Screenshot of PLABSA01: The AD FS Management message box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1435"><b><i>Step 19</i></b></h4>
+<p id="cn-m22-1436">Click <b>OK </b>to close the <b>PracticeLabs relying party Properties </b>dialog box.</p>
+<h4 id="cn-m22-1437"><b><i>Step 20</i></b></h4>
+<p id="cn-m22-1438">Keep <b>AD FS Management </b>console open.</p>
+<h3 id="cn-m22-1439"><b>Task 5 - Create a claims provider trust for the claims web application</b></h3>
+<p id="cn-m22-1440">A claims provider trust is set up on the relying 
+party federation server which is PLABDC01 (PRACTICELABS.COM) 
+organization. The claims provider trust identifies the claims provider 
+(PRACTICEIT.CO.UK) and describes how the relying party 
+(PRACTICELABS.COM) utilizes the claims issued by (PRACTICEIT.CO.UK). .</p>
+<p id="cn-m22-1441">To create the claims provider trust, do the following steps:</p>
+<h4 id="cn-m22-1442"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1443">Connect to <b>PLABDC01.</b></p>
+<p id="cn-m22-1444">Right-click the network icon in the system tray and select <b>Open Network and Sharing Center</b>.</p>
+<p id="cn-m22-1445"></p><figure><img class="cn-img" id="cn-image-m22-c-137" src="ImplementingADFederationServices_files/image-m22-c-137.jpg" alt="Figure 6.32 Screenshot of PLABDC01: Right-clicking the network icon and selecting the Open Network and Sharing Center option."><figcaption>Figure 6.32 Screenshot of PLABDC01: Right-clicking the network icon and selecting the Open Network and Sharing Center option.</figcaption></figure><p></p>
+<h4 id="cn-m22-1447"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1448">In the <b>Network and Sharing Center </b>window, click <b>Internet Options</b>.</p>
+<h4 id="cn-m22-1449"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1450">In the <b>Internet Properties </b>dialog box, click <b>Connections</b>.</p>
+<h4 id="cn-m22-1451"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1452">Under the <b>Connections </b>tab, click <b>LAN settings</b>.</p>
+<h4 id="cn-m22-1453"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1454">In the <b>Local Area Network (LAN) settings </b>dialog box, click <b>Advanced</b>.</p>
+<h4 id="cn-m22-1455"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1456">In the <b>Proxy Settings </b>dialog box, in the <b>Exceptions </b>text box, type the following text:</p>
+<pre id="cn-m22-1457"><code>;adfs*
+</code></pre>
+<p id="cn-m22-1458">Click <b>OK </b>in the <b>Proxy Settings</b>.</p>
+<p id="cn-m22-1459">Similarly, click <b>OK </b>in the <b>Local Area Network (LAN) Settings</b>, <b>Internet Properties </b>dialog boxes.</p>
+<p id="cn-m22-1460">Close the <b>Network and Sharing Center </b>window.</p>
+<h4 id="cn-m22-1461"><b><i>Step 7</i></b></h4>
+<p id="cn-m22-1462">Open the <b>AD FS </b>window from the <b>Tools </b>menu if already not opened.</p>
+<p id="cn-m22-1463">Click the <b>Claims Provider Trusts </b>folder.</p>
+<p id="cn-m22-1464">Right-click <b>Claims Provider Trusts </b>and select <b>Add Claims Provider Trust</b>.</p>
+<p id="cn-m22-1465"></p><figure><img class="cn-img" id="cn-image-m22-c-138" src="ImplementingADFederationServices_files/image-m22-c-138.jpg" alt="Figure 6.33 Screenshot of PLABDC01: The AD FS Management console window is displayed."><figcaption>Figure 6.33 Screenshot of PLABDC01: The AD FS Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1467"><b><i>Step 8</i></b></h4>
+<p id="cn-m22-1468">In the <b>Welcome to the Add Claims Provider Trust Wizard </b>page, click <b>Start</b>.</p>
+<h4 id="cn-m22-1469"><b><i>Step 9</i></b></h4>
+<p id="cn-m22-1470">In the <b>Select Data Source </b>page, choose <b>Import data about the claims provider published online or a local network </b>option, and type the following name and click <b>Next</b>:</p>
+<pre id="cn-m22-1471"><code>https://adfs.practicelabs.com
+</code></pre>
+<span class="cn-quote" id="cn-m22-1473"><i>If you are shown an error 
+with the above name, please attempt the following name: 
+adfs.practiceit.co.uk or https://adfs.practiceit.co.uk</i></span>
+<h4 id="cn-m22-1474"><b><i>Step 10</i></b></h4>
+<p id="cn-m22-1475">In the <b>Specify Display Name </b>page, type-over the provided name with the following:</p>
+<pre id="cn-m22-1476"><code>PracticeIT claims provider
+</code></pre>
+<p id="cn-m22-1477">Click <b>Next</b>.</p>
+<h4 id="cn-m22-1478"><b><i>Step 11</i></b></h4>
+<p id="cn-m22-1479">In the <b>Ready to Add Trust </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m22-1480"><b><i>Step 12</i></b></h4>
+<p id="cn-m22-1481">In the <b>Finish </b>screen, ensure that the <b>Open the Edit Claim Rules dialog for this claims provider trust when the wizard closes </b>check box is selected.</p>
+<p id="cn-m22-1482">Click <b>Close</b>.</p>
+<p id="cn-m22-1483"></p><figure><img class="cn-img" id="cn-image-m22-c-139" src="ImplementingADFederationServices_files/image-m22-c-139.jpg" alt="Figure 6.34 Screenshot of PLABDC01: The Add Claims Provider Trust Wizard window, Finish page is displayed."><figcaption>Figure 6.34 Screenshot of PLABDC01: The Add Claims Provider Trust Wizard window, Finish page is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m22-1485"><b>Task 6 - Configure claim rules for the claims provider trust</b></h3>
+<p id="cn-m22-1486">The claim rules define how claims are sent and used 
+by AD FS servers. Claim rules are used by accounts partner organization 
+to provide claims to their users and the claims that are acceptable by 
+the resource partner organization.</p>
+<p id="cn-m22-1487">To configure claim rules for the claims provider trust, perform the following steps:</p>
+<h4 id="cn-m22-1488"><b><i>Step 1</i></b></h4>
+<p id="cn-m22-1489">On <b>PLABDC01</b>, the <b>AD FS Management </b>window is open.</p>
+<p id="cn-m22-1490">You are automatically redirected to the <b>Claims Providers Trusts </b>folder.</p>
+<p id="cn-m22-1491">At the details pane, right-click on <b>PracticeIT claims provider </b>and choose <b>Edit Claim Rules</b>.</p>
+<p id="cn-m22-1492"></p><figure><img class="cn-img" id="cn-image-m22-c-140" src="ImplementingADFederationServices_files/image-m22-c-140.jpg" alt="Figure 6.35 Screenshot of PLABDC01: The AD FS Management console window is displayed."><figcaption>Figure 6.35 Screenshot of PLABDC01: The AD FS Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1494"><b><i>Step 2</i></b></h4>
+<p id="cn-m22-1495">In the <b>Edit Claim Rules for PracticeIT claims provider </b>dialog box, under the <b>Acceptance Transform Rules </b>tab, click <b>Add Rule</b>.</p>
+<p id="cn-m22-1496"></p><figure><img class="cn-img" id="cn-image-m22-c-141" src="ImplementingADFederationServices_files/image-m22-c-141.jpg" alt="Figure 6.36 Screenshot of PLABDC01: The Edit Claim Rules for PracticeIT claims provider dialog box is displayed."><figcaption>Figure 6.36 Screenshot of PLABDC01: The Edit Claim Rules for PracticeIT claims provider dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m22-1498"><b><i>Step 3</i></b></h4>
+<p id="cn-m22-1499">In the <b>Select Rule Template </b>dialog box, from the <b>Claim rule template </b>drop-down list choose <b>Pass Through or Filter an Incoming Claim </b>and then click <b>Next</b>.</p>
+<h4 id="cn-m22-1500"><b><i>Step 4</i></b></h4>
+<p id="cn-m22-1501">In the <b>Configure Rule </b>page, click in the <b>Claim rule name </b>text box, and type the following text:</p>
+<pre id="cn-m22-1502"><code>Pass through Windows account name rule
+</code></pre>
+<p id="cn-m22-1503">Click on the <b>Incoming claim type </b>drop-down list, select <b>Windows account name</b>.</p>
+<p id="cn-m22-1504">Select <b>Pass through all claims values </b>option.</p>
+<p id="cn-m22-1505"></p><figure><img class="cn-img" id="cn-image-m22-c-142" src="ImplementingADFederationServices_files/image-m22-c-142.jpg" alt="Figure 6.37 Screenshot of PLABDC01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed."><figcaption>Figure 6.37 Screenshot of PLABDC01: The Add Transform Claim Rule Wizard window, Configure Rule page is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m22-1509">Click <b>Finish</b>.</p>
+<h4 id="cn-m22-1510"><b><i>Step 5</i></b></h4>
+<p id="cn-m22-1511">In the <b>AD FS Management </b>message box, a notice regarding security vulnerabilities is displayed.</p>
+<p id="cn-m22-1512">Click <b>Yes</b>.</p>
+<h4 id="cn-m22-1513"><b><i>Step 6</i></b></h4>
+<p id="cn-m22-1514">In the <b>Edit Claim Rules for PracticeIT claims provider </b>dialog box, click <b>OK</b>. You are back on the <b>AD FS </b>console.</p>
+<p id="cn-m22-1515"></p><figure><img class="cn-img" id="cn-image-m22-c-143" src="ImplementingADFederationServices_files/image-m22-c-143.jpg" alt="Figure 6.38 Screenshot of PLABDC01: The AD FS Management console window is displayed."><figcaption>Figure 6.38 Screenshot of PLABDC01: The AD FS Management console window is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m22-1519"><b>Review</b></h2>
+<p id="cn-m22-1520">Well done, you have completed the <b>Implementing AD Federation Services </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">83a3d740-9d77-4f7a-a1b3-5e8b60238a6d</span>
+<span class="atom-code hidden">186f2a1f-01b8-4b78-8d2b-379af54ae6a9</span>
+<span class="atom-code hidden">dc173a49-4e88-48af-8eac-31702832d720</span>
+<span class="atom-code hidden">2753996e-b1c4-4a36-83a7-2d5a7b05e950</span>
+<span class="atom-code hidden">7d1cfef9-f1dd-4d44-82c7-3d69ca7cfbd6</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m22-1530">You completed the following exercises:</p>
+<ul id="cn-m22-1531">
+<li id="cn-m22-1531">Prepare System Requirements for ADFS Resource Partner</li>
+<li id="cn-m22-1532">Prepare System Requirements for ADFS Accounts Partner</li>
+<li id="cn-m22-1533">Enable Name Resolution for Resource and Account Domains</li>
+<li id="cn-m22-1534">Prepare Requirements for AD FS Server Resource Partner</li>
+<li id="cn-m22-1535">Install and Configure AD Federation Services</li>
+<li id="cn-m22-1536">Create AD Federation Services Trusts</li>
+</ul>
+<p id="cn-m22-1537">You should now be able to:</p>
+<ul id="cn-m22-1538">
+<li id="cn-m22-1538">Add and install AD Certificate Services</li>
+<li id="cn-m22-1539">Export root CA certificate to a file</li>
+<li id="cn-m22-1540">Configure custom certificate template on CA server</li>
+<li id="cn-m22-1541">Allow issuance of the new template</li>
+<li id="cn-m22-1542">Request web certificate for ADFS server</li>
+<li id="cn-m22-1543">Install a new AD DS forest</li>
+<li id="cn-m22-1544">Install and configure AD Certificate Services</li>
+<li id="cn-m22-1545">Export root CA certificate</li>
+<li id="cn-m22-1546">Configure custom certificate template on CA server</li>
+<li id="cn-m22-1547">Allow issuance of the new template</li>
+<li id="cn-m22-1548">Request web certificate for ADFS server</li>
+<li id="cn-m22-1549">Create GPO for trusted root CA in PRACTICELABS.COM and PRACTICEIT.CO.UK domains</li>
+<li id="cn-m22-1550">Configure alternate DNS and DNS forwarding</li>
+<li id="cn-m22-1551">Install IIS on PLABDM01</li>
+<li id="cn-m22-1552">Request computer certificate for IIS</li>
+<li id="cn-m22-1553">Configure SSL bindings</li>
+<li id="cn-m22-1554">Download a sample claims application</li>
+<li id="cn-m22-1555">Add web application</li>
+<li id="cn-m22-1556">Install IIS on PLABDC01 and PLABSA01 that will run AD FS</li>
+<li id="cn-m22-1557">Add ADFS feature in the resource partner</li>
+<li id="cn-m22-1558">Configure a standalone federation server</li>
+<li id="cn-m22-1559">Verify the availability of federation metadata on AD FS Server</li>
+<li id="cn-m22-1560">Install AD FS in accounts partner domain</li>
+<li id="cn-m22-1561">Configure a standalone federation server in accounts partner organization</li>
+<li id="cn-m22-1562">Verify the availability of federation metadata on AD FS Server on accounts partner</li>
+<li id="cn-m22-1563">Enable claims provider trust</li>
+<li id="cn-m22-1564">Configure the Windows Identity Foundation Federation Utility</li>
+<li id="cn-m22-1565">Configure a relying party trust for the claims web application</li>
+<li id="cn-m22-1566">Configure claim rules for the relying party trust</li>
+<li id="cn-m22-1567">Create a claims provider trust for the claims web application</li>
+<li id="cn-m22-1568">Configure claim rules for the claims provider trust</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m22-1573">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

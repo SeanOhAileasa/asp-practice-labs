@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ConfigureVerifyandTroubleshootPortSecurity_files/print-styles.css" rel="stylesheet">
+    <script src="ConfigureVerifyandTroubleshootPortSecurity_files/jquery.min.js"></script>
+    <script src="ConfigureVerifyandTroubleshootPortSecurity_files/jspdf.js"></script>
+    <script src="ConfigureVerifyandTroubleshootPortSecurity_files/from_html.js"></script>
+    <script src="ConfigureVerifyandTroubleshootPortSecurity_files/addimage.js"></script>
+    <script src="ConfigureVerifyandTroubleshootPortSecurity_files/filesaver.js"></script>
+    <script src="ConfigureVerifyandTroubleshootPortSecurity_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ZT7wM8EBfBNVrPGnLmUW5CFjAZJ8pzmg00LQsQyNGm0f5DAtQ/LJqOG82MjFiveTkBIzM2j5ZlBZuLpUU/ozKhKmSyp6ZPEl6ii8eIywpeQ=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Configure Verify and Troubleshoot Port Security</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Configure Static and Dynamic Port Security</li><li>Exercise 2 - Configure Additional Port Security Configuration Settings</li><li>Exercise 3 - Configuring Err-disable Recovery</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m8-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Security</div>
+</div>
+<p id="cn-m8-3">Welcome to the <b>Configure, Verify and Troubleshoot Port Security </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m8-7">In this module, you will complete the following exercises:</p>
+<ul id="cn-m8-8">
+<li id="cn-m8-8">Configure Static and Dynamic Port Security</li>
+<li id="cn-m8-9">Configure Additional Port Security Configuration Settings</li>
+<li id="cn-m8-10">Configure Err-disable Recovery</li>
+</ul>
+<p id="cn-m8-11">After completing this lab, you will be able to:</p>
+<ul id="cn-m8-12">
+<li id="cn-m8-12">Configure static port security</li>
+<li id="cn-m8-13">Configure dynamic port security</li>
+<li id="cn-m8-14">Configure Additional Port Security Configuration Settings</li>
+<li id="cn-m8-15">Configure Err-disable Recovery</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m8-17">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m8-18">
+<li id="cn-m8-18"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+<li id="cn-m8-19"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+<li id="cn-m8-20"><b>CAS-003 3.1 </b>Given a scenario, conduct a security assessment using the appropriate methods.</li>
+<li id="cn-m8-21"><b>CAS-003 4.1 </b>Given a scenario, integrate hosts, storage, networks and applications into a secure enterprise architecture.</li>
+</ul>
+<span class="cn-quote" id="cn-m8-22"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m8-24">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">224291c3-27b3-42c4-b914-fb1c51bbd8ff</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m8-28">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m8-29">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m8-31"><b>Lab Topology</b></h2>
+<p id="cn-m8-32">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m8-33">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m8-34">
+<li id="cn-m8-34"><b>NYCORE1 </b>(CISCO C3750)</li>
+<li id="cn-m8-35"><b>NYCORE2 </b>(CISCO C3750)</li>
+<li id="cn-m8-36"><b>Cisco IP Phone </b>7960G</li>
+</ul>
+<p id="cn-m8-37"><img class="cn-img" id="cn-image-m8-c-0" src="ConfigureVerifyandTroubleshootPortSecurity_files/image-m8-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m8-38">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m8-39"><b>Exercise 1 - Configure Static and Dynamic Port Security</b></h2>
+<p id="cn-m8-40">Port security is a technology that allows you to block unknown devices from being connected to a specified switch port.</p>
+<p id="cn-m8-41">In this exercise, you will configure static and dynamic
+ port security on NYCORE1, specifically, on the port that is connected 
+to the NYEDGE1 router.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m8-43">After completing this exercise, you will be able to:</p>
+<ul id="cn-m8-44">
+<li id="cn-m8-44">Configure static port security</li>
+<li id="cn-m8-45">Configure dynamic port security</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m8-47">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m8-48">
+<li id="cn-m8-48"><b>NYCORE1 </b>(CISCO C3750)</li>
+<li id="cn-m8-49"><b>NYCORE2 </b>(CISCO C3750)</li>
+<li id="cn-m8-50"><b>Cisco IP Phone </b>7960G</li>
+</ul>
+<p id="cn-m8-51"><img class="cn-img" id="cn-image-m8-c-1" src="ConfigureVerifyandTroubleshootPortSecurity_files/image-m8-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m8-52"><b>Task 1 - Static Port Security</b></h3>
+<p id="cn-m8-53">In this task, you will configure static port security. To do this, perform the following steps:</p>
+<h4 id="cn-m8-54"><b><i>Step 1</i></b></h4>
+<p id="cn-m8-55">First, you will determine the MAC address of the <b>NYEDGE1 </b>router. To do so, examine the MAC address table of the <b>NYCORE1 </b>switch and find the MAC address that corresponds to interface <b>FastEthernet 1/0/1</b>:</p>
+<pre id="cn-m8-57"><code>NYCORE1#show mac add dynamic
+          Mac Address Table
+-------------------------------------------
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+   1    000e.d748.52a5    DYNAMIC     Fa1/0/12
+   1    18e7.28da.dfd8    DYNAMIC     Fa1/0/22
+   1    7426.ac05.be50    DYNAMIC     Fa1/0/1
+   1    f029.297f.7e97    DYNAMIC     Fa1/0/22
+   1    f41f.c2a2.bd19    DYNAMIC     Fa1/0/23
+   1    f41f.c2a2.bd1a    DYNAMIC     Fa1/0/24
+Total Mac Addresses for this criterion: 6
+NYCORE1#
+</code></pre>
+<p id="cn-m8-71">The MAC address that corresponds to the <b>FastEthernet 1/0/1 </b>interface is <b>7426.ac05.be50</b>. Make a note of your MAC addresses as it will be different from this one.</p>
+<h4 id="cn-m8-72"><b><i>Step 2</i></b></h4>
+<p id="cn-m8-73">Enable port security on the <b>FastEthernet 1/0/1 </b>interface and configure this MAC address as a secure address on this interface:</p>
+<pre id="cn-m8-74"><code>NYCORE1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NYCORE1(config)#interface fastethernet 1/0/1
+NYCORE1(config-if)#switchport mode access
+NYCORE1(config-if)#switchport port-security mac-address 7426.ac05.be50
+NYCORE1(config-if)#switchport port-security
+NYCORE1(config-if)#exit
+NYCORE1(config)#exit
+NYCORE1#
+</code></pre>
+<span class="cn-quote" id="cn-m8-83"><b><i>Note: </i></b><i>In order to enable port security, the port must be explicitly configured as an access port. </i></span>
+<h4 id="cn-m8-84"><b><i>Step 3</i></b></h4>
+<p id="cn-m8-85">Verify the port security configuration of interface <b>FastEthernet 1/0/1</b>:</p>
+<pre id="cn-m8-86"><code>NYCORE1#show port-security interface fastEthernet 1/0/1
+Port Security              : Enabled
+Port Status                : Secure-up
+Violation Mode             : Shutdown
+Aging Time                 : 0 mins
+Aging Type                 : Absolute
+SecureStatic Address Aging : Disabled
+Maximum MAC Addresses      : 1
+Total MAC Addresses        : 1
+Configured MAC Addresses   : 1
+Sticky MAC Addresses       : 0
+Last Source Address:Vlan   : 0000.0000.0000:0
+Security Violation Count   : 0
+NYCORE1#
+</code></pre>
+<p id="cn-m8-100">Port security is enabled, and one MAC address has been configured.</p>
+<p id="cn-m8-101">Issue the following command to see the address that has been configured:</p>
+<pre id="cn-m8-102"><code>NYCORE1#show port-security interface fastEthernet 1/0/1 address
+               Secure Mac Address Table
+-----------------------------------------------------------------------------
+Vlan    Mac Address       Type                          Ports   Remaining Age
+                                                                   (mins)
+----    -----------       ----                          -----   -------------
+   1    7426.ac05.be50    SecureConfigured              Fa1/0/1      -
+-----------------------------------------------------------------------------
+Total Addresses: 1
+NYCORE1#
+</code></pre>
+<p id="cn-m8-112">Notice the <b>Type </b>is <b>SecureConfigured</b>. This means it is a statically configured secure MAC address.</p>
+<h3 id="cn-m8-113"><b>Task 2 - Configure Dynamic Port Security</b></h3>
+<p id="cn-m8-114">In this task, you will configure dynamic port security. To do this, perform the following steps:</p>
+<h4 id="cn-m8-115"><b><i>Step 1</i></b></h4>
+<p id="cn-m8-116">You will now configure the <b>FastEthernet 1/0/1 </b>interface on the <b>NYCORE1 </b>switch to function with <b>dynamic </b>port security. You will remove the statically configured MAC address of the <b>NYEDGE1 </b>router:</p>
+<pre id="cn-m8-117"><code>NYCORE1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NYCORE1(config)#interface fastethernet 1/0/1
+NYCORE1(config-if)#no switchport port-security mac-address
+NYCORE1(config-if)#exit
+NYCORE1(config)#exit
+NYCORE1#
+</code></pre>
+<p id="cn-m8-124">All statically assigned secure MAC addresses have been removed, and dynamic port security has been enabled automatically.</p>
+<h4 id="cn-m8-125"><b><i>Step 2</i></b></h4>
+<p id="cn-m8-126">Verify the port security configuration of interface <b>FastEthernet 1/0/1</b>:</p>
+<pre id="cn-m8-127"><code>NYCORE1#show port-security interface fastethernet 1/0/1
+Port Security              : Enabled
+Port Status                : Secure-up
+Violation Mode             : Shutdown
+Aging Time                 : 0 mins
+Aging Type                 : Absolute
+SecureStatic Address Aging : Disabled
+Maximum MAC Addresses      : 1
+Total MAC Addresses        : 1
+Configured MAC Addresses   : 0
+Sticky MAC Addresses       : 0
+Last Source Address:Vlan   : 7426.ac05.be50:1
+Security Violation Count   : 0
+NYCORE1#
+</code></pre>
+<p id="cn-m8-141">Notice that the <b>Last Source Address:VLAN </b>field now contains the MAC address of <b>NYEDGE1 </b>because it has been dynamically learned.</p>
+<p id="cn-m8-142">Issue the following command to see details about the address that has been dynamically learned:</p>
+<pre id="cn-m8-143"><code>NYCORE1# show port-security interface fastEthernet 1/0/1 address
+               Secure Mac Address Table
+-----------------------------------------------------------------------------
+Vlan    Mac Address       Type                          Ports   Remaining Age
+                                                                   (mins)
+----    -----------       ----                          -----   -------------
+   1    7426.ac05.be50    SecureDynamic                 Fa1/0/1      -
+-----------------------------------------------------------------------------
+Total Addresses: 1
+NYCORE1#
+</code></pre>
+<p id="cn-m8-153">Notice the <b>Type </b>column now contains <b>SecureDynamic </b>indicating a dynamically learned secure MAC address.</p>
+<p id="cn-m8-154">You have successfully configured both static and dynamic secure MAC addresses.</p>
+<span class="atom-code hidden">e6e083cf-eec0-42e8-8fff-efa0ad14aafd</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m8-156"><b>Exercise 2 - Configure Additional Port Security Configuration Settings</b></h2>
+<p id="cn-m8-157">In this exercise, you will configure port security on 
+NYCORE2 to block unknown MAC addresses from connecting to a specific 
+switch port. In this example, there is a Cisco IP Phone connected to 
+FastEthernet 1/0/12 interface on this switch as shown in the diagram 
+below.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m8-159">After completing this exercise, you will be able to:</p>
+<ul id="cn-m8-160">
+<li id="cn-m8-160">Configure Additional Port Security Configuration Settings</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m8-162">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m8-163">
+<li id="cn-m8-163"><b>NYCORE1 </b>(CISCO C3750)</li>
+<li id="cn-m8-164"><b>NYCORE2 </b>(CISCO C3750)</li>
+<li id="cn-m8-165"><b>Cisco IP Phone </b>7960G</li>
+</ul>
+<p id="cn-m8-166"><img class="cn-img" id="cn-image-m8-c-2" src="ConfigureVerifyandTroubleshootPortSecurity_files/image-m8-c-2.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m8-167"><b>Task 1- Additional Port Security Configuration Settings</b></h3>
+<p id="cn-m8-168">You will configure the switch to refuse its connection. Your configuration will include additional parameters including:</p>
+<ul id="cn-m8-169">
+<li id="cn-m8-169">Maximum number of MAC addresses</li>
+<li id="cn-m8-170">Sticky MAC addresses</li>
+<li id="cn-m8-171">Configuring violation modes</li>
+</ul>
+<h4 id="cn-m8-172"><b><i>Step 1</i></b></h4>
+<p id="cn-m8-173">Configure the <b>FastEthernet 1/0/12 </b>interface on <b>NYCORE2 </b>with port security enabled. To do this, issue the following commands:</p>
+<pre id="cn-m8-174"><code>NYCORE2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NYCORE2(config)#interface fastethernet 1/0/12
+NYCORE2(config-if)#switchport mode access
+NYCORE2(config-if)#switchport port-security mac-address sticky
+NYCORE2(config-if)#switchport port-security maximum 1
+NYCORE2(config-if)#switchport port-security violation shutdown
+NYCORE2(config-if)#switchport port-security
+NYCORE2(config-if)#exit
+NYCORE2(config)#exit
+NYCORE2#
+</code></pre>
+<p id="cn-m8-185">The following describes the effect of each of the above commands:</p>
+<ul id="cn-m8-186">
+<li id="cn-m8-186"><b>switchport port-security mac-address sticky </b>indicates
+ that the switch will automatically learn the MAC address of the first 
+device that is connected to this interface and it will keep it or let it
+ “stick” in memory, even if the device is removed.</li>
+<li id="cn-m8-187"><b>switchport port-security maximum 1 </b>indicates 
+that only one MAC address may be learned; the second MAC address that 
+connects will not be learned, nor will it “stick”.</li>
+<li id="cn-m8-188"><b>switchport port-security violation shutdown </b>defines what will happen if port security is violated, in this case, the port will shut down.</li>
+<li id="cn-m8-189"><b>switchport port-security </b>this command enables port security on the port, in other words, it enables all of the above configurations to take place.</li>
+</ul>
+<h4 id="cn-m8-190"><b><i>Step 2</i></b></h4>
+<p id="cn-m8-191">To confirm the status of the interface with port 
+security enabled you will need to use the show commands which are 
+accessed from <b>privileged executive mode</b>. Some are available in <b>user executive mode </b>as well.</p>
+<p id="cn-m8-192">Use the following command to view the current port-security status of the <b>FastEthernet 1/0/12 </b>interface on <b>NYCORE2</b>:</p>
+<pre id="cn-m8-193"><code>NYCORE2#show port-security interface fastEthernet 1/0/12
+Port Security              : Enabled
+Port Status                : Secure-up
+Violation Mode             : Shutdown
+Aging Time                 : 0 mins
+Aging Type                 : Absolute
+SecureStatic Address Aging : Disabled
+Maximum MAC Addresses      : 1
+Total MAC Addresses        : 1
+Configured MAC Addresses   : 0
+Sticky MAC Addresses       : 1
+Last Source Address:Vlan   : 001b.535d.40f5:1
+Security Violation Count   : 0
+NYCORE2#
+</code></pre>
+<p id="cn-m8-207">The <b>Port Status </b>of <b>Secure-up </b>indicates 
+that the port security is enabled and is functioning correctly. Observe 
+the remaining configuration indicators and compare with the commands you
+ entered in the previous step.</p>
+<span class="cn-quote" id="cn-m8-208"><b><i>Note: </i></b><i>Your Last Source Address will differ from the above.</i></span>
+<h4 id="cn-m8-209"><b><i>Step 3</i></b></h4>
+<p id="cn-m8-210">Next, change the allowed MAC address on <b>Fastethernet 1/0/12 </b>so
+ that it is not the same as the device currently connected to this 
+interface. Before you do this, however, you must clear the sticky MAC 
+address. To do this, you will perform the following:</p>
+<ul id="cn-m8-211">
+<li id="cn-m8-211">Shutdown <b>the Fastethernet 1/0/12 </b>interface</li>
+<li id="cn-m8-212">Remove the sticky MAC address the switch learned</li>
+<li id="cn-m8-213">Configure a new fictitious MAC address of <b>0001.0001.0001</b></li>
+<li id="cn-m8-214">Enable the interface</li>
+</ul>
+<p id="cn-m8-215">To perform these tasks, issue the following commands:</p>
+<pre id="cn-m8-216"><code>NYCORE2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NYCORE2(config)#interface fastethernet 1/0/12
+NYCORE2(config-if)#shutdown
+NYCORE2(config-if)#exit
+NYCORE2(config)#exit
+NYCORE2#clear port-security sticky interface fastEthernet 1/0/12
+NYCORE2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NYCORE2(config)#interface fastethernet 1/0/12
+NYCORE2(config-if)#switchport port-security mac-address 0001.0001.0001
+NYCORE2(config-if)#no shutdown
+NYCORE2(config-if)#exit
+NYCORE2(config)#exit
+NYCORE2#
+</code></pre>
+<span class="cn-quote" id="cn-m8-231"><b><i>Note: </i></b><i>For the MAC
+ address, you can choose anything you like providing it isn’t the actual
+ device connected to the interface or another known MAC address.</i></span>
+<p id="cn-m8-232">After a minute or so, you will see syslog messages 
+similar to the following appear in the console. It will take a little 
+while as the phone needs to boot up once power is granted to it:</p>
+<span class="cn-alert" id="cn-m8-233"><b>Alert</b>: This may take several minutes.</span>
+<pre id="cn-m8-234"><code>NYCORE2#
+*Mar  1 00:18:04.344: %ILPOWER-7-DETECT: Interface Fa1/0/12: Power Device detected: Cisco PD
+*Mar  1 00:18:05.058: %ILPOWER-5-POWER_GRANTED: Interface Fa1/0/12: Power granted
+*Mar  1 00:18:08.958: %LINK-3-UPDOWN: Interface FastEthernet1/0/12, changed state to up
+*Mar  1 00:18:09.965: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0/12, changed state to up
+*Mar  1 00:19:15.052: %PM-4-ERR_DISABLE: psecure-violation error detected on Fa1/0/12, putting Fa1/0/12 in err-disable state
+*Mar  1 00:19:15.052: %PORT_SECURITY-2-PSECURE_VIOLATION: Security violation occurred, caused by MAC address 001b.535d.40f5 on port FastEthernet1/0/12.
+*Mar  1 00:19:16.059: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0/12, changed state to down
+*Mar  1 00:19:17.057: %LINK-3-UPDOWN: Interface FastEthernet1/0/12, changed state to down
+</code></pre>
+<p id="cn-m8-243">Note especially the two syslog messages at <b>19:15.052 </b>which indicate a port security violation, <b>psecure-violation </b>and reveal that the interface has been placed in an <b>err-disabled </b>state, or in essence, it has been shut down.</p>
+<span class="cn-quote" id="cn-m8-244"><b><i>Note: </i></b><i>When the 
+port is enabled again, power is granted to the IP telephone, and it 
+begins the boot-up process once more. The first few log messages refer 
+to the switch providing power to the IP Phone. Also, note that the 
+violation does take several minutes to appear as is indicated by the 
+above syslog times.</i></span>
+<h4 id="cn-m8-245"><b><i>Step 4</i></b></h4>
+<p id="cn-m8-246">Once you see a syslog message indicating that interface <b>FastEthernet 1/0/12 </b>has changed state to down, view the output of the <b>show port-security </b>command you previously used:</p>
+<pre id="cn-m8-247"><code>NYCORE2#show port-security interface fastEthernet 1/0/12
+Port Security              : Enabled
+Port Status                : Secure-shutdown
+Violation Mode             : Shutdown
+Aging Time                 : 0 mins
+Aging Type                 : Absolute
+SecureStatic Address Aging : Disabled
+Maximum MAC Addresses      : 1
+Total MAC Addresses        : 1
+Configured MAC Addresses   : 1
+Sticky MAC Addresses       : 0
+Last Source Address:Vlan   : 001b.535d.40f5:1
+Security Violation Count   : 1
+NYCORE2#
+</code></pre>
+<p id="cn-m8-261">You will notice that the <b>Port Status </b>is now <b>Secure-shutdown</b>.</p>
+<p id="cn-m8-262">Also, notice what the interface status is when you use the <b>show interface fastethernet 1/0/12 </b>command. You should notice the <b>err-disable </b>state.</p>
+<pre id="cn-m8-263"><code>NYCORE2#show interface fastEthernet 1/0/12
+FastEthernet1/0/12 is down, line protocol is down (err-disabled)
+!-&lt;output omitted&gt;-!
+NYCORE2#
+</code></pre>
+<p id="cn-m8-267">The interface has been disabled due to the violation action that you configured on the interface.</p>
+<span class="cn-quote" id="cn-m8-268"><b><i>Note: </i></b><i>You can 
+further examine other types of violation actions that are available by 
+using Cisco’s context-sensitive help on the command line using the “?” 
+after keywords and commands.</i></span>
+<span class="atom-code hidden">e6e083cf-eec0-42e8-8fff-efa0ad14aafd</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m8-271"><b>Exercise 3 - Configuring Err-disable Recovery</b></h2>
+<p id="cn-m8-272">When a port security violation occurs that results in a port shutting down, the port goes into an <b>err-disabled </b>state. In order to recover from such a situation, you must go into the switch, shut down the interface and bring it back up.</p>
+<p id="cn-m8-273">To avoid such a procedure, it is possible to configure the port so that the <b>err-disable </b>state is not permanent. The interface can automatically be brought back up after a specified amount of time.</p>
+<p id="cn-m8-274">In this exercise, you will configure <b>err-disable recovery </b>that will provide such a function.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m8-276">After completing this exercise, you will be able to:</p>
+<ul id="cn-m8-277">
+<li id="cn-m8-277">Configure Err-disable Recovery</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m8-279">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m8-280">
+<li id="cn-m8-280"><b>NYCORE1 </b>(CISCO C3750)</li>
+<li id="cn-m8-281"><b>NYCORE2 </b>(CISCO C3750)</li>
+<li id="cn-m8-282"><b>Cisco IP Phone </b>7960G</li>
+</ul>
+<p id="cn-m8-283"><img class="cn-img" id="cn-image-m8-c-3" src="ConfigureVerifyandTroubleshootPortSecurity_files/image-m8-c-3.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m8-284"><b>Task 1 - Configure Err-disable Recovery </b></h3>
+<p id="cn-m8-285">In this task, you will configure err-disable recovery. To do this, perform the following steps:</p>
+<h4 id="cn-m8-286"><b><i>Step 1</i></b></h4>
+<p id="cn-m8-287">Connect to the <b>NYCORE2 </b>and examine the current err-disable recovery configuration with the following command:</p>
+<pre id="cn-m8-288"><code>NYCORE2#show errdisable recovery
+ErrDisable Reason            Timer Status
+-----------------            --------------
+arp-inspection               Disabled
+bpduguard                    Disabled
+channel-misconfig (STP)      Disabled
+dhcp-rate-limit              Disabled
+dtp-flap                     Disabled
+gbic-invalid                 Disabled
+inline-power                 Disabled
+l2ptguard                    Disabled
+link-flap                    Disabled
+mac-limit                    Disabled
+loopback                     Disabled
+pagp-flap                    Disabled
+port-mode-failure            Disabled
+pppoe-ia-rate-limit          Disabled
+psecure-violation            Disabled
+security-violation           Disabled
+sfp-config-mismatch          Disabled
+small-frame                  Disabled
+storm-control                Disabled
+udld                         Disabled
+vmps                         Disabled
+psp                          Disabled
+Timer interval: 300 seconds
+Interfaces that will be enabled at the next timeout:
+NYCORE2#
+</code></pre>
+<p id="cn-m8-316">This is a list of reasons for which an interface may 
+enter an err-disabled state. The reason that is important to you right 
+now is the <b>psecure-violation </b>which is a port security violation. 
+Automatic recovery from such a violation is currently disabled. Notice 
+also the timer interval of 300 seconds. If err-disabled recovery were 
+activated, recovery of interfaces would occur every 300 seconds or every
+ 5 minutes.</p>
+<h4 id="cn-m8-317"><b><i>Step 2</i></b></h4>
+<p id="cn-m8-318">You will enable err-disable recovery for port security
+ violations and will allow recovery after a timeout of 30 seconds. To 
+configure this, type the following commands:</p>
+<pre id="cn-m8-319"><code>NYCORE2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NYCORE2(config)#errdisable recovery cause psecure-violation
+NYCORE2(config)#errdisable recovery interval 30
+NYCORE2(config)#exit
+NYCORE2#
+</code></pre>
+<h4 id="cn-m8-325"><b><i>Step 3</i></b></h4>
+<p id="cn-m8-326">Verify this configuration by reviewing the err-disable recovery configuration once more:</p>
+<pre id="cn-m8-327"><code>NYCORE2#show errdisable recovery
+ErrDisable Reason            Timer Status
+-----------------            --------------
+arp-inspection               Disabled
+bpduguard                    Disabled
+channel-misconfig (STP)      Disabled
+dhcp-rate-limit              Disabled
+dtp-flap                     Disabled
+gbic-invalid                 Disabled
+inline-power                 Disabled
+l2ptguard                    Disabled
+link-flap                    Disabled
+mac-limit                    Disabled
+loopback                     Disabled
+pagp-flap                    Disabled
+port-mode-failure            Disabled
+pppoe-ia-rate-limit          Disabled
+psecure-violation            Enabled
+security-violation           Disabled
+sfp-config-mismatch          Disabled
+small-frame                  Disabled
+storm-control                Disabled
+udld                         Disabled
+vmps                         Disabled
+Interface       Errdisable reason       Time left(sec)
+---------       -----------------       --------------
+psp                          Disabled
+Timer interval: 30 seconds
+Interfaces that will be enabled at the next timeout:
+Interface       Errdisable reason       Time left(sec)
+---------       -----------------       --------------
+Fa1/0/12       psecure-violation           20
+NYCORE2#
+</code></pre>
+<p id="cn-m8-360">Notice that the <b>psecure-violation </b>err-disable reason is now <b>Enabled </b>and that the current state of the interface is shown in a table that includes the time left before recovery.</p>
+<h4 id="cn-m8-361"><b><i>Step 4</i></b></h4>
+<p id="cn-m8-362">You should soon see syslog messages that indicate that
+ the interface has come up and that the IP telephone is receiving power.
+ However, soon after, the violation occurs again, and the port enters 
+the <b>err-disabled </b>state. You should see a series of syslog messages similar to the following:</p>
+<pre id="cn-m8-363"><code>*Mar  1 01:13:02.753: %PM-4-ERR_RECOVER: Attempting to recover from psecure-violation err-disable state on Fa1/0/12
+*Mar  1 01:13:11.041: %ILPOWER-7-DETECT: Interface Fa1/0/12: Power Device detected: Cisco PD
+*Mar  1 01:13:11.662: %ILPOWER-5-POWER_GRANTED: Interface Fa1/0/12: Power granted
+*Mar  1 01:13:15.605: %LINK-3-UPDOWN: Interface FastEthernet1/0/12, changed state to up
+*Mar  1 01:13:16.611: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0/12, changed state to up
+*Mar  1 01:14:21.053: %PM-4-ERR_DISABLE: psecure-violation error detected on Fa1/0/12, putting Fa1/0/12 in err-disable state
+*Mar  1 01:14:21.053: %PORT_SECURITY-2-PSECURE_VIOLATION: Security violation occurred, caused by MAC address 000e.d748.52a5 on port
+FastEthernet1/0/12.
+*Mar  1 01:14:22.059: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0/12, changed state to down
+*Mar  1 01:14:23.058: %LINK-3-UPDOWN: Interface FastEthernet1/0/12, changed state to down
+*Mar  1 01:14:51.050: %PM-4-ERR_RECOVER: Attempting to recover from psecure-violation err-disable state on Fa1/0/12
+*Mar  1 01:14:59.363: %ILPOWER-7-DETECT: Interface Fa1/0/12: Power Device detected: Cisco PD
+*Mar  1 01:14:59.665: %ILPOWER-5-POWER_GRANTED: Interface Fa1/0/12: Power granted
+*Mar  1 01:15:03.885: %LINK-3-UPDOWN: Interface FastEthernet1/0/12, changed state to up
+*Mar  1 01:15:04.892: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0/12, changed state to up
+*Mar  1 01:16:09.417: %PM-4-ERR_DISABLE: psecure-violation error detected on Fa1/0/12, putting Fa1/0/12 in err-disable state
+*Mar  1 01:16:09.417: %PORT_SECURITY-2-PSECURE_VIOLATION: Security violation occurred, caused by MAC address 000e.d748.52a5 on port FastEthernet1/0/12.
+*Mar  1 01:16:10.423: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0/12, changed state to down
+*Mar  1 01:16:11.422: %LINK-3-UPDOWN: Interface FastEthernet1/0/12, changed state to down
+*Mar  1 01:16:39.414: %PM-4-ERR_RECOVER: Attempting to recover from psecure-violation err-disable state on Fa1/0/12
+</code></pre>
+<span class="atom-code hidden">e6e083cf-eec0-42e8-8fff-efa0ad14aafd</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m8-387"><b>Review</b></h2>
+<p id="cn-m8-388">Well done, you have completed the <b>Configure, Verify and Troubleshoot Port Security </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">55253852-a45d-4992-98f0-0b71f66a05aa</span>
+<span class="atom-code hidden">9fc9c47f-4f48-4e56-8298-66682961d14b</span>
+<span class="atom-code hidden">c68a1cb4-423d-4cc1-8e95-cc80f97b23f5</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m8-395">You completed the following exercises:</p>
+<ul id="cn-m8-396">
+<li id="cn-m8-396">Configure Static and Dynamic Port Security</li>
+<li id="cn-m8-397">Configure Additional Port Security Configuration Settings</li>
+<li id="cn-m8-398">Configure Err-disable Recovery</li>
+</ul>
+<p id="cn-m8-399">You should now be able to:</p>
+<ul id="cn-m8-400">
+<li id="cn-m8-400">Configure Static Port Security</li>
+<li id="cn-m8-401">Configure Dynamic Port Security</li>
+<li id="cn-m8-402">Configure Additional Port Security Configuration Settings</li>
+<li id="cn-m8-403">Configure Err-disable Recovery</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m8-407">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

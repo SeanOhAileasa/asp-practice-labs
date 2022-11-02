@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="Usingvarioustoolsforsecurityassessments_files/print-styles.css" rel="stylesheet">
+    <script src="Usingvarioustoolsforsecurityassessments_files/jquery.min.js"></script>
+    <script src="Usingvarioustoolsforsecurityassessments_files/jspdf.js"></script>
+    <script src="Usingvarioustoolsforsecurityassessments_files/from_html.js"></script>
+    <script src="Usingvarioustoolsforsecurityassessments_files/addimage.js"></script>
+    <script src="Usingvarioustoolsforsecurityassessments_files/filesaver.js"></script>
+    <script src="Usingvarioustoolsforsecurityassessments_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="N2tPxvpdiF3rhnma5IiI+0V6qZJj+FtUsrHwszzJXnuXIddeOwWxPuUrlEMPvmf1WTCUnFe4ZgFJuCA3o4FsNrRHfKFMEyopHZkJxe4+BBM=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Using various tools for security assessments</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Identifying Live Systems</li><li>Exercise 2 - Perform Network Footprinting</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m16-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Security</div>
+<div>Nmap</div>
+<div>Zenmap</div>
+</div>
+<p id="cn-m16-5">Welcome to the <b>Using various tools for security assessments </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m16-9">In this module, you will complete the following exercises:</p>
+<ul id="cn-m16-10">
+<li id="cn-m16-10">Identifying Live Systems</li>
+<li id="cn-m16-11">Perform Network Footprinting</li>
+</ul>
+<p id="cn-m16-12">After completing this lab, you will be able to:</p>
+<ul id="cn-m16-13">
+<li id="cn-m16-13">Connect to Kali</li>
+<li id="cn-m16-14">Identify live systems using nmap</li>
+<li id="cn-m16-15">Identify live systems using hping3</li>
+<li id="cn-m16-16">Use Nmap</li>
+<li id="cn-m16-17">Use Zenmap</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m16-19">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m16-20">
+<li id="cn-m16-20"><b>CAS-003 </b>3.2 Analyze a scenario or output, and select the appropriate tool for a security assessment.</li>
+<li id="cn-m16-21"><b>CAS-003 </b>3.3 Given a scenario, implement incident response and recovery procedures.</li>
+</ul>
+<span class="cn-quote" id="cn-m16-22"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m16-24">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m16-28">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m16-29">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m16-31"><b>Lab Topology</b></h2>
+<p id="cn-m16-32">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m16-33">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m16-34">
+<li id="cn-m16-34"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m16-35"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m16-36"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m16-37"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m16-38"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m16-39"><img class="cn-img" id="cn-image-m16-c-0" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m16-40">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m16-41"><b>Exercise 1 - Identifying Live Systems</b></h2>
+<p id="cn-m16-42">The basic and foremost step in studying the physical 
+connectivity of networks is scanning. Scanning (also known as probing) 
+is a process of leading the target machines to reveal useful information
+ about them. A network scanner is a tool that will aid in scanning 
+networks. Some of the popularly used network scanner tools are nmap and 
+hping3. Both nmap and hping3 have several features that give complete 
+control over the scans that you perform. You can download the 
+appropriate nmap and hping3 tools for your operating system from the 
+following respective links:</p>
+<ul id="cn-m16-43">
+<li id="cn-m16-43">http://nmap.org</li>
+<li id="cn-m16-44">http://www.hping.org</li>
+</ul>
+<p id="cn-m16-45">For this demonstration, nmap &amp; hping3 are bundled with the default installation of Kali Linux.</p>
+<p id="cn-m16-46">In this exercise, you will learn to identify live systems using nmap and hping3.</p>
+<p id="cn-m16-47">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m16-49">After completing this exercise, you will be able to:</p>
+<ul id="cn-m16-50">
+<li id="cn-m16-50">Connect to Kali</li>
+<li id="cn-m16-51">Identify live systems using nmap</li>
+<li id="cn-m16-52">Identify live systems using hping3</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m16-54">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m16-55">
+<li id="cn-m16-55"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m16-56"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m16-57"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m16-58"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m16-59"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m16-60"><img class="cn-img" id="cn-image-m16-c-1" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m16-61"><b>Task 1 - Connect to Kali</b></h3>
+<p id="cn-m16-62">In this task, you will connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m16-63">To do this, perform the following steps:</p>
+<h4 id="cn-m16-64"><b><i>Step 1</i></b></h4>
+<p id="cn-m16-65">Ensure you have powered on the required devices and connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m16-66">Type <b>root </b>in the Username field.</p>
+<p id="cn-m16-67"></p><figure><img class="cn-img" id="cn-image-m16-c-2" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-2.jpg" alt="Figure 1.1 Screenshot of PLABKALI01"><figcaption>Figure 1.1 Screenshot of PLABKALI01: Typing root into the username field on the login screen.</figcaption></figure><p></p>
+<h4 id="cn-m16-69"><b><i>Step 2</i></b></h4>
+<p id="cn-m16-70">When prompted, type the following password in the <b>Password </b>field:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m16-72">Click <b>Sign In</b>.</p>
+<h4 id="cn-m16-74"><b><i>Step 3</i></b></h4>
+<p id="cn-m16-75">The PLABKALI01 <b>desktop </b>is displayed.</p>
+<p id="cn-m16-76"></p><figure><img class="cn-img" id="cn-image-m16-c-4" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-4.jpg" alt="Figure 1.3 Screenshot of PLABKALI01"><figcaption>Figure 1.3 Screenshot of PLABKALI01: Desktop is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m16-78"><b><i>Step 4</i></b></h4>
+<p id="cn-m16-79">From the desktop of the <b>PLABKALI </b>device, click <b>Root Terminal </b>icon located on the taskbar on the left.</p>
+<p id="cn-m16-80"></p><figure><img class="cn-img" id="cn-image-m16-c-5" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-5.jpg" alt="Figure 1.4 Screenshot of PLABKALI01"><figcaption>Figure 1.4 Screenshot of PLABKALI01: Terminal icon selected from the toolbar on the desktop.</figcaption></figure><p></p>
+<h4 id="cn-m16-81"><b><i>Step 5</i></b></h4>
+<p id="cn-m16-82">The root terminal window opens.</p>
+<p id="cn-m16-83"></p><figure><img class="cn-img" id="cn-image-m16-c-6" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-6.jpg" alt="Figure 1.5 Screenshot of PLABKALI01"><figcaption>Figure 1.5 Screenshot of PLABKALI01: terminal screen is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m16-85"><b>Task 2 - Identify Live Hosts using nmap </b></h3>
+<p id="cn-m16-86">In this task, you will use the nmap tool to identify 
+live hosts in the Practice Labs environment. As the first step, you will
+ run the ifconfig command in Kali Linux to display information about all
+ network interfaces currently in operation.</p>
+<p id="cn-m16-87">To do this, perform the following steps:</p>
+<h4 id="cn-m16-88"><b><i>Step 1 </i></b></h4>
+<p id="cn-m16-89">At the command prompt of the root terminal window, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m16-90"><code>ifconfig
+</code></pre>
+<p id="cn-m16-91">As seen in the output, eth0 is the first, and the only
+ ethernet interface in the network. lo is the loopback interface that 
+the system uses to communicate with itself.</p>
+<p id="cn-m16-92">Find that the Kali Linux’s IP address is 192.168.0.3.</p>
+<p id="cn-m16-93"></p><figure><img class="cn-img" id="cn-image-m16-c-7" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-7.jpg" alt="Figure 1.6 Screenshot of PLABKALI01"><figcaption>Figure 1.6 Screenshot of PLABKALI01: The command ifconfig is executed, and the output is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m16-94"><b><i>Step 2</i></b></h4>
+<p id="cn-m16-95">To display the help summary page of nmap, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m16-96"><code>nmap -h
+</code></pre>
+<span class="cn-quote" id="cn-m16-97"><b><i>Note: </i></b><i>You can view the help summary of nmap to learn various switches and scanning techniques supported by the tool. </i></span>
+<p id="cn-m16-98"></p><figure><img class="cn-img" id="cn-image-m16-c-8" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-8.jpg" alt="Figure 1.7 Screenshot of PLABKALI01"><figcaption>Figure
+ 1.7 Screenshot of PLABKALI01: The utility nmap with the switch -h is 
+executed, and the nmap help summary page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m16-99"><b><i>Step 3</i></b></h4>
+<p id="cn-m16-100">In nmap, you can specify the IP scan targets in the following formats:</p>
+<ol id="cn-m16-101">
+<li id="cn-m16-101">Domain name: target.com</li>
+<li id="cn-m16-102">Target IP address: 192.168.0.1</li>
+<li id="cn-m16-103">IP address range of the subnet: 192.168.0.1-255</li>
+<li id="cn-m16-104">CIDR (Classless Inter-Domain Routing) - 192.168.0.1/24</li>
+</ol>
+<p id="cn-m16-105">For this demonstration, you will perform a simple 
+ping sweep also known as an ICMP scan to determine how many hosts 
+respond to the ping request sent by nmap on the 192.168.0.1/24 subnet.</p>
+<p id="cn-m16-106">Type the following command at the <b>command prompt </b>and press <b>Enter</b>:</p>
+<pre id="cn-m16-107"><code>nmap -sn 192.168.0.1/24
+</code></pre>
+<p id="cn-m16-108">The output shows that the devices with the IP 
+addresses 192.168. 0.1 (PLABDC01), 192.168.0.2 (PLABDM01), 192.168.0.4 
+(PLABWIN01), 192.168.0.5 (PLABWIN801) and 192.168.0.3 (Kali Linux) are 
+up.</p>
+<span class="cn-quote" id="cn-m16-109"><b><i>Note: </i></b><i>The nmap 
+switch for ping scan is ‘-sn’. The -sn switch disables port scan by 
+default and only sends ping requests to the specified target machines. 
+All hosts that respond to the requests with valid responses are treated 
+as live hosts, and the rest of the hosts that do not respond to the ping
+ request are considered as being not live.</i></span>
+<p id="cn-m16-110"></p><figure><img class="cn-img" id="cn-image-m16-c-9" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-9.jpg" alt="Figure 1.8 Screenshot of PLABKALI01"><figcaption>Figure
+ 1.8 Screenshot of PLABKALI01: The nmap command with the specified 
+switch is run, and the live hosts in the Practice Labs environment are 
+determined from the output.</figcaption></figure><p></p>
+<h3 id="cn-m16-111"><b>Task 3 - Identify Live Hosts using hping3</b></h3>
+<p id="cn-m16-112">Similar to nmap, you can also use hping3 to identify 
+if a host is live or not. It is not possible to specify an IP address 
+range as a target in the hping3 utility. Only one target at a time can 
+be specified.</p>
+<p id="cn-m16-113">In this task, you will use the hping3 tool to identify live hosts in the Practice Labs environment.</p>
+<p id="cn-m16-114">To do this, perform the following steps:</p>
+<h4 id="cn-m16-115"><b><i>Step 1</i></b></h4>
+<p id="cn-m16-116">You can view the help summary page of hping3 to learn various switches and scanning techniques supported by the tool.</p>
+<p id="cn-m16-117">To display the help summary page of hping3, type the following command and press Enter:</p>
+<pre id="cn-m16-118"><code>hping3 -h
+</code></pre>
+<p id="cn-m16-120"></p><figure><img class="cn-img" id="cn-image-m16-c-10" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-10.jpg" alt="Figure 1.9 Screenshot of PLABKALI01"><figcaption>Figure
+ 1.9 Screenshot of PLABKALI01: The utility hping3 with the switch -h is 
+run, and the hping3 help summary page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m16-121"><b><i>Step 2</i></b></h4>
+<p id="cn-m16-122">The following command determines if the host 
+192.168.0.1 is live or not. To perform a simple ping scan (known as an 
+ICMP scan) to determine if a host responds to the ping request sent by 
+hping3, type the following command at the command prompt and press <b>Enter</b>:</p>
+<pre id="cn-m16-123"><code>hping3 -1 192.168.0.1
+</code></pre>
+<span class="cn-quote" id="cn-m16-124"><b><i>Note: </i></b><i>The hping3 switch for ping scan is ‘-1’. This switch enables the ICMP mode in hping3 utility.</i></span>
+<p id="cn-m16-125">From the output, you can observe that the host 
+192.168.0.1 responds with the valid ICMP response for every ICMP request
+ sent. This ensures that the host 192.168.0.1 is live.  </p><figure><img class="cn-img" id="cn-image-m16-c-11" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-11.jpg" alt="Figure 1.10 Screenshot PLABKALI01"><figcaption>Figure
+ 1.10 Screenshot PLABKALI01: A ping scan is performed using the utility 
+hping3, and the hping3 packets are sent and received from the specified 
+host successfully.</figcaption></figure><p></p>
+<h4 id="cn-m16-126"><b><i>Step 3 </i></b></h4>
+<p id="cn-m16-127">Press <b>Ctrl + C </b>to cancel the packet 
+transmission. You can perform similar ping scans technique against other
+ hosts in the Practice Labs environment to determine if they are live or
+ not.</p>
+<p id="cn-m16-128"></p><figure><img class="cn-img" id="cn-image-m16-c-12" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-12.jpg" alt="Figure 1.11 Screenshot of PLABKALI01"><figcaption>Figure
+ 1.11 Screenshot of PLABKALI01: Output of the hping3 command after 
+typing Ctrl+C. The packet transmission shows as cancelled.</figcaption></figure><p></p>
+<span class="atom-code hidden">5e1d502e-2771-4deb-a3e2-7881a321dc64</span>
+<span class="cn-alert" id="cn-m16-132">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m16-133"><b>Exercise 2 - Perform Network Footprinting</b></h2>
+<p id="cn-m16-134">In this lab, you will practice attack strategies such as footprinting.</p>
+<p id="cn-m16-135">A network scan is usually the first step in an 
+attempt to penetrate security (or indeed to establish what needs 
+defending). Footprinting establishes the topology and protocols deployed
+ on the network while fingerprinting determines the services and other 
+configuration details of a target host.</p>
+<p id="cn-m16-136">One of the most popular scanning tools is nmap. This 
+is a command-line program operated using scripts. A GUI version (Zenmap)
+ can perform several very useful pre-configured scans though.</p>
+<p id="cn-m16-137">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m16-139">After completing this exercise, you will be able to:</p>
+<ul id="cn-m16-140">
+<li id="cn-m16-140">Use Nmap</li>
+<li id="cn-m16-141">Use Zenmap</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m16-143">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m16-144">
+<li id="cn-m16-144"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m16-145"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m16-146"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m16-147"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m16-148"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m16-149"><img class="cn-img" id="cn-image-m16-c-13" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-13.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m16-150"><b>Task 1 - Using Nmap</b></h3>
+<p id="cn-m16-151">To start using nmap scanner, perform the following steps:</p>
+<h4 id="cn-m16-152"><b><i>Step 1</i></b></h4>
+<p id="cn-m16-153">Ensure you are still connected to <b>PLABKALI01</b>.</p>
+<p id="cn-m16-154">Within the terminal window, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m16-155"><code>nmap 192.168.0.0/24 &gt; hosts.txt
+</code></pre>
+<span class="cn-quote" id="cn-m16-156"><b><i>Note: </i></b><i>This command will save the results in a file called hosts.txt</i></span>
+<p id="cn-m16-157"></p><figure><img class="cn-img" id="cn-image-m16-c-14" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-14.jpg" alt="Figure 2.1 Screenshot of PLABKALI01"><figcaption>Figure 2.1 Screenshot of PLABKALI01: Kali terminal entering nmap commands.</figcaption></figure><p></p>
+<h4 id="cn-m16-159"><b><i>Step 2</i></b></h4>
+<p id="cn-m16-160">When <b>nmap </b>is finished scanning the network <b>192.168.0.0/24</b>, close the terminal window.</p>
+<p id="cn-m16-162">From the desktop of the <b>PLABKALI </b>device, click <b>Show Applications </b>icon located on the taskbar on the left.</p>
+<h4 id="cn-m16-164"><b><i>Step 3</i></b></h4>
+<p id="cn-m16-165">Scroll until you see the Leafpad icon. Click <b>LeafPad</b>.</p>
+<p id="cn-m16-166"></p><figure><img class="cn-img" id="cn-image-m16-c-16" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-16.jpg" alt="Figure 2.3 Screenshot of PLABKALI01"><figcaption>Figure 2.3 Screenshot of PLABKALI01: Kali accessing Leafpad.</figcaption></figure><p></p>
+<h4 id="cn-m16-170"><b><i>Step 4</i></b></h4>
+<p id="cn-m16-171">Click <b>File </b>then choose <b>Open.</b></p>
+<p id="cn-m16-172">On the <b>Open </b>dialog box, under <b>Places </b>section, select <b>root</b>.</p>
+<p id="cn-m16-173">On the right details pane, select <b>hosts.txt</b>.</p>
+<p id="cn-m16-174">Click <b>Open</b>.</p>
+<p id="cn-m16-175"></p><figure><img class="cn-img" id="cn-image-m16-c-17" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-17.jpg" alt="Figure 2.4 Screenshot of PLABKALI01"><figcaption>Figure 2.4 Screenshot of PLABKALI01: Kali using Leafpad to find hosts.txt.</figcaption></figure><p></p>
+<h4 id="cn-m16-177"><b><i>Step 5</i></b></h4>
+<p id="cn-m16-178">Find the results of the scan of hosts in the network <b>192.168.0.0</b>.</p>
+<p id="cn-m16-179">Look for a host with IP address <b>192.168.0.1</b>.</p>
+<p id="cn-m16-181"></p><figure><img class="cn-img" id="cn-image-m16-c-18" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-18.jpg" alt="Figure 2.5 Screenshot of PLABKALI01"><figcaption>Figure 2.5 Screenshot of PLABKALI01: Kali using Leafpad to view the results.</figcaption></figure><p></p>
+<h4 id="cn-m16-183"><b><i>Step 6</i></b></h4>
+<p id="cn-m16-184">Click <b>X </b>to close <b>LeafPad </b>text editor. You should now be back on the <b>PLABKALI01 </b>desktop.</p>
+<p id="cn-m16-185">Double-click the <b>Terminal </b>icon within the toolbar.</p>
+<h4 id="cn-m16-186"><b><i>Step 7</i></b></h4>
+<p id="cn-m16-187">The terminal window opens.</p>
+<p id="cn-m16-188">To identify the operating system versions and to send scan TCP ports using the SYN packet, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m16-189"><code>nmap -O -sS 192.168.0.1 &gt; hosts.txt
+</code></pre>
+<p id="cn-m16-190">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m16-191"><b><i>Note: </i></b><i>This scan 
+will take a few minutes to complete. Also, since you are using the same 
+file name for the output of the command, the previous file will be 
+overwritten without any warning. Alternatively, you can use any other 
+name for the file.</i></span>
+<p id="cn-m16-192"></p><figure><img class="cn-img" id="cn-image-m16-c-19" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-19.jpg" alt="Figure 2.6 Screenshot of PLABKALI01"><figcaption>Figure 2.6 Screenshot of PLABKALI01: Kali performing an nmap scan.</figcaption></figure><p></p>
+<h4 id="cn-m16-193"><b><i>Step 8</i></b></h4>
+<span class="cn-alert" id="cn-m16-194">Keep the terminal window open.</span>
+<p id="cn-m16-195">Click <b>Show Applications </b>menu, then scroll to select <b>LeafPad.</b></p>
+<h4 id="cn-m16-197"><b><i>Step 9</i></b></h4>
+<p id="cn-m16-198">Click <b>File </b>then <b>Open</b>.</p>
+<p id="cn-m16-199">On the <b>Open </b>dialog box, navigate to <b>File System&gt;root</b>.</p>
+<p id="cn-m16-200">On the details pane on the right, then click <b>hosts.txt </b>and choose <b>Open</b>.</p>
+<h4 id="cn-m16-202"><b><i>Step 10</i></b></h4>
+<p id="cn-m16-203">Find the results of the nmap scan on <b>192.168.0.1 </b>regarding the OS details.</p>
+<p id="cn-m16-204">Close <b>Leafpad</b>.</p>
+<p id="cn-m16-205">Minimize the <b>terminal </b>window.</p>
+<h3 id="cn-m16-207"><b>Task 2 - Using Zenmap</b></h3>
+<p id="cn-m16-208"><b>Zenmap </b>is the GUI equivalent of nmap which is easier to use.</p>
+<p id="cn-m16-209">To start using Zenmap, perform the following steps:</p>
+<h4 id="cn-m16-210"><b><i>Step 1</i></b></h4>
+<p id="cn-m16-211">While in <b>PLABKALI01</b>, click <b>Show Applications </b>&gt; <b>01 Information Gathering </b>&gt; and click <b>Zenmap</b>.</p>
+<h4 id="cn-m16-213"><b><i>Step 2</i></b></h4>
+<p id="cn-m16-214">Keep <b>Zenmap </b>open.</p>
+<h4 id="cn-m16-215"><b><i>Step 3</i></b></h4>
+<p id="cn-m16-216">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m16-217">Right-click <b>Wireshark </b>and select <b>Run as Administrator</b>.</p>
+<p id="cn-m16-218">On the User Account Control dialog box, click <b>Yes</b>.</p>
+<h4 id="cn-m16-220"><b><i>Step 4</i></b></h4>
+<p id="cn-m16-221">From the top menu, click <b>Capture </b>and select <b>Options</b>.</p>
+<p id="cn-m16-222">Select <b>Ethernet 2 </b>and click <b>Start</b>.</p>
+<p id="cn-m16-223"></p><figure><img class="cn-img" id="cn-image-m16-c-24" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-24.jpg" alt="Figure 2.11 Screenshot of PLABKALI01"><figcaption>Figure 2.11 Screenshot of PLABKALI01: Wireshark. vEthernet (PLAB) is selected on the Capture Interfaces screen.</figcaption></figure><p></p>
+<h4 id="cn-m16-224"><b><i>Step 5</i></b></h4>
+<p id="cn-m16-225">Switch back to <b>PLABKALI01</b>.</p>
+<p id="cn-m16-226">The <b>Zenmap </b>application is open.</p>
+<p id="cn-m16-227">Click in the <b>Target </b>text box, type the following IP address and click <b>Scan</b>:</p>
+<pre id="cn-m16-228"><code>192.168.0.1
+</code></pre>
+<h4 id="cn-m16-230"><b><i>Step 6</i></b></h4>
+<p id="cn-m16-231"><b>Zenmap </b>runs the scan on <b>192.168.0.1</b>.</p>
+<p id="cn-m16-232">Wait until the scan is completed on <b>Zenmap </b>(this may take a few minutes).</p>
+<h4 id="cn-m16-233"><b><i>Step 7</i></b></h4>
+<p id="cn-m16-234">When the <b>Zenmap </b>scan is completed, reopen <b>Wireshark</b>.</p>
+<h4 id="cn-m16-236"><b><i>Step 8</i></b></h4>
+<p id="cn-m16-237">Switch back to <b>PLABWIN10</b>.</p>
+<p id="cn-m16-238">Wait until the live capture is complete. This will take a few minutes.</p>
+<p id="cn-m16-239">From <b>Wireshark</b>, click <b>Capture </b>and select <b>Stop</b>.</p>
+<p id="cn-m16-240"></p><figure><img class="cn-img" id="cn-image-m16-c-27" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-27.jpg" alt="Figure 2.14 Screenshot of PLABWIN10"><figcaption>Figure 2.14 Screenshot of PLABWIN10: Wireshark stopping the capture.</figcaption></figure><p></p>
+<h4 id="cn-m16-241"><b><i>Step 9</i></b></h4>
+<p id="cn-m16-242">Click in the <b>Filter </b>box and type the following text and click <b>Enter</b>:</p>
+<pre id="cn-m16-243"><code>tcp
+</code></pre>
+<p id="cn-m16-244">Alternatively, you can click the arrow next to the Filter text box.</p>
+<p id="cn-m16-246"><i> </i></p><figure><img class="cn-img" id="cn-image-m16-c-28" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-28.jpg" alt="Figure 2.15 Screenshot of PLABKALI01"><figcaption>Figure 2.15 Screenshot of PLABKALI01: Wireshark filtering the capture.</figcaption></figure><p></p>
+<h4 id="cn-m16-247"><b><i>Step 10</i></b></h4>
+<p id="cn-m16-248">Scroll up to the capture file. Go to <b>Source </b>column and look for <b>192.168.0.1 </b>(refers to a vulnerable host), and Destination <b>192.168.0.3 </b>(refers to Kali Linux).</p>
+<p id="cn-m16-249">When the Zenmap port scan is run against the vulnerable host, network applications will reply with a <b>SYN/ACK </b>(sequence and acknowledgment) packet when a connection is made to it. The zenmap tool will send the <b>RST </b>(reset) to tear down the connection.</p>
+<p id="cn-m16-250"></p><figure><img class="cn-img" id="cn-image-m16-c-29" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-29.jpg" alt="Figure 2.16 Screenshot of PLABKALI01"><figcaption>Figure 2.16 Screenshot of PLABKALI01: Wireshark filtering the capture.</figcaption></figure><p></p>
+<h4 id="cn-m16-251"><b><i>Step 11</i></b></h4>
+<p id="cn-m16-252">Go back <b>PLABKALI01</b>.</p>
+<p id="cn-m16-253">The <b>Zenmap </b>application is open.</p>
+<p id="cn-m16-254">In the <b>Target </b>text box, type the following IP range and click <b>Scan</b>:</p>
+<pre id="cn-m16-255"><code>192.168.0.0/24
+</code></pre>
+<p id="cn-m16-256">Click <b>Scan</b>.</p>
+<h4 id="cn-m16-258"><b><i>Step 12</i></b></h4>
+<p id="cn-m16-259">This will scan available hosts in the mentioned network ID <b>192.168.0.1/24 </b></p>
+<span class="cn-quote" id="cn-m16-260"><b><i>Note: </i></b><i>This will take about 3 minutes to complete.</i></span>
+<p id="cn-m16-261"></p><figure><img class="cn-img" id="cn-image-m16-c-31" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-31.jpg" alt="Figure 2.18 Screenshot of PLABKALI01"><figcaption>Figure 2.18 Screenshot of PLABKALI01: Kali on Zenmap reviewing the scan results.</figcaption></figure><p></p>
+<h4 id="cn-m16-262"><b><i>Step 13</i></b></h4>
+<p id="cn-m16-263">When the scan is complete, the <b>Hosts </b>left column indicates the IP addresses of computers detected in the scan.</p>
+<p id="cn-m16-264">Click <b>192.168.0.2 </b>to view the details about this host.</p>
+<p id="cn-m16-265"></p><figure><img class="cn-img" id="cn-image-m16-c-32" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-32.jpg" alt="Figure 2.19 Screenshot of PLABKALI01"><figcaption>Figure 2.19 Screenshot of PLABKALI01: Kali on Zenmap reviewing the scan results.</figcaption></figure><p></p>
+<h4 id="cn-m16-266"><b><i>Step 14</i></b></h4>
+<p id="cn-m16-267">Click on <b>Topology </b>tab and then click <b>Fisheye.</b></p>
+<p id="cn-m16-268">The <b>Topology </b>tab displays the discovered network hosts detected by the scan.</p>
+<p id="cn-m16-269"></p><figure><img class="cn-img" id="cn-image-m16-c-33" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-33.jpg" alt="Figure 2.20 Screenshot of PLABKALI01"><figcaption>Figure 2.20 Screenshot of PLABKALI01: Kali on Zenmap reviewing the scan results.</figcaption></figure><p></p>
+<h4 id="cn-m16-270"><b><i>Step 15</i></b></h4>
+<p id="cn-m16-271">Click the <b>Host Details </b>tab to get a graphical view about the selected host.</p>
+<p id="cn-m16-272"></p><figure><img class="cn-img" id="cn-image-m16-c-34" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-34.jpg" alt="Figure 2.21 Screenshot of PLABKALI01"><figcaption>Figure 2.21 Screenshot of PLABKALI01: Kali on Zenmap reviewing the scan results.</figcaption></figure><p></p>
+<h4 id="cn-m16-273"><b><i>Step 16</i></b></h4>
+<p id="cn-m16-274">Click the <b>Ports/Hosts </b>tab to see summary detected open ports in <b>192.168.0.2</b>.</p>
+<p id="cn-m16-275"></p><figure><img class="cn-img" id="cn-image-m16-c-35" src="Usingvarioustoolsforsecurityassessments_files/image-m16-c-35.jpg" alt="Figure 2.22 Screenshot of PLABKALI01"><figcaption>Figure 2.22 Screenshot of PLABKALI01: Details of the 192.168.0.2 host on the Ports / Hosts tab.</figcaption></figure><p></p>
+<span class="atom-code hidden">5e1d502e-2771-4deb-a3e2-7881a321dc64</span>
+<h4 id="cn-m16-278"><b><i>Step 17</i></b></h4>
+<p id="cn-m16-279">Close <b>Zenmap </b>application, discarding any changes.</p>
+<span class="cn-alert" id="cn-m16-280">Leave the devices in their current states and continue on to the next exercise.</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m16-282"><b>Review</b></h2>
+<p id="cn-m16-283">Well done, you have completed the <b>Using various tools for security assessments </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">ec6643a1-1daf-4f8b-89a5-87f342bc896d</span>
+<span class="atom-code hidden">9215cd1e-1bcd-48c3-a6df-7a153727c500</span>
+<span class="atom-code hidden">91d6d92a-dcd4-419c-8c55-125da04f747b</span>
+<span class="atom-code hidden">bb35850c-06ce-4aad-ae74-42adc93510d3</span>
+<span class="atom-code hidden">70a1fd33-ebc3-41e0-99b2-f91a2b9fa730</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m16-292">You completed the following exercises:</p>
+<ul id="cn-m16-293">
+<li id="cn-m16-293">Identifying Live Systems</li>
+<li id="cn-m16-294">Perform Network Footprinting</li>
+</ul>
+<p id="cn-m16-295">Perform Network Footprinting You should now be able to:</p>
+<ul id="cn-m16-296">
+<li id="cn-m16-296">Connect to Kali</li>
+<li id="cn-m16-297">Identify live systems using nmap</li>
+<li id="cn-m16-298">Identify live systems using hping3</li>
+<li id="cn-m16-299">Use Nmap</li>
+<li id="cn-m16-300">Use Zenmap</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m16-304">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

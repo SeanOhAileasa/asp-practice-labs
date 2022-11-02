@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="IntegrateNetworkandSecurityComponents_files/print-styles.css" rel="stylesheet">
+    <script src="IntegrateNetworkandSecurityComponents_files/jquery.min.js"></script>
+    <script src="IntegrateNetworkandSecurityComponents_files/jspdf.js"></script>
+    <script src="IntegrateNetworkandSecurityComponents_files/from_html.js"></script>
+    <script src="IntegrateNetworkandSecurityComponents_files/addimage.js"></script>
+    <script src="IntegrateNetworkandSecurityComponents_files/filesaver.js"></script>
+    <script src="IntegrateNetworkandSecurityComponents_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="e2292DwIK/vldGhk3W+Ic/ro58Rz/hY9m1dYMtrbTiuFoy7stiFADE8aMdO3MUq6x/nZNTe+mS8OVIDAS6O2sl0pvo3VXFJcoc/iucVJLAw=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Integrate Network and Security Components</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Install Snort</li><li>Exercise 2 - Test Snort</li><li>Exercise 3 - Configure and Re-Test Snort</li><li>Exercise 4 - Configure Iptables</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m4-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Snort</div>
+<div>Putty</div>
+<div>Telnet</div>
+<div>SSH</div>
+<div>IPtables</div>
+<div>Zenmap</div>
+</div>
+<p id="cn-m4-8">Welcome to the <b>Integrate Network and Security Components </b>Practice Lab. In this module, you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m4-12">In this module, you will complete the following exercises:</p>
+<ul id="cn-m4-13">
+<li id="cn-m4-13">Install Snort</li>
+<li id="cn-m4-14">Test Snort</li>
+<li id="cn-m4-15">Configure and Re-Test Snort</li>
+<li id="cn-m4-16">Configure Iptables</li>
+</ul>
+<p id="cn-m4-17">After completing this lab, you will be able to:</p>
+<ul id="cn-m4-18">
+<li id="cn-m4-18">Install Snort</li>
+<li id="cn-m4-19">Download Snort Rules</li>
+<li id="cn-m4-20">Run the Snort Tool</li>
+<li id="cn-m4-21">Create a folder and move the rule files in the snort folder</li>
+<li id="cn-m4-22">Modify the Snort configuration file</li>
+<li id="cn-m4-23">Re-run Snort IDS tool</li>
+<li id="cn-m4-24">Connect Win10 and Kali</li>
+<li id="cn-m4-25">Install Putty into Kali</li>
+<li id="cn-m4-26">Configure Telnet Services on Win8.1</li>
+<li id="cn-m4-27">Test Bi-directional traffic through Telnet and SSH connections</li>
+<li id="cn-m4-28">Configure iptables to block Telnet</li>
+<li id="cn-m4-29">Test Telnet connection with Zenmap</li>
+<li id="cn-m4-30">Configure iptables to drop SSH connections</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m4-32">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m4-33">
+<li id="cn-m4-33"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts, and architectures to meet security requirements.</li>
+</ul>
+<span class="cn-quote" id="cn-m4-34"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. You recommend referring to course material or a search 
+engine to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m4-36">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m4-40">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m4-41">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m4-52"><b>Lab Topology</b></h2>
+<p id="cn-m4-53">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m4-54">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<p id="cn-m4-55"><b>For Exercise 1 - 3:</b></p>
+<ul id="cn-m4-56">
+<li id="cn-m4-56"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m4-57"><b>PLABDM01 </b>(Windows Server 2016 - Member Server)</li>
+<li id="cn-m4-58"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m4-59"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m4-60"><b>PLABDVWA </b>(Fedora)</li>
+<li id="cn-m4-61"><b>PLABSECON </b>(Ubuntu-Security Onion)</li>
+<li id="cn-m4-62"><b>PLABWIN701 </b>(Windows 7)</li>
+<li id="cn-m4-63"><b>PLABXP01 </b>(Windows XP)</li>
+</ul>
+<p id="cn-m4-64"><img class="cn-img" id="cn-image-m4-c-0" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-0.jpg" alt="Practice Labs screenshot."></p>
+<p id="cn-m4-65"><b>For Exercise 4:</b></p>
+<p id="cn-m4-66">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m4-67">
+<li id="cn-m4-67"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m4-68"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m4-69"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+<li id="cn-m4-70"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m4-71"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<p id="cn-m4-72"><img class="cn-img" id="cn-image-m4-c-1" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-1.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m4-74">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m4-75"><b>Exercise 1 - Install Snort</b></h2>
+<p id="cn-m4-76">Snort is a portable intrusion detection system (IDS) 
+for Windows and Linux operating systems. This tool is capable of 
+capturing real-time network traffic analysis and perform packet logging 
+on TCP/IP networks.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m4-78">After completing this exercise, you will be able to:</p>
+<ul id="cn-m4-79">
+<li id="cn-m4-79">Install Snort</li>
+<li id="cn-m4-80">Download Snort Rules</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m4-82">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m4-83">
+<li id="cn-m4-83"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m4-84"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m4-85"><img class="cn-img" id="cn-image-m4-c-2" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-2.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m4-89"><b>Task 1 - Installing Snort </b></h3>
+<p id="cn-m4-90">In this task, you will download and install Snort. To do this, perform the following steps.</p>
+<h4 id="cn-m4-91"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-92">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m4-93">In the <b>Type here to search </b>text box, type:</p>
+<pre id="cn-m4-94"><code>Internet Explorer
+</code></pre>
+<p id="cn-m4-95">Click <b>Internet Explorer </b>from the <b>Best Match </b>section.</p>
+<p id="cn-m4-96"></p><figure><img class="cn-img" id="cn-image-m4-c-3" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-3.jpg" alt="Figure 1.1 Screenshot of PLABWIN10"><figcaption>Figure 1.1 Screenshot of PLABWIN10: Starting Internet Explorer from the Best Match search.</figcaption></figure><p></p>
+<h4 id="cn-m4-99"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-100">The Intranet Website is displayed. Click <b>Tools </b>and then click <b>Hacking Tools</b>.</p>
+<p id="cn-m4-101">From the given list, locate <b>Snort_2_9_7_0_Installer.exe</b>.</p>
+<p id="cn-m4-102"></p><figure><img class="cn-img" id="cn-image-m4-c-4" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-4.jpg" alt="Figure 1.2 Screenshot of PLABWIN10"><figcaption>Figure 1.2 Screenshot of PLABWIN10: Locating the Snort file from the Hacking Tools list on the Intranet Website.</figcaption></figure><p></p>
+<h4 id="cn-m4-103"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-104">Click on <b>Snort_2_9_7_0_Installer.exe</b></p>
+<p id="cn-m4-105">On the notification toolbar at the bottom of the page, click <b>Run</b>.</p>
+<h4 id="cn-m4-106"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-107">Another notification bar appears displaying a warning that the publisher of this file is not verified. Click <b>Run</b>.</p>
+<span class="cn-quote" id="cn-m4-108"><b><i>Note: </i></b><i>When prompted with the User Account Control dialog box, click </i><b><i>Yes</i></b><i>.</i></span>
+<h4 id="cn-m4-109"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-110">Minimize Internet Explorer in the background.</p>
+<p id="cn-m4-111">On the <b>License Agreement </b>page of the Snort 2.9.7.0 Setup wizard, click <b>I Agree</b>.</p>
+<p id="cn-m4-112"></p><figure><img class="cn-img" id="cn-image-m4-c-5" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-5.jpg" alt="Figure 1.3 Screenshot of PLABWIN10"><figcaption>Figure 1.3 Screenshot of PLABWIN10: Showing the License Agreement page of the installation wizard. I Agree, is selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-115"><b><i>Step 6</i></b></h4>
+<p id="cn-m4-116">On the <b>Choose Components </b>page, keep the default selection and click <b>Next</b>.</p>
+<h4 id="cn-m4-118"><b><i>Step 7</i></b></h4>
+<p id="cn-m4-119">On the <b>Choose Install Location </b>page, keep the default installation path and click <b>Next</b>.</p>
+<h4 id="cn-m4-122"><b><i>Step 8</i></b></h4>
+<p id="cn-m4-123">The installation process starts. After it is completed, click <b>Close</b>.</p>
+<p id="cn-m4-124"></p><figure><img class="cn-img" id="cn-image-m4-c-6" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-6.jpg" alt="Figure 1.4 Screenshot of PLABWIN10"><figcaption>Figure 1.4 Screenshot of PLABWIN10: Completing the Snort installation. Close is selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-125"><b><i>Step 9</i></b></h4>
+<p id="cn-m4-126">The system indicates that Snort has successfully been installed.</p>
+<p id="cn-m4-127">Click <b>OK</b>.</p>
+<p id="cn-m4-128"></p><figure><img class="cn-img" id="cn-image-m4-c-7" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-7.jpg" alt="Figure 1.5 Screenshot of PLABWIN10"><figcaption>Figure 1.5 Screenshot of PLABWIN10: Showing the popup confirming that Snort has successfully been installed. OK is selected.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m4-130">Keep all devices powered on in their current state and proceed to the next task.</span>
+<h3 id="cn-m4-133"><b>Task 2 - Download Snort Rules</b></h3>
+<p id="cn-m4-134">To download the Snort rules file, perform the following steps:</p>
+<h4 id="cn-m4-135"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-136">On <b>PLABWIN10 </b>device, restore <b>Internet Explorer </b>from the taskbar.</p>
+<p id="cn-m4-137">While the <b>Tools and resources </b>webpage is open, scroll up and click <b>Tools</b>.</p>
+<p id="cn-m4-138"></p><figure><img class="cn-img" id="cn-image-m4-c-8" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-8.jpg" alt="Figure 1.6 Screenshot of PLABWIN10"><figcaption>Figure 1.6 Screenshot of PLABWIN10: Navigating to the Tools page. The Tools button is selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-140"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-141">On the <b>[..] &gt; Tools </b>path, scroll down and click <b>Snort</b>.</p>
+<h4 id="cn-m4-143"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-144">You are redirected to <b>[..] &gt; Tools &gt; Snort </b>path.</p>
+<p id="cn-m4-145">Click <b>blacklist.rules</b></p>
+<p id="cn-m4-146"></p><figure><img class="cn-img" id="cn-image-m4-c-9" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-9.jpg" alt="Figure 1.7 Screenshot of PLABWIN10"><figcaption>Figure 1.7 Screenshot of PLABWIN10: Downloading Snort rules from the intranet. blacklist.rules is selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-147"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-148">On the notification toolbar, click the <b>Save </b>drop-down and select <b>Save As</b>.</p>
+<h4 id="cn-m4-150"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-151">On the <b>Save As </b>dialog box, expand <b>This PC </b>&gt; <b>Local Disk C </b>&gt; <b>Snort </b>and then click the <b>rules </b>folder.</p>
+<p id="cn-m4-152">The <b>File name </b>box is automatically filled in, click <b>Save</b>.</p>
+<p id="cn-m4-154"></p><figure><img class="cn-img" id="cn-image-m4-c-10" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-10.jpg" alt="Figure 1.8 Screenshot of PLABWIN10"><figcaption>Figure 1.8 Screenshot of PLABWIN10: Saving the Snort rules to the rules folder. Save is selected.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<h4 id="cn-m4-157"><b><i>Step 6</i></b></h4>
+<p id="cn-m4-158">Close the notification bar and then minimize Internet Explorer.</p>
+<span class="cn-alert" id="cn-m4-161">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m4-162"><b>Exercise 2 - Test Snort</b></h2>
+<p id="cn-m4-163">After Snort has been installed, it needs to be tested 
+for its configuration. This exercise will run and test the Snort 
+configuration and add the rule files in Snort.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m4-165">After completing this exercise, you will be able to:</p>
+<ul id="cn-m4-166">
+<li id="cn-m4-166">Run the Snort Tool</li>
+<li id="cn-m4-167">Create a folder and move the rule files in the Snort folder</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m4-169">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m4-170">
+<li id="cn-m4-170"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m4-171"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m4-172"><b> </b><img class="cn-img" id="cn-image-m4-c-11" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-11.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m4-175"><b>Task 1 - Running Snort Tool</b></h3>
+<p id="cn-m4-176">To start running Snort tool, perform the following steps:</p>
+<h4 id="cn-m4-177"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-178">Ensure you are connected to the <b>PLABWIN10 </b>device</p>
+<p id="cn-m4-179">On the <b>PLABWIN10 </b>device, right-click <b>Start </b>and select <b>Command Prompt (Admin</b>).</p>
+<span class="cn-quote" id="cn-m4-180"><b><i>Note: </i></b><i>When prompted with the User Account Control dialog box, click </i><b><i>Yes</i></b><i>.</i></span>
+<h4 id="cn-m4-182"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-183">On the command prompt window,  to change to a different directory, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m4-184"><code>cd \snort\bin
+</code></pre>
+<p id="cn-m4-185"></p><figure><img class="cn-img" id="cn-image-m4-c-12" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-12.jpg" alt="Figure 2.1 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.1 Screenshot of PLABWIN10: Changing from the current directory to the
+ Snort directory. The above command has been entered.</figcaption></figure><p></p>
+<h4 id="cn-m4-188"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-189">Notice that you are in the <b>c:\snort\bin </b>directory. To display the available network interfaces for Snort, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m4-190"><code>snort -W
+</code></pre>
+<span class="cn-quote" id="cn-m4-191"><b><i>Note: </i></b><i>Snort switches, such as -W, are case-sensitive.</i></span>
+<p id="cn-m4-192">The result of this command displays a network interface #1, as indicated by the <b>Index </b>column.</p>
+<p id="cn-m4-193"></p><figure><img class="cn-img" id="cn-image-m4-c-13" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-13.jpg" alt="Figure 2.2 Screenshot of PLABWIN10"><figcaption>Figure 2.2 Screenshot of PLABWIN10: Running a Snort command. The above command is entered.</figcaption></figure><p></p>
+<h4 id="cn-m4-196"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-197">Let's use network interface <b>1 </b>to listen to all traffic.</p>
+<p id="cn-m4-198">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m4-199"><code>snort -i 1 -v
+</code></pre>
+<span class="cn-quote" id="cn-m4-200"><b><i>Note: </i></b><i>If you type
+ -V instead of -v, then snort will not run continuously, and you will 
+get to see the network interface details. To run Snort continuously, you
+ must use -v.</i></span>
+<h4 id="cn-m4-201"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-202">Snort will listen to network traffic on network interface #1.</p>
+<p id="cn-m4-203">Notice that the Snort runs continuously.</p>
+<p id="cn-m4-204"></p><figure><img class="cn-img" id="cn-image-m4-c-14" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-14.jpg" alt="Figure 2.3 Screenshot of PLABWIN10"><figcaption>Figure 2.3 Screenshot of PLABWIN10: Viewing Snort command output.</figcaption></figure><p></p>
+<h4 id="cn-m4-207"><b><i>Step 6</i></b></h4>
+<p id="cn-m4-208">First, break the previous command by pressing <b>CTRL </b>+ <b>C</b>. Ensure that the command prompt window is selected when you do this.</p>
+<p id="cn-m4-209">Snort will exit.</p>
+<p id="cn-m4-210">Note that a list of protocols is displayed with packet details.</p>
+<p id="cn-m4-211"></p><figure><img class="cn-img" id="cn-image-m4-c-15" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-15.jpg" alt="Figure 2.4 Screenshot of PLABWIN10"><figcaption>Figure 2.4 Screenshot of PLABWIN10: Viewing the protocol list in the Snort command output.</figcaption></figure><p></p>
+<h4 id="cn-m4-214"><b><i>Step 7</i></b></h4>
+<p id="cn-m4-215">To capture and display packet payload, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m4-216"><code>snort -i 1 -vd
+</code></pre>
+<p id="cn-m4-218"></p><figure><img class="cn-img" id="cn-image-m4-c-16" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-16.jpg" alt="Figure 2.5 Screenshot of PLABWIN10"><figcaption>Figure 2.5 Screenshot of PLABWIN10: Running a Snort command in the terminal window. The above command has been entered.</figcaption></figure><p></p>
+<h4 id="cn-m4-220"><b><i>Step 8</i></b></h4>
+<p id="cn-m4-221">Note the following output.</p>
+<p id="cn-m4-222">Snort will continue running as it listens to the selected interface.</p>
+<p id="cn-m4-223"></p><figure><img class="cn-img" id="cn-image-m4-c-17" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-17.jpg" alt="Figure 2.6 Screenshot of PLABWIN10"><figcaption>Figure 2.6 Screenshot of PLABWIN10: Viewing the Snort command output.</figcaption></figure><p></p>
+<h4 id="cn-m4-224"><b><i>Step 9</i></b></h4>
+<p id="cn-m4-225">Press <b>CTRL </b>+ <b>C </b>to break it. Ensure that the command prompt is selected when you do this.</p>
+<p id="cn-m4-226">After you break the command, the protocol and packet details are displayed.</p>
+<h4 id="cn-m4-227"><b><i>Step 10</i></b></h4>
+<p id="cn-m4-228">You will now run <b>Snort </b>in the IDS mode.</p>
+<p id="cn-m4-229">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m4-230"><code>snort&nbsp;-c&nbsp;&nbsp;c:\snort\etc\snort.conf&nbsp;&nbsp;-l&nbsp;&nbsp;c:\snort\log&nbsp;&nbsp;-K ascii
+</code></pre>
+<p id="cn-m4-231"></p><figure><img class="cn-img" id="cn-image-m4-c-18" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-18.jpg" alt="Figure 2.7 Screenshot of PLABWIN10"><figcaption>Figure 2.7 Screenshot of PLABWIN10: Executing a command to run Snort in the IDS mode. The above command has been entered.</figcaption></figure><p></p>
+<h4 id="cn-m4-233"><b><i>Step 11</i></b></h4>
+<p id="cn-m4-234">Snort reports a fatal error.</p>
+<p id="cn-m4-235">You will need to resolve this error to ensure that you can run Snort in IDS mode.</p>
+<p id="cn-m4-236">Minimize the command prompt window.</p>
+<p id="cn-m4-237"></p><figure><img class="cn-img" id="cn-image-m4-c-19" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-19.jpg" alt="Figure 2.8 Screenshot of PLABWIN10"><figcaption>Figure 2.8 Screenshot of PLABWIN10: Displaying the error for attempting to run Snort in IDS mode.</figcaption></figure><p></p>
+<h3 id="cn-m4-240"><b>Task 2 - Create a Folder and the Rules File in the Snort Folder</b></h3>
+<p id="cn-m4-241">To create the folder and rules file, follow these steps:</p>
+<h4 id="cn-m4-242"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-243">On <b>PLABWIN10</b>, launch <b>Windows Explorer </b>on the taskbar.</p>
+<p id="cn-m4-244">Navigate to <b>C:\snort\lib </b>path.</p>
+<p id="cn-m4-245">Create a folder called <b>snort_dynamicrules</b>.</p>
+<p id="cn-m4-246"></p><figure><img class="cn-img" id="cn-image-m4-c-20" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-20.jpg" alt="Figure 2.9 Screenshot of PLABWIN10"><figcaption>Figure 2.9 Screenshot of PLABWIN10: Showing the Snort lib directory. The snort_dynamicrules folder has been created.</figcaption></figure><p></p>
+<h4 id="cn-m4-249"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-250">Click the <b>View </b>tab.</p>
+<p id="cn-m4-251">Click the <b>Options </b>drop-down and then select <b>Change folder and search options</b>.</p>
+<p id="cn-m4-252"></p><figure><img class="cn-img" id="cn-image-m4-c-21" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-21.jpg" alt="Figure 2.10 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.10 Screenshot of PLABWIN10: Modifying the view options. The View tab 
+has been selected. Options has been clicked, and Change folder and 
+search options have been chosen from the drop-down.</figcaption></figure><p></p>
+<h4 id="cn-m4-255"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-256">On the <b>Folder </b>Options, click the <b>View </b>tab.</p>
+<p id="cn-m4-257">On the <b>View </b>tab, clear the <b>Hide extensions for known file types </b>checkbox.</p>
+<p id="cn-m4-258">Click <b>OK</b>.</p>
+<p id="cn-m4-259"></p><figure><img class="cn-img" id="cn-image-m4-c-22" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-22.jpg" alt="Figure 2.11 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.11 Screenshot of PLABWIN10: Permitting the file extensions to be 
+viewed in Folder options. The above instructions have been executed, and
+ OK is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m4-262"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-263">Back in the <b>Windows Explorer </b>window, navigate to the <b>c:\snort\rules </b>folder.</p>
+<h4 id="cn-m4-264"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-265">You need to create two text files now. In the right pane, right-click in the empty area, select <b>New </b>and then select <b>Text Document</b>.</p>
+<h4 id="cn-m4-266"><b><i>Step 6</i></b></h4>
+<p id="cn-m4-267">Rename the text file with the following name:</p>
+<pre id="cn-m4-268"><code>white_list.rules
+</code></pre>
+<p id="cn-m4-269">Click <b>Yes </b>when you get a warning about renaming a file.</p>
+<h4 id="cn-m4-270"><b><i>Step 7</i></b></h4>
+<p id="cn-m4-271">Make a copy of the <b>white_list.rules </b>file.</p>
+<h4 id="cn-m4-272"><b><i>Step 8</i></b></h4>
+<p id="cn-m4-273">Rename the text file with the following name:</p>
+<pre id="cn-m4-274"><code>black_list.rules
+</code></pre>
+<p id="cn-m4-275">You need to ensure both the files have the <b>.rules </b>extension.</p>
+<p id="cn-m4-276"></p><figure><img class="cn-img" id="cn-image-m4-c-23" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-23.jpg" alt="Figure 2.12 Screenshot of PLABWIN10"><figcaption>Figure 2.12 Screenshot of PLABWIN10: Making rule files. The black_list.rules file has been created.</figcaption></figure><p></p>
+<h4 id="cn-m4-278"><b><i>Step 9</i></b></h4>
+<p id="cn-m4-279">The <b>black_list.rules </b>and <b>white_list.rules </b>are now created and are empty.</p>
+<span class="cn-quote" id="cn-m4-280"><b><i>Note: </i></b><i>If you want to get more information about writing your own rules, consult the snort documentation file.</i></span>
+<h4 id="cn-m4-281"><b><i>Step 10</i></b></h4>
+<p id="cn-m4-282">Navigate to <b>c:\Snort\etc </b>folder.</p>
+<p id="cn-m4-283">Create a folder called <b>WHITE_LIST_PATH</b>.</p>
+<h4 id="cn-m4-285"><b><i>Step 12</i></b></h4>
+<p id="cn-m4-286">Navigate to <b>c:\Snort\etc </b>folder.</p>
+<p id="cn-m4-287">Create a folder called <b>BLACK_LIST_PATH</b>.</p>
+<p id="cn-m4-288">Minimize <b>Windows Explorer </b>window.</p>
+<span class="cn-alert" id="cn-m4-289">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m4-291"><b>Exercise 3 - Configure and Re-Test Snort</b></h2>
+<p id="cn-m4-292">This exercise will consist of modifying the configuration files and then re-testing snort to confirm that it works.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m4-294">After completing this exercise, you will be able to:</p>
+<ul id="cn-m4-295">
+<li id="cn-m4-295">Modify the Snort configuration file</li>
+<li id="cn-m4-296">Re-run Snort IDS tool</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m4-298">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m4-299">
+<li id="cn-m4-299"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m4-300"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m4-301"><b> </b><img class="cn-img" id="cn-image-m4-c-24" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-24.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m4-303"><b>Task 1 - Modify snort configuration file</b></h3>
+<p id="cn-m4-304">In this task, you will modify a configuration file to resolve the error that you found in the earlier task.</p>
+<h4 id="cn-m4-305"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-306">Ensure you are connected to the <b>PLABWIN10 </b>device.</p>
+<p id="cn-m4-307">On the <b>PLABWIN10 </b>device, click <b>Start</b>, expand <b>Notepad++ </b>and then select <b>Notepad</b>++.</p>
+<p id="cn-m4-308"></p><figure><img class="cn-img" id="cn-image-m4-c-25" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-25.jpg" alt="Figure 3.1 Screenshot of PLABWIN10"><figcaption>Figure 3.1 Screenshot of PLABWIN10: Starting up Notepad ++.</figcaption></figure><p></p>
+<h4 id="cn-m4-309"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-310">In <b>Notepad</b>++, click <b>File </b>and select <b>Open</b>.</p>
+<h4 id="cn-m4-311"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-312">On the <b>Open </b>dialog box, expand <b>Local Disk C</b>, expand the <b>Snort </b>folder.</p>
+<p id="cn-m4-313">Click the <b>etc. </b>folder.</p>
+<p id="cn-m4-314">Notice that several files are available.</p>
+<p id="cn-m4-315">On the details pane, click <b>snort.conf </b>file and select <b>Open</b>.</p>
+<p id="cn-m4-317"></p><figure><img class="cn-img" id="cn-image-m4-c-26" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-26.jpg" alt="Figure 3.2 Screenshot of PLABWIN10"><figcaption>Figure 3.2 Screenshot of PLABWIN10: Opening the snort.conf file for editing.</figcaption></figure><p></p>
+<h4 id="cn-m4-318"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-319">The <b>snort.conf </b>file opens.</p>
+<p id="cn-m4-320">Click the <b>Search </b>tab and then select <b>Replace</b>.</p>
+<p id="cn-m4-321"></p><figure><img class="cn-img" id="cn-image-m4-c-27" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-27.jpg" alt="Figure 3.3 Screenshot of PLABWIN10"><figcaption>Figure 3.3 Screenshot of PLABWIN10: Editing the snort.conf file. The Search tab has been clicked and Replace selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-324"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-325">You will find all instances of <b>ipvar </b>and replace it with <b>var</b>.</p>
+<p id="cn-m4-326">On the <b>Replace </b>dialog box, click in the <b>Find what </b>text box and type:</p>
+<pre id="cn-m4-327"><code>ipvar
+</code></pre>
+<p id="cn-m4-328">Click in the <b>Replace with </b>text box, and type:</p>
+<pre id="cn-m4-329"><code>var
+</code></pre>
+<p id="cn-m4-330">Click <b>Replace All</b>.</p>
+<p id="cn-m4-331"></p><figure><img class="cn-img" id="cn-image-m4-c-28" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-28.jpg" alt="Figure 3.4 Screenshot of PLABWIN10"><figcaption>Figure 3.4 Screenshot of PLABWIN10: Finding and Replacing values in Snort.conf file. The Replace All button is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m4-333"><b><i>Step 6</i></b></h4>
+<p id="cn-m4-334">The <b>Replace </b>dialog box is displayed.</p>
+<p id="cn-m4-335">In the bottom left of the dialog box, the blue text 
+indicates that it has searched the document, and 11 occurrences were 
+replaced.</p>
+<p id="cn-m4-336">Click <b>Close</b>.</p>
+<p id="cn-m4-338"></p><figure><img class="cn-img" id="cn-image-m4-c-29" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-29.jpg" alt="Figure 3.5 Screenshot of PLABWIN10"><figcaption>Figure 3.5 Screenshot of PLABWIN10: Editing the snort.conf file.</figcaption></figure><p></p>
+<h4 id="cn-m4-340"><b><i>Step 7</i></b></h4>
+<p id="cn-m4-341">Click the <b>Search </b>menu and select <b>Find</b>…</p>
+<p id="cn-m4-342">On the <b>Find </b>dialog box, click in the <b>Find what </b>text box and type:</p>
+<pre id="cn-m4-343"><code>dynamicpreprocessor directory
+</code></pre>
+<p id="cn-m4-344">Click the <b>Find &gt;&gt; </b>button.</p>
+<p id="cn-m4-345"></p><figure><img class="cn-img" id="cn-image-m4-c-30" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-30.jpg" alt="Figure 3.6 Screenshot of PLABWIN10"><figcaption>Figure
+ 3.6 Screenshot of PLABWIN10: Locating values in the snort.conf file. 
+The above text has been entered, and the Find&gt;&gt; button is 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-348"><b><i>Step 8</i></b></h4>
+<p id="cn-m4-349">After the <b>dynamicpreprocessor directory </b>keyword is found, you will notice a highlight or a selection at the back of the <b>Find </b>dialog box.</p>
+<p id="cn-m4-350">Move the <b>Find </b>dialog box out of the way so you can see the highlighted section.</p>
+<p id="cn-m4-351">Locate the <b>dynamicpreprocessor directory </b>section.</p>
+<p id="cn-m4-352">Change the path located beside <b>dynamicpreprocessor directory </b>to:</p>
+<pre id="cn-m4-353"><code>c:\Snort\lib\snort_dynamicpreprocessor
+</code></pre>
+<p id="cn-m4-354"></p><figure><img class="cn-img" id="cn-image-m4-c-31" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-31.jpg" alt="Figure 3.7 Screenshot of PLABWIN10"><figcaption>Figure 3.7 Screenshot of PLABWIN10: Changing values in the snort.conf file. The highlighted section is visible.</figcaption></figure><p></p>
+<h4 id="cn-m4-355"><b><i>Step 9</i></b></h4>
+<p id="cn-m4-356">Click on the <b>Find </b>dialog box to activate it.</p>
+<p id="cn-m4-357">Then, click the <b>Close </b>button.</p>
+<p id="cn-m4-358">Perform the same editing changes to the following lines, numbered 250 and 253.</p>
+<p id="cn-m4-359">250 is currently:</p>
+<pre id="cn-m4-360"><code>dynamicengine /usr/local/lib/snort_dynamicengine/libsf_engine.so
+</code></pre>
+<p id="cn-m4-361">253 is currently:</p>
+<pre id="cn-m4-362"><code>dynamicdetection directory /usr/local/lib/snort_dynamicrules
+</code></pre>
+<p id="cn-m4-363"><b>Change </b>them so that they read as the following:</p>
+<p id="cn-m4-364">250:</p>
+<pre id="cn-m4-365"><code>dynamicengine c:\Snort\lib\snort_dynamicengine\sf_engine.dll
+</code></pre>
+<p id="cn-m4-366">253:</p>
+<pre id="cn-m4-367"><code>dynamicdetection directory c:\Snort\lib\snort_dynamicrules
+</code></pre>
+<p id="cn-m4-368"></p><figure><img class="cn-img" id="cn-image-m4-c-32" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-32.jpg" alt="Figure 3.8 Screenshot of PLABWIN10"><figcaption>Figure 3.8 Screenshot of PLABWIN10: Replacing the values in the snort.conf file.</figcaption></figure><p></p>
+<h4 id="cn-m4-370"><b><i>Step 10</i></b></h4>
+<p id="cn-m4-371">For this step, you will comment on keywords that start with <b>pre-processor normalize</b>.</p>
+<p id="cn-m4-372">Click <b>Search </b>and select <b>Replace</b>…</p>
+<h4 id="cn-m4-373"><b><i>Step 11</i></b></h4>
+<p id="cn-m4-374">On the <b>Replace </b>dialog box, click in the <b>Find what </b>text box and type:</p>
+<pre id="cn-m4-375"><code>preprocessor normalize
+</code></pre>
+<p id="cn-m4-376">Click in the <b>Replace with </b>text box and type:</p>
+<pre id="cn-m4-377"><code>#preprocessor normalize
+</code></pre>
+<p id="cn-m4-378">Click <b>Replace All</b>.</p>
+<p id="cn-m4-379"></p><figure><img class="cn-img" id="cn-image-m4-c-33" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-33.jpg" alt="Figure 3.9 Screenshot of PLABWIN10"><figcaption>Figure 3.9 Screenshot of PLABWIN10: Searching and replacing values in the snort.conf file.</figcaption></figure><p></p>
+<p id="cn-m4-381">The <b>Replace </b>dialog box reports that “<b>5 occurrences were replaced</b>.” This report is visible in the bottom left of the dialog box.</p>
+<p id="cn-m4-382">Click <b>Close</b>.</p>
+<p id="cn-m4-383"></p><figure><img class="cn-img" id="cn-image-m4-c-34" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-34.jpg" alt="Figure 3.10 Screenshot of PLABWIN10"><figcaption>Figure
+ 3.10 Screenshot of PLABWIN10: Showing the result of replacing values 
+and their count in the snort.conf file. Close is selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-386"><b><i>Step 12</i></b></h4>
+<p id="cn-m4-387">Notice that “#” is now appended to the <b>preprocessor normalize </b>keywords.</p>
+<p id="cn-m4-388"></p><figure><img class="cn-img" id="cn-image-m4-c-35" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-35.jpg" alt="Figure 3.11 Screenshot of PLABWIN10"><figcaption>Figure 3.11 Screenshot of PLABWIN10: Appending # in front of a few parameters in the snort.conf file.</figcaption></figure><p></p>
+<h4 id="cn-m4-391"><b><i>Step 13</i></b></h4>
+<p id="cn-m4-392">Click the <b>Search </b>menu and select <b>Find</b>…</p>
+<h4 id="cn-m4-393"><b><i>Step 14</i></b></h4>
+<p id="cn-m4-394">On the <b>Find </b>dialog box, click in the <b>Find what </b>text box, type:</p>
+<pre id="cn-m4-395"><code>var WHITE_LIST_PATH
+</code></pre>
+<p id="cn-m4-396">Click <b>Find</b>.</p>
+<h4 id="cn-m4-397"><b><i>Step 15</i></b></h4>
+<p id="cn-m4-398">Beside the <b>var WHITE_LIST_PATH </b>keyword, replace the  <b>.. /rules </b>with:</p>
+<pre id="cn-m4-399"><code>c:\Snort\rules
+</code></pre>
+<p id="cn-m4-400">Beside the <b>var BLACK_LIST_PATH </b>keyword, replace the  <b>.. /rules </b>with:</p>
+<p id="cn-m4-401">var WHITE_LIST_PATHThe statement should look like the following:</p>
+<pre id="cn-m4-402"><code>var WHITE_LIST_PATH c:\snort\rules
+</code></pre>
+<h4 id="cn-m4-403"><b><i>Step 16</i></b></h4>
+<p id="cn-m4-404">Click again on the <b>Find </b>dialog box to activate it.</p>
+<p id="cn-m4-405">Click in the <b>Find what </b>text box and type:</p>
+<pre id="cn-m4-406"><code>$WHITE_LIST
+</code></pre>
+<p id="cn-m4-407">Click <b>Find</b>.</p>
+<h4 id="cn-m4-410"><b><i>Step 17</i></b></h4>
+<p id="cn-m4-411">Beside the whitelist keyword, change <b>$WHITE_LIST_PATH/white_list.rules, \</b></p>
+<p id="cn-m4-412">to:</p>
+<pre id="cn-m4-413"><code>c:\snort\rules\white_list.rules, \
+</code></pre>
+<p id="cn-m4-414">Change <b>$BLACK_LIST_PATH/black_list.rules</b></p>
+<p id="cn-m4-415">to:</p>
+<pre id="cn-m4-416"><code>c:\snort\rules\black_list.rules
+</code></pre>
+<p id="cn-m4-417"></p><figure><img class="cn-img" id="cn-image-m4-c-36" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-36.jpg" alt="Figure 3.12 Screenshot of PLABWIN10"><figcaption>Figure 3.12 Screenshot of PLABWIN10: Finding values in the snort.conf file. The relevant text has been changed.</figcaption></figure><p></p>
+<h4 id="cn-m4-418"><b><i>Step 18</i></b></h4>
+<p id="cn-m4-419">Click again on the <b>Find </b>dialog box.</p>
+<p id="cn-m4-420">In the <b>Find what </b>text box, type:</p>
+<pre id="cn-m4-421"><code>$RULE_PATH/blacklist.rules
+</code></pre>
+<p id="cn-m4-422">Click <b>Find</b>.</p>
+<h4 id="cn-m4-423"><b><i>Step 19</i></b></h4>
+<p id="cn-m4-424">The <b>Find </b>command found the keyword and makes a selection.</p>
+<p id="cn-m4-425">Click and drag the <b>Find </b>dialog box out of the way, so the highlighted keyword is visible.</p>
+<p id="cn-m4-426">Now change the following entry <b>$RULE_PATH/blacklist.rules </b></p>
+<p id="cn-m4-427">to:</p>
+<pre id="cn-m4-428"><code>$RULE_PATH\black_list.rules
+</code></pre>
+<p id="cn-m4-429"></p><figure><img class="cn-img" id="cn-image-m4-c-37" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-37.jpg" alt="Figure 3.13 Screenshot of PLABWIN10"><figcaption>Figure 3.13 Screenshot of PLABWIN10: Finding values in the snort.conf file. The relevant entry has been changed.</figcaption></figure><p></p>
+<h4 id="cn-m4-430"><b><i>Step 20</i></b></h4>
+<p id="cn-m4-431">Since you do not have rule files available for other rules, you need to comment on the remaining rules in the <b>#site specific rules </b>section. You can comment on all of them by adding the “#” symbol.</p>
+<p id="cn-m4-432">Otherwise, you will get an error on each line where Snort finds a missing rules file.</p>
+<p id="cn-m4-433">In the <b>Find </b>dialog box, click <b>Close</b>.</p>
+<h4 id="cn-m4-434"><b><i>Step 21</i></b></h4>
+<p id="cn-m4-435">To add the “#” symbol to other traffic rules, click the <b>Search </b>menu and select <b>Replace</b>…</p>
+<p id="cn-m4-436">On the <b>Replace </b>dialog box, click in the <b>Find what </b>text box and type:</p>
+<pre id="cn-m4-437"><code>include $RULE_PATH/
+</code></pre>
+<p id="cn-m4-438">Click in the <b>Replace with </b>text box and type:</p>
+<pre id="cn-m4-439"><code>#include $RULE_PATH/
+</code></pre>
+<p id="cn-m4-440">Click the <b>Replace All </b>button</p>
+<h4 id="cn-m4-441"><b><i>Step 22</i></b></h4>
+<p id="cn-m4-442">The <b>Replace </b>dialog box reports, “<b>All 104 occurrences were replaced</b>.”</p>
+<p id="cn-m4-443">Click <b>Close</b>.</p>
+<p id="cn-m4-444"></p><figure><img class="cn-img" id="cn-image-m4-c-38" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-38.jpg" alt="Figure 3.14 Screenshot of PLABWIN10"><figcaption>Figure 3.14 Screenshot of PLABWIN10: The Replace dialog box is showing the number of instances replaced in the snort.conf file.</figcaption></figure><p></p>
+<h4 id="cn-m4-445"><b><i>Step 23</i></b></h4>
+<p id="cn-m4-446">Finally, click the <b>File </b>menu and select <b>Save</b>.</p>
+<p id="cn-m4-447">Minimize the <b>C:\snort\etc\snort.conf  - Notepad++ (Administrator) </b>window.</p>
+<span class="cn-alert" id="cn-m4-449">Keep all devices powered on in their current state and proceed to the next task.</span>
+<h3 id="cn-m4-451"><b>Task 2 - Re-run Snort IDS tool</b></h3>
+<p id="cn-m4-452">After configuring the snort.conf file in the earlier task, you will retry running the snort IDS tool.</p>
+<p id="cn-m4-453">To re-run the Snort IDS tool, perform the following steps:</p>
+<h4 id="cn-m4-454"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-455">On the <b>PLABWIN10 </b>device, restore the Command Prompt (Admin) window.</p>
+<h4 id="cn-m4-456"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-457">Clear the window with the cls command.</p>
+<p id="cn-m4-458">To test the snort configuration, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m4-459"><code>snort&nbsp;-i 1&nbsp;-l&nbsp;&nbsp;c:\Snort\log&nbsp;&nbsp;-c&nbsp;&nbsp;c:\Snort\etc\snort.conf&nbsp;&nbsp;-T
+</code></pre>
+<p id="cn-m4-460"></p><figure><img class="cn-img" id="cn-image-m4-c-39" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-39.jpg" alt="Figure 3.15 Screenshot of PLABWIN10"><figcaption>Figure 3.15 Screenshot of PLABWIN10: Entering the Snort commands. The above text has been inputted.</figcaption></figure><p></p>
+<h4 id="cn-m4-463"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-464">You should get a successful result.</p>
+<p id="cn-m4-465"></p><figure><img class="cn-img" id="cn-image-m4-c-40" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-40.jpg" alt="Figure 3.16 Screenshot of PLABWIN10"><figcaption>Figure 3.16 Screenshot of PLABWIN10: Validating the Snort configuration. The result is successful.</figcaption></figure><p></p>
+<h4 id="cn-m4-467"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-468">Enter the following command:</p>
+<pre id="cn-m4-469"><code>snort&nbsp;-c&nbsp;&nbsp;c:\Snort\etc\snort.conf&nbsp;&nbsp;-l&nbsp;&nbsp;c:\Snort\log&nbsp;&nbsp;-K ascii
+</code></pre>
+<p id="cn-m4-470">Press <b>Enter</b>.</p>
+<h4 id="cn-m4-471"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-472">Note that Snort IDS is now up and running.</p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<p id="cn-m4-475">Close the <b>command prompt </b>window.</p>
+<p id="cn-m4-476"></p><figure><img class="cn-img" id="cn-image-m4-c-41" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-41.jpg" alt="Figure 3.17 Screenshot of PLABWIN10"><figcaption>Figure 3.17 Screenshot of PLABWIN10: Showing the execution of the Snort command.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m4-477">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m4-480"><b>Exercise 4 - Configure Iptables</b></h2>
+<p id="cn-m4-481">Kali is a multifaceted Linux operating system that is 
+mainly focused on security and penetration testing. It combines a wide 
+range of tools, from port scanners, both active and passive, to forensic
+ tools, which can be used to pull deleted data off hard drives.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m4-483">After completing this exercise, you will be able to:</p>
+<ul id="cn-m4-484">
+<li id="cn-m4-484">Connect Win10 and Kali</li>
+<li id="cn-m4-485">Install Putty into Kali</li>
+<li id="cn-m4-486">Configure Telnet Services on Win8.1</li>
+<li id="cn-m4-487">Test Bi-directional traffic through Telnet and SSH connections</li>
+<li id="cn-m4-488">Configure iptables to block Telnet</li>
+<li id="cn-m4-489">Test Telnet connection with Zenmap</li>
+<li id="cn-m4-490">Configure IP tables to drop SSH connections</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m4-492">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m4-493">
+<li id="cn-m4-493"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m4-494"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m4-495"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+<li id="cn-m4-496"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<ol id="cn-m4-497">
+</ol>
+<p id="cn-m4-498"><b> </b><img class="cn-img" id="cn-image-m4-c-42" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-42.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m4-500"><b>Task 1 - Connecting to Win10 and Kali</b></h3>
+<p id="cn-m4-501">In this task, you will power on and connect to the lab devices used within this exercise.</p>
+<h4 id="cn-m4-502"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-503">Ensure you have powered on the required devices and connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m4-504">Type <b>root </b>in the <b>Username </b>field.</p>
+<p id="cn-m4-505">Type the following password in the <b>Password </b>field.</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m4-507">Click <b>Log In.</b></p>
+<p id="cn-m4-508"></p><figure><img class="cn-img" id="cn-image-m4-c-43" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-43.jpg" alt="Figure 4.1 Screenshot of PLABKALI01"><figcaption>Figure 4.1 Screenshot of PLABKALI01: Login screen is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m4-509"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-510">You’re now connected to <b>PLABKALI01</b>.</p>
+<p id="cn-m4-511"></p><figure><img class="cn-img" id="cn-image-m4-c-44" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-44.jpg" alt="Figure 4.2 Screenshot of PLABKALI01"><figcaption>Figure 4.2 Screenshot of PLABKALI01: Showing the initial screen.</figcaption></figure><p></p>
+<h3 id="cn-m4-512"><b>Task 2 - Installing Putty into Kali</b></h3>
+<p id="cn-m4-513">Putty is a very useful tool that helps generally form a
+ consistent way of connecting to different devices with a variety of 
+connection methods. The installation is straightforward and provides a 
+one-stop solution.</p>
+<h4 id="cn-m4-514"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-515">Click the Kali icon located at the top left.</p>
+<p id="cn-m4-516">Point to <b>Usual applications &gt; System Tools &gt; QTerminal</b></p>
+<p id="cn-m4-517">Click the result of <b>QTerminal.</b></p>
+<p id="cn-m4-518"></p><figure><img class="cn-img" id="cn-image-m4-c-45" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-45.jpg" alt="Figure 4.3 Screenshot of PLABKALI01"><figcaption>Figure 4.3 Screenshot of PLABKALI01: Clicking the Terminal icon in the Usual applications</figcaption></figure><p></p>
+<h4 id="cn-m4-519"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-520">Type the following commands to run the update process:</p>
+<pre id="cn-m4-521"><code>apt-get update
+</code></pre>
+<p id="cn-m4-522">Then, press <b>Enter</b>.</p>
+<p id="cn-m4-523">This will complete an update process on the repository listings.</p>
+<h4 id="cn-m4-524"><b><i> Step 3</i></b></h4>
+<p id="cn-m4-525">After the update process is completed, type the following command to install putty:</p>
+<pre id="cn-m4-526"><code>apt-get install putty
+</code></pre>
+<p id="cn-m4-527">Then, press <b>Enter</b>.</p>
+<p id="cn-m4-528">At the prompt, press <b>Y </b>and then press <b>Enter</b>.</p>
+<p id="cn-m4-529"></p><figure><img class="cn-img" id="cn-image-m4-c-46" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-46.jpg" alt="Figure 4.4 Screenshot of PLABKALI01"><figcaption>Figure 4.4 Screenshot of PLABKALI01: Showing the installation of the Telnet service. The types of commands are shown.</figcaption></figure><p></p>
+<h4 id="cn-m4-532"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-533">After the installation is completed, minimize the root terminal window.</p>
+<p id="cn-m4-534"></p><figure><img class="cn-img" id="cn-image-m4-c-47" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-47.jpg" alt="Figure 4.5 Screenshot of PLABKALI01"><figcaption>Figure 4.5 Screenshot of PLABKALI01: Showing the installation completion.</figcaption></figure><p></p>
+<h3 id="cn-m4-537"><b>Task 3 - Configuring Telnet Services on Windows 8 </b></h3>
+<p id="cn-m4-538">Telnet is a fundamental service found on almost all 
+computing devices when the remote administration is required. This task 
+will involve installing the service and manually configuring the 
+connection service.</p>
+<h4 id="cn-m4-539"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-540">Connect to the <b>PLABWIN801 </b>device.</p>
+<h4 id="cn-m4-541"><b><i>Step 2 </i></b></h4>
+<p id="cn-m4-542">Right-click <b>Start </b>and then select <b>Run</b>.</p>
+<p id="cn-m4-543">Type the following command:</p>
+<pre id="cn-m4-544"><code>optionalfeatures
+</code></pre>
+<p id="cn-m4-545">Then press <b>Enter</b>. Instead of pressing <b>Enter</b>, you can also click <b>OK</b>.</p>
+<p id="cn-m4-546"></p><figure><img class="cn-img" id="cn-image-m4-c-48" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-48.jpg" alt="Figure 4.6 Screenshot of PLABWIN801"><figcaption>Figure 4.6 Screenshot of PLABWIN801: Using the Run to start optional features for windows.</figcaption></figure><p></p>
+<h4 id="cn-m4-547"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-548">Scroll down to <b>Telnet Server </b>and <b>Telnet Client </b>and select both the checkboxes. Click <b>OK</b>.</p>
+<p id="cn-m4-549"></p><figure><img class="cn-img" id="cn-image-m4-c-49" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-49.jpg" alt="Figure 4.7 Screenshot of PLABWIN801"><figcaption>Figure 4.7 Screenshot of PLABWIN801: Showing the Windows Features dialog box and selecting Telnet Server and Client.</figcaption></figure><p></p>
+<h4 id="cn-m4-550"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-551">Both features will be installed.</p>
+<p id="cn-m4-552">Click <b>Close </b>after the installation completes.</p>
+<h4 id="cn-m4-553"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-554">Invoke the <b>Run </b>dialog box once again. Type the following command:</p>
+<pre id="cn-m4-555"><code>services.msc
+</code></pre>
+<p id="cn-m4-556">Press <b>Enter</b>. Instead of pressing <b>Enter</b>, you can also click <b>OK</b>.</p>
+<h4 id="cn-m4-557"><b><i>Step 6</i></b></h4>
+<p id="cn-m4-558">In the <b>Services </b>console, scroll down to <b>Telnet</b>, right-click and select <b>Properties</b>.</p>
+<h4 id="cn-m4-559"><b><i>Step 7</i></b></h4>
+<p id="cn-m4-560">On the <b>Telnet Properties </b>dialog box, select <b>Automatic </b>from the <b>Startup type </b>drop-down.</p>
+<p id="cn-m4-561">Click <b>Apply</b>.</p>
+<p id="cn-m4-562"></p><figure><img class="cn-img" id="cn-image-m4-c-50" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-50.jpg" alt="Figure 4.8 Screenshot of PLABWIN801"><figcaption>Figure
+ 4.8 Screenshot of PLABWIN801: Configuring the Telnet service startup 
+type to Automatic. It has been selected from the drop-down box. Apply is
+ selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-563"><b><i>Step 8</i></b></h4>
+<p id="cn-m4-564">Click <b>Start </b>to start the service and then click <b>OK</b>.</p>
+<p id="cn-m4-565">You are now back on the <b>Services </b>console.</p>
+<p id="cn-m4-566">The status of the <b>Telnet </b>service should change to <b>Running</b>.</p>
+<h4 id="cn-m4-567"><b><i>Step 9</i></b></h4>
+<p id="cn-m4-568">Close the <b>Services </b>console when finished.</p>
+<h4 id="cn-m4-569"><b><i>Step 10</i></b></h4>
+<p id="cn-m4-570">Right-click <b>Start </b>and select <b>Control Panel</b>.</p>
+<h4 id="cn-m4-571"><b><i>Step 11</i></b></h4>
+<p id="cn-m4-572">The <b>Control Panel </b>window is displayed.</p>
+<p id="cn-m4-573">Click <b>System and Security</b>.</p>
+<p id="cn-m4-574">On the <b>System and Security </b>screen, click <b>Windows Firewall</b>.</p>
+<h4 id="cn-m4-575"><b><i>Step 12</i></b></h4>
+<p id="cn-m4-576">From the right pane, click <b>Turn Windows Firewall on or off</b>.</p>
+<p id="cn-m4-577">Select <b>Turn off Windows Firewall </b>for <b>Domain</b>, <b>Private, </b>and <b>Public </b>networks. Click <b>OK</b>.
+ You need to test the bidirectional traffic through Telnet and SSH 
+connections, and therefore, you should turn off the firewall. This 
+traffic will later be blocked by Iptables.</p>
+<p id="cn-m4-578"></p><figure><img class="cn-img" id="cn-image-m4-c-51" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-51.jpg" alt="Figure 4.9 Screenshot of PLABWIN801"><figcaption>Figure 4.9 Screenshot of PLABWIN801: Turning off the Windows firewall.</figcaption></figure><p></p>
+<h4 id="cn-m4-579"><b><i>Step 13</i></b></h4>
+<p id="cn-m4-580">Close <b>Windows Firewall</b>.</p>
+<h3 id="cn-m4-581"><b>Task 4 - Testing Bidirectional Traffic Through Telnet and SSH Connections </b></h3>
+<p id="cn-m4-582">You will now check a communications pathway has been 
+established, allowing traffic flow through either Telnet or SSH. This 
+will be performed using putty to open terminal services to each device.</p>
+<p id="cn-m4-583">To test bidirectional traffic through Telnet and SSH connections, perform the following step:</p>
+<h4 id="cn-m4-584"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-585">Connect to <b>PLABWIN10</b>.</p>
+<h4 id="cn-m4-586"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-587">Double-click the <b>Putty </b>icon on the desktop.</p>
+<h4 id="cn-m4-588"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-589">In the <b>PuTTY Configuration </b>dialog box, in the <b>Host Name (or IP address) </b>text box, enter the following IP address:</p>
+<pre id="cn-m4-590"><code>192.168.0.3
+</code></pre>
+<p id="cn-m4-591">In the <b>Connection type </b>section, ensure <b>SSH </b>is selected.</p>
+<p id="cn-m4-592">Click <b>Open</b>.</p>
+<p id="cn-m4-593"></p><figure><img class="cn-img" id="cn-image-m4-c-52" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-52.jpg" alt="Figure 4.10 Screenshot of PLABWIN801"><figcaption>Figure
+ 4.10 Screenshot of PLABWIN801: Using Putty to create a connection using
+ SSH to Kali. The IP address has been inputted, and the Open button is 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-595"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-596">The <b>192.168.0.3 - PuTTY </b>terminal window is now displayed. Type the following credentials:</p>
+<pre id="cn-m4-597"><code>login: root
+password: <span class="cn-password">Passw0rd</span>
+</code></pre>
+<p id="cn-m4-599">Press <b>Enter</b>.</p>
+<p id="cn-m4-600">After successful authentication, the <b>root@kali </b>prompt is displayed.</p>
+<p id="cn-m4-601"></p><figure><img class="cn-img" id="cn-image-m4-c-53" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-53.jpg" alt="Figure 4.11 Screenshot of PLABWIN801"><figcaption>Figure 4.11 Screenshot of PLABWIN801: Showing a successful SSH connection to Kali.</figcaption></figure><p></p>
+<h4 id="cn-m4-602"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-603">Close the PuTTY session.</p>
+<p id="cn-m4-604">When prompted with the <b>PuTTY Exit Confirmation </b>dialog box, click <b>OK</b>.</p>
+<h4 id="cn-m4-605"><b><i>Step 6</i></b></h4>
+<p id="cn-m4-606">Go back to <b>PLABKALI01 </b>and open <b>Root Terminal</b>.</p>
+<p id="cn-m4-607">Type the following command:</p>
+<pre id="cn-m4-608"><code>putty
+</code></pre>
+<p id="cn-m4-609">Press <b>Enter</b>.</p>
+<h4 id="cn-m4-610"><b><i>Step 7</i></b></h4>
+<p id="cn-m4-611">In the <b>PuTTY Configuration </b>dialog box, enter the following IP address in the <b>Host Name (or IP address) </b>textbox:</p>
+<pre id="cn-m4-612"><code>192.168.0.5
+</code></pre>
+<p id="cn-m4-613">Then, select <b>Telnet </b>from the <b>Connection type </b>section and click <b>Open</b>.</p>
+<p id="cn-m4-614"></p><figure><img class="cn-img" id="cn-image-m4-c-54" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-54.jpg" alt="Figure 4.12 Screenshot of PLABKALI01"><figcaption>Figure 4.12 Screenshot of PLABKALI01: Using Putty to telnet to PLABWIN801.</figcaption></figure><p></p>
+<h4 id="cn-m4-615"><b><i>Step 8</i></b></h4>
+<p id="cn-m4-616">Notice a new terminal window has opened.</p>
+<p id="cn-m4-617">Type the following credentials:</p>
+<pre id="cn-m4-618"><code>login: Administrator
+password: <span class="cn-password">Passw0rd</span>
+</code></pre>
+<p id="cn-m4-620">Press <b>Enter</b>.</p>
+<p id="cn-m4-621">The fact that the login screen has appeared means that Telnet is working on both devices.</p>
+<p id="cn-m4-622"><b>Minimize </b>the existing terminal window.</p>
+<span class="cn-quote" id="cn-m4-623"><b><i>Note: </i></b><i>The display will not show up any further information from the Windows device, and Putty terminates the connection. </i></span>
+<p id="cn-m4-624">You have an SSH connection into Kali, and a Telnet 
+connection is leaving Kali. These are ports that you can now configure 
+in Iptables.</p>
+<p id="cn-m4-625"><b>Close </b>this terminal screen but stay within Kali.</p>
+<h3 id="cn-m4-626"><b>Task 5 - Configuring Iptables to Block Telnet</b></h3>
+<p id="cn-m4-627">You will now stop Telnet connections from leaving Kali
+ and connecting to external devices, and also stop SSH from connecting 
+to Kali from external sources.</p>
+<p id="cn-m4-628">To configure iptables to block Telnet, perform the following steps:</p>
+<h4 id="cn-m4-629"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-630">Open a new terminal screen.</p>
+<p id="cn-m4-631">Type the following command:</p>
+<pre id="cn-m4-632"><code>iptables -A OUTPUT -p tcp --dport 23 -j REJECT
+</code></pre>
+<p id="cn-m4-633">Press <b>Enter</b>.</p>
+<p id="cn-m4-634"></p><figure><img class="cn-img" id="cn-image-m4-c-55" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-55.jpg" alt="Figure 4.13 Screenshot of PLABKALI01"><figcaption>Figure 4.13 Screenshot of PLABKALI01: Using a terminal for iptables rules. The above command has been inputted.</figcaption></figure>ip<p></p>
+<h4 id="cn-m4-637"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-638">Next, type the following command:</p>
+<pre id="cn-m4-639"><code>iptables -A INPUT -p tcp --dport 22 -j REJECT
+</code></pre>
+<p id="cn-m4-640">Press <b>Enter</b>.</p>
+<h4 id="cn-m4-641"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-642">To review the iptables firewall configuration enter, type the following command:</p>
+<pre id="cn-m4-643"><code>iptables -L -n -v
+</code></pre>
+<p id="cn-m4-644">Press <b>Enter</b>.</p>
+<p id="cn-m4-645"></p><figure><img class="cn-img" id="cn-image-m4-c-56" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-56.jpg" alt="Figure 4.14 Screenshot of PLABKALI01"><figcaption>Figure 4.14 Screenshot of PLABKALI01: Using a terminal to confirm the iptables rules.</figcaption></figure><p></p>
+<h3 id="cn-m4-647"><b>Task 6 - Testing Telnet Connection with Zenmap</b></h3>
+<p id="cn-m4-648">Zenmap is a useful tool for checking configurations of
+ a firewall to view the contents of what will pass through. It’s a very 
+important concept always to ensure a test of the system has taken place,
+ and the configuration has the expected outcome.</p>
+<p id="cn-m4-649">You will be implementing only a basic check with 
+Zenmap. This also offers an opportunity to view what a port scanner will
+ see once the port is configured.</p>
+<p id="cn-m4-650">To test the Telnet connection with Zenmap, perform the following steps:</p>
+<h4 id="cn-m4-651"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-652">In the existing terminal type, the following command:</p>
+<pre id="cn-m4-653"><code>zenmap
+</code></pre>
+<p id="cn-m4-654">Press <b>Enter</b>.</p>
+<h4 id="cn-m4-655"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-656">In the <b>Zenmap </b>dialog box, in the <b>Target </b>text box, type the following IP:</p>
+<pre id="cn-m4-657"><code>192.168.0.3
+</code></pre>
+<p id="cn-m4-658">Ensure that the profile is set as an <b>Intense scan</b>.</p>
+<p id="cn-m4-659">Click <b>Scan</b>.</p>
+<p id="cn-m4-660"></p><figure><img class="cn-img" id="cn-image-m4-c-57" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-57.jpg" alt="Figure 4.15 Screenshot of PLABKALI01"><figcaption>Figure 4.15 Screenshot of PLABKALI01: Initiating an intense scan using Zenmap.</figcaption></figure><p></p>
+<h4 id="cn-m4-661"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-662">The result should be displayed in a few seconds.</p>
+<span class="cn-quote" id="cn-m4-663"><b><i>Note: </i></b><i>In the scan result, notice that port 22 and 23 have been filtered.</i></span>
+<p id="cn-m4-664"></p><figure><img class="cn-img" id="cn-image-m4-c-58" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-58.jpg" alt="Figure 4.16 Screenshot of PLABKALI01"><figcaption>Figure 4.16 Screenshot of PLABKALI01: Presenting the scan results of testing the iptable rules.</figcaption></figure><p></p>
+<h4 id="cn-m4-665"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-666"><b>Minimize </b>the Zenmap window.</p>
+<h3 id="cn-m4-668"><b>Task 7 - Configuring Iptables to Drop SSH Connections</b></h3>
+<p id="cn-m4-669">Now you will be applying rules to drop SSH connections
+ to the device and once more test and validate that this has taken place
+ on the system. This will be done by using Zenmap and also manually 
+testing the connection.</p>
+<p id="cn-m4-670">To configure iptables to drop SSH connection, perform the following steps:</p>
+<h4 id="cn-m4-671"><b><i>Step 1</i></b></h4>
+<p id="cn-m4-672">Click the terminal window where previous commands were entered.</p>
+<p id="cn-m4-673">Type the following command:</p>
+<pre id="cn-m4-674"><code>iptables -A INPUT -p tcp --dport 22 -j DROP
+</code></pre>
+<p id="cn-m4-675">Press <b>Enter</b>.</p>
+<p id="cn-m4-676">Enter the following command to review the change:</p>
+<pre id="cn-m4-677"><code>iptables -L -n -v
+</code></pre>
+<p id="cn-m4-678">Press <b>Enter</b>.</p>
+<p id="cn-m4-680"></p><figure><img class="cn-img" id="cn-image-m4-c-59" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-59.jpg" alt="Figure 4.17 Screenshot of PLABKALI01"><figcaption>Figure 4.17 Screenshot of PLABKALI01: Using a terminal to confirm the iptables rules. The commands have been inputted.</figcaption></figure><p></p>
+<h4 id="cn-m4-681"><b><i>Step 2</i></b></h4>
+<p id="cn-m4-682">Now, maximize the Zenmap window. You need to restart 
+the scan against the following IP address, which should already be 
+entered in the <b>Target </b>text box:</p>
+<pre id="cn-m4-683"><code>192.168.0.3
+</code></pre>
+<p id="cn-m4-684">Click <b>Scan</b>.</p>
+<p id="cn-m4-685"></p><figure><img class="cn-img" id="cn-image-m4-c-60" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-60.jpg" alt="Figure 4.18 Screenshot of PLABKALI01"><figcaption>Figure 4.18 Screenshot of PLABKALI01: Re-running the intense scan in Zenmap. Scan is selected.</figcaption></figure><p></p>
+<h4 id="cn-m4-688"><b><i>Step 3</i></b></h4>
+<p id="cn-m4-689">The scan results appear the same from Zenmap. You need to confirm this action.</p>
+<p id="cn-m4-690">Go back to <b>PLABWIN10</b>.</p>
+<h4 id="cn-m4-691"><b><i>Step 4</i></b></h4>
+<p id="cn-m4-692">Double-click <b>putty </b>from the desktop and enter the following IP address:</p>
+<pre id="cn-m4-693"><code>192.168.0.3
+</code></pre>
+<p id="cn-m4-694">In the <b>Connection type </b>section, ensure <b>SSH </b>is selected.</p>
+<p id="cn-m4-695">Click <b>Open</b>.</p>
+<p id="cn-m4-696"></p><figure><img class="cn-img" id="cn-image-m4-c-61" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-61.jpg" alt="Figure 4.19 Screenshot of PLABKALI01"><figcaption>Figure 4.19 Screenshot of PLABKALI01: Using Putty to connect to Kali. Open is selected.</figcaption></figure><p></p>
+<p id="cn-m4-699">The connection will be dropped by Kali iptables and will refuse the connection.</p>
+<p id="cn-m4-700"></p><figure><img class="cn-img" id="cn-image-m4-c-62" src="IntegrateNetworkandSecurityComponents_files/image-m4-c-62.jpg" alt="Figure 4.21 Screenshot of PLABKALI01"><figcaption>Figure 4.21 Screenshot of PLABKALI01: Showing the error in connection.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<h4 id="cn-m4-703"><b><i>Step 5</i></b></h4>
+<p id="cn-m4-704">Click <b>OK </b>and then close the terminal window.</p>
+<span class="cn-alert" id="cn-m4-705">Leave the devices in their current states and continue on to the next exercise.</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m4-708"><b>Review</b></h2>
+<p id="cn-m4-709">Well done, you have completed the <b>Integrate Network and Security Components </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">0e319698-142c-463e-a216-4a3c4b8fdb3e</span>
+<span class="atom-code hidden">43817867-2597-440b-bbf0-6f916e2230ab</span>
+<span class="atom-code hidden">086b7211-e468-4054-9ff9-ac4f80fa1e3a</span>
+<span class="atom-code hidden">70017a39-6154-4417-9770-43bbca61663f</span>
+<span class="atom-code hidden">6bedadf7-8ce2-43f8-8959-531b2db3c931</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m4-720">You completed the following exercises:</p>
+<ul id="cn-m4-721">
+<li id="cn-m4-721">Install Snort</li>
+<li id="cn-m4-722">Test Snort</li>
+<li id="cn-m4-723">Configure and Re-Test Snort</li>
+<li id="cn-m4-724">Configure Iptables</li>
+</ul>
+<p id="cn-m4-725">You should now be able to:</p>
+<ul id="cn-m4-726">
+<li id="cn-m4-726">Install Snort</li>
+<li id="cn-m4-727">Download Snort Rules</li>
+<li id="cn-m4-728">Run the Snort Tool</li>
+<li id="cn-m4-729">Create a folder and move the rule files in the snort folder</li>
+<li id="cn-m4-730">Modify the Snort configuration file</li>
+<li id="cn-m4-731">Re-run Snort IDS tool</li>
+<li id="cn-m4-732">Connect Win10 and Kali</li>
+<li id="cn-m4-733">Install Putty into Kali</li>
+<li id="cn-m4-734">Configure Telnet Services on Win8.1</li>
+<li id="cn-m4-735">Test Bi-directional traffic through Telnet and SSH connections</li>
+<li id="cn-m4-736">Configure iptables to block Telnet</li>
+<li id="cn-m4-737">Test Telnet connection with Zenmap</li>
+</ul>
+<h2 class="cn-feedback"><b> Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m4-741">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

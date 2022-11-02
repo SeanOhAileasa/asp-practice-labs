@@ -1,0 +1,739 @@
+/*!
+ * ASP.NET SignalR JavaScript Library v2.3.0-rtm
+ * http://signalr.net/
+ *
+ * Copyright (c) .NET Foundation. All rights reserved.
+ * Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
+ *
+ */
+
+/// <reference path="..\..\SignalR.Client.JS\Scripts\jquery-1.6.4.js" />
+/// <reference path="jquery.signalR.js" />
+(function ($, window, undefined) {
+    /// <param name="$" type="jQuery" />
+    "use strict";
+
+    if (typeof ($.signalR) !== "function") {
+        throw new Error("SignalR: SignalR is not loaded. Please ensure jquery.signalR-x.js is referenced before ~/signalr/js.");
+    }
+
+    var signalR = $.signalR;
+
+    function makeProxyCallback(hub, callback) {
+        return function () {
+            // Call the client hub method
+            callback.apply(hub, $.makeArray(arguments));
+        };
+    }
+
+    function registerHubProxies(instance, shouldSubscribe) {
+        var key, hub, memberKey, memberValue, subscriptionMethod;
+
+        for (key in instance) {
+            if (instance.hasOwnProperty(key)) {
+                hub = instance[key];
+
+                if (!(hub.hubName)) {
+                    // Not a client hub
+                    continue;
+                }
+
+                if (shouldSubscribe) {
+                    // We want to subscribe to the hub events
+                    subscriptionMethod = hub.on;
+                } else {
+                    // We want to unsubscribe from the hub events
+                    subscriptionMethod = hub.off;
+                }
+
+                // Loop through all members on the hub and find client hub functions to subscribe/unsubscribe
+                for (memberKey in hub.client) {
+                    if (hub.client.hasOwnProperty(memberKey)) {
+                        memberValue = hub.client[memberKey];
+
+                        if (!$.isFunction(memberValue)) {
+                            // Not a client hub function
+                            continue;
+                        }
+
+                        // Use the actual user-provided callback as the "identity" value for the registration.
+                        subscriptionMethod.call(hub, memberKey, makeProxyCallback(hub, memberValue), memberValue);
+                    }
+                }
+            }
+        }
+    }
+
+    $.hubConnection.prototype.createHubProxies = function () {
+        var proxies = {};
+        this.starting(function () {
+            // Register the hub proxies as subscribed
+            // (instance, shouldSubscribe)
+            registerHubProxies(proxies, true);
+
+            this._registerSubscribedHubs();
+        }).disconnected(function () {
+            // Unsubscribe all hub proxies when we "disconnect".  This is to ensure that we do not re-add functional call backs.
+            // (instance, shouldSubscribe)
+            registerHubProxies(proxies, false);
+        });
+
+        proxies['practiceLabs'] = this.createHubProxy('practiceLabs'); 
+        proxies['practiceLabs'].client = { };
+        proxies['practiceLabs'].server = {
+            acceptCookie: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AcceptCookie"], $.makeArray(arguments)));
+             },
+
+            acknowledgeSessionAlert: function (alertId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AcknowledgeSessionAlert"], $.makeArray(arguments)));
+             },
+
+            adminAskClientRefresh: function (time) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminAskClientRefresh"], $.makeArray(arguments)));
+             },
+
+            adminBumpCssVersion: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminBumpCssVersion"], $.makeArray(arguments)));
+             },
+
+            adminBumpLabScript: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminBumpLabScript"], $.makeArray(arguments)));
+             },
+
+            adminCancelWebApiTicket: function (userId, ticketId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminCancelWebApiTicket"], $.makeArray(arguments)));
+             },
+
+            adminClearAdminLog: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminClearAdminLog"], $.makeArray(arguments)));
+             },
+
+            adminCloseTicket: function (call, user) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminCloseTicket"], $.makeArray(arguments)));
+             },
+
+            adminDumpLockedAccounts: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminDumpLockedAccounts"], $.makeArray(arguments)));
+             },
+
+            adminDumpOrganisations: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminDumpOrganisations"], $.makeArray(arguments)));
+             },
+
+            adminDumpPartners: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminDumpPartners"], $.makeArray(arguments)));
+             },
+
+            adminEnableZeroUserMaintenanceMode: function (mode) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminEnableZeroUserMaintenanceMode"], $.makeArray(arguments)));
+             },
+
+            adminFlipAccessibilitySwitching: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminFlipAccessibilitySwitching"], $.makeArray(arguments)));
+             },
+
+            adminGetAdminLog: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminGetAdminLog"], $.makeArray(arguments)));
+             },
+
+            adminGetInternal: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminGetInternal"], $.makeArray(arguments)));
+             },
+
+            adminGetLicenseInformation: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminGetLicenseInformation"], $.makeArray(arguments)));
+             },
+
+            adminGetSessionList: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminGetSessionList"], $.makeArray(arguments)));
+             },
+
+            adminGetTerminalSessions: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminGetTerminalSessions"], $.makeArray(arguments)));
+             },
+
+            adminGetWebApiDeviceRequests: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminGetWebApiDeviceRequests"], $.makeArray(arguments)));
+             },
+
+            adminLicenseGetLog: function (organisationId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminLicenseGetLog"], $.makeArray(arguments)));
+             },
+
+            adminLicenseReconcileAgainstSessions: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminLicenseReconcileAgainstSessions"], $.makeArray(arguments)));
+             },
+
+            adminLicenseSetConcurrency: function (type, newSetting, organisationId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminLicenseSetConcurrency"], $.makeArray(arguments)));
+             },
+
+            adminLicenseToggleBlocking: function (type, newState, organisationId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminLicenseToggleBlocking"], $.makeArray(arguments)));
+             },
+
+            adminLicenseToggleLicenseManagerState: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminLicenseToggleLicenseManagerState"], $.makeArray(arguments)));
+             },
+
+            adminLogoutUser: function (userId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminLogoutUser"], $.makeArray(arguments)));
+             },
+
+            adminReleaseLab: function (user) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminReleaseLab"], $.makeArray(arguments)));
+             },
+
+            adminReloadAdmins: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminReloadAdmins"], $.makeArray(arguments)));
+             },
+
+            adminReloadAllAssessments: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminReloadAllAssessments"], $.makeArray(arguments)));
+             },
+
+            adminReloadCourses: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminReloadCourses"], $.makeArray(arguments)));
+             },
+
+            adminReloadOrganisations: function (clearCache) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminReloadOrganisations"], $.makeArray(arguments)));
+             },
+
+            adminReloadPartners: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminReloadPartners"], $.makeArray(arguments)));
+             },
+
+            adminRestartEngineManager: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminRestartEngineManager"], $.makeArray(arguments)));
+             },
+
+            adminScriptChangeHash: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminScriptChangeHash"], $.makeArray(arguments)));
+             },
+
+            adminSendAllMessage: function (message) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminSendAllMessage"], $.makeArray(arguments)));
+             },
+
+            adminSendUserMessage: function (message, user) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminSendUserMessage"], $.makeArray(arguments)));
+             },
+
+            adminSetLabScript: function (script) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminSetLabScript"], $.makeArray(arguments)));
+             },
+
+            adminStartOrStopSessionScanner: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AdminStartOrStopSessionScanner"], $.makeArray(arguments)));
+             },
+
+            alertWhenLabFree: function (labType, emailAddress) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AlertWhenLabFree"], $.makeArray(arguments)));
+             },
+
+            assessmentAssessHtmlCodeItem: function (internalReference, hostname) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AssessmentAssessHtmlCodeItem"], $.makeArray(arguments)));
+             },
+
+            assessmentAssessItemId: function (id, hostname) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AssessmentAssessItemId"], $.makeArray(arguments)));
+             },
+
+            assessmentClearNotifyAlert: function (emailAddress) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AssessmentClearNotifyAlert"], $.makeArray(arguments)));
+             },
+
+            assessmentDelete: function (id) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AssessmentDelete"], $.makeArray(arguments)));
+             },
+
+            assessmentGetCourseModuleSet: function (courseId, moduleId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AssessmentGetCourseModuleSet"], $.makeArray(arguments)));
+             },
+
+            assessmentImageCapture: function (name, reference, mappingId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AssessmentImageCapture"], $.makeArray(arguments)));
+             },
+
+            assessmentSubmitAnswer: function (answer, mappingId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AssessmentSubmitAnswer"], $.makeArray(arguments)));
+             },
+
+            authoringCheckParticleAnswer: function (atomId, particleId, index, answer) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringCheckParticleAnswer"], $.makeArray(arguments)));
+             },
+
+            authoringConfirmEmailInput: function (atomId, particleId, index, emailAddress) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringConfirmEmailInput"], $.makeArray(arguments)));
+             },
+
+            authoringFinishAssessment: function (type) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringFinishAssessment"], $.makeArray(arguments)));
+             },
+
+            authoringFinishOrDeleteDynamicAssessment: function (deleteInstance, instanceId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringFinishOrDeleteDynamicAssessment"], $.makeArray(arguments)));
+             },
+
+            authoringGetFileFromVirtualMachine: function (atomId, particleId, index) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringGetFileFromVirtualMachine"], $.makeArray(arguments)));
+             },
+
+            authoringGetScreenshot: function (atomId, particleId, index, activeConnectionId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringGetScreenshot"], $.makeArray(arguments)));
+             },
+
+            authoringRemoveResult: function (atomId, particleId, index) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringRemoveResult"], $.makeArray(arguments)));
+             },
+
+            authoringSubmitFeedback: function (atomId, values, comment) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["AuthoringSubmitFeedback"], $.makeArray(arguments)));
+             },
+
+            calculateRtt: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["CalculateRtt"], $.makeArray(arguments)));
+             },
+
+            contentSetTrackingStatus: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ContentSetTrackingStatus"], $.makeArray(arguments)));
+             },
+
+            createDeviceRequest: function (deviceId, action) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["CreateDeviceRequest"], $.makeArray(arguments)));
+             },
+
+            deviceSetAutoLoginState: function (deviceIndex, state) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["DeviceSetAutoLoginState"], $.makeArray(arguments)));
+             },
+
+            deviceSetDeveloperMode: function (developerModeActive) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["DeviceSetDeveloperMode"], $.makeArray(arguments)));
+             },
+
+            deviceValidateReconnectLink: function (connectionId, deviceIndex, isConsole) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["DeviceValidateReconnectLink"], $.makeArray(arguments)));
+             },
+
+            displayNameCheck: function (displayName) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["DisplayNameCheck"], $.makeArray(arguments)));
+             },
+
+            generateCiscoLogs: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["GenerateCiscoLogs"], $.makeArray(arguments)));
+             },
+
+            generateFile: function (sizeInKb) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["GenerateFile"], $.makeArray(arguments)));
+             },
+
+            getContent: function (fragmentNumber) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["GetContent"], $.makeArray(arguments)));
+             },
+
+            getDeveloperModeState: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["GetDeveloperModeState"], $.makeArray(arguments)));
+             },
+
+            getInvalidSessionRedirect: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["GetInvalidSessionRedirect"], $.makeArray(arguments)));
+             },
+
+            getSettings: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["GetSettings"], $.makeArray(arguments)));
+             },
+
+            keepAlive: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["KeepAlive"], $.makeArray(arguments)));
+             },
+
+            labGetDataCentreRegions: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["LabGetDataCentreRegions"], $.makeArray(arguments)));
+             },
+
+            managementActCacheRefresh: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementActCacheRefresh"], $.makeArray(arguments)));
+             },
+
+            managementAtomRefreshFromDatabase: function (atomId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementAtomRefreshFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementAtomRemoveFromCache: function (atomId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementAtomRemoveFromCache"], $.makeArray(arguments)));
+             },
+
+            managementCancelDeviceRequest: function (userId, ticketId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementCancelDeviceRequest"], $.makeArray(arguments)));
+             },
+
+            managementExamPrepCachingClear: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementExamPrepCachingClear"], $.makeArray(arguments)));
+             },
+
+            managementExamPrepCachingToggleState: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementExamPrepCachingToggleState"], $.makeArray(arguments)));
+             },
+
+            managementExamRefreshFromDatabase: function (examId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementExamRefreshFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementExamRemoveFromCache: function (examId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementExamRemoveFromCache"], $.makeArray(arguments)));
+             },
+
+            managementGenerateShareForDevice: function (userId, index, hostname, allowControl) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGenerateShareForDevice"], $.makeArray(arguments)));
+             },
+
+            managementGetCounterData: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetCounterData"], $.makeArray(arguments)));
+             },
+
+            managementGetCourseListFromCache: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetCourseListFromCache"], $.makeArray(arguments)));
+             },
+
+            managementGetLockedAccounts: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetLockedAccounts"], $.makeArray(arguments)));
+             },
+
+            managementGetOrganisationListFromCache: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetOrganisationListFromCache"], $.makeArray(arguments)));
+             },
+
+            managementGetPartnerListFromCache: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetPartnerListFromCache"], $.makeArray(arguments)));
+             },
+
+            managementGetServiceStates: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetServiceStates"], $.makeArray(arguments)));
+             },
+
+            managementGetSessionData: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetSessionData"], $.makeArray(arguments)));
+             },
+
+            managementGetSqlStatistic: function (procedureName) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetSqlStatistic"], $.makeArray(arguments)));
+             },
+
+            managementGetSqlStatistics: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetSqlStatistics"], $.makeArray(arguments)));
+             },
+
+            managementGetv4ScriptVersion: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementGetv4ScriptVersion"], $.makeArray(arguments)));
+             },
+
+            managementLoadAdministrators: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementLoadAdministrators"], $.makeArray(arguments)));
+             },
+
+            managementLogoutUser: function (userId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementLogoutUser"], $.makeArray(arguments)));
+             },
+
+            managementMessageAll: function (message) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementMessageAll"], $.makeArray(arguments)));
+             },
+
+            managementMessageGroup: function (group, message) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementMessageGroup"], $.makeArray(arguments)));
+             },
+
+            managementMessageUser: function (userId, message) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementMessageUser"], $.makeArray(arguments)));
+             },
+
+            managementParticleRefreshFromDatabase: function (particleId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementParticleRefreshFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementParticleRemoveFromCache: function (particleId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementParticleRemoveFromCache"], $.makeArray(arguments)));
+             },
+
+            managementRefreshBundleFromDatabase: function (bundleId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRefreshBundleFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementRefreshCourseFromDatabase: function (courseId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRefreshCourseFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementRefreshOrganisationFromDatabase: function (partnerId, organisationId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRefreshOrganisationFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementRefreshPartnerFromDatabase: function (partnerId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRefreshPartnerFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementRefreshPermissionSetFromDatabase: function (permissionSetId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRefreshPermissionSetFromDatabase"], $.makeArray(arguments)));
+             },
+
+            managementRegisterDeviceRequestListener: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRegisterDeviceRequestListener"], $.makeArray(arguments)));
+             },
+
+            managementReleaseLab: function (userId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementReleaseLab"], $.makeArray(arguments)));
+             },
+
+            managementRemoveCourseFromCache: function (courseId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRemoveCourseFromCache"], $.makeArray(arguments)));
+             },
+
+            managementRemoveOrganisationFromCache: function (partnerId, organisationId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRemoveOrganisationFromCache"], $.makeArray(arguments)));
+             },
+
+            managementRemovePartnerFromCache: function (partnerId, partnerName) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementRemovePartnerFromCache"], $.makeArray(arguments)));
+             },
+
+            managementSendAllMessage: function (message) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementSendAllMessage"], $.makeArray(arguments)));
+             },
+
+            managementSendTestEmail: function (emailAddress) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementSendTestEmail"], $.makeArray(arguments)));
+             },
+
+            managementSetv4ScriptVersion: function (script) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementSetv4ScriptVersion"], $.makeArray(arguments)));
+             },
+
+            managementStartService: function (serviceName) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementStartService"], $.makeArray(arguments)));
+             },
+
+            managementStopService: function (serviceName) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementStopService"], $.makeArray(arguments)));
+             },
+
+            managementToggleNetworkPerformanceState: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementToggleNetworkPerformanceState"], $.makeArray(arguments)));
+             },
+
+            managementUnRegisterDeviceRequestListener: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementUnRegisterDeviceRequestListener"], $.makeArray(arguments)));
+             },
+
+            managementViewLog: function (logName) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementViewLog"], $.makeArray(arguments)));
+             },
+
+            managementViewPermissionSetData: function (permissionSetId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ManagementViewPermissionSetData"], $.makeArray(arguments)));
+             },
+
+            oAuthRedirectToReport: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["OAuthRedirectToReport"], $.makeArray(arguments)));
+             },
+
+            oAuthRedirectToResource: function (type, resourceId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["OAuthRedirectToResource"], $.makeArray(arguments)));
+             },
+
+            performanceSendSupportEmail: function (rtts, bws, scores) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["PerformanceSendSupportEmail"], $.makeArray(arguments)));
+             },
+
+            powerOnAllDevices: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["PowerOnAllDevices"], $.makeArray(arguments)));
+             },
+
+            receiveAlertResponse: function (connectionId, response) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["ReceiveAlertResponse"], $.makeArray(arguments)));
+             },
+
+            saveEmailAddress: function (emailAddress) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SaveEmailAddress"], $.makeArray(arguments)));
+             },
+
+            saveSettings: function (settings) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SaveSettings"], $.makeArray(arguments)));
+             },
+
+            sendTerminalKeyPress: function (id, command) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SendTerminalKeyPress"], $.makeArray(arguments)));
+             },
+
+            settingsSetKeyboardLanguage: function (layoutLanguage) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SettingsSetKeyboardLanguage"], $.makeArray(arguments)));
+             },
+
+            settingsSetRegionName: function (regionId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SettingsSetRegionName"], $.makeArray(arguments)));
+             },
+
+            settingsSetTimezone: function (timezoneName, offsetInMinutes) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SettingsSetTimezone"], $.makeArray(arguments)));
+             },
+
+            speakRegisterListener: function (key) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SpeakRegisterListener"], $.makeArray(arguments)));
+             },
+
+            startSession: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["StartSession"], $.makeArray(arguments)));
+             },
+
+            supportTicketCreate: function (type, emailAddress, detail, saveSettings, technical) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["SupportTicketCreate"], $.makeArray(arguments)));
+             },
+
+            terminalConnect: function (activeTerminal) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["TerminalConnect"], $.makeArray(arguments)));
+             },
+
+            updateFirstAndLastNames: function (first, last) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["UpdateFirstAndLastNames"], $.makeArray(arguments)));
+             },
+
+            v5AddPolicies: function (policies) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5AddPolicies"], $.makeArray(arguments)));
+             },
+
+            v5CheckPassword: function (passwordUpdate) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5CheckPassword"], $.makeArray(arguments)));
+             },
+
+            v5DeleteUserFile: function (fileName) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5DeleteUserFile"], $.makeArray(arguments)));
+             },
+
+            v5GetExerciseLabContent: function (exerciseIndex) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5GetExerciseLabContent"], $.makeArray(arguments)));
+             },
+
+            v5GetInlineActivityUpdate: function (atomId, particleId, activityIndex, exerciseIndex, uiPosition, activityType, answers) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5GetInlineActivityUpdate"], $.makeArray(arguments)));
+             },
+
+            v5GetLabReportSummaryList: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5GetLabReportSummaryList"], $.makeArray(arguments)));
+             },
+
+            v5GetUserFilesList: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5GetUserFilesList"], $.makeArray(arguments)));
+             },
+
+            v5GetUserSettings: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5GetUserSettings"], $.makeArray(arguments)));
+             },
+
+            v5ResetInlineActivity: function (atomId, particleId, activityIndex, exerciseIndex, uiPosition, activityType) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5ResetInlineActivity"], $.makeArray(arguments)));
+             },
+
+            v5SaveUserLabSettings: function (settings) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5SaveUserLabSettings"], $.makeArray(arguments)));
+             },
+
+            v5SaveUserPersonalSettings: function (userSettingValues) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5SaveUserPersonalSettings"], $.makeArray(arguments)));
+             },
+
+            v5UpdatePassword: function (passwordUpdate) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["V5UpdatePassword"], $.makeArray(arguments)));
+             },
+
+            vNextAddPolicy: function (name, value, position) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextAddPolicy"], $.makeArray(arguments)));
+             },
+
+            vNextAuthoringSubmitScore: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextAuthoringSubmitScore"], $.makeArray(arguments)));
+             },
+
+            vNextChangePin: function (oldPin, newPin) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextChangePin"], $.makeArray(arguments)));
+             },
+
+            vNextCheckPin: function (prefix, pin) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextCheckPin"], $.makeArray(arguments)));
+             },
+
+            vNextContentGetTrackingStatus: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextContentGetTrackingStatus"], $.makeArray(arguments)));
+             },
+
+            vNextContentSetTrackingStatus: function (newState) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextContentSetTrackingStatus"], $.makeArray(arguments)));
+             },
+
+            vNextGetAuthoringItems: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextGetAuthoringItems"], $.makeArray(arguments)));
+             },
+
+            vNextGetContent: function (vendor, vendorId, moduleIndex, exerciseIndex) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextGetContent"], $.makeArray(arguments)));
+             },
+
+            vNextGetCourseList: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextGetCourseList"], $.makeArray(arguments)));
+             },
+
+            vNextGetLab: function (labType, localTime) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextGetLab"], $.makeArray(arguments)));
+             },
+
+            vNextGetModuleList: function (vendor, vendorId, exerciseCount) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextGetModuleList"], $.makeArray(arguments)));
+             },
+
+            vNextGetSettings: function (width, height) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextGetSettings"], $.makeArray(arguments)));
+             },
+
+            vNextNotifyLabFree: function (labType, emailAddress) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextNotifyLabFree"], $.makeArray(arguments)));
+             },
+
+            vNextRefreshDeviceState: function (deviceId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextRefreshDeviceState"], $.makeArray(arguments)));
+             },
+
+            vNextResetLab: function () {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextResetLab"], $.makeArray(arguments)));
+             },
+
+            vNextSetModuleIndex: function (moduleIndex) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextSetModuleIndex"], $.makeArray(arguments)));
+             },
+
+            vNextSetPin: function (pin) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextSetPin"], $.makeArray(arguments)));
+             },
+
+            vNextSetSettings: function (settings) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextSetSettings"], $.makeArray(arguments)));
+             },
+
+            vNextSupportTicketCreate: function (type, emailAddress, detail, saveSettings, technical, containsFiles) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VNextSupportTicketCreate"], $.makeArray(arguments)));
+             },
+
+            voucherRedeemCode: function (code, titleId) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["VoucherRedeemCode"], $.makeArray(arguments)));
+             },
+
+            webApiSwitch: function (f) {
+                return proxies['practiceLabs'].invoke.apply(proxies['practiceLabs'], $.merge(["WebApiSwitch"], $.makeArray(arguments)));
+             }
+        };
+
+        return proxies;
+    };
+
+    signalR.hub = $.hubConnection("/signalr", { useDefaultPath: false });
+    $.extend(signalR, signalR.hub.createHubProxies());
+
+}(window.jQuery, window));

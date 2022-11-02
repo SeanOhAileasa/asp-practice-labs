@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="CompliancePatching_files/print-styles.css" rel="stylesheet">
+    <script src="CompliancePatching_files/jquery.min.js"></script>
+    <script src="CompliancePatching_files/jspdf.js"></script>
+    <script src="CompliancePatching_files/from_html.js"></script>
+    <script src="CompliancePatching_files/addimage.js"></script>
+    <script src="CompliancePatching_files/filesaver.js"></script>
+    <script src="CompliancePatching_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="h63Lx+ITS8F/KvjWUN7OERMy6q91qB0RRnbpXZR9Fu6Bccj5tb9cWPXvdrnU6/VmtyVZ24ozVXwwSNVkIpARcb1TSACsC/dV/yW5LBKaHKQ=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Compliance Patching</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Install and Configure WSUS</li><li>Exercise 2 - WSUS Server Certificates Security</li><li>Exercise 3 - Create Computer Groups for WSUS</li><li>Exercise 4 - Configure GPO Policy for WSUS</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m18-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>WSUS</div>
+</div>
+<p id="cn-m18-3">Welcome to the <b>Compliance Patching </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m18-7">In this module, you will complete the following exercises:</p>
+<ul id="cn-m18-8">
+<li id="cn-m18-8">Install and Configure WSUS</li>
+<li id="cn-m18-9">WSUS Server Certificates Security</li>
+<li id="cn-m18-10">Create Computer Groups for WSUS</li>
+<li id="cn-m18-11">Configure GPO Policy for WSUS</li>
+</ul>
+<p id="cn-m18-12">After completing this lab, you will be able to:</p>
+<ul id="cn-m18-13">
+<li id="cn-m18-13">Configure Disk Storage for WSUS</li>
+<li id="cn-m18-14">Install and Configure WSUS</li>
+<li id="cn-m18-15">Enable SSL for WSUS Server</li>
+<li id="cn-m18-16">Exporting Self-Signed Certificates</li>
+<li id="cn-m18-17">Configuring Domain to Trust Self-Signed Certificates</li>
+<li id="cn-m18-18">Create Computer Groups</li>
+<li id="cn-m18-19">Approve Downloaded Updates</li>
+<li id="cn-m18-20">Create a GPO for Update Services Client</li>
+<li id="cn-m18-21">Troubleshoot Password and Verify WSUS Client Functionality</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m18-23">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m18-24">
+<li id="cn-m18-24"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+<li id="cn-m18-25"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+<li id="cn-m18-26"><b>CAS-003 </b>2.4 Given software vulnerability scenarios, select appropriate security controls.</li>
+</ul>
+<span class="cn-quote" id="cn-m18-27"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m18-29">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m18-33">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m18-34">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m18-36"><b>Lab Topology</b></h2>
+<p id="cn-m18-37">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m18-38">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m18-39">
+<li id="cn-m18-39"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m18-40"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m18-41"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+<li id="cn-m18-42"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m18-43"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<p id="cn-m18-44"><img class="cn-img" id="cn-image-m18-c-0" src="CompliancePatching_files/image-m18-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m18-45">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m18-46"><b>Exercise 1 - Install and Configure WSUS</b></h2>
+<p id="cn-m18-47">Windows Server Update Services (WSUS) provides a 
+cost-effective patch management solution to deploy updates to 
+domain-joined Windows servers and workstation in a corporate network.  
+WSUS is fully integrated in Windows Server 2012 and can be enabled on 
+Windows clients by configuring settings in Group Policy Objects - GPO.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m18-49">After completing this exercise, you will be able to:</p>
+<ul id="cn-m18-50">
+<li id="cn-m18-50">Configure Disk Storage for WSUS</li>
+<li id="cn-m18-51">Install and Configure WSUS</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m18-53">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m18-54">
+<li id="cn-m18-54"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+</ul>
+<p id="cn-m18-55"><img class="cn-img" id="cn-image-m18-c-1" src="CompliancePatching_files/image-m18-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m18-56"><b>Task 1 - Configure Disk Storage for WSUS</b></h3>
+<p id="cn-m18-57">In this task, you will use <b>PLABDC01 </b>as the 
+designated server to run Windows Server Update Services. To prepare this
+ server to assume the role of the WSUS server, you must prepare the disk
+ volume that will be used for storage of operating system updates. To 
+configure the disk on <b>PLABDC01 </b>server, follow these steps:</p>
+<h4 id="cn-m18-58"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-59">Ensure you have powered on the required devices and connect to <b>PLABDC01.</b></p>
+<p id="cn-m18-60">From <b>Server Manager</b>, click <b>Tools </b>and select <b>Computer Management</b>.</p>
+<p id="cn-m18-61"></p><figure><img class="cn-img" id="cn-image-m18-c-2" src="CompliancePatching_files/image-m18-c-2.jpg" alt="Figure 1.1. Screenshot of PLABDC01"><figcaption>Figure 1.1. Screenshot of PLABDC01: Selecting Computer Management option from Tools menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-62"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-63">In the <b>Computer Management </b>console, select <b>Disk Management </b>from the left pane.</p>
+<p id="cn-m18-64">In the bottom pane, you will see the list of available disk volumes.</p>
+<p id="cn-m18-65">Then right-click <b>Disk 0 </b>and select <b>Shrink Volume.</b></p>
+<p id="cn-m18-66"></p><figure><img class="cn-img" id="cn-image-m18-c-3" src="CompliancePatching_files/image-m18-c-3.jpg" alt="Figure 1.2. Screenshot of PLABDC01"><figcaption>Figure 1.2. Screenshot of PLABDC01: Right-clicking and selecting the Shrink Volume option.</figcaption></figure><p></p>
+<h4 id="cn-m18-67"><b><i>Step 3 </i></b></h4>
+<p id="cn-m18-68">You will see a box appear saying that the drive is being queried.</p>
+<p id="cn-m18-69"></p><figure><img class="cn-img" id="cn-image-m18-c-4" src="CompliancePatching_files/image-m18-c-4.jpg" alt="Figure 1.3. Screenshot of PLABDC01"><figcaption>Figure 1.3. Screenshot of PLABDC01: Displaying the Querying Shrink Space dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-70"><b><i>Step 4 </i></b></h4>
+<p id="cn-m18-71">You will then see a <b>Shrink C: </b>dialog box. Delete the value highlighted in <b>Blue </b>and enter the following:</p>
+<p id="cn-m18-72">Enter the amount of space to shrink in MB: <b>10000</b></p>
+<p id="cn-m18-73">Windows will automatically calculate the Total Size after Shrink in MB for you.</p>
+<p id="cn-m18-74">Click <b>Shrink </b>when ready.</p>
+<p id="cn-m18-75"></p><figure><img class="cn-img" id="cn-image-m18-c-5" src="CompliancePatching_files/image-m18-c-5.jpg" alt="Figure 1.4. Screenshot of PLABDC01"><figcaption>Figure 1.4. Screenshot of PLABDC01: Displaying the Shrink C: dialog box with the shrinking of the drive.</figcaption></figure><p></p>
+<h4 id="cn-m18-76"><b><i>Step 5</i></b></h4>
+<p id="cn-m18-77">Notice a new partition of 9.77 GB is created.</p>
+<p id="cn-m18-78">Right-click the <b>Unallocated disk </b>and select <b>New Simple Volume.</b></p>
+<p id="cn-m18-79"></p><figure><img class="cn-img" id="cn-image-m18-c-6" src="CompliancePatching_files/image-m18-c-6.jpg" alt="Figure 1.5. Screenshot of PLABDC01"><figcaption>Figure 1.5. Screenshot of PLABDC01: Creating a new simple volume by selecting the New Simple Volume option.</figcaption></figure><p></p>
+<h4 id="cn-m18-80"><b><i>Step 6 </i></b></h4>
+<p id="cn-m18-81">On the <b>Welcome to the New Simple Volume Wizard </b>page of the <b>New Simple Volume Wizard</b>, click <b>Next</b>.</p>
+<p id="cn-m18-82"></p><figure><img class="cn-img" id="cn-image-m18-c-7" src="CompliancePatching_files/image-m18-c-7.jpg" alt="Figure 1.6. Screenshot of PLABDC01"><figcaption>Figure 1.6. Screenshot of PLABDC01: Displaying the welcome page of the New Simple Volume Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m18-83"><b><i>Step 7 </i></b></h4>
+<p id="cn-m18-84">Click <b>Next </b>on the following screens and accept the default settings.</p>
+<p id="cn-m18-85"></p><figure><img class="cn-img" id="cn-image-m18-c-8" src="CompliancePatching_files/image-m18-c-8.jpg" alt="Figure 1.7. Screenshot of PLABDC01"><figcaption>Figure 1.7. Screenshot of PLABDC01: Defining the size of the volume on the Specify Volume Size page.</figcaption></figure><p></p>
+<h4 id="cn-m18-86"><b><i>Step 8 </i></b></h4>
+<p id="cn-m18-87">Click <b>Next. </b></p>
+<p id="cn-m18-88"></p><figure><img class="cn-img" id="cn-image-m18-c-9" src="CompliancePatching_files/image-m18-c-9.jpg" alt="Figure 1.8. Screenshot of PLABDC01"><figcaption>Figure 1.8. Screenshot of PLABDC01: Assigning the drive letter on the Assign Drive Letter or Path page.</figcaption></figure><p></p>
+<h4 id="cn-m18-89"><b><i>Step 9 </i></b></h4>
+<p id="cn-m18-90">On the <b>Format Partition </b>page, type the following name in the <b>Volume label </b>text box:</p>
+<pre id="cn-m18-91"><code>WSUS Update
+</code></pre>
+<p id="cn-m18-92">Click <b>Next</b>.</p>
+<p id="cn-m18-93"></p><figure><img class="cn-img" id="cn-image-m18-c-10" src="CompliancePatching_files/image-m18-c-10.jpg" alt="Figure 1.9. Screenshot of PLABDC01"><figcaption>Figure 1.9. Screenshot of PLABDC01: Formatting the partition and assigning a volume label.</figcaption></figure><p></p>
+<h4 id="cn-m18-94"><b><i>Step 10 </i></b></h4>
+<p id="cn-m18-95">Click <b>Finish </b>to close the <b>Completing the New Simple Volume Wizard </b>page.</p>
+<span class="cn-quote" id="cn-m18-96"><b><i>Note: </i></b><i>If another dialog box from Windows appears asking to format the same disk, this can be ignored. </i></span>
+<p id="cn-m18-97"></p><figure><img class="cn-img" id="cn-image-m18-c-11" src="CompliancePatching_files/image-m18-c-11.jpg" alt="Figure 1.10. Screenshot of PLABDC01"><figcaption>Figure 1.10. Screenshot of PLABDC01: Completing the process of creating the simple volume.</figcaption></figure><p></p>
+<p id="cn-m18-98">It takes a few seconds to format the partition.</p>
+<span class="cn-quote" id="cn-m18-99"><b><i>Note</i></b><i>: Ignore the message about formatting a disk.</i></span>
+<p id="cn-m18-100"></p><figure><img class="cn-img" id="cn-image-m18-c-12" src="CompliancePatching_files/image-m18-c-12.jpg" alt="Figure 1.11. Screenshot of PLABDC01"><figcaption>Figure 1.11. Screenshot of PLABDC01: Showing the newly created a simple volume with the name WSUS Update.</figcaption></figure><p></p>
+<h3 id="cn-m18-101"><b>Task 2 - Install and Configure WSUS</b></h3>
+<p id="cn-m18-102">To install the <b>Windows Server Update Services </b>server, follow these steps:</p>
+<h4 id="cn-m18-103"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-104">On the <b>PLABDC01 </b>device, click <b>Windows PowerShell </b>on the taskbar.</p>
+<p id="cn-m18-105"></p><figure><img class="cn-img" id="cn-image-m18-c-13" src="CompliancePatching_files/image-m18-c-13.jpg" alt="Figure 1.12. Screenshot of PLABDC01"><figcaption>Figure 1.12. Screenshot of PLABDC01:Clicking the Windows PowerShell icon from the taskbar.</figcaption></figure><p></p>
+<h4 id="cn-m18-106"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-107">On the <b>Windows PowerShell </b>prompt, type the following:</p>
+<pre id="cn-m18-108"><code>cd\
+Add-WindowsFeature UpdateServices,UpdateServices-WidDB,UpdateServices-Services -IncludeManagementTools
+</code></pre>
+<p id="cn-m18-110">Press <b>Enter</b>.</p>
+<p id="cn-m18-111">Please wait while the services are being installed. This will take a few moments.</p>
+<p id="cn-m18-112"></p><figure><img class="cn-img" id="cn-image-m18-c-14" src="CompliancePatching_files/image-m18-c-14.jpg" alt="Figure 1.13. Screenshot of PLABDC01"><figcaption>Figure
+ 1.13. Screenshot of PLABDC01: Showing the process of installation of 
+Windows Update Service with required components in Windows PowerShell.</figcaption></figure><p></p>
+<h4 id="cn-m18-113"><b><i>Step 3</i></b></h4>
+<p id="cn-m18-114">Windows indicates that the services and their dependencies were successfully installed.</p>
+<p id="cn-m18-115"></p><figure><img class="cn-img" id="cn-image-m18-c-15" src="CompliancePatching_files/image-m18-c-15.jpg" alt="Figure 1.14. Screenshot of PLABDC01"><figcaption>Figure 1.14. Screenshot of PLABDC01: Showing the completion of Windows Update Services installation.</figcaption></figure><p></p>
+<h4 id="cn-m18-116"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-117">On the <b>Windows PowerShell </b>prompt, type the following:</p>
+<pre id="cn-m18-118"><code>reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUseStrongCrypto /T REG_DWORD /D 1
+</code></pre>
+<p id="cn-m18-119">Press <b>Enter</b>.</p>
+<p id="cn-m18-120">Windows indicates that the operation completed successfully.</p>
+<p id="cn-m18-121"></p><figure><img class="cn-img" id="cn-image-m18-c-16" src="CompliancePatching_files/image-m18-c-16.jpg" alt="Figure 1.15. Screenshot of PLABDC01"><figcaption>Figure 1.15. Screenshot of PLABDC01: Showing the required command typed and that the operation was successful.</figcaption></figure><p></p>
+<h4 id="cn-m18-122"><b><i>Step 5</i></b></h4>
+<p id="cn-m18-123">On the <b>Windows PowerShell </b>prompt, type the following to reboot the machine:</p>
+<pre id="cn-m18-124"><code>shutdown -r -t 0
+</code></pre>
+<p id="cn-m18-125">Press <b>Enter</b>.</p>
+<p id="cn-m18-126"></p><figure><img class="cn-img" id="cn-image-m18-c-17" src="CompliancePatching_files/image-m18-c-17.jpg" alt="Figure 1.16. Screenshot of PLABDC01"><figcaption>Figure 1.16. Screenshot of PLABDC01: Showing the required command typed out to reboot the system.</figcaption></figure><p></p>
+<h4 id="cn-m18-127"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-128">Please wait 2 minutes to provide enough time for <b>PLABDC01 </b>to fully complete a reboot.</p>
+<p id="cn-m18-129">Connect to <b>PLABDC01.</b></p>
+<p id="cn-m18-130">Reopen the <b>Server Manager Dashboard</b>, click the <b>Tools </b>menu and select <b>Windows Server Update Service</b>.</p>
+<p id="cn-m18-131"></p><figure><img class="cn-img" id="cn-image-m18-c-18" src="CompliancePatching_files/image-m18-c-18.jpg" alt="Figure 1.17. Screenshot of PLABDC01"><figcaption>Figure 1.17. Screenshot of PLABDC01: Selecting the Windows Server Update Services from the Tools menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-132"><b><i>Step 7</i></b></h4>
+<p id="cn-m18-133">On the <b>Complete WSUS Installation </b>dialogue box, select the <b>Store updates locally </b>checkbox.</p>
+<p id="cn-m18-134">In <b>Content directory path</b>, type <b>e:\WSUS Updates</b>.</p>
+<p id="cn-m18-135">Select <b>Run</b>.</p>
+<p id="cn-m18-136"></p><figure><img class="cn-img" id="cn-image-m18-c-19" src="CompliancePatching_files/image-m18-c-19.jpg" alt="Figure 1.18. Screenshot of PLABDC01"><figcaption>Figure 1.18. Screenshot of PLABDC01: Setting the content directory path in the Complete WSUS Installation wizard.</figcaption></figure><p></p>
+<h4 id="cn-m18-137"><b><i>Step 8</i></b></h4>
+<p id="cn-m18-138">Wait for the configuration of WSUS to be completed.</p>
+<p id="cn-m18-139">This process will take a few minutes to finish.</p>
+<p id="cn-m18-140"></p><figure><img class="cn-img" id="cn-image-m18-c-20" src="CompliancePatching_files/image-m18-c-20.jpg" alt="Figure 1.19. Screenshot of PLABDC01"><figcaption>Figure 1.19. Screenshot of PLABDC01: Completing the WSUS installation.</figcaption></figure><p></p>
+<h4 id="cn-m18-141"><b><i>Step 9</i></b></h4>
+<p id="cn-m18-142">On <b>Complete WSUS Installation</b>, click <b>Close </b>when the progress bar has reached the end.</p>
+<span class="cn-quote" id="cn-m18-143"><b><i>Note</i></b><i>: On the </i><b><i>Server Manager Dashboard</i></b><i>,
+ you will notice a yellow exclamation point icon, appended to the flag. 
+This indicates that additional configuration is needed. WSUS will 
+automatically launch a wizard to address this requirement.</i></span>
+<p id="cn-m18-144"></p><figure><img class="cn-img" id="cn-image-m18-c-21" src="CompliancePatching_files/image-m18-c-21.jpg" alt="Figure 1.20. Screenshot of PLABDC01"><figcaption>Figure 1.20. Screenshot of PLABDC01: Displaying the confirmation of the WSUS installation.</figcaption></figure><p></p>
+<h4 id="cn-m18-145"><b><i>Step 10</i></b></h4>
+<p id="cn-m18-146">The <b>WSUS configuration wizard </b>page automatically opens.</p>
+<p id="cn-m18-147">On the <b>Before you begin </b>page, click <b>Next</b>.</p>
+<p id="cn-m18-148"></p><figure><img class="cn-img" id="cn-image-m18-c-22" src="CompliancePatching_files/image-m18-c-22.jpg" alt="Figure 1.21. Screenshot of PLABDC01"><figcaption>Figure 1.21. Screenshot of PLABDC01: Showing the Before You Begin page of the WSUS Configuration Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m18-149"><b><i>Step 11</i></b></h4>
+<p id="cn-m18-150">On the <b>Microsoft Update Improvement Program </b>page, clear the <b>Yes, I would like to join the Microsoft Update Improvement Program </b>checkbox.</p>
+<p id="cn-m18-151">Click <b>Next</b>.</p>
+<p id="cn-m18-152"></p><figure><img class="cn-img" id="cn-image-m18-c-23" src="CompliancePatching_files/image-m18-c-23.jpg" alt="Figure 1.22. Screenshot of PLABDC01"><figcaption>Figure 1.22. Screenshot of PLABDC01: Clearing the Microsoft Update Improvement Program option.</figcaption></figure><p></p>
+<h4 id="cn-m18-153"><b><i>Step 12</i></b></h4>
+<p id="cn-m18-154">Since this is the first WSUS server to be rolled out for this lab, accept the default <b>Synchronise from Microsoft Update </b>option.</p>
+<p id="cn-m18-155">Click <b>Next</b>.</p>
+<p id="cn-m18-156"></p><figure><img class="cn-img" id="cn-image-m18-c-24" src="CompliancePatching_files/image-m18-c-24.jpg" alt="Figure 1.23. Screenshot of PLABDC01"><figcaption>Figure 1.23. Screenshot of PLABDC01: Proceeding with the installation with the Synchronise from Microsoft Update option.</figcaption></figure><p></p>
+<h4 id="cn-m18-157"><b><i>Step 14</i></b></h4>
+<p id="cn-m18-158">On the <b>Specify Proxy Server </b>page, select <b>Use a proxy when synchronizing</b>.</p>
+<p id="cn-m18-159">Use the following information:</p>
+<p id="cn-m18-160">In the <b>Proxy server name </b>text box, type the following name:</p>
+<pre id="cn-m18-161"><code>proxy
+</code></pre>
+<p id="cn-m18-162">In the <b>Port number </b>text box, type the following name:</p>
+<pre id="cn-m18-163"><code>8080
+</code></pre>
+<p id="cn-m18-164">Click <b>Next</b>.</p>
+<p id="cn-m18-165"></p><figure><img class="cn-img" id="cn-image-m18-c-25" src="CompliancePatching_files/image-m18-c-25.jpg" alt="Figure 1.24. Screenshot of PLABDC01"><figcaption>Figure 1.24. Screenshot of PLABDC01: Configuring the Proxy settings.</figcaption></figure><p></p>
+<h4 id="cn-m18-166"><b><i>Step 15</i></b></h4>
+<p id="cn-m18-167">On the <b>Connect to Upstream Server </b>page, click <b>Start Connecting</b>.</p>
+<p id="cn-m18-168"></p><figure><img class="cn-img" id="cn-image-m18-c-26" src="CompliancePatching_files/image-m18-c-26.jpg" alt="Figure 1.25. Screenshot of PLABDC01"><figcaption>Figure 1.25. Screenshot of PLABDC01: Clicking the Start Connecting button.</figcaption></figure><p></p>
+<h4 id="cn-m18-169"><b><i>Step 16</i></b></h4>
+<p id="cn-m18-170">On the <b>Connect to Upstream Server </b>page, please wait while it downloads update information from Microsoft.</p>
+<span class="cn-alert" id="cn-m18-171">If an error occurs during the process, please reattempt by clicking the Start Connecting button again.</span>
+<span class="cn-quote" id="cn-m18-173"><b><i>Note: </i></b><i>This will 
+take a while to complete as this is the first time that the server is 
+synchronizing with the Microsoft Update website. In some scenarios, such
+ as a bandwidth issue or a high number of updates, it may take a little 
+longer.</i></span>
+<p id="cn-m18-174"></p><figure><img class="cn-img" id="cn-image-m18-c-27" src="CompliancePatching_files/image-m18-c-27.jpg" alt="Figure 1.26. Screenshot of PLABDC01"><figcaption>Figure 1.26. Screenshot of PLABDC01: Showing the connectivity to upstream server progress.</figcaption></figure><p></p>
+<h4 id="cn-m18-175"><b><i>Step 17</i></b></h4>
+<p id="cn-m18-176">When the green progress meter has reached its end, click <b>Next</b>.</p>
+<p id="cn-m18-177"></p><figure><img class="cn-img" id="cn-image-m18-c-28" src="CompliancePatching_files/image-m18-c-28.jpg" alt="Figure 1.27. Screenshot of PLABDC01"><figcaption>Figure 1.27. Screenshot of PLABDC01: Clicking Next after connecting to the upstream server.</figcaption></figure><p></p>
+<h4 id="cn-m18-178"><b><i>Step 18</i></b></h4>
+<p id="cn-m18-179">On the <b>Choose Languages </b>page, verify that only the <b>English </b>check box is selected.</p>
+<p id="cn-m18-180">Click <b>Next</b>.</p>
+<p id="cn-m18-181"></p><figure><img class="cn-img" id="cn-image-m18-c-29" src="CompliancePatching_files/image-m18-c-29.jpg" alt="Figure 1.28. Screenshot of PLABDC01"><figcaption>Figure 1.28. Screenshot of PLABDC01: Choosing the update language as English.</figcaption></figure><p></p>
+<h4 id="cn-m18-182"><b><i>Step 19</i></b></h4>
+<p id="cn-m18-183">On the <b>Choose Products </b>page, clear all the selected checkboxes and only select the <b>Windows 8.1 </b>checkbox<b>.</b></p>
+<p id="cn-m18-184">Click <b>Next</b>.</p>
+<p id="cn-m18-185"></p><figure><img class="cn-img" id="cn-image-m18-c-30" src="CompliancePatching_files/image-m18-c-30.jpg" alt="Figure 1.29. Screenshot of PLABDC01"><figcaption>Figure 1.29. Screenshot of PLABDC01: Limiting the updates download only for Windows 8.1.</figcaption></figure><p></p>
+<h4 id="cn-m18-186"><b><i>Step 20</i></b></h4>
+<p id="cn-m18-187">On the <b>Choose Classifications </b>page, ensure only the <b>Critical Updates</b>, and <b>Security Updates </b>checkboxes are selected</p>
+<p id="cn-m18-188">Click <b>Next</b>.</p>
+<p id="cn-m18-189"></p><figure><img class="cn-img" id="cn-image-m18-c-31" src="CompliancePatching_files/image-m18-c-31.jpg" alt="Figure 1.30. Screenshot of PLABDC01"><figcaption>Figure 1.30. Screenshot of PLABDC01: Configuring the types of updates to download.</figcaption></figure><p></p>
+<h4 id="cn-m18-190"><b><i>Step 21</i></b></h4>
+<p id="cn-m18-191">On the <b>Set Sync Schedule </b>page, accept the default selection of <b>Synchronise manually</b>.</p>
+<p id="cn-m18-192">Click <b>Next</b>.</p>
+<p id="cn-m18-193"></p><figure><img class="cn-img" id="cn-image-m18-c-32" src="CompliancePatching_files/image-m18-c-32.jpg" alt="Figure 1.31. Screenshot of PLABDC01"><figcaption>Figure 1.31. Screenshot of PLABDC01: Selecting manual synchronization.</figcaption></figure><p></p>
+<h4 id="cn-m18-194"><b><i>Step 22</i></b></h4>
+<p id="cn-m18-195">On the <b>Finished </b>page, select the <b>Begin initial synchronization </b>checkbox and click <b>Next</b>.</p>
+<p id="cn-m18-196"></p><figure><img class="cn-img" id="cn-image-m18-c-33" src="CompliancePatching_files/image-m18-c-33.jpg" alt="Figure 1.32. Screenshot of PLABDC01"><figcaption>Figure
+ 1.32. Screenshot of PLABDC01: Showing the completion of WSUS 
+configuration and proceeding ahead either with initial synchronization 
+or launching the WSUS Administration Console.</figcaption></figure><p></p>
+<h4 id="cn-m18-197"><b><i>Step 23</i></b></h4>
+<p id="cn-m18-198">On the <b>What's Next </b>page, click <b>Finish</b>.</p>
+<p id="cn-m18-199"></p><figure><img class="cn-img" id="cn-image-m18-c-34" src="CompliancePatching_files/image-m18-c-34.jpg" alt="Figure 1.33. Screenshot of PLABDC01"><figcaption>Figure 1.33. Screenshot of PLABDC01: Finishing the WSUS configuration.</figcaption></figure><p></p>
+<h4 id="cn-m18-200"><b><i>Step 24</i></b></h4>
+<p id="cn-m18-201">The <b>Update Services </b>console will automatically open.</p>
+<span class="cn-quote" id="cn-m18-202"><b><i>Note: </i></b><i>The Update Service window may be minimized. Click on the taskbar to restore it and then maximize it.</i></span>
+<p id="cn-m18-203"></p><figure><img class="cn-img" id="cn-image-m18-c-35" src="CompliancePatching_files/image-m18-c-35.jpg" alt="Figure 1.34. Screenshot of PLABDC01"><figcaption>Figure 1.34. Screenshot of PLABDC01: Displaying the Update Services console on PLABDC01.</figcaption></figure><p></p>
+<h4 id="cn-m18-204"><b><i>Step 25</i></b></h4>
+<p id="cn-m18-205">Expand the <b>PLABDC01 </b>node in the left pane.</p>
+<p id="cn-m18-206">Select the <b>Synchronizations </b>node. On the central bottom pane, you can see the progress of the updates that are downloading from <b>Microsoft</b>.</p>
+<p id="cn-m18-207">Wait for the synchronization to complete.</p>
+<span class="cn-quote" id="cn-m18-208"><b><i>Note: </i></b><i>This will 
+take a while to complete as this is the first time that the server is 
+synchronizing with the Microsoft Update website. In some scenarios, such
+ as a bandwidth issue or a high number of updates, it may take a little 
+longer.</i></span>
+<p id="cn-m18-210"></p><figure><img class="cn-img" id="cn-image-m18-c-36" src="CompliancePatching_files/image-m18-c-36.jpg" alt="Figure 1.35. Screenshot of PLABDC01"><figcaption>Figure 1.35. Screenshot of PLABDC01: Showing the download progress after selecting the Synchronization node.</figcaption></figure><p></p>
+<h4 id="cn-m18-211"><b><i>Step 26</i></b></h4>
+<p id="cn-m18-212">When Synchronization is complete, you can see the details of the download.</p>
+<p id="cn-m18-213"></p><figure><img class="cn-img" id="cn-image-m18-c-37" src="CompliancePatching_files/image-m18-c-37.jpg" alt="Figure 1.36. Screenshot of PLABDC01"><figcaption>Figure 1.36. Screenshot of PLABDC01: Showing the completion of synchronization.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m18-216">Minimize the <b>Update Services </b>console.</p>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m18-217"><b>Exercise 2 - WSUS Server Certificates Security</b></h2>
+<p id="cn-m18-218">Security for certificates is a critical component to 
+making sure information is kept confidential. By doing this, we can 
+understand who has delivered said information, thereby confirming the 
+integrity of not only the data, but also the sender. By applying the 
+secure sockets layer, we help to ensure that the server is using the 
+required security channel to communicate on.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m18-220">After completing this exercise, you will be able to:</p>
+<ul id="cn-m18-221">
+<li id="cn-m18-221">Enable SSL for WSUS Server</li>
+<li id="cn-m18-222">Exporting Self-Signed Certificates</li>
+<li id="cn-m18-223">Configuring Domain to Trust Self-Signed Certificates</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m18-225">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m18-226">
+<li id="cn-m18-226"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m18-227"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m18-228"><img class="cn-img" id="cn-image-m18-c-38" src="CompliancePatching_files/image-m18-c-38.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m18-229"><b>Task 1 - Enable SSL for WSUS Server</b></h3>
+<p id="cn-m18-230">For security reasons, it is important that you enable
+ secure sockets layer for the WSUS server to encrypt web network traffic
+ between the server and the requesting clients. In addition, SSL 
+verifies the identity of the WSUS server when Windows update clients 
+make a connection to it.</p>
+<p id="cn-m18-231">To enable SSL on the WSUS server, perform the following steps:</p>
+<h4 id="cn-m18-232"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-233">On the <b>PLABDC01 </b>device, go to the <b>Server Manager Dashboard</b>, click on <b>Tools </b>and select <b>Internet Information Services Manager</b>.</p>
+<p id="cn-m18-234">On <b>IIS Manager</b>, click <b>PLABDC01</b>.</p>
+<span class="cn-quote" id="cn-m18-235"><b><i>Note: </i></b><i>If you get a prompt about updating to latest web platform components, click </i><b><i>No.</i></b></span>
+<p id="cn-m18-236">From the middle pane, select <b>Server Certificates</b>.</p>
+<p id="cn-m18-237">On the <b>Actions </b>pane, click <b>Open Feature</b>.</p>
+<p id="cn-m18-238"></p><figure><img class="cn-img" id="cn-image-m18-c-39" src="CompliancePatching_files/image-m18-c-39.jpg" alt="Figure 2.1. Screenshot of PLABDC01"><figcaption>Figure 2.1. Screenshot of PLABDC01: Selecting the Server Certificates option and then clicking Open Feature.</figcaption></figure><p></p>
+<h4 id="cn-m18-239"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-240">On the <b>Actions </b>pane, click <b>Create Self-Signed Certificate.</b></p>
+<p id="cn-m18-241"></p><figure><img class="cn-img" id="cn-image-m18-c-40" src="CompliancePatching_files/image-m18-c-40.jpg" alt="Figure 2.2. Screenshot of PLABDC01"><figcaption>Figure 2.2. Screenshot of PLABDC01: Clicking the Create Self-Signed Certificates option.</figcaption></figure><p></p>
+<h4 id="cn-m18-242"><b><i>Step 3 </i></b></h4>
+<p id="cn-m18-243">On the <b>Specify Friendly Name </b>page of the <b>Create Self-Signed Certificate </b>dialog box, type the following name in the <b>Specify a friendly name for the certificate </b>text box:</p>
+<pre id="cn-m18-244"><code>PLABDC01-WSUS
+</code></pre>
+<p id="cn-m18-245">In the Select a certificate store for the new certificate drop-down, ensure <b>Personal </b>is selected.</p>
+<p id="cn-m18-246">Click <b>OK</b>.</p>
+<p id="cn-m18-247"></p><figure><img class="cn-img" id="cn-image-m18-c-41" src="CompliancePatching_files/image-m18-c-41.jpg" alt="Figure 2.3. Screenshot of PLABDC01"><figcaption>Figure 2.3. Screenshot of PLABDC01: Defining a name for the self-signed certificate.</figcaption></figure><p></p>
+<h4 id="cn-m18-248"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-249">Expand <b>Sites </b>in the left pane and then click <b>WSUS Administration</b>.</p>
+<p id="cn-m18-250">On the center pane, right-click <b>SSL Settings </b>and select <b>Bindings</b>.</p>
+<p id="cn-m18-251"></p><figure><img class="cn-img" id="cn-image-m18-c-42" src="CompliancePatching_files/image-m18-c-42.jpg" alt="Figure 2.4. Screenshot of PLABDC01"><figcaption>Figure 2.4. Screenshot of PLABDC01: Right-clicking SSL Settings and then selecting Bindings.</figcaption></figure><p></p>
+<h4 id="cn-m18-252"><b><i>Step 5 </i></b></h4>
+<p id="cn-m18-253">On the <b>Site Bindings </b>dialog box, select <b>https </b>and click the <b>Edit </b>button.</p>
+<p id="cn-m18-254"></p><figure><img class="cn-img" id="cn-image-m18-c-43" src="CompliancePatching_files/image-m18-c-43.jpg" alt="Figure 2.5. Screenshot of PLABDC01"><figcaption>Figure 2.5. Screenshot of PLABDC01: Selecting https and then clicking the Edit button.</figcaption></figure><p></p>
+<h4 id="cn-m18-255"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-256">On the <b>Edit Site Binding </b>dialog box, use the following information:</p>
+<p id="cn-m18-257"><b>Hostname: </b></p>
+<pre id="cn-m18-258"><code>plabdc01.practicelabs.com
+</code></pre>
+<p id="cn-m18-259"><b>SSL certificate: </b></p>
+<pre id="cn-m18-260"><code>PLABDC01-WSUS
+</code></pre>
+<p id="cn-m18-261">Click <b>OK</b>.</p>
+<p id="cn-m18-262"></p><figure><img class="cn-img" id="cn-image-m18-c-44" src="CompliancePatching_files/image-m18-c-44.jpg" alt="Figure 2.6. Screenshot of PLABDC01"><figcaption>Figure 2.6. Screenshot of PLABDC01: Entering information in the Edit Site Binding.</figcaption></figure><p></p>
+<h4 id="cn-m18-263"><b><i>Step 7 </i></b></h4>
+<p id="cn-m18-264">Click <b>Close </b>to save changes in <b>Site Bindings.</b></p>
+<p id="cn-m18-265"></p><figure><img class="cn-img" id="cn-image-m18-c-45" src="CompliancePatching_files/image-m18-c-45.jpg" alt="Figure 2.7. Screenshot of PLABDC01"><figcaption>Figure 2.7. Screenshot of PLABDC01: Clicking Close to save the site bindings information.</figcaption></figure><p></p>
+<h4 id="cn-m18-266"><b><i>Step 8</i></b></h4>
+<p id="cn-m18-267">Back in the <b>IIS Manager</b>, ensure <b>WSUS Administration </b>is selected in the left pane. In the middle pane, make sure that <b>SSL Settings </b>is selected and click <b>Open Feature </b>in the right pane.</p>
+<p id="cn-m18-268"></p><figure><img class="cn-img" id="cn-image-m18-c-46" src="CompliancePatching_files/image-m18-c-46.jpg" alt="Figure 2.8. Screenshot of PLABDC01"><figcaption>Figure 2.8. Screenshot of PLABDC01: Clicking the Open Feature option after selecting the SSL Settings option.</figcaption></figure><p></p>
+<h4 id="cn-m18-269"><b><i>Step 9 </i></b></h4>
+<p id="cn-m18-270">On the <b>SSL Settings </b>page, select the <b>Require SSL </b>checkbox.</p>
+<p id="cn-m18-271">Then, on the <b>Actions </b>pane, click <b>Apply</b>.</p>
+<p id="cn-m18-272"></p><figure><img class="cn-img" id="cn-image-m18-c-47" src="CompliancePatching_files/image-m18-c-47.jpg" alt="Figure 2.9. Screenshot of PLABDC01"><figcaption>Figure 2.9. Screenshot of PLABDC01: Selecting the Require SSL option.</figcaption></figure><p></p>
+<p id="cn-m18-273">The required changes are now saved.</p>
+<p id="cn-m18-274"></p><figure><img class="cn-img" id="cn-image-m18-c-48" src="CompliancePatching_files/image-m18-c-48.jpg" alt="Figure 2.10. Screenshot of PLABDC01"><figcaption>Figure 2.10. Screenshot of PLABDC01: Showing the saves changes after selecting Require SSL option.</figcaption></figure><p></p>
+<h3 id="cn-m18-275"><b>Task 2 - Exporting Self-Signed Certificates</b></h3>
+<p id="cn-m18-276">In this task, you will export the self-signed certificate to a file. To do this, perform the following steps:</p>
+<h4 id="cn-m18-277"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-278">Select <b>PLABDC01.PRACTICELABS.COM</b>, and in the middle pane, right-click <b>Server Certificates </b>and select <b>Open Feature</b>.</p>
+<p id="cn-m18-279"></p><figure><img class="cn-img" id="cn-image-m18-c-49" src="CompliancePatching_files/image-m18-c-49.jpg" alt="Figure 2.11. Screenshot of PLABDC01"><figcaption>Figure 2.11. Screenshot of PLABDC01: Selecting the Open Feature option from the Server Certificates context menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-280"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-281">On the <b>Server Certificates </b>pane, right-click <b>PLABDC01-WSUS </b>in the middle pane and select <b>View</b>.</p>
+<p id="cn-m18-282"></p><figure><img class="cn-img" id="cn-image-m18-c-50" src="CompliancePatching_files/image-m18-c-50.jpg" alt="Figure 2.12. Screenshot of PLABDC01"><figcaption>Figure 2.12. Screenshot of PLABDC01: Selecting the View option from the context menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-283"><b><i>Step 3</i></b></h4>
+<p id="cn-m18-284">In the <b>Certificate </b>dialog box, go to the <b>Details </b>tab.</p>
+<p id="cn-m18-285">Click <b>Copy to File</b>.</p>
+<p id="cn-m18-286"></p><figure><img class="cn-img" id="cn-image-m18-c-51" src="CompliancePatching_files/image-m18-c-51.jpg" alt="Figure 2.13. Screenshot of PLABDC01"><figcaption>Figure 2.13. Screenshot of PLABDC01: Clicking the Copy to File option on the Certificate dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-287"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-288">On the <b>Welcome to the Certificate Export Wizard </b>page, click <b>Next</b>.</p>
+<p id="cn-m18-289"></p><figure><img class="cn-img" id="cn-image-m18-c-52" src="CompliancePatching_files/image-m18-c-52.jpg" alt="Figure 2.14. Screenshot of PLABDC01"><figcaption>Figure 2.14. Screenshot of PLABDC01: Clicking Next on the welcome page of the Certificate Export Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m18-290"><b><i>Step 5</i></b></h4>
+<p id="cn-m18-291">From the <b>Export Private Key </b>page, select the <b>Yes, export the private key </b>option.</p>
+<p id="cn-m18-292">Click <b>Next</b>.</p>
+<p id="cn-m18-293"></p><figure><img class="cn-img" id="cn-image-m18-c-53" src="CompliancePatching_files/image-m18-c-53.jpg" alt="Figure 2.15. Screenshot of PLABDC01"><figcaption>Figure 2.15. Screenshot of PLABDC01: Selecting the export private key option on the Export Private Key page.</figcaption></figure><p></p>
+<h4 id="cn-m18-294"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-295">In the <b>Export File Format </b>page, keep the default selection and click <b>Next</b>.</p>
+<p id="cn-m18-296"></p><figure><img class="cn-img" id="cn-image-m18-c-54" src="CompliancePatching_files/image-m18-c-54.jpg" alt="Figure 2.16. Screenshot of PLABDC01"><figcaption>Figure 2.16. Screenshot of PLABDC01: Selecting the format for exporting the certificate.</figcaption></figure><p></p>
+<h4 id="cn-m18-297"><b><i>Step 7</i></b></h4>
+<p id="cn-m18-298">On the <b>Security </b>page, select the <b>Password </b>checkbox and then type the following in the <b>Password </b>and <b>Confirm Password </b>text boxes:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m18-300">Click <b>Next</b>.</p>
+<p id="cn-m18-301"></p><figure><img class="cn-img" id="cn-image-m18-c-55" src="CompliancePatching_files/image-m18-c-55.jpg" alt="Figure 2.17. Screenshot of PLABDC01"><figcaption>Figure 2.17. Screenshot of PLABDC01: Assigning a password for the private key.</figcaption></figure><p></p>
+<h4 id="cn-m18-302"><b><i>Step 8</i></b></h4>
+<p id="cn-m18-303">On the <b>File to Export </b>page, type:</p>
+<pre id="cn-m18-304"><code>C:\plabdc01
+</code></pre>
+<p id="cn-m18-305">Click <b>Next</b>.</p>
+<p id="cn-m18-306"></p><figure><img class="cn-img" id="cn-image-m18-c-56" src="CompliancePatching_files/image-m18-c-56.jpg" alt="Figure 2.18. Screenshot of PLABDC01"><figcaption>Figure 2.18. Screenshot of PLABDC01: Exporting the certificate to the C drive.</figcaption></figure><p></p>
+<p id="cn-m18-307">On the <b>Completing the Certificate Export Wizard </b>page, click <b>Finish</b>.</p>
+<p id="cn-m18-308"></p><figure><img class="cn-img" id="cn-image-m18-c-57" src="CompliancePatching_files/image-m18-c-57.jpg" alt="Figure 2.19. Screenshot of PLABDC01"><figcaption>Figure 2.19. Screenshot of PLABDC01: Completing the certificate export process.</figcaption></figure><p></p>
+<h4 id="cn-m18-309"><b><i>Step 9 </i></b></h4>
+<p id="cn-m18-310">Click <b>OK </b>when notified that the export was successful.</p>
+<p id="cn-m18-311"></p><figure><img class="cn-img" id="cn-image-m18-c-58" src="CompliancePatching_files/image-m18-c-58.jpg" alt="Figure 2.20. Screenshot of PLABDC01"><figcaption>Figure 2.20. Screenshot of PLABDC01: Clicking OK on the Certificate Export Wizard dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-312"><b><i>Step 10 </i></b></h4>
+<p id="cn-m18-313">Click <b>OK </b>to close the <b>Certificate </b>dialog box.</p>
+<p id="cn-m18-314"></p><figure><img class="cn-img" id="cn-image-m18-c-59" src="CompliancePatching_files/image-m18-c-59.jpg" alt="Figure 2.21. Screenshot of PLABDC01"><figcaption>Figure 2.21. Screenshot of PLABDC01: Clicking OK on the Certificate dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-315"><b><i>Step 11 </i></b></h4>
+<p id="cn-m18-316">Close the <b>IIS Manager </b>console.</p>
+<h3 id="cn-m18-317"><b>Task 3 - Configure Domain to Trust Self-Signed Certificates</b></h3>
+<p id="cn-m18-318">To set up the self-signed certificate to be trusted by the Windows domain, follow these steps:</p>
+<h4 id="cn-m18-319"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-320">On <b>PLABDC01</b>, restore <b>Server Manager </b>if minimized.</p>
+<p id="cn-m18-321">Click the <b>Tools </b>menu and select <b>Group Policy Management</b>.</p>
+<p id="cn-m18-322"></p><figure><img class="cn-img" id="cn-image-m18-c-60" src="CompliancePatching_files/image-m18-c-60.jpg" alt="Figure 2.22. Screenshot of PLABDC01"><figcaption>Figure 2.22. Screenshot of PLABDC01: Selecting the Group Policy Management option from the Tools menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-323"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-324">Expand <b>PRACTICELABS.COM </b>under <b>Forest</b>: <b>PRACTICELABS.COM</b>, and then <b>Domains </b>and then select <b>Default Domain Policy</b>.</p>
+<p id="cn-m18-325">Ignore the screen prompt about GPO links by clicking <b>OK</b>.</p>
+<p id="cn-m18-326">Right-click <b>Default Domain Policy</b>, then select <b>Edit</b>.</p>
+<p id="cn-m18-327"></p><figure><img class="cn-img" id="cn-image-m18-c-61" src="CompliancePatching_files/image-m18-c-61.jpg" alt="Figure 2.23. Screenshot of PLABDC01"><figcaption>Figure 2.23. Screenshot of PLABDC01: Selecting the Edit option from the Default Domain Policy context menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-328"><b><i>Step 3</i></b></h4>
+<p id="cn-m18-329">In the <b>Group Policy Management Editor </b>console, navigate to <b>Computer
+ Configuration &gt; Policies &gt; Windows Settings &gt; Security 
+Settings &gt; Public Key Policies &gt; Trusted Root Certification 
+Authorities</b>.</p>
+<p id="cn-m18-330">Right-click on details pane and select <b>Import</b>.</p>
+<p id="cn-m18-331"></p><figure><img class="cn-img" id="cn-image-m18-c-62" src="CompliancePatching_files/image-m18-c-62.jpg" alt="Figure 2.24. Screenshot of PLABDC01"><figcaption>Figure
+ 2.24. Screenshot of PLABDC01: Selecting the Import option from the 
+context menu for Trusted Root Certification Authorities.</figcaption></figure><p></p>
+<h4 id="cn-m18-332"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-333">Click <b>Next </b>on the <b>Welcome to the Certificate Import Wizard </b>page.</p>
+<p id="cn-m18-334"></p><figure><img class="cn-img" id="cn-image-m18-c-63" src="CompliancePatching_files/image-m18-c-63.jpg" alt="Figure 2.25. Screenshot of PLABDC01"><figcaption>Figure 2.25. Screenshot of PLABDC01: Showing the welcome page of the Certificate Import Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m18-335"><b><i>Step 5 </i></b></h4>
+<p id="cn-m18-336">From the <b>File to Import </b>page, click in the <b>File name </b>box and type:</p>
+<p id="cn-m18-338">Click <b>Next</b>.</p>
+<p id="cn-m18-339"></p><figure><img class="cn-img" id="cn-image-m18-c-64" src="CompliancePatching_files/image-m18-c-64.jpg" alt="Figure 2.26. Screenshot of PLABDC01"><figcaption>Figure 2.26. Screenshot of PLABDC01: Setting the path for importing the certificate.</figcaption></figure><p></p>
+<h4 id="cn-m18-340"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-341">From the <b>Private key protection </b>page, type the following in the Password text box:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m18-343">Keep the other default settings.</p>
+<p id="cn-m18-344">Click <b>Next</b>.</p>
+<p id="cn-m18-345"></p><figure><img class="cn-img" id="cn-image-m18-c-65" src="CompliancePatching_files/image-m18-c-65.jpg" alt="Figure 2.27. Screenshot of PLABDC01"><figcaption>Figure 2.27. Screenshot of PLABDC01: Entering the password for the private key during the import process.</figcaption></figure><p></p>
+<h4 id="cn-m18-346"><b><i>Step 7</i></b></h4>
+<p id="cn-m18-347">In the <b>Certificate Store </b>page, keep the default settings and click <b>Next</b>.</p>
+<p id="cn-m18-348"></p><figure><img class="cn-img" id="cn-image-m18-c-66" src="CompliancePatching_files/image-m18-c-66.jpg" alt="Figure 2.28. Screenshot of PLABDC01"><figcaption>Figure 2.28. Screenshot of PLABDC01: Defining the certificate store for the certificate.</figcaption></figure><p></p>
+<h4 id="cn-m18-349"><b><i>Step 8 </i></b></h4>
+<p id="cn-m18-350">Click <b>Finish </b>to close the <b>Completing the Certification Import Wizard </b>page.</p>
+<p id="cn-m18-351"></p><figure><img class="cn-img" id="cn-image-m18-c-67" src="CompliancePatching_files/image-m18-c-67.jpg" alt="Figure 2.29. Screenshot of PLABDC01"><figcaption>Figure 2.29. Screenshot of PLABDC01: Completing the Certificate Import Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m18-352"><b><i>Step 9 </i></b></h4>
+<p id="cn-m18-353">Click <b>OK </b>when notified that the import was successful.</p>
+<p id="cn-m18-354"></p><figure><img class="cn-img" id="cn-image-m18-c-68" src="CompliancePatching_files/image-m18-c-68.jpg" alt="Figure 2.30. Screenshot of PLABDC01"><figcaption>Figure 2.30. Screenshot of PLABDC01: Clicking OK on the Certificate Import Wizard dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-355"><b><i>Step 10</i></b></h4>
+<p id="cn-m18-356">The self-signed certificate is now added.</p>
+<p id="cn-m18-357"></p><figure><img class="cn-img" id="cn-image-m18-c-69" src="CompliancePatching_files/image-m18-c-69.jpg" alt="Figure 2.31. Screenshot of PLABDC01"><figcaption>Figure
+ 2.31. Screenshot of PLABDC01: Showing the addition of the self-signed 
+certificate under the Trusted Root Certification Authority node.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m18-360">Close the <b>Group Policy Management Editor </b>and <b>Group Policy Management Console </b>windows.</p>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m18-361"><b>Exercise 3 - Create Computer Groups for WSUS</b></h2>
+<p id="cn-m18-362">Computer groups enable you to target updates to 
+specific computers and can allow for specific updates to be applied to 
+specific computers in a granular fashion. This significantly speeds up 
+computer administration processes and improves security by allowing for 
+mass deployment of security patches to all affected machines in one 
+movement. In this exercise, you will go through the steps of creating 
+and assigning these groups.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m18-364">After completing this exercise, you will be able to:</p>
+<ul id="cn-m18-365">
+<li id="cn-m18-365">Create Computer Groups</li>
+<li id="cn-m18-366">Approve Downloaded Updates</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m18-368">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m18-369">
+<li id="cn-m18-369"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m18-370"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m18-371"><img class="cn-img" id="cn-image-m18-c-70" src="CompliancePatching_files/image-m18-c-70.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m18-372"><b>Task 1 - Create Computer Groups</b></h3>
+<p id="cn-m18-373">To create the computer groups, follow these steps:</p>
+<h4 id="cn-m18-374"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-375">On <b>PLABDC01</b>, go back to <b>Windows Server Update Services</b>.</p>
+<p id="cn-m18-376">Press <b>F5 </b>to refresh the screen.</p>
+<h4 id="cn-m18-377"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-378">If a connection error is presented, in the <b>Actions </b>pane click <b>Remove from Console.</b></p>
+<span class="cn-quote" id="cn-m18-379"><b><i>Note</i></b><i>: This error is caused by binding the self-signed certificate to </i><b><i>PLADM01 </i></b><i>- the Windows Server Update Services server. </i></span>
+<p id="cn-m18-380"></p><figure><img class="cn-img" id="cn-image-m18-c-71" src="CompliancePatching_files/image-m18-c-71.jpg" alt="Figure 3.1. Screenshot of PLABDC01"><figcaption>Figure 3.1. Screenshot of PLABDC01: Showing the Update Services Connection error.</figcaption></figure><p></p>
+<h4 id="cn-m18-381"><b><i>Step 3</i></b></h4>
+<p id="cn-m18-382">Click <b>Yes </b>to continue with the removal.</p>
+<p id="cn-m18-383"></p><figure><img class="cn-img" id="cn-image-m18-c-72" src="CompliancePatching_files/image-m18-c-72.jpg" alt="Figure 3.2. Screenshot of PLABDC01"><figcaption>Figure 3.2. Screenshot of PLABDC01: Clicking Yes on the Remove from Console dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-384"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-385">On the <b>Actions </b>pane, click <b>Connect to Server</b>.</p>
+<p id="cn-m18-386"></p><figure><img class="cn-img" id="cn-image-m18-c-73" src="CompliancePatching_files/image-m18-c-73.jpg" alt="Figure 3.3. Screenshot of PLABDC01"><figcaption>Figure 3.3. Screenshot of PLABDC01: Clicking Connect to Server option.</figcaption></figure><p></p>
+<h4 id="cn-m18-387"><b><i>Step 5</i></b></h4>
+<p id="cn-m18-388">On <b>Connect to server </b>dialog box, in the <b>Server name </b>text box, type the following server name:</p>
+<pre id="cn-m18-389"><code>PLABDC01.PRACTICELABS.COM.
+</code></pre>
+<p id="cn-m18-390">From the <b>Port number </b>drop-down, select <b>8531</b>.</p>
+<p id="cn-m18-391">Ensure the <b>Use Secure Sockets Layet (SSL) to connect to this server </b>checkbox is selected.</p>
+<p id="cn-m18-392">Click <b>Connect</b>.</p>
+<p id="cn-m18-393"></p><figure><img class="cn-img" id="cn-image-m18-c-74" src="CompliancePatching_files/image-m18-c-74.jpg" alt="Figure 3.4. Screenshot of PLABDC01"><figcaption>Figure 3.4. Screenshot of PLABDC01: Entering the required details in the Connect To Server dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-394"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-395">Expand the <b>PLABDC01.PRACTICELABS.COM </b>node.</p>
+<p id="cn-m18-396">Under <b>Computers </b>and right-click <b>All Computers</b>, and then select <b>Add Computer Group.</b></p>
+<p id="cn-m18-397"></p><figure><img class="cn-img" id="cn-image-m18-c-75" src="CompliancePatching_files/image-m18-c-75.jpg" alt="Figure 3.5. Screenshot of PLABDC01"><figcaption>Figure 3.5. Screenshot of PLABDC01: Selecting the Add Computer Group option from the context menu of All Computers.</figcaption></figure><p></p>
+<h4 id="cn-m18-398"><b><i>Step 7</i></b></h4>
+<p id="cn-m18-399">On the <b>Add Computer Group </b>dialog box, type <b>Engineering </b>and then click <b>Add</b>.</p>
+<p id="cn-m18-400"></p><figure><img class="cn-img" id="cn-image-m18-c-76" src="CompliancePatching_files/image-m18-c-76.jpg" alt="Figure 3.6. Screenshot of PLABDC01"><figcaption>Figure 3.6. Screenshot of PLABDC01: Adding the Engineering group in the Add Computer Group dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-401"><b><i>Step 8</i></b></h4>
+<p id="cn-m18-402">You will be redirected back to the <b>Update Services </b>window.</p>
+<p id="cn-m18-403">Click the <b>Options </b>node in the left pane. In the middle pane, select <b>Computers</b>.</p>
+<p id="cn-m18-404"></p><figure><img class="cn-img" id="cn-image-m18-c-77" src="CompliancePatching_files/image-m18-c-77.jpg" alt="Figure 3.7. Screenshot of PLABDC01"><figcaption>Figure 3.7. Screenshot of PLABDC01: Clicking the Computers option on the Update Services console.</figcaption></figure><p></p>
+<h4 id="cn-m18-405"><b><i>Step 9 </i></b></h4>
+<p id="cn-m18-406">On the <b>Computers </b>dialog box, select <b>Use Group Policy or registry settings on computers </b>option.</p>
+<p id="cn-m18-407">Click <b>OK</b>.</p>
+<p id="cn-m18-408"></p><figure><img class="cn-img" id="cn-image-m18-c-78" src="CompliancePatching_files/image-m18-c-78.jpg" alt="Figure 3.8. Screenshot of PLABDC01"><figcaption>Figure 3.8. Screenshot of PLABDC01: Selecting the Use Group Policy or registry settings on computers option.</figcaption></figure><p></p>
+<h3 id="cn-m18-409"><b>Task 2 - Approve Downloaded Updates</b></h3>
+<p id="cn-m18-410">To approve the downloaded updates, follow these steps:</p>
+<h4 id="cn-m18-411"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-412">On <b>PLABDC01</b>, while <b>Update Services </b>console is running, select <b>PLABDC01.PRACTICELABS.COM</b>.</p>
+<p id="cn-m18-413">On the middle pane, under <b>To Do </b>section, on <b>X security updates are waiting </b>section, click the <b>approved </b>link.</p>
+<p id="cn-m18-414"></p><figure><img class="cn-img" id="cn-image-m18-c-79" src="CompliancePatching_files/image-m18-c-79.jpg" alt="Figure 3.9. Screenshot of PLABDC01"><figcaption>Figure 3.9. Screenshot of PLABDC01: Showing the Update Services console and clicking the approved option.</figcaption></figure><p></p>
+<h4 id="cn-m18-415"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-416">The list of updates opens.</p>
+<span class="cn-quote" id="cn-m18-417"><b><i>Note</i></b><i>: Choose a Windows 8.1 security update that has NOT been superseded by another update.</i></span>
+<p id="cn-m18-418">On the list of <b>Security Updates</b>, choose any update and right-click on it and select <b>Approve</b>.</p>
+<p id="cn-m18-419"></p><figure><img class="cn-img" id="cn-image-m18-c-80" src="CompliancePatching_files/image-m18-c-80.jpg" alt="Figure 3.10. Screenshot of PLABDC01"><figcaption>Figure 3.10. Screenshot of PLABDC01: Selecting an update and then selecting Approve from the context menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-420"><b><i>Step 3</i></b></h4>
+<p id="cn-m18-421">On the <b>Approve Updates </b>dialog  box, right-click <b>Engineering </b>and select <b>Approved for Install</b>.</p>
+<p id="cn-m18-422"></p><figure><img class="cn-img" id="cn-image-m18-c-81" src="CompliancePatching_files/image-m18-c-81.jpg" alt="Figure 3.11. Screenshot of PLABDC01"><figcaption>Figure 3.11. Screenshot of PLABDC01: Right-clicking Engineering and selecting Approved for Install option.</figcaption></figure><p></p>
+<h4 id="cn-m18-423"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-424">On the <b>Approve Updates </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m18-425"></p><figure><img class="cn-img" id="cn-image-m18-c-82" src="CompliancePatching_files/image-m18-c-82.jpg" alt="Figure 3.12. Screenshot of PLABDC01"><figcaption>Figure 3.12. Screenshot of PLABDC01: Clicking OK on the Approve Updates dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-426"><b><i>Step 5 </i></b></h4>
+<p id="cn-m18-427">On the <b>Approval Progress </b>dialogue box, WSUS will approve the update.</p>
+<p id="cn-m18-428">Click <b>Close </b>when the result <b>Success </b>is displayed.</p>
+<p id="cn-m18-429"></p><figure><img class="cn-img" id="cn-image-m18-c-83" src="CompliancePatching_files/image-m18-c-83.jpg" alt="Figure 3.13. Screenshot of PLABDC01"><figcaption>Figure 3.13. Screenshot of PLABDC01: Clicking Close on the Approval Progress dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-430"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-431">Look for a <b>Windows 8.1 security update</b>.</p>
+<span class="cn-quote" id="cn-m18-432"><b><i>Note</i></b><i>: Choose a Windows 8.1 security update that has NOT been superseded by another update.</i></span>
+<p id="cn-m18-433">In this step, right-click and select <b>Approve</b>.</p>
+<p id="cn-m18-434"></p><figure><img class="cn-img" id="cn-image-m18-c-84" src="CompliancePatching_files/image-m18-c-84.jpg" alt="Figure 3.14. Screenshot of PLABDC01"><figcaption>Figure 3.14. Screenshot of PLABDC01: Selecting an update and then selecting Approve from the context menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-435"><b><i>Step 7</i></b></h4>
+<p id="cn-m18-436">In the <b>Approve Updates </b>dialog box, right-click <b>Engineering </b>and select <b>Approved for Install</b>.</p>
+<p id="cn-m18-437"></p><figure><img class="cn-img" id="cn-image-m18-c-85" src="CompliancePatching_files/image-m18-c-85.jpg" alt="Figure 3.15. Screenshot of PLABDC01"><figcaption>Figure 3.15. Screenshot of PLABDC01: Selecting Approved for Install from the context menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-438"><b><i>Step 8</i></b></h4>
+<p id="cn-m18-439">Click <b>OK </b>to save changes in the <b>Approve Updates </b>dialog box.</p>
+<p id="cn-m18-440"></p><figure><img class="cn-img" id="cn-image-m18-c-86" src="CompliancePatching_files/image-m18-c-86.jpg" alt="Figure 3.16. Screenshot of PLABDC01"><figcaption>Figure 3.16. Screenshot of PLABDC01: Clicking OK on the Approve Updates dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-441"><b><i>Step 9</i></b></h4>
+<p id="cn-m18-442"><b>Close </b>the <b>Approval Progress </b>dialog box when completed.</p>
+<p id="cn-m18-443"></p><figure><img class="cn-img" id="cn-image-m18-c-87" src="CompliancePatching_files/image-m18-c-87.jpg" alt="Figure 3.17. Screenshot of PLABDC01"><figcaption>Figure 3.17. Screenshot of PLABDC01: Clicking Close on the Approval Progress dialog box.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m18-446">From the <b>Approval Progress </b>dialog box, click <b>Close</b>.</p>
+<p id="cn-m18-447">Minimize the <b>Update Services </b>console.</p>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m18-448"><b>Exercise 4 - Configure GPO Policy for WSUS</b></h2>
+<p id="cn-m18-449">In the following exercise, you will implement the 
+tasks to deploy WSUS updates via Group Policy. Using Group Policy, we 
+can designate the services and permissions for an update to affect 
+computer groups of specific departments for example. However, changing 
+relationships in Group Policy can have significant effects, and so care 
+must be taken when working with this method of configuring devices.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m18-451">After completing this exercise, you will be able to:</p>
+<ul id="cn-m18-452">
+<li id="cn-m18-452">Create a GPO for Update Services Client</li>
+<li id="cn-m18-453">Troubleshoot Password and Verify WSUS Client Functionality</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m18-455">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m18-456">
+<li id="cn-m18-456"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m18-457"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m18-458"><img class="cn-img" id="cn-image-m18-c-88" src="CompliancePatching_files/image-m18-c-88.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m18-459"><b>Task 1 - Create a GPO for Update Services Client</b></h3>
+<p id="cn-m18-460">To configure a GPO (Group Policy Object) for WSUS client, perform the following steps:</p>
+<h4 id="cn-m18-461"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-462">Connect to <b>PLABDC01 </b>device.</p>
+<p id="cn-m18-463">In <b>Server Manager</b>, click <b>Tools </b>and select <b>Active Directory Users and Computers</b>.</p>
+<p id="cn-m18-464"></p><figure><img class="cn-img" id="cn-image-m18-c-89" src="CompliancePatching_files/image-m18-c-89.jpg" alt="Figure 4.1. Screenshot of PLABDC01"><figcaption>Figure 4.1. Screenshot of PLABDC01: Selecting Active Directory Users and Computers from the Tools menu.</figcaption></figure><p></p>
+<h4 id="cn-m18-465"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-466">Right-click <b>PRACTICELABS.COM</b>, select <b>New </b>and then select <b>Organizational Unit</b>.</p>
+<p id="cn-m18-467"></p><figure><img class="cn-img" id="cn-image-m18-c-90" src="CompliancePatching_files/image-m18-c-90.jpg" alt="Figure 4.2. Screenshot of PLABDC01"><figcaption>Figure 4.2. Screenshot of PLABDC01: Right-clicking the domain name, selecting New and then selecting Organizational Unit.</figcaption></figure><p></p>
+<h4 id="cn-m18-468"><b><i>Step 3</i></b></h4>
+<p id="cn-m18-469">On the <b>New Object-Organizational Unit </b>dialog box, type <b>WSUS Clients </b>and click <b>OK</b>.</p>
+<p id="cn-m18-470"></p><figure><img class="cn-img" id="cn-image-m18-c-91" src="CompliancePatching_files/image-m18-c-91.jpg" alt="Figure 4.3. Screenshot of PLABDC01"><figcaption>Figure 4.3. Screenshot of PLABDC01: Defining a name for the new organizational unit.</figcaption></figure><p></p>
+<h4 id="cn-m18-471"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-472">Navigate to the <b>Computers </b>container in the left pane, select <b>PLABWIN801</b>, then right-click and select <b>Move</b>.</p>
+<p id="cn-m18-473"></p><figure><img class="cn-img" id="cn-image-m18-c-92" src="CompliancePatching_files/image-m18-c-92.jpg" alt="Figure 4.4. Screenshot of PLABDC01"><figcaption>Figure 4.4. Screenshot of PLABDC01: Moving the PLABWIN810 device to another organizational unit.</figcaption></figure><p></p>
+<h4 id="cn-m18-474"><b><i>Step 5</i></b></h4>
+<p id="cn-m18-475">On the <b>Move </b>dialog box, select <b>WSUS Clients </b>and click <b>OK</b>.</p>
+<span class="cn-quote" id="cn-m18-476"><b><i>Note</i></b><i>: PLABWIN801 will be used as test computer for distribution of updates via WSUS.</i></span>
+<p id="cn-m18-477"></p><figure><img class="cn-img" id="cn-image-m18-c-93" src="CompliancePatching_files/image-m18-c-93.jpg" alt="Figure 4.5. Screenshot of PLABDC01"><figcaption>Figure 4.5. Screenshot of PLABDC01: Moving PLABWIN810 to the WSUS Clients organizational unit.</figcaption></figure><p></p>
+<h4 id="cn-m18-478"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-479">Select <b>WSUS Clients </b>in the left pane.</p>
+<p id="cn-m18-480">Verify that the one computer (PLABWIN801) is present.</p>
+<p id="cn-m18-481">Close <b>Active Directory Users and Computers</b>.</p>
+<p id="cn-m18-482"></p><figure><img class="cn-img" id="cn-image-m18-c-94" src="CompliancePatching_files/image-m18-c-94.jpg" alt="Figure 4.6. Screenshot of PLABDC01"><figcaption>Figure 4.6. Screenshot of PLABDC01: Showing PLABWIN810 in the WSUS Clients organizational unit after movement.</figcaption></figure><p></p>
+<h4 id="cn-m18-483"><b><i>Step 7</i></b></h4>
+<p id="cn-m18-484">From <b>Server Manager</b>, click <b>Tools </b>and select <b>Group Policy Management</b>.</p>
+<h4 id="cn-m18-485"><b><i>Step 8</i></b></h4>
+<p id="cn-m18-486">Expand <b>PRACTICELABS.COM</b>.</p>
+<p id="cn-m18-487">Right-click <b>WSUS Clients</b>, then select <b>Create a GPO in this domain, and Link it here.</b></p>
+<p id="cn-m18-488"></p><figure><img class="cn-img" id="cn-image-m18-c-95" src="CompliancePatching_files/image-m18-c-95.jpg" alt="Figure 4.7. Screenshot of PLABDC01"><figcaption>Figure
+ 4.7. Screenshot of PLABDC01: Right-clicking WSUS Clients and selecting 
+Create a GPO in this domain, and link it here option.</figcaption></figure><p></p>
+<h4 id="cn-m18-489"><b><i>Step 9</i></b></h4>
+<p id="cn-m18-490">On the <b>New GPO </b>dialog box, type <b>WSUS Updates </b>and click <b>OK</b>.</p>
+<p id="cn-m18-491"></p><figure><img class="cn-img" id="cn-image-m18-c-96" src="CompliancePatching_files/image-m18-c-96.jpg" alt="Figure 4.8. Screenshot of PLABDC01"><figcaption>Figure 4.8. Screenshot of PLABDC01: Entering the information in the New GPO dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-492"><b><i>Step 10</i></b></h4>
+<p id="cn-m18-493">Right-click the <b>WSUS Updates </b>GPO link and select <b>Edit</b>.</p>
+<p id="cn-m18-494"></p><figure><img class="cn-img" id="cn-image-m18-c-97" src="CompliancePatching_files/image-m18-c-97.jpg" alt="Figure 4.9. Screenshot of PLABDC01"><figcaption>Figure 4.9. Screenshot of PLABDC01: Selecting Edit from the context menu of WSUS Updates.</figcaption></figure><p></p>
+<h4 id="cn-m18-495"><b><i>Step 11</i></b></h4>
+<p id="cn-m18-496">On the <b>Group Policy Management Editor </b>window, navigate in the left pane to <b>Computer Configuration &gt; Policies &gt; Administrative Templates &gt; Windows Components </b>and select <b>Windows Update.</b></p>
+<p id="cn-m18-497">On the details pane, right-click on <b>Configure Automatic Updates </b>and select <b>Edit</b>.</p>
+<p id="cn-m18-498"></p><figure><img class="cn-img" id="cn-image-m18-c-98" src="CompliancePatching_files/image-m18-c-98.jpg" alt="Figure 4.10. Screenshot of PLABDC01"><figcaption>Figure 4.10. Screenshot of PLABDC01: Selecting Edit from the context menu of a policy.</figcaption></figure><p></p>
+<h4 id="cn-m18-499"><b><i>Step 12</i></b></h4>
+<p id="cn-m18-500">On <b>Configure Automatic Updates</b>, use the following settings:</p>
+<p id="cn-m18-501">Click the <b>Enabled </b>option button.</p>
+<p id="cn-m18-502">From the Configure automatic updating drop-down, select <b>4-Auto download and schedule the install.</b></p>
+<p id="cn-m18-503">Ensure that remaining settings are kept default with the following:</p>
+<pre id="cn-m18-504"><code>Scheduled install day: <b>0 - Every day</b>
+Scheduled install time: <b>03:00</b>
+</code></pre>
+<p id="cn-m18-506">Click <b>OK</b>.</p>
+<p id="cn-m18-507"></p><figure><img class="cn-img" id="cn-image-m18-c-99" src="CompliancePatching_files/image-m18-c-99.jpg" alt="Figure 4.11. Screenshot of PLABDC01"><figcaption>Figure 4.11. Screenshot of PLABDC01: Configuring Automatic Updates.</figcaption></figure><p></p>
+<h4 id="cn-m18-508"><b><i>Step 13</i></b></h4>
+<p id="cn-m18-509">Back on the <b>Group Policy Management Editor </b>window, right-click <b>Specify intranet Microsoft update service location </b>and choose <b>Edit</b>.</p>
+<p id="cn-m18-510"></p><figure><img class="cn-img" id="cn-image-m18-c-100" src="CompliancePatching_files/image-m18-c-100.jpg" alt="Figure 4.12. Screenshot of PLABDC01"><figcaption>Figure 4.12. Screenshot of PLABDC01: Selecting Edit from the context menu of a policy.</figcaption></figure><p></p>
+<h4 id="cn-m18-511"><b><i>Step 14</i></b></h4>
+<p id="cn-m18-512">On <b>Specify intranet Microsoft update service location</b>, use the following settings:</p>
+<p id="cn-m18-513">Select <b>Enabled</b>.</p>
+<p id="cn-m18-514">Input the following in the specified fields:</p>
+<p id="cn-m18-515"><b>Set the intranet update service for detecting updates</b>:</p>
+<pre id="cn-m18-516"><code>https://plabdc01.practicelabs.com:8531
+</code></pre>
+<p id="cn-m18-517"><b>Set the intranet statistics server</b>:</p>
+<pre id="cn-m18-518"><code>https://plabdc01.practicelabs.com:8531
+</code></pre>
+<p id="cn-m18-519">Click <b>OK</b>.</p>
+<p id="cn-m18-520"></p><figure><img class="cn-img" id="cn-image-m18-c-101" src="CompliancePatching_files/image-m18-c-101.jpg" alt="Figure 4.13. Screenshot of PLABDC01"><figcaption>Figure 4.13. Screenshot of PLABDC01: Specifying intranet Microsoft Updates details.</figcaption></figure><p></p>
+<h4 id="cn-m18-521"><b><i>Step 15</i></b></h4>
+<p id="cn-m18-522">Back on the <b>Group Policy Management Editor </b>window, right-click <b>Automatic Updates detection frequency </b>and select <b>Edit</b>.</p>
+<p id="cn-m18-523"></p><figure><img class="cn-img" id="cn-image-m18-c-102" src="CompliancePatching_files/image-m18-c-102.jpg" alt="Figure 4.14. Screenshot of PLABDC01"><figcaption>Figure 4.14. Screenshot of PLABDC01: Selecting Edit from the context menu of a policy.</figcaption></figure><p></p>
+<h4 id="cn-m18-524"><b><i>Step 16</i></b></h4>
+<p id="cn-m18-525">On the <b>Automatic Updates detection frequency </b>window, input the following:</p>
+<p id="cn-m18-526">Select the <b>Enabled </b>option button.</p>
+<p id="cn-m18-527">Check for updates at the following interval (hours): <b>12</b></p>
+<p id="cn-m18-528">Click <b>OK</b>.</p>
+<p id="cn-m18-529"></p><figure><img class="cn-img" id="cn-image-m18-c-103" src="CompliancePatching_files/image-m18-c-103.jpg" alt="Figure 4.15. Screenshot of PLABDC01"><figcaption>Figure 4.15. Screenshot of PLABDC01: Configuring Automatic Updates detection frequency</figcaption></figure><p></p>
+<h4 id="cn-m18-530"><b><i>Step 17</i></b></h4>
+<p id="cn-m18-531">Again, on the <b>Group Policy Management Editor </b>window, right-click <b>Enable client-side targeting </b>and choose <b>Edit</b>.</p>
+<p id="cn-m18-532"></p><figure><img class="cn-img" id="cn-image-m18-c-104" src="CompliancePatching_files/image-m18-c-104.jpg" alt="Figure 4.16. Screenshot of PLABDC01"><figcaption>Figure 4.16. Screenshot of PLABDC01: Selecting Edit from the context menu of a policy.</figcaption></figure><p></p>
+<h4 id="cn-m18-533"><b><i>Step 18</i></b></h4>
+<p id="cn-m18-534">On <b>Enable client-side targeting</b>, click <b>Enabled</b>.</p>
+<p id="cn-m18-535">In <b>Target group name for this computer</b>, type:</p>
+<pre id="cn-m18-536"><code>Engineering
+</code></pre>
+<p id="cn-m18-537">Click <b>OK</b>.</p>
+<p id="cn-m18-538"></p><figure><img class="cn-img" id="cn-image-m18-c-105" src="CompliancePatching_files/image-m18-c-105.jpg" alt="Figure 4.17. Screenshot of PLABDC01"><figcaption>Figure 4.17. Screenshot of PLABDC01: Enabling client-side targeting</figcaption></figure><p></p>
+<h4 id="cn-m18-539"><b><i>Step 19</i></b></h4>
+<p id="cn-m18-540">After defining the WSUS settings in GPO, close <b>Group Policy Management Editor </b>and <b>Group Policy Management Console</b>.</p>
+<p id="cn-m18-541"></p><figure><img class="cn-img" id="cn-image-m18-c-106" src="CompliancePatching_files/image-m18-c-106.jpg" alt="Figure 4.18. Screenshot of PLABDC01"><figcaption>Figure 4.18. Screenshot of PLABDC01: Showing the enabled policies.</figcaption></figure><p></p>
+<h3 id="cn-m18-542"><b>Task 2 - Troubleshoot Password and Verify WSUS Client Functionality</b></h3>
+<p id="cn-m18-543">To verify if the WSUS GPO policies apply to the client, follow these steps:</p>
+<span class="cn-alert" id="cn-m18-544"><b>Alert: </b>Because you have 
+edited group policy, it might cause a relationship error between 
+PLABWIN801 and the Domain Controller. In which case, please continue 
+from Step 1 of this task to resolve this challenge. Otherwise, if you 
+are able to log in automatically without a problem continue from Step 4 
+of this task with the group policy update.</span>
+<h4 id="cn-m18-546"><b><i>Step 1</i></b></h4>
+<p id="cn-m18-547">Ensure you have powered on the required devices and connect to <b>PLABWIN801 </b>device.</p>
+<p id="cn-m18-548">When attempting to log into the Domain after making the policy change, you might be prompted with the login screen.</p>
+<p id="cn-m18-549">Click <b>Other user </b>and provide the following credentials:</p>
+<p id="cn-m18-550"><b>Username:</b></p>
+<pre id="cn-m18-551"><code>Practicelabs\administrator
+</code></pre>
+<p id="cn-m18-552"><b>Password:</b></p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<span class="cn-quote" id="cn-m18-554"><i>This basically describes the 
+relationship between the server and this client, which no longer exists 
+due to the security changes, and that you have moved the machine to the 
+WSUS folder for updates. </i></span>
+<p id="cn-m18-555">Therefore, we need to log into the device with the local Administrator Account.</p>
+<h4 id="cn-m18-556"><b><i>Step 2</i></b></h4>
+<p id="cn-m18-557">Click <b>Start</b>. On the <b>Start </b>page, start typing <b>powerShell</b>.</p>
+<p id="cn-m18-558">In the <b>Search </b>bar, right-click <b>Windows PowerShell </b>and select <b>Run as administrator</b>.</p>
+<p id="cn-m18-559"></p><figure><img class="cn-img" id="cn-image-m18-c-107" src="CompliancePatching_files/image-m18-c-107.jpg" alt="Figure 4.19. Screenshot of PLABWIN801"><figcaption>Figure 4.19. Screenshot of PLABWIN801: Searching for powershell and then selecting Windows PowerShell to run as administrator.</figcaption></figure><p></p>
+<span class="cn-quote" id="cn-m18-560"><b><i>Note: </i></b><i>When prompted with the </i><b><i>User Account Control </i></b><i>dialog box, click </i><b><i>Yes</i></b><i>.</i></span>
+<h4 id="cn-m18-561"><b><i>Step 3</i></b></h4>
+<p id="cn-m18-562">At the PowerShell Prompt, type in the following to reset the password:</p>
+<pre id="cn-m18-563"><code>Reset-ComputerMachinePassword -Server PLABDC01 -Credential PRACTICELABS\Administrator
+</code></pre>
+<p id="cn-m18-564"></p><figure><img class="cn-img" id="cn-image-m18-c-108" src="CompliancePatching_files/image-m18-c-108.jpg" alt="Figure 4.20. Screenshot of PLABWIN801"><figcaption>Figure 4.20. Screenshot of PLABWIN801: Resetting the password in the Windows PowerShell.</figcaption></figure><p></p>
+<h4 id="cn-m18-565"><b><i>Step 4</i></b></h4>
+<p id="cn-m18-566">Now, type in the usual password.</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m18-568">Click <b>OK</b>. Alternatively, press <b>Enter</b>.</p>
+<p id="cn-m18-569">Now the device should automatically log back in without a prompt. Close the Windows PowerShell window.</p>
+<p id="cn-m18-570"></p><figure><img class="cn-img" id="cn-image-m18-c-109" src="CompliancePatching_files/image-m18-c-109.jpg" alt="Figure 4.21. Screenshot of PLABWIN801"><figcaption>Figure 4.21. Screenshot of PLABWIN801: Entering the password in the dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m18-571"><b><i>Step 5</i></b></h4>
+<p id="cn-m18-572">You are back on the desktop.</p>
+<p id="cn-m18-573">Click <b>Start</b>. On the <b>Start </b>page, start typing <b>cmd</b>.</p>
+<p id="cn-m18-574">In the <b>Search </b>bar, right-click <b>Command Prompt </b>and select <b>Run as administrator</b>.</p>
+<span class="cn-quote" id="cn-m18-575"><b><i>Note: </i></b><i>When prompted with the </i><b><i>User Account Control </i></b><i>dialog box, click </i><b><i>Yes</i></b><i>.</i></span>
+<p id="cn-m18-576"></p><figure><img class="cn-img" id="cn-image-m18-c-110" src="CompliancePatching_files/image-m18-c-110.jpg" alt="Figure 4.22. Screenshot of PLABWIN801"><figcaption>Figure 4.22. Screenshot of PLABWIN801: Entering cmd in Search and then selecting Command Prompt to run as administrator.</figcaption></figure><p></p>
+<h4 id="cn-m18-577"><b><i>Step 6</i></b></h4>
+<p id="cn-m18-578">The following commands will force an update of the 
+group policy, then initiate a registration and detection of WSUS server,
+ then finally restart PLABWIN801 computer.</p>
+<p id="cn-m18-579">Type the following commands, press <b>Enter </b>after each line:</p>
+<pre id="cn-m18-580"><code>gpupdate /force
+wuauclt /registernow /detectnow
+shutdown /r /t 0
+</code></pre>
+<p id="cn-m18-583"></p><figure><img class="cn-img" id="cn-image-m18-c-111" src="CompliancePatching_files/image-m18-c-111.jpg" alt="Figure 4.23. Screenshot of PLABWIN801"><figcaption>Figure
+ 4.23. Screenshot of PLABWIN801: Entering commands to force update, 
+initiating and detection of WSUS server and then rebooting the 
+PLABWIN810 device.</figcaption></figure><p></p>
+<h4 id="cn-m18-584"><b><i>Step 7</i></b></h4>
+<p id="cn-m18-585">After 1 minute or so, reconnect to the <b>PLABWIN801 </b>device.</p>
+<p id="cn-m18-586">Right-click <b>Start </b>Icon and select <b>Control Panel</b>.</p>
+<p id="cn-m18-587"></p><figure><img class="cn-img" id="cn-image-m18-c-112" src="CompliancePatching_files/image-m18-c-112.jpg" alt="Figure 4.24. Screenshot of PLABWIN801"><figcaption>Figure 4.24. Screenshot of PLABWIN801: Selecting Control Panel from the context menu of the Windows Run charm.</figcaption></figure><p></p>
+<h4 id="cn-m18-588"><b><i>Step 8</i></b></h4>
+<p id="cn-m18-589">On the <b>Control Panel </b>window, click on the <b>System and Security </b>link.</p>
+<span class="cn-quote" id="cn-m18-590"><b><i>Note</i></b><i>: Since 
+Windows Update has been configured on PLABWIN810 device, ignore any 
+prompt for a Windows Update, which may appear any time on screen.</i></span>
+<p id="cn-m18-591"></p><figure><img class="cn-img" id="cn-image-m18-c-113" src="CompliancePatching_files/image-m18-c-113.jpg" alt="Figure 4.25. Screenshot of PLABWIN801"><figcaption>Figure 4.25. Screenshot of PLABWIN801: Selecting the System and Security option in Control Panel.</figcaption></figure><p></p>
+<h4 id="cn-m18-592"><b><i>Step 9</i></b></h4>
+<p id="cn-m18-593">On the <b>System and Security </b>window, click <b>Windows Update</b>.</p>
+<p id="cn-m18-594"></p><figure><img class="cn-img" id="cn-image-m18-c-114" src="CompliancePatching_files/image-m18-c-114.jpg" alt="Figure 4.26. Screenshot of PLABWIN801"><figcaption>Figure 4.26. Screenshot of PLABWIN801: Selecting the Windows Update option in the System and Security window.</figcaption></figure><p></p>
+<h4 id="cn-m18-595"><b><i>Step 10</i></b></h4>
+<p id="cn-m18-596">On the <b>Windows Update </b>page, click <b>Change settings </b>in the left pane.</p>
+<p id="cn-m18-597"></p><figure><img class="cn-img" id="cn-image-m18-c-115" src="CompliancePatching_files/image-m18-c-115.jpg" alt="Figure 4.27. Screenshot of PLABWIN801"><figcaption>Figure 4.27. Screenshot of PLABWIN801: Clicking the Change settings option.</figcaption></figure><p></p>
+<h4 id="cn-m18-598"><b><i>Step 11</i></b></h4>
+<p id="cn-m18-599">You can see here that this <b>PLABWIN801 </b>workstation is configured to receive updates.</p>
+<p id="cn-m18-600">It may take a few hours before updates are downloaded to this computer.</p>
+<p id="cn-m18-601">Click <b>OK</b>.</p>
+<p id="cn-m18-602"></p><figure><img class="cn-img" id="cn-image-m18-c-116" src="CompliancePatching_files/image-m18-c-116.jpg" alt="Figure 4.28. Screenshot of PLABWIN801"><figcaption>Figure 4.28. Screenshot of PLABWIN801: Showing the Group Policy configuration applied on PLABWIN810 device.</figcaption></figure><p></p>
+<span class="cn-quote" id="cn-m18-603"><b><i>Note</i></b><i>: Updates 
+may not download immediately after the initial install of WSUS on the 
+server. You may need to manually run WSUS synchronization again to force
+ the WSUS server to download the updates available from Microsoft. The 
+important thing here is that the Windows Update Services server on </i><b><i>PLABDC01 </i></b><i>was
+ able to synchronize with the Microsoft update site and build a list of 
+updates that can be downloaded at the next synchronization.</i></span>
+<span class="atom-code hidden">09144aba-611a-486d-b22e-e9472e284a8f</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m18-607"><b>Review</b></h2>
+<p id="cn-m18-608">Well done, you have completed the <b>Compliance Patching </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">b7b795cd-e86b-47c6-96af-9fb4eb2241fb</span>
+<span class="atom-code hidden">096e0e5b-1611-4ee5-b5c4-b9ea4a602872</span>
+<span class="atom-code hidden">a14059ad-6db4-426f-9114-aaa10bb446ad</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m18-615">You have completed the following exercises:</p>
+<ul id="cn-m18-616">
+<li id="cn-m18-616">Install and Configure WSUS</li>
+<li id="cn-m18-617">WSUS Server Certificates Security</li>
+<li id="cn-m18-618">Create Computer Groups for WSUS</li>
+<li id="cn-m18-619">Configure GPO Policy for WSUS</li>
+</ul>
+<p id="cn-m18-621">You should now be able to:</p>
+<ul id="cn-m18-622">
+<li id="cn-m18-622">Configure Disk Storage for WSUS</li>
+<li id="cn-m18-623">Install and Configure WSUS</li>
+<li id="cn-m18-624">Enable SSL for WSUS Server</li>
+<li id="cn-m18-625">Exporting Self-Signed Certificates</li>
+<li id="cn-m18-626">Configuring Domain to Trust Self-Signed Certificates</li>
+<li id="cn-m18-627">Create Computer Groups</li>
+<li id="cn-m18-628">Approve Downloaded Updates</li>
+<li id="cn-m18-629">Create a GPO for Update Services Client</li>
+<li id="cn-m18-630">Troubleshoot Password and Verify WSUS Client Functionality</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m18-634">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ConfiguringAdvancedAuthenticationandAuthorization_files/print-styles.css" rel="stylesheet">
+    <script src="ConfiguringAdvancedAuthenticationandAuthorization_files/jquery.min.js"></script>
+    <script src="ConfiguringAdvancedAuthenticationandAuthorization_files/jspdf.js"></script>
+    <script src="ConfiguringAdvancedAuthenticationandAuthorization_files/from_html.js"></script>
+    <script src="ConfiguringAdvancedAuthenticationandAuthorization_files/addimage.js"></script>
+    <script src="ConfiguringAdvancedAuthenticationandAuthorization_files/filesaver.js"></script>
+    <script src="ConfiguringAdvancedAuthenticationandAuthorization_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ZAqzGjYr3Vn9dE1qv/QZZDHb/QiAG9r/MPw6Qu+qhFjdyUvLUcato8aSlkXun14KhEzuYCVtqTpXPHFiuz//3tLMFma1ZIWpw4pwnM1aCeU=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Configuring Advanced Authentication and Authorization</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Install and Configure Network Policy Server </li><li>Exercise 2 - Install and Configure Remote Access Server</li><li>Exercise 3 - Configure the VPN Client</li><li>Exercise 4 - Viewing the NPS Logs</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m13-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>VPN</div>
+<div>NPS</div>
+<div>Authentication</div>
+</div>
+<p id="cn-m13-5">Welcome to the <b>Configuring Advanced Authentication and Authorization </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m13-9">In this module, you will complete the following exercises:</p>
+<ul id="cn-m13-10">
+<li id="cn-m13-10">Install and Configure Network Policy Server</li>
+<li id="cn-m13-11">Install and Configure Remote Access Server</li>
+<li id="cn-m13-12">Configure the VPN Client</li>
+<li id="cn-m13-13">Viewing the NPS Logs</li>
+</ul>
+<p id="cn-m13-14">After completing this lab, you will be able to:</p>
+<ul id="cn-m13-15">
+<li id="cn-m13-15">Add DNS IP Address on PLABSA01</li>
+<li id="cn-m13-16">Install Network Policy Server</li>
+<li id="cn-m13-17">Configure Network Policy Service</li>
+<li id="cn-m13-18">Configure Network Policy Server Logs</li>
+<li id="cn-m13-19">Prepare the VPN Interface</li>
+<li id="cn-m13-20">Install Remote Access Service</li>
+<li id="cn-m13-21">Initialize Remote Access Management</li>
+<li id="cn-m13-22">Configure Authentication and Accounting Providers</li>
+<li id="cn-m13-23">Configure the VPN Ports</li>
+<li id="cn-m13-24">Specify the VPN Adapter</li>
+<li id="cn-m13-25">Grant VPN Dial-in Permission</li>
+<li id="cn-m13-26">Configure a Secondary IP Address for VPN Client</li>
+<li id="cn-m13-27">Create VPN Client Dialer</li>
+<li id="cn-m13-28">Check the Status of a VPN Connection</li>
+<li id="cn-m13-29">Examine the NPS Logs</li>
+<li id="cn-m13-30">Install Tools to Read the NPS Logs</li>
+<li id="cn-m13-31">Read the NPS Logs</li>
+<li id="cn-m13-32">Export NPS Templates</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m13-34">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m13-35">
+<li id="cn-m13-35"><b>CAS-003 </b>4.3 Given a scenario, integrate and 
+troubleshoot advanced authentication and authorization technologies to 
+support enterprise security objectives.</li>
+</ul>
+<span class="cn-quote" id="cn-m13-36"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m13-38">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m13-42">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m13-43">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m13-45"><b>Lab Topology</b></h2>
+<p id="cn-m13-46">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m13-47">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m13-48">
+<li id="cn-m13-48"><b>PLABDC01 </b>(Windows Server 2016 Domain Controller)</li>
+<li id="cn-m13-49"><b>PLABDM01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m13-50"><b>PLABDM02 </b>(Windows Server 2012 R2 Domain Member Server)</li>
+<li id="cn-m13-51"><b>PLABSA01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m13-52"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+<li id="cn-m13-53"><b>PLABWIN10 </b>(Windows 10 Workstation)</li>
+</ul>
+<p id="cn-m13-54"><img class="cn-img" id="cn-image-m13-c-0" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m13-55">Click <b>Next </b>to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m13-56"><b>Exercise 1 - Install and Configure Network Policy Server </b></h2>
+<p id="cn-m13-57">Network administrators deploy remote access servers 
+(RAS) that give mobile users the capability to dial-up and connect to 
+corporate resources like folders, files, and applications. For 
+scalability, network managers add more RAS servers and deploy a modem 
+pool to accommodate more dial-in users. However, this infrastructure 
+upgrade will require more resources to be spent on the hardware, long 
+distance call charges and toll-free telephone service. A company may opt
+ to outsource their remote access services to a third party to save on 
+telephone charges, but there is a security risk of entrusting and 
+managing your dial-up user accounts to an external organization like 
+Internet Service Providers (ISPs).</p>
+<p id="cn-m13-58">Fortunately, the problem of managing user accounts and
+ security can be addressed with the use of virtual private networks and 
+Remote Authentication Dial-in User Service (RADIUS). Virtual private 
+networks (VPNs) makes use of an existing Internet connection to connect 
+to corporate network resources. Therefore, a user can be located 
+anywhere in the world and be able to gain access to network resources by
+ using the Internet and then connecting to the VPN server. While RADIUS 
+provides a centralized infrastructure for the authentication of dial-in 
+VPN users, authorization for access to network resources and also counts
+ the number of minutes a dial-in user spends in a remote session.</p>
+<p id="cn-m13-59">In this exercise, you will install the Network Policy 
+Server (NPS) which is Microsoft’s implementation of the RADIUS protocol.
+ You will not configure dial-up remote access server but instead, 
+install and set up a VPN server based on Microsoft’s Routing and Remote 
+Access Services.</p>
+<p id="cn-m13-60">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m13-62">After completing this exercise, you will be able to:</p>
+<ul id="cn-m13-63">
+<li id="cn-m13-63">Add DNS IP Address on PLABSA01</li>
+<li id="cn-m13-64">Install Network Policy Server</li>
+<li id="cn-m13-65">Configure Network Policy Service</li>
+<li id="cn-m13-66">Configure Network Policy Server Logs</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m13-68">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m13-69">
+<li id="cn-m13-69"><b>PLABDC01 </b>(Windows Server 2016 Domain Controller)</li>
+<li id="cn-m13-70"><b>PLABDM02 </b>(Windows Server 2012 R2 Domain Member Server)</li>
+<li id="cn-m13-71"><b>PLABSA01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m13-72"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+</ul>
+<p id="cn-m13-73"><img class="cn-img" id="cn-image-m13-c-1" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m13-75"><b>Task 1 - Add DNS IP Address on PLABSA01</b></h3>
+<p id="cn-m13-76">In this task, <b>PLABSA01 </b>will be used as an NPS 
+server in the PRACTICELABS.COM domain. This server has two network 
+interfaces which are requirements for the NPS server.</p>
+<p id="cn-m13-77">To add <b>PLABSA01 </b>to the Practicelabs.com domain, perform the following steps:</p>
+<h4 id="cn-m13-78"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-79">Ensure you have powered on the required devices and connect to <b>PLABSA01</b>.</p>
+<p id="cn-m13-80">On the <b>Server Manager </b>window, click <b>Tools </b>and then select <b>Windows PowerShell</b>.</p>
+<p id="cn-m13-81"></p><figure><img class="cn-img" id="cn-image-m13-c-2" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-2.jpg" alt="Figure 1.1 Screenshot of the PLABSA01"><figcaption>Figure 1.1 Screenshot of the PLABSA01: Selecting Windows PowerShell from the Tools menu on Server Manager.</figcaption></figure><p></p>
+<h4 id="cn-m13-82"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-83">On the <b>Windows PowerShell </b>prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-84"><code>netsh interface ip set dns “Ethernet” static 192.168.0.1
+</code></pre>
+<p id="cn-m13-85">This command sets <b>192.168.0.1 </b>as the DNS server for <b>PLABSA01</b>. Note that the given IP address refers to <b>PLABDC01 </b>- the DNS on the <b>PracticeLabs </b>domain. Migrating the server to this DNS server facilitates its integration into the <b>PracticeLabs </b>domain.</p>
+<span class="cn-quote" id="cn-m13-86"><b><i>Note</i></b><i>: If you get an error message running the above command, re-run the same command.</i></span>
+<p id="cn-m13-87"></p><figure><img class="cn-img" id="cn-image-m13-c-3" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-3.jpg" alt="Figure 1.2 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.2 Screenshot of the PLABSA01: Administrator: Windows PowerShell 
+window is displayed showing the command to specify a preferred static IP
+ as DNS for a network interface typed-in.</figcaption></figure><p></p>
+<h3 id="cn-m13-88"><b>Task 2 - Install Network Policy Server</b></h3>
+<p id="cn-m13-89">Network policy server is included with Windows Server 
+2016 by default. However, you need to install it to make it available 
+for use.</p>
+<p id="cn-m13-90">To install the network policy server, perform the following steps:</p>
+<h4 id="cn-m13-91"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-92">In <b>Windows PowerShell</b>, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-93"><code>Add-WindowsFeature NPAS -IncludeManagementTools
+</code></pre>
+<p id="cn-m13-94"></p><figure><img class="cn-img" id="cn-image-m13-c-4" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-4.jpg" alt="Figure 1.3 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.3 Screenshot of the PLABSA01: Administrator: Windows PowerShell 
+window is displayed showing the command to add network policy and access
+ services typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m13-95"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-96">The installation of Windows features starts.</p>
+<span class="cn-quote" id="cn-m13-97"><b><i>Note</i></b><i>: If you get 
+an error message running the above command, re-run the same command. 
+This error happens if Server Manager is busy collecting system 
+information after a restart.</i></span>
+<p id="cn-m13-98"></p><figure><img class="cn-img" id="cn-image-m13-c-5" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-5.jpg" alt="Figure 1.4 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.4 Screenshot of the PLABSA01: Administrator: Windows PowerShell 
+window is displayed showing the specified feature being installed on the
+ server.</figcaption></figure><p></p>
+<h4 id="cn-m13-99"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-100">Read the message indicating the success of feature installation.</p>
+<p id="cn-m13-101">Type <b>Exit </b>and press <b>Enter</b>.</p>
+<p id="cn-m13-102"></p><figure><img class="cn-img" id="cn-image-m13-c-6" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-6.jpg" alt="Figure 1.5 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.5 Screenshot of the PLABSA01: Administrator: Windows PowerShell 
+window is displayed showing system-response to the command typed-in in 
+the previous step and the command to exit the window typed-in.</figcaption></figure><p></p>
+<h3 id="cn-m13-103"><b>Task 3 - Configure Network Policy Service</b></h3>
+<p id="cn-m13-104">After installing NPS on PLABSA01, you will configure to accept connections from an NPS client. In this task, you will configure <b>PLABDM02 </b>as the NPS client to the NPS Server on <b>PLABSA02</b>.</p>
+<p id="cn-m13-105">To configure network policy service, perform the following steps:</p>
+<h4 id="cn-m13-106"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-107">On the <b>Server Manager </b>window of <b>PLABSA01</b>, click <b>Tools </b>and then select <b>Network Policy Server</b>.</p>
+<p id="cn-m13-108"></p><figure><img class="cn-img" id="cn-image-m13-c-7" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-7.jpg" alt="Figure 1.6 Screenshot of the PLABSA01"><figcaption>Figure 1.6 Screenshot of the PLABSA01: Tools &gt; Network Policy Server menu-options are selected on the Server Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m13-109"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-110">The <b>Network Policy Server </b>window is displayed.</p>
+<p id="cn-m13-111">Expand the <b>RADIUS Clients and Servers </b>node under the <b>NPS (Local) </b>linked-node tree on the left pane.</p>
+<p id="cn-m13-112"></p><figure><img class="cn-img" id="cn-image-m13-c-8" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-8.jpg" alt="Figure 1.7 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.7 Screenshot of the PLABSA01: Network Policy Server console is 
+displayed showing the required node path on the navigation pane at the 
+left selected.</figcaption></figure><p></p>
+<h4 id="cn-m13-113"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-114">Right-click the <b>RADIUS Clients </b>option and select <b>New</b>.</p>
+<p id="cn-m13-115"></p><figure><img class="cn-img" id="cn-image-m13-c-9" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-9.jpg" alt="Figure 1.8 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.8 Screenshot of the PLABSA01: Context menu (that appears on 
+right-clicking the RADIUS Clients node) &gt; New menu-options are 
+highlighted on the Network Policy Server console.</figcaption></figure><p></p>
+<h4 id="cn-m13-116"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-117">On the <b>New RADIUS Client (PLABDM02 Properties) </b>dialog box, in the <b>Friendly name </b>text box, type the following name:</p>
+<pre id="cn-m13-118"><code>PLABDM02
+</code></pre>
+<p id="cn-m13-119">In the <b>Address (IP or DNS) </b>text box, type the following IP address:</p>
+<pre id="cn-m13-120"><code>192.168.0.3
+</code></pre>
+<p id="cn-m13-121">On the <b>Shared secret </b>and <b>Confirm shared secret </b>text boxes, type the following password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<span class="cn-quote" id="cn-m13-123"><b><i>Note</i></b><i>: The Shared Secret is the password that secures the connection between the NPS client and the NPS server.</i></span>
+<p id="cn-m13-124">Click <b>Verify </b>next to the <b>Address (IP or DNS) </b>text box<b>.</b></p>
+<h4 id="cn-m13-125"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-126">On the <b>Verify Address </b>dialog box, click <b>Resolve</b>.</p>
+<p id="cn-m13-127"><b>192.168.0.3 </b>will appear on the <b>IP address </b>text area.</p>
+<p id="cn-m13-128">Click <b>OK</b>.</p>
+<h4 id="cn-m13-129"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-130">Back on the <b>New RADIUS Client (PLABDM02 Properties) </b>dialog box, click the <b>Advanced </b>tab.</p>
+<h4 id="cn-m13-131"><b><i>Step 7</i></b></h4>
+<p id="cn-m13-132">On the <b>Advanced </b>tab, select the <b>Access-Request messages must contain the Message-Authenticator attribute </b>checkbox.</p>
+<p id="cn-m13-133">Click <b>OK </b>to close.</p>
+<p id="cn-m13-134"></p><figure><img class="cn-img" id="cn-image-m13-c-10" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-10.jpg" alt="Figure 1.9 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.9 Screenshot of the PLABSA01: Advanced tab on the New RADIUS Client 
+(PLABDM02 Properties) dialog box is displayed showing the required 
+settings performed and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-135"><b><i>Step 8</i></b></h4>
+<p id="cn-m13-136">Click <b>Radius Clients </b>in the left pane. Notice that <b>PLABDM02 </b>appears in the right pane.</p>
+<p id="cn-m13-137"></p><figure><img class="cn-img" id="cn-image-m13-c-11" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-11.jpg" alt="Figure 1.10 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.10 Screenshot of the PLABSA01: RADIUS Clients has been selected from 
+the left pane and PLABDM02 is now visible in the right pane (under the 
+heading RADIUS Clients).</figcaption></figure><p></p>
+<h3 id="cn-m13-138"><b>Task 4 - Configure Network Policy Server Logs</b></h3>
+<p id="cn-m13-139">In this task, you will configure the properties of Network Policy Server accounting logs on the <b>PLABSA01 </b>device.
+ The logs present important information about the authentication of 
+users who sign in to the network through a VPN connection.  You will be 
+interpreting these logs in a later exercise.</p>
+<p id="cn-m13-140">To configure the network policy server logs, perform the following steps:</p>
+<h4 id="cn-m13-141"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-142">On the <b>Network Policy Server </b>window, select the <b>Accounting </b>node from under the <b>NPS (Local) </b>linked tree on the left pane.</p>
+<p id="cn-m13-143">From right details pane, click <b>Change Log File Properties </b>hyperlink.</p>
+<p id="cn-m13-144"></p><figure><img class="cn-img" id="cn-image-m13-c-12" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-12.jpg" alt="Figure 1.11 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.11 Screenshot of the PLABSA01: Change Log File Properties link is 
+highlighted on the details pane of the Network Policy Server console.</figcaption></figure><p></p>
+<h4 id="cn-m13-145"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-146">On the <b>Log File Properties </b>dialog box, click the <b>Log File </b>tab and specify the following settings:</p>
+<pre id="cn-m13-147"><code><b>Format</b>: IAS (Legacy)
+<b>Create a new log file</b>: Daily
+</code></pre>
+<p id="cn-m13-149"></p><figure><img class="cn-img" id="cn-image-m13-c-13" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-13.jpg" alt="Figure 1.12 Screenshot of the PLABSA01"><figcaption>Figure
+ 1.12 Screenshot of the PLABSA01: Log File Properties dialog box is 
+displayed showing the required settings performed and click the OK 
+button.</figcaption></figure><p></p>
+<span class="atom-code hidden">f4b668ae-6731-4fec-956d-91344aefd689</span>
+<p id="cn-m13-152">Click <b>OK</b>.</p>
+<p id="cn-m13-153">Minimize <b>Network Policy Server</b>.</p>
+<span class="cn-alert" id="cn-m13-154">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m13-155"><b>Exercise 2 - Install and Configure Remote Access Server</b></h2>
+<p id="cn-m13-156">In this exercise, you will install and then set up 
+Microsoft Routing and Remote Access Service which will provide the 
+virtual private network (VPN) server.</p>
+<p id="cn-m13-157">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m13-159">After completing this exercise, you will be able to:</p>
+<ul id="cn-m13-160">
+<li id="cn-m13-160">Prepare the VPN Interface</li>
+<li id="cn-m13-161">Install Remote Access Service</li>
+<li id="cn-m13-162">Initialize Remote Access Management</li>
+<li id="cn-m13-163">Configure Authentication and Accounting Providers</li>
+<li id="cn-m13-164">Configure the VPN Ports</li>
+<li id="cn-m13-165">Specify the VPN Adapter</li>
+<li id="cn-m13-166">Grant VPN dial-in permission</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m13-168">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m13-169">
+<li id="cn-m13-169"><b>PLABDC01 </b>(Windows Server 2016 Domain Controller)</li>
+<li id="cn-m13-170"><b>PLABDM02 </b>(Windows Server 2012 R2 Domain Member Server)</li>
+<li id="cn-m13-171"><b>PLABSA01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m13-172"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+</ul>
+<p id="cn-m13-173"><img class="cn-img" id="cn-image-m13-c-14" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-14.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m13-174"><b>Task 1 - Prepare the VPN Interface </b></h3>
+<p id="cn-m13-175">After configuring the NPS server and creating an NPS client, you need to prepare the VPN server (<b>PLABDM02</b>) to enable a VPN connection. In this task, you will assign the static IP address and the preferred DNS to <b>Ethernet 2 </b>- the second interface on <b>PLABDM02</b>. These settings prepare <b>PLABDM02 </b>as the VPN interface on the <b>PracticeLabs </b>domain.</p>
+<p id="cn-m13-176">To prepare the VPN server, perform the following steps:</p>
+<h4 id="cn-m13-177"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-178">Ensure you have powered on the required devices and connect to <b>PLABDM02</b>.</p>
+<p id="cn-m13-179">From the <b>Server Manager </b>window, open <b>Windows PowerShell</b>.</p>
+<h4 id="cn-m13-180"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-181">On the <b>Windows PowerShell </b>window, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-182"><code>netsh interface ip set address name="Ethernet 2" static 192.168.0.20 255.255.255.0
+</code></pre>
+<span class="cn-quote" id="cn-m13-183"><b><i>Note</i></b><i>: The second
+ interface will act as the VPN server’s public interface which will 
+receive incoming connections from the VPN client.</i></span>
+<p id="cn-m13-184"></p><figure><img class="cn-img" id="cn-image-m13-c-15" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-15.jpg" alt="Figure 2.1 Screenshot of PLABDM02"><figcaption>Figure
+ 2.1 Screenshot of PLABDM02: Administrator Windows PowerShell is 
+displayed. It is showing the command to set static IP address for a 
+network interface typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m13-185"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-186">On the next prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-187"><code>netsh interface ip set dns "Ethernet 2" static 192.168.0.1
+</code></pre>
+<span class="cn-quote" id="cn-m13-188"><b><i>Note</i></b><i>: If you get
+ an error message entering the command above, try again. This may be 
+caused by delays in detecting the new IP address statically assigned to 
+Ethernet 2. </i></span>
+<p id="cn-m13-189">This command assigns <b>PLABDM02 Ethernet 2’s </b>network connection with a preferred DNS of <b>192.168.0.1</b>.</p>
+<p id="cn-m13-190"></p><figure><img class="cn-img" id="cn-image-m13-c-16" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-16.jpg" alt="Figure 2.2 Screenshot of PLABDM02"><figcaption>Figure
+ 2.2 Screenshot of PLABDM02: Administrator Windows PowerShell window is 
+displayed showing the command to set a preferred DNS for a given network
+ interface.</figcaption></figure><p></p>
+<h3 id="cn-m13-191"><b>Task 2 - Install Remote Access Service&nbsp;&nbsp;</b></h3>
+<p id="cn-m13-192">To enable the VPN connection, remote access service 
+(RAS) must be installed on the VPN server. In this task, you will 
+install RAS on the <b>PLABDM02 </b>device - the server configured as the VPN interface.</p>
+<p id="cn-m13-193">To install the remote access service, perform the following steps:</p>
+<h4 id="cn-m13-194"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-195">Using <b>PLABDM02</b>, access the <b>Windows PowerShell </b>window.</p>
+<p id="cn-m13-196">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-197"><code>Add-WindowsFeature RemoteAccess, DirectAccess-VPN, Routing -IncludeManagementTools
+</code></pre>
+<p id="cn-m13-198"></p><figure><img class="cn-img" id="cn-image-m13-c-17" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-17.jpg" alt="Figure 2.3 Screenshot of PLABDM02"><figcaption>Figure
+ 2.3 Screenshot of PLABDM02: Administrator Windows PowerShell window is 
+displayed showing the command to add the remote access feature typed-in.</figcaption></figure><p></p>
+<p id="cn-m13-200">Please wait while the installation is in progress.</p>
+<p id="cn-m13-201"></p><figure><img class="cn-img" id="cn-image-m13-c-18" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-18.jpg" alt="Figure 2.4 Screenshot of PLABDM02"><figcaption>Figure 2.4 Screenshot of PLABDM02: Administrator Windows PowerShell window is displayed tracking progress of the installation.</figcaption></figure><p></p>
+<h4 id="cn-m13-202"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-203">Verify the successful installation of the feature and type <b>exit </b>on the next prompt.</p>
+<p id="cn-m13-204">Press <b>Enter</b>.</p>
+<p id="cn-m13-205">You are redirected back to the <b>PLABDM02 </b>desktop. </p><figure><img class="cn-img" id="cn-image-m13-c-19" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-19.jpg" alt="Figure 2.5 Screenshot of the PLABDM02"><figcaption>Figure
+ 2.5 Screenshot of the PLABDM02: Administrator Windows PowerShell window
+ is displayed showing the status of the installation specified in an 
+earlier step and the command to exit the window typed-in.</figcaption></figure><p></p>
+<h3 id="cn-m13-206"><b>Task 3 - Initialize Remote Access Management</b></h3>
+<p id="cn-m13-207">After installing RAS, you initialize the service. In this task, you will initialize RAS on the <b>PLABDM02 </b>server.</p>
+<p id="cn-m13-208">To initialize remote access management, perform the following steps:</p>
+<h4 id="cn-m13-209"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-210">On <b>PLABDM02</b>, access the <b>Server Manager</b>.</p>
+<p id="cn-m13-211">On the <b>Server Manager</b>, click the <b>Tools </b>option from the menu bar at the top.</p>
+<p id="cn-m13-212">Select the <b>Remote Access Management </b>option from the drop-down list.</p>
+<p id="cn-m13-213"></p><figure><img class="cn-img" id="cn-image-m13-c-20" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-20.jpg" alt="Figure 2.6 Screenshot of PLABDM02"><figcaption>Figure 2.6 Screenshot of PLABDM02: Tools &gt; Remote Access Management menu options are selected on the Server Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m13-214"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-215">On the <b>Remote Access Management Console</b>, click the <b>Direct Access and VPN </b>link on the left navigation pane.</p>
+<h4 id="cn-m13-216"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-217">The Remote Access configuration details are displayed on the <b>Remote Access Setup </b>pane in the middle.</p>
+<p id="cn-m13-218">On the <b>Remote Access Setup </b>dialog box displayed, click the <b>Run the Remote Access Setup Wizard </b>link.</p>
+<p id="cn-m13-219"></p><figure><img class="cn-img" id="cn-image-m13-c-21" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-21.jpg" alt="Figure 2.7 Screenshot of PLABDM02"><figcaption>Figure 2.7 Screenshot of PLABDM02: Run the Remote Access Setup Wizard link is available on the Remote Access Setup dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m13-220"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-221">On the <b>Configure Remote Access </b>options page, select <b>Deploy VPN only</b>.</p>
+<p id="cn-m13-222"></p><figure><img class="cn-img" id="cn-image-m13-c-22" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-22.jpg" alt="Figure 2.8 Screenshot of PLABDM02"><figcaption>Figure 2.8 Screenshot of PLABDM02: Configure Remote options box is displayed showing the required selection performed.</figcaption></figure><p></p>
+<h4 id="cn-m13-223"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-224">The <b>Routing and Remote Access </b>window is displayed.</p>
+<p id="cn-m13-225">Right-click the <b>PLABDM02 </b>node on the left pane and then select <b>Configure and Enable Routing and Remote Access</b>.</p>
+<span class="cn-quote" id="cn-m13-226"><b><i>Note</i></b><i>: The red down-arrow on the </i><b><i>PLABDM02 </i></b><i>server-icon indicates that the remote service is not configured on the server.</i></span>
+<p id="cn-m13-227"></p><figure><img class="cn-img" id="cn-image-m13-c-23" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-23.jpg" alt="Figure 2.9 Screenshot of PLABDM02"><figcaption>Figure
+ 2.9 Screenshot of PLABDM02: Context menu (that appears on 
+right-clicking the local server name-node) &gt; Configure and Enable 
+Routing and Remote Access menu-options are highlighted on the Routing 
+and Remote Access console.</figcaption></figure><p></p>
+<h4 id="cn-m13-228"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-229">On the <b>Welcome </b>page of the <b>Routing and Remote Access Server Setup Wizard</b>, read the information and click <b>Next</b>.</p>
+<p id="cn-m13-230"></p><figure><img class="cn-img" id="cn-image-m13-c-24" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-24.jpg" alt="Figure 2.10 Screenshot of PLABDM02"><figcaption>Figure
+ 2.10 Screenshot of PLABDM02: Welcome page on the Routing and Remote 
+Access Server Setup Wizard is displayed showing the Next button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-231"><b><i>Step 7</i></b></h4>
+<p id="cn-m13-232">On the <b>Configuration </b>page, ensure the <b>Remote access (dial-up or VPN) </b>option is selected.</p>
+<p id="cn-m13-233">Click <b>Next</b>.</p>
+<p id="cn-m13-234"></p><figure><img class="cn-img" id="cn-image-m13-c-25" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-25.jpg" alt="Figure 2.11 Screenshot of PLABDM02"><figcaption>Figure
+ 2.11 Screenshot of PLABDM02: Configuration page on the Routing and 
+Remote Access Server Setup Wizard is displayed showing the required 
+selection performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-235"><b><i>Step 8</i></b></h4>
+<p id="cn-m13-236">On the <b>Remote Access </b>page, select the <b>VPN </b>checkbox and click <b>Next</b>.</p>
+<p id="cn-m13-237"></p><figure><img class="cn-img" id="cn-image-m13-c-26" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-26.jpg" alt="Figure 2.12 Screenshot of PLABDM02"><figcaption>Figure
+ 2.12 Screenshot of PLABDM02: Remote Access page on the Routing and 
+Remote Access Server Setup Wizard is displayed showing the required 
+selection performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-238"><b><i>Step 9</i></b></h4>
+<p id="cn-m13-239">On the <b>VPN Connection </b>page, select <b>Ethernet 2 </b>and deselect the <b>Enable security on the selected interface by setting up static packet filters </b>check box.</p>
+<p id="cn-m13-240">Click <b>Next</b>.</p>
+<p id="cn-m13-241"></p><figure><img class="cn-img" id="cn-image-m13-c-27" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-27.jpg" alt="Figure 2.13 Screenshot of PLABDM02"><figcaption>Figure
+ 2.13 Screenshot of PLABDM02: VPN Connection page on the Routing and 
+Remote Access Server Setup Wizard is displayed showing the required 
+settings performed and the Next button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-242"><b><i>Step 10</i></b></h4>
+<p id="cn-m13-243">On the <b>IP Address Assignment </b>page, select the <b>From a specified range of addresses </b>option.</p>
+<p id="cn-m13-244">Click <b>Next</b>.</p>
+<p id="cn-m13-245"></p><figure><img class="cn-img" id="cn-image-m13-c-28" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-28.jpg" alt="Figure 2.14 Screenshot of PLABDM02"><figcaption>Figure
+ 2.14 Screenshot of PLABDM02: IP Address Assignment page on the Routing 
+and Remote Access Server Setup Wizard is displayed showing the required 
+selection performed, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-246"><b><i>Step 11</i></b></h4>
+<p id="cn-m13-247">On the <b>Address Range Assignment </b>page, click <b>New</b>.</p>
+<p id="cn-m13-248"></p><figure><img class="cn-img" id="cn-image-m13-c-29" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-29.jpg" alt="Figure 2.15 Screenshot of PLABDM02"><figcaption>Figure
+ 2.15 Screenshot of PLABDM02: Address Range Assignment page on the 
+Routing and Remote Access Server Setup Wizard is displayed showing the 
+New button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-249"><b><i>Step 12</i></b></h4>
+<p id="cn-m13-250">On the <b>New IPv4 Address Range </b>dialog box, type the following addresses:</p>
+<pre id="cn-m13-251"><code>Start IP address: 10.10.0.100
+End IP address: 10.10.0.120
+</code></pre>
+<p id="cn-m13-253">Click <b>OK</b>.</p>
+<p id="cn-m13-254"></p><figure><img class="cn-img" id="cn-image-m13-c-30" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-30.jpg" alt="Figure 2.16 Screenshot of PLABDM02"><figcaption>Figure
+ 2.16 Screenshot of PLABDM02: New IPv4 Address Range dialog box on the 
+Routing and Remote Access Server Setup Wizard is displayed showing the 
+required entries performed and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-255"><b><i>Step 13</i></b></h4>
+<p id="cn-m13-256">Back on the <b>IP Address Range Assignment </b>page, notice that the IP address range is now added.</p>
+<p id="cn-m13-257">Click <b>Next</b>.</p>
+<p id="cn-m13-258"></p><figure><img class="cn-img" id="cn-image-m13-c-31" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-31.jpg" alt="Figure 2.17 Screenshot of PLABDM02"><figcaption>Figure
+ 2.17 Screenshot of PLABDM02: Address Range Assignment page on the 
+Routing and Remote Access Server Setup Wizard is displayed listing the 
+specified address range, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-259"><b><i>Step 14</i></b></h4>
+<p id="cn-m13-260">On the <b>Managing Multiple Remote Access Servers </b>page, select <b>Yes, set up this server to work with a RADIUS server</b>.</p>
+<p id="cn-m13-261">Click <b>Next</b>.</p>
+<p id="cn-m13-262"></p><figure><img class="cn-img" id="cn-image-m13-c-32" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-32.jpg" alt="Figure 2.18 Screenshot of PLABDM02"><figcaption>Figure
+ 2.18 Screenshot of PLABDM02: Managing Multiple Remote Access Servers 
+page on the Routing and Remote Access Server Setup Wizard is displayed 
+showing the required selection performed and the Next button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-263"><b><i>Step 15</i></b></h4>
+<p id="cn-m13-264">On the <b>RADIUS Server Selection </b>page, use the following settings:</p>
+<pre id="cn-m13-265"><code>Primary RADIUS server: plabsa01
+</code></pre>
+<p id="cn-m13-266">In the <b>Shared secret </b>text box, enter the following password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m13-268">Click <b>Next</b>.</p>
+<span class="cn-quote" id="cn-m13-269"><b><i>Note: </i></b><i>You may be prompted with an error message informing that </i><b><i>PLABDM02 </i></b><i>cannot connect with </i><b><i>PLABSA01</i></b><i>. Click </i><b><i>OK </i></b><i>to retain </i><b><i>PLABSA01 </i></b><i>as the </i><b><i>Primary Radius </i></b><i>server. Try using the IP address </i><b><i>192.168.0.4</i></b><i>. </i></span>
+<p id="cn-m13-270"></p><figure><img class="cn-img" id="cn-image-m13-c-33" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-33.jpg" alt="Figure 2.19 Screenshot of PLABDM02"><figcaption>Figure
+ 2.19 Screenshot of PLABDM02: RADIUS Server Selection page on the 
+Routing and Remote Access Server Setup Wizard is displayed showing the 
+required values typed-in, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-271"><b><i>Step 16</i></b></h4>
+<p id="cn-m13-272">On the completion page, click <b>Finish </b>to close <b>Routing and Remote Access Wizard</b>.</p>
+<p id="cn-m13-273"></p><figure><img class="cn-img" id="cn-image-m13-c-34" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-34.jpg" alt="Figure 2.20 Screenshot of PLABDM02"><figcaption>Figure
+ 2.20 Screenshot of PLABDM02: Completion page on the Routing and Remote 
+Access Server Setup Wizard is displayed listing specifications of the 
+newly setup server and the Finish button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-274"><b><i>Step 17</i></b></h4>
+<p id="cn-m13-275">A message about relaying DHCP messages appears.</p>
+<p id="cn-m13-276">Click <b>OK</b>.</p>
+<p id="cn-m13-277"></p><figure><img class="cn-img" id="cn-image-m13-c-35" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-35.jpg" alt="Figure 2.21 Screenshot of PLABDM02"><figcaption>Figure
+ 2.21 Screenshot of PLABDM02: Routing and Remote Access information box 
+is displayed informing about the DHCP Relay Agent, and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-278"><b><i>Step 18</i></b></h4>
+<p id="cn-m13-279">Please wait while the <b>Routing and Remote Access service </b>is being initialized. It may take around 2-3 minutes to initialize the service.</p>
+<p id="cn-m13-280"></p><figure><img class="cn-img" id="cn-image-m13-c-36" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-36.jpg" alt="Figure 2.22 Screenshot of PLABDM02"><figcaption>Figure
+ 2.22 Screenshot of PLABDM02: Completing Initialization information box 
+is displayed informing that the Routing and Remote Access service is 
+being initialized.</figcaption></figure><p></p>
+<h4 id="cn-m13-281"><b><i>Step 19</i></b></h4>
+<p id="cn-m13-282">You are redirected back to the <b>Routing and Remote Access </b>window. &nbsp;&nbsp;</p>
+<p id="cn-m13-283">On the left pane, notice that the red down-arrow on the <b>PLABDM02 </b>server icon is now replaced with a green up-arrow. This indicates that the remote service is now initialized on the server.</p>
+<span class="cn-quote" id="cn-m13-284"><b><i>Note: </i></b><i>If green 
+up-arrow does not show up in 2-3 minutes, you should reboot the server. 
+Also, in the Services console, verify that the Routing and Remote Access
+ services has started.</i></span>
+<p id="cn-m13-285"></p><figure><img class="cn-img" id="cn-image-m13-c-37" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-37.jpg" alt="Figure 2.23 Screenshot of PLABDM02"><figcaption>Figure
+ 2.23 Screenshot of PLABDM02: Routing and Remote Access console 
+indicating that the service is now initialized on the local server is 
+displayed.</figcaption></figure><p></p>
+<h3 id="cn-m13-286"><b>Task 4 - Configure Authentication and Accounting Providers</b></h3>
+<p id="cn-m13-287">After initializing RAS, you need to configure the 
+authentication and accounting providers on the VPN server. The 
+Authentication provider setting indicates whether Windows or RADIUS will
+ be used for validating credentials for remote access clients and 
+demand-dial routers. The accounting provider maintains a log of 
+connection requests and sessions. In this task, you will configure the 
+two providers on the VPN server - <b>PLABDM02</b>.</p>
+<p id="cn-m13-288">To configure authentication and accounting providers, perform the following steps:</p>
+<h4 id="cn-m13-289"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-290">On the <b>Routing and Remote Access </b>console on <b>PLABDM02</b>, right-click <b>PLABDM02 </b>from the left pane and select <b>Properties</b>.</p>
+<p id="cn-m13-291"></p><figure><img class="cn-img" id="cn-image-m13-c-38" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-38.jpg" alt="Figure 2.24 Screenshot of PLABDM02"><figcaption>Figure
+ 2.24 Screenshot of PLABDM02: Context menu (that appears on 
+right-clicking the local server name-node) &gt; Properties menu-options 
+are highlighted on the Routing and Remote Access console.</figcaption></figure><p></p>
+<h4 id="cn-m13-292"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-293">On the <b>PLABDM02 Properties </b>dialog box, access the <b>Security </b>tab.</p>
+<p id="cn-m13-294">In the <b>Authentication Provider </b>section, click <b>Configure</b>.</p>
+<span class="cn-quote" id="cn-m13-295"><b><i>Note: </i></b><i>You may be prompted with a message that the IP address of PLABSA01 cannot be retrieved. Click OK.</i></span>
+<p id="cn-m13-296"></p><figure><img class="cn-img" id="cn-image-m13-c-39" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-39.jpg" alt="Figure 2.25 Screenshot of PLABDM02"><figcaption>Figure
+ 2.25 Screenshot of PLABDM02: Security tab on the PLABDM02 Properties 
+dialog box is displayed showing the Configure button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-297"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-298">On the <b>RADIUS Authentication </b>dialog box, click <b>Edit</b>…</p>
+<p id="cn-m13-299"></p><figure><img class="cn-img" id="cn-image-m13-c-40" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-40.jpg" alt="Figure 2.26 Screenshot of PLABDM02"><figcaption>Figure 2.26 Screenshot of PLABDM02: RADIUS Authentication dialog box is displayed showing the Edit button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-300"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-301">On the <b>Edit RADIUS Server </b>dialog box, select the <b>Always use message authenticator </b>check box.</p>
+<p id="cn-m13-302">Click <b>OK</b>.</p>
+<p id="cn-m13-303"></p><figure><img class="cn-img" id="cn-image-m13-c-41" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-41.jpg" alt="Figure 2.27 Screenshot of PLABDM02"><figcaption>Figure
+ 2.27 Screenshot of PLABDM02: Edit RADIUS Server dialog box is displayed
+ showing the required settings performed, and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-304"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-305">Back in the <b>RADIUS Authentication </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m13-306"></p><figure><img class="cn-img" id="cn-image-m13-c-42" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-42.jpg" alt="Figure 2.28 Screenshot of PLABDM02"><figcaption>Figure 2.28 Screenshot of PLABDM02: RADIUS Authentication dialog box is displayed showing the OK button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-307"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-308">Back on the <b>PLABDM02 Properties </b>dialog box, go to the <b>Accounting Provider </b>section and click <b>Configure</b>.</p>
+<p id="cn-m13-309"></p><figure><img class="cn-img" id="cn-image-m13-c-43" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-43.jpg" alt="Figure 2.29 Screenshot of PLABDM02"><figcaption>Figure
+ 2.29 Screenshot of PLABDM02: Security tab on the PLABDM02 Properties 
+dialog box is displayed showing the Configure button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-310"><b><i>Step 7</i></b></h4>
+<p id="cn-m13-311">In the <b>RADIUS Accounting </b>dialog box, click <b>Edit</b>…</p>
+<p id="cn-m13-312"></p><figure><img class="cn-img" id="cn-image-m13-c-44" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-44.jpg" alt="Figure 2.30 Screenshot of PLABDM02"><figcaption>Figure 2.30 Screenshot of PLABDM02: RADIUS Accounting dialog box is displayed showing the Edit button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-313"><b><i>Step 8</i></b></h4>
+<p id="cn-m13-314">On the <b>Edit RADIUS Server </b>dialog box, select <b>Send RADIUS Accounting On and Accounting Off messages</b>.</p>
+<p id="cn-m13-315">Click <b>OK </b>to save changes.</p>
+<p id="cn-m13-316"></p><figure><img class="cn-img" id="cn-image-m13-c-45" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-45.jpg" alt="Figure 2.31 Screenshot of PLABDM02"><figcaption>Figure
+ 2.31 Screenshot of PLABDM02: Edit RADIUS Server dialog box is displayed
+ showing the required settings performed, and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-317"><b><i>Step 9</i></b></h4>
+<p id="cn-m13-318">Click <b>OK </b>to save the changes and to exit the <b>RADIUS Accounting </b>dialog box</p>
+<p id="cn-m13-319"></p><figure><img class="cn-img" id="cn-image-m13-c-46" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-46.jpg" alt="Figure 2.32 Screenshot of PLABDM02"><figcaption>Figure 2.32 Screenshot of PLABDM02: RADIUS Accounting dialog box is displayed showing the OK button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-320"><b><i>Step 10</i></b></h4>
+<p id="cn-m13-321">Click <b>OK </b>to close the <b>PLABDM02 Properties </b>dialog box.</p>
+<p id="cn-m13-322"></p><figure><img class="cn-img" id="cn-image-m13-c-47" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-47.jpg" alt="Figure 2.33 Screenshot of PLABDM02"><figcaption>Figure 2.33 Screenshot of PLABDM02: RADIUS Accounting dialog box is displayed showing the OK button available.</figcaption></figure><p></p>
+<h3 id="cn-m13-323"><b>Task 5 - Configuring the VPN Ports</b></h3>
+<p id="cn-m13-324">In this step, you will enable VPN ports on <b>PLABDM02 </b>for incoming dial-in access. Recall that <b>PLABDM02 </b>is now configured as the VPN server on the <b>PracticeLabs </b>domain.</p>
+<p id="cn-m13-325">To configure the VPN ports, perform the following steps:</p>
+<h4 id="cn-m13-326"><b><i>Step 1&nbsp;&nbsp;</i></b></h4>
+<p id="cn-m13-327">From <b>PLABDM02 </b>in <b>Routing and Remote Access </b>window, right-click <b>Ports </b>under the <b>PLABDM02 </b>node and select <b>Properties</b>.</p>
+<p id="cn-m13-328"></p><figure><img class="cn-img" id="cn-image-m13-c-48" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-48.jpg" alt="Figure 2.34 Screenshot of PLABDM02"><figcaption>Figure
+ 2.34 Screenshot of PLABDM02: Context menu (that appears on 
+right-clicking the Ports node) &gt; Properties menu-options are 
+highlighted on the Routing and Remote Access console.</figcaption></figure><p></p>
+<h4 id="cn-m13-329"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-330">On the <b>Ports Properties </b>dialog box, select <b>WAN Miniport (PPTP) </b>and choose <b>Configure</b>.</p>
+<p id="cn-m13-331"></p><figure><img class="cn-img" id="cn-image-m13-c-49" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-49.jpg" alt="Figure 2.35 Screenshot of PLABDM02"><figcaption>Figure
+ 2.35 Screenshot of PLABDM02: Ports Properties dialog box is displayed 
+showing the required settings performed and the Configure button 
+available.</figcaption></figure><p></p>
+<h4 id="cn-m13-332"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-333">On the <b>Configure Device - WAN Miniport (PPTP) </b>dialog box, verify that <b>Remote access connections (inbound only) </b>box is selected and clear <b>Demand-dial routing connections (inbound and outbound) </b>box.</p>
+<p id="cn-m13-334">In the <b>Phone number for this device type </b>text box, specify the IP address <b>192.168.0.20</b></p>
+<p id="cn-m13-335">Click <b>OK</b>.</p>
+<p id="cn-m13-336"></p><figure><img class="cn-img" id="cn-image-m13-c-50" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-50.jpg" alt="Figure 2.36 Screenshot of PLABDM02"><figcaption>Figure
+ 2.36 Screenshot of PLABDM02: Configure Device - WAN Miniport (PPTP) 
+dialog box is displayed showing the required settings performed and the 
+OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-337"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-338">Back on the <b>Ports Properties </b>dialog box, select <b>WAN Miniport (L2TP) </b>and click <b>Configure</b>.</p>
+<p id="cn-m13-339"></p><figure><img class="cn-img" id="cn-image-m13-c-51" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-51.jpg" alt="Figure 2.37 Screenshot of PLABDM02"><figcaption>Figure
+ 2.37 Screenshot of PLABDM02: Ports Properties dialog box is displayed 
+showing the required selection performed and the Configure button 
+available.</figcaption></figure><p></p>
+<h4 id="cn-m13-340"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-341">On the <b>Configure Device - WAN Miniport (L2TP) </b>dialog box, verify that the <b>Remote access connections (inbound only) </b>check box is selected and deselect the <b>Demand-dial routing connections (inbound and outbound) </b>checkbox.</p>
+<p id="cn-m13-342">In the <b>Phone number for this device </b>text box, specify the IP address <b>192.168.0.20</b></p>
+<p id="cn-m13-343">Click <b>OK</b>.</p>
+<p id="cn-m13-344"></p><figure><img class="cn-img" id="cn-image-m13-c-52" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-52.jpg" alt="Figure 2.38 Screenshot of PLABDM02"><figcaption>Figure
+ 2.38 Screenshot of PLABDM02: Configure Device - WAN Miniport (L2TP) 
+dialog box is displayed showing the required settings performed and the 
+OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-345"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-346">Click <b>OK </b>on the <b>Ports Properties </b>dialog box.</p>
+<p id="cn-m13-347">You are now back on the <b>Routing and Remote Access </b>window.</p>
+<h3 id="cn-m13-348"><b>Task 6 - Specify the VPN Adapter</b></h3>
+<p id="cn-m13-349">You need to specify the VPN adapter from which the 
+dial-in clients can obtain the IP address. In this task, you will 
+specify the relevant VPN adapter on <b>PLABDM02</b>.</p>
+<p id="cn-m13-350">To specify the VPN adapter, perform the following steps:</p>
+<h4 id="cn-m13-351"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-352">On the <b>Routing and Remote Access </b>window, right-click the <b>PLABDM02 </b>node and select <b>Properties</b>.</p>
+<p id="cn-m13-353"></p><figure><img class="cn-img" id="cn-image-m13-c-53" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-53.jpg" alt="Figure 2.39 Screenshot of PLABDM02"><figcaption>Figure
+ 2.39 Screenshot of PLABDM02: Context menu (that appears on 
+right-clicking the local server name-node) &gt; Properties menu-options 
+are highlighted on the Routing and Remote Access console.</figcaption></figure><p></p>
+<h4 id="cn-m13-354"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-355">The <b>PLABDM02 Properties </b>dialog box is displayed.</p>
+<p id="cn-m13-356">Access the <b>IPv4 </b>tab. In the <b>Adapter </b>drop-down list box, select <b>Ethernet 2.</b></p>
+<p id="cn-m13-357">Recall that <b>Ethernet 2 </b>is configured as the VPN interface on the <b>PLABDM02 </b>server. Therefore, the dial-up clients access this interface to obtain the relevant IP addresses to set up the VPN connection.</p>
+<p id="cn-m13-358">Keep all the other default selections, click <b>OK</b>.</p>
+<p id="cn-m13-359"></p><figure><img class="cn-img" id="cn-image-m13-c-54" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-54.jpg" alt="Figure 2.40 Screenshot of PLABDM02"><figcaption>Figure
+ 2.40 Screenshot of PLABDM02: IPv4 tab on the PLABDM02 Properties dialog
+ box is displayed showing the required settings performed and the OK 
+button available.</figcaption></figure><p></p>
+<h3 id="cn-m13-360"><b>Task 7 - Grant VPN Dial-in Permission</b></h3>
+<p id="cn-m13-361">To enable a user to set up a VPN connection, you must
+ grant the user the permission to dial-in to the VPN server. Note that 
+to grant such rights to a user on a domain, you must have administrative
+ rights on the domain. In this task, you will grant the dial-in 
+permissions to the <b>Administrator </b>account on <b>PLABDC01</b>.</p>
+<p id="cn-m13-362">To grant VPN dial-in permissions, perform the following steps:</p>
+<h4 id="cn-m13-363"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-364">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m13-365"><b>Server Manager </b>opens automatically.</p>
+<h4 id="cn-m13-366"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-367">Click <b>Tools </b>and select <b>Active Directory Users and Computers</b>.</p>
+<p id="cn-m13-368"></p><figure><img class="cn-img" id="cn-image-m13-c-55" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-55.jpg" alt="Figure 2.41 Screenshot of PLABDC02"><figcaption>Figure
+ 2.41 Screenshot of PLABDC02: Tools &gt; Active Directory Users and 
+Computers menu-options are selected on the Server Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m13-369"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-370">The <b>Active Directory Users and Computers </b>window is displayed.</p>
+<p id="cn-m13-371">Expand <b>PRACTICELABS.COM </b>in the left pane and then select <b>Users</b>.</p>
+<p id="cn-m13-372">From the right details pane, right-click <b>Administrator </b>and select <b>Properties</b>.</p>
+<p id="cn-m13-373"></p><figure><img class="cn-img" id="cn-image-m13-c-56" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-56.jpg" alt="Figure 2.42 Screenshot of PLABDC02"><figcaption>Figure
+ 2.42 Screenshot of PLABDC02: Context menu (that appears on 
+right-clicking a listed user) &gt; Properties menu-options are 
+highlighted on the Active Directory Users and Computers console.</figcaption></figure><p></p>
+<h4 id="cn-m13-374"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-375">On the <b>Administrator Properties </b>dialog box, click the <b>Dial-in </b>tab.</p>
+<p id="cn-m13-376"></p><figure><img class="cn-img" id="cn-image-m13-c-57" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-57.jpg" alt="Figure 2.43 Screenshot of PLABDC02"><figcaption>Figure
+ 2.43 Screenshot of PLABDC02: General tab on the Administrator 
+Properties dialog box is displayed showing the Dial-in tab highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-377"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-378">On the <b>Dial-in </b>tab, select the <b>Allow access </b>option in the <b>Network Access Permission </b>section.</p>
+<p id="cn-m13-379"></p><figure><img class="cn-img" id="cn-image-m13-c-58" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-58.jpg" alt="Figure 2.44 Screenshot of PLABDC02"><figcaption>Figure
+ 2.44 Screenshot of PLABDC02: Dial-in tab on the Administrator 
+Properties dialog box is displayed showing the required settings 
+performed and the OK button highlighted.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m13-382">Click <b>OK</b>.</p>
+<h4 id="cn-m13-383"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-384">You are back on the <b>Active Directory Users and Computers </b>window.</p>
+<p id="cn-m13-385">Close this window.</p>
+<span class="cn-alert" id="cn-m13-386">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m13-387"><b>Exercise 3 - Configure the VPN Client</b></h2>
+<p id="cn-m13-388">After installing and configuring Routing and Remote 
+Access on PLABDM02, you will now prepare a Windows 8.1 client to dial-in
+ to the VPN server.</p>
+<p id="cn-m13-389">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m13-391">After completing this exercise, you will be able to:</p>
+<ul id="cn-m13-392">
+<li id="cn-m13-392">Configure a secondary IP address for VPN client</li>
+<li id="cn-m13-393">Create VPN Client dialer</li>
+<li id="cn-m13-394">Check the Status of a VPN Connection</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m13-396">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m13-397">
+<li id="cn-m13-397"><b>PLABDC01 </b>(Windows Server 2016 Domain Controller)</li>
+<li id="cn-m13-398"><b>PLABDM02 </b>(Windows Server 2012 R2 Domain Member Server)</li>
+<li id="cn-m13-399"><b>PLABSA01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m13-400"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+</ul>
+<h3 id="cn-m13-401"><img class="cn-img" id="cn-image-m13-c-59" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-59.jpg" alt="Practice Labs screenshot."><b>Task 1 - Configure a Secondary IP Address for VPN Client</b></h3>
+<p id="cn-m13-402">In this step, you will configure a second IP address for VPN client (<b>PLABWIN810</b>). You will assume that this second IP address is the public IP address.</p>
+<p id="cn-m13-403">To configure a secondary IP address for VPN client, perform the following steps:</p>
+<h4 id="cn-m13-404"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-405">Connect to <b>PLABWIN810</b>.</p>
+<p id="cn-m13-406">On the <b>PLABWIN810 </b>device, open <b>File Explorer </b>from the taskbar.</p>
+<h4 id="cn-m13-407"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-408">In the address bar of File Explorer, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-409"><code>powershell
+</code></pre>
+<p id="cn-m13-410"></p><figure><img class="cn-img" id="cn-image-m13-c-60" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-60.jpg" alt="Figure 3.1 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.1 Screenshot of the PLABWIN810: This PC window is displayed showing 
+the name of the program to run (powershell) typed in the address bar.</figcaption></figure><p></p>
+<h4 id="cn-m13-411"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-412">The <b>Windows PowerShell </b>window is displayed, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-413"><code>netsh interface ip set address name="Ethernet 2" static 192.168.0.50 255.255.255.0
+</code></pre>
+<span class="cn-quote" id="cn-m13-414"><b><i>Note</i></b><i>: This sets a static IP address on the Ethernet 2 network interface.</i></span>
+<p id="cn-m13-415"></p><figure><img class="cn-img" id="cn-image-m13-c-61" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-61.jpg" alt="Figure 3.2 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.2 Screenshot of the PLABWIN810: Administrator: Windows PowerShell 
+window is displayed. It is showing the command to set static IP address 
+for a network interface typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m13-416"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-417">To set <b>Ethernet 2 </b>to use <b>PLABDC01 </b>as its preferred DNS server, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m13-418"><code>netsh interface ip set dns "Ethernet 2" static 192.168.0.1
+</code></pre>
+<p id="cn-m13-419">On the next prompt, type Exit and press <b>Enter</b>.</p>
+<p id="cn-m13-420"></p><figure><img class="cn-img" id="cn-image-m13-c-62" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-62.jpg" alt="Figure 3.3 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.3 Screenshot of the PLABWIN810: Administrator: Windows PowerShell 
+window is displayed showing the commands to set preferred DNS for a 
+network interface and then to exit the console typed-in.</figcaption></figure><p></p>
+<h3 id="cn-m13-421"><b>Task 2 - Create VPN Client Dialer</b></h3>
+<p id="cn-m13-422">To create a VPN client dialer, perform the following steps:</p>
+<h4 id="cn-m13-423"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-424">Close <b>File Explorer</b>.</p>
+<p id="cn-m13-425">On the <b>PLABWIN810 </b>device, go to system tray, right-click the network icon, and select <b>Open Network and Sharing Centre</b>.</p>
+<p id="cn-m13-426"></p><figure><img class="cn-img" id="cn-image-m13-c-63" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-63.jpg" alt="Figure 3.4 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.4 Screenshot of the PLABWIN810: Context menu (that appears on 
+right-clicking the network icon) &gt; Open Network and Sharing Center 
+menu-options are displayed on the PLABWIN810 Windows desktop.</figcaption></figure><p></p>
+<h4 id="cn-m13-427"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-428">In the <b>Network and Sharing Centre </b>window, click the <b>Set up a new connection or network </b>link.</p>
+<p id="cn-m13-429"></p><figure><img class="cn-img" id="cn-image-m13-c-64" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-64.jpg" alt="Figure 3.5 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.5 Screenshot of the PLABWIN810: Network and Sharing Center window is 
+displayed showing the Set up a new connection or network link 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-430"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-431">On the <b>Choose a connection option </b>page, select <b>Connect to a workplace </b>and click <b>Next</b>.</p>
+<p id="cn-m13-432"></p><figure><img class="cn-img" id="cn-image-m13-c-65" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-65.jpg" alt="Figure 3.6 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.6 Screenshot of the PLABWIN810: Choose a connection option page on 
+the Setup a Connection or Network wizard is displayed showing the 
+required option selected and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-433"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-434">On the <b>How do you want to connect? </b>page, click <b>Use my Internet connection (VPN</b>).</p>
+<p id="cn-m13-435"></p><figure><img class="cn-img" id="cn-image-m13-c-66" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-66.jpg" alt="Figure 3.7 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.7 Screenshot of the PLABWIN810: How do you want to connect? page on 
+the Connect to a Workplace wizard is displayed showing the required 
+option selected.</figcaption></figure><p></p>
+<h4 id="cn-m13-436"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-437">On the <b>Type the Internet address to connect to </b>page, specify the following values:</p>
+<pre id="cn-m13-438"><code><b>Internet address</b>: 192.168.0.20
+<b>Destination name</b>: Practice Labs VPN Connection
+</code></pre>
+<p id="cn-m13-440">Select the <b>Remember my credentials </b>and <b>Allow other people to use this connection </b>checkboxes<b>. </b></p>
+<p id="cn-m13-441">Click <b>Create</b>.</p>
+<p id="cn-m13-442"></p><figure><img class="cn-img" id="cn-image-m13-c-67" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-67.jpg" alt="Figure 3.8 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.8 Screenshot of the PLABWIN810: Type the Internet address to connect 
+to page on the Connect to a Workplace wizard is displayed showing the 
+required settings performed and the Create button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-443"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-444">The <b>Networks </b>fly-out menu appears.</p>
+<p id="cn-m13-445">Click outside of the menu to be navigated back to the <b>Network and Sharing Center</b>.</p>
+<p id="cn-m13-446"></p><figure><img class="cn-img" id="cn-image-m13-c-68" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-68.jpg" alt="Figure 3.9 Screenshot of the PLABWIN810"><figcaption>Figure 3.9 Screenshot of the PLABWIN810: The Network fly-out is shown with the Network and Sharing Center window behind.</figcaption></figure><p></p>
+<h4 id="cn-m13-447"><b><i>Step 7</i></b></h4>
+<p id="cn-m13-448">Click <b>Change adapter settings </b>in the left pane.</p>
+<p id="cn-m13-449"></p><figure><img class="cn-img" id="cn-image-m13-c-69" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-69.jpg" alt="Figure 3.10 Screenshot of the PLABWIN810"><figcaption>Figure 3.10 Screenshot of the PLABWIN810: Change adapter settings link is highlighted on the Network and Sharing Center window.</figcaption></figure><p></p>
+<h4 id="cn-m13-450"><b><i>Step 8</i></b></h4>
+<p id="cn-m13-451">On the <b>Network Connections </b>window, right-click the <b>Practice Labs VPN Connection </b>icon and select <b>Properties</b>.</p>
+<p id="cn-m13-452"></p><figure><img class="cn-img" id="cn-image-m13-c-70" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-70.jpg" alt="Figure 3.11 Screenshot of the PLABWIN810 desktop"><figcaption>Figure
+ 3.11 Screenshot of the PLABWIN810 desktop: Context menu (that appears 
+on right-clicking a network connection icon) &gt; Properties 
+menu-options are highlighted on the Network Connections window.</figcaption></figure><p></p>
+<h4 id="cn-m13-453"><b><i>Step 9</i></b></h4>
+<p id="cn-m13-454">On the <b>Practice Labs VPN Connection Properties </b>dialog box, access the <b>Security </b>tab and select the <b>Allow these protocols </b>option.</p>
+<p id="cn-m13-455"></p><figure><img class="cn-img" id="cn-image-m13-c-71" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-71.jpg" alt="Figure 3.12 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.12 Screenshot of the PLABWIN810: Security tab on the Practice Labs 
+VPN Properties dialog box is displayed showing the required settings 
+performed and the Networking tab highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-456"><b><i>Step 10</i></b></h4>
+<p id="cn-m13-457">Access the <b>Networking </b>tab, select <b>Internet Protocol Version 4 (TCP/IPv4) </b>and click <b>Properties</b>.</p>
+<p id="cn-m13-458"></p><figure><img class="cn-img" id="cn-image-m13-c-72" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-72.jpg" alt="Figure 3.13 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.13 Screenshot of the PLABWIN810: Networking tab on the Practice Labs 
+VPN Properties dialog box is displayed showing the required selection 
+performed and the Properties button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-459"><b><i>Step 11</i></b></h4>
+<p id="cn-m13-460">On the <b>Internet Protocol Version 4 (TCP/IPv4) Properties </b>dialog box, click <b>Advanced</b>…</p>
+<p id="cn-m13-461"></p><figure><img class="cn-img" id="cn-image-m13-c-73" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-73.jpg" alt="Figure 3.14 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.14 Screenshot of the PLABWIN810: Internet Protocol Version 4 
+(TCP/IPv4) Properties dialog box is displayed showing default settings 
+and the Advanced button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-462"><b><i>Step 12</i></b></h4>
+<p id="cn-m13-463">On the <b>Advanced TCP/IP Settings </b>dialog box, access the <b>IP Settings </b>tab and deselect the <b>Use default gateway on remote network </b>option.</p>
+<p id="cn-m13-464">Click <b>OK </b>to save changes.</p>
+<p id="cn-m13-465">Similarly, close the open dialog boxes to reach the <b>Network Connections </b>window.</p>
+<p id="cn-m13-466"></p><figure><img class="cn-img" id="cn-image-m13-c-74" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-74.jpg" alt="Figure 3.15 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.15 Screenshot of the PLABWIN810: IP Settings tab on the Advanced 
+TCP/IP Settings dialog box is displayed showing required settings 
+performed, and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-467"><b><i>Step 13</i></b></h4>
+<p id="cn-m13-468">Back on the <b>Network Connections </b>window, right-click the <b>Practice Labs VPN Connection </b>option and select <b>Connect/Disconnect</b>.</p>
+<p id="cn-m13-469"></p><figure><img class="cn-img" id="cn-image-m13-c-75" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-75.jpg" alt="Figure 3.16 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.16 Screenshot of the PLABWIN810: Context menu (that appears on 
+right-clicking a network connection icon) &gt; Connect/Disconnect 
+menu-options are highlighted on the Network Connections window.</figcaption></figure><p></p>
+<h4 id="cn-m13-470"><b><i>Step 14</i></b></h4>
+<p id="cn-m13-471">On the <b>Networks </b>flyout menu, select <b>Practice Labs VPN Connection </b>and click <b>Connect</b>.</p>
+<p id="cn-m13-472"></p><figure><img class="cn-img" id="cn-image-m13-c-76" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-76.jpg" alt="Figure 3.17 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.17 Screenshot of the PLABWIN810: Networks flyout menu is displayed 
+showing the required connection selected and the Connect button 
+available.</figcaption></figure><p></p>
+<h4 id="cn-m13-473"><b><i>Step 15</i></b></h4>
+<p id="cn-m13-474">Specify the following values in the <b>Sign-In </b>text box:</p>
+<pre id="cn-m13-475"><code><b>Username</b>: practicelabs\administrator
+</code></pre>
+<p id="cn-m13-476"><b>Password</b>:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m13-478">Click <b>OK</b>.</p>
+<p id="cn-m13-479"></p><figure><img class="cn-img" id="cn-image-m13-c-77" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-77.jpg" alt="Figure 3.18 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.18 Screenshot of the PLABWIN810: Sign-in prompt on the Networks 
+flyout menu is displayed showing the relevant login credentials 
+typed-in, and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-480"><b><i>Step 16</i></b></h4>
+<p id="cn-m13-481">The <b>Networks </b>fly out menu indicates that the connection is established.</p>
+<span class="cn-alert" id="cn-m13-482"><b>Important</b>: If you get an error in the connection, saying the “connection did not respond in a timely fashion” restart <b>PLABDM02</b>, <b>PLABSA01</b>, and <b>PLABWIN810</b>.</span>
+<span class="cn-alert" id="cn-m13-483">You can also try re-creating the client VPN connection of <b>PLABWIN810</b>. For the sake of this demonstration, shut down the Windows Firewall on all three devices.</span>
+<span class="cn-alert" id="cn-m13-485"><b>Alert: </b><i>Error 812: The 
+connection was prevented because of a policy configured on your RAS/VPN 
+server. Specifically, the authentication method used by the server to 
+verify your username and password may not match the authentication 
+method configured in your connection profile. Please contact the 
+Administrator of the RAS server and notify them of this error. </i></span>
+<span class="cn-alert" id="cn-m13-486">If you face this error, you will need to go back to the <b>Exercise 2 </b>- <b>Task 2 </b>- <b>Step 15 </b>- Use the IP address instead of the name <b>plabsa01 </b>in Radius Authentication and Radius Authorization. You can use the IP address, <b>192.168.0.4</b>.</span>
+<span class="cn-alert" id="cn-m13-487">Then, you would need to allow access in the NAS policy. To do this, follow these steps:</span>
+<span class="cn-alert" id="cn-m13-488">Open the Routing and Remote Access Management console.</span>
+<span class="cn-alert" id="cn-m13-489">Right-click Remote Access Logging and Policies and then select Launch NPS.</span>
+<span class="cn-alert" id="cn-m13-490">Click Network Policies in the left pane.</span>
+<span class="cn-alert" id="cn-m13-491">Right-click Connections to Microsoft Routing and Remote Access server policy in the right pane and select Properties.</span>
+<span class="cn-alert" id="cn-m13-492">Change from Deny Access to Grant&nbsp;Access</span>
+<span class="cn-alert" id="cn-m13-493">Click OK.</span>
+<p id="cn-m13-494"></p><figure><img class="cn-img" id="cn-image-m13-c-78" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-78.jpg" alt="Figure 3.19 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.19 Screenshot of the PLABWIN810: Specified connection showing the 
+Connected status is listed on the Networks flyout menu.</figcaption></figure><p></p>
+<h3 id="cn-m13-495"><b>Task 3 - Check the Status of a VPN Connection</b></h3>
+<p id="cn-m13-496">Once a VPN connection is set up, you can check its 
+status to understand the protocol being implemented for the connection 
+and the IP addresses involved in supporting the connection. In this 
+task, you will check the status of the VPN connection between the <b>PLABWIN810 </b>VPN client and the <b>PLABDM02 </b>VPN server.</p>
+<p id="cn-m13-497">To check the status of a VPN connection, perform the following steps:</p>
+<h4 id="cn-m13-498"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-499">On the <b>PLABWIN810 </b>desktop, the <b>Networks </b>menu is displayed, stating that the VPN connection is now set up.</p>
+<p id="cn-m13-500">Click outside the <b>Networks </b>menu. You are navigated back to the <b>Network Connections </b>window.</p>
+<p id="cn-m13-501">Right-click on <b>Practice Labs VPN Connection </b>and select <b>Status</b>.</p>
+<p id="cn-m13-502"></p><figure><img class="cn-img" id="cn-image-m13-c-79" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-79.jpg" alt="Figure 3.20 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.20 Screenshot of the PLABWIN810: Context menu (that appears on 
+right-clicking a network connection icon) &gt; Status menu-options are 
+highlighted on the Network Connections window.</figcaption></figure><p></p>
+<h4 id="cn-m13-503"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-504">On the <b>Practice Labs VPN Connection Status </b>dialog box, access the <b>Details </b>tab. Read the information about this VPN connection.</p>
+<p id="cn-m13-505">Notice that the connection implements the <b>PPTP </b>protocol with the <b>IPv4 addresses </b>conform to the specified address range of <b>10.10.0.100 </b>to <b>10.10.0.120</b>. In addition, notice that the destination address is <b>192.168.0.20</b>.</p>
+<p id="cn-m13-506">Click <b>Close</b>.</p>
+<p id="cn-m13-507"></p><figure><img class="cn-img" id="cn-image-m13-c-80" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-80.jpg" alt="Figure 3.21 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.21 Screenshot of the PLABWIN810: Details tab on the Practice Labs VPN
+ Connection Status dialog box is displayed listing details of the 
+connection and the Close button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-508"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-509">Back in the <b>Network Connections </b>window, right-click the <b>Practice Labs VPN Connection </b>and select <b>Connect/Disconnect</b>.</p>
+<p id="cn-m13-510"></p><figure><img class="cn-img" id="cn-image-m13-c-81" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-81.jpg" alt="Figure 3.22 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.22 Screenshot of the PLABWIN810: Context menu (that appears on 
+right-clicking a network connection icon) &gt; Connect/Disconnect 
+menu-options are highlighted on the Network Connections window.</figcaption></figure><p></p>
+<h4 id="cn-m13-511"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-512">On the <b>Networks </b>flyout menu, select <b>Practice Labs VPN Connection </b>and click <b>Disconnect</b>.</p>
+<p id="cn-m13-513"></p><figure><img class="cn-img" id="cn-image-m13-c-82" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-82.jpg" alt="Figure 3.23 Screenshot of the PLABWIN810"><figcaption>Figure
+ 3.23 Screenshot of the PLABWIN810: Networks flyout menu is displayed 
+showing the required network connection selected and the Disconnect 
+button available.</figcaption></figure><p></p>
+<p id="cn-m13-514">Click anywhere in the white area. The connection is now disconnected.</p>
+<p id="cn-m13-515"></p><figure><img class="cn-img" id="cn-image-m13-c-83" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-83.jpg" alt="Figure 3.24 Screenshot of the PLABWIN810"><figcaption>Figure 3.24 Screenshot of the PLABWIN810: Practice Labs VPN Connection is being displayed in the disconnected state.</figcaption></figure><p></p>
+<span class="atom-code hidden">87cc078b-8c33-4fef-bde6-2ebea41d0eb5</span>
+<span class="cn-alert" id="cn-m13-518">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m13-519"><b>Exercise 4 - Viewing the NPS Logs</b></h2>
+<p id="cn-m13-520">When Windows 8.1 connects to a VPN server, be it a 
+success or a failed login, you can view the details of the VPN 
+connection by reading the NPS logs using a third-party log reader.</p>
+<p id="cn-m13-521">To get a better understanding of this technology, 
+also refer to your course material or use your preferred search engine 
+to research this topic in detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m13-523">After completing this exercise, you will be able to:</p>
+<ul id="cn-m13-524">
+<li id="cn-m13-524">Examine the NPS Logs</li>
+<li id="cn-m13-525">Install Tools to Read the NPS Logs</li>
+<li id="cn-m13-526">Read the NPS Logs</li>
+<li id="cn-m13-527">Export NPS Templates</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m13-529">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m13-530">
+<li id="cn-m13-530"><b>PLABDC01 </b>(Windows Server 2016 Domain Controller)</li>
+<li id="cn-m13-531"><b>PLABDM02 </b>(Windows Server 2012 R2 Domain Member Server)</li>
+<li id="cn-m13-532"><b>PLABSA01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m13-533"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+</ul>
+<h3 id="cn-m13-534"><img class="cn-img" id="cn-image-m13-c-84" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-84.jpg" alt="Practice Labs screenshot."><b>Task 1 - Examine the NPS Logs</b></h3>
+<p id="cn-m13-535">NPS logs are generated when a VPN client makes a 
+successful or failed connection to a VPN server. The created log files 
+are in comma separated value (.csv) format. Since the authentication of 
+the VPN client was forwarded to the NPS server (PLABSA01), the log files
+ can be found on the mentioned server.</p>
+<p id="cn-m13-536">To examine the NPS logs, perform the following steps:</p>
+<h4 id="cn-m13-537"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-538">Connect to <b>PLABSA01</b>.</p>
+<p id="cn-m13-539">Click the <b>File Explorer </b>icon on the taskbar.</p>
+<h4 id="cn-m13-540"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-541">Expand <b>This PC</b>, then navigate to <b>C:\Windows\System32\LogFiles</b>.</p>
+<p id="cn-m13-542">Look for a file with a prefix of INyymmdd (the yymmdd values may vary for your session) and right-click on it, then select <b>Open</b>.</p>
+<span class="cn-quote" id="cn-m13-543"><b><i>Note</i></b><i>: Initially the INyymmdd file may have 0 KB size, press </i><b><i>F5 </i></b><i>to refresh.</i></span>
+<p id="cn-m13-544"></p><figure><img class="cn-img" id="cn-image-m13-c-85" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-85.jpg" alt="Figure 4.1 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.1 Screenshot of the PLABSA01: Context menu (that appears on 
+right-clicking a listed log file) &gt; Open menu-options are highlighted
+ on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m13-545"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-546">Notepad now displays an NPS log file. Notice that the
+ log file contains entries that you will not be able to understand. For 
+this reason, you will need an NPS log reader to be able to understand 
+the contents of this log file.</p>
+<p id="cn-m13-547">If needed, this link explains the contents of an NPS log file:</p>
+<pre id="cn-m13-548"><code>http://technet.microsoft.com/en-us/library/cc771748(v=ws.10).aspx
+</code></pre>
+<p id="cn-m13-549">Close the NPS log file.</p>
+<p id="cn-m13-550">Minimize the <b>File Explorer </b>window.</p>
+<p id="cn-m13-551"></p><figure><img class="cn-img" id="cn-image-m13-c-86" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-86.jpg" alt="Figure 4.2 Screenshot of the PLABSA01"><figcaption>Figure 4.2 Screenshot of the PLABSA01: Specified log file is displayed in Notepad window.</figcaption></figure><p></p>
+<h3 id="cn-m13-552"><b>Task 2 - Install Tools to Read the NPS Logs</b></h3>
+<p id="cn-m13-553">You need software tools, such as <b>NPS log reader </b>or <b>IAS viewer </b>to
+ read and understand NPS logs. You can download and install these tools 
+on the computer containing the log files. In this task, you will 
+download and install the <b>IAS viewer </b>tool on the <b>PLABSA01 </b>server.</p>
+<p id="cn-m13-554">To install tools to read the NPS logs, perform the following steps:</p>
+<h4 id="cn-m13-555"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-556">On <b>PLABSA01 </b>device, open the <b>Server Manager </b>window and click on <b>Local Server </b>in the left pane.</p>
+<h4 id="cn-m13-557"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-558">Scroll towards the right in the <b>Properties for PLABSA01 </b>section, ensure that the <b>IE Enhanced Security Configuration </b>parameter is set to <b>Off</b>.</p>
+<span class="cn-alert" id="cn-m13-559">If it is <b>On</b>, then perform <b>Step 3</b>. If not, skip <b>Step 3 </b>and move straight to <b>Step 4</b>.</span>
+<p id="cn-m13-560"></p><figure><img class="cn-img" id="cn-image-m13-c-87" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-87.jpg" alt="Figure 4.3 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.3 Screenshot of the PLABSA01: Relevant On link is highlighted on the 
+Properties for PLABSA01 pane on the Local Server tab of the Server 
+Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m13-561"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-562">The <b>Internet Explorer Enhanced Security Configuration </b>dialog box is displayed.</p>
+<p id="cn-m13-563">Select <b>Off </b>in both the <b>Administrators </b>and the <b>Users </b>section. These advanced security features need to be switched off as they can block the downloading and installing the tool.</p>
+<p id="cn-m13-564">Click <b>OK</b>.</p>
+<p id="cn-m13-565">Exit the <b>Server Manager </b>console.</p>
+<p id="cn-m13-566"></p><figure><img class="cn-img" id="cn-image-m13-c-88" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-88.jpg" alt="Figure 4.4 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.4 Screenshot of the PLABSA01: Internet Explorer Enhanced Security 
+Configuration dialog box is displayed showing the required settings 
+performed and the OK button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-567"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-568">Back on the <b>PLABSA01 </b>desktop, select <b>Internet Explorer </b>from the taskbar.</p>
+<p id="cn-m13-569"></p><figure><img class="cn-img" id="cn-image-m13-c-89" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-89.jpg" alt="Figure 4.5 Screenshot of the PLABSA01"><figcaption>Figure 4.5 Screenshot of the PLABSA01: Showing the desktop with Internet Explorer available.</figcaption></figure><p></p>
+<h4 id="cn-m13-570"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-571">On the <b>Setup Internet Explorer 11 </b>dialog box, select the <b>Use recommended security and compatibility settings </b>option.</p>
+<p id="cn-m13-572">Click <b>OK</b>.</p>
+<p id="cn-m13-573"></p><figure><img class="cn-img" id="cn-image-m13-c-90" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-90.jpg" alt="Figure 4.6 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.6 Screenshot of the PLABSA01: Internet Explorer 11 dialog box is 
+displayed showing the required selection performed and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-574"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-575">On the <b>Tools and resources </b>page, click <b>Tools</b>.</p>
+<p id="cn-m13-576"></p><figure><img class="cn-img" id="cn-image-m13-c-91" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-91.jpg" alt="Figure 4.7 Screenshot of the PLABSA01"><figcaption>Figure 4.7 Screenshot of the PLABSA01: Tools and resources webpage is displayed showing the Tools option available.</figcaption></figure><p></p>
+<h4 id="cn-m13-577"><b><i>Step 7</i></b></h4>
+<p id="cn-m13-578">You will be taken to the <b>[…] Tools </b>page.</p>
+<p id="cn-m13-579">Scroll down the page and locate <b>Windows_Server_2012</b>.</p>
+<p id="cn-m13-580">Click <b>Windows_Server_2012</b>.</p>
+<p id="cn-m13-581"></p><figure><img class="cn-img" id="cn-image-m13-c-92" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-92.jpg" alt="Figure 4.8 Screenshot of the PLABSA01"><figcaption>Figure 4.8 Screenshot of the PLABSA01: .. &gt; Tools webpage is displayed showing the Windows_Server_2012 option highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-582"><b><i>Step 8</i></b></h4>
+<p id="cn-m13-583">On the <b>[…] Tools Windows_Server_2012 </b>page, click <b>iasviewer_v294.zip</b>.</p>
+<p id="cn-m13-584"></p><figure><img class="cn-img" id="cn-image-m13-c-93" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-93.jpg" alt="Figure 4.9 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.9 Screenshot of the PLABSA01: .. &gt; Tools &gt; Windows_Server_2012 
+webpage is displayed showing the iasviewer_v294.zip option highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-585"><b><i>Step 9</i></b></h4>
+<p id="cn-m13-586">On the notification bar at the bottom of the page, click <b>Save</b>.</p>
+<p id="cn-m13-587"></p><figure><img class="cn-img" id="cn-image-m13-c-94" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-94.jpg" alt="Figure 4.10 Screenshot of the PLABSA01"><figcaption>Figure 4.10 Screenshot of the PLABSA01: iasviewer_v294.zip notification bar is displayed showing the Save button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-588"><b><i>Step 10</i></b></h4>
+<p id="cn-m13-589">When the download is completed, click the <b>Open folder </b>button from the information bar.</p>
+<p id="cn-m13-590"></p><figure><img class="cn-img" id="cn-image-m13-c-95" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-95.jpg" alt="Figure 4.11 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.11 Screenshot of the PLABSA01: iasviewer_v294.zip notification bar is
+ displayed showing the Open folder button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-591"><b><i>Step 11</i></b></h4>
+<p id="cn-m13-592">File Explorer opens.</p>
+<p id="cn-m13-593">Right-click on the <b>iasviewer_v294 </b>file and choose <b>Extract All</b>…</p>
+<p id="cn-m13-594"></p><figure><img class="cn-img" id="cn-image-m13-c-96" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-96.jpg" alt="Figure 4.12 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.12 Screenshot of the PLABSA01: Context menu (that appears on the 
+right-clicking zipped folder) &gt; Extract All menu-options are 
+highlighted on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m13-595"><b><i>Step 12</i></b></h4>
+<p id="cn-m13-596">In <b>Select a destination and extract files </b>dialog box, click <b>Extract</b>.</p>
+<p id="cn-m13-597"></p><figure><img class="cn-img" id="cn-image-m13-c-97" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-97.jpg" alt="Figure 4.13 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.13 Screenshot of the PLABSA01: Select a Destination and Extract Files
+ dialog box is displayed showing default settings and the Extract button
+ available.</figcaption></figure><p></p>
+<h4 id="cn-m13-598"><b><i>Step 13</i></b></h4>
+<p id="cn-m13-599">A new window opens. Double-click <b>setup</b>.</p>
+<p id="cn-m13-600"></p><figure><img class="cn-img" id="cn-image-m13-c-98" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-98.jpg" alt="Figure 4.14 Screenshot of the PLABSA01"><figcaption>Figure 4.14 Screenshot of the PLABSA01: Extracted files showing the setup file selected are listed on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m13-601"><b><i>Step 14</i></b></h4>
+<p id="cn-m13-602">On the <b>Welcome to the IAS Log Viewer Setup Wizard </b>of the <b>Setup - IAS Log Viewer </b>wizard, click <b>Next</b>.</p>
+<p id="cn-m13-603"></p><figure><img class="cn-img" id="cn-image-m13-c-99" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-99.jpg" alt="Figure 4.15 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.15 Screenshot of the PLABSA01: Welcome page on the Setup - IAS Log 
+Viewer wizard is displayed showing the Next button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-604"><b><i>Step 15</i></b></h4>
+<p id="cn-m13-605">On the <b>License Agreement </b>page, select the <b>I accept the agreement </b>option.</p>
+<p id="cn-m13-606">Click <b>Next</b>.</p>
+<p id="cn-m13-607"></p><figure><img class="cn-img" id="cn-image-m13-c-100" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-100.jpg" alt="Figure 4.16 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.16 Screenshot of the PLABSA01: License Agreement page on the Setup - 
+IAS Log Viewer wizard is displayed showing the required setting 
+performed and the Next button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-608"><b><i>Step 16</i></b></h4>
+<p id="cn-m13-609">On the <b>Select Destination Location </b>page, keep the default values and click <b>Next</b>.</p>
+<p id="cn-m13-610"></p><figure><img class="cn-img" id="cn-image-m13-c-101" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-101.jpg" alt="Figure 4.17 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.17 Screenshot of the PLABSA01: Select Destination Location page on 
+the Setup - IAS Log Viewer wizard is displayed showing default settings 
+and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-611"><b><i>Step 17</i></b></h4>
+<p id="cn-m13-612">On the <b>Select Start Menu Folder </b>page, keep the default value and click <b>Next</b>.</p>
+<p id="cn-m13-613"></p><figure><img class="cn-img" id="cn-image-m13-c-102" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-102.jpg" alt="Figure 4.18 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.18 Screenshot of the PLABSA01: Select Start Menu Folder page on the 
+Setup - IAS Log Viewer wizard is displayed showing default settings and 
+the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-614"><b><i>Step 18</i></b></h4>
+<p id="cn-m13-615">On the <b>Select Additional Tasks </b>page, keep the default selection and also check the <b>Create a Quick Launch icon </b>checkbox.</p>
+<p id="cn-m13-616">Click <b>Next</b>.</p>
+<p id="cn-m13-617"></p><figure><img class="cn-img" id="cn-image-m13-c-103" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-103.jpg" alt="Figure 4.19 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.19 Screenshot of the PLABSA01: Select Additional Tasks page on the 
+Setup - IAS Log Viewer wizard is displayed showing the required settings
+ performed and the Next button available.</figcaption></figure><p></p>
+<h4 id="cn-m13-618"><b><i>Step 19</i></b></h4>
+<p id="cn-m13-619">On the <b>Ready to Install </b>page, read the information and click <b>Install</b>.</p>
+<p id="cn-m13-620"></p><figure><img class="cn-img" id="cn-image-m13-c-104" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-104.jpg" alt="Figure 4.20 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.20 Screenshot of the PLABSA01: Ready to Install page on the Setup - 
+IAS Log Viewer wizard is displayed listing installation specifications, 
+and the Install button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-621"><b><i>Step 20</i></b></h4>
+<p id="cn-m13-622">Click <b>Finish </b>on the completion page.</p>
+<p id="cn-m13-623">Close <b>File Explorer </b>and <b>Internet Explorer</b>.</p>
+<p id="cn-m13-624"></p><figure><img class="cn-img" id="cn-image-m13-c-105" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-105.jpg" alt="Figure 4.21 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.21 Screenshot of the PLABSA01: Completion page on the Setup - IAS Log
+ Viewer wizard is displayed the listing status of the installation, and 
+the Finish button highlighted.</figcaption></figure><p></p>
+<h3 id="cn-m13-625"><b>Task 3 - Read the NPS Logs</b></h3>
+<p id="cn-m13-626">You can use the log viewer tools on your computer to 
+read the NPS logs and understand the details about each attempted 
+connection. In this task, you will use the <b>IAS Viewer </b>installed on <b>PLABSA01 </b>to examine the NPS log that was created when <b>PRACTICELABS\Administrator </b>dialed-in to VPN server.</p>
+<p id="cn-m13-627">To read the NPS logs, perform the following steps:</p>
+<h4 id="cn-m13-628"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-629">On the <b>PLABSA01 </b>desktop, double-click the <b>IAS Log Viewer </b>icon.</p>
+<p id="cn-m13-630"></p><figure><img class="cn-img" id="cn-image-m13-c-106" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-106.jpg" alt="Figure 4.22 Screenshot of the PLABSA01"><figcaption>Figure 4.22 Screenshot of the PLABSA01: IAS Log Viewer icon is highlighted on the PLABSA01 Windows desktop.</figcaption></figure><p></p>
+<h4 id="cn-m13-631"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-632">The <b>IAS Log Viewer </b>tool is launched.</p>
+<p id="cn-m13-633">The <b>Open Log Files </b>dialog box lists the log files available on the computer.</p>
+<p id="cn-m13-634">Select the file to view and click <b>OK </b>to view the contents of the log.</p>
+<p id="cn-m13-635"></p><figure><img class="cn-img" id="cn-image-m13-c-107" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-107.jpg" alt="Figure 4.23 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.23 Screenshot of the PLABSA01: Open Log Files dialog box on the IAS 
+Log Viewer is displayed showing the required selection performed and the
+ OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-636"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-637">Details of the various connection attempts are listed on the <b>Connects </b>tab.</p>
+<p id="cn-m13-638">On this tab, right-click the last record entry and select <b>Item Details</b>.</p>
+<p id="cn-m13-639"></p><figure><img class="cn-img" id="cn-image-m13-c-108" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-108.jpg" alt="Figure 4.24 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.24 Screenshot of the PLABSA01: Context menu (that appears on 
+right-clicking a log record) &gt; Item Details menu-options are 
+highlighted on the Connects tab of the IAS Log Viewer console.</figcaption></figure><p></p>
+<h4 id="cn-m13-640"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-641">The <b>Properties </b>dialog box displays the details of the connection.</p>
+<p id="cn-m13-642">Scroll down the record to see the details.</p>
+<p id="cn-m13-643">Close the <b>Properties </b>dialog box when done.</p>
+<p id="cn-m13-644"></p><figure><img class="cn-img" id="cn-image-m13-c-109" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-109.jpg" alt="Figure 4.25 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.25 Screenshot of the PLABSA01: Properties dialog box on the Connects 
+tab of the IAS Log Viewer is displayed listing details of the specified 
+connection.</figcaption></figure><p></p>
+<h4 id="cn-m13-645"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-646">Back on the <b>IAS Log Viewer </b>window, click the <b>Records </b>tab.</p>
+<p id="cn-m13-647">Right-click the last record and choose <b>Item Details</b>.</p>
+<p id="cn-m13-648"></p><figure><img class="cn-img" id="cn-image-m13-c-110" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-110.jpg" alt="Figure 4.26 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.26 Screenshot of the PLABSA01: Context menu (that appears on 
+right-clicking a log record) &gt; Item Details menu-options are 
+highlighted on the Records tab of the IAS Log Viewer console.</figcaption></figure><p></p>
+<h4 id="cn-m13-649"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-650">The <b>Properties </b>dialogue box displays the details of this record.</p>
+<p id="cn-m13-651">Scroll down to read the details of this connection.</p>
+<p id="cn-m13-652">Close the <b>Properties </b>dialog box when done.</p>
+<p id="cn-m13-653">Minimize <b>IAS Log Viewer</b>.</p>
+<p id="cn-m13-654"></p><figure><img class="cn-img" id="cn-image-m13-c-111" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-111.jpg" alt="Figure 4.27 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.27 Screenshot of the PLABSA01: Properties dialog box on the Records 
+tab of the IAS Log Viewer is displayed listing details of the specified 
+connection.</figcaption></figure><p></p>
+<h3 id="cn-m13-655"><b>Task 4- Export NPS Templates</b></h3>
+<p id="cn-m13-656">If there is more than one NPS server on a network, 
+you can create files with similar formats across the servers. You can 
+achieve this by exporting templates from one server to another. This 
+saves you the effort of redefining the templates for each server. In 
+this task, you will export the templates defined on <b>PLABSA01 </b>to the <b>PLABS.xml</b>.</p>
+<p id="cn-m13-657">To export the NPS templates, perform the following steps:</p>
+<h4 id="cn-m13-658"><b><i>Step 1</i></b></h4>
+<p id="cn-m13-659">From the <b>PLABSA01 </b>device, reopen <b>Server Manager</b>. Restore the Network Policy Server from the taskbar.</p>
+<span class="cn-quote" id="cn-m13-660"><b><i>Note: </i></b><i>If you had closed it previously, open it from the </i><b><i>Tools </i></b><i>menu.</i></span>
+<p id="cn-m13-661"></p><figure><img class="cn-img" id="cn-image-m13-c-112" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-112.jpg" alt="Figure 4.28 Screenshot of the PLABSA01"><figcaption>Figure 4.28 Screenshot of the PLABSA01: Network Policy Server window is being displayed.</figcaption></figure><p></p>
+<h4 id="cn-m13-662"><b><i>Step 2</i></b></h4>
+<p id="cn-m13-663">Under <b>NPS (Local) </b>in the left pane, right-click <b>Templates Management </b>and select <b>Export Templates to a file</b>.</p>
+<p id="cn-m13-664"></p><figure><img class="cn-img" id="cn-image-m13-c-113" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-113.jpg" alt="Figure 4.29 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.29 Screenshot of the PLABSA01: Context menu (that appears on 
+right-clicking the Templates Management node) &gt; Export Templates to a
+ File menu-options are highlighted on the Network Policy Server console.</figcaption></figure><p></p>
+<h4 id="cn-m13-665"><b><i>Step 3</i></b></h4>
+<p id="cn-m13-666">In the <b>Export NPS Templates </b>dialog box, type the file name as:</p>
+<pre id="cn-m13-667"><code>PLAB
+</code></pre>
+<p id="cn-m13-668">Click <b>Save</b>.</p>
+<p id="cn-m13-669"></p><figure><img class="cn-img" id="cn-image-m13-c-114" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-114.jpg" alt="Figure 4.30 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.30 Screenshot of the PLABSA01: Export NPS Templates dialog box is 
+displayed showing the required file-name typed in and the Save button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m13-670"><b><i>Step 4</i></b></h4>
+<p id="cn-m13-671">Click the <b>File Explorer </b>icon on the taskbar to launch the explorer window if already not opened.</p>
+<h4 id="cn-m13-672"><b><i>Step 5</i></b></h4>
+<p id="cn-m13-673">On the explorer window, navigate to the <b>This PC &gt; Local Disk (C:) &gt; Windows </b>directory path. Click on the <b>System 32 </b>folder to display the contents on the details pane at the right.</p>
+<p id="cn-m13-674">Scroll down and locate <b>PLAB</b>(.xml) file.</p>
+<p id="cn-m13-675">Right-click the file and select <b>Open With &gt; Notepad</b>.</p>
+<p id="cn-m13-676"></p><figure><img class="cn-img" id="cn-image-m13-c-115" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-115.jpg" alt="Figure 4.31 Screenshot of the PLABSA01"><figcaption>Figure
+ 4.31 Screenshot of the PLABSA01: Context menu (that appears on 
+right-clicking a listed file) &gt; Open with &gt; Notepad menu-options 
+are highlighted on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m13-677"><b><i>Step 6</i></b></h4>
+<p id="cn-m13-678">The details of the stored templates are displayed in 
+the notepad file. You can use this file to create more files on the same
+ template.</p>
+<p id="cn-m13-679"></p><figure><img class="cn-img" id="cn-image-m13-c-116" src="ConfiguringAdvancedAuthenticationandAuthorization_files/image-m13-c-116.jpg" alt="Figure 4.32 Screenshot of the PLABSA01"><figcaption>Figure 4.32 Screenshot of the PLABSA01: Specified file is displayed on the Notepad window.</figcaption></figure><p></p>
+<span class="atom-code hidden">f4b668ae-6731-4fec-956d-91344aefd689</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m13-683"><b>Review</b></h2>
+<p id="cn-m13-684">Well done, you have completed the <b>Configuring Advanced Authentication and Authorization </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">7c320d6c-6a7c-4d6e-b48a-43f5434e6be8</span>
+<span class="atom-code hidden">4c1112b4-62b3-484d-81cb-014a3419714a</span>
+<span class="atom-code hidden">5c342b5c-9cc7-4fc9-95b8-126d50c2f319</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m13-692">You completed the following exercises:</p>
+<ul id="cn-m13-693">
+<li id="cn-m13-693">Install and Configure Network Policy Server</li>
+<li id="cn-m13-694">Install and Configure Remote Access Server</li>
+<li id="cn-m13-695">Configure the VPN Client</li>
+<li id="cn-m13-696">Viewing the NPS Logs</li>
+</ul>
+<p id="cn-m13-697">You should now be able to:</p>
+<ul id="cn-m13-698">
+<li id="cn-m13-698">Add DNS IP Address on PLABSA01</li>
+<li id="cn-m13-699">Install Network Policy Server</li>
+<li id="cn-m13-700">Configure Network Policy Service</li>
+<li id="cn-m13-701">Configure Network Policy Server Logs</li>
+<li id="cn-m13-702">Prepare the VPN Interface</li>
+<li id="cn-m13-703">Install Remote Access Service</li>
+<li id="cn-m13-704">Initialize Remote Access Management</li>
+<li id="cn-m13-705">Configure Authentication and Accounting Providers</li>
+<li id="cn-m13-706">Configuring the VPN Ports</li>
+<li id="cn-m13-707">Specify the VPN Adapter</li>
+<li id="cn-m13-708">Grant VPN Dial-in Permission</li>
+<li id="cn-m13-709">Configure a Secondary IP Address for VPN Client</li>
+<li id="cn-m13-710">Create VPN Client Dialer</li>
+<li id="cn-m13-711">Check the Status of a VPN Connection</li>
+<li id="cn-m13-712">Examine the NPS Logs</li>
+<li id="cn-m13-713">Install Tools to Read the NPS Logs</li>
+<li id="cn-m13-714">Read the NPS Logs</li>
+<li id="cn-m13-715">Export NPS Templates</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m13-719">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

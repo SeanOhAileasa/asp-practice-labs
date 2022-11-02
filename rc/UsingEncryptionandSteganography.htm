@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="UsingEncryptionandSteganography_files/print-styles.css" rel="stylesheet">
+    <script src="UsingEncryptionandSteganography_files/jquery.min.js"></script>
+    <script src="UsingEncryptionandSteganography_files/jspdf.js"></script>
+    <script src="UsingEncryptionandSteganography_files/from_html.js"></script>
+    <script src="UsingEncryptionandSteganography_files/addimage.js"></script>
+    <script src="UsingEncryptionandSteganography_files/filesaver.js"></script>
+    <script src="UsingEncryptionandSteganography_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="WJBRjCltle+N3qjSZ2ZV5NxNCDnm4jmkPo3whZyLXDWnk5lO8mebCOVNVUghhFmbMCQDrRuBw3fJcdtMQa0MgrRdY+1plt5zpHaHhWqRX9A=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Using Encryption and Steganography</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Configure BitLocker on Portable Media</li><li>Exercise 2 - Implement Full Disk Encryption using BitLocker</li><li>Exercise 3 - Manage Security for Removable Media</li><li>Exercise 4 - Hide documents in a graphics file</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m31-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Encryption</div>
+<div>Steganography</div>
+<div>BitLocker</div>
+</div>
+<p id="cn-m31-5">Welcome to the <b>Using Encryption and Steganography </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m31-9">In this module, you will complete the following exercises:</p>
+<ul id="cn-m31-10">
+<li id="cn-m31-10">Configure BitLocker on Portable Media</li>
+<li id="cn-m31-11">Implement Full Disk Encryption using BitLocker</li>
+<li id="cn-m31-12">Manage Security for Removable Media</li>
+<li id="cn-m31-13">Hide documents in a graphics file</li>
+</ul>
+<p id="cn-m31-14">After completing this lab, you will be able to:</p>
+<ul id="cn-m31-15">
+<li id="cn-m31-15">Enable BitLocker without TPM Support</li>
+<li id="cn-m31-16">Configure BitLocker settings via GPO</li>
+<li id="cn-m31-17">Shrink the Existing Drive</li>
+<li id="cn-m31-18">Enable BitLocker</li>
+<li id="cn-m31-19">Verify BitLocker functionality</li>
+<li id="cn-m31-20">Manage BitLocker using the command prompt</li>
+<li id="cn-m31-21">Unlock the Encrypted Drive using Recovery Keys</li>
+<li id="cn-m31-22">Configure restrictions for removable media using GPO</li>
+<li id="cn-m31-23">Use Folder Steganography Tools</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m31-25">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m31-26">
+<li id="cn-m31-26"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+</ul>
+<span class="cn-quote" id="cn-m31-27"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m31-29">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m31-33">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m31-34">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m31-50"><b>Lab Topology</b></h2>
+<p id="cn-m31-51">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m31-52">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m31-53">
+<li id="cn-m31-53"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m31-54"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m31-55"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+<li id="cn-m31-56"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m31-57"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<p id="cn-m31-58"><img class="cn-img" id="cn-image-m31-c-0" src="UsingEncryptionandSteganography_files/image-m31-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m31-59">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m31-60"><b>Exercise 1 - Configure BitLocker on Portable Media</b></h2>
+<p id="cn-m31-61">Windows BitLocker is a storage encryption technology 
+that gives administrators the capability to secure fixed and removable 
+disks including portable USB drives using encryption services built into
+ the operating system.</p>
+<p id="cn-m31-62">For this exercise, you will secure the disk volume of Windows 8 by using the BitLocker feature.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m31-64">After completing this exercise, you will be able to:</p>
+<ul id="cn-m31-65">
+<li id="cn-m31-65">Enable BitLocker without TPM Support</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m31-67">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m31-68">
+<li id="cn-m31-68"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m31-69"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m31-70"><img class="cn-img" id="cn-image-m31-c-1" src="UsingEncryptionandSteganography_files/image-m31-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m31-71"><b>Task 1- Enable BitLocker without TPM Support</b></h3>
+<p id="cn-m31-72">In this task, we will be placing BitLocker without TPM
+ support onto a drive and then testing the configuration to confirm it 
+is working. To enable BitLocker without TPM support, perform the 
+following steps:</p>
+<h4 id="cn-m31-73"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-74">Connect to <b>PLABWIN801</b>.</p>
+<p id="cn-m31-75">Click <b>Start</b>.</p>
+<p id="cn-m31-76">From the <b>Windows Start </b>screen, type the following command:</p>
+<pre id="cn-m31-77"><code>gpedit.msc
+</code></pre>
+<p id="cn-m31-78">Press <b>Enter</b>.</p>
+<p id="cn-m31-79"></p><figure><img class="cn-img" id="cn-image-m31-c-2" src="UsingEncryptionandSteganography_files/image-m31-c-2.jpg" alt="Figure 1.1 Screenshot of PLABWIN801"><figcaption>Figure 1.1 Screenshot of PLABWIN801: Displaying the Windows Search bar with the results.</figcaption></figure><p></p>
+<h4 id="cn-m31-80"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-81">From <b>Local Group Policy Editor </b>window, navigate to <b>Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption </b>&gt; <b>Operating System Drives</b>.</p>
+<p id="cn-m31-82">Right-click <b>Require additional authentication at startup (Windows Server 2008 and Windows Vista) </b>and select <b>Edit</b>.</p>
+<p id="cn-m31-83"></p><figure><img class="cn-img" id="cn-image-m31-c-3" src="UsingEncryptionandSteganography_files/image-m31-c-3.jpg" alt="Figure 1.2 Screenshot of PLABWIN801"><figcaption>Figure
+ 1.2 Screenshot of PLABWIN801: Selecting the Edit option from the 
+Require additional authentication at startup (Windows Server 2008 and 
+Windows Vista) policy.</figcaption></figure><p></p>
+<h4 id="cn-m31-84"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-85">On <b>Require additional authentication at startup</b>, select <b>Enabled</b>.</p>
+<p id="cn-m31-86">Select <b>Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive) </b>checkbox. Click <b>OK</b>.</p>
+<p id="cn-m31-87"></p><figure><img class="cn-img" id="cn-image-m31-c-4" src="UsingEncryptionandSteganography_files/image-m31-c-4.jpg" alt="Figure 1.3 Screenshot of PLABWIN801"><figcaption>Figure 1.3 Screenshot of PLABWIN801: Enabling BitLocker without TPM support.</figcaption></figure><p></p>
+<p id="cn-m31-88">Notice that this policy is now enabled. Close <b>Local Group Policy Editor</b>.</p>
+<p id="cn-m31-89"></p><figure><img class="cn-img" id="cn-image-m31-c-5" src="UsingEncryptionandSteganography_files/image-m31-c-5.jpg" alt="Figure 1.4 Screenshot of PLABWIN801"><figcaption>Figure 1.4 Screenshot of PLABWIN801: Displaying the enabled policy.</figcaption></figure><p></p>
+<h4 id="cn-m31-90"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-91">Open <b>File Explorer </b>from the taskbar.</p>
+<p id="cn-m31-92"></p><figure><img class="cn-img" id="cn-image-m31-c-6" src="UsingEncryptionandSteganography_files/image-m31-c-6.jpg" alt="Figure 1.5 Screenshot of PLABWIN801"><figcaption>Figure 1.5 Screenshot of PLABWIN801: Displaying the File Explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m31-93"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-94">Right-click <b>Drive E</b>, then select <b>Turn on BitLocker</b>.</p>
+<p id="cn-m31-95"></p><figure><img class="cn-img" id="cn-image-m31-c-7" src="UsingEncryptionandSteganography_files/image-m31-c-7.jpg" alt="Figure 1.6 Screenshot of PLABWIN801"><figcaption>Figure 1.6 Screenshot of PLABWIN801: Selecting the Turn on BitLocker option from the context menu</figcaption></figure><p></p>
+<h4 id="cn-m31-96"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-97">On the <b>Choose how you want to unlock this drive </b>page of the <b>BitLocker Drive Encryption (E:) </b>wizard, select <b>Use a password to unlock the drive</b>.</p>
+<p id="cn-m31-98">In the <b>Enter your password </b>and <b>Reenter your password </b>text boxes, enter the following password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m31-100">Click <b>Next</b>.</p>
+<p id="cn-m31-101"></p><figure><img class="cn-img" id="cn-image-m31-c-8" src="UsingEncryptionandSteganography_files/image-m31-c-8.jpg" alt="Figure 1.7 Screenshot of PLABWIN801"><figcaption>Figure 1.7 Screenshot of PLABWIN801: Defining the password for unlocking the drive.</figcaption></figure><p></p>
+<h4 id="cn-m31-102"><b><i>Step 7</i></b></h4>
+<p id="cn-m31-103">On the <b>How do you want to back up your recovery key? </b>page, select <b>Save to a file</b>.</p>
+<p id="cn-m31-104"></p><figure><img class="cn-img" id="cn-image-m31-c-9" src="UsingEncryptionandSteganography_files/image-m31-c-9.jpg" alt="Figure 1.8 Screenshot of PLABWIN801"><figcaption>Figure 1.8 Screenshot of PLABWIN801: Selecting the Save to a file option.</figcaption></figure><p></p>
+<h4 id="cn-m31-105"><b><i>Step 8</i></b></h4>
+<p id="cn-m31-106">In the <b>Save BitLocker recovery key as </b>dialog box, right-click <b>This PC </b>node and select <b>Map network drive</b>.</p>
+<span class="cn-quote" id="cn-m31-107"><b><i>Note</i></b><i>: Saving the
+ recovery key on the local drives is not supported by Windows 10. 
+Therefore, the recovery key must be saved either on a USB drive (not 
+supported by this lab) or on a network drive.</i></span>
+<p id="cn-m31-108"></p><figure><img class="cn-img" id="cn-image-m31-c-10" src="UsingEncryptionandSteganography_files/image-m31-c-10.jpg" alt="Figure 1.9 Screenshot of PLABWIN801"><figcaption>Figure 1.9 Screenshot of PLABWIN801: Selecting the Map network drive option from the context menu.</figcaption></figure><p></p>
+<h4 id="cn-m31-109"><b><i>Step 9</i></b></h4>
+<p id="cn-m31-110">In the <b>Map Network Drive </b>dialog box, in the <b>Folder </b>text box, type the following path and click <b>Finish</b>:</p>
+<pre id="cn-m31-111"><code>\\plabdc01\c$
+</code></pre>
+<p id="cn-m31-112"></p><figure><img class="cn-img" id="cn-image-m31-c-11" src="UsingEncryptionandSteganography_files/image-m31-c-11.jpg" alt="Figure 1.10 Screenshot of PLABWIN801"><figcaption>Figure 1.10 Screenshot of PLABWIN801: Mapping the PALBDC01 C drive.</figcaption></figure><p></p>
+<h4 id="cn-m31-113"><b><i>Step 10</i></b></h4>
+<p id="cn-m31-114">A network drive mapping to <b>c$(\\plabdc01)(z:) </b>drive appears.</p>
+<span class="cn-quote" id="cn-m31-115"><b><i>Note: </i></b><i>If you are not able to see the network share and are prompted to turn on file sharing, you must enable it.</i></span>
+<p id="cn-m31-116">Double-click <b>c$(\\plabdc01)(z:) </b>drive.</p>
+<p id="cn-m31-117"></p><figure><img class="cn-img" id="cn-image-m31-c-12" src="UsingEncryptionandSteganography_files/image-m31-c-12.jpg" alt="Figure 1.11 Screenshot of PLABWIN801"><figcaption>Figure 1.11 Screenshot of PLABWIN801: Showing the mapped PALBDC01 C drive.</figcaption></figure><p></p>
+<h4 id="cn-m31-118"><b><i>Step 11</i></b></h4>
+<p id="cn-m31-119">You are now in <b>c$(\\plabdc01)(z:) </b>drive.</p>
+<p id="cn-m31-120">Click <b>Save</b>.</p>
+<p id="cn-m31-121"></p><figure><img class="cn-img" id="cn-image-m31-c-13" src="UsingEncryptionandSteganography_files/image-m31-c-13.jpg" alt="Figure 1.12 Screenshot of PLABWIN801"><figcaption>Figure 1.12 Screenshot of PLABWIN801: Saving recovery file in PLABDC01 C drive.</figcaption></figure><p></p>
+<h4 id="cn-m31-122"><b><i>Step 12</i></b></h4>
+<p id="cn-m31-123">Back in the <b>BitLocker Drive Encryption (E:) </b>window, <b>How do you want to backup your recovery key? </b>page, click <b>Next</b>.</p>
+<p id="cn-m31-124"></p><figure><img class="cn-img" id="cn-image-m31-c-14" src="UsingEncryptionandSteganography_files/image-m31-c-14.jpg" alt="Figure 1.13 Screenshot of PLABWIN801"><figcaption>Figure 1.13 Screenshot of PLABWIN801: Continuing encryption of E drive.</figcaption></figure><p></p>
+<h4 id="cn-m31-125"><b><i>Step 13</i></b></h4>
+<p id="cn-m31-126">In the <b>Are you ready to encrypt this drive? </b>page, click <b>Start encrypting</b>.</p>
+<p id="cn-m31-127"></p><figure><img class="cn-img" id="cn-image-m31-c-15" src="UsingEncryptionandSteganography_files/image-m31-c-15.jpg" alt="Figure 1.14 Screenshot of PLABWIN801"><figcaption>Figure 1.14 Screenshot of PLABWIN801: Clicking the Start encrypting button to start encryption.</figcaption></figure><p></p>
+<h4 id="cn-m31-128"><b><i>Step 14</i></b></h4>
+<p id="cn-m31-129">The system displays the message <b>Encryption is now in progress </b>may briefly appear on the screen.</p>
+<p id="cn-m31-130">On the <b>BitLocker Drive Encryption </b>dialog box, click <b>Close</b>.</p>
+<p id="cn-m31-131"></p><figure><img class="cn-img" id="cn-image-m31-c-16" src="UsingEncryptionandSteganography_files/image-m31-c-16.jpg" alt="Figure 1.15 Screenshot of PLABWIN801"><figcaption>Figure 1.15 Screenshot of PLABWIN801: Displaying the BitLocker Drive Encryption dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m31-132"><b><i>Step 15</i></b></h4>
+<p id="cn-m31-133">In <b>File Explorer </b>window, select <b>This PC </b>in the left pane if already not selected.</p>
+<p id="cn-m31-134">At the right details pane, notice that <b>New Volume (E:) </b>drive has the greyed-out padlock. This indicates that BitLocker has not completed the encryption of the fixed drive.</p>
+<p id="cn-m31-135"></p><figure><img class="cn-img" id="cn-image-m31-c-17" src="UsingEncryptionandSteganography_files/image-m31-c-17.jpg" alt="Figure 1.16 Screenshot of PLABWIN801"><figcaption>Figure 1.16 Screenshot of PLABWIN801: Showing the BitLocker enabled drive.</figcaption></figure><p></p>
+<h4 id="cn-m31-136"><b><i>Step 16</i></b></h4>
+<p id="cn-m31-137">Navigate to <b>Local Disk E</b>. Create a folder called <b>Marketing </b>and create a new text file called <b>Marketing Plans.txt</b>.</p>
+<h4 id="cn-m31-138"><b><i>Step 17</i></b></h4>
+<p id="cn-m31-139">Double-click to open the <b>Marketing Plans </b>file.</p>
+<p id="cn-m31-140">When prompted to select an application to open the text file, select <b>Notepad</b>.</p>
+<p id="cn-m31-141"></p><figure><img class="cn-img" id="cn-image-m31-c-18" src="UsingEncryptionandSteganography_files/image-m31-c-18.jpg" alt="Figure 1.17 Screenshot of PLABWIN801"><figcaption>Figure 1.17 Screenshot of PLABWIN801: Opening the text file in Notepad.</figcaption></figure><p></p>
+<h4 id="cn-m31-142"><b><i>Step 18</i></b></h4>
+<p id="cn-m31-143">Type the following sentence:</p>
+<pre id="cn-m31-144"><code>Practice Labs marketing plans for the year.
+</code></pre>
+<p id="cn-m31-145"><b>Save </b>the file and then close it.</p>
+<p id="cn-m31-146">Close the <b>Marketing </b>folder.</p>
+<p id="cn-m31-147"></p><figure><img class="cn-img" id="cn-image-m31-c-19" src="UsingEncryptionandSteganography_files/image-m31-c-19.jpg" alt="Figure 1.18 Screenshot of PLABWIN801"><figcaption>Figure 1.18 Screenshot of PLABWIN801: Making a folder and file in Local Disk Drive E, adding a sentence.</figcaption></figure><p></p>
+<h4 id="cn-m31-148"><b><i>Step 19</i></b></h4>
+<p id="cn-m31-149">Right-click <b>Start </b>and then select <b>Command Prompt</b>.</p>
+<h4 id="cn-m31-150"><b><i>Step 20</i></b></h4>
+<p id="cn-m31-151">On the command prompt, type the following command:</p>
+<pre id="cn-m31-152"><code>shutdown /r /t 0
+</code></pre>
+<p id="cn-m31-153">Press <b>Enter</b>.</p>
+<p id="cn-m31-154"></p><figure><img class="cn-img" id="cn-image-m31-c-20" src="UsingEncryptionandSteganography_files/image-m31-c-20.jpg" alt="Figure 1.19 Screenshot of PLABWIN801"><figcaption>Figure 1.19 Screenshot of PLABWIN801: Shutting down the device through the command line.</figcaption></figure><p></p>
+<h4 id="cn-m31-155"><b><i>Step 21</i></b></h4>
+<p id="cn-m31-156">Within the practice labs platform, click on the <b>Settings and Customization </b>icon, navigate down to the <b>Device </b>section and click <b>Off </b>on the <b>Server auto login.</b></p>
+<p id="cn-m31-157"><b>This will stop the device from automatically logging in as administrator.</b></p>
+<p id="cn-m31-158"></p><figure><img class="cn-img" id="cn-image-m31-c-21" src="UsingEncryptionandSteganography_files/image-m31-c-21.jpg" alt="Figure 1.20 Screenshot of PLAB Environment"><figcaption>Figure 1.20 Screenshot of PLAB Environment: Disabling Server auto login in the lab environment.</figcaption></figure><p></p>
+<h4 id="cn-m31-159"><b><i>Step 22</i></b></h4>
+<p id="cn-m31-160">Wait a few minutes for <b>PLABWIN801 </b>to restart before reconnecting to it.</p>
+<p id="cn-m31-161">Click <b>Other user</b>.</p>
+<p id="cn-m31-162"></p><figure><img class="cn-img" id="cn-image-m31-c-22" src="UsingEncryptionandSteganography_files/image-m31-c-22.jpg" alt="Figure 1.21 Screenshot of PLABWIN801"><figcaption>Figure 1.21 Screenshot of PLABWIN801: Clicking the Other user option on the login screen.</figcaption></figure><p></p>
+<h4 id="cn-m31-163"><b><i>Step 23</i></b></h4>
+<p id="cn-m31-164">Use the following credentials to log in:</p>
+<p id="cn-m31-165"><b>Username</b>:</p>
+<pre id="cn-m31-166"><code>elizabeth.scott
+</code></pre>
+<p id="cn-m31-167"><b>Password</b>:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m31-169">Press <b>Enter</b>.</p>
+<p id="cn-m31-170"></p><figure><img class="cn-img" id="cn-image-m31-c-23" src="UsingEncryptionandSteganography_files/image-m31-c-23.jpg" alt="Figure 1.22 Screenshot of PLABWIN801"><figcaption>Figure 1.22 Screenshot of PLABWIN801: Entering the credentials for another user.</figcaption></figure><p></p>
+<h4 id="cn-m31-171"><b><i>Step 24</i></b></h4>
+<p id="cn-m31-172">Click <b>Install </b>for the <b>Application Install - Security Warning</b>.</p>
+<p id="cn-m31-173"></p><figure><img class="cn-img" id="cn-image-m31-c-24" src="UsingEncryptionandSteganography_files/image-m31-c-24.jpg" alt="Figure 1.23 Screenshot of PLABWIN801"><figcaption>Figure 1.23 Screenshot of PLABWIN801: Accepting the application installations.</figcaption></figure><p></p>
+<h4 id="cn-m31-174"><b><i>Step 25</i></b></h4>
+<p id="cn-m31-175">Click <b>Agree </b>in the <b>BGInfo License Agreement </b>dialog box.</p>
+<p id="cn-m31-176"></p><figure><img class="cn-img" id="cn-image-m31-c-25" src="UsingEncryptionandSteganography_files/image-m31-c-25.jpg" alt="Figure 1.24 Screenshot of PLABWIN801"><figcaption>Figure 1.24 Screenshot of PLABWIN801: Accepting the application installations.</figcaption></figure><p></p>
+<h4 id="cn-m31-177"><b><i>Step 26</i></b></h4>
+<p id="cn-m31-178">Open <b>Windows Explorer </b>and notice that <b>Local Disk E </b>is in the locked state.</p>
+<p id="cn-m31-179"></p><figure><img class="cn-img" id="cn-image-m31-c-26" src="UsingEncryptionandSteganography_files/image-m31-c-26.jpg" alt="Figure 1.25 Screenshot of PLABWIN801"><figcaption>Figure 1.25 Screenshot of PLABWIN801: Showing the locked drive in File Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m31-180"><b><i>Step 27</i></b></h4>
+<p id="cn-m31-181">Double-click <b>Local Disk E</b>. You will be asked to enter a password to access the volume.</p>
+<p id="cn-m31-182">Type the following password in the <b>Enter password to unlock this drive </b>dialog box:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m31-184">Click <b>Unlock.</b></p>
+<p id="cn-m31-185"></p><figure><img class="cn-img" id="cn-image-m31-c-27" src="UsingEncryptionandSteganography_files/image-m31-c-27.jpg" alt="Figure 1.26 Screenshot of PLABWIN801"><figcaption>Figure 1.26 Screenshot of PLABWIN801: Accessing the BitLocker Encrypted drive and entering the password.</figcaption></figure><p></p>
+<h4 id="cn-m31-186"><b><i>Step 28</i></b></h4>
+<p id="cn-m31-187">Double-click <b>Local Disk E </b>to open it. Then, double-click the <b>Marketing </b>folder to see the file inside.</p>
+<p id="cn-m31-188"></p><figure><img class="cn-img" id="cn-image-m31-c-28" src="UsingEncryptionandSteganography_files/image-m31-c-28.jpg" alt="Figure 1.27 Screenshot of PLABWIN801"><figcaption>Figure 1.27 Screenshot of PLABWIN801: Viewing the contents of the folder.</figcaption></figure><p></p>
+<h4 id="cn-m31-189"><b><i>Step 29</i></b></h4>
+<p id="cn-m31-190">Double-click the <b>Marketing Plans </b>file. When prompted, select <b>Notepad</b>.</p>
+<p id="cn-m31-191"><b>Elizabeth Scott </b>should now have access to the encrypted <b>volume E</b>.</p>
+<p id="cn-m31-192"></p><figure><img class="cn-img" id="cn-image-m31-c-29" src="UsingEncryptionandSteganography_files/image-m31-c-29.jpg" alt="Figure 1.28 Screenshot of PLABWIN801"><figcaption>Figure 1.28 Screenshot of PLABWIN801: Viewing the contents of the encrypted file.</figcaption></figure><p></p>
+<span class="atom-code hidden">09144aba-611a-486d-b22e-e9472e284a8f</span>
+<p id="cn-m31-195">Sign out <b>Elizabeth Scott </b>from <b>PLABWIN801</b>.</p>
+<h4 id="cn-m31-196"><b><i>Step 30</i></b></h4>
+<p id="cn-m31-197">Within the practice labs platform, click on the <b>Settings and Customization </b>icon (indicated by a cog symbol), navigate down to the Device tab, and click <b>On </b>in the <b>Server auto login.</b></p>
+<p id="cn-m31-198"><b>This will allow the device to automatically log in as administrator.</b></p>
+<span class="cn-alert" id="cn-m31-199">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m31-200"><b>Exercise 2 - Implement Full Disk Encryption using BitLocker</b></h2>
+<p id="cn-m31-201">BitLocker was first introduced in Windows Server 2008
+ and Windows 7 Enterprise and then carried over to later versions. Disk 
+encryption can be enabled using a local or domain group policy. To 
+unlock an encrypted disk volume, the user must type the password to 
+unlock it. In the event the user forgets the password for unlocking the 
+encrypted volume, the Recovery Keys generated by BitLocker can be used 
+to gain access to the encrypted drive.</p>
+<p id="cn-m31-202">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m31-204">After completing this exercise, you will be able to:</p>
+<ul id="cn-m31-205">
+<li id="cn-m31-205">Configure BitLocker settings via GPO</li>
+<li id="cn-m31-206">Shrink the Existing Drive</li>
+<li id="cn-m31-207">Enable BitLocker</li>
+<li id="cn-m31-208">Verify BitLocker functionality</li>
+<li id="cn-m31-209">Manage BitLocker using the command prompt</li>
+<li id="cn-m31-210">Unlock the Encrypted Drive using Recovery Keys</li>
+<li id="cn-m31-211">Remove BitLocker Disk Encryption</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m31-213">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m31-214">
+<li id="cn-m31-214"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m31-215"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m31-216"><img class="cn-img" id="cn-image-m31-c-30" src="UsingEncryptionandSteganography_files/image-m31-c-30.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m31-217"><b>Task 1 - Configure BitLocker settings via GPO</b></h3>
+<p id="cn-m31-218">In this task, you will create a Group Policy that will enforce BitLocker on the disk volumes of Windows 8.1 devices</p>
+<p id="cn-m31-219">To configure BitLocker settings using group policy objects, follow these steps:&nbsp;&nbsp;</p>
+<h4 id="cn-m31-220"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-221">Ensure you have powered on the required devices.</p>
+<p id="cn-m31-222">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m31-223">The <b>Server Manager Dashboard </b>automatically opens upon login.</p>
+<p id="cn-m31-224">Click on the <b>Tools </b>menu and select <b>Group Policy Management.</b></p>
+<p id="cn-m31-225"></p><figure><img class="cn-img" id="cn-image-m31-c-31" src="UsingEncryptionandSteganography_files/image-m31-c-31.jpg" alt="Figure 2.1 Screenshot of PLABDC01"><figcaption>Figure
+ 2.1 Screenshot of PLABDC01: Server Manager Dashboard window is 
+displayed showing the Tools &gt; Group Policy Management menu-options 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m31-226"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-227">On the <b>Group Policy Management Console</b>, if not expanded, then expand <b>Forest: PRACTICELABS.COM &gt; Domains</b>.</p>
+<p id="cn-m31-228">Right-click <b>PRACTICELABS</b>.<b>COM </b>and select <b>Create a GPO in this domain, and Link it here</b>…</p>
+<p id="cn-m31-229"></p><figure><img class="cn-img" id="cn-image-m31-c-32" src="UsingEncryptionandSteganography_files/image-m31-c-32.jpg" alt="Figure 2.2 Screenshot of PLABDC01"><figcaption>Figure
+ 2.2 Screenshot of PLABDC01: Context menu (that appears on 
+right-clicking a domain name) &gt; Create a GPO in this domain and link 
+it here menu-options are highlighted on the Group Policy Management 
+console.</figcaption></figure><p></p>
+<h4 id="cn-m31-230"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-231">On the <b>New GPO </b>dialog box, type the following text in the <b>Name </b>text box:</p>
+<pre id="cn-m31-232"><code>Bitlocker for desktops&nbsp;&nbsp;
+</code></pre>
+<p id="cn-m31-233">Click <b>OK</b>.</p>
+<p id="cn-m31-234"></p><figure><img class="cn-img" id="cn-image-m31-c-33" src="UsingEncryptionandSteganography_files/image-m31-c-33.jpg" alt="Figure 2.3 Screenshot of PLABDC01"><figcaption>Figure
+ 2.3 Screenshot of PLABDC01: New GPO dialog box is displayed showing the
+ required value typed-in, and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-235"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-236">Expand <b>PRACTICELABS.COM </b>in the left pane.</p>
+<p id="cn-m31-237">When you click the <b>Bitlocker for desktops </b>GPO link, you will get a message about changes to GPO link properties, apply to the GPO, select <b>Do not show this message again </b>checkbox.</p>
+<p id="cn-m31-238">Click <b>OK</b>.</p>
+<p id="cn-m31-239"></p><figure><img class="cn-img" id="cn-image-m31-c-34" src="UsingEncryptionandSteganography_files/image-m31-c-34.jpg" alt="Figure 2.4 Screenshot of PLABDC01"><figcaption>Figure
+ 2.4 Screenshot of PLABDC01: Group Policy Management Console dialog box 
+is displayed showing the required settings performed, and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-240"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-241">Select <b>Authenticated Users </b>group in the <b>Security Filtering </b>section of the bottom right pane and click <b>Remove</b>.</p>
+<p id="cn-m31-242"></p><figure><img class="cn-img" id="cn-image-m31-c-35" src="UsingEncryptionandSteganography_files/image-m31-c-35.jpg" alt="Figure 2.5 Screenshot of PLABDC01"><figcaption>Figure
+ 2.5 Screenshot of PLABDC01: Security Filtering pane is showing the 
+required settings performed and the Remove button highlighted is 
+displayed on the Group Policy Management console with the required 
+node-path selected on the navigation pane at the left.</figcaption></figure><p></p>
+<h4 id="cn-m31-243"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-244">The <b>Group Policy Management </b>prompts for confirmation if you want to remove this delegation privilege, click <b>OK</b>.</p>
+<p id="cn-m31-245"></p><figure><img class="cn-img" id="cn-image-m31-c-36" src="UsingEncryptionandSteganography_files/image-m31-c-36.jpg" alt="Figure 2.6 Screenshot of PLABDC01"><figcaption>Figure
+ 2.6 Screenshot of PLABDC01: Group Policy Management caution box is 
+displayed prompting confirmation to remove the delegation privilege and 
+the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-246"><b><i>Step 7</i></b></h4>
+<p id="cn-m31-247">Once again on the <b>Security Filtering </b>section, click <b>Add</b>.</p>
+<p id="cn-m31-248"></p><figure><img class="cn-img" id="cn-image-m31-c-37" src="UsingEncryptionandSteganography_files/image-m31-c-37.jpg" alt="Figure 2.7 Screenshot of PLABDC01"><figcaption>Figure
+ 2.7 Screenshot of PLABDC01: Security Filtering pane showing the Add 
+button highlighted is displayed on the Group Policy Management console 
+with the required node-path selected on the navigation pane at the left.</figcaption></figure><p></p>
+<h4 id="cn-m31-249"><b><i>Step 8</i></b></h4>
+<p id="cn-m31-250">On <b>Select Computer, Computer, or Group </b>dialog box, click <b>Object Types</b>.</p>
+<p id="cn-m31-251"></p><figure><img class="cn-img" id="cn-image-m31-c-38" src="UsingEncryptionandSteganography_files/image-m31-c-38.jpg" alt="Figure 2.8 Screenshot of PLABDC01"><figcaption>Figure
+ 2.8 Screenshot of PLABDC01: Select User, Computer, or Group dialog box 
+is displayed showing the Object Types button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-252"><b><i>Step 9</i></b></h4>
+<p id="cn-m31-253">On the <b>Object Types </b>dialog box, enable <b>Computers </b>check box. Notice that other options are already selected by default.</p>
+<p id="cn-m31-254">Click <b>OK</b>.</p>
+<p id="cn-m31-255"></p><figure><img class="cn-img" id="cn-image-m31-c-39" src="UsingEncryptionandSteganography_files/image-m31-c-39.jpg" alt="Figure 2.9 Screenshot of PLABDC01"><figcaption>Figure
+ 2.9 Screenshot of PLABDC01: Object Types dialog box is displayed 
+showing the required settings performed and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-256"><b><i>Step 10</i></b></h4>
+<p id="cn-m31-257">Back on the <b>Select Computer, Computer, or Group </b>dialog box, click in the provided textbox and type:</p>
+<pre id="cn-m31-258"><code>plabwin801
+</code></pre>
+<p id="cn-m31-259">Click <b>Check Names</b>.</p>
+<p id="cn-m31-260"></p><figure><img class="cn-img" id="cn-image-m31-c-40" src="UsingEncryptionandSteganography_files/image-m31-c-40.jpg" alt="Figure 2.10 Screenshot of PLABDC01"><figcaption>Figure
+ 2.10 Screenshot of PLABDC01: Select User, Computer, or Group dialog box
+ is displayed showing the required value typed-in, and the Check Names 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-261"><b><i>Step 11</i></b></h4>
+<p id="cn-m31-262">The computer name <b>PLABWIN801 </b>is now underlined. This means that the computer account is a member of the <b>PRACTICELABS.COM </b>domain.</p>
+<p id="cn-m31-263">Click <b>OK</b>.</p>
+<p id="cn-m31-264"></p><figure><img class="cn-img" id="cn-image-m31-c-41" src="UsingEncryptionandSteganography_files/image-m31-c-41.jpg" alt="Figure 2.11 Screenshot of PLABDC01"><figcaption>Figure
+ 2.11 Screenshot of PLABDC01: Select User, Computer, or Group dialog box
+ is displayed showing the object name resolved, and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-265"><b><i>Step 12</i></b></h4>
+<p id="cn-m31-266"><b>PLABWIN801$ (PRACTICELABS\PLABWIN801$) </b>is now added in the <b>Security Filtering </b>section.</p>
+<p id="cn-m31-267">This means that the <b>Bitlocker for desktops </b>group policy will apply only to <b>PLABWIN801 </b>computer.</p>
+<p id="cn-m31-268"></p><figure><img class="cn-img" id="cn-image-m31-c-42" src="UsingEncryptionandSteganography_files/image-m31-c-42.jpg" alt="Figure 2.12 Screenshot of PLABDC01"><figcaption>Figure
+ 2.12 Screenshot of PLABDC01: Security Filtering pane on the Group 
+Policy Management console is displayed listing the device added for 
+BitLocker security.</figcaption></figure><p></p>
+<h4 id="cn-m31-269"><b><i>Step 13</i></b></h4>
+<p id="cn-m31-270">Under the <b>PRACTICELABS.COM </b>node, right-click on <b>BitLocker for desktops </b>and choose <b>Edit</b>.</p>
+<p id="cn-m31-271"></p><figure><img class="cn-img" id="cn-image-m31-c-43" src="UsingEncryptionandSteganography_files/image-m31-c-43.jpg" alt="Figure 2.13 Screenshot of PLABDC01"><figcaption>Figure
+ 2.13 Screenshot of PLABDC01: Context menu (that appears on 
+right-clicking the Bitlocker for desktops node) &gt; Edit menu-options 
+are displayed on the Group Policy Management console.</figcaption></figure><p></p>
+<h4 id="cn-m31-272"><b><i>Step 14</i></b></h4>
+<p id="cn-m31-273">On the <b>Group Policy Management Editor </b>window, expand <b>Computer Configuration &gt; Policies &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption</b>, then click on <b>Operating System Drives</b>.</p>
+<p id="cn-m31-274">On the details pane on the right side, right-click on <b>Require additional authentication at startup </b>and choose <b>Edit</b>.</p>
+<p id="cn-m31-275"></p><figure><img class="cn-img" id="cn-image-m31-c-44" src="UsingEncryptionandSteganography_files/image-m31-c-44.jpg" alt="Figure 2.14 Screenshot of PLABDC01"><figcaption>Figure
+ 2.14 Screenshot of PLABDC01: Context menu (that appears on 
+right-clicking a listed policy setting) &gt; Edit menu-options are 
+displayed on the Group Policy Management Editor console.</figcaption></figure><p></p>
+<h4 id="cn-m31-276"><b><i>Step 15</i></b></h4>
+<p id="cn-m31-277">From <b>Require additional authentication at startup</b>, select <b>Enabled</b>.</p>
+<p id="cn-m31-278">Under Options, select <b>Allow BitLocker without a compatible TPM</b>.</p>
+<p id="cn-m31-279">In the <b>Configure TPM </b>startup drop-down list, select <b>Do not allow TPM</b>.</p>
+<p id="cn-m31-280">Click <b>OK</b>.</p>
+<p id="cn-m31-281"></p><figure><img class="cn-img" id="cn-image-m31-c-45" src="UsingEncryptionandSteganography_files/image-m31-c-45.jpg" alt="Figure 2.15 Screenshot of PLABDC01"><figcaption>Figure
+ 2.15 Screenshot of PLABDC01: Require additional authentication at 
+startup console is displayed showing the required settings performed and
+ the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-282"><b><i>Step 16</i></b></h4>
+<p id="cn-m31-283">Notice that <b>Require additional authentication at startup </b>setting is now enabled.</p>
+<p id="cn-m31-284">Close <b>Group Policy Management Editor </b>and the <b>Group Policy Management </b>console.</p>
+<p id="cn-m31-285"></p><figure><img class="cn-img" id="cn-image-m31-c-46" src="UsingEncryptionandSteganography_files/image-m31-c-46.jpg" alt="Figure 2.16 Screenshot of PLABDC01"><figcaption>Figure 2.16 Screenshot of PLABDC01: Group Policy Management Editor console is displayed showing the required policy enabled.</figcaption></figure><p></p>
+<h4 id="cn-m31-286"><b><i>Step 17</i></b></h4>
+<p id="cn-m31-287">Keep the <b>Server Manager </b>window running on <b>PLABDC01</b>.</p>
+<p id="cn-m31-288"></p><figure><img class="cn-img" id="cn-image-m31-c-47" src="UsingEncryptionandSteganography_files/image-m31-c-47.jpg" alt="Figure 2.17 Screenshot of PLABDC01"><figcaption>Figure 2.17 Screenshot of PLABDC01: Server Manager Dashboard console is displayed on the PLABDC01 Windows desktop.</figcaption></figure><p></p>
+<h3 id="cn-m31-289"><b>Task 2 - Shrink the Existing Drive</b></h3>
+<p id="cn-m31-290">To be able to save the recovery key, you need to 
+partition the existing drive and create a separate partition. This 
+computer has only one drive, and BitLocker does not allow the recovery 
+key to be saved to the encrypted drive.</p>
+<p id="cn-m31-291">To partition a drive on a Windows 8.1 device, perform the following steps:</p>
+<h4 id="cn-m31-292"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-293">Connect to <b>PLABWIN801</b>.</p>
+<p id="cn-m31-294">Open <b>Windows Explorer </b>and right-click <b>This PC </b>in the left pane and select <b>Manage</b>.</p>
+<p id="cn-m31-295">In the left pane, under the <b>Storage </b>node, select <b>Disk Management</b>.</p>
+<p id="cn-m31-296"></p><figure><img class="cn-img" id="cn-image-m31-c-48" src="UsingEncryptionandSteganography_files/image-m31-c-48.jpg" alt="Figure 2.18 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.18 Screenshot of PLABWIN801: Computer Management console is displayed
+ showing the Computer Management &gt; Storage &gt; Disk Management node 
+path selected on the navigation pane at the left.</figcaption></figure><p></p>
+<h4 id="cn-m31-297"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-298">In the lower middle pane, right-click <b>(C:) </b>and select <b>Shrink Volume</b>.</p>
+<p id="cn-m31-299"></p><figure><img class="cn-img" id="cn-image-m31-c-49" src="UsingEncryptionandSteganography_files/image-m31-c-49.jpg" alt="Figure 2.19 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.19 Screenshot of PLABWIN801: Context menu (that appears on 
+right-clicking the unallocated area of a disk) &gt; Shrink Volume 
+menu-options are displayed on the Computer Management console.</figcaption></figure><p></p>
+<h4 id="cn-m31-300"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-301">In the <b>Shrink C </b>dialog box, keep the default settings and click <b>Shrink</b>.</p>
+<p id="cn-m31-302"></p><figure><img class="cn-img" id="cn-image-m31-c-50" src="UsingEncryptionandSteganography_files/image-m31-c-50.jpg" alt="Figure 2.20 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.20 Screenshot of PLABWIN801 : Shrink C dialog box is displayed 
+showing default settings and the Shrink button highlighted.</figcaption></figure><p></p>
+<p id="cn-m31-303">Notice that a new partition is now created.</p>
+<p id="cn-m31-304"></p><figure><img class="cn-img" id="cn-image-m31-c-51" src="UsingEncryptionandSteganography_files/image-m31-c-51.jpg" alt="Figure 2.21 Screenshot of PLABWIN801"><figcaption>Figure 2.21 Screenshot of PLABWIN801 : Computer Management console is displayed listing the newly created disk partition.</figcaption></figure><p></p>
+<h4 id="cn-m31-305"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-306">You will now need to create a volume on this unallocated partition. Right-click the third partition and select <b>New Simple Volume</b>.</p>
+<p id="cn-m31-307"></p><figure><img class="cn-img" id="cn-image-m31-c-52" src="UsingEncryptionandSteganography_files/image-m31-c-52.jpg" alt="Figure 2.22 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.22 Screenshot of PLABWIN801 : Context menu (that appears on 
+right-clicking the unallocated area of a disk) &gt; New Simple Volume 
+menu-options are displayed on the Computer Management console.</figcaption></figure><p></p>
+<h4 id="cn-m31-308"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-309">On the <b>Welcome to the New Simple Volume Wizard </b>page, read the information and click <b>Next</b>.</p>
+<p id="cn-m31-310"></p><figure><img class="cn-img" id="cn-image-m31-c-53" src="UsingEncryptionandSteganography_files/image-m31-c-53.jpg" alt="Figure 2.23 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.23 Screenshot of PLABWIN801: Welcome page on the New Simple Volume 
+Wizard is displayed showing the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-311"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-312">On the <b>Specify Volume Size </b>page, keep the default settings and click <b>Next</b>.</p>
+<p id="cn-m31-313"></p><figure><img class="cn-img" id="cn-image-m31-c-54" src="UsingEncryptionandSteganography_files/image-m31-c-54.jpg" alt="Figure 2.24 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.24 Screenshot of PLABWIN801: Specify Volume Size page on the New 
+Simple Volume Wizard is displayed showing default settings and the Next 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-314"><b><i>Step 7</i></b></h4>
+<p id="cn-m31-315">On the <b>Assign Drive Letter or Path </b>page, keep the default drive letter, <b>D</b>, and click <b>Next</b>.</p>
+<p id="cn-m31-316"></p><figure><img class="cn-img" id="cn-image-m31-c-55" src="UsingEncryptionandSteganography_files/image-m31-c-55.jpg" alt="Figure 2.25 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.25 Screenshot of PLABWIN801: Assign Drive Letter or Path page on the 
+New Simple Volume Wizard is displayed showing the required settings 
+performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-317"><b><i>Step 8</i></b></h4>
+<p id="cn-m31-318">On the <b>Format Partition </b>page, keep the default settings and click <b>Next</b>.</p>
+<p id="cn-m31-319"></p><figure><img class="cn-img" id="cn-image-m31-c-56" src="UsingEncryptionandSteganography_files/image-m31-c-56.jpg" alt="Figure 2.26 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.26 Screenshot of PLABWIN801: Format Partition page on the New Simple 
+Volume Wizard is displayed showing default settings, and the Next button
+ highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-320"><b><i>Step 9</i></b></h4>
+<p id="cn-m31-321">On the <b>Completing the New Simple Volume Wizard </b>page, review the settings and click <b>Finish</b>.</p>
+<p id="cn-m31-322"></p><figure><img class="cn-img" id="cn-image-m31-c-57" src="UsingEncryptionandSteganography_files/image-m31-c-57.jpg" alt="Figure 2.27 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.27 Screenshot of PLABWIN801: Completion page on the New Simple Volume
+ Wizard is displayed listing specifications to create the volume, and 
+the Finish button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-323"><b><i>Step 10</i></b></h4>
+<p id="cn-m31-324">Notice that the <b>D </b>partition is now ready for use.</p>
+<p id="cn-m31-325">Close the <b>Computer Management </b>window.</p>
+<span class="cn-quote" id="cn-m31-326"><b><i>Note</i></b><i>: You may see the dialog box asking you to format the new partition. Click Cancel.</i></span>
+<p id="cn-m31-327"></p><figure><img class="cn-img" id="cn-image-m31-c-58" src="UsingEncryptionandSteganography_files/image-m31-c-58.jpg" alt="Figure 2.28 Screenshot of PLABWIN801"><figcaption>Figure 2.28 Screenshot of PLABWIN801: Computer Management console is displayed listing the newly created simple volume.</figcaption></figure><p></p>
+<h4 id="cn-m31-328"><b><i>Step 11</i></b></h4>
+<p id="cn-m31-329">In the File Explorer window, notice that New Volume (D:) is now created.</p>
+<span class="cn-quote" id="cn-m31-330"><b><i>Note</i></b><i>: If you do 
+not see the New Volume (D:), then refresh the File Explorer by 
+right-clicking anywhere on the whitespace in the right pane and 
+selecting Refresh.</i></span>
+<p id="cn-m31-331"></p><figure><img class="cn-img" id="cn-image-m31-c-59" src="UsingEncryptionandSteganography_files/image-m31-c-59.jpg" alt="Figure 2.29 Screenshot of PLABWIN801"><figcaption>Figure 2.29 Screenshot of PLABWIN801: Computer Management console is displayed listing the newly created simple volume.</figcaption></figure><p></p>
+<h3 id="cn-m31-332"><b>Task 3 - Enable BitLocker</b></h3>
+<p id="cn-m31-333">To encrypt the selected disk volume using BitLocker, you must have administrative privileges on the computer.</p>
+<p id="cn-m31-334">To enable BitLocker on Windows 8.1 device, perform the following steps:</p>
+<h4 id="cn-m31-335"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-336">On <b>PLABWIN801, </b>you need to ensure the <b>Bitlocker for desktops </b>policy is applied. Open the command prompt by right-clicking the <b>Start </b>charm and selecting <b>Command Prompt</b>.</p>
+<p id="cn-m31-337">You can quickly apply the <b>Group Policy </b>using the following command:</p>
+<pre id="cn-m31-338"><code>gpupdate /force
+</code></pre>
+<p id="cn-m31-339">Minimize the command prompt window.</p>
+<p id="cn-m31-340"></p><figure><img class="cn-img" id="cn-image-m31-c-60" src="UsingEncryptionandSteganography_files/image-m31-c-60.jpg" alt="Figure 2.30 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.30 Screenshot of PLABWIN801: Command prompt window is displayed 
+showing the command to apply the updated policy completed successfully.</figcaption></figure><p></p>
+<h4 id="cn-m31-341"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-342">Restore <b>Windows Explorer </b>and select <b>This PC </b>in the left pane (if not already selected).</p>
+<p id="cn-m31-343">Right-click <b>New Volume (D:) </b>and select <b>Turn on BitLocker.</b></p>
+<p id="cn-m31-344"></p><figure><img class="cn-img" id="cn-image-m31-c-61" src="UsingEncryptionandSteganography_files/image-m31-c-61.jpg" alt="Figure 2.31 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.31 Screenshot of PLABWIN801: Context menu (that appears on 
+right-clicking a listed volume) &gt; Turn on BitLocker menu-options are 
+highlighted on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m31-345"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-346">On the <b>Choose how you want to unlock this drive </b>page, you have two options to select on how you want to unlock <b>D </b>drive.</p>
+<p id="cn-m31-347">Select <b>Use a password to unlock this drive </b>and then in the <b>Enter your password </b>and <b>Reenter your password </b>textboxes, type:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m31-349">Click <b>Next</b>.</p>
+<p id="cn-m31-350"></p><figure><img class="cn-img" id="cn-image-m31-c-62" src="UsingEncryptionandSteganography_files/image-m31-c-62.jpg" alt="Figure 2.32 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.32 Screenshot of PLABWIN801: Choose how you want to unlock this drive
+ page on the BitLocker Drive Encryption (D:) wizard is displayed showing
+ the required values typed-in and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-351"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-352">On the <b>How do you want to back up your recovery key? </b>page, select <b>Save to a file</b>.</p>
+<span class="cn-quote" id="cn-m31-353"><b><i>Note: </i></b><i>The Recovery Key is required if the administrator forgets the password or loses the smart card to access the encrypted drive.</i></span>
+<p id="cn-m31-354"></p><figure><img class="cn-img" id="cn-image-m31-c-63" src="UsingEncryptionandSteganography_files/image-m31-c-63.jpg" alt="Figure 2.33 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.33 Screenshot of PLABWIN801: How do you want to back up your recovery
+ key page on the BitLocker Drive Encryption (D:) wizard is displayed 
+showing the required option selected.</figcaption></figure><p></p>
+<h4 id="cn-m31-355"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-356">On the <b>Save BitLocker recovery key as </b>dialog box, notice that Windows has assigned the file name as <b>BitLocker Recovery Key &lt;xxxxxx</b>&gt;.</p>
+<p id="cn-m31-357">Select <b>Documents </b>from the left pane (if not already selected) and then click <b>Save</b>.</p>
+<span class="cn-quote" id="cn-m31-358"><b><i>Note</i></b><i>: In your 
+lab, you will get different recovery key compared to the screenshot. Do 
+NOT change the recovery key given to you as you will need this if you 
+forget the password used for unlocking this drive.</i></span>
+<p id="cn-m31-359"></p><figure><img class="cn-img" id="cn-image-m31-c-64" src="UsingEncryptionandSteganography_files/image-m31-c-64.jpg" alt="Figure 2.34 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.34 Screenshot of PLABWIN801: Save BitLocker recovery key as a dialog 
+box on the BitLocker Drive Encryption (E:) wizard is displayed showing 
+default settings and the Save button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-360"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-361">On the <b>BitLocker Drive Encryption </b>dialog box, click <b>Yes</b>.</p>
+<p id="cn-m31-362"></p><figure><img class="cn-img" id="cn-image-m31-c-65" src="UsingEncryptionandSteganography_files/image-m31-c-65.jpg" alt="Figure 2.35 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.35 Screenshot of PLABWIN801: BitLocker Drive Encryption caution box 
+cautioning about saving the key in a safe place is displayed on the 
+BitLocker Drive Encryption (E:) wizard with the Yes button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-363"><b><i>Step 7</i></b></h4>
+<p id="cn-m31-364">Back on the wizard, click <b>Next</b>.</p>
+<p id="cn-m31-365"></p><figure><img class="cn-img" id="cn-image-m31-c-66" src="UsingEncryptionandSteganography_files/image-m31-c-66.jpg" alt="Figure 2.36 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.36 Screenshot of PLABWIN801: How do you want to back up your recovery
+ key page on the BitLocker Drive Encryption (D:) wizard is displayed 
+showing the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-366"><b><i>Step 8</i></b></h4>
+<p id="cn-m31-367">On the <b>Are you ready to encrypt this drive? </b>page, click <b>Start encrypting</b>.</p>
+<p id="cn-m31-368"></p><figure><img class="cn-img" id="cn-image-m31-c-67" src="UsingEncryptionandSteganography_files/image-m31-c-67.jpg" alt="Figure 2.37 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.37 Screenshot of PLABWIN801: Are you ready to encrypt this drive page
+ on the BitLocker Drive Encryption (D:) wizard is displayed showing the 
+Start encrypting button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-369"><b><i>Step 9</i></b></h4>
+<p id="cn-m31-370">Notice the <b>BitLocker </b>icon now appended on <b>Drive Volume D</b>.</p>
+<p id="cn-m31-371">The drive is still in its unlocked state as indicated by the icon.</p>
+<p id="cn-m31-372"></p><figure><img class="cn-img" id="cn-image-m31-c-68" src="UsingEncryptionandSteganography_files/image-m31-c-68.jpg" alt="Figure 2.38 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.38 Screenshot of PLABWIN801: File Explorer window is displayed 
+showing the open bitlock icon appended to the encrypted drive.</figcaption></figure><p></p>
+<h4 id="cn-m31-373"><b><i>Step 10</i></b></h4>
+<p id="cn-m31-374">To manage the properties of this newly-encrypted drive, right-click on <b>New Volume (D:) </b>and select <b>BitLocker Encryption Options</b>.</p>
+<p id="cn-m31-375"></p><figure><img class="cn-img" id="cn-image-m31-c-69" src="UsingEncryptionandSteganography_files/image-m31-c-69.jpg" alt="Figure 2.39 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.39 Screenshot of PLABWIN801: Context menu (that appears on 
+right-clicking an open bitlocked drive) &gt; Manage BitLocker 
+menu-options are displayed on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m31-376"><b><i>Step 11</i></b></h4>
+<p id="cn-m31-377">The <b>Microsoft BitLocker Administration and Monitoring </b>window opens. Close the <b>Microsoft BitLocker Administration and Monitoring </b>dialog box.</p>
+<p id="cn-m31-378"></p><figure><img class="cn-img" id="cn-image-m31-c-70" src="UsingEncryptionandSteganography_files/image-m31-c-70.jpg" alt="Figure 2.40 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.40 Screenshot of PLABWIN801: Microsoft BitLocker Administration and 
+Monitoring dialog box  is displayed listing options to manage the 
+bitlocked drive.</figcaption></figure><p></p>
+<h3 id="cn-m31-379"><b>Task 4 - Verify BitLocker functionality</b></h3>
+<p id="cn-m31-380">The previous task enabled the drive E for BitLocker. 
+To find out how BitLocker works and to test the unlock drive password, 
+perform the following steps:</p>
+<h4 id="cn-m31-381"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-382">In the File Explorer address bar, type the following command:</p>
+<pre id="cn-m31-383"><code>shutdown /r /t 0
+</code></pre>
+<p id="cn-m31-384">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m31-385"><b><i>Note</i></b><i>: Before reconnecting to PLABWIN801, wait for a few minutes to let PLABWIN801 complete its restart.</i></span>
+<p id="cn-m31-386"></p><figure><img class="cn-img" id="cn-image-m31-c-71" src="UsingEncryptionandSteganography_files/image-m31-c-71.jpg" alt="Figure 2.41 Screenshot of PLABWIN801"><figcaption>Figure 2.41 Screenshot of PLABWIN801: Typing the command to restart Windows.</figcaption></figure><p></p>
+<h4 id="cn-m31-387"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-388">On your computer, go to the <b>Practice Labs </b>web application.</p>
+<p id="cn-m31-389">After a few minutes, reconnect to <b>PLABWIN801 </b>device.</p>
+<p id="cn-m31-390">When signed on to <b>PLABWIN801 </b>computer, click <b>File Explorer </b>on the taskbar.</p>
+<p id="cn-m31-391"></p><figure><img class="cn-img" id="cn-image-m31-c-72" src="UsingEncryptionandSteganography_files/image-m31-c-72.jpg" alt="Figure 2.42 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.42 Screenshot of PLABWIN801: PLABWIN801 Windows desktop is displayed 
+showing the File Explorer icon on taskbar highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-392"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-393">Notice that <b>Local Disk D </b>is now locked.</p>
+<p id="cn-m31-394"></p><figure><img class="cn-img" id="cn-image-m31-c-73" src="UsingEncryptionandSteganography_files/image-m31-c-73.jpg" alt="Figure 2.43 Screenshot of PLABWIN801"><figcaption>Figure 2.43 Screenshot of PLABWIN801: The bitlocked drive is listed on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m31-395"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-396">Right-click on <b>Local Disk D </b>and select <b>Unlock Drive</b>…</p>
+<p id="cn-m31-397"></p><figure><img class="cn-img" id="cn-image-m31-c-74" src="UsingEncryptionandSteganography_files/image-m31-c-74.jpg" alt="Figure 2.44 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.44 Screenshot of PLABWIN801: Context menu (that appears on 
+right-clicking a bitlocked drive) &gt; Unlock Drive menu-options are 
+displayed on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m31-398"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-399">On the <b>BitLocker D </b>dialog box, type:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span>&nbsp;&nbsp;</span>
+<p id="cn-m31-401">Click <b>Unlock</b>.</p>
+<p id="cn-m31-402"></p><figure><img class="cn-img" id="cn-image-m31-c-75" src="UsingEncryptionandSteganography_files/image-m31-c-75.jpg" alt="Figure 2.45 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.45 Screenshot of PLABWIN801: BitLocker (D:) dialog box is displayed 
+showing the required credentials typed-in and the Unlock button 
+available.</figcaption></figure><p></p>
+<h4 id="cn-m31-403"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-404">The <b>BitLocker Volume D </b>is now unlocked.</p>
+<p id="cn-m31-405"></p><figure><img class="cn-img" id="cn-image-m31-c-76" src="UsingEncryptionandSteganography_files/image-m31-c-76.jpg" alt="Figure 2.46 Screenshot of PLABWIN801"><figcaption>Figure 2.46 Screenshot of PLABWIN801: The unlocked drive is listed on the file explorer window.</figcaption></figure><p></p>
+<h3 id="cn-m31-406"><b>Task 5 - Manage BitLocker using the command prompt</b></h3>
+<p id="cn-m31-407">Windows BitLocker can be managed by using a command prompt tool called <b>manage-bde.exe</b>.</p>
+<p id="cn-m31-408">To know how the manage-bde command works, perform the following steps:</p>
+<h4 id="cn-m31-409"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-410">Connect to <b>PLABWIN801</b>. Right-click the Windows <b>Charm </b>and select <b>Command Prompt (Admin</b>).</p>
+<span class="cn-quote" id="cn-m31-411"><b><i>Note: </i></b><i>When prompted with User Access Control dialog box, click Yes.</i></span>
+<p id="cn-m31-412"></p><figure><img class="cn-img" id="cn-image-m31-c-77" src="UsingEncryptionandSteganography_files/image-m31-c-77.jpg" alt="Figure 2.47 Screenshot of PLABWIN801"><figcaption>Figure 2.47 Screenshot of PLABWIN801: Selecting the Command Prompt (Admin) option from the Windows Charm context menu.</figcaption></figure><p></p>
+<h4 id="cn-m31-413"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-414">On the command prompt window, type the following:</p>
+<pre id="cn-m31-415"><code>manage-bde -status
+</code></pre>
+<p id="cn-m31-416">Press <b>Enter</b>.</p>
+<p id="cn-m31-417"></p><figure><img class="cn-img" id="cn-image-m31-c-78" src="UsingEncryptionandSteganography_files/image-m31-c-78.jpg" alt="Figure 2.48 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.48 Screenshot of PLABWIN801: Administrator: Command Prompt window is 
+displayed showing the command to manage a bitlocked device typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m31-418"><b><i>Step 3</i></b></h4>
+<span class="cn-quote" id="cn-m31-419"><b><i>Note: </i></b><i>Expand the command prompt window if required.</i></span>
+<p id="cn-m31-420">The result of the <b>manage-bde </b>command is now displayed.</p>
+<p id="cn-m31-421">Notice that <b>Drive D </b>has <b>Protection On</b>.</p>
+<p id="cn-m31-422"></p><figure><img class="cn-img" id="cn-image-m31-c-79" src="UsingEncryptionandSteganography_files/image-m31-c-79.jpg" alt="Figure 2.49 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.49 Screenshot of PLABWIN801: Administrator: Command Prompt window is 
+displayed showing system-response to the command typed-in in the 
+previous step.</figcaption></figure><p></p>
+<h3 id="cn-m31-423"><b>Task 6 - Unlock the Encrypted Drive using Recovery Keys</b></h3>
+<p id="cn-m31-424">If the password used for unlocking this 
+BitLocker-enabled drive is forgotten, you can use the Recovery Key that 
+was created earlier to unlock Drive E.</p>
+<p id="cn-m31-425">In this task, you will not enter a password and simulate recovery of the encrypted volume using the Recovery Keys.</p>
+<p id="cn-m31-426">To use the recovery keys, perform the following steps:</p>
+<h4 id="cn-m31-427"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-428">On <b>PLABWIN801</b>, while the command prompt is still open, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m31-429"><code>shutdown /r /t 0
+</code></pre>
+<span class="cn-quote" id="cn-m31-430"><b><i>Note</i></b><i>: You need 
+to restart PLABWIN801 computer, as you have unlocked Drive D using the 
+password. You need to restart the computer to lock the encrypted drive.</i></span>
+<p id="cn-m31-431"></p><figure><img class="cn-img" id="cn-image-m31-c-80" src="UsingEncryptionandSteganography_files/image-m31-c-80.jpg" alt="Figure 2.50 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.50 Screenshot of PLABWIN801: Administrator: Command Prompt window is 
+displayed showing the command  to restart the device typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m31-432"><b><i>Step 2&nbsp;&nbsp;</i></b></h4>
+<p id="cn-m31-433">A few minutes after the restart, reconnect to the <b>PLABWIN801 </b>device.&nbsp;&nbsp;</p>
+<p id="cn-m31-434">Click <b>File Explorer </b>on the taskbar.</p>
+<p id="cn-m31-435"></p><figure><img class="cn-img" id="cn-image-m31-c-81" src="UsingEncryptionandSteganography_files/image-m31-c-81.jpg" alt="Figure 2.51 Screenshot of PLABWIN801"><figcaption>Figure 2.51 Screenshot of PLABWIN801: Windows desktop is displayed showing the File Explorer icon on taskbar highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-436"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-437">On <b>File Explorer </b>window, expand <b>This PC </b>and then select <b>Documents </b>folder in the right pane.</p>
+<p id="cn-m31-438">The contents of the <b>Documents </b>folder is displayed including the <b>BitLocker Recovery Key </b>file.</p>
+<p id="cn-m31-439"></p><figure><img class="cn-img" id="cn-image-m31-c-82" src="UsingEncryptionandSteganography_files/image-m31-c-82.jpg" alt="Figure 2.52 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.52 Screenshot of PLABWIN801: File Explorer window is displayed 
+showing the required node-path selected on the navigation pane at the 
+left and the contents of the selected folder listed on the details pane 
+at the right.</figcaption></figure><p></p>
+<h4 id="cn-m31-440"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-441">Right-click the <b>BitLocker Recovery Key </b>file and select <b>Open with</b>. Then, select <b>Notepad</b>.</p>
+<p id="cn-m31-442"></p><figure><img class="cn-img" id="cn-image-m31-c-83" src="UsingEncryptionandSteganography_files/image-m31-c-83.jpg" alt="Figure 2.53 Screenshot of PLABWIN801"><figcaption>Figure 2.53 Screenshot of PLABWIN801: Selecting Notepad from the context menu to open the BitLocker Recovery Key.</figcaption></figure><p></p>
+<h4 id="cn-m31-443"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-444">When <b>BitLocker Recovery File </b>is opened, locate the <b>Recovery Key </b>section.</p>
+<span class="cn-quote" id="cn-m31-445"><b><i>Note</i></b><i>: The Recovery Key that you will get in your lab, will be different from the screenshot.</i></span>
+<p id="cn-m31-446">Keep the <b>BitLocker Recovery File </b>window open.</p>
+<p id="cn-m31-447"></p><figure><img class="cn-img" id="cn-image-m31-c-84" src="UsingEncryptionandSteganography_files/image-m31-c-84.jpg" alt="This image is described in the fig caption that follows this image."><figcaption>Figure
+ 2.54 Screenshot of PLABWIN801 Contents of the BitLocker Recovery Key 
+file showing the recovery key highlighted are displayed.</figcaption></figure><p></p>
+<h4 id="cn-m31-448"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-449">Go back to <b>File Explorer </b>window that you opened earlier.</p>
+<p id="cn-m31-450">Right-click on <b>Local Disk (D:) </b>and select <b>Unlock Drive…</b></p>
+<p id="cn-m31-451"></p><figure><img class="cn-img" id="cn-image-m31-c-85" src="UsingEncryptionandSteganography_files/image-m31-c-85.jpg" alt="Figure 2.55 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.55 Screenshot of PLABWIN801 : Context menu (that appears on 
+right-clicking the name of a bitlocked drive) &gt; Unlock Drive 
+menu-options are displayed on the File Explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m31-452"><b><i>Step 7 </i></b></h4>
+<p id="cn-m31-453">On the <b>BitLocker (D:) </b>dialog box, click the <b>More options </b>link.</p>
+<p id="cn-m31-454"></p><figure><img class="cn-img" id="cn-image-m31-c-86" src="UsingEncryptionandSteganography_files/image-m31-c-86.jpg" alt="Figure 2.56 Screenshot of PLABWIN801"><figcaption>Figure 2.56 Screenshot of PLABWIN801: BitLocker (D:) dialog box is displayed with the More options link available.</figcaption></figure><p></p>
+<h4 id="cn-m31-455"><b><i>Step 8</i></b></h4>
+<p id="cn-m31-456">The <b>BitLocker (D:) </b>dialog box expands and now include <b>Enter recovery key </b>link.</p>
+<p id="cn-m31-457">Click the <b>Enter recovery key </b>link.</p>
+<p id="cn-m31-458"></p><figure><img class="cn-img" id="cn-image-m31-c-87" src="UsingEncryptionandSteganography_files/image-m31-c-87.jpg" alt="Figure 2.57 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.57 Screenshot of PLABWIN801: Expanded BitLocker (D:) dialog box is 
+displayed showing the Enter recovery key link available.</figcaption></figure><p></p>
+<h4 id="cn-m31-459"><b><i>Step 9</i></b></h4>
+<p id="cn-m31-460">You are now asked to enter the 48-digit recovery key to unlock this drive.</p>
+<p id="cn-m31-461"></p><figure><img class="cn-img" id="cn-image-m31-c-88" src="UsingEncryptionandSteganography_files/image-m31-c-88.jpg" alt="Figure 2.58 Screenshot of PLABWIN801"><figcaption>Figure 2.58 Screenshot of PLABWIN801: BitLocker (D:) dialog box is displayed asking for the 48-digit recovery key.</figcaption></figure><p></p>
+<h4 id="cn-m31-462"><b><i>Step 10</i></b></h4>
+<p id="cn-m31-463">Go back to the <b>BitLocker Recovery Key </b>text file and copy the <b>Recovery Key</b>.</p>
+<p id="cn-m31-464"></p><figure><img class="cn-img" id="cn-image-m31-c-89" src="UsingEncryptionandSteganography_files/image-m31-c-89.jpg" alt="Figure 2.59 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.59 Screenshot of PLABWIN801: Context menu (that appears on 
+right-clicking the saved recovery key) &gt; Copy menu-options are 
+highlighted on the BitLocker Recovery Key - Notepad file.</figcaption></figure><p></p>
+<h4 id="cn-m31-465"><b><i>Step 11</i></b></h4>
+<p id="cn-m31-466">The dialog box to enter the <b>Recovery Key </b>has closed since you clicked outside of it earlier.</p>
+<p id="cn-m31-467">Right-click again on <b>Local Disk D </b>then select <b>Unlock Drive</b>…</p>
+<p id="cn-m31-468"></p><figure><img class="cn-img" id="cn-image-m31-c-90" src="UsingEncryptionandSteganography_files/image-m31-c-90.jpg" alt="Figure 2.60 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.60 Screenshot of PLABWIN801: Context menu (that appears on 
+right-clicking the name of a bitlocked drive) &gt; Unlock Drive 
+menu-options are highlighted on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m31-469"><b><i>Step 12</i></b></h4>
+<p id="cn-m31-470">On the <b>BitLocker D </b>dialog box, click <b>More options</b>.</p>
+<p id="cn-m31-471"></p><figure><img class="cn-img" id="cn-image-m31-c-91" src="UsingEncryptionandSteganography_files/image-m31-c-91.jpg" alt="Figure 2.61 Screenshot of PLABWIN801"><figcaption>Figure 2.61 Screenshot of PLABWIN801: BitLocker (D:) dialog box is displayed with the More options link available.</figcaption></figure><p></p>
+<h4 id="cn-m31-472"><b><i>Step 13</i></b></h4>
+<p id="cn-m31-473">Still, on the <b>BitLocker D </b>dialog box, click <b>Enter recovery key</b>.</p>
+<p id="cn-m31-474"></p><figure><img class="cn-img" id="cn-image-m31-c-92" src="UsingEncryptionandSteganography_files/image-m31-c-92.jpg" alt="Figure 2.62 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.62 Screenshot of PLABWIN801: Expanded BitLocker (D:) dialog box is 
+displayed showing the Enter recovery key link available.</figcaption></figure><p></p>
+<h4 id="cn-m31-475"><b><i>Step 14</i></b></h4>
+<p id="cn-m31-476">Click inside the textbox and press <b>CTRL+V </b>to paste the recovery key you copied from the Recovery Key text document.</p>
+<p id="cn-m31-477">Click <b>Unlock</b>.</p>
+<p id="cn-m31-478"></p><figure><img class="cn-img" id="cn-image-m31-c-93" src="UsingEncryptionandSteganography_files/image-m31-c-93.jpg" alt="Figure 2.63 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.63 Screenshot of PLABWIN801: BitLocker (D:) dialog box is displayed 
+showing the 48-digit recovery key copied as required and the Unlock 
+button available.</figcaption></figure><p></p>
+<h4 id="cn-m31-479"><b><i>Step 15</i></b></h4>
+<p id="cn-m31-480">Notice that <b>BitLocker volume (D:) </b>is now unlocked.</p>
+<p id="cn-m31-481">Therefore, the Recovery Key worked.</p>
+<p id="cn-m31-482">Keep the <b>File Explorer </b>window open for the next task.</p>
+<p id="cn-m31-483"></p><figure><img class="cn-img" id="cn-image-m31-c-94" src="UsingEncryptionandSteganography_files/image-m31-c-94.jpg" alt="Figure 2.64 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.64 Screenshot of PLABWIN801: BitLocker volume (D:) node showing the 
+open-lock icon is displayed on the left navigation pane of the file 
+explorer window.</figcaption></figure><p></p>
+<h3 id="cn-m31-484"><b>Task 7 - Remove BitLocker Disk Encryption on Drive D</b></h3>
+<p id="cn-m31-485">To remove BitLocker encryption on volume D, follow these steps:</p>
+<h4 id="cn-m31-486"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-487">On <b>PLABWIN801</b>, right-click the Windows Charm and select <b>Command Prompt (Admin</b>).</p>
+<span class="cn-quote" id="cn-m31-488"><b><i>Note: </i></b><i>When prompted with User Access Control dialog box, click Yes.</i></span>
+<p id="cn-m31-489"></p><figure><img class="cn-img" id="cn-image-m31-c-95" src="UsingEncryptionandSteganography_files/image-m31-c-95.jpg" alt="Figure 2.65 Screenshot of PLABWIN801"><figcaption>Figure 2.65 Screenshot of PLABWIN801: Selecting the Command Prompt (Admin) option from the context menu.</figcaption></figure><p></p>
+<h4 id="cn-m31-490"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-491">On the command prompt window, to decrypt <b>Volume D </b>type the following:</p>
+<pre id="cn-m31-492"><code>manage-bde -off D:
+</code></pre>
+<p id="cn-m31-493">Press <b>Enter</b>.</p>
+<p id="cn-m31-494"></p><figure><img class="cn-img" id="cn-image-m31-c-96" src="UsingEncryptionandSteganography_files/image-m31-c-96.jpg" alt="Figure 2.66 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.66 Screenshot of PLABWIN801: Administrator: 
+C:\Windows\System32\cmd.exe window is displayed showing the command to 
+manage the bitlocked device typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m31-495"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-496">The system will now indicate that decryption is in progress.</p>
+<p id="cn-m31-497">This process will take a few minutes to finish.</p>
+<p id="cn-m31-498"></p><figure><img class="cn-img" id="cn-image-m31-c-97" src="UsingEncryptionandSteganography_files/image-m31-c-97.jpg" alt="Figure 2.67 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.67 Screenshot of PLABWIN801: Administrator: 
+C:\Windows\System32\cmd.exe window is displayed indicating that 
+decryption is in progress.</figcaption></figure><p></p>
+<h4 id="cn-m31-499"><b><i>Step 4</i></b></h4>
+<span class="cn-quote" id="cn-m31-500"><b><i>Note: </i></b><i>Expand the command prompt window if required.</i></span>
+<p id="cn-m31-501">To verify the status of drive <b>D</b>, type:</p>
+<pre id="cn-m31-502"><code>manage-bde -status
+</code></pre>
+<p id="cn-m31-503">Press <b>Enter</b>. Notice that <b>Protection Status </b>is now set to <b>Protection Off</b>.</p>
+<p id="cn-m31-504"></p><figure><img class="cn-img" id="cn-image-m31-c-98" src="UsingEncryptionandSteganography_files/image-m31-c-98.jpg" alt="Figure 2.68 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.68 Screenshot of PLABWIN801: Administrator: 
+C:\Windows\System32\cmd.exe window is displayed showing the command to 
+verify the encryption status of drive D: typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m31-505"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-506">The output of the <b>manage-bde </b>command is displayed.</p>
+<p id="cn-m31-507">On the following screen, the <b>Volumes D </b>and <b>C </b>are <b>Fully Decrypted</b>.</p>
+<p id="cn-m31-508"></p><figure><img class="cn-img" id="cn-image-m31-c-99" src="UsingEncryptionandSteganography_files/image-m31-c-99.jpg" alt="Figure 2.69 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.69 Screenshot of PLABWIN801: Administrator: 
+C:\Windows\System32\cmd.exe window is displayed showing system-response 
+to the command typed-in in the previous step.</figcaption></figure><p></p>
+<span class="atom-code hidden">09144aba-611a-486d-b22e-e9472e284a8f</span>
+<h4 id="cn-m31-511"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-512">Clear the screen using the following command:</p>
+<pre id="cn-m31-513"><code> cls
+</code></pre>
+<p id="cn-m31-514">To sign out of <b>PLABWIN801</b>, type:</p>
+<pre id="cn-m31-515"><code>shutdown /l
+</code></pre>
+<p id="cn-m31-516">Press <b>Enter</b>.</p>
+<p id="cn-m31-517"></p><figure><img class="cn-img" id="cn-image-m31-c-100" src="UsingEncryptionandSteganography_files/image-m31-c-100.jpg" alt="Figure 2.70 Screenshot of PLABWIN801"><figcaption>Figure
+ 2.70 Screenshot of PLABWIN801: Administrator: Command Prompt window is 
+displayed showing the command to shut down the server typed-in.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m31-518">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m31-519"><b>Exercise 3 - Manage Security for Removable Media</b></h2>
+<p id="cn-m31-520">For security reasons, most organizations will 
+prohibit their users from using personal storage devices for 
+transporting proprietary information. This is to avoid theft of 
+confidential data that may put the company’s trade secrets at risk. In 
+this exercise, you will configure basic security for portable storage 
+media to disallow their usage by configuring Group Policy Objects or 
+GPO.</p>
+<p id="cn-m31-521">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m31-523">After completing this exercise, you will be able to:</p>
+<ul id="cn-m31-524">
+<li id="cn-m31-524">Configure restrictions for removable media using GPO</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m31-526">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m31-527">
+<li id="cn-m31-527"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m31-528"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m31-529"><img class="cn-img" id="cn-image-m31-c-101" src="UsingEncryptionandSteganography_files/image-m31-c-101.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m31-530"><b>Task 1 - Configure restrictions for removable media using GPO</b></h3>
+<p id="cn-m31-531">To prevent users from using portable media to save their data files, perform the following steps:</p>
+<h4 id="cn-m31-532"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-533">Switch back to the <b>PLABDC01 </b>device.</p>
+<p id="cn-m31-534">From the <b>Server Manager Dashboard</b>, go to <b>Tools &gt; Group Policy Management.</b></p>
+<p id="cn-m31-535"></p><figure><img class="cn-img" id="cn-image-m31-c-102" src="UsingEncryptionandSteganography_files/image-m31-c-102.jpg" alt="Figure 3.1 Screenshot of PLABDC01"><figcaption>Figure
+ 3.1 Screenshot of PLABDC01: Tools &gt; Group Policy Management 
+menu-options are highlighted on the Server Manager Dashboard window.</figcaption></figure><p></p>
+<h4 id="cn-m31-536"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-537">In the <b>Group Policy Management </b>console, expand <b>Forest: PRACTICELABS.COM</b>, then expand <b>Domains </b>if already not expanded.</p>
+<p id="cn-m31-538">Right-click <b>PRACTICELABS</b>.<b>COM </b>and select <b>Create a GPO in this domain, and Link it here</b>.&nbsp;&nbsp;</p>
+<p id="cn-m31-539"></p><figure><img class="cn-img" id="cn-image-m31-c-103" src="UsingEncryptionandSteganography_files/image-m31-c-103.jpg" alt="Figure 3.2 Screenshot of PLABDC01"><figcaption>Figure
+ 3.2 Screenshot of PLABDC01: Context menu (that appears on 
+right-clicking a domain name) &gt; Create a GPO in this domain, and link
+ it here menu-options are displayed on the Group Policy Management 
+console.</figcaption></figure><p></p>
+<h4 id="cn-m31-540"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-541">On the <b>New GPO </b>dialog box, type:</p>
+<pre id="cn-m31-542"><code>Removable media
+</code></pre>
+<p id="cn-m31-543">Click <b>OK</b>.</p>
+<p id="cn-m31-544"></p><figure><img class="cn-img" id="cn-image-m31-c-104" src="UsingEncryptionandSteganography_files/image-m31-c-104.jpg" alt="Figure 3.3 Screenshot of PLABDC01"><figcaption>Figure
+ 3.3 Screenshot of PLABDC01: New GPO dialog box is displayed showing the
+ required value typed-in, and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m31-545"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-546">Right-click <b>Removable media </b>and select <b>Edit</b>.</p>
+<p id="cn-m31-547"></p><figure><img class="cn-img" id="cn-image-m31-c-105" src="UsingEncryptionandSteganography_files/image-m31-c-105.jpg" alt="Figure 3.4 Screenshot of PLABDC01"><figcaption>Figure
+ 3.4 Screenshot of PLABDC01: Context menu (that appears on 
+right-clicking the Removeable media node) &gt; Edit menu-options are 
+displayed on the Group Policy Management console.</figcaption></figure><p></p>
+<h4 id="cn-m31-548"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-549">On the <b>Group Policy Management Editor </b>window, navigate to <b>Computer Configuration &gt; Policies &gt; Administrative Templates &gt; System </b>and select <b>Removable Storage Access</b>.</p>
+<p id="cn-m31-550">On the details pane on the right side, right-click <b>Removable Disks: Deny write access </b>and select <b>Edit</b>.</p>
+<p id="cn-m31-551"></p><figure><img class="cn-img" id="cn-image-m31-c-106" src="UsingEncryptionandSteganography_files/image-m31-c-106.jpg" alt="Figure 3.5 Screenshot of PLABDC01"><figcaption>Figure
+ 3.5 Screenshot of PLABDC01: Context menu (that appears on 
+right-clicking a listed policy setting) &gt; Edit menu-options are 
+displayed on the Group Policy Management Editor console.</figcaption></figure><p></p>
+<h4 id="cn-m31-552"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-553">From the <b>Removable Disks: Deny write access </b>dialog box, select <b>Enabled</b>.</p>
+<p id="cn-m31-554">Click <b>OK</b>.</p>
+<p id="cn-m31-555"></p><figure><img class="cn-img" id="cn-image-m31-c-107" src="UsingEncryptionandSteganography_files/image-m31-c-107.jpg" alt="Figure 3.6 Screenshot of PLABDC01"><figcaption>Figure
+ 3.6 Screenshot of PLABDC01: Removeable Disks: Deny write access console
+ is displayed showing the required settings performed and the OK button 
+highlighted.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<h4 id="cn-m31-558"><b><i>Step 7</i></b></h4>
+<p id="cn-m31-559">Close <b>Group Policy Management Editor </b>and <b>Group Policy Management console</b>.</p>
+<span class="cn-quote" id="cn-m31-560"><b><i>Note</i></b><i>: Due to the system limitations of this lab, it will not show the actual policy of blocking removable storage on the devices.</i></span>
+<p id="cn-m31-561"></p><figure><img class="cn-img" id="cn-image-m31-c-108" src="UsingEncryptionandSteganography_files/image-m31-c-108.jpg" alt="Figure 3.7 Screenshot of PLABDC01"><figcaption>Figure
+ 3.7 Screenshot of PLABDC01: Group Policy Management Editor console is 
+displayed showing the Close icon at the top-right corner available.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m31-562">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m31-563"><b>Exercise 4 - Hide Documents in a Graphics File</b></h2>
+<p id="cn-m31-564">Steganography means covered or hidden. It is mainly 
+intended to hide a secret message in a plain message or a graphics file.
+ In this exercise, you will hide documents in a graphics file.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m31-566">After completing this exercise, you will be able to:</p>
+<ul id="cn-m31-567">
+<li id="cn-m31-567">Use Folder Steganography Tools</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m31-569">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m31-570">
+<li id="cn-m31-570"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m31-571"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m31-572"><img class="cn-img" id="cn-image-m31-c-109" src="UsingEncryptionandSteganography_files/image-m31-c-109.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m31-573"><b>Task 1 - Use Folder Steganography Tools</b></h3>
+<p id="cn-m31-574">Steganography is a method of hiding message in a 
+different form, such as a picture, which other than the sender or 
+recipient know. It is extremely difficult to detect steganography. In 
+this example, you will hide the contents of a folder in a graphics file.</p>
+<p id="cn-m31-575">There are various tools that you can use. One such 
+tool is Gargoyle Investigator™ Forensic Pro. However, you can perform 
+the same task with the help of a simple compression program like WinZip,
+ Winrar, or 7-zip. This task will use 7-zip for folder steganography.</p>
+<p id="cn-m31-576">To use folder steganography, perform the following steps:</p>
+<h4 id="cn-m31-577"><b><i>Step 1</i></b></h4>
+<p id="cn-m31-578">Ensure you have powered the required devices. Connect to <b>PLABWIN801</b>.</p>
+<p id="cn-m31-579">Click Start and then from the Start page, click <b>Internet Explorer</b>. The <b>Intranet </b>Website is displayed.</p>
+<p id="cn-m31-580">On the homepage, navigate to the <b>Tools </b>&gt; <b>7ZIP </b>folder.</p>
+<p id="cn-m31-581">Here, you need to download and install <b>7-Zip</b>.</p>
+<p id="cn-m31-582"></p><figure><img class="cn-img" id="cn-image-m31-c-110" src="UsingEncryptionandSteganography_files/image-m31-c-110.jpg" alt="Figure 4.1 Screenshot of PLABWIN801"><figcaption>Figure 4.1 Screenshot of PLABWIN801: Showing the Intranet Website with the 7Zip folder open.</figcaption></figure><p></p>
+<h4 id="cn-m31-583"><b><i>Step 2</i></b></h4>
+<p id="cn-m31-584">Click <b>7z920-x64.msi</b>.</p>
+<p id="cn-m31-585">On the notification bar, click <b>Run</b>.</p>
+<p id="cn-m31-586"></p><figure><img class="cn-img" id="cn-image-m31-c-111" src="UsingEncryptionandSteganography_files/image-m31-c-111.jpg" alt="Figure 4.2 Screenshot of PLABWIN801"><figcaption>Figure 4.2 Screenshot of PLABWIN801: Clicking Run on the notification bar.</figcaption></figure><p></p>
+<p id="cn-m31-587">The security scan starts.</p>
+<p id="cn-m31-588"></p><figure><img class="cn-img" id="cn-image-m31-c-112" src="UsingEncryptionandSteganography_files/image-m31-c-112.jpg" alt="Figure 4.3 Screenshot of PLABWIN801"><figcaption>Figure 4.3 Screenshot of PLABWIN801: Clicking Run on the notification bar.</figcaption></figure><p></p>
+<h4 id="cn-m31-589"><b><i>Step 3</i></b></h4>
+<p id="cn-m31-590">Internet Explorer is minimized automatically. On the <b>Welcome to the 7-Zip 9.20 (x64 edition) Setup Wizard </b>page of the <b>7-Zip 9.20 (x64 edition) Setup </b>wizard, click <b>Next</b>.</p>
+<p id="cn-m31-591"></p><figure><img class="cn-img" id="cn-image-m31-c-113" src="UsingEncryptionandSteganography_files/image-m31-c-113.jpg" alt="Figure 4.4 Screenshot of PLABWIN801"><figcaption>Figure 4.4 Screenshot of PLABWIN801: Clicking Next on the welcome page of the installer.</figcaption></figure><p></p>
+<h4 id="cn-m31-592"><b><i>Step 4</i></b></h4>
+<p id="cn-m31-593">On the <b>End-User License Agreement </b>page, select <b>I accept the terms in the License Agreement </b>and click <b>Next</b>.</p>
+<p id="cn-m31-594"></p><figure><img class="cn-img" id="cn-image-m31-c-114" src="UsingEncryptionandSteganography_files/image-m31-c-114.jpg" alt="Figure 4.5 Screenshot of PLABWIN801"><figcaption>Figure 4.5 Screenshot of PLABWIN801: Accepting the End-User License Agreement.</figcaption></figure><p></p>
+<h4 id="cn-m31-595"><b><i>Step 5</i></b></h4>
+<p id="cn-m31-596">On the <b>Custom Setup </b>page, keep the defaults and click <b>Next</b>.</p>
+<p id="cn-m31-597"></p><figure><img class="cn-img" id="cn-image-m31-c-115" src="UsingEncryptionandSteganography_files/image-m31-c-115.jpg" alt="Figure 4.6 Screenshot of PLABWIN801"><figcaption>Figure 4.6 Screenshot of PLABWIN801: Clicking Next on the Custom Setup page</figcaption></figure><p></p>
+<h4 id="cn-m31-598"><b><i>Step 6</i></b></h4>
+<p id="cn-m31-599">On the <b>Ready to Install </b>page, click <b>Install</b>.</p>
+<span class="cn-quote" id="cn-m31-600"><b><i>Note: </i></b><i>If the User Access Control dialog box is displayed, click Yes.</i></span>
+<p id="cn-m31-601"></p><figure><img class="cn-img" id="cn-image-m31-c-116" src="UsingEncryptionandSteganography_files/image-m31-c-116.jpg" alt="Figure 4.7 Screenshot of PLABWIN801"><figcaption>Figure 4.7 Screenshot of PLABWIN801: Clicking Install on the Ready to Install page.</figcaption></figure><p></p>
+<h4 id="cn-m31-602"><b><i>Step 7</i></b></h4>
+<p id="cn-m31-603">The installation progress will be shown for a few seconds. Then, you are navigated to the completion page.</p>
+<p id="cn-m31-604">Click <b>Finish</b>.</p>
+<p id="cn-m31-605"></p><figure><img class="cn-img" id="cn-image-m31-c-117" src="UsingEncryptionandSteganography_files/image-m31-c-117.jpg" alt="Figure 4.8 Screenshot of PLABWIN801"><figcaption>Figure 4.8 Screenshot of PLABWIN801: Clicking Finish on the completion page.</figcaption></figure><p></p>
+<h4 id="cn-m31-606"><b><i>Step 8</i></b></h4>
+<p id="cn-m31-607">Close <b>Internet Explorer</b>.</p>
+<h4 id="cn-m31-608"><b><i>Step 9</i></b></h4>
+<p id="cn-m31-609">Click <b>File Explorer </b>from the taskbar. Navigate to the root of <b>Local Disk (C</b>:).</p>
+<p id="cn-m31-610">Click the <b>Home </b>tab and then click <b>New folder</b>.</p>
+<p id="cn-m31-611"></p><figure><img class="cn-img" id="cn-image-m31-c-118" src="UsingEncryptionandSteganography_files/image-m31-c-118.jpg" alt="Figure 4.9 Screenshot of PLABWIN801"><figcaption>Figure 4.9 Screenshot of PLABWIN801: Creating a new folder in File Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m31-612"><b><i>Step 10</i></b></h4>
+<p id="cn-m31-613">Type the following name for the new folder:</p>
+<pre id="cn-m31-614"><code>PLAB
+</code></pre>
+<p id="cn-m31-615">Press <b>Enter</b>. Alternatively, click anywhere outside the text box where you are typing the name.</p>
+<p id="cn-m31-616"></p><figure><img class="cn-img" id="cn-image-m31-c-119" src="UsingEncryptionandSteganography_files/image-m31-c-119.jpg" alt="Figure 4.10 Screenshot of PLABWIN801"><figcaption>Figure 4.10 Screenshot of PLABWIN801: Naming the newly created folder.</figcaption></figure><p></p>
+<h4 id="cn-m31-617"><b><i>Step 11</i></b></h4>
+<p id="cn-m31-618">Double-click the <b>PLAB </b>folder.</p>
+<p id="cn-m31-619">Note that the folder is currently empty. Create two new text files.</p>
+<p id="cn-m31-620">To create a text file, right-click in the white area and select <b>New </b>and then select <b>Text Document</b>.</p>
+<p id="cn-m31-621"></p><figure><img class="cn-img" id="cn-image-m31-c-120" src="UsingEncryptionandSteganography_files/image-m31-c-120.jpg" alt="Figure 4.11 Screenshot of PLABWIN801"><figcaption>Figure 4.11 Screenshot of PLABWIN801: Creating a text document in the PLAB folder.</figcaption></figure><p></p>
+<h4 id="cn-m31-622"><b><i>Step 12</i></b></h4>
+<p id="cn-m31-623">In the text box, enter the name as:</p>
+<pre id="cn-m31-624"><code>PLAB1
+</code></pre>
+<p id="cn-m31-625">Press <b>Enter</b>.</p>
+<p id="cn-m31-626">Similarly, create another text file with the name:</p>
+<pre id="cn-m31-627"><code>PLAB2
+</code></pre>
+<p id="cn-m31-628">Press <b>Enter</b>.</p>
+<p id="cn-m31-629">For this task, two text files, <b>PLAB1 </b>and <b>PLAB2 </b>are created.</p>
+<p id="cn-m31-630"></p><figure><img class="cn-img" id="cn-image-m31-c-121" src="UsingEncryptionandSteganography_files/image-m31-c-121.jpg" alt="Figure 4.12 Screenshot of PLABWIN801"><figcaption>Figure 4.12 Screenshot of PLABWIN801: Showing two text files in the PLAB folder.</figcaption></figure><p></p>
+<h4 id="cn-m31-631"><b><i>Step 13</i></b></h4>
+<p id="cn-m31-632">Select both the files. Right-click on the selection, select <b>7-zip </b>and then select <b>Add to “PLAB.zip</b>”.</p>
+<p id="cn-m31-633"></p><figure><img class="cn-img" id="cn-image-m31-c-122" src="UsingEncryptionandSteganography_files/image-m31-c-122.jpg" alt="Figure 4.13 Screenshot of PLABWIN801"><figcaption>Figure 4.13 Screenshot of PLABWIN801: Adding the text files to the PLAB.zip file.</figcaption></figure><p></p>
+<p id="cn-m31-634">The <b>PLAB.zip </b>file is now created.</p>
+<p id="cn-m31-635"></p><figure><img class="cn-img" id="cn-image-m31-c-123" src="UsingEncryptionandSteganography_files/image-m31-c-123.jpg" alt="Figure 4.14 Screenshot of PLABWIN801"><figcaption>Figure 4.14 Screenshot of PLABWIN801: Showing the newly created PLAB.zip file.</figcaption></figure><p></p>
+<h4 id="cn-m31-636"><b><i>Step 14</i></b></h4>
+<p id="cn-m31-637">Now, you will need a graphics file that you need to copy to the <b>PLAB </b>folder. For the sake of this lab, a graphics file has been downloaded from <b>Google</b>. You can download any graphics file of your choice into the <b>PLAB </b>folder. For this demonstration, you have a graphics file named <b>PLAB.jpg</b>.</p>
+<p id="cn-m31-638"></p><figure><img class="cn-img" id="cn-image-m31-c-124" src="UsingEncryptionandSteganography_files/image-m31-c-124.jpg" alt="Figure 4.15 Screenshot of PLABWIN801"><figcaption>Figure 4.15 Screenshot of PLABWIN801: Adding a graphics file to the PLAB folder.</figcaption></figure><p></p>
+<h4 id="cn-m31-639"><b><i>Step 15</i></b></h4>
+<p id="cn-m31-640">In the address bar of <b>File Explorer</b>, type the following command:</p>
+<pre id="cn-m31-641"><code>cmd
+</code></pre>
+<p id="cn-m31-642">Press <b>Enter</b>.</p>
+<p id="cn-m31-643"></p><figure><img class="cn-img" id="cn-image-m31-c-125" src="UsingEncryptionandSteganography_files/image-m31-c-125.jpg" alt="Figure 4.16 Screenshot of PLABWIN801"><figcaption>Figure 4.16 Screenshot of PLABWIN801: Opening the command prompt.</figcaption></figure><p></p>
+<p id="cn-m31-644">The command prompt window is displayed. You are already in the <b>C:\PLAB </b>directory.</p>
+<p id="cn-m31-645"></p><figure><img class="cn-img" id="cn-image-m31-c-126" src="UsingEncryptionandSteganography_files/image-m31-c-126.jpg" alt="Figure 4.17 Screenshot of PLABWIN801"><figcaption>Figure 4.17 Screenshot of PLABWIN801: Showing the opened command prompt window.</figcaption></figure><p></p>
+<h4 id="cn-m31-646"><b><i>Step 16</i></b></h4>
+<p id="cn-m31-647">Enter the following command:</p>
+<pre id="cn-m31-648"><code>copy /b “PLAB.jpg”+PLAB.zip PLAB-new.jpg
+</code></pre>
+<p id="cn-m31-649">The command is successfully executed.</p>
+<p id="cn-m31-650">Close the command prompt window.</p>
+<p id="cn-m31-651"></p><figure><img class="cn-img" id="cn-image-m31-c-127" src="UsingEncryptionandSteganography_files/image-m31-c-127.jpg" alt="Figure 4.18 Screenshot of PLABWIN801"><figcaption>Figure 4.18 Screenshot of PLABWIN801: Copying the text files into a graphics file.</figcaption></figure><p></p>
+<h4 id="cn-m31-652"><b><i>Step 17</i></b></h4>
+<p id="cn-m31-653">Maximize the Windows Explorer and ensure you are in the <b>C:\PLAB </b>folder.</p>
+<p id="cn-m31-654">A new graphics file named <b>PLAB-new.jpg </b>is now created. The file size is the same as <b>PLAB.jpg</b>.</p>
+<p id="cn-m31-655"></p><figure><img class="cn-img" id="cn-image-m31-c-128" src="UsingEncryptionandSteganography_files/image-m31-c-128.jpg" alt="Figure 4.19 Screenshot of PLABWIN801"><figcaption>Figure 4.19 Screenshot of PLABWIN801: Showing the sizes of the PLAB and PLAB graphics files.</figcaption></figure><p></p>
+<h4 id="cn-m31-656"><b><i>Step 18</i></b></h4>
+<p id="cn-m31-657">Double-click <b>PLAB.jpg </b>and then <b>PLAB-new.jpg</b>. Note that both the graphics files display the same content. No one will ever come to know that <b>PLAB.jpg </b>file actually has hidden content behind it.</p>
+<p id="cn-m31-658"></p><figure><img class="cn-img" id="cn-image-m31-c-129" src="UsingEncryptionandSteganography_files/image-m31-c-129.jpg" alt="Figure 4.20 Screenshot of PLABWIN801"><figcaption>Figure 4.20 Screenshot of PLABWIN801: Showing the PLAB-new.jpg and PLAB.jpg files.</figcaption></figure><p></p>
+<h4 id="cn-m31-659"><b><i>Step 19</i></b></h4>
+<p id="cn-m31-660">Click <b>Start </b>and on the <b>Start </b>page, type <b>7-zip</b>.</p>
+<p id="cn-m31-661">From the search result, select <b>7-Zip File Manager </b>and press <b>Enter</b>.</p>
+<p id="cn-m31-662"></p><figure><img class="cn-img" id="cn-image-m31-c-130" src="UsingEncryptionandSteganography_files/image-m31-c-130.jpg" alt="Figure 4.21 Screenshot of PLABWIN801"><figcaption>Figure 4.21 Screenshot of PLABWIN801: Showing the search bar with the results and selection of 7-Zip File Manager.</figcaption></figure><p></p>
+<p id="cn-m31-663">The <b>7-Zip File Manager </b>window is displayed.</p>
+<p id="cn-m31-664"></p><figure><img class="cn-img" id="cn-image-m31-c-131" src="UsingEncryptionandSteganography_files/image-m31-c-131.jpg" alt="Figure 4.22 Screenshot of PLABWIN801"><figcaption>Figure 4.22 Screenshot of PLABWIN801: Showing the 7-Zip File Manager window.</figcaption></figure><p></p>
+<h4 id="cn-m31-665"><b><i>Step 20</i></b></h4>
+<p id="cn-m31-666">Navigate to the <b>C:\PLAB </b>folder.</p>
+<p id="cn-m31-667"></p><figure><img class="cn-img" id="cn-image-m31-c-132" src="UsingEncryptionandSteganography_files/image-m31-c-132.jpg" alt="Figure 4.23 Screenshot of PLABWIN801"><figcaption>Figure 4.23 Screenshot of PLABWIN801: Showing the contents of the c:\plab directory in the 7-Zip File Manager.</figcaption></figure><p></p>
+<h4 id="cn-m31-668"><b><i>Step 21</i></b></h4>
+<p id="cn-m31-669">Double-click <b>PLAB-new.jpg</b>.</p>
+<p id="cn-m31-670">Note both the text files are displayed.</p>
+<p id="cn-m31-671"></p><figure><img class="cn-img" id="cn-image-m31-c-133" src="UsingEncryptionandSteganography_files/image-m31-c-133.jpg" alt="Figure 4.24 Screenshot of PLABWIN801"><figcaption>Figure 4.24 Screenshot of PLABWIN801: Showing two text files hidden within the PLAB-new.jpg.</figcaption></figure><p></p>
+<span class="atom-code hidden">09144aba-611a-486d-b22e-e9472e284a8f</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m31-675"><b>Review</b></h2>
+<p id="cn-m31-676">Well done, you have completed the <b>Using Encryption and Steganography </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">9e92be29-8202-4250-87e1-13b6f2addec2</span>
+<span class="atom-code hidden">93925d05-a990-4191-90c3-eed991a675ec</span>
+<span class="atom-code hidden">112a72cf-e744-4cc6-810d-b35a26537a16</span>
+<span class="atom-code hidden">32fe9687-285a-472a-9efb-5df4666a503e</span>
+<span class="atom-code hidden">23cd564d-2a5d-4d02-a4b5-f3889d322269</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m31-688">You completed the following exercises:</p>
+<ul id="cn-m31-689">
+<li id="cn-m31-689">Configure BitLocker on Portable Media</li>
+<li id="cn-m31-690">Implement Full Disk Encryption using BitLocker</li>
+<li id="cn-m31-691">Manage Security for Removable Media</li>
+<li id="cn-m31-692">Hide documents in a graphics file</li>
+</ul>
+<p id="cn-m31-693">You should now be able to:</p>
+<ul id="cn-m31-694">
+<li id="cn-m31-694">Enable BitLocker without TPM Support</li>
+<li id="cn-m31-695">Configure BitLocker settings via GPO</li>
+<li id="cn-m31-696">Shrink the Existing Drive</li>
+<li id="cn-m31-697">Enable BitLocker</li>
+<li id="cn-m31-698">Verify BitLocker functionality</li>
+<li id="cn-m31-699">Manage BitLocker using the command prompt</li>
+<li id="cn-m31-700">Unlock the Encrypted Drive using Recovery Keys</li>
+<li id="cn-m31-701">Configure restrictions for removable media using GPO</li>
+<li id="cn-m31-702">Use Folder Steganography Tools</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<p id="cn-m31-706">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</p>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

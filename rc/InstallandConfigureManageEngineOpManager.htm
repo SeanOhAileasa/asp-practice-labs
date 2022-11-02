@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="InstallandConfigureManageEngineOpManager_files/print-styles.css" rel="stylesheet">
+    <script src="InstallandConfigureManageEngineOpManager_files/jquery.min.js"></script>
+    <script src="InstallandConfigureManageEngineOpManager_files/jspdf.js"></script>
+    <script src="InstallandConfigureManageEngineOpManager_files/from_html.js"></script>
+    <script src="InstallandConfigureManageEngineOpManager_files/addimage.js"></script>
+    <script src="InstallandConfigureManageEngineOpManager_files/filesaver.js"></script>
+    <script src="InstallandConfigureManageEngineOpManager_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="OqQTzocEFlZNT4yzayJWTCU90zjh0TUtHFIWtfzgmspYjhEryF4moFBpYfnbJp4Ewwut7bb0d8lVq5jUWeWdmCvv56n/3EBSjxT6lcGx54Q=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Install and Configure ManageEngine OpManager</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Install and Configure ManageEngine OpManager</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m20-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>OpManager</div>
+<div>ManageEngine</div>
+</div>
+<p id="cn-m20-4">Welcome to the <b>Perform Installation and Configuration of  ManageEngine OpManager </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m20-8">In this module, you will complete the following exercises:</p>
+<ul id="cn-m20-9">
+<li id="cn-m20-9">Install and Configure ManageEngine OpManager</li>
+</ul>
+<p id="cn-m20-10">After completing this lab, you will be able to:</p>
+<ul id="cn-m20-11">
+<li id="cn-m20-11">Install OpManager</li>
+<li id="cn-m20-12">Configure OpManager</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m20-14">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m20-15">
+<li id="cn-m20-15"><b>CAS-003 4.1 </b>Given a scenario, integrate hosts, storage, networks and applications into a secure enterprise architecture.</li>
+</ul>
+<span class="cn-quote" id="cn-m20-16"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m20-18">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m20-21">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m20-22">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m20-24"><b>Lab Topology</b></h2>
+<p id="cn-m20-25">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m20-26">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m20-27">
+<li id="cn-m20-27"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m20-28"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m20-29"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m20-30"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m20-31"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m20-32"><img class="cn-img" id="cn-image-m20-c-0" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m20-33">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m20-34"><b>Exercise 1 - Install and Configure ManageEngine OpManager</b></h2>
+<p id="cn-m20-35">ManageEngine OpManager is a network-monitoring tool. 
+It facilitates network, server, network configuration, IP address, and 
+other types of management. It also helps in network traffic analysis.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m20-37">After completing this exercise, you will be able to:</p>
+<ul id="cn-m20-38">
+<li id="cn-m20-38">Install and Configure ManageEngine OpManager</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m20-40">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m20-41">
+<li id="cn-m20-41"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m20-42"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m20-43"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m20-44"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m20-45"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m20-46"><img class="cn-img" id="cn-image-m20-c-1" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m20-47"><b>Task 1 - Install OpManager</b></h3>
+<p id="cn-m20-48">In this task, you will install OpManager and then use it to map the available devices in the network.</p>
+<h4 id="cn-m20-49"><b><i>Step 1</i></b></h4>
+<p id="cn-m20-50">Ensure all devices in the lab are powered on.</p>
+<p id="cn-m20-51">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m20-52">Close the <b>Server Manager </b>window.</p>
+<p id="cn-m20-53">Access the <b>Intranet </b>by launching <b>Internet Explorer.</b></p>
+<span class="cn-alert" id="cn-m20-54"><b>Alert: </b>All of the devices in the lab should be powered on as they will be included in the scan later in the exercise.</span>
+<p id="cn-m20-55"></p><figure><img class="cn-img" id="cn-image-m20-c-2" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-2.jpg" alt="Figure 2.1 Screenshot of PLABDC01 desktop"><figcaption>Figure 2.1 Screenshot of PLABDC01 desktop: The Intranet is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m20-57"><b><i>Step 2</i></b></h4>
+<p id="cn-m20-58">You’ll now download <b>ManageEngine OpManager </b>from the Intranet.</p>
+<p id="cn-m20-59">Navigate to <b>Installation Files </b>&gt; <b>Op Manager</b>.</p>
+<p id="cn-m20-60">Click on the <b>ManageEngine_OpManager_Free_64bit 12.0.exe </b>link and when prompted click <b>Save</b>.</p>
+<p id="cn-m20-61"></p><figure><img class="cn-img" id="cn-image-m20-c-3" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-3.jpg" alt="Figure 2.2 Screenshot of the Internet Explorer window"><figcaption>Figure 2.2 Screenshot of the Internet Explorer window: The download prompt is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m20-62"><b><i>Step 3</i></b></h4>
+<p id="cn-m20-63">Once the download is complete, to start the application setup, click <b>Run</b>.</p>
+<p id="cn-m20-64"></p><figure><img class="cn-img" id="cn-image-m20-c-4" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-4.jpg" alt="Figure 2.3 Screenshot of the file download dialog box in the Internet Explorer window"><figcaption>Figure
+ 2.3 Screenshot of the file download dialog box in the Internet Explorer
+ window: The download is completed. Run is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-66"><b><i>Step 4</i></b></h4>
+<p id="cn-m20-67">Please wait while the setup is being prepared.</p>
+<p id="cn-m20-70"></p><figure><img class="cn-img" id="cn-image-m20-c-5" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-5.jpg" alt="Figure 2.4 Screenshot of the ManageEngine OpManager window"><figcaption>Figure 2.4 Screenshot of the ManageEngine OpManager window: The setup preparation is in progress.</figcaption></figure><p></p>
+<h4 id="cn-m20-71"><b><i>Step 5</i></b></h4>
+<p id="cn-m20-72">The <b>InstallShield Wizard for ManageEngine OpManager </b>starts.</p>
+<p id="cn-m20-73">On the <b>Welcome </b>page of the wizard, click <b>Next</b>.</p>
+<p id="cn-m20-74"></p><figure><img class="cn-img" id="cn-image-m20-c-6" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-6.jpg" alt="Figure 2.5 Screenshot of the InstallShield Wizard for ManageEngine OpManager window"><figcaption>Figure 2.5 Screenshot of the InstallShield Wizard for ManageEngine OpManager window: Next is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-75"><b><i>Step 6</i></b></h4>
+<p id="cn-m20-76">On the <b>License Agreement </b>page of the wizard, click <b>Yes</b>.</p>
+<p id="cn-m20-78"></p><figure><img class="cn-img" id="cn-image-m20-c-7" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-7.jpg" alt="Figure 2.6 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure 2.6 Screenshot of the ManageEngine OpManager wizard window: On the License Agreement page, Yes is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-79"><b><i>Step 7</i></b></h4>
+<p id="cn-m20-80">To select the destination folder, on the <b>Destination Folder </b>page, keep the default settings, and click <b>Next</b>.</p>
+<p id="cn-m20-81"></p><figure><img class="cn-img" id="cn-image-m20-c-8" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-8.jpg" alt="Figure 2.7 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure
+ 2.7 Screenshot of the ManageEngine OpManager wizard window: On the 
+Destination Folder page, the default settings are retained. Next is 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-82"><b><i>Step 8</i></b></h4>
+<p id="cn-m20-83">On the <b>Port Selection Panel </b>page, in the <b>WebServer </b>box, delete the existing text, and type the following web server port:</p>
+<pre id="cn-m20-84"><code>8443
+</code></pre>
+<p id="cn-m20-85">Click <b>Next.</b></p>
+<p id="cn-m20-86"></p><figure><img class="cn-img" id="cn-image-m20-c-9" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-9.jpg" alt="Figure 2.8 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure
+ 2.8 Screenshot of the ManageEngine OpManager wizard window: On the Port
+ Selection Panel page, in the WebServer box, the web server port is 
+entered. Next is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-87"><b><i>Step 9</i></b></h4>
+<p id="cn-m20-88">On the <b>Registration for Technical Support </b>page, click <b>Skip</b>.</p>
+<p id="cn-m20-89"></p><figure><img class="cn-img" id="cn-image-m20-c-10" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-10.jpg" alt="Figure 2.9 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure
+ 2.9 Screenshot of the ManageEngine OpManager wizard window: On the 
+Registration for Technical Support page, Skip is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-90"><b><i>Step 10</i></b></h4>
+<p id="cn-m20-91"><b>ManageEngine OpManager </b>installation starts.</p>
+<p id="cn-m20-92"></p><figure><img class="cn-img" id="cn-image-m20-c-11" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-11.jpg" alt="Figure 2.10 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure 2.10 Screenshot of the ManageEngine OpManager wizard window: Installation is started.</figcaption></figure><p></p>
+<h4 id="cn-m20-93"><b><i>Step 11</i></b></h4>
+<p id="cn-m20-94">Please wait while <b>ManageEngine OpManager </b>configures the new software installation.</p>
+<p id="cn-m20-95"></p><figure><img class="cn-img" id="cn-image-m20-c-12" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-12.jpg" alt="Figure 2.11 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure
+ 2.11 Screenshot of the ManageEngine OpManager wizard window: 
+Configuration of the new software installation is in progress.</figcaption></figure><p></p>
+<h4 id="cn-m20-96"><b><i>Step 12</i></b></h4>
+<p id="cn-m20-97">To select the backend database for OpManager, on <b>Select the backend database for OpManager </b>page, ensure <b>POSTGRESQL </b>is selected, and click <b>Next</b>.</p>
+<p id="cn-m20-99"></p><figure><img class="cn-img" id="cn-image-m20-c-13" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-13.jpg" alt="Figure 2.12 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure
+ 2.12 Screenshot of the ManageEngine OpManager wizard window: On Select 
+the backend database for OpManager page of the wizard, ensure POSTGRESQL
+ is selected. Next is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-100"><b><i>Step 13</i></b></h4>
+<p id="cn-m20-101"><b>ManageEngine OpManager </b>message box appears.</p>
+<p id="cn-m20-102">Click <b>OK</b>.</p>
+<p id="cn-m20-104"></p><figure><img class="cn-img" id="cn-image-m20-c-14" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-14.jpg" alt="Figure 2.13 Screenshot of the ManageEngine OpManager message box"><figcaption>Figure 2.13 Screenshot of the ManageEngine OpManager message box: OK is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-105"><b><i>Step 14</i></b></h4>
+<p id="cn-m20-106">The installation of <b>ManageEngine OpManager </b>is completed.</p>
+<p id="cn-m20-107">To exit the wizard, click <b>Finish</b>.</p>
+<p id="cn-m20-110"></p><figure><img class="cn-img" id="cn-image-m20-c-15" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-15.jpg" alt="Figure 2.14 Screenshot of the ManageEngine OpManager wizard window"><figcaption>Figure
+ 2.14 Screenshot of the ManageEngine OpManager wizard window: The 
+installation of ManageEngine OpManager is completed. Finish is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-111"><b><i>Step 15</i></b></h4>
+<p id="cn-m20-112"><b>ManageEngine OpManager 12 Readme </b>file opens in the <b>Internet Explorer </b>window.</p>
+<p id="cn-m20-113">Please wait while the initialization of <b>OpManager </b>is in progress.</p>
+<p id="cn-m20-114">You may need to close a File Explorer window if it opens.</p>
+<p id="cn-m20-115">After the initialization you will be directed to the link <a href="http://plabdc01:8443/" class="cn-external-link" target="_blank">http :// plabdc01 : 8443</a>. Alternatively, in the address bar, delete the existing text, and type the following URL:</p>
+<pre id="cn-m20-116"><code>http://plabdc01:8443
+</code></pre>
+<p id="cn-m20-117">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m20-118"><b><i>Note: </i></b><i>It may 
+take 30 seconds or a minute to initialize. If you enter the link into 
+the address bar before the initialization is complete, you will be shown
+ a page that cannot be displayed.</i></span>
+<p id="cn-m20-119"></p><figure><img class="cn-img" id="cn-image-m20-c-16" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-16.jpg" alt="Figure 2.15 Screenshot of the ManageEngine OpManager Readme file in the Internet Explorer window"><figcaption>Figure
+ 2.15 Screenshot of the ManageEngine OpManager Readme file in the 
+Internet Explorer window: The initialization of OpManager is in 
+progress. After the initialization, in the address bar, the existing 
+text is deleted, and the required URL is entered.</figcaption></figure><p></p>
+<h4 id="cn-m20-120"><b><i>Step 16</i></b></h4>
+<p id="cn-m20-121"><b>ManageEngine OpManager </b>login screen is displayed.</p>
+<p id="cn-m20-122"></p><figure><img class="cn-img" id="cn-image-m20-c-17" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-17.jpg" alt="Figure 2.16 Screenshot of PLABDC01"><figcaption>Figure
+ 2.16 Screenshot of PLABDC01: Showing the ManageEngine OpManager in the 
+Internet Explorer window. The homepage of the OpManager: The Login page 
+is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m20-123"><b>Task 2 - Configure OpManager</b></h3>
+<p id="cn-m20-124">After the OpManager application is installed, it is 
+critical to configure it to serve its purpose. In this task, you will 
+configure OpManager and then use it to map the available devices in the 
+network.</p>
+<h4 id="cn-m20-125"><b><i>Step 1</i></b></h4>
+<p id="cn-m20-126">Ensure that the login page of OpManager is displayed. To enter the username, in the username box, type the following:</p>
+<pre id="cn-m20-127"><code>admin
+</code></pre>
+<p id="cn-m20-128">In the password box, type the following password:</p>
+<span class="cn-password">admin</span>
+<p id="cn-m20-130">Click <b>Login</b>.</p>
+<span class="cn-quote" id="cn-m20-131"><b><i>Note: </i></b><i>If prompted to save the password, click </i><b><i>Not for this site</i></b><i>.</i></span>
+<p id="cn-m20-132"></p><figure><img class="cn-img" id="cn-image-m20-c-18" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-18.jpg" alt="Figure 2.17 Screenshot of PLABDC01"><figcaption>Figure
+ 2.17 Screenshot of PLABDC01: Showing the OpManager login page in the 
+Internet Explorer window. The username and password are entered. Login 
+is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-133"><b><i>Step 2</i></b></h4>
+<p id="cn-m20-134">Click <b>X </b>to close the Get Started section.</p>
+<p id="cn-m20-137"></p><figure><img class="cn-img" id="cn-image-m20-c-19" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-19.jpg" alt="Figure 2.17 Screenshot of the OpManager page in the Internet Explorer window"><figcaption>Figure 2.17 Screenshot of the OpManager page in the Internet Explorer window: X is pressed to exit the tour.</figcaption></figure><p></p>
+<h4 id="cn-m20-138"><b><i>Step 3</i></b></h4>
+<p id="cn-m20-139">In the upper right of the Internet Explorer window,</p>
+<p id="cn-m20-140">Click the settings cog and hover over the Zoom setting and change it to 75%.</p>
+<p id="cn-m20-141">This is so the entire page can be seen.</p>
+<p id="cn-m20-142"></p><figure><img class="cn-img" id="cn-image-m20-c-20" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-20.jpg" alt="Figure 2.18 Screenshot of the Internet Explorer settings, hovering over and selecting Zoom as 75%."><figcaption>Figure 2.18 Screenshot of the Internet Explorer settings, hovering over and selecting Zoom as 75%.</figcaption></figure><p></p>
+<h4 id="cn-m20-143"><b><i>Step 4</i></b></h4>
+<p id="cn-m20-144">Hover over <b>Settings </b>in the top bar and then hover over <b>Discovery.</b></p>
+<p id="cn-m20-145">Click <b>Network Discovery. </b></p>
+<p id="cn-m20-146"></p><figure><img class="cn-img" id="cn-image-m20-c-21" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-21.jpg" alt="Figure 2.19 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure 2.19 Screenshot of the Admin page in the OpManager application window: Network Discovery is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m20-147"><b><i>Step 5</i></b></h4>
+<p id="cn-m20-148">To scan the local network, click <b>New Discovery.</b></p>
+<p id="cn-m20-150"></p><figure><img class="cn-img" id="cn-image-m20-c-22" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-22.jpg" alt="Figure 2.20 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure
+ 2.20 Screenshot of the Admin page in the OpManager application window: 
+On the Discovery section, New Discovery is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-151"><b><i>Step 6</i></b></h4>
+<p id="cn-m20-152">In the <b>Start IP </b>box, type the following IP address:</p>
+<pre id="cn-m20-153"><code>192.168.0.1
+</code></pre>
+<p id="cn-m20-154">In the <b>End IP </b>box, type the following IP address:</p>
+<pre id="cn-m20-155"><code>192.168.0.255
+</code></pre>
+<p id="cn-m20-156">Click <b>Add Credentials.</b></p>
+<p id="cn-m20-158"></p><figure><img class="cn-img" id="cn-image-m20-c-23" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-23.jpg" alt="Figure 2.21 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure
+ 2.21 Screenshot of the Admin page in the OpManager application window: 
+On the Discovery, the Start IP and End IP boxes, the respective IP 
+addresses are entered. Add Credentials is also selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-159"><b><i>Step 7</i></b></h4>
+<p id="cn-m20-160">On the <b>Add Credential </b>pane, click <b>Windows/WMI</b>.</p>
+<p id="cn-m20-162"></p><figure><img class="cn-img" id="cn-image-m20-c-24" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-24.jpg" alt="Figure 2.22 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure 2.22 Screenshot of the Admin page in the OpManager application window: Windows/WMI is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-163"><b><i>Step 8</i></b></h4>
+<p id="cn-m20-164">The <b>Add Credentials (Windows/WMI) </b>pane appears.</p>
+<p id="cn-m20-165">In the <b>Profile Name </b>box, type the following credential name:</p>
+<pre id="cn-m20-166"><code>Windows Credentials
+</code></pre>
+<p id="cn-m20-167">In the <b>Domain Name\User Name </b>box, type the following name:</p>
+<pre id="cn-m20-168"><code>PRACTICELABS.COM\Administrator
+</code></pre>
+<p id="cn-m20-169">In the <b>Password </b>box, type the following password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m20-171">In the <b>Retype Password </b>box, type the following text:</p>
+<pre id="cn-m20-172"><code><span class="cn-password">Passw0rd</span>
+</code></pre>
+<p id="cn-m20-173">Click <b>Save</b>.</p>
+<p id="cn-m20-174"></p><figure><img class="cn-img" id="cn-image-m20-c-25" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-25.jpg" alt="Figure 2.23 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure
+ 2.23 Screenshot of the Admin page in the OpManager application window: 
+On Add Credentials (Windows/WMI) pane, in the Name box, the credential 
+name is entered. In the Domain Name\User Name box, the domain name is 
+entered. In the Password box, the password is entered. In the Retype 
+Password box, text is entered. Save is selected.</figcaption></figure><p></p>
+<h4 id="cn-m20-175"><b><i>Step 9</i></b></h4>
+<p id="cn-m20-176">Click the dropdown for <b>Select Credentials.</b></p>
+<p id="cn-m20-177">Tick the <b>Windows </b>box which will also tick <b>Windows Credentials.</b></p>
+<p id="cn-m20-178">Type a name for the Network Discovery scan. In this example, Discovery Scan has been inputted.</p>
+<p id="cn-m20-179">Click <b>Discover.</b></p>
+<p id="cn-m20-180"></p><figure><img class="cn-img" id="cn-image-m20-c-26" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-26.jpg" alt="Figure 2.24 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure
+ 2.24 Screenshot of the Admin page in the OpManager application window: 
+the credentials entered previously have been entered and selected. A 
+name for the scan has been set as Discovery Scan. Discover is also 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m20-181"><b><i>Step 10</i></b></h4>
+<p id="cn-m20-182">The Discovery scan is now in progress.</p>
+<p id="cn-m20-183">This may take 5-10 minutes.</p>
+<p id="cn-m20-184"></p><figure><img class="cn-img" id="cn-image-m20-c-27" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-27.jpg" alt="Figure 2.25 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure 2.25 Screenshot of the Admin page in the OpManager application window: The Discovery Scan is in progress.</figcaption></figure><p></p>
+<h4 id="cn-m20-185"><b><i>Step 11</i></b></h4>
+<p id="cn-m20-186">The scan has completed.</p>
+<p id="cn-m20-187">A number of devices have been found. The result may be different in your lab.</p>
+<p id="cn-m20-188">Click the box next to all devices that display one. You will need to expand the entries using the arrow to see the boxes.</p>
+<p id="cn-m20-189">Click <b>Approve.</b></p>
+<p id="cn-m20-190"></p><figure><img class="cn-img" id="cn-image-m20-c-28" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-28.jpg" alt="Figure 2.26 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure
+ 2.26 Screenshot of the Admin page in the OpManager application window: 
+The scan has completed, the devices found have been selected and approve
+ is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m20-191"><b><i>Step 12</i></b></h4>
+<p id="cn-m20-192">Hover over <b>Dashboard </b>in the top left and hover on <b>Overview</b>, click <b>Realtime Dashboard.</b></p>
+<p id="cn-m20-193">This also shows the systems that were scanned.</p>
+<p id="cn-m20-194"></p><figure><img class="cn-img" id="cn-image-m20-c-29" src="InstallandConfigureManageEngineOpManager_files/image-m20-c-29.jpg" alt="Figure 2.27 Screenshot of the Admin page in the OpManager application window"><figcaption>Figure 2.27 Screenshot of the Admin page in the OpManager application window: The devices that were scanned are displayed.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m20-195">Shutdown all virtual machines 
+used in this lab, by using the power functions located in the Tools bar 
+before proceeding to the next module. Alternatively, you can log out of 
+the lab platform.</span>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m20-198"><b>Close </b>all open windows.</p>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m20-201"><b>Review</b></h2>
+<p id="cn-m20-202">Well done, you have completed the <b>Install and Configure ManageEngine OpManager </b>Practice Lab.</p>
+<p id="cn-m20-203">Well done, you have completed <b>Installing and Configuring ManageEngine OpManager </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">ab3efa55-f61c-446f-8d51-e55c334252a1</span>
+<span class="atom-code hidden">76a0dc46-bbd5-48cd-af61-7e62494bcabc</span>
+<span class="atom-code hidden">877571cb-0f55-4b41-ac35-6f2d4b3b9a6b</span>
+<span class="atom-code hidden">675cb054-d11d-4a88-ac00-7ff571f556cb</span>
+<span class="atom-code hidden">431259f7-df3e-417a-ad57-7294a6525828</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m20-213">You completed the following exercises:</p>
+<ul id="cn-m20-214">
+<li id="cn-m20-214">Installing and Configuring ManageEngine OpManager</li>
+</ul>
+<p id="cn-m20-215">You should now be able to:</p>
+<ul id="cn-m20-216">
+<li id="cn-m20-216">Install OpManager</li>
+<li id="cn-m20-217">Configure OpManager</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m20-221">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

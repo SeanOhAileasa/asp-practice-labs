@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/print-styles.css" rel="stylesheet">
+    <script src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/jquery.min.js"></script>
+    <script src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/jspdf.js"></script>
+    <script src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/from_html.js"></script>
+    <script src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/addimage.js"></script>
+    <script src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/filesaver.js"></script>
+    <script src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="bbvAjEHALnZXp+rc5V7tGN0wdL+0LxeCplGLmnkUII9eveqn0CiCrf3fgbgNvEXNPMmINm3dLipBmPPROmO0/TAEHicaKe+GjSWF5UDXrMA=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Configure and Verify IPv4 and IPv6 Access Lists for Traffic Filtering</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Configuring Standard and Extended Access Lists using IPv4</li><li>Exercise 2 - Configuring Named Access Lists Using IPv4</li><li>Exercise 3 - Creating Access-Lists in IPv6</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m10-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>IPv4</div>
+<div>IPv6</div>
+<div>Access Lists</div>
+<div>Traffic Filtering</div>
+</div>
+<p id="cn-m10-6">Welcome to the <b>Configure and Verify IPv4 and IPv6 Access Lists for Traffic Filtering </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m10-10">In this module, you will complete the following exercises:</p>
+<ul id="cn-m10-11">
+<li id="cn-m10-11">Configuring standard and extended access lists for IPv4</li>
+<li id="cn-m10-12">Configuring named access-lists for IPv4</li>
+<li id="cn-m10-13">Configuring and modifying IPv6 access-lists</li>
+</ul>
+<p id="cn-m10-14">After completing this lab, you will be able to:</p>
+<ul id="cn-m10-15">
+<li id="cn-m10-15">Create Standard Access-Lists in IPv4</li>
+<li id="cn-m10-16">Create an Extended Access-List in IPv4</li>
+<li id="cn-m10-17">Configure a Named Access-List</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m10-19">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m10-20">
+<li id="cn-m10-20"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+</ul>
+<span class="cn-quote" id="cn-m10-21"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m10-23">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m10-27">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m10-28">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m10-46"><b>Lab Topology</b></h2>
+<p id="cn-m10-47">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m10-48">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m10-49">
+<li id="cn-m10-49"><b>NYEDGE1 </b>(CISCO2911/K9)</li>
+<li id="cn-m10-50"><b>NYEDGE2 </b>(CISCO2911/K9)</li>
+<li id="cn-m10-51"><b>NYCORE1 </b>(CISCO C3750)</li>
+<li id="cn-m10-52"><b>NYACCESS1 </b>(CISCO Catalyst 2960)</li>
+<li id="cn-m10-53"><b>PLABCSCO01 </b>(Windows Server 2012 R2 - Standalone)</li>
+</ul>
+<p id="cn-m10-54"><img class="cn-img" id="cn-image-m10-c-0" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m10-55">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m10-56"><b>Exercise 1 - Configuring Standard and Extended Access Lists using IPv4</b></h2>
+<p id="cn-m10-57">Access Control Lists (ACLs) are used to control 
+permissions on a specific object. For example, if you need to provide 
+access to a file on a system to a specific user, then you can use ACLs 
+to do this. In the similar context, on the routers and switches, ACLs 
+can be used to define the flow of traffic. In this exercise, you will 
+configure access control lists (ACLs) to control traffic flows through 
+the network.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m10-59">After completing this exercise, you will be able to:</p>
+<ul id="cn-m10-60">
+<li id="cn-m10-60">Create Standard Access Lists in IPv4</li>
+<li id="cn-m10-61">Create an Extended Access-List in IPv4</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m10-63">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m10-64">
+<li id="cn-m10-64"><b>NYEDGE1 </b>(CISCO2911/K9)</li>
+<li id="cn-m10-65"><b>PLABCSCO01 </b>(Windows Server 2012 R2 - Standalone)</li>
+</ul>
+<ol id="cn-m10-66">
+</ol>
+<p id="cn-m10-67"><img class="cn-img" id="cn-image-m10-c-1" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m10-70"><b>Task 1 - Creating Standard Access-Lists in IPv4</b></h3>
+<p id="cn-m10-71">There are two types of access lists, standard and 
+extended. These access lists can be referred to either by a name or a 
+number, depending on how you configure them.</p>
+<p id="cn-m10-72">The difference between the two types of access lists 
+is the granularity of the filtering that each provides. For example, a 
+standard access list will only filter based on <b>source </b>address or network. This can be seen in the result of the context-sensitive help below:</p>
+<pre id="cn-m10-73"><code>NYEDGE1(config)#access-list 1 permit ?
+  Hostname or A.B.C.D  Address to match
+  any                  Any source host
+  host                 A single host address
+NYEDGE1(config)#access-list 1 permit 192.168.16.0 0.0.0.255 ?
+  log       Log matches against this entry
+  smartlog  Smartlog matches against this entry
+</code></pre>
+<p id="cn-m10-80">In the above output, the <b>? </b>(question mark) 
+displays the options, which are any and host. However, if you use the 
+question mark after the network address, then you only have logging 
+options.</p>
+<p id="cn-m10-81">In this task, you will create a <b>standard </b>access list on <b>NYEDGE1</b>. To do this, perform the following steps:</p>
+<h4 id="cn-m10-82"><b><i>Step 1</i></b></h4>
+<p id="cn-m10-83">Ensure all the required devices are turned on.</p>
+<p id="cn-m10-84">Connect to <b>NYEDGE1</b>.</p>
+<p id="cn-m10-85">This access list will match a single device on the network, specifically, the <b>PLABCSCO01 </b>server. You need to create a numbered access that matches the address of the server with the IP address,<b>192.168.16.10</b>, and choose the action deny:</p>
+<p id="cn-m10-86">In the NYEDGE1#configure terminal, enter the following configuration commands, one per line, then end with CNTL/Z:</p>
+<pre id="cn-m10-87"><code>NYEDGE1# configure terminal
+</code></pre>
+<p id="cn-m10-88">Press <b>Enter</b>.</p>
+<pre id="cn-m10-89"><code>NYEDGE1(config)#access-list 10 deny host 192.168.16.10
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<span class="cn-quote" id="cn-m10-92"><b><i>Note: </i></b><i>When 
+configuring an access list to refer to only one host, you have two 
+options.  Either you use the host keyword as you have done above, or by 
+including the IP address and a wildcard mask which indicates a host.  
+The resulting command would be </i><b><i>access-list 80 deny 192.168.16.10 0.0.0.0</i></b><i>.  Both commands would give the same result.</i></span>
+<h4 id="cn-m10-93"><b><i>Step 2</i></b></h4>
+<p id="cn-m10-94">To view the access lists you created, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-95"><code>NYEDGE1#show access-lists
+Standard IP access list 10
+    10 deny   192.168.16.10
+Standard IP access list NAT
+    10 permit 192.168.16.0, wildcard bits 0.0.0.255
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-101">This output displays all of the access lists configured on the router.</p>
+<span class="cn-quote" id="cn-m10-102"><b><i>Note: </i></b><i>The NAT access list has been preconfigured to enable NAT to function.  This will be used later on in this lab.</i></span>
+<h4 id="cn-m10-103"><b><i>Step 3</i></b></h4>
+<p id="cn-m10-104">There is an implicit deny at the end of each access 
+list. Therefore, you will need to include a permit statement. If the 
+permit statement is not included, all traffic will be blocked. Type the 
+following command to allow all other traffic, then press <b>Enter</b>:</p>
+<p id="cn-m10-105">NYEDGE1#configure terminal</p>
+<p id="cn-m10-106">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-107"><code>NYEDGE1(config)#access-list 10 permit any
+NYEDGE1(config)#
+</code></pre>
+<h4 id="cn-m10-109"><b><i>Step 4</i></b></h4>
+<p id="cn-m10-110">At this point, the access list is defined. However, 
+it has not been applied anywhere, so filtering is not yet taking place. 
+ You must bind this access list to an interface.</p>
+<p id="cn-m10-111">Careful consideration needs to be taken when applying
+ access lists. Should it be placed as close as possible or as far away 
+as possible from the source? In what direction should it be applied? For
+ example, should you put place the access list on interface <b>GigabitEthernet 0/0 </b>or <b>0/1 </b>and in what direction?</p>
+<p id="cn-m10-112">In this step, you will place the access list on <b>GigabitEthernet 0/1 </b>in an <b>outbound </b>direction. To this, type the following commands and press <b>Enter </b>after each command:</p>
+<pre id="cn-m10-113"><code>NYEDGE1(config)#interface gigabitethernet 0/1
+NYEDGE1(config-if)#ip access-group 10 out
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<span class="cn-quote" id="cn-m10-118"><b><i>Note: </i></b><i>To help 
+you understand directions, imagine yourself sitting on top of the router
+ and marble is the traffic, if the marble is coming towards you then it 
+is inbound if the marble is rolling away from you then it is outbound.</i></span>
+<h4 id="cn-m10-119"><b><i>Step 5</i></b></h4>
+<p id="cn-m10-120">Ensure <b>PLABCSCO01 </b>is powered on. Connect to <b>PLABCSCO01</b>. Open the command prompt window. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-121"><code>ping www.practice-labs.com
+</code></pre>
+<p id="cn-m10-122"></p><figure><img class="cn-img" id="cn-image-m10-c-2" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-2.jpg" alt="Figure 1.1 Configuring Access Lists"><figcaption>Figure 1.1 Configuring Access Lists: Pinging the web server on the Internet from the PLABCSCO01 server.</figcaption></figure><p></p>
+<p id="cn-m10-123">The pings are successful.</p>
+<h4 id="cn-m10-124"><b><i>Step 6</i></b></h4>
+<p id="cn-m10-125">Observe the access list hits, using the <b>show access-lists </b>command. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-126"><code>NYEDGE1#show access-lists
+Standard IP access list 10
+    10 deny   192.168.16.10
+    20 permit any (4 matches)
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-131">You can see from the above output that there were four matches on the <b>permit any </b>line and no matches on the <b>deny 192.168.16.10 </b>line of the access list.</p>
+<p id="cn-m10-132">Examining the configuration once again, you may realize that something is wrong. If the <b>PLABCSCO01 </b>server has an IP address of <b>192.168.16.10</b>, then the pings should be <b>denied </b>and not <b>permitted</b>. Why is the incorrect line being matched?</p>
+<h4 id="cn-m10-133"><b><i>Step 7</i></b></h4>
+<p id="cn-m10-134">The placement of the access list is very important. 
+Because NAT is operating on this router, the source address of the 
+server is being translated. When the packet in question is exiting the <b>GigabitEthernet 0/1 </b>interface on which the access list was applied, it no longer has <b>192.168.16.10 </b>as
+ a source address. It has been translated by NAT. Therefore, you must 
+either change the access list placement and direction to <b>GigabitEthernet 0/0 inbound</b>, or you must modify the access list to match the translated IP address.</p>
+<p id="cn-m10-135">The best choice would be to change the placement and direction. Remove the access list from the <b>GigabitEthernet 0/1 </b>interface and place it on <b>0/0 </b>in an <b>inbound </b>direction. Type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-136">NYEDGE1#configure terminal</p>
+<p id="cn-m10-137">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-138"><code>NYEDGE1(config)#interface gigabitethernet 0/1
+NYEDGE1(config-if)#no ip access-group 10 out
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#interface gigabitethernet 0/0
+NYEDGE1(config-if)#ip access-group 10 in
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<h4 id="cn-m10-147"><b><i>Step 8</i></b></h4>
+<p id="cn-m10-148">Back to <b>PLABCSCO01</b>. Ensure that the command prompt window is open.</p>
+<p id="cn-m10-149">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-150"><code>ping www.practice-labs.com
+</code></pre>
+<p id="cn-m10-151"></p><figure><img class="cn-img" id="cn-image-m10-c-3" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-3.jpg" alt="Figure 1.2 Configuring Access Lists"><figcaption>Figure 1.2 Configuring Access Lists: Pinging the web server on the Internet from PLABCSCO01 once more.</figcaption></figure><p></p>
+<h4 id="cn-m10-152"><b><i>Step 9</i></b></h4>
+<p id="cn-m10-153">Return to the <b>NYEDGE1 </b>router and view the access list again. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-154"><code>NYEDGE1#show access-lists
+Standard IP access list 10
+    10 deny   192.168.16.10 (8 matches)
+    20 permit any (19 matches)
+Standard IP access list NAT
+    10 permit 192.168.16.0, wildcard bits 0.0.0.255 (1 match)
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-161">You now see that there are matches on the <b>deny </b>line of the access list, meaning the access list denied the pings you sent.</p>
+<h4 id="cn-m10-162"><b><i>Step 10</i></b></h4>
+<p id="cn-m10-163">Before continuing on to the next exercise, you need to remove the access-group that was earlier applied to <b>GigabitEthernet 0/0</b>. To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-164">NYEDGE1#configure terminal</p>
+<p id="cn-m10-165">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-166"><code>NYEDGE1(config)#interface gigabitethernet 0/0
+NYEDGE1(config-if)#no ip access-group 10 in
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-172">You have completed the creation of standard access lists.</p>
+<h3 id="cn-m10-174"><b>Task 2 - Create an Extended Access-List in IPv4</b></h3>
+<p id="cn-m10-175">In this task, you will create an extended access 
+list. The benefits of extended access lists are that you can be much 
+more granular in what you want to permit and deny.</p>
+<p id="cn-m10-176">You will now configure an access list that permits <b>FTP </b>but denies <b>ICMP </b>on <b>NYEDGE1</b>. To do this, perform the following steps:</p>
+<h4 id="cn-m10-177"><b><i>Step 1</i></b></h4>
+<p id="cn-m10-178">Connect to <b>NYEDGE1</b>.</p>
+<p id="cn-m10-179">You need to configure access-list 110 that will allow
+ FTP. To do this, type the following commands and after each command, 
+press <b>Enter</b>:</p>
+<p id="cn-m10-180">NYEDGE1#configure terminal</p>
+<p id="cn-m10-181">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-182"><code>NYEDGE1(config)#access-list 110 permit tcp host 192.168.16.10 any eq ftp
+NYEDGE1(config)#access-list 110 permit tcp host 192.168.16.10 any eq ftp-data
+NYEDGE1(config)#
+</code></pre>
+<span class="cn-quote" id="cn-m10-185"><b><i>Note: </i></b><i>You must create two access list entries because </i><b><i>FTP </i></b><i>uses two ports: </i><b><i>20 </i></b><i>for data and </i><b><i>21 </i></b><i>for control information. For well-known ports, keywords can be used instead of the port numbers.</i></span>
+<h4 id="cn-m10-186"><b><i>Step 2</i></b></h4>
+<p id="cn-m10-187">Next, within the same access list, you need to deny <b>ICMP </b>to <b>www.practice-labs.com </b>specifically, which corresponds to an IP address of 172.15.0.10, remembering that <b>ICMP </b>is a protocol. To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<pre id="cn-m10-188"><code>NYEDGE1(config)#access-list 110 deny icmp host 192.168.16.10 host 172.15.0.10
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<h4 id="cn-m10-191"><b><i>Step 3</i></b></h4>
+<p id="cn-m10-192">To examine the access list now. Type the following command and press <b>Enter</b>: :</p>
+<span class="cn-quote" id="cn-m10-193"><b><i>Note: </i></b><i>There is an implicit </i><b><i>deny </i></b><i>at the end of the list.</i></span>
+<pre id="cn-m10-194"><code>NYEDGE1#show access-lists 110
+Extended IP access list 110
+    10 permit tcp host 192.168.16.10 any eq ftp
+    20 permit tcp host 192.168.16.10 any eq ftp-data
+    30 deny icmp host 192.168.16.10 host 172.15.0.10
+NYEDGE1#
+</code></pre>
+<h4 id="cn-m10-200"><b><i>Step 4</i></b></h4>
+<p id="cn-m10-201">You need to apply the access list to interface <b>GigabitEthernet 0/0 inbound</b>. To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-202">NYEDGE1#configure terminal</p>
+<p id="cn-m10-203">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-204"><code>NYEDGE1(config)#interface GigabitEthernet 0/0
+NYEDGE1(config-if)#ip access-group 110 in
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<span class="cn-quote" id="cn-m10-210"><b><i>Note: </i></b><i>You can 
+only have one access-group per interface per direction. The above 
+command will replace any other inbound access-group that may have been 
+configured on this interface.</i></span>
+<h4 id="cn-m10-212"><b><i>Step 5</i></b></h4>
+<p id="cn-m10-213">Next, you need to test the configuration using <b>PLABCSCO01</b>.  First, you need to try to ping to <a href="http://www.practice-labs.com/" class="cn-external-link" target="_blank">www . practice - labs . com</a><b>. </b>Then, you need to attempt to use <b>FTP </b>from the command prompt.</p>
+<p id="cn-m10-214">To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<pre id="cn-m10-215"><code>ping <a href="http://www.practice-labs.com/" class="cn-external-link" target="_blank">www . practice - labs . com</a>
+</code></pre>
+<pre id="cn-m10-217"><code>ftp <a href="http://www.practice-labs.com/" class="cn-external-link" target="_blank">www . practice - labs . com</a>
+</code></pre>
+<span class="cn-quote" id="cn-m10-218"><b><i>Note: </i></b><i>When prompted for username and password, use anonymous as the username and password is </i><span class="cn-password"><i>Passw0rd</i></span><i>.</i></span>
+<p id="cn-m10-219"></p><figure><img class="cn-img" id="cn-image-m10-c-4" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-4.jpg" alt="Figure 1.3 Configuring Access Lists"><figcaption>Figure 1.3 Configuring Access Lists: Attempting to ping and FTP into the web server from PLABCSCO01.</figcaption></figure><p></p>
+<p id="cn-m10-220">In the output, the ping command fails. However, the FTP connection is successful.</p>
+<p id="cn-m10-221">Test the connection further by entering the credentials.</p>
+<h4 id="cn-m10-223"><b><i>Step 6</i></b></h4>
+<p id="cn-m10-224">Finally, you need to review the access list hits once again. To do this, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-225"><code>NYEDGE1#show access-lists 110
+Extended IP access list 110
+    10 permit tcp host 192.168.16.10 any eq ftp (21 matches)
+    20 permit tcp host 192.168.16.10 any eq ftp-data
+    30 deny icmp host 192.168.16.10 host 172.15.0.10 (10 matches)
+NYEDGE1#
+</code></pre>
+<span class="cn-quote" id="cn-m10-231"><b><i>Note: </i></b><i>No matches have been registered on line </i><b><i>20 </i></b><i>of the access list because no file transfers have been initiated.  Port </i><b><i>21 </i></b><i>which corresponds to the </i><b><i>ftp-data </i></b><i>keyword, is used for the actual transfer of files in FTP.</i></span>
+<h4 id="cn-m10-232"><b><i>Step 7</i></b></h4>
+<p id="cn-m10-233">Before continuing on to the next task, you need to remove the <b>access-group </b>you applied to <b>GigabitEthernet 0/0</b>. To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-234">NYEDGE1#configure terminal</p>
+<p id="cn-m10-235">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-236"><code>NYEDGE1(config)#interface gigabitethernet 0/0
+NYEDGE1(config-if)#no ip access-group 110 in
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<span class="cn-alert" id="cn-m10-243">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m10-245"><b>Exercise 2 - Configuring Named Access Lists Using IPv4</b></h2>
+<p id="cn-m10-246">In the previous exercise, you configured standard and
+ extended numbered access lists. In this exercise, you will create the 
+same access lists, but this time, they will be <b>named</b>.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m10-248">After completing this exercise, you will be able to:</p>
+<ul id="cn-m10-249">
+<li id="cn-m10-249">Configure a Named Access-List</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m10-251">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m10-252">
+<li id="cn-m10-252"><b>NYEDGE1 </b>(CISCO2911/K9)</li>
+<li id="cn-m10-253"><b>PLABCSCO01 </b>(Windows Server 2012 R2 - Standalone)</li>
+</ul>
+<p id="cn-m10-254"><img class="cn-img" id="cn-image-m10-c-5" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-5.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m10-257"><b>Task 1 - Configuring a Named Access List</b></h3>
+<p id="cn-m10-258">A named access list has several features, which are as follows:</p>
+<ul id="cn-m10-259">
+<li id="cn-m10-259">IP options filtering</li>
+<li id="cn-m10-260">Noncontiguous ports</li>
+<li id="cn-m10-261">TCP flag filtering</li>
+<li id="cn-m10-262">Deleting entries using the&nbsp;no&nbsp;permit&nbsp;or&nbsp;no&nbsp;deny&nbsp;command</li>
+</ul>
+<p id="cn-m10-263">In this task, you will create a named access list on <b>NYEDGE1</b>. To do this, perform the following steps:</p>
+<h4 id="cn-m10-264"><b><i>Step 1</i></b></h4>
+<p id="cn-m10-265">Connect to the <b>NYEDGE1 </b>device. Then, you need to create a named extended access list called <b>permit-ftp</b>, which allows FTP traffic from <b>192.168.16.10 </b>to <b>172.15.0.10</b>.  In the same access list, you need to block <b>ICMP</b>. To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-266">NYEDGE1#configure terminal</p>
+<p id="cn-m10-267">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-268"><code>NYEDGE1(config)#ip access-list extended permit-ftp
+NYEDGE1(config-ext-nacl)#permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp
+NYEDGE1(config-ext-nacl)#deny icmp host 192.168.16.10 any
+NYEDGE1(config-ext-nacl)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<span class="cn-quote" id="cn-m10-274"><b><i>Note: </i></b><i>One of the major differences between </i><b><i>numbered </i></b><i>and </i><b><i>named </i></b><i>access lists is that </i><b><i>named </i></b><i>access lists bring you into an </i><b><i>access list configuration mode </i></b><i>where you can input all of your configuration parameters. This is denoted by the </i><b><i>NYEDGE1(config-ext-nacl)# </i></b><i>prompt.</i></span>
+<h4 id="cn-m10-275"><b><i>Step 2</i></b></h4>
+<p id="cn-m10-276">To view the access list, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-277"><code>NYEDGE1#show ip access-lists permit-ftp
+Extended IP access list permit-ftp
+    10 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp
+    20 deny icmp host 192.168.16.10 any
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-282">Take a closer look at the above access list.  You did not include the line which permits the <b>ftp-data </b>port.</p>
+<h4 id="cn-m10-283"><b><i>Step 3</i></b></h4>
+<p id="cn-m10-284">One of the advantages of using named access lists is 
+that you can insert entries into any position of the access list, 
+assuming there is a line number free where you want to insert the new 
+entry. Line numbers by default are assigned in <b>10s </b>for this purpose.</p>
+<p id="cn-m10-285">The new line should be placed in between existing 
+access list entries numbers 10 and 20.  You need to put the ftp-data 
+line at number 15, allowing you to add still more entries above and 
+below this point in the future. To do this, type the following commands 
+and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-286">NYEDGE1#configure terminal</p>
+<p id="cn-m10-287">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-288"><code>NYEDGE1(config)#ip access-list extended permit-ftp
+NYEDGE1(config-ext-nacl)#15 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp-data
+NYEDGE1(config-ext-nacl)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<h4 id="cn-m10-294"><b><i>Step 4</i></b></h4>
+<p id="cn-m10-295">To view the access list once again, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-296"><code>NYEDGE1#show ip access-lists permit-ftp
+Extended IP access list permit-ftp
+    10 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp
+    15 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp-data
+    20 deny icmp host 192.168.16.10 any
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-302">The new entry has been inserted successfully.</p>
+<h4 id="cn-m10-303"><b><i>Step 5</i></b></h4>
+<p id="cn-m10-304">To apply the named access list to the interface, type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-305">NYEDGE1#configure terminal</p>
+<p id="cn-m10-306">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-307"><code>NYEDGE1(config)#interface gigabitEthernet 0/0
+NYEDGE1(config-if)#ip access-group permit-ftp in
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<h4 id="cn-m10-312"><b><i>Step 6</i></b></h4>
+<p id="cn-m10-313">You need to test the configuration using the <b>PLABCSCO01 </b>server. To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<pre id="cn-m10-314"><code>ping <a href="http://www.practice-labs.com/" class="cn-external-link" target="_blank">www . practice - labs . com</a>
+</code></pre>
+<pre id="cn-m10-316"><code>ftp <a href="http://www.practice-labs.com/" class="cn-external-link" target="_blank">www . practice - labs . com</a>
+</code></pre>
+<span class="cn-quote" id="cn-m10-317"><b><i>Note: </i></b><i>When prompted for username and password, use anonymous as the username and password is </i><span class="cn-password"><b><i>Passw0rd</i></b></span><i>.</i></span>
+<p id="cn-m10-318"></p><figure><img class="cn-img" id="cn-image-m10-c-6" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-6.jpg" alt="Figure 2.1 Configuring Named Access Lists"><figcaption>Figure 2.1 Configuring Named Access Lists: Attempting to ping and FTP into the web server from PLABCSCO01.</figcaption></figure><p></p>
+<h4 id="cn-m10-320"><b><i>Step 7</i></b></h4>
+<p id="cn-m10-321">When troubleshooting connections through an access list, sometimes it is helpful to reset the <b>match </b>counters. In this step, you will clear the counters.</p>
+<p id="cn-m10-322">First, you need to display the access list information. Type the following command and press <b>Enter</b>: :</p>
+<pre id="cn-m10-323"><code>NYEDGE1#show ip access-lists permit-ftp
+Extended IP access list permit-ftp
+    10 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp (21 matches)
+    15 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp-data
+    20 deny icmp host 192.168.16.10 any (12 matches)
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-329">Next, issue a command to clear the counters. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-330"><code>NYEDGE1# clear ip access-list counters
+NYEDGE1#
+</code></pre>
+<span class="cn-quote" id="cn-m10-332"><b><i>Note: </i></b><i>This 
+command clears the counters for all access lists. To specify the 
+specific access list for which you want to clear counters, use the </i><b><i>clear ip access-list counters XX </i></b><i>command where </i><b><i>XX </i></b><i>is either the access list </i><b><i>number </i></b><i>or access list </i><b><i>name</i></b><i>.</i></span>
+<p id="cn-m10-333">You can check to see that the counters have been reset. To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<pre id="cn-m10-334"><code>NYEDGE1#show ip access-lists permit-ftp
+Extended IP access list permit-ftp
+    10 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp
+    15 permit tcp host 192.168.16.10 host 172.15.0.10 eq ftp-data
+    20 deny icmp host 192.168.16.10 any
+NYEDGE1#
+</code></pre>
+<h4 id="cn-m10-340"><b><i>Step 8</i></b></h4>
+<p id="cn-m10-341">It is important to see which access lists are being applied to an interface. Here are two approaches you can use.</p>
+<p id="cn-m10-342">First, you can view the running configuration of the interface in question. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-343"><code>NYEDGE1#show run interface gigabitethernet 0/0
+Building configuration...
+Current configuration : 172 bytes
+!
+interface GigabitEthernet0/0
+ ip address 192.168.16.1 255.255.255.0
+ ip access-group permit-ftp in
+ ip nat inside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+end
+</code></pre>
+<p id="cn-m10-356">Second, you can also use the show ip interface 
+command; This shows the inbound and outbound access lists are set. To do
+ this, type the following commands and after each command, press <b>Enter</b>:</p>
+<pre id="cn-m10-357"><code>NYEDGE1#show ip interface gigabitEthernet 0/0
+GigabitEthernet0/0 is up, line protocol is up
+  Internet address is 192.168.16.1/24
+  The broadcast address is 255.255.255.255
+  Address determined by setup command
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  The outgoing access list is not set
+  Inbound  access list is permit-ftp
+!&lt;-- Output omitted --&gt;
+</code></pre>
+<span class="cn-alert" id="cn-m10-368">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m10-370"><b>Exercise 3 - Creating Access-Lists in IPv6</b></h2>
+<p id="cn-m10-371">IPv6 access lists do not come in standard and 
+extended forms in the same way that IPv4 access lists do. When defining 
+IPv6 access lists, you must define both source and destination addresses
+ or networks. Also, IPv6 access lists must be defined using a name and 
+not a number.</p>
+<p id="cn-m10-372">Other than these differences, the logic behind access lists in IPv6 is virtually identical to that of IPv4.</p>
+<p id="cn-m10-373">In this task, you will configure IPv6 access lists on the <b>NYEDGE1 </b>router.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m10-375">In this module, you will complete the following exercises:</p>
+<ul id="cn-m10-376">
+<li id="cn-m10-376">Configure and modify IPv6 access-lists</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m10-378">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m10-379">
+<li id="cn-m10-379"><b>NYEDGE1 </b>(CISCO2911/K9)</li>
+<li id="cn-m10-380"><b>PLABCSCO01 </b>(Windows Server 2012 R2 - Standalone)</li>
+</ul>
+<p id="cn-m10-381"><img class="cn-img" id="cn-image-m10-c-7" src="ConfigureandVerifyIPv4andIPv6AccessListsforTrafficFiltering_files/image-m10-c-7.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m10-383"><b>Task 1 - Configuring and modifying IPv6 access-lists </b></h3>
+<p id="cn-m10-384">Similar to IPv4, ACLs can also be applied to IPv6 
+traffic, which are supported on outbound or inbound traffic. The inbound
+ and outbound traffic can be on Layer 3 interfaces, which can be:</p>
+<ul id="cn-m10-385">
+<li id="cn-m10-385">Routed ports</li>
+<li id="cn-m10-386">Switch virtual interfaces (SVIs)</li>
+<li id="cn-m10-387">Layer 3 EtherChannels</li>
+</ul>
+<p id="cn-m10-388">In this task, you will create a configure and modify IPv6 access list on <b>NYEDGE1</b>. To do this, perform the following steps:</p>
+<h4 id="cn-m10-389"><b><i>Step 1</i></b></h4>
+<p id="cn-m10-390">Connect to <b>NYWAN1</b>.</p>
+<span class="cn-quote" id="cn-m10-391"><b><i>Note: </i></b><i>The connectivity between the </i><b><i>GigabitEthernet 0/0 </i></b><i>interface of the </i><b><i>NYWAN1 </i></b><i>router and the </i><b><i>GigabitEthernet 0/1 </i></b><i>interface of the </i><b><i>NYEDGE2 </i></b><i>router will be used to test IPv6 access lists. The appropriate routing between these two devices has already been configured.</i></span>
+<p id="cn-m10-392">You can test this connectivity by connecting to the <b>NYWAN1 </b>router and pinging the appropriate IP address. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-393"><code>NYWAN1#ping 2001:A:B:31::2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2001:A:B:31::2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms
+NYWAN1#
+</code></pre>
+<p id="cn-m10-399">Looking at the lab diagram, you can see that ping must traverse the <b>NYEDGE1 </b>router to get to its destination.</p>
+<h4 id="cn-m10-400"><b><i>Step 2</i></b></h4>
+<p id="cn-m10-401">You need to create an IPv6 access list on <b>NYEDGE1 </b>to deny traffic to this specific destination address of <b>NYEDGE2</b>. You will name the access list <b>block_NYEDGE2, </b>and then, you will configure the destination address to be <b>2001:A:B:31::2/64</b>. To do so, connect to <b>NYEDGE1</b>.</p>
+<p id="cn-m10-402">To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-403">NYEDGE1#configure terminal</p>
+<p id="cn-m10-404">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-405"><code>NYEDGE1(config)#ipv6 access-list block_NYEDGE2
+NYEDGE1(config-ipv6-acl)#deny any host 2001:A:B:31::2 log
+NYEDGE1(config-ipv6-acl)#permit any any
+NYEDGE1(config-ipv6-acl)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-412">You have denied any source with the specific host address, which is the address of the <b>GigabitEthernet 0/1 </b>interface of the <b>NYEDGE2 </b>router.</p>
+<span class="cn-alert" id="cn-m10-413"><b>Alert: </b>Remember that that both source and destination address or networks must always be defined in IPv6 access lists.</span>
+<span class="cn-quote" id="cn-m10-415"><b><i>Note: </i></b><i>Spend some time using Cisco’s context-sensitive help using the </i><b><i>? </i></b><i>character
+ to observe the options that are available to you when configuring IPv6 
+access lists.  It will also help you to get a feel of the syntax 
+necessary for the associated commands.</i></span>
+<h4 id="cn-m10-416"><b><i>Step 3</i></b></h4>
+<p id="cn-m10-417">You can also view the IPv6  access list. You will 
+need to use the command which is similar for viewing the IPv4 access 
+lists. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-418"><code>NYEDGE1#show ipv6 access-list
+IPv6 access list block_NYEDGE2
+    deny ipv6 any host 2001:A:B:31::2 log sequence 10
+    permit ipv6 any any sequence 20
+NYEDGE1#
+</code></pre>
+<h4 id="cn-m10-423"><b><i>Step 4</i></b></h4>
+<p id="cn-m10-424">At this point, the access list has just been defined.
+  It has not been applied anywhere, so filtering does not take place. 
+You must bind this access list to an interface and define a direction.</p>
+<p id="cn-m10-425">In this step, you will place the access list on <b>GigabitEthernet 0/1 </b>in an outbound direction.</p>
+<span class="cn-alert" id="cn-m10-426"><b>Alert: </b>Make sure you type 
+the name of the access list correctly.  If you make a mistake, the 
+router will not inform you, and you may be spending a lot of time 
+troubleshooting the misconfiguration.</span>
+<p id="cn-m10-427">To do this, type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-428">NYEDGE1#configure terminal</p>
+<p id="cn-m10-429">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-430"><code>NYEDGE1(config)#interface gigabitethernet 0/1
+NYEDGE1(config-if)#ipv6 traffic-filter block_NYEDGE2 out
+NYEDGE1(config-if)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<span class="cn-quote" id="cn-m10-435"><b><i>Note: </i></b><i>Notice that </i><b><i>IPv6 access lists </i></b><i>use a much more logical name for the command to apply the </i><b><i>access list </i></b><i>to the interface.  </i><b><i>traffic-filter </i></b><i>is more intuitive than </i><b><i>access-group </i></b><i>as used for IPv4.</i></span>
+<h4 id="cn-m10-436"><b><i>Step 5</i></b></h4>
+<p id="cn-m10-437">Next, you will attempt to ping the <b>GigabitEthernet 0/1 </b>interface of <b>NYEDGE2 </b>from the <b>NYWAN1 </b>router once again. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-438"><code>NYWAN1#ping ipv6 2001:A:B:31::2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2001:A:B:31::2, timeout is 2 seconds:
+AAAAA
+Success rate is 0 percent (0/5)
+NYWAN1#
+</code></pre>
+<p id="cn-m10-444">The ping is unsuccessful. You have successfully created an IPv6 access list that denies access to the specific host.</p>
+<span class="cn-quote" id="cn-m10-445"><b><i>Note: </i></b><i>A ping response of </i><b><i>AAAAA </i></b><i>means that the destination is </i><b><i>Administratively Unreachable</i></b><i>. This is the response that </i><b><i>IPv6 </i></b><i>indicates when an </i><b><i>access list </i></b><i>has blocked the path to the destination.</i></span>
+<h4 id="cn-m10-446"><b><i>Step 6</i></b></h4>
+<p id="cn-m10-447">Return to the <b>NYEDGE1 </b>router and examine the console for any syslog messages.  You should see something similar to the following:</p>
+<pre id="cn-m10-448"><code>*Oct 14 09:48:26: %IPV6_ACL-6-ACCESSLOGDP: list block_NYEDGE2/10 denied icmpv6 2001:A:B:30::3 -&gt; 2001:A:B:31::2 (128/0), 1 packet
+*Oct 14 09:54:13: %IPV6_ACL-6-ACCESSLOGDP: list block_NYEDGE2/10 denied icmpv6 2001:A:B:30::3 -&gt; 2001:A:B:31::2 (128/0), 9 packets
+</code></pre>
+<p id="cn-m10-451">The syslog message does indicate not only the access 
+list that was invoked, but also the sequence number of the line that 
+matched the packet.  In the above output, the access list is the <b>block_NYEDGE2 </b>and the sequence number is <b>10</b>.</p>
+<h4 id="cn-m10-452"><b><i>Step 7</i></b></h4>
+<p id="cn-m10-453">The IPv6 access list manipulation is similar to the 
+named access lists in IPv4 with slight changes in syntax.  You can 
+experiment by adding additional lines to the access list.</p>
+<p id="cn-m10-454">Specifically, add a line that denies all of the <b>2001:A:B:31::/64 </b>subnet
+ as a destination in between the two existing lines. To do so, first 
+examine the access list. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-455"><code>NYEDGE1#show ipv6 access-list
+IPv6 access list block_NYEDGE2
+    deny ipv6 any host 2001:A:B:31::2 log (5 matches) sequence 10
+    permit ipv6 any any sequence 20
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-460">Type the following commands and after each command, press <b>Enter</b>:</p>
+<p id="cn-m10-461">NYEDGE1#configure terminal</p>
+<p id="cn-m10-462">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m10-463"><code>NYEDGE1(config)#ipv6 access-list block_NYEDGE2
+NYEDGE1(config-ipv6-acl)#sequence 15 deny any 2001:A:B:31::/64 log
+NYEDGE1(config-ipv6-acl)#exit
+NYEDGE1(config)#exit
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-468">A sequence number of 15 should place the line in between the existing lines.</p>
+<h4 id="cn-m10-469"><b><i>Step 8</i></b></h4>
+<p id="cn-m10-470">Now, view the access list once again. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m10-471"><code>NYEDGE1#show ipv6 access-list
+IPv6 access list block_NYEDGE2
+    deny ipv6 any host 2001:A:B:31::2 log (5 matches) sequence 10
+    deny ipv6 any 2001:A:B:31::/64 log sequence 15
+    permit ipv6 any any sequence 20
+NYEDGE1#
+</code></pre>
+<p id="cn-m10-477">The line has been successfully placed between the previously existing lines.</p>
+<p id="cn-m10-478">You have successfully created and configured IPv6 access lists.</p>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m10-482"><b>Review</b></h2>
+<p id="cn-m10-483">Well done, you have completed the <b>Configure and Verify IPv4 and IPv6 Access Lists for Traffic Filtering </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">13753a2a-5df9-453f-a658-497389340b9b</span>
+<span class="atom-code hidden">43423ff2-cc02-41ec-b071-e6e4aab0de85</span>
+<span class="atom-code hidden">4dc97818-bb25-4c2a-8f36-36114f1a6a3d</span>
+<span class="atom-code hidden">8d4c02aa-8d70-4a53-90d4-25de54675f40</span>
+<span class="atom-code hidden">ad2a5856-94c7-47ec-af95-c0a0a85c7f16</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m10-493">You completed the following exercises:</p>
+<ul id="cn-m10-494">
+<li id="cn-m10-494">Configuring standard and extended access lists for IPv4</li>
+<li id="cn-m10-495">Configuring named access-lists for IPv4</li>
+<li id="cn-m10-496">Configuring and modifying IPv6 access-lists</li>
+</ul>
+<p id="cn-m10-497">You should now be able to:</p>
+<ul id="cn-m10-498">
+<li id="cn-m10-498">Create Standard Access-Lists in IPv4</li>
+<li id="cn-m10-499">Create an Extended Access-List in IPv4</li>
+<li id="cn-m10-500">Configure a Named Access-List</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m10-504">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

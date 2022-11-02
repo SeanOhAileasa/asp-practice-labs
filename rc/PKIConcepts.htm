@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="PKIConcepts_files/print-styles.css" rel="stylesheet">
+    <script src="PKIConcepts_files/jquery.min.js"></script>
+    <script src="PKIConcepts_files/jspdf.js"></script>
+    <script src="PKIConcepts_files/from_html.js"></script>
+    <script src="PKIConcepts_files/addimage.js"></script>
+    <script src="PKIConcepts_files/filesaver.js"></script>
+    <script src="PKIConcepts_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="4kL69dhtM7DI5NZ5sYFFUbeQAU01dhlDwbZvNk2QdymeoM/Y0daA3B5GANtcPFy5u0RP5vk4ZRn2CowWtXMbN3A1C3in7c+WWjSSIJrH0og=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>PKI Concepts</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Install and Configure Active Directory Certificate Services</li><li>Exercise 2 - Configure Certificate Revocation Lists (CRLs)</li><li>Exercise 3 - Managing Certificate Templates</li><li>Exercise 4 - Configure Certificate Auto Enrollment</li><li>Exercise 5 - Implement Key Archival</li><li>Exercise 6 - Enroll for User Certificate</li><li>Exercise 7 - Manage Key Recovery</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m26-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>PKI</div>
+</div>
+<p id="cn-m26-3">Welcome to the <b>PKI Concepts </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-7">In this module, you will complete the following exercises:</p>
+<ul id="cn-m26-8">
+<li id="cn-m26-8">Install and Configure Active Directory Certificate Services</li>
+<li id="cn-m26-9">Configure Certificate Revocation Lists (CRLs)</li>
+<li id="cn-m26-10">Manage Certificate Templates</li>
+<li id="cn-m26-11">Configure Certificate Auto Enrollment</li>
+<li id="cn-m26-12">Implement Key Archival</li>
+<li id="cn-m26-13">Enroll for User Certificate</li>
+<li id="cn-m26-14">Manage Key Recovery</li>
+</ul>
+<p id="cn-m26-15">After completing this lab, you will be able to:</p>
+<ul id="cn-m26-16">
+<li id="cn-m26-16">Install Active Directory Enterprise Root Certificate Service</li>
+<li id="cn-m26-17">Configure Active Directory Certificate Services</li>
+<li id="cn-m26-18">Install Subordinate CA</li>
+<li id="cn-m26-19">Configure Subordinate CA</li>
+<li id="cn-m26-20">Request User Certificates</li>
+<li id="cn-m26-21">Verify Issued Certificate</li>
+<li id="cn-m26-22">Configure a new path for CRLs</li>
+<li id="cn-m26-23">Add Certificate Managers</li>
+<li id="cn-m26-24">Manage Certificate Templates</li>
+<li id="cn-m26-25">Configure Certificate Auto Enrollment</li>
+<li id="cn-m26-26">Implement Key Archival</li>
+<li id="cn-m26-27">Enrolling for User Certificate</li>
+<li id="cn-m26-28">Manage Key Recovery</li>
+<li id="cn-m26-29">Add AD Certificate Services and Certificate Web Enrollment Services</li>
+<li id="cn-m26-30">Install AD Certificate Enterprise CA and CA Web Enrollment Service</li>
+<li id="cn-m26-31">Configure a customized certificate template</li>
+<li id="cn-m26-32">Create a group policy for certificate auto enrollment</li>
+<li id="cn-m26-33">Verify the certificate issuance</li>
+<li id="cn-m26-34">Enable a Key Recovery Agent</li>
+<li id="cn-m26-35">Request for Key Recovery Agent Certificate</li>
+<li id="cn-m26-36">Issue Key Recovery Agent certificate</li>
+<li id="cn-m26-37">Configure CA for Key Archival</li>
+<li id="cn-m26-38">Create a new certificate template enabled for archiving</li>
+<li id="cn-m26-39">Request for new certificate</li>
+<li id="cn-m26-40">Encrypt user folder using EFS</li>
+<li id="cn-m26-41">Delete and re-create user account</li>
+<li id="cn-m26-42">Test access to the encrypted folder as re-created user account</li>
+<li id="cn-m26-43">Import Key Recovery Agent certificate</li>
+<li id="cn-m26-44">Using CERTUTIL to recover archived keys</li>
+<li id="cn-m26-45">Test user access to the encrypted file</li>
+<li id="cn-m26-46">Enable server auto login</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m26-48">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m26-49">
+<li id="cn-m26-49"><b>CAS-003 </b>4.3 Given a scenario, integrate and 
+troubleshoot advanced authentication and authorization technologies to 
+support enterprise security objectives.</li>
+<li id="cn-m26-50"><b>CAS-003 </b>4.4 Given a scenario, implement cryptographic techniques.</li>
+</ul>
+<span class="cn-quote" id="cn-m26-51"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m26-53">It will take approximately <b>2 hours </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m26-57">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m26-58">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-60"><b>Lab Topology</b></h2>
+<p id="cn-m26-61">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m26-62">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m26-63">
+<li id="cn-m26-63"><b>PLABDC01 </b>(Windows Server 2016 Domain Controller)</li>
+<li id="cn-m26-64"><b>PLABDM01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m26-65"><b>PLABDM02 </b>(Windows Server 2012 R2 Domain Member Server)</li>
+<li id="cn-m26-66"><b>PLABSA01 </b>(Windows Server 2016 Domain Member Server)</li>
+<li id="cn-m26-67"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+<li id="cn-m26-68"><b>PLABWIN10 </b>(Windows 10 Workstation)</li>
+</ul>
+<p id="cn-m26-69"><img class="cn-img" id="cn-image-m26-c-0" src="PKIConcepts_files/image-m26-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m26-70">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-71"><b>Exercise 1 - Install and Configure Active Directory Certificate Services</b></h2>
+<p id="cn-m26-72">Active Directory Certificate Services (AD CS) allows 
+an organization to build a public key infrastructure (PKI). It is 
+intended to provide the following capabilities:</p>
+<ul id="cn-m26-73">
+<li id="cn-m26-73">Public key cryptography</li>
+<li id="cn-m26-74">Digital certificates</li>
+<li id="cn-m26-75">Digital signature</li>
+</ul>
+<p id="cn-m26-76">In this exercise, you will install and configure Active Directory Certificate Services in a Windows domain environment.</p>
+<p id="cn-m26-77">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-79">After completing this exercise, you will be able to:</p>
+<ul id="cn-m26-80">
+<li id="cn-m26-80">Install Active Directory Enterprise Root Certificate Service</li>
+<li id="cn-m26-81">Configure Active Directory Certificate Services</li>
+<li id="cn-m26-82">Install Subordinate CA</li>
+<li id="cn-m26-83">Configure Subordinate CA</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m26-85">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m26-86">
+<li id="cn-m26-86"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m26-87"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+</ul>
+<p id="cn-m26-88"><img class="cn-img" id="cn-image-m26-c-1" src="PKIConcepts_files/image-m26-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m26-89"><b>Task 1 - Install Active Directory Enterprise Root Certificate Service</b></h3>
+<p id="cn-m26-90">An Active Directory Enterprise CA is integrated with 
+the Active Directory. Any Root server is the first server for the CA. An
+ Enterprise CA can be configured to auto-enrol certificates in the 
+Active Directory environment.</p>
+<p id="cn-m26-91">In this task, you will install AD Certificate Services on Domain Controller device.</p>
+<h4 id="cn-m26-92"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-93">Ensure you have powered on the required devices in the lab environment.</p>
+<p id="cn-m26-94">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m26-95">The <b>Server Manager </b>window is displayed automatically.</p>
+<p id="cn-m26-96">Click <b>Add roles and features</b>.</p>
+<p id="cn-m26-97"></p><figure><img class="cn-img" id="cn-image-m26-c-2" src="PKIConcepts_files/image-m26-c-2.jpg" alt="Figure 1.1 Screenshot of the PLABDC01 desktop: Server Manager console is displayed showing the Add roles and features link highlighted."><figcaption>Figure
+ 1.1 Screenshot of the PLABDC01 desktop: Server Manager console is 
+displayed showing the Add roles and features link highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-99"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-100">On the <b>Before you begin </b>page of the <b>Add Roles and Security Features Wizard</b>, click <b>Next</b>.</p>
+<p id="cn-m26-101"></p><figure><img class="cn-img" id="cn-image-m26-c-3" src="PKIConcepts_files/image-m26-c-3.jpg" alt="Figure 1.2 Screenshot of the PLABDC01: Before you begin page on the Add Roles and Features Wizard is displayed showing the Next button highlighted."><figcaption>Figure
+ 1.2 Screenshot of the PLABDC01: Before you begin page on the Add Roles 
+and Features Wizard is displayed showing the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-103"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-104">On the <b>Select installation type </b>page, keep the default selection and click <b>Next.</b></p>
+<p id="cn-m26-105"></p><figure><img class="cn-img" id="cn-image-m26-c-4" src="PKIConcepts_files/image-m26-c-4.jpg" alt="Figure 1.3 Screenshot of the PLABDC01: Select installation type page on the Add Roles and Features Wizard is displayed showing default settings and the Next button highlighted."><figcaption>Figure
+ 1.3 Screenshot of the PLABDC01: Select installation type page on the 
+Add Roles and Features Wizard is displayed showing default settings and 
+the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-107"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-108">In <b>Select destination server</b>, keep the default options and click <b>Next</b>.</p>
+<h4 id="cn-m26-109"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-110">From <b>Select server roles </b>page, select the <b>Active Directory Certificate Services </b>check box.</p>
+<p id="cn-m26-111">The <b>Add Roles and Features Wizard </b>automatically appears, click <b>Add Features</b>.</p>
+<p id="cn-m26-112"></p><figure><img class="cn-img" id="cn-image-m26-c-5" src="PKIConcepts_files/image-m26-c-5.jpg" alt="Figure 1.4 Screenshot of the PLABDC01: Select server roles page on the Add Roles and Features Wizard is displayed showing the required role highlighted."><figcaption>Figure
+ 1.4 Screenshot of the PLABDC01: Select server roles page on the Add 
+Roles and Features Wizard is displayed showing the required role 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-114"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-115">Back on the <b>Select server roles </b>page, notice the <b>Active Directory Certificate Services </b>checkbox is now selected.</p>
+<p id="cn-m26-116">Click <b>Next </b>to continue.</p>
+<p id="cn-m26-117"></p><figure><img class="cn-img" id="cn-image-m26-c-6" src="PKIConcepts_files/image-m26-c-6.jpg" alt="Figure 1.5 Screenshot of the PLABDC01: Select server roles page on the Add Roles and Features Wizard is displayed showing the required selection performed and the Next button highlighted."><figcaption>Figure
+ 1.5 Screenshot of the PLABDC01: Select server roles page on the Add 
+Roles and Features Wizard is displayed showing the required selection 
+performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-119"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-120">On the <b>Select features </b>page, keep the default settings and then click <b>Next</b>.</p>
+<h4 id="cn-m26-121"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-122">On the <b>Active Directory Certificate Services </b>page, read the given information and click <b>Next</b>.</p>
+<h4 id="cn-m26-123"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-124">From the <b>Select role services </b>page, ensure that the <b>Certification Authority </b>check box is selected, and then select <b>Online Responder </b>checkbox.</p>
+<p id="cn-m26-125"></p><figure><img class="cn-img" id="cn-image-m26-c-7" src="PKIConcepts_files/image-m26-c-7.jpg" alt="Figure 1.6 Screenshot of the PLABDC01: Select role services page on the Add Roles and Features Wizard is displayed showing the required settings performed."><figcaption>Figure
+ 1.6 Screenshot of the PLABDC01: Select role services page on the Add 
+Roles and Features Wizard is displayed showing the required settings 
+performed.</figcaption></figure><p></p>
+<h4 id="cn-m26-127"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-128">The <b>Add Roles and Features Wizard </b>box appears as the component you selected will require other components for it to run.</p>
+<p id="cn-m26-129">Click <b>Add Features </b>to proceed.</p>
+<p id="cn-m26-130"></p><figure><img class="cn-img" id="cn-image-m26-c-8" src="PKIConcepts_files/image-m26-c-8.jpg" alt="Figure 1.7 Screenshot of the PLABDC01: Add Roles and Features Wizard dialog box is displayed showing default settings, and the Add Features button highlighted."><figcaption>Figure
+ 1.7 Screenshot of the PLABDC01: Add Roles and Features Wizard dialog 
+box is displayed showing default settings, and the Add Features button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-132"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-133">Back on the Select role services page, now, the <b>Certification Authority </b>and <b>Online Responder </b>checkboxes are selected.</p>
+<p id="cn-m26-134">Click <b>Next</b>.</p>
+<p id="cn-m26-135"></p><figure><img class="cn-img" id="cn-image-m26-c-9" src="PKIConcepts_files/image-m26-c-9.jpg" alt="Figure 1.8 Screenshot of the PLABDC01: Select role services page on the Add Roles and Features Wizard is displayed showing the required settings performed, and the Next button highlighted."><figcaption>Figure
+ 1.8 Screenshot of the PLABDC01: Select role services page on the Add 
+Roles and Features Wizard is displayed showing the required settings 
+performed, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-137"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-138">On the <b>Web Server Role (IIS) </b>page, read the given information and then click <b>Next</b>.</p>
+<h4 id="cn-m26-139"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-140">In <b>Select role services </b>page, accept the default role services that will be added by IIS.</p>
+<p id="cn-m26-141">Click <b>Next</b>.</p>
+<p id="cn-m26-142"></p><figure><img class="cn-img" id="cn-image-m26-c-10" src="PKIConcepts_files/image-m26-c-10.jpg" alt="Figure 1.9 Screenshot of the PLABDC01 desktop: Select role services page on the Add Roles and Features Wizard is displayed showing default settings, and the Next button highlighted."><figcaption>Figure
+ 1.9 Screenshot of the PLABDC01 desktop: Select role services page on 
+the Add Roles and Features Wizard is displayed showing default settings,
+ and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-144"><b><i>Step 14</i></b></h4>
+<p id="cn-m26-145">On the <b>Confirm installation services </b>page, click <b>Install</b>.</p>
+<h4 id="cn-m26-146"><b><i>Step 15</i></b></h4>
+<p id="cn-m26-147">The installation will begin, which will take a few minutes.</p>
+<span class="cn-quote" id="cn-m26-148"><b><i>Important</i></b><i>: If you get an error saying “</i><b><i>The request to add or remove features on the specified server failed</i></b><i>.”  Click </i><b><i>Close</i></b><i>.
+ This is caused when Server Manager is busy collecting system 
+information on the server following a recent start-up or reboot. Wait 
+for about 1 minute and start over with the installation of the Windows 
+features in this task. If the same problem persists, restart the 
+affected computer and start over with the installation of the Windows 
+features.</i></span>
+<p id="cn-m26-149">&nbsp;&nbsp; </p><figure><img class="cn-img" id="cn-image-m26-c-11" src="PKIConcepts_files/image-m26-c-11.jpg" alt="Figure 1.10 Screenshot of the PLABDC01: Installation progress page on the Add Roles and Features Wizard is displayed listing details of the installation, and the Close button highlighted."><figcaption>Figure
+ 1.10 Screenshot of the PLABDC01: Installation progress page on the Add 
+Roles and Features Wizard is displayed listing details of the 
+installation, and the Close button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-151"><b><i>Step 16</i></b></h4>
+<p id="cn-m26-152">Click <b>Close </b>when <b>Installation progress </b>reports a successful operation. You are back on the <b>Server Manager </b>console.</p>
+<p id="cn-m26-153"></p><figure><img class="cn-img" id="cn-image-m26-c-12" src="PKIConcepts_files/image-m26-c-12.jpg" alt="Figure 1.11 Screenshot of the PLABDC01: Installation progress page showing the closure of installation."><figcaption>Figure 1.11 Screenshot of the PLABDC01: Installation progress page showing the closure of installation.</figcaption></figure><p></p>
+<h3 id="cn-m26-155"><b>Task 2 - Configure Active Directory Certificate Services</b></h3>
+<p id="cn-m26-156">After a brief installation of Active Directory Certificate Services and Online Responder on <b>PLABDC01</b>, you must set up these services with the appropriate settings. This will enable these services to perform the intended roles.</p>
+<p id="cn-m26-157">To configure Active Directory Certificate Services, follow these steps:</p>
+<h4 id="cn-m26-158"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-159">On <b>PLABDC01</b>, ensure that you are on the <b>Server Manager </b>console.</p>
+<p id="cn-m26-160">Click the flag icon and click the <b>Configure Active Directory Certificate Services on the destination server </b>link.</p>
+<p id="cn-m26-161"></p><figure><img class="cn-img" id="cn-image-m26-c-13" src="PKIConcepts_files/image-m26-c-13.jpg" alt="Figure 1.12 Screenshot of the PLABDC01: Configure Active Directory Certificate Services on the destination server link is displayed on the Post-deployment Configuration information pane."><figcaption>Figure
+ 1.12 Screenshot of the PLABDC01: Configure Active Directory Certificate
+ Services on the destination server link is displayed on the 
+Post-deployment Configuration information pane.</figcaption></figure><p></p>
+<h4 id="cn-m26-163"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-164">On the <b>Credentials </b>page of the <b>AD CS Configuration </b>wizard, the system has detected that you are currently signed in as <b>PRACTICELABS</b>\<b>Administrator</b>.</p>
+<p id="cn-m26-165">Click <b>Next</b>.</p>
+<p id="cn-m26-166"></p><figure><img class="cn-img" id="cn-image-m26-c-14" src="PKIConcepts_files/image-m26-c-14.jpg" alt="Figure 1.13 Screenshot of the PLABDC01: Credentials page on the AD CS Configuration wizard is displayed showing the detected login credentials, and the Next button highlighted."><figcaption>Figure
+ 1.13 Screenshot of the PLABDC01: Credentials page on the AD CS 
+Configuration wizard is displayed showing the detected login 
+credentials, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-168"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-169">In <b>Role Services</b>, select the <b>Certification Authority </b>check box. There will be a momentary pause when you select this.&nbsp;&nbsp;</p>
+<p id="cn-m26-170">Then, select the <b>Online Responder </b>checkbox and click <b>Next</b>.</p>
+<p id="cn-m26-171"></p><figure><img class="cn-img" id="cn-image-m26-c-15" src="PKIConcepts_files/image-m26-c-15.jpg" alt="Figure 1.14 Screenshot of the PLABDC01: Role Services page on the AD CS Configuration wizard is displayed showing the required selections performed and the Next button available."><figcaption>Figure
+ 1.14 Screenshot of the PLABDC01: Role Services page on the AD CS 
+Configuration wizard is displayed showing the required selections 
+performed and the Next button available.</figcaption></figure><p></p>
+<h4 id="cn-m26-173"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-174">On the <b>Setup Type </b>page, ensure that <b>Enterprise CA </b>option is selected.</p>
+<p id="cn-m26-175">Click <b>Next</b>.</p>
+<p id="cn-m26-176"></p><figure><img class="cn-img" id="cn-image-m26-c-16" src="PKIConcepts_files/image-m26-c-16.jpg" alt="Figure 1.15 Screenshot of the PLABDC01: Setup Type page on the AD CS Configuration wizard is displayed showing the required selection performed and the Next button highlighted."><figcaption>Figure
+ 1.15 Screenshot of the PLABDC01: Setup Type page on the AD CS 
+Configuration wizard is displayed showing the required selection 
+performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-178"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-179">On the <b>CA Type </b>page, ensure that <b>Root CA </b>is selected.</p>
+<p id="cn-m26-180">Click <b>Next</b>.</p>
+<h4 id="cn-m26-181"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-182">On the <b>Private Key </b>page, verify that the <b>Create a new private key </b>radio button is selected.</p>
+<p id="cn-m26-183">Click <b>Next</b>.</p>
+<p id="cn-m26-184"></p><figure><img class="cn-img" id="cn-image-m26-c-17" src="PKIConcepts_files/image-m26-c-17.jpg" alt="Figure 1.16 Screenshot of the PLABDC01: Private Key page on the AD CS Configuration wizard is displayed showing the required selections performed and the Next button highlighted."><figcaption>Figure
+ 1.16 Screenshot of the PLABDC01: Private Key page on the AD CS 
+Configuration wizard is displayed showing the required selections 
+performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-186"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-187">On the <b>Cryptography for CA </b>dialogue box, keep the default cryptographic settings and click <b>Next</b>.</p>
+<p id="cn-m26-188"></p><figure><img class="cn-img" id="cn-image-m26-c-18" src="PKIConcepts_files/image-m26-c-18.jpg" alt="Figure 1.17 Screenshot of the PLABDC01: Cryptography for CA page on the AD CS Configuration wizard is displayed showing default settings, and the Next button highlighted."><figcaption>Figure
+ 1.17 Screenshot of the PLABDC01: Cryptography for CA page on the AD CS 
+Configuration wizard is displayed showing default settings, and the Next
+ button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-190"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-191">On the <b>CA Name </b>page, keep the default <b>CA Name </b>supplied by the <b>AD CS Configuration </b>and then click <b>Next</b>.</p>
+<p id="cn-m26-192"></p><figure><img class="cn-img" id="cn-image-m26-c-19" src="PKIConcepts_files/image-m26-c-19.jpg" alt="Figure 1.18 Screenshot of the PLABDC01: CA Name page on the AD CS Configuration wizard is displayed showing default settings, and the Next button highlighted."><figcaption>Figure
+ 1.18 Screenshot of the PLABDC01: CA Name page on the AD CS 
+Configuration wizard is displayed showing default settings, and the Next
+ button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-194"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-195">On the <b>CA Validity </b>page, keep the default settings and click <b>Next</b>.</p>
+<h4 id="cn-m26-196"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-197">On the <b>CA Database </b>page, keep the default settings and then click <b>Next</b>.</p>
+<p id="cn-m26-198"></p><figure><img class="cn-img" id="cn-image-m26-c-20" src="PKIConcepts_files/image-m26-c-20.jpg" alt="Figure 1.19 Screenshot of the PLABDC01: CA Database page on the AD CS Configuration wizard is displayed showing default settings, and the Next button highlighted."><figcaption>Figure
+ 1.19 Screenshot of the PLABDC01: CA Database page on the AD CS 
+Configuration wizard is displayed showing default settings, and the Next
+ button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-200"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-201">On the <b>Confirmation </b>page, read through the summary settings of this <b>Active Directory Certificate Services </b>that is about to be set up.</p>
+<p id="cn-m26-202">Click <b>Configure </b>to proceed with the configuration of AD CS.</p>
+<p id="cn-m26-203"></p><figure><img class="cn-img" id="cn-image-m26-c-21" src="PKIConcepts_files/image-m26-c-21.jpg" alt="Figure 1.20 Screenshot of the PLABDC01: Confirmation page on the AD CS Configuration wizard is displayed listing the configuration settings, and the Configure button highlighted."><figcaption>Figure
+ 1.20 Screenshot of the PLABDC01: Confirmation page on the AD CS 
+Configuration wizard is displayed listing the configuration settings, 
+and the Configure button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-205"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-206">Please wait while the service is being set up.</p>
+<p id="cn-m26-207">When the <b>Results </b>are displayed with <b>Configuration succeeded</b>, click <b>Close</b>.</p>
+<p id="cn-m26-208"></p><figure><img class="cn-img" id="cn-image-m26-c-22" src="PKIConcepts_files/image-m26-c-22.jpg" alt="Figure 1.21 Screenshot of the PLABDC01 desktop: Results page on the AD CS Configuration wizard is displayed showing the status of the configuration and the Close button highlighted."><figcaption>Figure
+ 1.21 Screenshot of the PLABDC01 desktop: Results page on the AD CS 
+Configuration wizard is displayed showing the status of the 
+configuration and the Close button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-210"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-211">You are back on the <b>Server Manager </b>console. You need to verify now that AD CS is working.</p>
+<p id="cn-m26-212">From the <b>Server Manager </b>console click <b>Tools </b>and then select <b>Certification Authority</b>.</p>
+<p id="cn-m26-213"></p><figure><img class="cn-img" id="cn-image-m26-c-23" src="PKIConcepts_files/image-m26-c-23.jpg" alt="Figure 1.22 Screenshot of the PLABDC01: Tools &amp;gt; Certification Authority menu-options are selected on the Server Manager console."><figcaption>Figure
+ 1.22 Screenshot of the PLABDC01: Tools &gt; Certification Authority 
+menu-options are selected on the Server Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m26-215"><b><i>Step 14</i></b></h4>
+<p id="cn-m26-216">Verify <b>Certification Authority </b>snap-in works by expanding <b>PRACTICELABS</b>-<b>PLABDC01-CA </b>node.</p>
+<span class="cn-quote" id="cn-m26-217"><b><i>Note: </i></b><i>The green tick mark indicates that the service has successfully started.</i></span>
+<p id="cn-m26-218">Minimize the <b>Certification Authority </b>and <b>Server Manager </b>windows.</p>
+<p id="cn-m26-219"></p><figure><img class="cn-img" id="cn-image-m26-c-24" src="PKIConcepts_files/image-m26-c-24.jpg" alt="Figure 1.23 Screenshot of the PLABDC01: Certification Authority (Local) window is displayed showing the green tick mark confirming that the service is successfully started on the PLABDC01 server."><figcaption>Figure
+ 1.23 Screenshot of the PLABDC01: Certification Authority (Local) window
+ is displayed showing the green tick mark confirming that the service is
+ successfully started on the PLABDC01 server.</figcaption></figure><p></p>
+<h3 id="cn-m26-221"><b>Task 3 - Install Subordinate CA</b></h3>
+<p id="cn-m26-222">In this task, you will install a subordinate CA of PracticeLabs.com on a domain member server called <b>PLABDM01</b>. You will follow the same steps that were done earlier when you installed the Enterprise Root CA.</p>
+<p id="cn-m26-223">To install the subordinate CA, follow these steps.</p>
+<h4 id="cn-m26-224"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-225">Connect to <b>PLABDM01</b>.</p>
+<p id="cn-m26-226">The <b>Server Manager </b>console opens automatically.</p>
+<p id="cn-m26-227">Click <b>Add roles and features</b>.</p>
+<h4 id="cn-m26-228"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-229">On the <b>Before you Begin </b>page of the Add Roles and Features Wizard, click <b>Next</b>.</p>
+<h4 id="cn-m26-230"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-231">On <b>Select Installation Type </b>page, keep the default setting <b>Role-based or feature installation </b>option.</p>
+<p id="cn-m26-232">Click <b>Next</b>.</p>
+<h4 id="cn-m26-233"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-234">From <b>Select destination server </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m26-235"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-236">From <b>Select server roles </b>page, click the <b>Active Directory Certificate Services </b>check box.</p>
+<p id="cn-m26-237">Like in the earlier task, the <b>Add Roles and Features Wizard </b>appears. Other components are required to make Active Directory Certificate services work on this computer.</p>
+<p id="cn-m26-238">Click <b>Add Features</b>. You are back on the <b>Select server roles </b>page.</p>
+<p id="cn-m26-239">Click <b>Next</b>.</p>
+<p id="cn-m26-240"></p><figure><img class="cn-img" id="cn-image-m26-c-25" src="PKIConcepts_files/image-m26-c-25.jpg" alt="Figure 1.24 Screenshot of the PLABDM01: Select server roles page on the Add Roles and Features Wizard is displayed showing the required role selected."><figcaption>Figure
+ 1.24 Screenshot of the PLABDM01: Select server roles page on the Add 
+Roles and Features Wizard is displayed showing the required role 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m26-242"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-243">In <b>Select features </b>page, keep the default settings and click <b>Next</b>.</p>
+<h4 id="cn-m26-244"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-245">On the <b>Active Directory Certificate Services</b>, click <b>Next</b>.</p>
+<h4 id="cn-m26-246"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-247">In <b>Select role services </b>page, select the <b>Online Responder </b>check box.</p>
+<p id="cn-m26-248">The <b>Add Roles and Features Wizard </b>is displayed.</p>
+<p id="cn-m26-249">Click <b>Add Features</b>.</p>
+<p id="cn-m26-250"></p><figure><img class="cn-img" id="cn-image-m26-c-26" src="PKIConcepts_files/image-m26-c-26.jpg" alt="Figure 1.25 Screenshot of the PLABDM01: The Add Roles and Features dialog box is displayed showing the required features, and the Add Features button highlighted."><figcaption>Figure
+ 1.25 Screenshot of the PLABDM01: The Add Roles and Features dialog box 
+is displayed showing the required features, and the Add Features button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-252"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-253">You are back on the <b>Select role services </b>page.</p>
+<p id="cn-m26-254">When both the <b>Certification Authority </b>and <b>Online Responder </b>are selected, click <b>Next</b>.</p>
+<p id="cn-m26-255"></p><figure><img class="cn-img" id="cn-image-m26-c-27" src="PKIConcepts_files/image-m26-c-27.jpg" alt="Figure 1.26 Screenshot of the PLABDM01: Select role services page on the Add Roles and Features Wizard is displayed showing the required settings performed, and the Next button highlighted."><figcaption>Figure
+ 1.26 Screenshot of the PLABDM01: Select role services page on the Add 
+Roles and Features Wizard is displayed showing the required settings 
+performed, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-257"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-258">In <b>Web Server Role (IIS) </b>information page, you should read the description about this service and then click <b>Next</b>.</p>
+<h4 id="cn-m26-259"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-260">From <b>Select role services</b>, the default <b>IIS </b>role services are selected, click <b>Next</b>.</p>
+<h4 id="cn-m26-261"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-262">In <b>Confirm installation selections</b>, click <b>Install</b>.</p>
+<h4 id="cn-m26-263"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-264">On <b>Installation Progress </b>page, wait while the services and its components are getting installed.</p>
+<p id="cn-m26-265">When <b>Installation progress </b>is completed, click <b>Close</b>.</p>
+<span class="cn-quote" id="cn-m26-266"><b><i>Important</i></b><i>: If you get an error saying “</i><b><i>The request to add or remove features on the specified failed</i></b><i>.”  Click </i><b><i>Close</i></b><i>.
+ This is caused when Server Manager is busy collecting system 
+information on the server following a recent start-up or reboot. Wait 
+for about 1 minute and start over with the installation of the Windows 
+features in this task. If the same problem persists, restart the 
+affected computer and start over with the installation of the Windows 
+features.</i></span>
+<p id="cn-m26-267"></p><figure><img class="cn-img" id="cn-image-m26-c-28" src="PKIConcepts_files/image-m26-c-28.jpg" alt="Figure 1.27 Screenshot of the PLABDM01: Installation progress page on the Add Roles and Features Wizard is displayed listing details of installation, and the Close button highlighted."><figcaption>Figure
+ 1.27 Screenshot of the PLABDM01: Installation progress page on the Add 
+Roles and Features Wizard is displayed listing details of installation, 
+and the Close button highlighted.</figcaption></figure><p></p>
+<h3 id="cn-m26-269"><b>Task 4 - Configure Subordinate CA</b></h3>
+<p id="cn-m26-270">After a brief installation of Active Directory 
+Certificate Services and Online Responder, you must set up this 
+Certificate service on <b>PLABDM01 </b>to assume the role of a subordinate CA to <b>PLABDC01-PRACTICELABS.COM-CA</b>.</p>
+<p id="cn-m26-271">To configure Active Directory Certificate Services subordinate CA role, follow these steps:</p>
+<h4 id="cn-m26-272"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-273">On <b>PLABDM01</b>, you are back in <b>Server Manager</b>.</p>
+<p id="cn-m26-274">Select the flag icon with an exclamation point and click the <b>Configure Active Directory Certificate Services on the destination server </b>link.</p>
+<p id="cn-m26-275"></p><figure><img class="cn-img" id="cn-image-m26-c-29" src="PKIConcepts_files/image-m26-c-29.jpg" alt="Figure 1.28 Screenshot of the PLABDM01: Configure Active Directory Certificate Services on the destination server link is displayed on the Post-deployment Configuration information pane."><figcaption>Figure
+ 1.28 Screenshot of the PLABDM01: Configure Active Directory Certificate
+ Services on the destination server link is displayed on the 
+Post-deployment Configuration information pane.</figcaption></figure><p></p>
+<h4 id="cn-m26-277"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-278">On the <b>Credentials </b>page of the <b>AD CS Configuration </b>wizard, keep the default settings and click <b>Next</b>.</p>
+<p id="cn-m26-279"></p><figure><img class="cn-img" id="cn-image-m26-c-30" src="PKIConcepts_files/image-m26-c-30.jpg" alt="Figure 1.29 Screenshot of the PLABDM01: Credentials page on the AD CS Configuration wizard is displayed showing the detected credentials."><figcaption>Figure
+ 1.29 Screenshot of the PLABDM01: Credentials page on the AD CS 
+Configuration wizard is displayed showing the detected credentials.</figcaption></figure><p></p>
+<h4 id="cn-m26-281"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-282">Similar to the task done earlier about configuring the <b>Enterprise Root CA</b>, select the <b>Certification Authority </b>and <b>Online Responder </b>checkboxes.</p>
+<p id="cn-m26-283">Then, click <b>Next</b>.</p>
+<p id="cn-m26-284"></p><figure><img class="cn-img" id="cn-image-m26-c-31" src="PKIConcepts_files/image-m26-c-31.jpg" alt="Figure 1.30 Screenshot of the PLABDM01: Role Services page on the AD CS Configuration wizard is displayed showing the required selections performed and the Next button highlighted."><figcaption>Figure
+ 1.30 Screenshot of the PLABDM01: Role Services page on the AD CS 
+Configuration wizard is displayed showing the required selections 
+performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-286"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-287">In <b>Setup Type </b>page, verify that <b>Enterprise CA </b>radio button is selected.</p>
+<p id="cn-m26-288">Click <b>Next </b>to accept default settings.</p>
+<h4 id="cn-m26-289"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-290">From <b>CA Type</b>, ensure that <b>Subordinate CA </b>option is selected and click <b>Next</b>.</p>
+<h4 id="cn-m26-291"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-292">On the <b>Private Key </b>page, keep the default setting for <b>Create a new private key </b>and click <b>Next</b>.</p>
+<h4 id="cn-m26-293"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-294">On the <b>Cryptography for CA </b>page, change the <b>Key length </b>to <b>1024</b>, and then click <b>Next</b>.</p>
+<p id="cn-m26-295"></p><figure><img class="cn-img" id="cn-image-m26-c-32" src="PKIConcepts_files/image-m26-c-32.jpg" alt="Figure 1.31 Screenshot of the PLABDM01: Cryptography for CA page on the AD CS Configuration wizard is displayed showing the required settings performed, and the Next button highlighted."><figcaption>Figure
+ 1.31 Screenshot of the PLABDM01: Cryptography for CA page on the AD CS 
+Configuration wizard is displayed showing the required settings 
+performed, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-297"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-298">On the <b>CA Name </b>page, accept the name automatically assigned by Windows, click <b>Next </b>to continue.</p>
+<h4 id="cn-m26-299"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-300">In the <b>Certificate Request </b>page, select the following radio buttons:</p>
+<ul id="cn-m26-301">
+<li id="cn-m26-301"><b>Send a certificate request to a parent CA</b></li>
+<li id="cn-m26-302"><b>CA Name</b></li>
+</ul>
+<p id="cn-m26-303">Click the <b>Select… </b>button next to the <b>Parent CA </b>text field.</p>
+<p id="cn-m26-304"></p><figure><img class="cn-img" id="cn-image-m26-c-33" src="PKIConcepts_files/image-m26-c-33.jpg" alt="Figure 1.32 Screenshot of the PLABDM01: Certificate Request page on the AD CS Configuration wizard is displayed showing the required settings performed and the Select button highlighted."><figcaption>Figure
+ 1.32 Screenshot of the PLABDM01: Certificate Request page on the AD CS 
+Configuration wizard is displayed showing the required settings 
+performed and the Select button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-306"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-307">The <b>Select Certification Authority </b>dialog box displays the detected <b>CA </b>in the network called <b>PRACTICELABS-PLABDC01-CA </b>automatically.</p>
+<p id="cn-m26-308">Keep the default selection and click <b>OK</b>.</p>
+<p id="cn-m26-309"></p><figure><img class="cn-img" id="cn-image-m26-c-34" src="PKIConcepts_files/image-m26-c-34.jpg" alt="Figure 1.33 Screenshot of the PLABDM01: Select Certification Authority dialog box on the AD CS Configuration wizard is displayed showing the detected CA for the network of the local server and the OK button highlighted."><figcaption>Figure
+ 1.33 Screenshot of the PLABDM01: Select Certification Authority dialog 
+box on the AD CS Configuration wizard is displayed showing the detected 
+CA for the network of the local server and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-311"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-312">You are redirected back to the <b>Certificate Request </b>page.</p>
+<p id="cn-m26-313">It is now filled in with the correct information, click <b>Next</b>.</p>
+<p id="cn-m26-314"></p><figure><img class="cn-img" id="cn-image-m26-c-35" src="PKIConcepts_files/image-m26-c-35.jpg" alt="Figure 1.34 Screenshot of the PLABDM01: Certificate Request page on the AD CS Configuration wizard is displayed showing the required settings performed and the Next button highlighted."><figcaption>Figure
+ 1.34 Screenshot of the PLABDM01: Certificate Request page on the AD CS 
+Configuration wizard is displayed showing the required settings 
+performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-316"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-317">On the <b>CA Database </b>page, keep the default settings and click <b>Next</b>.</p>
+<h4 id="cn-m26-318"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-319">On the <b>Confirmation </b>page, click <b>Configure </b>to proceed.</p>
+<h4 id="cn-m26-320"><b><i>Step 14</i></b></h4>
+<p id="cn-m26-321">It will take a while for the subordinate CA to be configured on <b>PLABDM01</b>.</p>
+<p id="cn-m26-322">Server Manager will then report that <b>Certification Authority </b>and <b>Online Responder </b>are successfully configured.</p>
+<p id="cn-m26-323"></p><figure><img class="cn-img" id="cn-image-m26-c-36" src="PKIConcepts_files/image-m26-c-36.jpg" alt="Figure 1.35 Screenshot of the PLABDM01: Results page on the AD CS Configuration wizard is displayed showing the status of the configuration and the Close button highlighted."><figcaption>Figure
+ 1.35 Screenshot of the PLABDM01: Results page on the AD CS 
+Configuration wizard is displayed showing the status of the 
+configuration and the Close button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-325"><b><i>Step 15</i></b></h4>
+<p id="cn-m26-326">Click <b>Close </b>to close the <b>AD CS Configuration </b>page.</p>
+<h4 id="cn-m26-327"><b><i>Step 16</i></b></h4>
+<p id="cn-m26-328">You are redirected back to the <b>Server Manager </b>console.</p>
+<p id="cn-m26-329">Click on the refresh dashboard button to refresh the 
+display. You will notice that the red indicators on the different 
+sections of the console have disappeared.</p>
+<p id="cn-m26-330">This confirms that there are no errors in this CA configuration on this server.</p>
+<p id="cn-m26-331"></p><figure><img class="cn-img" id="cn-image-m26-c-37" src="PKIConcepts_files/image-m26-c-37.jpg" alt="Figure 1.36 Screenshot of the PLABDM01: Task Details information pane is displayed confirming successful feature installation and post-deployment configuration."><figcaption>Figure
+ 1.36 Screenshot of the PLABDM01: Task Details information pane is 
+displayed confirming successful feature installation and post-deployment
+ configuration.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<span class="cn-alert" id="cn-m26-335">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-336"><b>Exercise 2 - Configure Certificate Revocation Lists (CRLs)</b></h2>
+<p id="cn-m26-337">In this exercise, you will configure certificate 
+revocation lists in Certificate Services. When a user certificate is 
+revoked by an administrator regardless of the reason, the Certificate 
+Server records that cancellation to prevent a user from reusing a 
+revoked certificate. In a large network, the revocation of the 
+certificate must be replicated to other CA servers to prevent canceled 
+certificates from being used to access network resources.</p>
+<p id="cn-m26-338">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-340">After completing this exercise, you will be able to:</p>
+<ul id="cn-m26-341">
+<li id="cn-m26-341">Request User Certificates</li>
+<li id="cn-m26-342">Verify Issued Certificate</li>
+<li id="cn-m26-343">Configure a new path for CRLs</li>
+<li id="cn-m26-344">Adding Certificate Managers</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m26-346">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m26-347">
+<li id="cn-m26-347"><b>PLABDC01 </b>(Windows Server 2016  - Domain Controller)</li>
+<li id="cn-m26-348"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m26-349"><b>PLABWIN10 </b>(Windows 10 workstation)</li>
+</ul>
+<p id="cn-m26-350"><img class="cn-img" id="cn-image-m26-c-38" src="PKIConcepts_files/image-m26-c-38.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m26-351"><b>Task 1 - Request User Certificates</b></h3>
+<p id="cn-m26-352">Now that you have configured the CA servers, the next step is to ask for a certificate as an Active Directory user.</p>
+<p id="cn-m26-353">To request for a user certificate using Windows 10, perform the following steps:</p>
+<h4 id="cn-m26-354"><b><i>Step 1 </i></b></h4>
+<p id="cn-m26-355">You need to now disable the Server Auto Login feature
+ on the Practice Labs platform. For more information on how to do this, 
+please see the <b>Help/Support </b>page.</p>
+<span class="cn-quote" id="cn-m26-356"><b><i>Note: </i></b><i>You can find it via the following page: </i><b><i>http://www.practice-labs.com/support/#/userguide/help-tab#ref-inlinehelp</i></b><br><b><i>Note: </i></b><i>Once this setting has been toggling this setting, you will need to re-connect to the device in order for it to take effect.</i></span>
+<p id="cn-m26-357">Once done, connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m26-358"></p><figure><img class="cn-img" id="cn-image-m26-c-39" src="PKIConcepts_files/image-m26-c-39.jpg" alt="Figure 2.1 Screenshot of the PLABWIN10: PRACTICELABS\Administrator login screen prompting the relevant password is displayed on the PLABWIN10 Windows desktop."><figcaption>Figure
+ 2.1 Screenshot of the PLABWIN10: PRACTICELABS\Administrator login 
+screen prompting the relevant password is displayed on the PLABWIN10 
+Windows desktop.</figcaption></figure><p></p>
+<h4 id="cn-m26-360"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-361">On the windows login screen, click <b>Other user</b>.</p>
+<p id="cn-m26-362">Sign in with the following credentials and then press <b>Enter</b>:</p>
+<p id="cn-m26-363">User name:</p>
+<pre id="cn-m26-364"><code>Jan.Regus
+</code></pre>
+<p id="cn-m26-365">Password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m26-367"></p><figure><img class="cn-img" id="cn-image-m26-c-40" src="PKIConcepts_files/image-m26-c-40.jpg" alt="Figure 2.2 Screenshot of the PLABWIN10: Jan Regus Welcome screen on the PLABWIN10 Windows desktop is displayed."><figcaption>Figure 2.2 Screenshot of the PLABWIN10: Jan Regus Welcome screen on the PLABWIN10 Windows desktop is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-369"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-370">In the <b>Ask me anything </b>textbox and type the following text and press <b>Enter</b>:</p>
+<pre id="cn-m26-371"><code>mmc
+</code></pre>
+<p id="cn-m26-372"></p><figure><img class="cn-img" id="cn-image-m26-c-41" src="PKIConcepts_files/image-m26-c-41.jpg" alt="Figure 2.3 Screenshot of the PLABWIN10: Required key typed in the search text box on the Start menu is displayed."><figcaption>Figure 2.3 Screenshot of the PLABWIN10: Required key typed in the search text box on the Start menu is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-374"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-375">In <b>Console1</b>, click <b>File </b>and select <b>Add/Remove Snap-in</b>.</p>
+<p id="cn-m26-376"></p><figure><img class="cn-img" id="cn-image-m26-c-42" src="PKIConcepts_files/image-m26-c-42.jpg" alt="Figure 2.4 Screenshot of the PLABWIN10: File &amp;gt; Add/Remove Snap-in menu-options are highlighted on the Console1 window."><figcaption>Figure 2.4 Screenshot of the PLABWIN10: File &gt; Add/Remove Snap-in menu-options are highlighted on the Console1 window.</figcaption></figure><p></p>
+<h4 id="cn-m26-378"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-379">In the <b>Add or Remove Snap-ins </b>dialog box select <b>Certificates </b>from the left pane and click <b>Add</b>.</p>
+<p id="cn-m26-380"></p><figure><img class="cn-img" id="cn-image-m26-c-43" src="PKIConcepts_files/image-m26-c-43.jpg" alt="Figure 2.5 Screenshot of the PLABWIN10: Add or Remove Snap-ins dialog box is displayed showing the required selection performed on the list at the left and the Add button highlighted."><figcaption>Figure
+ 2.5 Screenshot of the PLABWIN10: Add or Remove Snap-ins dialog box is 
+displayed showing the required selection performed on the list at the 
+left and the Add button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-382"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-383"><b>Certificates - Current User </b>is now added in the right pane.</p>
+<p id="cn-m26-384">Click <b>OK </b>to close the <b>Add or Remove Snap-in </b>dialog box.</p>
+<p id="cn-m26-385"></p><figure><img class="cn-img" id="cn-image-m26-c-44" src="PKIConcepts_files/image-m26-c-44.jpg" alt="Figure 2.6 Screenshot of the PLABWIN10: Add or Remove Snap-ins dialog box is displayed showing the required selection performed on the list at the right pane and the OK button highlighted."><figcaption>Figure
+ 2.6 Screenshot of the PLABWIN10: Add or Remove Snap-ins dialog box is 
+displayed showing the required selection performed on the list at the 
+right pane and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-387"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-388">From <b>Console1</b>, expand <b>Certificates-Current User </b>and then expand <b>Personal</b>.</p>
+<p id="cn-m26-389">Right-click <b>Personal </b>and select <b>All Tasks</b>, then select <b>Request New Certificate</b>.</p>
+<p id="cn-m26-390"></p><figure><img class="cn-img" id="cn-image-m26-c-45" src="PKIConcepts_files/image-m26-c-45.jpg" alt="Figure 2.7 Screenshot of the PLABWIN10: Context menu (that appears on right-clicking the Personal folder) &amp;gt; All Tasks &amp;gt; Request New Certificate menu-options are highlighted on the Console1 window."><figcaption>Figure
+ 2.7 Screenshot of the PLABWIN10: Context menu (that appears on 
+right-clicking the Personal folder) &gt; All Tasks &gt; Request New 
+Certificate menu-options are highlighted on the Console1 window.</figcaption></figure><p></p>
+<h4 id="cn-m26-392"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-393">On the <b>Before you begin </b>page of the <b>Certificate Enrollment </b>wizard, click <b>Next</b>.</p>
+<h4 id="cn-m26-394"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-395">On the <b>Select Certificate Enrollment Policy </b>page, ensure <b>Active Directory Enrollment Policy </b>is selected and then click <b>Next</b>.</p>
+<p id="cn-m26-396"></p><figure><img class="cn-img" id="cn-image-m26-c-46" src="PKIConcepts_files/image-m26-c-46.jpg" alt="Figure 2.8 Screenshot of the PLABWIN10: Select Certificate Enrollment Policy page on the Certificate Enrollment wizard is displayed showing default settings, and the Next button highlighted."><figcaption>Figure
+ 2.8 Screenshot of the PLABWIN10: Select Certificate Enrollment Policy 
+page on the Certificate Enrollment wizard is displayed showing default 
+settings, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-398"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-399">In <b>Request Certificates</b>, click the <b>User </b>checkbox and click the <b>Details </b>down arrow button.</p>
+<span class="cn-alert" id="cn-m26-400"><b>Alert: </b>If there are no certificates listed, open a Command prompt as administrator and run:<br>Gpupdate /force<br>Re-attempt from Step 7.</span>
+<p id="cn-m26-401"></p><figure><img class="cn-img" id="cn-image-m26-c-47" src="PKIConcepts_files/image-m26-c-47.jpg" alt="Figure 2.9 Screenshot of the PLABWIN10: Request Certificates page on the Certificate Enrollment wizard is displayed showing the required selection performed and the Details down-arrow button available."><figcaption>Figure
+ 2.9 Screenshot of the PLABWIN10: Request Certificates page on the 
+Certificate Enrollment wizard is displayed showing the required 
+selection performed and the Details down-arrow button available.</figcaption></figure><p></p>
+<h4 id="cn-m26-403"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-404">The details now display additional information about this certificate.</p>
+<p id="cn-m26-405">Click <b>Properties</b>.</p>
+<p id="cn-m26-406"></p><figure><img class="cn-img" id="cn-image-m26-c-48" src="PKIConcepts_files/image-m26-c-48.jpg" alt="Figure 2.10 Screenshot of the PLABWIN10: Request Certificates page on the Certificate Enrollment wizard is displayed showing additional information about the selected certificate and the Properties button available."><figcaption>Figure
+ 2.10 Screenshot of the PLABWIN10: Request Certificates page on the 
+Certificate Enrollment wizard is displayed showing additional 
+information about the selected certificate and the Properties button 
+available.</figcaption></figure><p></p>
+<h4 id="cn-m26-408"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-409">The <b>Certificate Properties </b>dialog box is displayed.</p>
+<p id="cn-m26-410">Click the <b>Certification Authority </b>tab.</p>
+<p id="cn-m26-411"></p><figure><img class="cn-img" id="cn-image-m26-c-49" src="PKIConcepts_files/image-m26-c-49.jpg" alt="Figure 2.11 Screenshot of the PLABWIN10: Certification Authority tab on the Certificate Properties dialog box on the Certificate Enrollment wizard is displayed."><figcaption>Figure
+ 2.11 Screenshot of the PLABWIN10: Certification Authority tab on the 
+Certificate Properties dialog box on the Certificate Enrollment wizard 
+is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-413"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-414">On the <b>Certification Authority </b>tab, you will find the servers that can issue certificates to the user.</p>
+<p id="cn-m26-415">Deselect the <b>PRACTICELABS-PLABDC01-CA </b>checkbox.</p>
+<p id="cn-m26-416">Leave the <b>PRACTICELABS-PLABDM01-CA </b>check box selected.</p>
+<p id="cn-m26-417">Click <b>OK</b>.</p>
+<p id="cn-m26-418"></p><figure><img class="cn-img" id="cn-image-m26-c-50" src="PKIConcepts_files/image-m26-c-50.jpg" alt="Figure 2.12 Screenshot of the PLABWIN10: Certification Authority tab on the Certificate Properties dialog box on the Certificate Enrollment wizard is displayed showing the required settings performed and the OK button highlighted."><figcaption>Figure
+ 2.12 Screenshot of the PLABWIN10: Certification Authority tab on the 
+Certificate Properties dialog box on the Certificate Enrollment wizard 
+is displayed showing the required settings performed and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-420"><b><i>Step 14</i></b></h4>
+<p id="cn-m26-421">Back in the <b>Request Certificates </b>dialog box, click <b>Enroll</b>.</p>
+<p id="cn-m26-422"></p><figure><img class="cn-img" id="cn-image-m26-c-51" src="PKIConcepts_files/image-m26-c-51.jpg" alt="Figure 2.13 Screenshot of the PLABWIN10: The Certificate Enrollment dialog box with the Enroll button highlighted."><figcaption>Figure 2.13 Screenshot of the PLABWIN10: The Certificate Enrollment dialog box with the Enroll button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-424"><b><i>Step 15</i></b></h4>
+<p id="cn-m26-425">Wait for the enrolment to be completed.</p>
+<p id="cn-m26-426">Then click <b>Finish </b>when <b>STATUS: Succeeded </b>is displayed.</p>
+<p id="cn-m26-427"></p><figure><img class="cn-img" id="cn-image-m26-c-52" src="PKIConcepts_files/image-m26-c-52.jpg" alt="Figure 2.14 Screenshot of the PLABWIN10: Certificate Installation Results page on the Certificate Enrollment wizard is displayed showing enrolment details, and the Finish button highlighted."><figcaption>Figure
+ 2.14 Screenshot of the PLABWIN10: Certificate Installation Results page
+ on the Certificate Enrollment wizard is displayed showing enrolment 
+details, and the Finish button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-429"><b><i>Step 16</i></b></h4>
+<p id="cn-m26-430">Expand <b>Personal </b>and then click the <b>Certificates </b>folder.</p>
+<p id="cn-m26-431">A user certificate has now been issued to <b>Jan Regus</b>.</p>
+<p id="cn-m26-432"></p><figure><img class="cn-img" id="cn-image-m26-c-53" src="PKIConcepts_files/image-m26-c-53.jpg" alt="Figure 2.15 Screenshot of the PLABWIN10: Console1 window is displayed listing the newly enrolled user certificate."><figcaption>Figure 2.15 Screenshot of the PLABWIN10: Console1 window is displayed listing the newly enrolled user certificate.</figcaption></figure><p></p>
+<h3 id="cn-m26-434"><b>Task 2 - Verify Issued Certificate</b></h3>
+<p id="cn-m26-435">Remember that during the certificate enrolment, you configured <b>PLABWIN10 </b>computer to enroll with the <b>PLABDM01 </b>server.</p>
+<p id="cn-m26-436">In this step, you will verify the certificate issued to Jan Regus.</p>
+<h4 id="cn-m26-437"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-438">Switch to the <b>PLABDM01 </b>device. Login with the <b>Administrator </b>account if system is in locked state.</p>
+<p id="cn-m26-439">Ensure <b>Server Manager </b>is open.</p>
+<p id="cn-m26-440">Click <b>Tools </b>and then select <b>Certification Authority</b>.</p>
+<p id="cn-m26-441"></p><figure><img class="cn-img" id="cn-image-m26-c-54" src="PKIConcepts_files/image-m26-c-54.jpg" alt="Figure 2.16 Screenshot of the PLABDM01: Tools &amp;gt; Certification Authority menu-options are highlighted on the Server Manager console."><figcaption>Figure
+ 2.16 Screenshot of the PLABDM01: Tools &gt; Certification Authority 
+menu-options are highlighted on the Server Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m26-443"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-444"><b>Certification Authority (Local) </b>opens.</p>
+<p id="cn-m26-445">Expand <b>PRACTICELABS-PLABDM01-CA </b>and select the <b>Issued Certificates </b>folder. Notice that a certificate is issued to <b>Jan Regus</b>.</p>
+<p id="cn-m26-446"></p><figure><img class="cn-img" id="cn-image-m26-c-55" src="PKIConcepts_files/image-m26-c-55.jpg" alt="Figure 2.17 Screenshot of the PLABDM01: Required node path is selected on the navigation pane at the left, and the relevant user certificate is listed on the details pane at the right on the certsrv - Certification Authority (Local) window."><figcaption>Figure
+ 2.17 Screenshot of the PLABDM01: Required node path is selected on the 
+navigation pane at the left, and the relevant user certificate is listed
+ on the details pane at the right on the certsrv - Certification 
+Authority (Local) window.</figcaption></figure><p></p>
+<h4 id="cn-m26-448"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-449">Right-click the <b>PRACTICELABS\jan.regus </b>certificate, select <b>All Tasks </b>and then select <b>Revoke Certificate</b>.</p>
+<p id="cn-m26-450"></p><figure><img class="cn-img" id="cn-image-m26-c-56" src="PKIConcepts_files/image-m26-c-56.jpg" alt="Figure 2.18 Screenshot of the PLABDM01: Context menu (that appears on right-clicking the name of an issued certificate) &amp;gt; All Tasks &amp;gt; Revoke Certificate menu-options are highlighted on the certsrv - Certification Authority (Local) window."><figcaption>Figure
+ 2.18 Screenshot of the PLABDM01: Context menu (that appears on 
+right-clicking the name of an issued certificate) &gt; All Tasks &gt; 
+Revoke Certificate menu-options are highlighted on the certsrv - 
+Certification Authority (Local) window.</figcaption></figure><p></p>
+<h4 id="cn-m26-452"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-453">On the <b>Certificate Revocation </b>dialog box, select <b>Key Compromise </b>and then click <b>Yes</b>.</p>
+<span class="cn-quote" id="cn-m26-454"><b><i>Note</i></b><i>: If </i><b><i>Reason code </i></b><i>for certificate revocation is </i><b><i>Certificate Hold</i></b><i>, it can be unrevoked by the administrator.</i></span>
+<p id="cn-m26-455"></p><figure><img class="cn-img" id="cn-image-m26-c-57" src="PKIConcepts_files/image-m26-c-57.jpg" alt="Figure 2.19 Screenshot of the PLABDM01: Certificate Revocation dialog box is displayed showing the required settings performed, and the Yes button highlighted."><figcaption>Figure
+ 2.19 Screenshot of the PLABDM01: Certificate Revocation dialog box is 
+displayed showing the required settings performed, and the Yes button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-457"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-458">The <b>Jan Regus' </b>certificate disappears from the <b>Issued Certificates </b>folder.</p>
+<p id="cn-m26-459"></p><figure><img class="cn-img" id="cn-image-m26-c-58" src="PKIConcepts_files/image-m26-c-58.jpg" alt="Figure 2.20 Screenshot of the PLABDM01: Required node path is selected on the navigation pane at the left, and the relevant user certificate is removed from the details pane at the right on the Issued Certificates window."><figcaption>Figure
+ 2.20 Screenshot of the PLABDM01: Required node path is selected on the 
+navigation pane at the left, and the relevant user certificate is 
+removed from the details pane at the right on the Issued Certificates 
+window.</figcaption></figure><p></p>
+<h4 id="cn-m26-461"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-462">Click the <b>Revoked Certificates </b>folder.</p>
+<p id="cn-m26-463">The <b>Revoked Certificates </b>folder now displays the revoked certificate of user Jan Regus.</p>
+<p id="cn-m26-464"></p><figure><img class="cn-img" id="cn-image-m26-c-59" src="PKIConcepts_files/image-m26-c-59.jpg" alt="Figure 2.21 Screenshot of the PLABDM01: Required node path is selected on the navigation pane at the left, and the relevant user certificate is listed on the details pane at the right on the Revoked Certificates window."><figcaption>Figure
+ 2.21 Screenshot of the PLABDM01: Required node path is selected on the 
+navigation pane at the left, and the relevant user certificate is listed
+ on the details pane at the right on the Revoked Certificates window.</figcaption></figure><p></p>
+<h4 id="cn-m26-466"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-467">You now need to publish the revoked certificates to other CA servers.</p>
+<p id="cn-m26-468">Right-click the <b>Revoked Certificates </b>folder and, select <b>All Tasks </b>and then select <b>Publish</b>.</p>
+<p id="cn-m26-469"></p><figure><img class="cn-img" id="cn-image-m26-c-60" src="PKIConcepts_files/image-m26-c-60.jpg" alt="Figure 2.22 Screenshot of the PLABDM01: Context menu (that appears on right-clicking a certificate category) &amp;gt; All Tasks &amp;gt; Publish menu-options are highlighted on the certsrv - Certification Authority (Local) window."><figcaption>Figure
+ 2.22 Screenshot of the PLABDM01: Context menu (that appears on 
+right-clicking a certificate category) &gt; All Tasks &gt; Publish 
+menu-options are highlighted on the certsrv - Certification Authority 
+(Local) window.</figcaption></figure><p></p>
+<h4 id="cn-m26-471"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-472">In the <b>Publish CRL </b>dialog box, ensure <b>New CRL </b>is selected.</p>
+<p id="cn-m26-473">Click <b>OK</b>.</p>
+<p id="cn-m26-474"></p><figure><img class="cn-img" id="cn-image-m26-c-61" src="PKIConcepts_files/image-m26-c-61.jpg" alt="Figure 2.23 Screenshot of the PLABDM01: Publish CRL dialog box is displayed showing the required selection performed and the OK button highlighted."><figcaption>Figure
+ 2.23 Screenshot of the PLABDM01: Publish CRL dialog box is displayed 
+showing the required selection performed and the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m26-476"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-477">Right-click the <b>Revoked Certificates </b>folder and select <b>Properties</b>.</p>
+<p id="cn-m26-478">In the <b>Revoked Certificates Properties </b>dialog box, the <b>CRL Publishing Parameters </b>tab displays the publication interval for <b>New CRL </b>and <b>Delta CRLs </b>(recent updates of revoked certificates).</p>
+<p id="cn-m26-479"></p><figure><img class="cn-img" id="cn-image-m26-c-62" src="PKIConcepts_files/image-m26-c-62.jpg" alt="Figure 2.24 Screenshot of the PLABDM01: CRL Publishing Parameters tab on the Revoked Certificates Properties dialog box is displayed showing the required information."><figcaption>Figure
+ 2.24 Screenshot of the PLABDM01: CRL Publishing Parameters tab on the 
+Revoked Certificates Properties dialog box is displayed showing the 
+required information.</figcaption></figure><p></p>
+<h4 id="cn-m26-481"><b><i>Step 10&nbsp;&nbsp;</i></b></h4>
+<p id="cn-m26-482">Click the <b>View CRLs </b>tab.</p>
+<p id="cn-m26-483">The <b>View CRLs </b>tab displays the publication status of CRLs.</p>
+<p id="cn-m26-484">Click <b>OK</b>.</p>
+<p id="cn-m26-485"></p><figure><img class="cn-img" id="cn-image-m26-c-63" src="PKIConcepts_files/image-m26-c-63.jpg" alt="Figure 2.25 Screenshot of the PLABDM01: View CRLs tab on the Revoked Certificates Properties dialog box is displayed showing the required information."><figcaption>Figure
+ 2.25 Screenshot of the PLABDM01: View CRLs tab on the Revoked 
+Certificates Properties dialog box is displayed showing the required 
+information.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m26-487">Keep Certification Authority window open for the next task.</span>
+<h3 id="cn-m26-488"><b>Task 3 - Configure a New Path for CRLs</b></h3>
+<p id="cn-m26-489">To configure a new path for CRLs, follow these steps:</p>
+<h4 id="cn-m26-490"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-491">On <b>PLABDM01 </b>server, right-click <b>PRACTICELABS-PLABDM01-CA </b>and select <b>Properties</b>.</p>
+<p id="cn-m26-492"></p><figure><img class="cn-img" id="cn-image-m26-c-64" src="PKIConcepts_files/image-m26-c-64.jpg" alt="Figure 2.26 Screenshot of the PLABDM01: Context menu (that appears on right-clicking the FQDN of a certifying authority) &amp;gt; Properties menu-options are highlighted on the Revoked Certificates window."><figcaption>Figure
+ 2.26 Screenshot of the PLABDM01: Context menu (that appears on 
+right-clicking the FQDN of a certifying authority) &gt; Properties 
+menu-options are highlighted on the Revoked Certificates window.</figcaption></figure><p></p>
+<h4 id="cn-m26-494"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-495">In the <b>PRACTICELABS-PLABDM01-CA Properties </b>dialog box, click the <b>Extensions </b>tab. Under the <b>Extensions </b>tab, click <b>Add</b>…</p>
+<p id="cn-m26-496"></p><figure><img class="cn-img" id="cn-image-m26-c-65" src="PKIConcepts_files/image-m26-c-65.jpg" alt="Figure 2.27 Screenshot of the PLABDM01: Extensions tab on the PRACTICELABS-PLABDM01-CA Properties dialog box is displayed showing the Add button available."><figcaption>Figure
+ 2.27 Screenshot of the PLABDM01: Extensions tab on the 
+PRACTICELABS-PLABDM01-CA Properties dialog box is displayed showing the 
+Add button available.</figcaption></figure><p></p>
+<h4 id="cn-m26-498"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-499">In the <b>Add Location </b>dialog box, in the <b>Location </b>text box and type:</p>
+<pre id="cn-m26-500"><code>\\plabdc01\sw\
+</code></pre>
+<p id="cn-m26-501"></p><figure><img class="cn-img" id="cn-image-m26-c-66" src="PKIConcepts_files/image-m26-c-66.jpg" alt="Figure 2.28 Screenshot of the PLABDM01: Add Location dialog box is displayed showing the required value typed-in."><figcaption>Figure 2.28 Screenshot of the PLABDM01: Add Location dialog box is displayed showing the required value typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m26-503"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-504">From <b>Add Location </b>dialogue box, after adding the network path, put the cursor at the end of network path location.</p>
+<p id="cn-m26-505">Click <b>Insert</b>.</p>
+<p id="cn-m26-506">You’ll see that &lt;<b>CaName</b>&gt; has appended at the end of network path \\<b>plabdc01</b>\<b>sw</b>.</p>
+<p id="cn-m26-507">Click <b>OK</b>.</p>
+<p id="cn-m26-508"></p><figure><img class="cn-img" id="cn-image-m26-c-67" src="PKIConcepts_files/image-m26-c-67.jpg" alt="Figure 2.29 Screenshot of the PLABDM01: Add Location dialog box is displayed showing the required value inserted and the OK button available."><figcaption>Figure
+ 2.29 Screenshot of the PLABDM01: Add Location dialog box is displayed 
+showing the required value inserted and the OK button available.</figcaption></figure><p></p>
+<h4 id="cn-m26-510"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-511">Click <b>Apply </b>to save changes in the <b>Extensions </b>tab.</p>
+<p id="cn-m26-512">When prompted to restart in the <b>Certification Authority </b>dialog box, click <b>Yes</b>.</p>
+<p id="cn-m26-513"></p><figure><img class="cn-img" id="cn-image-m26-c-68" src="PKIConcepts_files/image-m26-c-68.jpg" alt="Figure 2.30 Screenshot of the PLABDM01: Certification Authority caution box is displayed prompting you to restart the active directory services and the Yes button highlighted."><figcaption>Figure
+ 2.30 Screenshot of the PLABDM01: Certification Authority caution box is
+ displayed prompting you to restart the active directory services and 
+the Yes button highlighted.</figcaption></figure><p></p>
+<h3 id="cn-m26-515"><b>Task 4 - Adding Certificate Managers</b></h3>
+<p id="cn-m26-516">To configure certificate managers, follow these steps:</p>
+<h4 id="cn-m26-517"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-518">Still on <b>PLABDM01 </b>server, from <b>Certificate Managers </b>tab, select the <b>Restrict certificate managers </b>option.</p>
+<p id="cn-m26-519">Click <b>OK</b>.</p>
+<span class="cn-quote" id="cn-m26-520"><b><i>Note</i></b><i>: By 
+selecting this option, you will be restricting aspects of AD Certificate
+ Services administration to Domain Admins and Enterprise Admins groups 
+in this domain.</i></span>
+<p id="cn-m26-521"></p><figure><img class="cn-img" id="cn-image-m26-c-69" src="PKIConcepts_files/image-m26-c-69.jpg" alt="Figure 2.31 Screenshot of the PLABDM01: Certificate Managers tab on the PRACTICELABS-PLABDM01-CA Properties dialog box is displayed showing the required settings performed and the OK button available."><figcaption>Figure
+ 2.31 Screenshot of the PLABDM01: Certificate Managers tab on the 
+PRACTICELABS-PLABDM01-CA Properties dialog box is displayed showing the 
+required settings performed and the OK button available.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<span class="cn-alert" id="cn-m26-525">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-526"><b>Exercise 3 - Managing Certificate Templates</b></h2>
+<p id="cn-m26-527">Certificate Templates are used by Enterprise 
+Certification Authorities (CA) to define the purpose and content of 
+certificates that can be issued to a requesting entity like user, 
+computer or network service.</p>
+<p id="cn-m26-528">In this exercise, you will first install AD 
+Certificate Services and its required components and later customize the
+ certificate template properties.</p>
+<p id="cn-m26-529">To get more information about managing certificate 
+templates, please refer to your course material or use your preferred 
+search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-531">After completing this exercise, you will be able to:</p>
+<ul id="cn-m26-532">
+<li id="cn-m26-532">Add AD Certificate Services and Certificate Web Enrollment Services</li>
+<li id="cn-m26-533">Install AD Certificate Enterprise CA and CA Web Enrollment Service</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m26-535">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m26-536">
+<li id="cn-m26-536"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m26-537"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+</ul>
+<p id="cn-m26-538"><img class="cn-img" id="cn-image-m26-c-70" src="PKIConcepts_files/image-m26-c-70.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m26-539"><b>Task 1 - Add AD Certificate Services and Certificate Web Enrollment Services</b></h3>
+<p id="cn-m26-540">Typically, in a corporate network, a dedicated server
+ is set aside to handle certificate issuance and management to 
+requesting users, computers or network service. In this task, you will 
+add AD Certificate Services (AD CS) and Certificate Authority Web 
+Enrollment Services on the PLABDM01 server.</p>
+<p id="cn-m26-541">To add AD CS and Certificate Web Enrollment, perform the following steps:</p>
+<h4 id="cn-m26-542"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-543">Ensure you have powered on the required devices indicated in the Introduction.</p>
+<p id="cn-m26-544">Connect to the <b>PLABDM01</b>.</p>
+<p id="cn-m26-545">In the <b>Server Manager &gt; Dashboard </b>window, click on the <b>Tools </b>menu and select <b>Windows PowerShell</b>.</p>
+<h4 id="cn-m26-546"><b><i>Step 2</i></b></h4>
+<span class="cn-quote" id="cn-m26-547"><b><i>Note: </i></b><i>Windows PowerShell commands are not case-sensitive.</i></span>
+<p id="cn-m26-548">In the <b>Windows PowerShell </b>window, to add 
+Active Directory Certificate Services and Certification Authority Web 
+Enrollment features, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-549"><code>Add-WindowsFeature -Name ADCS-Cert-Authority,ADCS-Web-Enrollment -IncludeManagementTools
+</code></pre>
+<p id="cn-m26-550"></p><figure><img class="cn-img" id="cn-image-m26-c-71" src="PKIConcepts_files/image-m26-c-71.jpg" alt="Figure 3.1 Screenshot of PLABDM01: A command is entered in Windows PowerShell to install Certificate Authority services."><figcaption>Figure 3.1 Screenshot of PLABDM01: A command is entered in Windows PowerShell to install Certificate Authority services.</figcaption></figure><p></p>
+<h4 id="cn-m26-552"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-553">Please wait while installation of the selected Windows features is in progress. This will take a few minutes.</p>
+<span class="cn-alert" id="cn-m26-554"><b>Important</b>: You may notice a
+ bit of a time lag of about 2 minutes as the features are being 
+installed. Installation may seem to have frozen or stopped processing. 
+Should this happen, click inside the Windows PowerShell window and press
+ <b>Enter </b>to refresh the screen. If you are using the HTML5 client, 
+pressing Enter will display the Clipboard window. Close the clipboard 
+window if it opens while working in the labs.</span>
+<h4 id="cn-m26-555"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-556">Windows PowerShell confirms the successful installation of the <b>Certification Authority Web Enrollment </b>features.</p>
+<p id="cn-m26-557">Keep <b>Windows PowerShell </b>window open.</p>
+<p id="cn-m26-558"></p><figure><img class="cn-img" id="cn-image-m26-c-72" src="PKIConcepts_files/image-m26-c-72.jpg" alt="Figure 3.2 Screenshot of PLABDM01: Windows PowerShell window indicates a successful installation of features."><figcaption>Figure 3.2 Screenshot of PLABDM01: Windows PowerShell window indicates a successful installation of features.</figcaption></figure><p></p>
+<h3 id="cn-m26-560"><b>Task 2 - Install AD Certificate Enterprise CA and CA Web Enrollment Service</b></h3>
+<p id="cn-m26-561">In the earlier task, you simply added the AD 
+Certificate Services and CA Web Enrollment features into Windows. The AD
+ Certificate Services were configured, but you need to configure the CA 
+Web Enrollment feature.</p>
+<p id="cn-m26-562">To install and configure CA Web Enrollment, perform the following steps:</p>
+<h4 id="cn-m26-563"><b><i>Step 1</i></b></h4>
+<span class="cn-alert" id="cn-m26-564"><b>Note: </b>If Exercise 1 was completed successfully (the installation of AD Certification Authority), open <b>Windows Powershell</b>, skip <b>Step 1 </b>and move straight to <b>Step 2</b>.</span>
+<p id="cn-m26-565">In <b>PLABDM01</b>, on <b>Server Manager</b>, click <b>Tools </b>and then select <b>Windows PowerShell </b>if it is already not opened.</p>
+<p id="cn-m26-566">To install <b>AD Certification Authority </b>as an Enterprise Root CA using default settings, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-567"><code>Install-AdcsCertificationAuthority -CAType EnterpriseRootCA
+</code></pre>
+<p id="cn-m26-568">On the next prompt, to accept the default settings, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m26-569"><code>a
+</code></pre>
+<p id="cn-m26-570"></p><figure><img class="cn-img" id="cn-image-m26-c-73" src="PKIConcepts_files/image-m26-c-73.jpg" alt="Figure 3.3 Screenshot of the PLABWIN10: Windows PowerShell window displays the confirmation of the installation of the mentioned feature."><figcaption>Figure
+ 3.3 Screenshot of the PLABWIN10: Windows PowerShell window displays the
+ confirmation of the installation of the mentioned feature.</figcaption></figure><p></p>
+<p id="cn-m26-572">The installation of AD Certification Authority is successfully confirmed with <b>ErrorId </b>of “<b>0</b>.”</p>
+<h4 id="cn-m26-573"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-574">On the next prompt, to install <b>AD Certification Authority Web Enrollment</b>, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-575"><code>Install-AdcsWebEnrollment
+</code></pre>
+<p id="cn-m26-576">On the next prompt to install <b>AD Certification Authority Web Enrollment </b>with default settings, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m26-577"><code>a
+</code></pre>
+<p id="cn-m26-578"></p><figure><img class="cn-img" id="cn-image-m26-c-74" src="PKIConcepts_files/image-m26-c-74.jpg" alt="Figure 3.4 Screenshot of PLABDM01: Windows PowerShell displays a screen prompt for the installation of Certificate Authority."><figcaption>Figure 3.4 Screenshot of PLABDM01: Windows PowerShell displays a screen prompt for the installation of Certificate Authority.</figcaption></figure><p></p>
+<h4 id="cn-m26-580"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-581">The installation of <b>AD Certification Authority Web Enrollment </b>is successfully confirmed with <b>ErrorId </b>of “<b>0</b>.”</p>
+<p id="cn-m26-582"></p><figure><img class="cn-img" id="cn-image-m26-c-75" src="PKIConcepts_files/image-m26-c-75.jpg" alt="Figure 3.5 Screenshot of PLABDM01: Windows PowerShell displays a successful installation of certificate authority web enrolment."><figcaption>Figure 3.5 Screenshot of PLABDM01: Windows PowerShell displays a successful installation of certificate authority web enrolment.</figcaption></figure><p></p>
+<h4 id="cn-m26-584"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-585">Minimize the <b>Windows PowerShell </b>window. Invoke <b>Server Manager </b>from the taskbar.</p>
+<p id="cn-m26-586">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>Certification Authority</b>.</p>
+<h4 id="cn-m26-587"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-588">The <b>certsrv - [Certification Authority (Local)] </b>window opens.</p>
+<p id="cn-m26-589">Expand the <b>PRACTICELABS-PLABDM01-CA </b>node.</p>
+<p id="cn-m26-590">Then, click the <b>Certificate Templates </b>folder.</p>
+<p id="cn-m26-591">The details pane of the <b>Certificates Template </b>folder at the right indicates the type of certificates that can be issued by <b>PLABDM01</b>.</p>
+<p id="cn-m26-592">Keep the <b>Certification Authority </b>open.</p>
+<p id="cn-m26-593"></p><figure><img class="cn-img" id="cn-image-m26-c-76" src="PKIConcepts_files/image-m26-c-76.jpg" alt="Figure 3.6 Screenshot of PLABDM01: The Certification Authority console window is displayed."><figcaption>Figure 3.6 Screenshot of PLABDM01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<span class="cn-alert" id="cn-m26-597">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-598"><b>Exercise 4 - Configure Certificate Auto Enrollment</b></h2>
+<p id="cn-m26-599">Enrollment for machine or user certificate can be 
+done manually by using certificates request wizard through the Microsoft
+ Management Console (MMC) in a small organization. For big companies 
+that maintain hundreds of network users, certificate enrollment can be 
+streamlined by customizing a certificate template. A customized 
+certificate template allows you to set properties such as auto 
+enrollment and simplify certificates deployment to domain users by using
+ Group Policy Objects.</p>
+<p id="cn-m26-600">In this exercise, you will learn how to manage 
+certificates by setting the different properties for a custom template, 
+such as security, indicates which user or security group has access to 
+the certificate, timeline that illustrates the validity of an issued 
+certificate and other properties relating to a certificate template.</p>
+<p id="cn-m26-601">To learn more about managing certificate templates 
+and enrollment, please refer to your course material or use your 
+preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-603">After completing this exercise, you will be able to:</p>
+<ul id="cn-m26-604">
+<li id="cn-m26-604">Configure a customized certificate template</li>
+<li id="cn-m26-605">Create a group policy for certificate auto enrollment</li>
+<li id="cn-m26-606">Verify the certificate issuance</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m26-608">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m26-609">
+<li id="cn-m26-609"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m26-610"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m26-611"><b>PLABWIN10 </b>(Windows 10 - Domain Workstation)</li>
+</ul>
+<p id="cn-m26-612"><img class="cn-img" id="cn-image-m26-c-77" src="PKIConcepts_files/image-m26-c-77.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m26-613"><b>Task 1 - Configure a Customized Certificate Template</b></h3>
+<p id="cn-m26-614">A customized certificate template gives the 
+certificate administrator the flexibility to change the properties of a 
+template like security, extensions among others.</p>
+<p id="cn-m26-615">To set up a customized certificate template, perform the following steps:</p>
+<h4 id="cn-m26-616"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-617">On <b>PLABDM01</b>, the <b>Certification Authority </b>console window is open.</p>
+<p id="cn-m26-618">Then, right-click the <b>Certificate Templates </b>folder and select <b>Manage</b>.</p>
+<p id="cn-m26-619"></p><figure><img class="cn-img" id="cn-image-m26-c-78" src="PKIConcepts_files/image-m26-c-78.jpg" alt="Figure 4.1 Screenshot of PLABDM01: The Certification Authority console window is displayed."><figcaption>Figure 4.1 Screenshot of PLABDM01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-621"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-622">The <b>Certificate Templates Console </b>window opens.</p>
+<p id="cn-m26-623">Scroll down the templates list and right-click on <b>User</b>, and then select <b>Duplicate Template</b>.</p>
+<p id="cn-m26-624"></p><figure><img class="cn-img" id="cn-image-m26-c-79" src="PKIConcepts_files/image-m26-c-79.jpg" alt="Figure 4.2 Screenshot of PLABDM01: The Certification Templates console window is displayed."><figcaption>Figure 4.2 Screenshot of PLABDM01: The Certification Templates console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-626"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-627">On the <b>Properties of New Template </b>dialog box, click the <b>General </b>tab.</p>
+<h4 id="cn-m26-628"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-629">In the <b>General </b>tab, click inside the <b>Template display name </b>text box and type-over the existing text with the following and then click <b>Apply</b>.</p>
+<pre id="cn-m26-630"><code>SecureUser
+</code></pre>
+<p id="cn-m26-631"></p><figure><img class="cn-img" id="cn-image-m26-c-80" src="PKIConcepts_files/image-m26-c-80.jpg" alt="Figure 4.3 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 4.3 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-633"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-634">Then, click the <b>Request Handling </b>tab.</p>
+<p id="cn-m26-635">In the <b>Request Handling </b>tab, select <b>Prompt the user during enrollment </b>option.</p>
+<p id="cn-m26-636">Click <b>Apply</b>.</p>
+<span class="cn-quote" id="cn-m26-637"><b><i>Note</i></b><i>: For the 
+purpose of this lab, we will use this option Prompt the user during 
+enrolment. In an actual deployment, users are not prompted by any 
+message when they are automatically enrolled for a certificate. </i></span>
+<p id="cn-m26-638"></p><figure><img class="cn-img" id="cn-image-m26-c-81" src="PKIConcepts_files/image-m26-c-81.jpg" alt="Figure 4.4 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 4.4 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-640"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-641">Then, click the <b>Security </b>tab.</p>
+<p id="cn-m26-642">In the <b>Security </b>tab, ensure that the <b>Authenticated Users </b>security group is selected.</p>
+<p id="cn-m26-643">Under the <b>Permissions for Authenticated Users </b>section, select <b>AutoEnroll </b>check box.</p>
+<p id="cn-m26-644">Click <b>Apply</b>.</p>
+<h4 id="cn-m26-645"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-646">Then, select the <b>Superseded Templates </b>tab. In the <b>Superseded Templates </b>folder tab and click <b>Add</b>.</p>
+<p id="cn-m26-647"></p><figure><img class="cn-img" id="cn-image-m26-c-82" src="PKIConcepts_files/image-m26-c-82.jpg" alt="Figure 4.5 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 4.5 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-649"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-650">In the <b>Add Superseded Template </b>tab, scroll down the list of certificate templates and select <b>User</b>.</p>
+<p id="cn-m26-651">Click <b>OK</b>.</p>
+<p id="cn-m26-652"></p><figure><img class="cn-img" id="cn-image-m26-c-83" src="PKIConcepts_files/image-m26-c-83.jpg" alt="Figure 4.6 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 4.6 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-654"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-655">Back in the <b>Superseded Templates </b>tab, the <b>User </b>template is now added.</p>
+<p id="cn-m26-656">Click <b>Apply</b>.</p>
+<p id="cn-m26-657"></p><figure><img class="cn-img" id="cn-image-m26-c-84" src="PKIConcepts_files/image-m26-c-84.jpg" alt="Figure 4.7 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 4.7 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-659"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-660">Then, select the <b>Subject Name </b>tab.</p>
+<p id="cn-m26-661">In the <b>Subject Name </b>tab, clear the following checkboxes:</p>
+<ul id="cn-m26-662">
+<li id="cn-m26-662"><b>Include e-mail name in subject name</b></li>
+<li id="cn-m26-663"><b>E-mail name</b></li>
+</ul>
+<p id="cn-m26-664">Click <b>OK</b>.</p>
+<span class="cn-quote" id="cn-m26-665"><b><i>Note</i></b><i>: You cleared the two checkboxes as AD users in Practice Labs domain do not have those attributes defined in their accounts.</i></span>
+<p id="cn-m26-666"></p><figure><img class="cn-img" id="cn-image-m26-c-85" src="PKIConcepts_files/image-m26-c-85.jpg" alt="Figure 4.8 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 4.8 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-668"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-669">Close <b>Certificate Templates Console </b>window.</p>
+<h4 id="cn-m26-670"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-671">Next, you need to include <b>SecureUser </b>certificate template in the list of certificates that can be issued by <b>PLABDM01</b>.</p>
+<p id="cn-m26-672">Ensure that you are back on the <b>Certification Authority </b>console window.</p>
+<p id="cn-m26-673">Right-click the <b>Certificate Templates </b>folder, select <b>New </b>and then select <b>Certificate Template to Issue</b>.</p>
+<p id="cn-m26-674"></p><figure><img class="cn-img" id="cn-image-m26-c-86" src="PKIConcepts_files/image-m26-c-86.jpg" alt="Figure 4.9 Screenshot of PLABDM01: The Certification Authority console window is displayed."><figcaption>Figure 4.9 Screenshot of PLABDM01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-676"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-677">In the <b>Enable Certificate Templates </b>dialog box, scroll down the list of templates, select <b>SecureUser </b>and then click <b>OK</b>.</p>
+<p id="cn-m26-678"></p><figure><img class="cn-img" id="cn-image-m26-c-87" src="PKIConcepts_files/image-m26-c-87.jpg" alt="Figure 4.10 Screenshot of PLABDM01: The Enable Certificate Templates dialog box is displayed."><figcaption>Figure 4.10 Screenshot of PLABDM01: The Enable Certificate Templates dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-680"><b><i>Step 14</i></b></h4>
+<span class="cn-quote" id="cn-m26-681"><b><i>Note: </i></b><i>If you get
+ a system message indicating that the certificate couldn’t be added this
+ time, click Cancel. This can happen due to some system delays in the 
+Certification Authority Server. Start over with Step 13 to attempt to 
+add the new certificate template.</i></span>
+<p id="cn-m26-682">You have just added the <b>SecureUser </b>template as one of the certificate templates that can be issued by <b>PLABDC01 </b>server.</p>
+<p id="cn-m26-683">Minimize <b>Certification Authority </b>window as you will need this application in a later task.</p>
+<p id="cn-m26-684"></p><figure><img class="cn-img" id="cn-image-m26-c-88" src="PKIConcepts_files/image-m26-c-88.jpg" alt="Figure 4.11 Screenshot of PLABDM01: The Certification Authority console window is displayed."><figcaption>Figure 4.11 Screenshot of PLABDM01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m26-686"><b>Task 2 - Create a Group Policy for Certificate Auto Enrollment</b></h3>
+<p id="cn-m26-687">In this task, you will create a Group Policy Object to automate the deployment of user certificates to domain network users.</p>
+<p id="cn-m26-688">To create a GPO for user certificate auto-enrolment, perform the following steps:</p>
+<h4 id="cn-m26-689"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-690">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m26-691">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>menu and select <b>Group Policy Management</b>.</p>
+<h4 id="cn-m26-692"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-693">In the <b>Group Policy Management </b>console window, expand <b>Forest</b>: <b>PRACTICELABS.COM &gt; Domains &gt; PRACTICELABS.COM </b>&gt; <b>APAC </b>and click <b>IT </b>organizational unit.</p>
+<p id="cn-m26-694">Right-click the <b>IT </b>OU and select <b>Create a GPO in this domain and link it here…</b></p>
+<p id="cn-m26-695"></p><figure><img class="cn-img" id="cn-image-m26-c-89" src="PKIConcepts_files/image-m26-c-89.jpg" alt="Figure 4.12 Screenshot of PLABDC01: The Group Policy Management console window is displayed."><figcaption>Figure 4.12 Screenshot of PLABDC01: The Group Policy Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-697"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-698">In the <b>New GPO </b>dialog box, type the following name and click <b>OK</b>.</p>
+<pre id="cn-m26-699"><code>Certificate Auto Enrollment
+</code></pre>
+<p id="cn-m26-700"></p><figure><img class="cn-img" id="cn-image-m26-c-90" src="PKIConcepts_files/image-m26-c-90.jpg" alt="Figure 4.13 Screenshot of PLABDC01: The New GPO dialog box is displayed."><figcaption>Figure 4.13 Screenshot of PLABDC01: The New GPO dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-702"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-703">Expand the <b>IT </b>OU then right-click <b>Certificate Auto Enrollment  </b>and select <b>Edit</b>.</p>
+<span class="cn-quote" id="cn-m26-704"><b><i>Note</i></b><i>: If the 
+Group Policy Management Console message box appears indicating you have 
+selected a link to a Group Policy Object (GPO), click Do not show this 
+message again checkbox then click </i><b><i>OK</i></b><i>.</i></span>
+<p id="cn-m26-705"></p><figure><img class="cn-img" id="cn-image-m26-c-91" src="PKIConcepts_files/image-m26-c-91.jpg" alt="Figure 4.14 Screenshot of PLABDC01: The Group Policy Management console window is displayed."><figcaption>Figure 4.14 Screenshot of PLABDC01: The Group Policy Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-707"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-708">The <b>Group Policy Management Editor </b>window opens.</p>
+<p id="cn-m26-709">Expand <b>User Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings </b>then click <b>Public Key Policies</b>.</p>
+<p id="cn-m26-710">Observe the <b>Public Key Policies </b>details at the right.</p>
+<p id="cn-m26-711">Then, right-click <b>Certificate Services Client - Auto-Enrollment </b>and select <b>Properties</b>.</p>
+<p id="cn-m26-712"></p><figure><img class="cn-img" id="cn-image-m26-c-92" src="PKIConcepts_files/image-m26-c-92.jpg" alt="Figure 4.15 Screenshot of PLABDC01: The Group Policy Management console window is displayed."><figcaption>Figure 4.15 Screenshot of PLABDC01: The Group Policy Management console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-714"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-715">In the <b>Certificate Services Client-Auto-Enrollment… </b>dialog box, change the <b>Configuration Model </b>drop-down list to <b>Enabled</b>.</p>
+<h4 id="cn-m26-716"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-717">A number of checkboxes will become enabled as a result.</p>
+<p id="cn-m26-718">Select the following check boxes:</p>
+<ul id="cn-m26-719">
+<li id="cn-m26-719"><b>Renew expired certificates, update pending certificates, and remove revoked certificates</b></li>
+<li id="cn-m26-720"><b>Update certificates that use certificate templates</b></li>
+<li id="cn-m26-721"><b>Display user notifications for expiring certificates in user and machine MY store</b></li>
+</ul>
+<p id="cn-m26-722">Click <b>OK</b>.</p>
+<p id="cn-m26-723"></p><figure><img class="cn-img" id="cn-image-m26-c-93" src="PKIConcepts_files/image-m26-c-93.jpg" alt="Figure 4.16 Screenshot of PLABDC01: The Certificate Services Client - Auto-Enrollment Properties dialog box is displayed."><figcaption>Figure 4.16 Screenshot of PLABDC01: The Certificate Services Client - Auto-Enrollment Properties dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-725"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-726">Close <b>Group Policy Management Editor </b>application window.</p>
+<p id="cn-m26-727">Similarly, exit from the <b>Group Policy Management </b>console window.</p>
+<h4 id="cn-m26-728"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-729">Right-click <b>Start </b>and select <b>Command Prompt</b>.</p>
+<p id="cn-m26-730"></p><figure><img class="cn-img" id="cn-image-m26-c-94" src="PKIConcepts_files/image-m26-c-94.jpg" alt="Figure 4.17 Screenshot of PLABDC01: The Start button shortcut menu is displayed"><figcaption>Figure 4.17 Screenshot of PLABDC01: The Start button shortcut menu is displayed</figcaption></figure><p></p>
+<h4 id="cn-m26-732"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-733">To propagate the new user Group Policy settings to the domain, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-734"><code>gpupdate /force
+</code></pre>
+<p id="cn-m26-735">On the next prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-736"><code>exit
+</code></pre>
+<p id="cn-m26-737"></p><figure><img class="cn-img" id="cn-image-m26-c-95" src="PKIConcepts_files/image-m26-c-95.jpg" alt="Figure 4.18 Screenshot of PLABDC01: A command is entered in the command prompt window."><figcaption>Figure 4.18 Screenshot of PLABDC01: A command is entered in the command prompt window.</figcaption></figure><p></p>
+<h3 id="cn-m26-739"><b>Task 3 - Verify the Certificate Issuance</b></h3>
+<p id="cn-m26-740">After configuring the certificate auto enrolment 
+policy in the previous task, you will now sign on as a domain user 
+located in the IT organizational unit and verify that a certificate is 
+issued to the user.</p>
+<p id="cn-m26-741">To verify certificate issuance, perform the following steps:</p>
+<h4 id="cn-m26-742"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-743">You need to temporarily disable server auto login to log on to the lab devices using another user account.</p>
+<p id="cn-m26-744">Click the <b>Access your settings </b>tab, under <b>Device &gt; Server auto login</b>, click the <b>Disable </b>button. Please note that this <b>Server auto login </b>setting is saved in your profile and will apply in <b>EVERY </b>lab session that you will perform with Practice Labs.</p>
+<p id="cn-m26-745">Please note that you can select the <b>Enable </b>button again in the <b>Device &gt; Server auto login </b>to have the convenience of being automatically logged on as the default administrator after this exercise.</p>
+<h4 id="cn-m26-746"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-747">Connect to <b>PLABWIN10 </b>computer.</p>
+<span class="cn-alert" id="cn-m26-748"><b>Important</b>: Since Server auto login was disabled previously, you may see the <b>PRACTICELABS\Administrator </b>already signed in. If this is the case, please sign out <b>PRACTICELABS\Administrator </b>from <b>PLABWIN10</b>.</span>
+<p id="cn-m26-749">Connect again to <b>PLABWIN10</b>.</p>
+<p id="cn-m26-750">On the sign on screen, click <b>Other User</b>.</p>
+<h4 id="cn-m26-751"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-752">In the <b>User name </b>box, type:</p>
+<pre id="cn-m26-753"><code>lisa.scott
+</code></pre>
+<p id="cn-m26-754">In the <b>Password </b>box, type:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m26-756">Press <b>Enter</b>.</p>
+<h4 id="cn-m26-757"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-758">When signed on, access the system tray and click the arrow to expand.</p>
+<p id="cn-m26-759">You should get a certificate icon.</p>
+<p id="cn-m26-760">Then click on the certificate icon to proceed with the enrollment of the user certificate for <b>Lisa Scott</b>.</p>
+<span class="cn-alert" id="cn-m26-761"><b>Important</b>: There will be a
+ slight delay about 1 minute before the certificate icon appears at the 
+system tray. If you don't get a certificate, open a command prompt and 
+type <b>gpupdate /force</b>. A certificate icon will appear on the system tray. If no certificate icon appears, sign out and sign back in as <b>lisa.scott</b>.</span>
+<p id="cn-m26-762"></p><figure><img class="cn-img" id="cn-image-m26-c-96" src="PKIConcepts_files/image-m26-c-96.jpg" alt="Figure 4.19 Screenshot of PLABWIN10: The system tray is selected, and a notification about certificate enrolment is displayed."><figcaption>Figure 4.19 Screenshot of PLABWIN10: The system tray is selected, and a notification about certificate enrolment is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-764"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-765">On the Before you begin page of the <b>Certificate Enrollment </b>wizard, click <b>Next</b>.</p>
+<h4 id="cn-m26-766"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-767">The <b>Request Certificates </b>page will display <b>SecureUser </b>certificate template that you created earlier.</p>
+<p id="cn-m26-768">Click <b>Enroll</b>.</p>
+<p id="cn-m26-769"></p><figure><img class="cn-img" id="cn-image-m26-c-97" src="PKIConcepts_files/image-m26-c-97.jpg" alt="Figure 4.20 Screenshot of PLABWIN10: The Request Certificates page is displayed."><figcaption>Figure 4.20 Screenshot of PLABWIN10: The Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-771"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-772">Please wait while certificate enrolment is being processed.</p>
+<h4 id="cn-m26-773"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-774">Lisa Scott will enroll successfully for the <b>SecureUser </b>certificate template.</p>
+<p id="cn-m26-775"></p><figure><img class="cn-img" id="cn-image-m26-c-98" src="PKIConcepts_files/image-m26-c-98.jpg" alt="Figure 4.21 Screenshot of PLABWIN10: The Certificate Installation Results page is displayed."><figcaption>Figure 4.21 Screenshot of PLABWIN10: The Certificate Installation Results page is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<p id="cn-m26-779">Click <b>Finish</b>.</p>
+<p id="cn-m26-780">The certificate issued to Lisa Scott can be used for a number of tasks like protecting her personal files using <b>EFS </b>and send encrypted e-mail messages if there is an existing e-mail server in the network.</p>
+<h4 id="cn-m26-781"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-782">Right-click <b>Start </b>and mouse over <b>Shut down or sign out</b>.</p>
+<p id="cn-m26-783">Then, select <b>Sign out.</b></p>
+<span class="cn-alert" id="cn-m26-784">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-785"><b>Exercise 5 - Implement Key Archival</b></h2>
+<p id="cn-m26-786">To ensure the recoverability of issued certificates, a
+ certification authority (CA) server must be configured to archive keys 
+or certificates that it has issued to users and computers. Key archival 
+means that the CA server has a copy of all issued certificates and 
+therefore allows recovery of certificates lost by the user due to a 
+number of reasons such as theft of the smart card, an accidental 
+reformat of the user workstation where the user certificate is saved and
+ among other things.</p>
+<p id="cn-m26-787">In this exercise, you will learn to how to set up key
+ archival by first enabling a key recovery agent in certification 
+authority and issue a recovery agent certificate to the CA 
+administrator.</p>
+<p id="cn-m26-788">To get additional information about how to configure 
+key archival, please refer to your course material or use your preferred
+ search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-790">After completing this exercise, you will be able to:</p>
+<ul id="cn-m26-791">
+<li id="cn-m26-791">Enable a Key Recovery Agent.</li>
+<li id="cn-m26-792">Request for Key Recovery Agent Certificate</li>
+<li id="cn-m26-793">Issue Key Recovery Agent certificate</li>
+<li id="cn-m26-794">Configure CA for Key Archival</li>
+<li id="cn-m26-795">Create a new certificate template enabled for archiving</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m26-797">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m26-798">
+<li id="cn-m26-798"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m26-799"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m26-800"><b>PLABWIN10 </b>(Windows 10 - Domain Workstation)</li>
+</ul>
+<p id="cn-m26-801"><img class="cn-img" id="cn-image-m26-c-99" src="PKIConcepts_files/image-m26-c-99.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m26-802"><b>Task 1 - Enable a Key Recovery Agent</b></h3>
+<p id="cn-m26-803">The Key Recovery Agent role is the security-sensitive
+ role that must be manually configured to be able to recover lost keys 
+issued by the Certification Authority to users in the domain network. In
+ this task, you will enable the administrator account for Key Recovery 
+Agent role.</p>
+<p id="cn-m26-804">To enable the key recovery agent, perform the following steps:</p>
+<h4 id="cn-m26-805"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-806">Connect to <b>PLABDM01 </b>device.</p>
+<span class="cn-quote" id="cn-m26-807"><b><i>Note: </i></b><i>Since the </i><b><i>Server auto login </i></b><i>setting is disabled, you will be prompted for the password for the PRACTICELABS\Administrator. Use </i><span class="cn-password"><i>Passw0rd </i></span><i>as the password.</i></span>
+<p id="cn-m26-808">Restore the <b>Certification Authority </b>from the taskbar.</p>
+<h4 id="cn-m26-809"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-810">In the <b>Certificate Authority </b>window, right-click the <b>Certificate Templates </b>folder, select <b>New </b>and then select <b>Certificate Template to Issue</b>.</p>
+<h4 id="cn-m26-811"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-812">In the <b>Enable Certificate Templates </b>dialog box, scroll down the list.</p>
+<p id="cn-m26-813">Then, select <b>Key Recovery Agent </b>and click <b>OK</b>.</p>
+<p id="cn-m26-814">Minimize <b>Certification Authority </b>snap-in.</p>
+<p id="cn-m26-815"></p><figure><img class="cn-img" id="cn-image-m26-c-100" src="PKIConcepts_files/image-m26-c-100.jpg" alt="Figure 5.1 Screenshot of PLABDM01: The Enable Certificate Templates dialog box is displayed."><figcaption>Figure 5.1 Screenshot of PLABDM01: The Enable Certificate Templates dialog box is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m26-817"><b>Task 2 - Request for Key Recovery Agent Certificate</b></h3>
+<p id="cn-m26-818">To request for a Key Recovery Agent Certificate for the administrator account, do the following steps:</p>
+<h4 id="cn-m26-819"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-820">In the next few steps, you will enroll the <b>PRACTICELABS\Administrator </b>account to use a <b>Key Recovery Agent </b>certificate.</p>
+<p id="cn-m26-821">On <b>PLABDM01</b>, right-click <b>Start </b>and select <b>Run</b>.</p>
+<h4 id="cn-m26-822"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-823">In the <b>Run </b>dialog box, type the following command and press <b>Enter</b>. Alternatively, click <b>OK</b>.</p>
+<pre id="cn-m26-824"><code>mmc
+</code></pre>
+<h4 id="cn-m26-825"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-826">In the <b>Console1 </b>window, click <b>File </b>and select <b>Add/Remove Snap-in</b>.</p>
+<h4 id="cn-m26-827"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-828">In the <b>Add or Remove Snap-ins </b>window, select <b>Certificates </b>and click <b>Add</b>.</p>
+<p id="cn-m26-829"></p><figure><img class="cn-img" id="cn-image-m26-c-101" src="PKIConcepts_files/image-m26-c-101.jpg" alt="Figure 5.2 Screenshot of PLABDM01: The Add or Remove Snap-ins dialog box is displayed."><figcaption>Figure 5.2 Screenshot of PLABDM01: The Add or Remove Snap-ins dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-831"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-832">In the <b>Certificates </b>dialog box, ensure that <b>My user account </b>option is selected.</p>
+<p id="cn-m26-833">Click <b>Finish</b>.</p>
+<p id="cn-m26-834"></p><figure><img class="cn-img" id="cn-image-m26-c-102" src="PKIConcepts_files/image-m26-c-102.jpg" alt="Figure 5.3 Screenshot of PLABDM01: The Add or Remove Snap-ins dialog box is displayed."><figcaption>Figure 5.3 Screenshot of PLABDM01: The Add or Remove Snap-ins dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-836"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-837">Click <b>OK </b>to close <b>Add/Remove Snap-ins </b>dialog box.</p>
+<p id="cn-m26-838"></p><figure><img class="cn-img" id="cn-image-m26-c-103" src="PKIConcepts_files/image-m26-c-103.jpg" alt="Figure 5.4 Screenshot of PLABDM01: The Add or Remove Snap-ins dialog box is displayed."><figcaption>Figure 5.4 Screenshot of PLABDM01: The Add or Remove Snap-ins dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-840"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-841">Back on the <b>Console1 </b>window.</p>
+<p id="cn-m26-842">Expand <b>Certificates-Current User </b>node.</p>
+<p id="cn-m26-843">Then, right-click the <b>Personal </b>folder, select <b>All Tasks </b>and then select <b>Request New Certificate</b>.</p>
+<p id="cn-m26-844"></p><figure><img class="cn-img" id="cn-image-m26-c-104" src="PKIConcepts_files/image-m26-c-104.jpg" alt="Figure 5.5 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 5.5 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-846"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-847">On the <b>Before you begin </b>page of the <b>Certificate Enrollment </b>wizard, click <b>Next</b>.</p>
+<h4 id="cn-m26-848"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-849">On the <b>Select Certificate Enrollment Policy </b>page, keep the default selection and click <b>Next</b>.</p>
+<h4 id="cn-m26-850"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-851">In the <b>Request Certificates </b>page, select <b>Key Recovery Agent </b>checkbox.</p>
+<p id="cn-m26-852">Click <b>Enroll</b>.</p>
+<p id="cn-m26-853"></p><figure><img class="cn-img" id="cn-image-m26-c-105" src="PKIConcepts_files/image-m26-c-105.jpg" alt="Figure 5.6 Screenshot of PLABDM01: The Request Certificates window is displayed."><figcaption>Figure 5.6 Screenshot of PLABDM01: The Request Certificates window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-855"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-856">The enrolment for <b>Key Recovery Agent </b>is being processed.</p>
+<p id="cn-m26-857">On the <b>Certificate Installation Results </b>page, click <b>Finish </b>when page reports a pending enrollment.</p>
+<p id="cn-m26-858">Since <b>Key Recovery Agent </b>certificate is a security-sensitive key, as it indicates “<b>Enrollment pending</b>” meaning it will have to be issued (approved) manually to the user who requested for it.</p>
+<p id="cn-m26-859"></p><figure><img class="cn-img" id="cn-image-m26-c-106" src="PKIConcepts_files/image-m26-c-106.jpg" alt="Figure 5.7 Screenshot of PLABDM01: The Certificate Installation Results window is displayed."><figcaption>Figure 5.7 Screenshot of PLABDM01: The Certificate Installation Results window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-861"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-862">Minimize <b>Console1 </b>window.</p>
+<h3 id="cn-m26-863"><b>Task 3-  Issue Key Recovery Agent certificate</b></h3>
+<p id="cn-m26-864">To approve the issuance of the Key Recovery Agent Certificate, perform the following steps:</p>
+<h4 id="cn-m26-865"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-866">On <b>PLABDM01</b>, restore the <b>Certification Authority </b>window from the taskbar.</p>
+<p id="cn-m26-867">Navigate to <b>Pending Requests </b>folder, on the details pane right-click on the Certificate, point to <b>All Tasks </b>then click <b>Issue</b>.</p>
+<p id="cn-m26-868"></p><figure><img class="cn-img" id="cn-image-m26-c-107" src="PKIConcepts_files/image-m26-c-107.jpg" alt="Figure 5.8 Screenshot of PLABDM01: The Certification Authority window is displayed."><figcaption>Figure 5.8 Screenshot of PLABDM01: The Certification Authority window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-870"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-871">Click the <b>Issued Certificates </b>folder, right-click the certificate based on <b>Key Recovery Agent </b>template.</p>
+<p id="cn-m26-872">Then, select <b>Open</b>.</p>
+<p id="cn-m26-873"></p><figure><img class="cn-img" id="cn-image-m26-c-108" src="PKIConcepts_files/image-m26-c-108.jpg" alt="Figure 5.9 Screenshot of PLABDM01: The Certification Authority window is displayed."><figcaption>Figure 5.9 Screenshot of PLABDM01: The Certification Authority window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-875"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-876">In the <b>Certificates </b>dialog box, click the <b>Details </b>tab.</p>
+<h4 id="cn-m26-877"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-878">Under the <b>Details </b>tab, click <b>Copy to File</b>.</p>
+<p id="cn-m26-879"></p><figure><img class="cn-img" id="cn-image-m26-c-109" src="PKIConcepts_files/image-m26-c-109.jpg" alt="Figure 5.10 Screenshot of PLABDM01: The Certification Authority window is displayed."><figcaption>Figure 5.10 Screenshot of PLABDM01: The Certification Authority window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-881"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-882">On the <b>Welcome to the Certificate Export Wizard </b>page of the Certificate Export Wizard, click <b>Next</b>.</p>
+<h4 id="cn-m26-883"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-884">In the <b>Export File Format </b>page, the default <b>DER encoded binary X.509 (.CER) </b>format option is selected.</p>
+<p id="cn-m26-885">Click <b>Next</b>.</p>
+<p id="cn-m26-886"></p><figure><img class="cn-img" id="cn-image-m26-c-110" src="PKIConcepts_files/image-m26-c-110.jpg" alt="Figure 5.11 Screenshot of PLABDM01: The Export File Format page is displayed."><figcaption>Figure 5.11 Screenshot of PLABDM01: The Export File Format page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-888"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-889">In the <b>File to Export </b>page, click in the <b>File name </b>box and type the following name in the File name text box and click <b>Next</b>:</p>
+<pre id="cn-m26-890"><code>c:\AdminKRA
+</code></pre>
+<p id="cn-m26-891"></p><figure><img class="cn-img" id="cn-image-m26-c-111" src="PKIConcepts_files/image-m26-c-111.jpg" alt="Figure 5.12 Screenshot of PLABDM01: The File to Export page is displayed."><figcaption>Figure 5.12 Screenshot of PLABDM01: The File to Export page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-893"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-894">Click <b>Finish </b>when you see <b>Completing the Certificate Export Wizard </b>box.</p>
+<p id="cn-m26-895"></p><figure><img class="cn-img" id="cn-image-m26-c-112" src="PKIConcepts_files/image-m26-c-112.jpg" alt="Figure 5.13 Screenshot of PLABDM01: The Completing the Certificate Export Wizard page is displayed."><figcaption>Figure 5.13 Screenshot of PLABDM01: The Completing the Certificate Export Wizard page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-897"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-898">Click <b>OK </b>when the message box <b>"The export was successful" </b>appears.</p>
+<p id="cn-m26-899">Similarly, click <b>OK </b>on the <b>Certificate </b>dialog box to close it.</p>
+<p id="cn-m26-900">Minimize the <b>Certification Authority </b>window.</p>
+<h4 id="cn-m26-901"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-902">Restore the <b>Console1 </b>window from the taskbar.</p>
+<p id="cn-m26-903">Right-click the <b>Personal </b>folder, select <b>All Tasks </b>and then select <b>Import</b>.</p>
+<p id="cn-m26-904"></p><figure><img class="cn-img" id="cn-image-m26-c-113" src="PKIConcepts_files/image-m26-c-113.jpg" alt="Figure 5.14 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 5.14 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-906"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-907">On the <b>Welcome to the Certificate Import Wizard </b>page of the Certificate Import Wizard, click <b>Next</b>.</p>
+<h4 id="cn-m26-908"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-909">On the <b>File to Import </b>page, click in the <b>File name </b>box, type the following name and click <b>Next</b>:</p>
+<pre id="cn-m26-910"><code>c:\AdminKRA.cer
+</code></pre>
+<span class="cn-quote" id="cn-m26-911"><b><i>Note</i></b><i>: You can use </i><b><i>Browse</i></b><i>… button to find the </i><b><i>AdminKRA.cer </i></b><i>certificate file.</i></span>
+<p id="cn-m26-912"></p><figure><img class="cn-img" id="cn-image-m26-c-114" src="PKIConcepts_files/image-m26-c-114.jpg" alt="Figure 5.15 Screenshot of PLABDM01: The File to Export page is displayed."><figcaption>Figure 5.15 Screenshot of PLABDM01: The File to Export page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-914"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-915">In the <b>Certificate Store </b>page, keep the default location for a certificate in the <b>Personal </b>store and click <b>Next</b>.</p>
+<h4 id="cn-m26-916"><b><i>Step 14</i></b></h4>
+<p id="cn-m26-917">When the <b>Completing the Certificate Import Wizard </b>page appears, click <b>Finish</b>.</p>
+<p id="cn-m26-918"></p><figure><img class="cn-img" id="cn-image-m26-c-115" src="PKIConcepts_files/image-m26-c-115.jpg" alt="Figure 5.16 Screenshot of PLABDM01: The Completing the Certificate Import Wizard page is displayed."><figcaption>Figure 5.16 Screenshot of PLABDM01: The Completing the Certificate Import Wizard page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-920"><b><i>Step 15</i></b></h4>
+<p id="cn-m26-921">Click <b>OK </b>when prompted that the import was successful.</p>
+<h4 id="cn-m26-922"><b><i>Step 16</i></b></h4>
+<p id="cn-m26-923">Back in the <b>Console1 </b>window, expand <b>Certificates - Current User</b>, expand  <b>Personal </b>and click the <b>Certificates </b>folder.</p>
+<p id="cn-m26-924">Notice the certificate issued to <b>Administrator </b>with the <b>Intended Purpose - Key Recovery Agent </b>is now available.</p>
+<p id="cn-m26-925">Minimize <b>Console1 </b>window.</p>
+<p id="cn-m26-926"></p><figure><img class="cn-img" id="cn-image-m26-c-116" src="PKIConcepts_files/image-m26-c-116.jpg" alt="Figure 5.17 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 5.17 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m26-928"><b>Task 4 - Configure CA for Key Archival</b></h3>
+<p id="cn-m26-929">In this task, you will configure the Certification Authority to keep a copy of all issued certificates by enabling key archival.</p>
+<p id="cn-m26-930">To setup key archival on the CA, perform the following steps:</p>
+<h4 id="cn-m26-931"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-932">On the <b>PLABDM01 </b>server, restore <b>Certification Authority </b>window from taskbar if not yet restored.</p>
+<p id="cn-m26-933">Right-click <b>PRACTICELABS-PLABDM01-CA </b>and select <b>Properties</b>.</p>
+<p id="cn-m26-934"></p><figure><img class="cn-img" id="cn-image-m26-c-117" src="PKIConcepts_files/image-m26-c-117.jpg" alt="Figure 5.18 Screenshot of PLABDM01: The Certification Authority window is displayed."><figcaption>Figure 5.18 Screenshot of PLABDM01: The Certification Authority window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-936"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-937">In the <b>PRACTICELABS-PLABDM01-CA Properties </b>window, select the <b>Recovery Agents </b>tab.</p>
+<h4 id="cn-m26-938"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-939">Under the <b>Recovery Agents </b>tab, click <b>Archive the key </b>option.</p>
+<p id="cn-m26-940">Click <b>Add…</b></p>
+<p id="cn-m26-941"></p><figure><img class="cn-img" id="cn-image-m26-c-118" src="PKIConcepts_files/image-m26-c-118.jpg" alt="Figure 5.19 Screenshot of PLABDM01: The PRACTICELABS-PLABDM01-CA Properties dialog box is displayed."><figcaption>Figure 5.19 Screenshot of PLABDM01: The PRACTICELABS-PLABDM01-CA Properties dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-943"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-944">The <b>Key Recovery Agent Selection </b>message box displays the certificate that was issued earlier to the Administrator.</p>
+<p id="cn-m26-945">Click <b>OK</b>.</p>
+<p id="cn-m26-946"></p><figure><img class="cn-img" id="cn-image-m26-c-119" src="PKIConcepts_files/image-m26-c-119.jpg" alt="Figure 5.20 Screenshot of PLABDM01: The Windows Security - Key Recovery Agent Selection message box is displayed."><figcaption>Figure 5.20 Screenshot of PLABDM01: The Windows Security - Key Recovery Agent Selection message box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-948"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-949">Back in the <b>PRACTITCELABS-PLABDM01-CA Properties </b>dialog, click <b>OK </b>when the certificate is added.</p>
+<p id="cn-m26-950"></p><figure><img class="cn-img" id="cn-image-m26-c-120" src="PKIConcepts_files/image-m26-c-120.jpg" alt="Figure 5.21 Screenshot of PLABDM01: The Windows Security - Key Recovery Agent Selection message box is displayed."><figcaption>Figure 5.21 Screenshot of PLABDM01: The Windows Security - Key Recovery Agent Selection message box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-952"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-953">In the <b>Certification Authority </b>message box, select <b>Yes </b>to restart Active Directory Certificate Services.</p>
+<p id="cn-m26-954"></p><figure><img class="cn-img" id="cn-image-m26-c-121" src="PKIConcepts_files/image-m26-c-121.jpg" alt="Figure 5.22 Screenshot of PLABDM01: The Certificate Authority dialog box is displayed."><figcaption>Figure 5.22 Screenshot of PLABDM01: The Certificate Authority dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-956"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-957">Please wait while the <b>Active Directory Certificate Services </b>is stopped and started.</p>
+<p id="cn-m26-958">Keep <b>Certification Authority </b>window open for the next activity.</p>
+<p id="cn-m26-959"></p><figure><img class="cn-img" id="cn-image-m26-c-122" src="PKIConcepts_files/image-m26-c-122.jpg" alt="Figure 5.23 Screenshot of PLABDM01: The Certification Authority console window is displayed."><figcaption>Figure 5.23 Screenshot of PLABDM01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m26-961"><b>Task 5 - Create a New Certificate Template Enabled for Archiving</b></h3>
+<p id="cn-m26-962">In this task, you will create a duplicate of an 
+existing certificate template, then customize the properties of the new 
+template and enable it for certificate archiving.</p>
+<p id="cn-m26-963">To enable a custom certificate template for archiving, perform the following steps:</p>
+<h4 id="cn-m26-964"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-965">On <b>PLABDM01</b>, ensure that the <b>Certification Authority </b>window is open.</p>
+<p id="cn-m26-966">Select the <b>Certificate Templates </b>folder, right-click and select <b>Manage</b>.</p>
+<h4 id="cn-m26-967"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-968">In the <b>Certificate Templates Console </b>window, scroll down and right-click <b>User </b>and then select <b>Duplicate Template</b>.</p>
+<p id="cn-m26-969"></p><figure><img class="cn-img" id="cn-image-m26-c-123" src="PKIConcepts_files/image-m26-c-123.jpg" alt="Figure 5.24 Screenshot of PLABDM01: The Certificate Templates console is displayed."><figcaption>Figure 5.24 Screenshot of PLABDM01: The Certificate Templates console is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-971"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-972">In the <b>Properties of New Template </b>window, click the <b>General </b>tab.</p>
+<h4 id="cn-m26-973"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-974">In the <b>General </b>tab, in the <b>Template display name </b>box, type-over the existing text with the following and click <b>Apply</b>.</p>
+<pre id="cn-m26-975"><code>EFSUser
+</code></pre>
+<p id="cn-m26-976"></p><figure><img class="cn-img" id="cn-image-m26-c-124" src="PKIConcepts_files/image-m26-c-124.jpg" alt="Figure 5.25 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 5.25 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-978"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-979">Then, click the <b>Request Handling </b>tab.</p>
+<p id="cn-m26-980">Under the <b>Request Handling </b>tab, click <b>Archive Subject's encryption private key </b>checkbox.</p>
+<p id="cn-m26-981">The <b>Changing Key Archival Property </b>message box appears saying "<b>Key archive is only enabled for future certificates</b>" just click <b>OK</b>.</p>
+<p id="cn-m26-982"></p><figure><img class="cn-img" id="cn-image-m26-c-125" src="PKIConcepts_files/image-m26-c-125.jpg" alt="Figure 5.26 Screenshot of PLABDM01: The Changing Key Archival Properties message box is displayed."><figcaption>Figure 5.26 Screenshot of PLABDM01: The Changing Key Archival Properties message box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-984"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-985">Back in the <b>Properties of New Template </b>dialog box, click <b>Apply</b>.</p>
+<p id="cn-m26-986"></p><figure><img class="cn-img" id="cn-image-m26-c-126" src="PKIConcepts_files/image-m26-c-126.jpg" alt="Figure 5.27 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 5.27 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-988"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-989">Then, click <b>Subject name </b>tab.</p>
+<p id="cn-m26-990">In the <b>Subject Name </b>tab, clear the following check boxes:</p>
+<ul id="cn-m26-991">
+<li id="cn-m26-991">Include e-mail name in subject name</li>
+<li id="cn-m26-992">E-mail name</li>
+</ul>
+<span class="cn-quote" id="cn-m26-993"><b><i>Note</i></b><i>: The checkboxes indicated above were cleared as the user accounts in the domain lab do not have those attributes or properties.</i></span>
+<p id="cn-m26-994">Click <b>Apply</b>.</p>
+<p id="cn-m26-995"></p><figure><img class="cn-img" id="cn-image-m26-c-127" src="PKIConcepts_files/image-m26-c-127.jpg" alt="Figure 5.28 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 5.28 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-997"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-998">Go to the <b>Security </b>tab.</p>
+<p id="cn-m26-999">In the <b>Security </b>tab, select <b>Authenticated Users</b>, click <b>Enroll </b>checkbox.</p>
+<p id="cn-m26-1000">Click <b>OK </b>to save the changes.</p>
+<p id="cn-m26-1001"></p><figure><img class="cn-img" id="cn-image-m26-c-128" src="PKIConcepts_files/image-m26-c-128.jpg" alt="Figure 5.29 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed."><figcaption>Figure 5.29 Screenshot of PLABDM01: The Properties of New Template dialog box is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<h4 id="cn-m26-1005"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-1006">Close the <b>Certificate Templates Console </b>window.</p>
+<h4 id="cn-m26-1007"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-1008">Ensure that you are back to the <b>Certification Authority </b>console.</p>
+<p id="cn-m26-1009">Right-click <b>Certificate Templates</b>, select <b>New </b>and then select <b>Certificate Template to Issue</b>.</p>
+<p id="cn-m26-1010"></p><figure><img class="cn-img" id="cn-image-m26-c-129" src="PKIConcepts_files/image-m26-c-129.jpg" alt="Figure 5.30 Screenshot of PLABDM01: The Certification Authority console window is displayed."><figcaption>Figure 5.30 Screenshot of PLABDM01: The Certification Authority console window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1012"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-1013">In the <b>Enable Certificate Templates </b>dialog box, select <b>EFSUser </b>and click <b>OK</b>.</p>
+<p id="cn-m26-1014">Keep <b>Certification Authority </b>console window open.</p>
+<p id="cn-m26-1015"></p><figure><img class="cn-img" id="cn-image-m26-c-130" src="PKIConcepts_files/image-m26-c-130.jpg" alt="Figure 5.31 Screenshot of PLABDM01: The Enable Certificate Templates dialog box is displayed."><figcaption>Figure 5.31 Screenshot of PLABDM01: The Enable Certificate Templates dialog box is displayed.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m26-1017">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-1018"><b>Exercise 6 - Enroll for User Certificate</b></h2>
+<p id="cn-m26-1019">In the previous exercise, you have performed the 
+essential tasks to set up key archival in a CA server. These tasks 
+include the following: creating a custom certificate for key recovery 
+agent, configured the administrator account to request for a key 
+recovery agent certificate, enabled the CA server to archive issued a 
+certificate and created a custom certificate template enabled for 
+archiving.</p>
+<p id="cn-m26-1020">In this task, you will test a new user to enroll for a custom certificate that was enabled for certificate archiving.</p>
+<p id="cn-m26-1021">To learn more about enrolling for a user 
+certificate, please refer to your course material or use your preferred 
+search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-1023">After completing this exercise, you will be able to:</p>
+<ul id="cn-m26-1024">
+<li id="cn-m26-1024">Request for new certificate</li>
+<li id="cn-m26-1025">Encrypt user folder using EFS</li>
+<li id="cn-m26-1026">Delete and re-create user account</li>
+<li id="cn-m26-1027">Test access to the encrypted folder as re-created user account</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m26-1029">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m26-1030">
+<li id="cn-m26-1030"><b>PLABDC01 </b>(Windows Server 2016  - Domain Controller)</li>
+<li id="cn-m26-1031"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m26-1032"><b>PLABWIN10 </b>(Windows 10 workstation)</li>
+</ul>
+<p id="cn-m26-1033"><img class="cn-img" id="cn-image-m26-c-131" src="PKIConcepts_files/image-m26-c-131.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m26-1034"><b>Task 1 - Request for New Certificate </b></h3>
+<p id="cn-m26-1035">In this task, you sign-in as a regular user and request for a certificate based on the <b>EFSUser </b>custom template.</p>
+<p id="cn-m26-1036">To request a new certificate, perform the following steps:</p>
+<h4 id="cn-m26-1037"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1038">Connect to <b>PLABWIN10 </b>device.</p>
+<p id="cn-m26-1039">On the sign on screen, click <b>Other User</b>.</p>
+<h4 id="cn-m26-1040"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-1041">In the <b>User name </b>text box, type:</p>
+<pre id="cn-m26-1042"><code>paul.westin
+</code></pre>
+<p id="cn-m26-1043">In the <b>Password </b>box, type the following password and press <b>Enter</b>:</p>
+<span class="cn-password">Passw0rd</span>
+<h4 id="cn-m26-1045"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-1046">Right-click <b>Start </b>and select <b>Run</b>.</p>
+<p id="cn-m26-1047">In the <b>Run </b>dialog box, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-1048"><code>mmc
+</code></pre>
+<h4 id="cn-m26-1049"><b><i>Step 4</i></b></h4>
+<span class="cn-quote" id="cn-m26-1050"><b><i>Note: </i></b><i>Before MMC console is opened, you may be prompted with User Account Control. Click Yes.</i></span>
+<p id="cn-m26-1051">In the blank MMC console, click <b>File </b>menu and choose <b>Add Remove Snap-in.</b></p>
+<h4 id="cn-m26-1052"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-1053">In the <b>Add or Remove Snap-ins </b>dialog box, select <b>Certificates </b>and click <b>Add</b>.</p>
+<span class="cn-quote" id="cn-m26-1054"><b><i>Note: </i></b><i>When you 
+click Add, you will be prompted to add for a user, service, or computer 
+account. The user is the default selection. Keep the default selection 
+and click Finish.</i></span>
+<h4 id="cn-m26-1055"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-1056">Click <b>OK </b>to close <b>Add or Remove Snap-ins </b>dialog box.</p>
+<h4 id="cn-m26-1057"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-1058">In the <b>Console1 </b>window, expand <b>Certificates-Current User </b>node.</p>
+<h4 id="cn-m26-1059"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-1060">Then, right-click <b>Personal</b>, select <b>All Tasks</b>, and then select <b>Request New Certificate</b>.</p>
+<p id="cn-m26-1061"></p><figure><img class="cn-img" id="cn-image-m26-c-132" src="PKIConcepts_files/image-m26-c-132.jpg" alt="Figure 6.1 Screenshot of PLABWIN10: The Console1 window is displayed."><figcaption>Figure 6.1 Screenshot of PLABWIN10: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1063"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-1064">On the <b>Before you begin </b>page of the Certificate Enrollment wizard, click <b>Next</b>.</p>
+<h4 id="cn-m26-1065"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-1066">On the <b>Select Certificate Enrollment Policy </b>page, choose <b>Next</b></p>
+<h4 id="cn-m26-1067"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-1068">On the <b>Request Certificates </b>page, select <b>EFSUser </b>checkbox and click <b>Enroll</b>.</p>
+<p id="cn-m26-1069"></p><figure><img class="cn-img" id="cn-image-m26-c-133" src="PKIConcepts_files/image-m26-c-133.jpg" alt="Figure 6.2 Screenshot of PLABWIN10: The Request Certificates page is displayed."><figcaption>Figure 6.2 Screenshot of PLABWIN10: The Request Certificates page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1071"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-1072">In the <b>Certificate Installation Results </b>page, click <b>Finish</b>.</p>
+<p id="cn-m26-1073">Minimize <b>Console1 </b>window.</p>
+<span class="cn-alert" id="cn-m26-1074"><b>Important</b>: If you get a certification root not trusted error, click <b>Close</b>.
+ This error usually manifests itself when the PLABWIN10 computer is 
+unable to detect the newly-added custom certificate template called <b>EFSUser</b>. You can resolve this error by first saving <b>Console1 </b>on the desktop for easy access. Then restart <b>PLABWIN10</b>. Start over with <b>Task 1 - Request for a New Certificate</b>.</span>
+<p id="cn-m26-1075"></p><figure><img class="cn-img" id="cn-image-m26-c-134" src="PKIConcepts_files/image-m26-c-134.jpg" alt="Figure 6.3 Screenshot of PLABWIN10: The Certificate Installation Results page is displayed."><figcaption>Figure 6.3 Screenshot of PLABWIN10: The Certificate Installation Results page is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m26-1077"><b>Task 2 - Encrypt a User Folder Using EFS</b></h3>
+<p id="cn-m26-1078">The user has been successfully enrolled for a 
+certificate that can be used for a number of applications like the 
+Encrypting File System (EFS).</p>
+<p id="cn-m26-1079">In this task, you will encrypt a folder using the certificate that was issued to the domain user.</p>
+<h4 id="cn-m26-1080"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1081">On <b>PLABWIN10</b>, ensure <b>Paul Westin </b>is signed in.</p>
+<p id="cn-m26-1082">Click <b>File Explorer </b>on the taskbar.</p>
+<h4 id="cn-m26-1083"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-1084">In the <b>File Explorer </b>window, expand <b>This PC </b>node then click <b>Local Disk C </b>drive.</p>
+<p id="cn-m26-1085">Create a folder called <b>EFSUser</b>.</p>
+<p id="cn-m26-1086"></p><figure><img class="cn-img" id="cn-image-m26-c-135" src="PKIConcepts_files/image-m26-c-135.jpg" alt="Figure 6.4 Screenshot of PLABWIN10: The File Explorer window displays the new folder with the EFSUser."><figcaption>Figure 6.4 Screenshot of PLABWIN10: The File Explorer window displays the new folder with the EFSUser.</figcaption></figure><p></p>
+<h4 id="cn-m26-1088"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-1089">Double-click the <b>EFSUser </b>folder and create a text document.</p>
+<p id="cn-m26-1090">Rename the text document as <b>Confidential memo</b>.</p>
+<p id="cn-m26-1091"></p><figure><img class="cn-img" id="cn-image-m26-c-136" src="PKIConcepts_files/image-m26-c-136.jpg" alt="Figure 6.5 Screenshot of PLABWIN10: The File Explorer window is displayed with a new folder and file."><figcaption>Figure 6.5 Screenshot of PLABWIN10: The File Explorer window is displayed with a new folder and file.</figcaption></figure><p></p>
+<h4 id="cn-m26-1093"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-1094">Open the <b>Confidential memo </b>text file and type the following text:</p>
+<pre id="cn-m26-1095"><code>This is a test file for EFS.
+</code></pre>
+<p id="cn-m26-1096">Save the <b>Confidential memo </b>text file and close <b>Notepad</b>.</p>
+<p id="cn-m26-1097"></p><figure><img class="cn-img" id="cn-image-m26-c-137" src="PKIConcepts_files/image-m26-c-137.jpg" alt="Figure 6.6 Screenshot of PLABWIN10: The Notepad application window is displayed with a sample statement typed in."><figcaption>Figure 6.6 Screenshot of PLABWIN10: The Notepad application window is displayed with a sample statement typed in.</figcaption></figure><p></p>
+<h4 id="cn-m26-1099"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-1100">Right-click on <b>Confidential memo </b>text document and select <b>Properties</b>.</p>
+<p id="cn-m26-1101"></p><figure><img class="cn-img" id="cn-image-m26-c-138" src="PKIConcepts_files/image-m26-c-138.jpg" alt="Figure 6.7 Screenshot of PLABWIN10: The File Explorer window is displayed, and the file is selected."><figcaption>Figure 6.7 Screenshot of PLABWIN10: The File Explorer window is displayed, and the file is selected.</figcaption></figure><p></p>
+<h4 id="cn-m26-1103"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-1104">In the <b>Confidential memo Properties </b>dialog box, from the <b>General </b>tab, click <b>Advanced.</b></p>
+<h4 id="cn-m26-1105"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-1106">In the <b>Advanced Attributes </b>dialog box, select <b>Encrypt contents to secure data</b>.</p>
+<p id="cn-m26-1107">Click <b>OK</b>.</p>
+<p id="cn-m26-1108"></p><figure><img class="cn-img" id="cn-image-m26-c-139" src="PKIConcepts_files/image-m26-c-139.jpg" alt="Figure 6.8 Screenshot of PLABWIN10: The Advanced Attributes dialog box is displayed."><figcaption>Figure 6.8 Screenshot of PLABWIN10: The Advanced Attributes dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1110"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-1111">Similarly, click <b>OK </b>on the <b>Confidential memo Properties </b>dialog box to save changes.</p>
+<p id="cn-m26-1112"></p><figure><img class="cn-img" id="cn-image-m26-c-140" src="PKIConcepts_files/image-m26-c-140.jpg" alt="Figure 6.9 Screenshot of PLABWIN10: The Confidential name Properties dialog box is displayed."><figcaption>Figure 6.9 Screenshot of PLABWIN10: The Confidential name Properties dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1114"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-1115">In the <b>Encryption Warning </b>message box, ensure that the <b>Encrypt the file and parent folder (recommended) </b>option is selected.</p>
+<p id="cn-m26-1116">Click <b>OK</b>.</p>
+<p id="cn-m26-1117"></p><figure><img class="cn-img" id="cn-image-m26-c-141" src="PKIConcepts_files/image-m26-c-141.jpg" alt="Figure 6.10 Screenshot of PLABWIN10: The Encryption Warning message box is displayed."><figcaption>Figure 6.10 Screenshot of PLABWIN10: The Encryption Warning message box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1119"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-1120">You will notice a mini lock icon is added to the <b>Confidential </b>memo text document. This indicates that the text document and the folder are now encrypted.</p>
+<p id="cn-m26-1121">Right-click <b>Start </b>and mouse-over <b>Shut down or sign out </b>and select <b>Sign out</b>.</p>
+<p id="cn-m26-1122"></p><figure><img class="cn-img" id="cn-image-m26-c-142" src="PKIConcepts_files/image-m26-c-142.jpg" alt="Figure 6.11 Screenshot of PLABWIN10: The Start button is right-clicked, and the context menu is displayed."><figcaption>Figure 6.11 Screenshot of PLABWIN10: The Start button is right-clicked, and the context menu is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m26-1124"><b>Task 3 - Delete and Re-create User Account</b></h3>
+<p id="cn-m26-1125">In this task, you will test the functionality of the
+ Key Recovery Agent user account by deleting a user object, re-create it
+ and then recover its lost keys.</p>
+<h4 id="cn-m26-1126"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1127">Connect to <b>PLABDC01</b>. Ensure that  you login as Administrator. Password for Administrator is <span class="cn-password">Passw0rd</span>.</p>
+<p id="cn-m26-1128">Ensure that the <b>Server Manager &gt; Dashboard </b>window is open.</p>
+<p id="cn-m26-1129">Click <b>Tools </b>and select <b>Active Directory Users and Computers</b>.</p>
+<h4 id="cn-m26-1130"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-1131">Expand <b>PRACTICELABS.COM</b>, expand <b>NAmerica </b>and then select the <b>Operations </b>organizational unit.</p>
+<p id="cn-m26-1132">Right-click <b>Paul Westin </b>and select <b>Delete</b>.</p>
+<h4 id="cn-m26-1133"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-1134">Click <b>Yes </b>to proceed with the deletion of the user account.</p>
+<p id="cn-m26-1135"></p><figure><img class="cn-img" id="cn-image-m26-c-143" src="PKIConcepts_files/image-m26-c-143.jpg" alt="Figure 6.12 Screenshot of PLABDC01: In Active Directory Users and Computers message box is displayed."><figcaption>Figure 6.12 Screenshot of PLABDC01: In Active Directory Users and Computers message box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1137"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-1138">To test recovery agent functionality, you will re-create a user named <b>Paul Westin </b>in the <b>NAmerica/Operations </b>OU using the same properties of the deleted user.</p>
+<p id="cn-m26-1139">While the <b>Operations </b>OU is selected, right-click on the details pane and select <b>New </b>and then select <b>User</b>.</p>
+<p id="cn-m26-1140"></p><figure><img class="cn-img" id="cn-image-m26-c-144" src="PKIConcepts_files/image-m26-c-144.jpg" alt="Figure 6.13 Screenshot of PLABDC01: In Active Directory Users and Computers, an organizational unit is right-clicked, and a new user account is about to be created."><figcaption>Figure
+ 6.13 Screenshot of PLABDC01: In Active Directory Users and Computers, 
+an organizational unit is right-clicked, and a new user account is about
+ to be created.</figcaption></figure><p></p>
+<h4 id="cn-m26-1142"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-1143">In the <b>New Object - User </b>dialog box, in the <b>First name </b>text box, type:</p>
+<pre id="cn-m26-1144"><code>Paul&nbsp;&nbsp;
+</code></pre>
+<p id="cn-m26-1145">In the <b>Last name </b>text box, type:</p>
+<pre id="cn-m26-1146"><code>Westin
+</code></pre>
+<p id="cn-m26-1147">In the <b>User logon name </b>text box, type:</p>
+<pre id="cn-m26-1148"><code>paul.westin
+</code></pre>
+<p id="cn-m26-1149">Click <b>Next</b>.</p>
+<span class="cn-quote" id="cn-m26-1150"><b><i>Note: </i></b><i>You must ensure, </i><b><i>Paul Westin</i></b><i>, exists in the </i><b><i>Full name </i></b><i>text box or else the </i><b><i>Next </i></b><i>button will not be enabled.</i></span>
+<p id="cn-m26-1151"></p><figure><img class="cn-img" id="cn-image-m26-c-145" src="PKIConcepts_files/image-m26-c-145.jpg" alt="Figure 6.14 Screenshot of PLABDC01: In Active Directory Users and Computers, an organizational unit is right-clicked, and a new user account is about to be created."><figcaption>Figure
+ 6.14 Screenshot of PLABDC01: In Active Directory Users and Computers, 
+an organizational unit is right-clicked, and a new user account is about
+ to be created.</figcaption></figure><p></p>
+<h4 id="cn-m26-1153"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-1154">In the <b>Password </b>and <b>Confirm password </b>text boxes, type:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m26-1156">Clear <b>User must change password at next logon </b>check box.</p>
+<span class="cn-quote" id="cn-m26-1157"><b><i>Note: </i></b><i>If prompted with a warning, click </i><b><i>OK</i></b><i>.</i></span>
+<p id="cn-m26-1158">Then select the <b>Password never expires </b>check box.</p>
+<p id="cn-m26-1159">Click <b>Next</b>.</p>
+<p id="cn-m26-1160"></p><figure><img class="cn-img" id="cn-image-m26-c-146" src="PKIConcepts_files/image-m26-c-146.jpg" alt="Figure 6.15 Screenshot of PLABDC01: The New Object - User dialog box is displayed."><figcaption>Figure 6.15 Screenshot of PLABDC01: The New Object - User dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1162"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-1163">Click <b>Finish </b>when you reach the summary page.</p>
+<p id="cn-m26-1164">Minimize <b>Active Directory Users and Computers </b>window.</p>
+<p id="cn-m26-1165"></p><figure><img class="cn-img" id="cn-image-m26-c-147" src="PKIConcepts_files/image-m26-c-147.jpg" alt="Figure 6.16 Screenshot of PLABDC01: The New Object - User dialog box is displayed with a summary of the new user."><figcaption>Figure 6.16 Screenshot of PLABDC01: The New Object - User dialog box is displayed with a summary of the new user.</figcaption></figure><p></p>
+<h3 id="cn-m26-1167"><b>Task 4 - Test Access to the Encrypted Folder as Re-created User Account</b></h3>
+<p id="cn-m26-1168">To see the effects accessing the encrypted folder using a re-created the user account, perform the following steps:</p>
+<h4 id="cn-m26-1169"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1170">Connect <b>PLABWIN10 </b>computer.</p>
+<p id="cn-m26-1171">Click <b>Other user</b>.</p>
+<h4 id="cn-m26-1172"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-1173">As before, sign-in as:</p>
+<pre id="cn-m26-1174"><code>paul.westin
+</code></pre>
+<p id="cn-m26-1175">In the <b>Password </b>text box, type:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m26-1177">Press <b>Enter</b>.</p>
+<h4 id="cn-m26-1178"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-1179">Click <b>Agree </b>if presented with <b>BGInfo License Agreement </b>window.</p>
+<p id="cn-m26-1180">Click <b>Install </b>on the <b>Application Install - Security Warning </b>message box.</p>
+<span class="cn-quote" id="cn-m26-1181"><b><i>Note: </i></b><i>The 
+BGInfo License Agreement window appears only when you log on to the 
+system for the first time and accept the agreement. Post acceptance, it 
+does not appear on subsequent logins.</i></span>
+<h4 id="cn-m26-1183"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-1184">Launch <b>File Explorer </b>from the taskbar.</p>
+<p id="cn-m26-1185">Then, expand <b>This PC &gt; Local Disk (C:) </b>drive and select the <b>EFSUser </b>folder.</p>
+<p id="cn-m26-1186">Right-click the <b>Confidential memo </b>text file and then select <b>Open</b>.</p>
+<p id="cn-m26-1187"></p><figure><img class="cn-img" id="cn-image-m26-c-148" src="PKIConcepts_files/image-m26-c-148.jpg" alt="Figure 6.17 Screenshot of PLABWIN10: The File Explorer window is displayed, and a file is selected."><figcaption>Figure 6.17 Screenshot of PLABWIN10: The File Explorer window is displayed, and a file is selected.</figcaption></figure><p></p>
+<h4 id="cn-m26-1189"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-1190">You get an access denied message because <b>paul.westin</b>, which is a re-created user account, does not have the certificate to unlock this file.</p>
+<p id="cn-m26-1191">This is the result of deleting the user account that was performed in an earlier task.</p>
+<p id="cn-m26-1192"></p><figure><img class="cn-img" id="cn-image-m26-c-149" src="PKIConcepts_files/image-m26-c-149.jpg" alt="Figure 6.18 Screenshot of PLABWIN10: The Notepad message box indicates that the user is denied access."><figcaption>Figure 6.18 Screenshot of PLABWIN10: The Notepad message box indicates that the user is denied access.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<p id="cn-m26-1196">Click <b>OK</b>.</p>
+<p id="cn-m26-1197">Then, close the <b>Notepad </b>window.</p>
+<p id="cn-m26-1198">In the next exercise, you will recover Paul Westin’s certificate that was used to encrypt the <b>EFSUser </b>folder and the file contained within it.</p>
+<p id="cn-m26-1199">Minimize <b>File Explorer </b>window.</p>
+<span class="cn-alert" id="cn-m26-1200">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-1201"><b>Exercise 7 - Manage Key Recovery</b></h2>
+<p id="cn-m26-1202">The previous exercise illustrated that if a user 
+account having access to the encrypted file is deleted, it will be 
+denied access to the folder/file it had encrypted even if the account is
+ re-created with the exact same properties as the old user account. This
+ exercise will demonstrate how to recover an archived certificate/key 
+that was issued to the user and show how to link the certificate to its 
+rightful owner. After this, you will perform an export of the key to a 
+file and finally test if the recovered key can be used for decrypting a 
+protected document.</p>
+<p id="cn-m26-1203">To learn more about managing and recovering archived
+ keys, please consult your reference material or use your preferred 
+search engine to research this topic in greater detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m26-1205">After completing this exercise, you will be able to:</p>
+<ul id="cn-m26-1206">
+<li id="cn-m26-1206">Import Key Recovery Agent certificate</li>
+<li id="cn-m26-1207">Using CERTUTIL to recover archived keys</li>
+<li id="cn-m26-1208">Test user access to the encrypted file</li>
+<li id="cn-m26-1209">Enable server auto login</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m26-1211">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m26-1212">
+<li id="cn-m26-1212"><b>PLABDC01 </b>(Windows Server 2016  - Domain Controller)</li>
+<li id="cn-m26-1213"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m26-1214"><b>PLABWIN10 </b>(Windows 10 workstation)</li>
+</ul>
+<p id="cn-m26-1215"><img class="cn-img" id="cn-image-m26-c-150" src="PKIConcepts_files/image-m26-c-150.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m26-1216"><b>Task 1 - Import Key Recovery Agent certificate</b></h3>
+<p id="cn-m26-1217">In this task, you will import keys that are archived on the <b>PLABDM01</b>.</p>
+<p id="cn-m26-1218">Recall that you have imported the file called <b>AdminKRA.cer </b>into PLABDM01 in an earlier exercise.</p>
+<h4 id="cn-m26-1219"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1220">Connect to <b>PLABDM01</b>.</p>
+<span class="cn-quote" id="cn-m26-1221"><b><i>Note: </i></b><i>Since the </i><b><i>Server auto login </i></b><i>setting is disabled, you will be prompted for the password for the PRACTICELABS\Administrator. Use </i><span class="cn-password"><i>Passw0rd </i></span><i>as the password.</i></span>
+<p id="cn-m26-1222">Reopen the <b>Console1 </b>window that you minimized earlier.</p>
+<p id="cn-m26-1223">Under <b>Certificates- Current User </b>node, expand <b>Personal </b>then click the <b>Certificates </b>folder.</p>
+<p id="cn-m26-1224">Notice on the details pane at the right, the <b>Key Recovery Agent </b>certificate.</p>
+<span class="cn-alert" id="cn-m26-1225"><b>Important</b>: The file you imported in this MMC is a .<b>cer </b>file
+ that is not capable of decrypting the encrypted file as this is only a 
+certificate. You will need to export this file in the .<b>pfx </b>format, which includes a certificate and key that will unlock an encrypted file.</span>
+<p id="cn-m26-1226"></p><figure><img class="cn-img" id="cn-image-m26-c-151" src="PKIConcepts_files/image-m26-c-151.jpg" alt="Figure 7.1 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 7.1 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1228"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-1229">Right-click <b>Administrator </b>certificate and point to <b>All Tasks </b>and select <b>Export</b>.</p>
+<p id="cn-m26-1230"></p><figure><img class="cn-img" id="cn-image-m26-c-152" src="PKIConcepts_files/image-m26-c-152.jpg" alt="Figure 7.2 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 7.2 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1232"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-1233">Click <b>Next </b>in the <b>Welcome to the Certificate Export Wizard </b>page.</p>
+<h4 id="cn-m26-1234"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-1235">In the <b>Export Private Key </b>page, select the <b>Yes</b>, <b>export the private key </b>option.</p>
+<p id="cn-m26-1236">Click <b>Next</b>.</p>
+<p id="cn-m26-1237"></p><figure><img class="cn-img" id="cn-image-m26-c-153" src="PKIConcepts_files/image-m26-c-153.jpg" alt="Figure 7.3 Screenshot of PLABDM01: The Export Private Key page is displayed."><figcaption>Figure 7.3 Screenshot of PLABDM01: The Export Private Key page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1239"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-1240">In the <b>Export file format </b>page, verify that <b>Personal Information Exchange - PKCS #12 (.PFX) </b>option button is selected.</p>
+<p id="cn-m26-1241">Verify that <b>Include all certificates in the certification path if possible </b>check box is selected as well.</p>
+<p id="cn-m26-1242">Click <b>Next</b>.</p>
+<p id="cn-m26-1243"></p><figure><img class="cn-img" id="cn-image-m26-c-154" src="PKIConcepts_files/image-m26-c-154.jpg" alt="Figure 7.4 Screenshot of PLABDM01: The Export File Format page is displayed."><figcaption>Figure 7.4 Screenshot of PLABDM01: The Export File Format page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1245"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-1246">In the <b>Security </b>page, select <b>Password </b>check box.</p>
+<p id="cn-m26-1247">Click in the <b>Password </b>and <b>Confirm password </b>text boxes, type:</p>
+<span class="cn-password">Passw0rd</span>
+<p id="cn-m26-1249">Click <b>Next</b>.</p>
+<p id="cn-m26-1250"></p><figure><img class="cn-img" id="cn-image-m26-c-155" src="PKIConcepts_files/image-m26-c-155.jpg" alt="Figure 7.5 Screenshot of PLABDM01: The Security page is displayed, and the password is entered."><figcaption>Figure 7.5 Screenshot of PLABDM01: The Security page is displayed, and the password is entered.</figcaption></figure><p></p>
+<h4 id="cn-m26-1252"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-1253">In the <b>File to Export </b>page, click <b>File name </b>box and type:</p>
+<pre id="cn-m26-1254"><code>c:\adminKRA
+</code></pre>
+<p id="cn-m26-1255">Please note that the extension name .<b>pfx </b>will be added automatically.</p>
+<p id="cn-m26-1256">Click <b>Next</b>.</p>
+<p id="cn-m26-1257"></p><figure><img class="cn-img" id="cn-image-m26-c-156" src="PKIConcepts_files/image-m26-c-156.jpg" alt="Figure 7.6 Screenshot of PLABDM01: The File to Export page is displayed, and the file name is entered."><figcaption>Figure 7.6 Screenshot of PLABDM01: The File to Export page is displayed, and the file name is entered.</figcaption></figure><p></p>
+<h4 id="cn-m26-1259"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-1260">Click <b>Finish </b>when <b>Completing the Certificate Export Wizard </b>page is displayed.</p>
+<p id="cn-m26-1261"></p><figure><img class="cn-img" id="cn-image-m26-c-157" src="PKIConcepts_files/image-m26-c-157.jpg" alt="Figure 7.7 Screenshot of PLABDM01: The Completing the Certificate Export Wizard page is displayed with the summary of settings."><figcaption>Figure 7.7 Screenshot of PLABDM01: The Completing the Certificate Export Wizard page is displayed with the summary of settings.</figcaption></figure><p></p>
+<h4 id="cn-m26-1263"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-1264">Click <b>OK </b>when Windows notifies you that the certificate export was successful.</p>
+<h4 id="cn-m26-1265"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-1266">After exporting the .<b>cer </b>to .<b>pfx </b>in the previous example, you will import the .<b>pfx </b>file back into <b>Console1</b>.</p>
+<p id="cn-m26-1267">The Administrator needs the .<b>pfx </b>file to be able to recover archived keys from the CA server.</p>
+<p id="cn-m26-1268">From <b>Console1</b>, select <b>Personal </b>folder right-click <b>Certificates</b>, point to <b>All Tasks </b>and then select <b>Import</b>.</p>
+<p id="cn-m26-1269"></p><figure><img class="cn-img" id="cn-image-m26-c-158" src="PKIConcepts_files/image-m26-c-158.jpg" alt="Figure 7.8 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 7.8 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1271"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-1272">In the <b>Welcome to the Certificate Import Wizard</b>, click <b>Next</b>.</p>
+<h4 id="cn-m26-1273"><b><i>Step 12</i></b></h4>
+<p id="cn-m26-1274">In the <b>File to Import </b>page, click in the File name text box and type:</p>
+<pre id="cn-m26-1275"><code>c:\adminKRA.pfx
+</code></pre>
+<p id="cn-m26-1276">Click <b>Next</b>.</p>
+<p id="cn-m26-1277"></p><figure><img class="cn-img" id="cn-image-m26-c-159" src="PKIConcepts_files/image-m26-c-159.jpg" alt="Figure 7.9 Screenshot of PLABDM01: The File to Import page is displayed."><figcaption>Figure 7.9 Screenshot of PLABDM01: The File to Import page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1279"><b><i>Step 13</i></b></h4>
+<p id="cn-m26-1280">In the <b>Private key </b>protection page, in the <b>Password </b>text box, type:</p>
+<span class="cn-password">Passw0rd</span>
+<p id="cn-m26-1282">Click <b>Next</b>.</p>
+<p id="cn-m26-1283"></p><figure><img class="cn-img" id="cn-image-m26-c-160" src="PKIConcepts_files/image-m26-c-160.jpg" alt="Figure 7.10 Screenshot of PLABDM01: The Private key protection page is displayed, and a password is entered."><figcaption>Figure 7.10 Screenshot of PLABDM01: The Private key protection page is displayed, and a password is entered.</figcaption></figure><p></p>
+<h4 id="cn-m26-1285"><b><i>Step 14</i></b></h4>
+<p id="cn-m26-1286">In the <b>Certificate Store </b>page, ensure that <b>Place all certificates in the following store </b>is selected.</p>
+<p id="cn-m26-1287">Click <b>Next</b>.</p>
+<p id="cn-m26-1288"></p><figure><img class="cn-img" id="cn-image-m26-c-161" src="PKIConcepts_files/image-m26-c-161.jpg" alt="Figure 7.11 Screenshot of PLABDM01: The Certificate store page is displayed."><figcaption>Figure 7.11 Screenshot of PLABDM01: The Certificate store page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1290"><b><i>Step 15</i></b></h4>
+<p id="cn-m26-1291">In the <b>Completing the Certificate Import Wizard </b>page, click <b>Finish</b>.</p>
+<p id="cn-m26-1292"></p><figure><img class="cn-img" id="cn-image-m26-c-162" src="PKIConcepts_files/image-m26-c-162.jpg" alt="Figure 7.12 Screenshot of PLABDM01: The Completing the Certificate Import Wizard page is displayed."><figcaption>Figure 7.12 Screenshot of PLABDM01: The Completing the Certificate Import Wizard page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1294"><b><i>Step 16</i></b></h4>
+<p id="cn-m26-1295">Click <b>OK </b>when the system tells you that the import was successful.</p>
+<h4 id="cn-m26-1296"><b><i>Step 17</i></b></h4>
+<p id="cn-m26-1297">Notice that a second certificate has been added to the list.</p>
+<p id="cn-m26-1298">Minimize <b>Console1 </b>window.</p>
+<p id="cn-m26-1299"></p><figure><img class="cn-img" id="cn-image-m26-c-163" src="PKIConcepts_files/image-m26-c-163.jpg" alt="Figure 7.13 Screenshot of PLABDM01: The Console1 window is displayed."><figcaption>Figure 7.13 Screenshot of PLABDM01: The Console1 window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1301"><b><i>Step 18</i></b></h4>
+<p id="cn-m26-1302">Restore the <b>Certification Authority </b>console from taskbar if not yet open.</p>
+<p id="cn-m26-1303">Select the <b>Issued Certificates </b>folder.</p>
+<p id="cn-m26-1304">Locate the column <b>Requester name </b>by expanding the column header and find <b>PRACTICELABS\paul.westin.</b></p>
+<p id="cn-m26-1305">Please note the requester name indicated above as you will recover the archived certificate of this user account.</p>
+<p id="cn-m26-1306">Minimize the <b>Certification Authority </b>console.</p>
+<p id="cn-m26-1307"></p><figure><img class="cn-img" id="cn-image-m26-c-164" src="PKIConcepts_files/image-m26-c-164.jpg" alt="Figure 7.14 Screenshot of PLABDM01: The Console1 window is displayed, and user certificate is selected."><figcaption>Figure 7.14 Screenshot of PLABDM01: The Console1 window is displayed, and user certificate is selected.</figcaption></figure><p></p>
+<h3 id="cn-m26-1309"><b>Task 2 - Using CERTUTIL to recover archived keys</b></h3>
+<p id="cn-m26-1310">To run the certutil.exe to recover archived keys in the PLABDM01 server, perform the following steps:</p>
+<h4 id="cn-m26-1311"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1312">On the <b>PLABDM01 </b>computer, right-click <b>Start </b>and select <b>Command Prompt (Admin) </b>from the shortcut menu.</p>
+<h4 id="cn-m26-1313"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-1314">In the command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-1315"><code>certutil -getkey PRACTICELABS\paul.westin outputblob
+</code></pre>
+<p id="cn-m26-1316"></p><figure><img class="cn-img" id="cn-image-m26-c-165" src="PKIConcepts_files/image-m26-c-165.jpg" alt="Figure 7.15 Screenshot of PLABDM01: A command is entered in the command prompt window."><figcaption>Figure 7.15 Screenshot of PLABDM01: A command is entered in the command prompt window.</figcaption></figure><p></p>
+<p id="cn-m26-1318">Notice that the output of the command is displayed.</p>
+<p id="cn-m26-1319"></p><figure><img class="cn-img" id="cn-image-m26-c-166" src="PKIConcepts_files/image-m26-c-166.jpg" alt="Figure 7.16 Screenshot of PLABDM01: The command prompt window indicates a successful operation."><figcaption>Figure 7.16 Screenshot of PLABDM01: The command prompt window indicates a successful operation.</figcaption></figure><p></p>
+<h4 id="cn-m26-1321"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-1322">To create a certificate that can unlock the encrypted file, you need to create a .<b>PFX </b>file from the retrieved key file.</p>
+<p id="cn-m26-1323">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m26-1324"><code>certutil -recoverkey outputblob paul.pfx
+</code></pre>
+<p id="cn-m26-1325">In the <b>Enter new password </b>prompt, type the following password and press <b>Enter</b>:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m26-1327">In the <b>Confirm new password </b>prompt, type the following password and press <b>Enter</b>:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m26-1329"></p><figure><img class="cn-img" id="cn-image-m26-c-167" src="PKIConcepts_files/image-m26-c-167.jpg" alt="Figure 7.17 Screenshot of PLABDM01: A command is entered in the command prompt window to recover an archived key."><figcaption>Figure 7.17 Screenshot of PLABDM01: A command is entered in the command prompt window to recover an archived key.</figcaption></figure><p></p>
+<h4 id="cn-m26-1331"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-1332">The .PFX file called <b>paul.pfx </b>is successfully created.</p>
+<p id="cn-m26-1333">Minimize the command prompt window.</p>
+<span class="cn-quote" id="cn-m26-1334"><b><i>Note: </i></b><i>If password and confirm password differ, you will receive an error.</i></span>
+<p id="cn-m26-1335"></p><figure><img class="cn-img" id="cn-image-m26-c-168" src="PKIConcepts_files/image-m26-c-168.jpg" alt="Figure 7.18 Screenshot of PLABDM01: The command prompt window indicates a successful operation."><figcaption>Figure 7.18 Screenshot of PLABDM01: The command prompt window indicates a successful operation.</figcaption></figure><p></p>
+<h4 id="cn-m26-1337"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-1338">Open <b>File Explorer </b>and then navigate to the <b>Local Disk C &gt; Windows &gt; system32 </b>folder.</p>
+<p id="cn-m26-1339">Scroll down the list and locate <b>paul - Personal Information </b>file type.</p>
+<p id="cn-m26-1340">Note that the file will look like a certificate with a key appended to it.</p>
+<p id="cn-m26-1341">Right-click <b>paul </b>and select <b>Copy</b>.</p>
+<p id="cn-m26-1342"></p><figure><img class="cn-img" id="cn-image-m26-c-169" src="PKIConcepts_files/image-m26-c-169.jpg" alt="Figure 7.19 Screenshot of PLABDM01: The File Explorer window is displayed, and a file is copied."><figcaption>Figure 7.19 Screenshot of PLABDM01: The File Explorer window is displayed, and a file is copied.</figcaption></figure><p></p>
+<h4 id="cn-m26-1344"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-1345">Create a folder on <b>Local Disk C: </b>called <b>paulwestin </b>and paste the <b>.pfx </b>certificate file there.</p>
+<p id="cn-m26-1346"></p><figure><img class="cn-img" id="cn-image-m26-c-170" src="PKIConcepts_files/image-m26-c-170.jpg" alt="Figure 7.20 Screenshot of PLABDM01: The File Explorer window is displayed, and a file is copied."><figcaption>Figure 7.20 Screenshot of PLABDM01: The File Explorer window is displayed, and a file is copied.</figcaption></figure><p></p>
+<h4 id="cn-m26-1348"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-1349">You will share the <b>paulwestin </b>folder to allow the user to access the .pfx file over the network.</p>
+<p id="cn-m26-1350">Right-click the <b>paulwestin </b>folder and select <b>Properties</b>.</p>
+<p id="cn-m26-1351"></p><figure><img class="cn-img" id="cn-image-m26-c-171" src="PKIConcepts_files/image-m26-c-171.jpg" alt="Figure 7.21 Screenshot of PLABDM01: The File Explorer window is displayed, and a folder is selected."><figcaption>Figure 7.21 Screenshot of PLABDM01: The File Explorer window is displayed, and a folder is selected.</figcaption></figure><p></p>
+<h4 id="cn-m26-1353"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-1354">On the <b>paulwestin Properties </b>window, select <b>Sharing </b>tab.</p>
+<h4 id="cn-m26-1355"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-1356">Under the <b>Sharing </b>tab and click <b>Advanced Sharing</b>.</p>
+<p id="cn-m26-1357"></p><figure><img class="cn-img" id="cn-image-m26-c-172" src="PKIConcepts_files/image-m26-c-172.jpg" alt="Figure 7.22 Screenshot of PLABDM01: The File Explorer window is displayed, and a folder is selected."><figcaption>Figure 7.22 Screenshot of PLABDM01: The File Explorer window is displayed, and a folder is selected.</figcaption></figure><p></p>
+<h4 id="cn-m26-1359"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-1360">In the <b>Advanced Sharing </b>window, click the <b>Share this folder </b>checkbox and then click <b>OK</b>.</p>
+<p id="cn-m26-1361"></p><figure><img class="cn-img" id="cn-image-m26-c-173" src="PKIConcepts_files/image-m26-c-173.jpg" alt="Figure 7.23 Screenshot of PLABDM01: The Advanced Sharing dialog box is displayed with its corresponding settings."><figcaption>Figure 7.23 Screenshot of PLABDM01: The Advanced Sharing dialog box is displayed with its corresponding settings.</figcaption></figure><p></p>
+<h4 id="cn-m26-1363"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-1364">Similarly, click <b>Close </b>on the <b>paulwestin </b>folder.</p>
+<h3 id="cn-m26-1365"><b>Task 3 - Test User Access to Encrypted File</b></h3>
+<p id="cn-m26-1366">To verify that user Lisa Weybridge can access the file that was encrypted earlier, perform the following steps:</p>
+<h4 id="cn-m26-1367"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1368">Connect to <b>PLABWIN10 </b>where <b>paul.westin </b>is signed in.</p>
+<p id="cn-m26-1369"><b>File Explorer </b>is open.</p>
+<p id="cn-m26-1370">Right-click <b>This PC </b>and select <b>Map network drive</b>.</p>
+<p id="cn-m26-1371"></p><figure><img class="cn-img" id="cn-image-m26-c-174" src="PKIConcepts_files/image-m26-c-174.jpg" alt="Figure 7.24 Screenshot of PLABWIN10: In the File Explorer window, the map network drive command is invoked."><figcaption>Figure 7.24 Screenshot of PLABWIN10: In the File Explorer window, the map network drive command is invoked.</figcaption></figure><p></p>
+<h4 id="cn-m26-1373"><b><i>Step 2</i></b></h4>
+<p id="cn-m26-1374">In the <b>Map network drive </b>window, in the <b>Folder </b>text box, type:</p>
+<pre id="cn-m26-1375"><code> \\plabdm01\paulwestin
+</code></pre>
+<p id="cn-m26-1376">Click <b>Finish</b>.</p>
+<p id="cn-m26-1377"></p><figure><img class="cn-img" id="cn-image-m26-c-175" src="PKIConcepts_files/image-m26-c-175.jpg" alt="Figure 7.25 Screenshot of PLABWIN10: In the Map Network Drive dialog box, the network path is entered."><figcaption>Figure 7.25 Screenshot of PLABWIN10: In the Map Network Drive dialog box, the network path is entered.</figcaption></figure><p></p>
+<h4 id="cn-m26-1379"><b><i>Step 3</i></b></h4>
+<p id="cn-m26-1380">A new <b>File Explorer </b>window opens indicating a successful connection.</p>
+<p id="cn-m26-1381">Once connected right-click the <b>paul.pfx </b>file and select <b>InstallPFX</b>.</p>
+<p id="cn-m26-1382"></p><figure><img class="cn-img" id="cn-image-m26-c-176" src="PKIConcepts_files/image-m26-c-176.jpg" alt="Figure 7.26 Screenshot of PLABWIN10: In the File Explorer window, a file is selected."><figcaption>Figure 7.26 Screenshot of PLABWIN10: In the File Explorer window, a file is selected.</figcaption></figure><p></p>
+<h4 id="cn-m26-1384"><b><i>Step 4</i></b></h4>
+<p id="cn-m26-1385">In the <b>Welcome to the Certificate Import Wizard </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m26-1386"><b><i>Step 5</i></b></h4>
+<p id="cn-m26-1387">The <b>File to Import </b>page displays the path of the .pfx file.</p>
+<p id="cn-m26-1388">In this case, it is in <b>z:\paul.pfx </b>path.</p>
+<p id="cn-m26-1389">Click <b>Next</b>.</p>
+<p id="cn-m26-1390"></p><figure><img class="cn-img" id="cn-image-m26-c-177" src="PKIConcepts_files/image-m26-c-177.jpg" alt="Figure 7.27 Screenshot of PLABWIN10: The File to Import page is displayed."><figcaption>Figure 7.27 Screenshot of PLABWIN10: The File to Import page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1392"><b><i>Step 6</i></b></h4>
+<p id="cn-m26-1393">In the <b>Private key protection </b>page, type:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m26-1395">Click <b>Next</b>.</p>
+<p id="cn-m26-1396"></p><figure><img class="cn-img" id="cn-image-m26-c-178" src="PKIConcepts_files/image-m26-c-178.jpg" alt="Figure 7.28 Screenshot of PLABWIN10: The Private key protection page is displayed."><figcaption>Figure 7.28 Screenshot of PLABWIN10: The Private key protection page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1398"><b><i>Step 7</i></b></h4>
+<p id="cn-m26-1399">In the <b>Certificate Store </b>page, ensure that the <b>Automatically select the certificate store based on the type of certificate </b>option is selected.</p>
+<p id="cn-m26-1400">Click <b>Next.</b></p>
+<h4 id="cn-m26-1401"><b><i>Step 8</i></b></h4>
+<p id="cn-m26-1402">When <b>Completing the Certificate Import Wizard </b>page shows up, click <b>Finish</b>.</p>
+<p id="cn-m26-1403"></p><figure><img class="cn-img" id="cn-image-m26-c-179" src="PKIConcepts_files/image-m26-c-179.jpg" alt="Figure 7.29 Screenshot of PLABWIN10: The Completing the Certificate Import Wizard page is displayed."><figcaption>Figure 7.29 Screenshot of PLABWIN10: The Completing the Certificate Import Wizard page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m26-1405"><b><i>Step 9</i></b></h4>
+<p id="cn-m26-1406">Click <b>OK </b>when the import is successful.</p>
+<p id="cn-m26-1407">Minimize the mapped drive window.</p>
+<h4 id="cn-m26-1408"><b><i>Step 10</i></b></h4>
+<p id="cn-m26-1409">Navigate to the <b>EFSUser </b>folder.</p>
+<p id="cn-m26-1410">Right-click <b>Confidential memo </b>and then select <b>Open</b>.</p>
+<p id="cn-m26-1411"></p><figure><img class="cn-img" id="cn-image-m26-c-180" src="PKIConcepts_files/image-m26-c-180.jpg" alt="Figure 7.30 Screenshot of PLABWIN10: In the File Explorer window, a file is selected."><figcaption>Figure 7.30 Screenshot of PLABWIN10: In the File Explorer window, a file is selected.</figcaption></figure><p></p>
+<h4 id="cn-m26-1413"><b><i>Step 11</i></b></h4>
+<p id="cn-m26-1414">Paul should be able to read the contents of the confidential file.</p>
+<p id="cn-m26-1415">Paul Westin’s key was recovered successfully.</p>
+<p id="cn-m26-1416"></p><figure><img class="cn-img" id="cn-image-m26-c-181" src="PKIConcepts_files/image-m26-c-181.jpg" alt="Figure 7.31 Screenshot of PLABWIN10: The Confidential memo-Notepad window is displayed."><figcaption>Figure 7.31 Screenshot of PLABWIN10: The Confidential memo-Notepad window is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<h3 id="cn-m26-1420"><b>Task 4 - Enable Server Auto Login</b></h3>
+<p id="cn-m26-1421">By default, when you connect to a device in Practice
+ Labs, you are automatically logged in - usually as the administrator. 
+For this task, you will need to re-enable this feature, and so you will 
+be logged in automatically in the next exercise.</p>
+<h4 id="cn-m26-1422"><b><i>Step 1</i></b></h4>
+<p id="cn-m26-1423">On the <b>Practice Labs </b>web page, click the <b>Access your settings </b>tab.</p>
+<p id="cn-m26-1424">Under the <b>Device </b>heading there is an option named <b>Server auto login</b>, click the <b>Enable </b>button.</p>
+<p id="cn-m26-1425"><b>Result </b>- You have completed the necessary tasks for managing certificate archiving and recovery.</p>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m26-1428"><b>Review</b></h2>
+<p id="cn-m26-1429">Well done, you have completed the <b>PKI Concepts </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">d020aad1-48cb-44df-bf1a-118ee059c681</span>
+<span class="atom-code hidden">139a3a96-bb56-42da-b02c-475eaac01cf6</span>
+<span class="atom-code hidden">62582c44-c0ec-42fe-8289-9fc43f54d178</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m26-1436">You completed the following exercises:</p>
+<ul id="cn-m26-1437">
+<li id="cn-m26-1437">Install and Configure Active Directory Certificate Services</li>
+<li id="cn-m26-1438">Configure Certificate Revocation Lists (CRLs)</li>
+<li id="cn-m26-1439">Manage Certificate Templates</li>
+<li id="cn-m26-1440">Configure Certificate Auto Enrollment</li>
+<li id="cn-m26-1441">Implement Key Archival</li>
+<li id="cn-m26-1442">Enroll for User Certificate</li>
+<li id="cn-m26-1443">Manage Key Recovery</li>
+</ul>
+<p id="cn-m26-1444">You should now be able to:</p>
+<ul id="cn-m26-1445">
+<li id="cn-m26-1445">Install Active Directory Enterprise Root Certificate Service</li>
+<li id="cn-m26-1446">Configure Active Directory Certificate Services</li>
+<li id="cn-m26-1447">Install Subordinate CA</li>
+<li id="cn-m26-1448">Configure Subordinate CA</li>
+<li id="cn-m26-1449">Request User Certificates</li>
+<li id="cn-m26-1450">Verify Issued Certificate</li>
+<li id="cn-m26-1451">Configure a new path for CRLs</li>
+<li id="cn-m26-1452">Add Certificate Managers</li>
+<li id="cn-m26-1453">Manage Certificate Templates</li>
+<li id="cn-m26-1454">Configure Certificate Auto Enrollment</li>
+<li id="cn-m26-1455">Implement Key Archival</li>
+<li id="cn-m26-1456">Enrolling for User Certificate</li>
+<li id="cn-m26-1457">Manage Key Recovery</li>
+<li id="cn-m26-1458">Add AD Certificate Services and Certificate Web Enrollment Services</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m26-1462">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

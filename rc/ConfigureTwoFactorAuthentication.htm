@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ConfigureTwoFactorAuthentication_files/print-styles.css" rel="stylesheet">
+    <script src="ConfigureTwoFactorAuthentication_files/jquery.min.js"></script>
+    <script src="ConfigureTwoFactorAuthentication_files/jspdf.js"></script>
+    <script src="ConfigureTwoFactorAuthentication_files/from_html.js"></script>
+    <script src="ConfigureTwoFactorAuthentication_files/addimage.js"></script>
+    <script src="ConfigureTwoFactorAuthentication_files/filesaver.js"></script>
+    <script src="ConfigureTwoFactorAuthentication_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="eG3+uY5vDN7iFCZIvZMuH64Can3fbCkKVIqDKMv+7+2ULkkFTiivhXat+PoLgyk9N3TJhkbAub+OPGgzcBTc+ZEZxhDZOMeebovoVF0iNzs=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Configure Two Factor Authentication</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Configure Google Authenticator</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m30-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Google Authenticator</div>
+<div>Authentication</div>
+</div>
+<p id="cn-m30-4">Welcome to the <b>Configure Two Factor Authentication </b>Practice Lab. In this module, you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m30-8">In this module, you will complete the following exercises:</p>
+<ul id="cn-m30-9">
+<li id="cn-m30-9">Configure Google Authenticator</li>
+</ul>
+<p id="cn-m30-10">After completing this lab, you will be able to:</p>
+<ul id="cn-m30-11">
+<li id="cn-m30-11">Connect to Win10 and Kali</li>
+<li id="cn-m30-12">Perform dependencies installation</li>
+<li id="cn-m30-13">Configure PAM module and SSH</li>
+<li id="cn-m30-14">Verify the 2FA authentication</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m30-16">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m30-17">
+<li id="cn-m30-17"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+<li id="cn-m30-18"><b>CAS-003 </b>4.4 Given a scenario, implement cryptographic techniques.</li>
+</ul>
+<span class="cn-quote" id="cn-m30-19"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m30-21">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m30-25">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m30-26">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m30-44"><b>Lab Topology</b></h2>
+<p id="cn-m30-45">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m30-46"><img class="cn-img" id="cn-image-m30-c-0" src="ConfigureTwoFactorAuthentication_files/image-m30-c-0.jpg" alt="Practice Labs screenshot."></p>
+<p id="cn-m30-47">Depending on the exercises, you may or may not use all
+ of the devices, but they are shown here in the layout to get an overall
+ understanding of the topology of the lab.</p>
+<ul id="cn-m30-48">
+<li id="cn-m30-48"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m30-49"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m30-50"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+<li id="cn-m30-51"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m30-52"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<span class="cn-alert" id="cn-m30-53">Click <b>Next </b>to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m30-54"><b>Exercise 1 - Configure Google Authenticator</b></h2>
+<p id="cn-m30-55">Google Authenticator is a very productive application 
+that provides and allows for two-factor authentication (2FA) on a device
+ that you wish to improve the level of security against. It uses the 
+Time-Based One-Time Password Algorithm (TOTP) and HMAC-based One-Time 
+Password Algorithm (HOTP).</p>
+<p id="cn-m30-56">The password generated can then be used as an 
+additional requirement to enter through an SSH connection or, in fact, 
+any type of configuration required.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m30-58">After completing this exercise, you will be able to:</p>
+<ul id="cn-m30-59">
+<li id="cn-m30-59">Connect to Win10 and Kali</li>
+<li id="cn-m30-60">Perform dependencies installation</li>
+<li id="cn-m30-61">Configure PAM module and SSH</li>
+<li id="cn-m30-62">Verify the 2FA authentication</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m30-64">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m30-65">
+<li id="cn-m30-65"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m30-66"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m30-67"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<p id="cn-m30-68"><img class="cn-img" id="cn-image-m30-c-1" src="ConfigureTwoFactorAuthentication_files/image-m30-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m30-70"><b>Task 1 - Connecting to Kali</b></h3>
+<p id="cn-m30-71">In this task, you will power on and connect to the lab devices used within this exercise.</p>
+<p id="cn-m30-72">To connect to Kali, perform the following steps:</p>
+<h4 id="cn-m30-73"><b><i>Step 1</i></b></h4>
+<p id="cn-m30-74">Ensure you have powered on the required devices and connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m30-75">Log in with the credentials:</p>
+<p id="cn-m30-76">Username:</p>
+<span class="cn-password">root</span>
+<p id="cn-m30-78">Password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<h4 id="cn-m30-80"><b><i>Step 2</i></b></h4>
+<p id="cn-m30-81">The PLABKALI01 <b>desktop </b>is displayed.</p>
+<h3 id="cn-m30-84"><b>Task 2 - Installation of dependencies</b></h3>
+<p id="cn-m30-85">In this task, you will install essential tools to help
+ configure the 2FA and begin the basic configuration of Kali to allow 
+this function.</p>
+<p id="cn-m30-86">Before you install google authenticator, you need to 
+install a set of dependencies. To install the dependencies before 
+installing google authenticator, perform the following steps:</p>
+<h4 id="cn-m30-87"><b><i>Step 1&nbsp;&nbsp;</i></b></h4>
+<p id="cn-m30-88">On the desktop, in the left pane, click the <b>Terminal </b>icon.</p>
+<p id="cn-m30-89"></p><figure><img class="cn-img" id="cn-image-m30-c-3" src="ConfigureTwoFactorAuthentication_files/image-m30-c-3.jpg" alt="Figure 1.2 Screenshot of PLABKALI01: Clicking the Terminal icon in the left pane."><figcaption>Figure 1.2 Screenshot of PLABKALI01: Clicking the Terminal icon in the left pane.</figcaption></figure><p></p>
+<h4 id="cn-m30-91"><b><i>Step 2</i></b></h4>
+<p id="cn-m30-92">Type the following command:</p>
+<pre id="cn-m30-93"><code>apt-get update -y
+</code></pre>
+<p id="cn-m30-94">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m30-95"><b><i>Note: </i></b><i>The update 
+may take a while to complete. The time for installation is dependent on 
+the number of updates that need to be installed.</i></span>
+<p id="cn-m30-96"></p><figure><img class="cn-img" id="cn-image-m30-c-4" src="ConfigureTwoFactorAuthentication_files/image-m30-c-4.jpg" alt="Figure 1.3 Screenshot of PLABKALI01: Typing the update command."><figcaption>Figure 1.3 Screenshot of PLABKALI01: Typing the update command.</figcaption></figure><p></p>
+<h4 id="cn-m30-98"><b><i>Step 3</i></b></h4>
+<p id="cn-m30-99">The updates are installed.</p>
+<p id="cn-m30-100"></p><figure><img class="cn-img" id="cn-image-m30-c-5" src="ConfigureTwoFactorAuthentication_files/image-m30-c-5.jpg" alt="Figure 1.4 Screenshot of PLABKALI01: Displaying the updates installed."><figcaption>Figure 1.4 Screenshot of PLABKALI01: Displaying the updates installed.</figcaption></figure><p></p>
+<h4 id="cn-m30-102"><b><i>Step 4</i></b></h4>
+<p id="cn-m30-103">You will now download the authenticator.</p>
+<p id="cn-m30-104">Type in the following command:</p>
+<pre id="cn-m30-105"><code>wget http://launchpadlibrarian.net/326531917/libpam-google-authenticator_20170702-1_amd64.deb
+</code></pre>
+<p id="cn-m30-106">Press <b>Enter</b>.</p>
+<p id="cn-m30-107"></p><figure><img class="cn-img" id="cn-image-m30-c-6" src="ConfigureTwoFactorAuthentication_files/image-m30-c-6.jpg" alt="Figure 1.5 Screenshot of PLABKALI01: Typing the command to download the authenticator."><figcaption>Figure 1.5 Screenshot of PLABKALI01: Typing the command to download the authenticator.</figcaption></figure><p></p>
+<h4 id="cn-m30-109"><b><i>Step 5</i></b></h4>
+<p id="cn-m30-110">To install the authenticator, type the following:</p>
+<pre id="cn-m30-111"><code>dpkg -i libpam-google-authenticator_20170702-1_amd64.deb
+</code></pre>
+<p id="cn-m30-112">Press <b>Enter</b>.</p>
+<p id="cn-m30-113"></p><figure><img class="cn-img" id="cn-image-m30-c-7" src="ConfigureTwoFactorAuthentication_files/image-m30-c-7.jpg" alt="Figure 1.6 Screenshot of PLABKALI01: Displaying typing the command to install the authenticator."><figcaption>Figure 1.6 Screenshot of PLABKALI01: Displaying typing the command to install the authenticator.</figcaption></figure><p></p>
+<h4 id="cn-m30-115"><b><i>Step 6</i></b></h4>
+<p id="cn-m30-116">Installation is now completed.</p>
+<p id="cn-m30-117"></p><figure><img class="cn-img" id="cn-image-m30-c-8" src="ConfigureTwoFactorAuthentication_files/image-m30-c-8.jpg" alt="Figure 1.7 Screenshot of PLABKALI01: Showing the installation completion."><figcaption>Figure 1.7 Screenshot of PLABKALI01: Showing the installation completion.</figcaption></figure><p></p>
+<h4 id="cn-m30-119"><b><i>Step 7</i></b></h4>
+<p id="cn-m30-120">Give the process about 3 minutes to collect the 
+information together. The screen might appear to hang, but Kali is 
+working on the request.</p>
+<p id="cn-m30-121">Clear the screen with the following command:</p>
+<pre id="cn-m30-122"><code>clear
+</code></pre>
+<p id="cn-m30-123">Type the following command:</p>
+<pre id="cn-m30-124"><code>google-authenticator
+</code></pre>
+<p id="cn-m30-125">Press <b>Enter</b>.</p>
+<h4 id="cn-m30-128"><b><i>Step 8</i></b></h4>
+<p id="cn-m30-129">Type the following to confirm the authentication to be time-based:</p>
+<pre id="cn-m30-130"><code>y
+</code></pre>
+<p id="cn-m30-131">Press <b>Enter</b>.</p>
+<p id="cn-m30-132"></p><figure><img class="cn-img" id="cn-image-m30-c-10" src="ConfigureTwoFactorAuthentication_files/image-m30-c-10.jpg" alt="Figure 1.9 Screenshot of PLABKALI01: Confirming the application to be time-based."><figcaption>Figure 1.9 Screenshot of PLABKALI01: Confirming the application to be time-based.</figcaption></figure><p></p>
+<h4 id="cn-m30-134"><b><i>Step 9</i></b></h4>
+<p id="cn-m30-135">To continue, type:</p>
+<pre id="cn-m30-136"><code>y
+</code></pre>
+<p id="cn-m30-137">Press <b>Enter</b>.</p>
+<p id="cn-m30-138"></p><figure><img class="cn-img" id="cn-image-m30-c-11" src="ConfigureTwoFactorAuthentication_files/image-m30-c-11.jpg" alt="Figure 1.10 Screenshot of PLABKALI01: Updating the /root/.google_authenticator file."><figcaption>Figure 1.10 Screenshot of PLABKALI01: Updating the /root/.google_authenticator file.</figcaption></figure><p></p>
+<h4 id="cn-m30-140"><b><i>Step 10</i></b></h4>
+<p id="cn-m30-141">To restrict token use and disallow multiple uses of 
+the same authentication, thereby helping to prevent Man-in-the-middle 
+(MITM) attacks, type the following:</p>
+<pre id="cn-m30-142"><code>y
+</code></pre>
+<p id="cn-m30-143">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m30-144"><b><i>Note: </i></b><i>In a 
+man-in-the-middle attack, a malicious attacker intercepts the 
+information that is being exchanged between two parties. In this attack,
+ the malicious attacker can also alter the information. In this 
+situation, the information sent from one party is altered and received 
+by another party.</i></span>
+<p id="cn-m30-145">You will see the secret key, verification code, and emergency scratch codes assigned.</p>
+<p id="cn-m30-146">These codes can be used on mobile devices or other computers to confirm the identity of the user.</p>
+<span class="cn-quote" id="cn-m30-147"><b><i>Note: </i></b><i>Write down your Secret Key. It will be needed later. </i></span>
+<p id="cn-m30-149"></p><figure><img class="cn-img" id="cn-image-m30-c-12" src="ConfigureTwoFactorAuthentication_files/image-m30-c-12.jpg" alt="Figure 1.11 Screenshot of PLABKALI01: Restricting token use and disallowing multiple uses of the same authentication."><figcaption>Figure 1.11 Screenshot of PLABKALI01: Restricting token use and disallowing multiple uses of the same authentication.</figcaption></figure><p></p>
+<h4 id="cn-m30-151"><b><i>Step 11</i></b></h4>
+<p id="cn-m30-152">You will need to agree to the time skew. To do this, type the following:</p>
+<pre id="cn-m30-153"><code>y
+</code></pre>
+<p id="cn-m30-154">Press <b>Enter</b>.</p>
+<p id="cn-m30-155"></p><figure><img class="cn-img" id="cn-image-m30-c-13" src="ConfigureTwoFactorAuthentication_files/image-m30-c-13.jpg" alt="Figure 1.12 Screenshot of PLABKALI01: Agreeing to time skew."><figcaption>Figure 1.12 Screenshot of PLABKALI01: Agreeing to time skew.</figcaption></figure><p></p>
+<h4 id="cn-m30-157"><b><i>Step 12</i></b></h4>
+<p id="cn-m30-158">Type the following command to accept the enabling of rate-limiting:</p>
+<pre id="cn-m30-159"><code>y
+</code></pre>
+<p id="cn-m30-160">Press <b>Enter</b>.</p>
+<p id="cn-m30-161"></p><figure><img class="cn-img" id="cn-image-m30-c-14" src="ConfigureTwoFactorAuthentication_files/image-m30-c-14.jpg" alt="Figure 1.13 Screenshot of PLABKALI01: Enabling rate-limiting."><figcaption>Figure 1.13 Screenshot of PLABKALI01: Enabling rate-limiting.</figcaption></figure><p></p>
+<h4 id="cn-m30-163"><b><i>Step 13</i></b></h4>
+<p id="cn-m30-164">The google authenticator is now installed and ready to use, but you must assign its functions to SSH.</p>
+<p id="cn-m30-165"></p><figure><img class="cn-img" id="cn-image-m30-c-15" src="ConfigureTwoFactorAuthentication_files/image-m30-c-15.jpg" alt="Figure 1.14 Screenshot of PLABKALI01: Finishing the google authenticator application installation."><figcaption>Figure 1.14 Screenshot of PLABKALI01: Finishing the google authenticator application installation.</figcaption></figure><p></p>
+<h3 id="cn-m30-168"><b>Task 3 - Configure PAM module and SSH</b></h3>
+<p id="cn-m30-169">PAM works as a layer between the user and application
+ in the authentication process. In this task, you will now configure the
+ PAM module and SSH (which will be the application) to work together. To
+ be able to do this, perform the following steps:</p>
+<h4 id="cn-m30-170"><b><i>Step 1</i></b></h4>
+<p id="cn-m30-171">Clear the screen with the following command:</p>
+<pre id="cn-m30-172"><code>clear
+</code></pre>
+<p id="cn-m30-173">Type the following into the terminal:</p>
+<pre id="cn-m30-174"><code>leafpad /etc/pam.d/sshd
+</code></pre>
+<p id="cn-m30-175">Press <b>Enter</b>.</p>
+<p id="cn-m30-176"></p><figure><img class="cn-img" id="cn-image-m30-c-16" src="ConfigureTwoFactorAuthentication_files/image-m30-c-16.jpg" alt="Figure 1.15 Screenshot of PLABKALI01: Typing the Leafpad command to open and modify the SSHD configuration file."><figcaption>Figure 1.15 Screenshot of PLABKALI01: Typing the Leafpad command to open and modify the SSHD configuration file.</figcaption></figure><p></p>
+<span class="cn-quote" id="cn-m30-178"><b><i>Note: </i></b><i>Maximize the terminal window.</i></span>
+<h4 id="cn-m30-179"><b><i>Step 2</i></b></h4>
+<p id="cn-m30-180">The <b>sshd </b>file is now displayed. </p><figure><img class="cn-img" id="cn-image-m30-c-17" src="ConfigureTwoFactorAuthentication_files/image-m30-c-17.jpg" alt="Figure 1.16 Screenshot of PLABKALI01: Using Leafpad to open and modify the SSHD configuration file."><figcaption>Figure 1.16 Screenshot of PLABKALI01: Using Leafpad to open and modify the SSHD configuration file.</figcaption></figure><p></p>
+<h4 id="cn-m30-182"><b><i>Step 3</i></b></h4>
+<p id="cn-m30-183">You need to add the following piece of code under <b># Read environment variables from /etc/environment </b>to the file:</p>
+<pre id="cn-m30-184"><code>auth required pam_google_authenticator.so
+</code></pre>
+<p id="cn-m30-185"></p><figure><img class="cn-img" id="cn-image-m30-c-18" src="ConfigureTwoFactorAuthentication_files/image-m30-c-18.jpg" alt="Figure 1.17 Screenshot of PLABKALI01: Configuring the SSHD configuration file."><figcaption>Figure 1.17 Screenshot of PLABKALI01: Configuring the SSHD configuration file.</figcaption></figure><p></p>
+<p id="cn-m30-187">Click the <b>File </b>menu and then select <b>Save</b>.</p>
+<p id="cn-m30-188"><b>Close </b>this file.</p>
+<h4 id="cn-m30-189"><b><i>Step 4</i></b></h4>
+<p id="cn-m30-190">Now, type the following command:</p>
+<pre id="cn-m30-191"><code>leafpad /etc/ssh/sshd_config
+</code></pre>
+<p id="cn-m30-192">Press <b>Enter</b>.</p>
+<p id="cn-m30-193"></p><figure><img class="cn-img" id="cn-image-m30-c-19" src="ConfigureTwoFactorAuthentication_files/image-m30-c-19.jpg" alt="Figure 1.18 Screenshot of PLABKALI01: Typing the leafpad command."><figcaption>Figure 1.18 Screenshot of PLABKALI01: Typing the leafpad command.</figcaption></figure><p></p>
+<h4 id="cn-m30-195"><b><i>Step 5</i></b></h4>
+<p id="cn-m30-196">You now need to change the following line from:</p>
+<pre id="cn-m30-197"><code>ChallengeResponseAuthentication no
+</code></pre>
+<p id="cn-m30-198">to</p>
+<pre id="cn-m30-199"><code>ChallengeResponseAuthentication yes
+</code></pre>
+<p id="cn-m30-200"></p><figure><img class="cn-img" id="cn-image-m30-c-20" src="ConfigureTwoFactorAuthentication_files/image-m30-c-20.jpg" alt="Figure 1.19 Screenshot of PLABKALI01: Showing the modifications made to the SSHD_config file."><figcaption>Figure 1.19 Screenshot of PLABKALI01: Showing the modifications made to the SSHD_config file.</figcaption></figure><p></p>
+<p id="cn-m30-202"><b>Save </b>the file and <b>exit Leafpad</b>.</p>
+<h4 id="cn-m30-203"><b><i>Step 6</i></b></h4>
+<p id="cn-m30-204">Now, you need to restart the SSH server.</p>
+<p id="cn-m30-205">Type the following commands:</p>
+<pre id="cn-m30-206"><code>service ssh restart
+service ssh status
+</code></pre>
+<p id="cn-m30-208">Press <b>Enter </b>after each command.</p>
+<p id="cn-m30-209"></p><figure><img class="cn-img" id="cn-image-m30-c-21" src="ConfigureTwoFactorAuthentication_files/image-m30-c-21.jpg" alt="Figure 1.20 Screenshot of PLABKALI01: Typing the commands to restart the SSH services."><figcaption>Figure 1.20 Screenshot of PLABKALI01: Typing the commands to restart the SSH services.</figcaption></figure><p></p>
+<h4 id="cn-m30-211"><b><i>Step 7</i></b></h4>
+<p id="cn-m30-212">The SSH services have been successfully restarted.</p>
+<p id="cn-m30-214"></p><figure><img class="cn-img" id="cn-image-m30-c-22" src="ConfigureTwoFactorAuthentication_files/image-m30-c-22.jpg" alt="Figure 1.21 Screenshot of PLABKALI01: Restarting the SSH services."><figcaption>Figure 1.21 Screenshot of PLABKALI01: Restarting the SSH services.</figcaption></figure><p></p>
+<h4 id="cn-m30-216"><b><i>Step 8</i></b></h4>
+<p id="cn-m30-217">Exit the <b>terminal</b>.</p>
+<p id="cn-m30-218"></p><figure><img class="cn-img" id="cn-image-m30-c-23" src="ConfigureTwoFactorAuthentication_files/image-m30-c-23.jpg" alt="Figure 1.22 Screenshot of PLABKALI01: Closing the terminal."><figcaption>Figure 1.22 Screenshot of PLABKALI01: Closing the terminal.</figcaption></figure><p></p>
+<h3 id="cn-m30-221"><b>Task 4 - Verification of the 2FA connection </b></h3>
+<p id="cn-m30-222">In this task, you will continue with the 
+configuration and verify that 2FA is working on Kali by connecting to it
+ from PLABWIN10.</p>
+<p id="cn-m30-223">To do this, perform the following steps:</p>
+<h4 id="cn-m30-224"><b><i>Step 1</i></b></h4>
+<p id="cn-m30-225">Connect to <b>PLABWIN10.</b></p>
+<p id="cn-m30-226">Double-click the <b>Putty </b>icon on the desktop.</p>
+<p id="cn-m30-227">In the <b>Host Name (or IP address) </b>text box, type the following IP address:</p>
+<pre id="cn-m30-228"><code>192.168.0.3
+</code></pre>
+<p id="cn-m30-229">Click <b>Open</b>.</p>
+<span class="cn-alert" id="cn-m30-230"><b>Note: </b>If a Security Alert appears, click <b>Yes</b></span>
+<p id="cn-m30-231"></p><figure><img class="cn-img" id="cn-image-m30-c-24" src="ConfigureTwoFactorAuthentication_files/image-m30-c-24.jpg" alt="Figure 1.23 Screenshot of PLABWIN10: Putty is open and connecting to the Kali through SSH."><figcaption>Figure 1.23 Screenshot of PLABWIN10: Putty is open and connecting to the Kali through SSH.</figcaption></figure><p></p>
+<h4 id="cn-m30-234"><b><i>Step 2</i></b></h4>
+<p id="cn-m30-235">When prompted in the terminal, type the following username:</p>
+<pre id="cn-m30-236"><code>root
+</code></pre>
+<p id="cn-m30-237">Press <b>Enter</b>.</p>
+<p id="cn-m30-238">Type the following password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m30-240">Press <b>Enter</b>.</p>
+<p id="cn-m30-241"></p><figure><img class="cn-img" id="cn-image-m30-c-25" src="ConfigureTwoFactorAuthentication_files/image-m30-c-25.jpg" alt="Figure 1.24 Screenshot of PLABWIN10: Terminal open for SSH to Kali device."><figcaption>Figure 1.24 Screenshot of PLABWIN10: Terminal open for SSH to Kali device.</figcaption></figure><p></p>
+<h4 id="cn-m30-243"><b><i>Step 3</i></b></h4>
+<p id="cn-m30-244">You will see that the SSH connection will now ask for a Verification code to be entered into the connection.</p>
+<p id="cn-m30-245">At this point, you will skip entering the verification code. Press <b>Enter</b>.</p>
+<p id="cn-m30-246">Notice that if you skip entering the verification code, you are shown the <b>Access denied </b>message.</p>
+<p id="cn-m30-247">Close the terminal window.</p>
+<p id="cn-m30-248"></p><figure><img class="cn-img" id="cn-image-m30-c-26" src="ConfigureTwoFactorAuthentication_files/image-m30-c-26.jpg" alt="Figure 1.25 Screenshot of PLABWIN10: Displaying the access denied message."><figcaption>Figure 1.25 Screenshot of PLABWIN10: Displaying the access denied message.</figcaption></figure><p></p>
+<h4 id="cn-m30-250"><b><i>Step 4</i></b></h4>
+<p id="cn-m30-251">Open <b>Internet Explorer </b>onto the <b>intranet </b>page.</p>
+<p id="cn-m30-252">Navigate to the following location:</p>
+<pre id="cn-m30-253"><code>Tools &gt; WinAuth
+</code></pre>
+<p id="cn-m30-254">Click on the program titled <b>WinAuth.exe</b>.</p>
+<p id="cn-m30-255"></p><figure><img class="cn-img" id="cn-image-m30-c-27" src="ConfigureTwoFactorAuthentication_files/image-m30-c-27.jpg" alt="Figure 1.26 Screenshot of PLABWIN10: Internet Explorer is displayed on the Tools &amp;gt; WinAuth Page."><figcaption>Figure 1.26 Screenshot of PLABWIN10: Internet Explorer is displayed on the Tools &gt; WinAuth Page.</figcaption></figure><p></p>
+<h4 id="cn-m30-257"><b><i>Step 5</i></b></h4>
+<p id="cn-m30-258">In the notification bar, click <b>Run</b>.</p>
+<span class="cn-alert" id="cn-m30-259"><b>Note: </b>If an alert appears stating “WinAuth.exe couldn’t be verified,” click <b>Run</b></span>
+<p id="cn-m30-260"></p><figure><img class="cn-img" id="cn-image-m30-c-28" src="ConfigureTwoFactorAuthentication_files/image-m30-c-28.jpg" alt=" Figure 1.27 Screenshot of PLABWIN10: Showing the notification bar with the Run or Save options for WinAuth.exe."><figcaption> Figure 1.27 Screenshot of PLABWIN10: Showing the notification bar with the Run or Save options for WinAuth.exe.</figcaption></figure><p></p>
+<h4 id="cn-m30-262"><b><i>Step 6</i></b></h4>
+<p id="cn-m30-263">Minimize <b>Internet Explorer</b>.</p>
+<p id="cn-m30-264">Click <b>Add </b>on the <b>WinAuth </b>dialog box.</p>
+<p id="cn-m30-265"></p><figure><img class="cn-img" id="cn-image-m30-c-29" src="ConfigureTwoFactorAuthentication_files/image-m30-c-29.jpg" alt="Figure 1.28 Screenshot of PLABWIN10: Showing the WinAuth dialog box and selecting Add."><figcaption>Figure 1.28 Screenshot of PLABWIN10: Showing the WinAuth dialog box and selecting Add.</figcaption></figure><p></p>
+<h4 id="cn-m30-267"><b><i>Step 7</i></b></h4>
+<p id="cn-m30-268">From the drop-down menu, select <b>Authenticator</b>.</p>
+<p id="cn-m30-269"></p><figure><img class="cn-img" id="cn-image-m30-c-30" src="ConfigureTwoFactorAuthentication_files/image-m30-c-30.jpg" alt="Figure 1.29 Screenshot of PLABWIN10: Showing WinAuth with the Authenticator options available in the drop-down."><figcaption>Figure 1.29 Screenshot of PLABWIN10: Showing WinAuth with the Authenticator options available in the drop-down.</figcaption></figure><p></p>
+<h4 id="cn-m30-271"><b><i>Step 8</i></b></h4>
+<p id="cn-m30-272">Enter the <b>Secret Key </b>that was provided during the installation. Keep the default setting as <b>Time-based</b>.</p>
+<p id="cn-m30-273">Then click <b>Verify Authenticator</b>.</p>
+<p id="cn-m30-274"></p><figure><img class="cn-img" id="cn-image-m30-c-31" src="ConfigureTwoFactorAuthentication_files/image-m30-c-31.jpg" alt="Figure 1.30 Screenshot of PLABWIN10: Entering the secret key and then clicking  Verify Authenticator."><figcaption>Figure 1.30 Screenshot of PLABWIN10: Entering the secret key and then clicking  Verify Authenticator.</figcaption></figure><p></p>
+<h4 id="cn-m30-276"><b><i>Step 9</i></b></h4>
+<p id="cn-m30-277">Remember that this verification code is going to change every <b>30 </b>seconds.</p>
+<p id="cn-m30-278">Open <b>PuTTy </b>and begin the SSH connection to the Kali device.</p>
+<span class="cn-quote" id="cn-m30-279"><b><i>Note: </i></b><i>You can follow the steps for using PuTTY from </i><b><i>Task 1</i></b><i>.</i></span>
+<p id="cn-m30-280"></p><figure><img class="cn-img" id="cn-image-m30-c-32" src="ConfigureTwoFactorAuthentication_files/image-m30-c-32.jpg" alt="Figure 1.31 Screenshot of PLABWIN10: Showing Putty connecting to the Kali device."><figcaption>Figure 1.31 Screenshot of PLABWIN10: Showing Putty connecting to the Kali device.</figcaption></figure><p></p>
+<h4 id="cn-m30-282"><b><i>Step 10</i></b></h4>
+<p id="cn-m30-283">A terminal window is opened, and you are prompted with the username. Type the following <b>username</b>:</p>
+<pre id="cn-m30-284"><code>root
+</code></pre>
+<p id="cn-m30-285">Press <b>Enter</b>.</p>
+<p id="cn-m30-286">When prompted for a <b>password</b>, type the following:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m30-288">Then type the verification code that is displayed in the <b>WinAuth </b>dialog box.</p>
+<p id="cn-m30-289">Press <b>Enter</b>.</p>
+<p id="cn-m30-290"></p><figure><img class="cn-img" id="cn-image-m30-c-33" src="ConfigureTwoFactorAuthentication_files/image-m30-c-33.jpg" alt="Figure 1.32 Screenshot of PLABWIN10: Testing the verification code."><figcaption>Figure 1.32 Screenshot of PLABWIN10: Testing the verification code.</figcaption></figure><p></p>
+<h4 id="cn-m30-292"><b><i>Step 11</i></b></h4>
+<p id="cn-m30-293">After the successful authentication of the 
+verification code, you are successfully logged in. You now have root 
+access and a valid SSH connection to the device using 2FA.</p>
+<p id="cn-m30-294"></p><figure><img class="cn-img" id="cn-image-m30-c-34" src="ConfigureTwoFactorAuthentication_files/image-m30-c-34.jpg" alt="Figure 1.33 Screenshot of PLABWIN10: Putty terminal is testing the verification code."><figcaption>Figure 1.33 Screenshot of PLABWIN10: Putty terminal is testing the verification code.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m30-299"><b>Review</b></h2>
+<p id="cn-m30-300">Well done, you have completed the <b>Configure Two Factor Authentication </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">607f0005-e676-43ae-9ef1-321e2a6c4ca9</span>
+<span class="atom-code hidden">99d8b37b-7f70-4e99-9c86-060b40fb06bf</span>
+<span class="atom-code hidden">9a9ec115-38b0-4053-b171-69bec6fb46f0</span>
+<span class="atom-code hidden">3b160599-3bfe-47ed-85a8-fe5244109444</span>
+<span class="atom-code hidden">f16f3896-b4b3-4d90-a5e3-c097486843ca</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m30-312">You completed the following exercises:</p>
+<ul id="cn-m30-313">
+<li id="cn-m30-313">Configure Google Authenticator</li>
+</ul>
+<p id="cn-m30-314">You should now be able to:</p>
+<ul id="cn-m30-315">
+<li id="cn-m30-315">Connect to Win10 and Kali</li>
+<li id="cn-m30-316">Perform dependencies installation</li>
+<li id="cn-m30-317">Configure PAM module and SSH</li>
+<li id="cn-m30-318">Verify the 2FA authentication</li>
+</ul>
+<h2 class="cn-feedback"><b> Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m30-322">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

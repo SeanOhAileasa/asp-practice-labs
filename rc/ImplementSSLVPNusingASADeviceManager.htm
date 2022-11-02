@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ImplementSSLVPNusingASADeviceManager_files/print-styles.css" rel="stylesheet">
+    <script src="ImplementSSLVPNusingASADeviceManager_files/jquery.min.js"></script>
+    <script src="ImplementSSLVPNusingASADeviceManager_files/jspdf.js"></script>
+    <script src="ImplementSSLVPNusingASADeviceManager_files/from_html.js"></script>
+    <script src="ImplementSSLVPNusingASADeviceManager_files/addimage.js"></script>
+    <script src="ImplementSSLVPNusingASADeviceManager_files/filesaver.js"></script>
+    <script src="ImplementSSLVPNusingASADeviceManager_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="UPGFk2SNFn+UjedPM4jNmjVR2jLZmE5Bg51IXrg01TI7tf+zeSm6iGbdu93Bhmb8W/Cgq5x3c7PXvS44sQbwXOLGglgY/ubzVB3QXLJ7foY=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Implement SSL VPN using ASA Device Manager</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Implement a Clientless SSL VPN using the Cisco ASA Device Manager</li><li>Exercise 2 - Implement AnyConnect using the Cisco ASA Device Manager</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m7-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>SSL VPN</div>
+<div>AnyConnect</div>
+<div>Cisco ASA Device Manager</div>
+<div>Clientless SSL VPN</div>
+</div>
+<p id="cn-m7-6">Welcome to the <b>Implement SSL VPN using ASA Device Manager </b>Practice Lab. In this module, you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m7-10">In this module, you will complete the following exercises:</p>
+<ul id="cn-m7-11">
+<li id="cn-m7-11">Implement a Clientless SSL VPN using the Cisco ASA Device Manager</li>
+<li id="cn-m7-12">Implement AnyConnect using the Cisco ASA Device Manager</li>
+</ul>
+<p id="cn-m7-13">After completing this lab, you will be able to:</p>
+<ul id="cn-m7-14">
+<li id="cn-m7-14">Configure a Clientless SSL VPN</li>
+<li id="cn-m7-15">Configure the AnyConnect Client</li>
+</ul>
+<ol id="cn-m7-16">
+</ol>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m7-18">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m7-19">
+<li id="cn-m7-19"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+</ul>
+<span class="cn-quote" id="cn-m7-20"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m7-22">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m7-26">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m7-27">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m7-45"><b>Lab Topology</b></h2>
+<p id="cn-m7-46">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m7-47">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m7-48">
+<li id="cn-m7-48"><b>LDNFWASA01 </b>(Cisco ASA 5512)</li>
+<li id="cn-m7-49"><b>LDNEXTRTR01 </b>(Cisco C2911/K9)</li>
+<li id="cn-m7-50"><b>LDNCORE01 </b>(Cisco Catalyst 2960)</li>
+<li id="cn-m7-51"><b>PLABMGMT </b>(Windows Server 2003 - Standalone Server)</li>
+<li id="cn-m7-52"><b>PLABDMZWEB </b>(Windows Server 2003 - Standalone Server)</li>
+<li id="cn-m7-53"><b>PLABEXTCLI </b>(Windows Server 2003 - Standalone Server)</li>
+</ul>
+<p id="cn-m7-54"><img class="cn-img" id="cn-image-m7-c-0" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m7-56">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m7-57"><b>Exercise 1 - Implement a Clientless SSL VPN using the Cisco ASA Device Manager</b></h2>
+<p id="cn-m7-58">In this exercise, you will use the Cisco ASDM software 
+to create a Clientless SSL VPN enabling remote access for Web-based 
+users to gain access to the corporate network. In this particular 
+example, you will use PLABEXTCLI to VPN to the LDNFWASA01 firewall 
+enabling connectivity to the PLABDMZWEB.</p>
+<p id="cn-m7-59">A base configuration has been applied to all the devices in the lab so that you can focus on configuring the VPN.</p>
+<p id="cn-m7-60">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m7-62">After completing this exercise, you will be able to:</p>
+<ul id="cn-m7-63">
+<li id="cn-m7-63">Configure a Clientless SSL VPN</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m7-65">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m7-66">
+<li id="cn-m7-66"><b>LDNFWASA01 </b>(Cisco ASA 5512)</li>
+<li id="cn-m7-67"><b>PLABMGMT </b>(Windows Server 2003 - Standalone Server)</li>
+<li id="cn-m7-68"><b>PLABEXTCLI </b>(Windows Server 2003 - Standalone Server)</li>
+</ul>
+<p id="cn-m7-69"><img class="cn-img" id="cn-image-m7-c-1" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m7-72"><b>Task 1 - Configure a Clientless SSL VPN</b></h3>
+<p id="cn-m7-73">To set up a clientless SSL VPN use the following steps:</p>
+<h4 id="cn-m7-74"><b><i>Step 1</i></b></h4>
+<p id="cn-m7-75">Ensure <b>all </b>the devices are powered on in the lab. After <b>PLABMGMT </b>is up and connected to the desktop, double-click the <b>Cisco ASDM </b>icon on the desktop.</p>
+<h4 id="cn-m7-76"><b><i>Step 2</i></b></h4>
+<p id="cn-m7-77">Notice that the <b>Device IP Address / Name </b>textbox contains the following IP address:</p>
+<pre id="cn-m7-78"><code>192.168.17.1
+</code></pre>
+<p id="cn-m7-79">In the <b>Username </b>text box, enter the following:</p>
+<pre id="cn-m7-80"><code>cisco
+</code></pre>
+<p id="cn-m7-81">In the <b>Password </b>text box, enter the following:</p>
+<pre id="cn-m7-82"><code>cisco
+</code></pre>
+<p id="cn-m7-83">Click <b>OK</b>.</p>
+<p id="cn-m7-84"></p><figure><img class="cn-img" id="cn-image-m7-c-2" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-2.jpg" alt="Figure 1.1 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.1 Screenshot of PLABMGMT: Displaying the initial Cisco ASDM-IDM 
+Launcher window with the IP address along with the user credentials.</figcaption></figure><p></p>
+<span class="cn-quote" id="cn-m7-86"><b><i>Note: </i></b><i>ensure </i><b><i>Run in Demo Mode </i></b><i>is unchecked. Remember you are connecting to a real Cisco ASA. Also, keep the </i><b><i>Remember the username for the specified device on this computer </i></b><i>option selected.</i></span>
+<h4 id="cn-m7-89"><b><i>Step 3</i></b></h4>
+<p id="cn-m7-90">The <b>Security Warning </b>dialog box is displayed. Select <b>Always trust content from this publisher </b>and then click <b>Yes</b>.</p>
+<h4 id="cn-m7-91"><b><i>Step 4</i></b></h4>
+<p id="cn-m7-92">The <b>Home </b>tab of <b>Cisco ASDM 7.3 for ASA </b>is displayed. Click <b>Configuration  </b>and then on the left pane at the bottom, click <b>Remote Access VPN</b></p><figure><img class="cn-img" id="cn-image-m7-c-3" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-3.jpg" alt="Figure 1.2 Screenshot of PLABMGMT"><figcaption>Figure 1.2 Screenshot of PLABMGMT: Showing the Configuration screen with Remote Access VPN selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-95"><b><i>Step 5</i></b></h4>
+<p id="cn-m7-96">The right pane displayed several buttons.</p>
+<span class="cn-quote" id="cn-m7-97"><b><i>Note: </i></b><i>The buttons in the right pane open help assistance. These are not the wizards for configuration. </i></span>
+<p id="cn-m7-98">Click <b>Wizards</b>, select <b>VPN Wizards</b>, and then select <b>Clientless SSL VPN Wizard </b>to start the process.</p>
+<p id="cn-m7-99"></p><figure><img class="cn-img" id="cn-image-m7-c-4" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-4.jpg" alt="Figure 1.3 Screenshot of PLABMGMT"><figcaption>Figure 1.3 Screenshot of PLABMGMT: Clicking Wizards ( VPN Wizards menu options.</figcaption></figure><p></p>
+<span class="cn-quote" id="cn-m7-101"><b><i>Note: </i></b><i>On older 
+ASDM versions, the menu item is slightly different, a screenshot of the 
+older version is shown below for your reference.</i></span>
+<p id="cn-m7-102"></p><figure><img class="cn-img" id="cn-image-m7-c-5" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-5.jpg" alt="Figure 1.4 Screenshot of PLABMGMT"><figcaption>Figure 1.4 Screenshot of PLABMGMT: Selecting SSL VPN Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m7-105"><b><i>Step 6</i></b></h4>
+<p id="cn-m7-106">On the <b>Clientless SSL VPN Connection (Step 1 of 6) </b>page of the <b>SSL VPN Wizard</b>, click <b>Next</b>.</p>
+<p id="cn-m7-107"></p><figure><img class="cn-img" id="cn-image-m7-c-6" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-6.jpg" alt="Figure 1.5 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.5 Screenshot of PLABMGMT: Displaying the SSL VPN Wizard with its 
+first page, Clientless SSL VPN Connection (Step 1 of 6).</figcaption></figure><p></p>
+<h4 id="cn-m7-110"><b><i>Step 7</i></b></h4>
+<p id="cn-m7-111">On the <b>Clientless SSL VPN Interface (Step 2 of 6) </b>page, in <b>Connection Profile Name </b>text box, enter the following:</p>
+<pre id="cn-m7-112"><code>CLIENTLESS
+</code></pre>
+<p id="cn-m7-113">Ensure that the <b>SSL VPN Interface </b>drop-down has <b>internet </b>selected.</p>
+<p id="cn-m7-114">Leave the other settings as default and click <b>Next</b>.</p>
+<p id="cn-m7-115"></p><figure><img class="cn-img" id="cn-image-m7-c-7" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-7.jpg" alt="Figure 1.6 Screenshot of PLABMGMT"><figcaption>Figure 1.6 Screenshot of PLABMGMT: Displaying the SSL VPN Interface (Step 2 of 6) page of SSL VPN Interface wizard.</figcaption></figure><p></p>
+<h4 id="cn-m7-118"><b><i>Step 8</i></b></h4>
+<p id="cn-m7-119">On the <b>User Authentication (Step 3 of 6) </b>page, select <b>Authenticate using the local user database</b>.</p>
+<p id="cn-m7-120">The <b>User to be added </b>section is now enabled, in this section enter the following details:</p>
+<pre id="cn-m7-121"><code>Username: fred
+Password: cisco123
+Confirm: cisco123
+</code></pre>
+<p id="cn-m7-124"></p><figure><img class="cn-img" id="cn-image-m7-c-8" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-8.jpg" alt="Figure 1.7 Screenshot of PLABMGMT"><figcaption>Figure 1.7 Screenshot of PLABMGMT: Displaying the User Authentication (Step 3 of 6) page of SSL VPN Interface wizard.</figcaption></figure><p></p>
+<h4 id="cn-m7-127"><b><i>Step 9</i></b></h4>
+<p id="cn-m7-128">Click <b>Add </b>to add the user to the right pane. Notice that the user is now added to the right pane. Click <b>Next</b>.</p>
+<p id="cn-m7-129"></p><figure><img class="cn-img" id="cn-image-m7-c-9" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-9.jpg" alt="Figure 1.8 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.8 Screenshot of PLABMGMT: Displaying the User Authentication (Step 3 
+of 6) page of SSL VPN Interface wizard. Notice that the username is 
+added to the right section.</figcaption></figure><p></p>
+<h4 id="cn-m7-132"><b><i>Step 10</i></b></h4>
+<p id="cn-m7-133">On the <b>Group Policy (Step 4 of 6) </b>page, ensure <b>Create a new group policy </b>is selected and enter the following text and then click <b>Next</b>.</p>
+<pre id="cn-m7-134"><code>CLIENTLESS_POLICY
+</code></pre>
+<p id="cn-m7-135"></p><figure><img class="cn-img" id="cn-image-m7-c-10" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-10.jpg" alt="This image is described in the fig caption that follows this image."><figcaption>Figure
+ 1.9 Screenshot of PLABMGMT. Displaying the Group Policy (Step 4 of 6) 
+page of SSL VPN Interface wizard. Notice the “Create new group policy” 
+field with the CLIENTLESS_POLICY value.</figcaption></figure><p></p>
+<h4 id="cn-m7-138"><b><i>Step 11</i></b></h4>
+<p id="cn-m7-139">On the <b>Clientless Connections Only - Bookmark List (Step 5 of 6) </b>page, click <b>Manage</b>.</p>
+<p id="cn-m7-140"></p><figure><img class="cn-img" id="cn-image-m7-c-11" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-11.jpg" alt="Figure 1.10 Screenshot of PLABMGMT"><figcaption>Figure 1.10 Screenshot of PLABMGMT: Displaying the Clientless Connections Only - Bookmark List (Step 5 of 6) page.</figcaption></figure><p></p>
+<h4 id="cn-m7-142"><b><i>Step 12</i></b></h4>
+<p id="cn-m7-143">In the <b>Configure GUI Customization Objects </b>dialog, click <b>Add</b>.</p>
+<p id="cn-m7-144"></p><figure><img class="cn-img" id="cn-image-m7-c-12" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-12.jpg" alt="Figure 1.11 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.11 Screenshot of PLABMGMT: Displaying the Configure GUI Customization
+ Objects dialog box with the Add button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m7-147"><b><i>Step 13</i></b></h4>
+<p id="cn-m7-148">In the <b>Add Bookmark List </b>dialog box, in the <b>Bookmark List Name </b>text box, enter in <b>MYBOOKMARKS</b>. Click <b>Add</b>.</p>
+<p id="cn-m7-149"></p><figure><img class="cn-img" id="cn-image-m7-c-13" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-13.jpg" alt="Figure 1.12 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.12 Screenshot of PLABMGMT: Displaying the Add Bookmark List dialog 
+box. Notice the “Bookmark List Name” field with the MYBOOKMARKS value.</figcaption></figure><p></p>
+<h4 id="cn-m7-152"><b><i>Step 14</i></b></h4>
+<p id="cn-m7-153">On the <b>Select Bookmark Type </b>dialog box, keep the default option (<b>URL with GET or POST method</b>) and click <b>OK</b>.</p>
+<p id="cn-m7-154"></p><figure><img class="cn-img" id="cn-image-m7-c-14" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-14.jpg" alt="Figure 1.13 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.13 Screenshot of PLABMGMT: Displaying the Select Bookmark Type dialog
+ box. Notice the selection of URL with GET or POST method.</figcaption></figure><p></p>
+<h4 id="cn-m7-156"><b><i>Step 15</i></b></h4>
+<p id="cn-m7-157">In the <b>Add Bookmark </b>dialog box, enter in the following settings and click <b>OK</b>:</p>
+<pre id="cn-m7-158"><code>Title: DMZ_WEB
+URL: PLABDMZWEB
+</code></pre>
+<p id="cn-m7-160"></p><figure><img class="cn-img" id="cn-image-m7-c-15" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-15.jpg" alt="Figure 1.14 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.14 Screenshot of PLABMGMT: Displaying the Add Bookmark dialog box. 
+Notice the “Bookmark Title” with the DMZ_WEB value and “URL” field with 
+the PLABDMZWEB value.</figcaption></figure><p></p>
+<h4 id="cn-m7-162"><b><i>Step 16</i></b></h4>
+<p id="cn-m7-163">Notice that <b>DMZ_WEB </b>is now added to the <b>Edit Bookmark List </b>dialog box.</p>
+<p id="cn-m7-164">Click <b>OK</b>.</p>
+<p id="cn-m7-165"></p><figure><img class="cn-img" id="cn-image-m7-c-16" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-16.jpg" alt="Figure 1.15 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.15 Screenshot of PLABMGMT: Displaying the Add Bookmark List dialog 
+box. Notice the addition in the values DMZ_WEB and http :// PLABDMZWEB 
+in the “Bookmark Title” and “URL” columns.</figcaption></figure><p></p>
+<h4 id="cn-m7-169"><b><i>Step 17</i></b></h4>
+<p id="cn-m7-170">Click <b>OK </b>at the <b>Configure GUI Customization Objects </b>dialog box.</p>
+<p id="cn-m7-171"></p><figure><img class="cn-img" id="cn-image-m7-c-17" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-17.jpg" alt="Figure 1.16 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.16 Screenshot of PLABMGMT: Displaying the Configure GUI Customization
+ Objects dialog box. Notice the addition of the value MYBOOKMARKS.</figcaption></figure><p></p>
+<h4 id="cn-m7-174"><b><i>Step 18</i></b></h4>
+<p id="cn-m7-175">Back on the <b>Clientless Connections Only - Bookmark List (Step 5 of 6) </b>page, select <b>MYBOOKMARKS </b>from the <b>Bookmark List </b>drop-down list. Click <b>Next </b></p>
+<p id="cn-m7-176"></p><figure><img class="cn-img" id="cn-image-m7-c-18" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-18.jpg" alt="Figure 1.17 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.17 Screenshot of PLABMGMT: Displaying the Clientless Connections Only
+ - Bookmark List (Step 5 of 6) page. Notice the selection of the value 
+MYBOOKMARKS in the “Bookmark List” field.</figcaption></figure><p></p>
+<h4 id="cn-m7-179"><b><i>Step 19</i></b></h4>
+<p id="cn-m7-180">On the <b>Summary (Step 6 of 6) </b>page, click <b>Finish</b>.</p>
+<p id="cn-m7-181"></p><figure><img class="cn-img" id="cn-image-m7-c-19" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-19.jpg" alt="Figure 1.18 Screenshot of PLABMGMT"><figcaption>Figure
+ 1.18 Screenshot of PLABMGMT: Displaying the Summary (Step 6 of 6) page.
+ Notice the list of configuration made on this wizard.</figcaption></figure><p></p>
+<h4 id="cn-m7-183"><b><i>Step 20</i></b></h4>
+<p id="cn-m7-184">The configuration will be applied to the ASA, notice 
+using the wizard you don’t have to apply the configuration, it applies 
+it automatically.</p>
+<p id="cn-m7-185">You are back on the <b>Configuration </b>tab.</p>
+<p id="cn-m7-186"></p><figure><img class="cn-img" id="cn-image-m7-c-20" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-20.jpg" alt="Figure 1.19 Screenshot of PLABMGMT"><figcaption>Figure 1.19 Screenshot of PLABMGMT: Displaying the Configuration main page with Remote Access VPN selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-188"><b><i>Step 21</i></b></h4>
+<p id="cn-m7-189">Next, connect to <b>PLABEXTCLI</b>.</p>
+<p id="cn-m7-190">Open <b>Internet Explorer</b>, and enter the following URL in the address bar:</p>
+<pre id="cn-m7-191"><code>https://213.16.48.1
+</code></pre>
+<h4 id="cn-m7-193"><b><i>Step 22</i></b></h4>
+<p id="cn-m7-194">It may take a minute to load the website. However, you
+ are prompted with a certificate error. Since you did not configure any 
+valid certificates, this error is likely to be displayed.</p>
+<p id="cn-m7-195">Click <b>Continue to this website (not recommended</b>).</p>
+<p id="cn-m7-196"></p><figure><img class="cn-img" id="cn-image-m7-c-21" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-21.jpg" alt="Figure 1.20 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 1.20 Screenshot of PLABEXTCLI: Displaying Internet Explorer with the 
+http://213.16.48.1 page that displays the problem with the security 
+certificate.</figcaption></figure><p></p>
+<h4 id="cn-m7-199"><b><i>Step 23</i></b></h4>
+<p id="cn-m7-200">The ASA login Webpage is displayed.</p>
+<p id="cn-m7-201">In the <b>USERNAME </b>textbox, enter the following:</p>
+<pre id="cn-m7-202"><code>fred
+</code></pre>
+<p id="cn-m7-203">In the <b>PASSWORD </b>text box, enter the following:</p>
+<span class="cn-password">cisco123</span>
+<p id="cn-m7-205">Click <b>Login</b></p><figure><img class="cn-img" id="cn-image-m7-c-22" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-22.jpg" alt="Figure 1.21 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 1.21 Screenshot of PLABEXTCLI: Displaying SSL VPN Service login window 
+with credentials. Notice the values in the “USERNAME” and “PASSWORD” 
+fields.</figcaption></figure><p></p>
+<h4 id="cn-m7-208"><b><i>Step 24</i></b></h4>
+<p id="cn-m7-209">After the successful login, you will see the bookmark that you created previously.</p>
+<span class="cn-quote" id="cn-m7-210"><b><i>Note: </i></b><i>You will see a notification bar that prompts you to save a password. Click </i><b><i>Not for this site</i></b><i>.</i></span>
+<p id="cn-m7-211">However, notice that the <b>DMZ_WEB </b>URL is greyed out when you hover over the link. A popup displays the reason for the disabled <b>DMZ_WEB</b>. To resolve this, you will need to add a host entry in for this server as the ASA cannot resolve the address.</p>
+<p id="cn-m7-212"></p><figure><img class="cn-img" id="cn-image-m7-c-23" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-23.jpg" alt="Figure 1.22 Screenshot of PLABEXTCLI"><figcaption>Figure 1.22 Screenshot of PLABEXTCLI: Displaying the homepage of SSL VPN Service Web application.</figcaption></figure><p></p>
+<h4 id="cn-m7-215"><b><i>Step 25</i></b></h4>
+<p id="cn-m7-216">Connect to the <b>LDNFWASA01</b>.</p>
+<p id="cn-m7-217">Use the following command to add a name at the terminal:</p>
+<pre id="cn-m7-218"><code>LDNFWASA01# configure terminal
+LDNFWASA01(config)# name 172.16.16.10 PLABDMZWEB
+LDNFWASA01(config)# exit
+</code></pre>
+<h4 id="cn-m7-221"><b><i>Step 26</i></b></h4>
+<p id="cn-m7-222">Switch back to <b>PLABMGMT. </b></p>
+<p id="cn-m7-223">Notice that the ASDM is showing an <b>ASDM out of sync </b>message.
+ Whenever you configure something on the CLI and have the ASDM software 
+open, this message will appear. You can just click <b>Refresh Now </b>to tell the ASDM to pull the latest configuration.</p>
+<p id="cn-m7-224"></p><figure><img class="cn-img" id="cn-image-m7-c-24" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-24.jpg" alt="Figure 1.23 Screenshot of PLABMGMT"><figcaption>Figure 1.23 Screenshot of PLABMGMT: Displaying a prompt with the message to refresh ASDM.</figcaption></figure><p></p>
+<h4 id="cn-m7-226"><b><i>Step 27</i></b></h4>
+<p id="cn-m7-227">Refresh the SSL VPN client page on <b>PLABEXTCLI</b>. Press <b>F5 </b>or right-click in the right pane and select <b>Refresh</b>.</p>
+<span class="cn-quote" id="cn-m7-228"><b><i>Note: </i></b><i>Some laptop keyboards require </i><b><i>Fn + F5 </i></b><i>keys to be pressed for refreshing a Webpage.</i></span>
+<h4 id="cn-m7-229"><b><i>Step 28</i></b></h4>
+<p id="cn-m7-230">Notice that the <b>DMZ_WEB </b>URL is no longer grey.</p>
+<p id="cn-m7-231">Click <b>DMZ_WEB</b>.</p>
+<p id="cn-m7-232"></p><figure><img class="cn-img" id="cn-image-m7-c-25" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-25.jpg" alt="Figure 1.24 Screenshot of PLABEXTCLI"><figcaption>Figure 1.24 Screenshot of PLABEXTCLI: Displaying the initial screen with DMZ_WEB, which is now clickable.</figcaption></figure><p></p>
+<span class="atom-code hidden">a071c347-2fd6-4e2a-9392-73e4cb0edabe</span>
+<span class="cn-alert" id="cn-m7-235">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m7-239"><b>Exercise 2 - Implement AnyConnect using the Cisco ASA Device Manager</b></h2>
+<p id="cn-m7-240">In this exercise, you will configure the Cisco <b>AnyConnect </b>client.
+ Many users find that even though you have to download the client to the
+ machine, it is consequently a much better experience than the 
+Clientless SSL VPN.</p>
+<p id="cn-m7-241">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m7-243">After completing this exercise, you will be able to:</p>
+<ul id="cn-m7-244">
+<li id="cn-m7-244">Configure the AnyConnect Client</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m7-246">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m7-247">
+<li id="cn-m7-247"><b>PLABMGMT </b>(Windows Server 2003 - Standalone Server)</li>
+<li id="cn-m7-248"><b>PLABEXTCLI </b>(Windows Server 2003 - Standalone Server)</li>
+</ul>
+<p id="cn-m7-249"><img class="cn-img" id="cn-image-m7-c-26" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-26.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m7-252"><b>Task 1 - Configure the AnyConnect Client</b></h3>
+<p id="cn-m7-253">To configure the AnyConnect client, we will use a similar process as before.</p>
+<h4 id="cn-m7-254"><b><i>Step 1</i></b></h4>
+<p id="cn-m7-255">Firstly, let’s just ensure no existing identity key pairs exist.</p>
+<p id="cn-m7-256">Connect to the <b>LDNFWASA01</b>.</p>
+<p id="cn-m7-257">Enter the following commands to zeroize the existing identity keys at the terminal:</p>
+<pre id="cn-m7-258"><code>LDNFWASA01# configure terminal
+</code></pre>
+<pre id="cn-m7-259"><code>LDNFWASA01(config)# crypto key zeroize rsa
+WARNING: All RSA keys will be removed.
+WARNING: All device digital certificates issued using these keys will also be removed.
+Do you really want to remove these keys? [yes/no]: yes
+</code></pre>
+<span class="cn-alert" id="cn-m7-263"><b>Note: </b>If an error appears stating Keys not found in configuration, please move onto Step 2.</span>
+<h4 id="cn-m7-265"><b><i>Step 2</i></b></h4>
+<p id="cn-m7-266">Re-login to the ASDM software on <b>PLABMGMT</b>, navigate to the menu and click <b>Wizards &gt; VPN Wizards &gt; AnyConnect VPN Wizard</b>:</p>
+<span class="cn-quote" id="cn-m7-267"><b><i>Note: </i></b><i>If you see a prompt to refresh, click Refresh.</i></span>
+<p id="cn-m7-268"></p><figure><img class="cn-img" id="cn-image-m7-c-27" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-27.jpg" alt="Figure 2.1 Screenshot of PLABMGMT"><figcaption>Figure 2.1 Screenshot of PLABMGMT: Displaying the selection of the AnyConnect VPN Wizard option.</figcaption></figure><p></p>
+<h4 id="cn-m7-271"><b><i>Step 3</i></b></h4>
+<p id="cn-m7-272">On the <b>Introduction </b>page of the <b>AnyConnect VPN Connection Setup Wizard</b>, click <b>Next.</b></p>
+<p id="cn-m7-273"></p><figure><img class="cn-img" id="cn-image-m7-c-28" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-28.jpg" alt="Figure 2.2 Screenshot of PLABMGMT"><figcaption>Figure 2.2 Screenshot of PLABMGMT: Displaying the first page of the AnyConnect VPN Connection Setup Wizard. Next is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-276"><b><i>Step 4</i></b></h4>
+<p id="cn-m7-277">On the <b>Connection Profile Identification </b>page, in the <b>Connection Profile Name </b>text box, type <b>ANYCONNECT</b>.</p>
+<p id="cn-m7-278">In the <b>VPN Access Interface </b>drop-down, ensure <b>internet </b>is selected.</p>
+<p id="cn-m7-279"></p><figure><img class="cn-img" id="cn-image-m7-c-29" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-29.jpg" alt="Figure 2.3 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.3 Screenshot of PLABMGMT: Displaying the Connection Profile 
+Identification page. ANYCONNECT has been entered into the Connection 
+Profile Identification box and internet is selected from the drop-down.</figcaption></figure><p></p>
+<h4 id="cn-m7-282"><b><i>Step 5</i></b></h4>
+<p id="cn-m7-283">On the <b>VPN Protocols </b>page, leave the defaults selected (<b>SSL </b>and <b>IPSec</b>).</p>
+<p id="cn-m7-284">Click <b>Manage </b>to generate a self-signed certificate.</p>
+<p id="cn-m7-285"></p><figure><img class="cn-img" id="cn-image-m7-c-30" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-30.jpg" alt="Figure 2.4 Screenshot of PLABMGMT"><figcaption>Figure 2.4 Screenshot of PLABMGMT: Displaying the VPN Protocols page and the default selections. The Manage button is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-287"><b><i>Step 6</i></b></h4>
+<p id="cn-m7-288">Click <b>Add </b>in the top right of the Manage Identity Certificates window.</p>
+<p id="cn-m7-289"></p><figure><img class="cn-img" id="cn-image-m7-c-31" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-31.jpg" alt="Figure 2.5 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.5 Screenshot of PLABMGMT: Displaying the initial Manage Identity 
+Certificates dialog box with the Add button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m7-290"><b><i>Step 7</i></b></h4>
+<p id="cn-m7-291">Check <b>Add a new identity certificate </b>and click on <b>New… </b>next to Key Pair.</p>
+<p id="cn-m7-292"><img class="cn-img" id="cn-image-m7-c-32" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-32.jpg" alt="Practice Labs screenshot."></p>
+<h4 id="cn-m7-295"><b><i>Step 8</i></b></h4>
+<p id="cn-m7-296">In the <b>Add Key Pair </b>dialog box, click <b>Generate Now</b>.</p>
+<p id="cn-m7-297"></p><figure><img class="cn-img" id="cn-image-m7-c-33" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-33.jpg" alt="Figure 2.6 Screenshot of PLABMGMT"><figcaption>Figure 2.6 Screenshot of PLABMGMT: Displaying the Add Key Pair dialog box. Notice the selection of values in various fields.</figcaption></figure><p></p>
+<h4 id="cn-m7-298"><b><i>Step 9</i></b></h4>
+<p id="cn-m7-299">Select <b>Generate self-signed certificate</b></p>
+<p id="cn-m7-300">Click on <b>Add Certificate</b></p>
+<p id="cn-m7-301"><img class="cn-img" id="cn-image-m7-c-34" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-34.jpg" alt="Practice Labs screenshot."></p>
+<h4 id="cn-m7-303"><b><i>Step 10</i></b></h4>
+<p id="cn-m7-304">On the <b>Enrollment Status </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m7-305"></p><figure><img class="cn-img" id="cn-image-m7-c-35" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-35.jpg" alt="Figure 2.7 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.7 Screenshot of PLABMGMT: Displaying the Enrollment Status window. 
+Notice the enrollment success message. OK is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-309"><b><i>Step 11</i></b></h4>
+<p id="cn-m7-310">Back on the <b>Manage Identity Certificates </b>page, notice that a new entry has been added.</p>
+<p id="cn-m7-311">Click <b>OK</b>.</p>
+<p id="cn-m7-312"></p><figure><img class="cn-img" id="cn-image-m7-c-36" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-36.jpg" alt="Figure 2.8 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.8 Screenshot of PLABMGMT: Displaying the Manage Identity Certificates
+ dialog box. Notice the addition of a host. The complete details of the 
+host, such as hostname and issued by, are listed under various columns. 
+OK is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-316"><b><i>Step 12</i></b></h4>
+<p id="cn-m7-317">On the <b>AnyConnect VPN Connection Setup Wizard</b>, on the <b>VPN Protocols </b>page, click <b>Next</b>.</p>
+<span class="cn-quote" id="cn-m7-318"><b><i>Note: </i></b><i>A new device certificate is now added in the Device Certificate drop-down.</i></span>
+<p id="cn-m7-319"></p><figure><img class="cn-img" id="cn-image-m7-c-37" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-37.jpg" alt="Figure 2.9 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.9 Screenshot of PLABMGMT: Displaying the AnyConnect VPN Connection 
+Setup Wizard. Notice the addition of the new device certificate in the 
+“Device Certificate” field. Next is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-322"><b><i>Step 13</i></b></h4>
+<p id="cn-m7-323">On the <b>Client Images </b>page, click <b>Add</b>.</p>
+<p id="cn-m7-324"></p><figure><img class="cn-img" id="cn-image-m7-c-38" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-38.jpg" alt="Figure 2.10 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.10 Screenshot of PLABMGMT: Displaying the Client Images page of the 
+AnyConnect VPN Connection Setup Wizard. The Add button is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m7-326"><b><i>Step 14</i></b></h4>
+<p id="cn-m7-327">In the <b>Add AnyConnect Client Image </b>dialog box, click <b>Browse Flash.</b></p>
+<p id="cn-m7-328"></p><figure><img class="cn-img" id="cn-image-m7-c-39" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-39.jpg" alt="Figure 2.11 Screenshot of PLABMGMT"><figcaption>Figure 2.11 Screenshot of PLABMGMT: Displaying the Add AnyConnect Client Image dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m7-332"><b><i>Step 15</i></b></h4>
+<p id="cn-m7-333">In the <b>Browse Flash </b>dialog box, select <b>anyconnect-win-3.1.05182-k9.pkg</b>.</p>
+<p id="cn-m7-334">Click <b>OK</b>.</p>
+<p id="cn-m7-335"></p><figure><img class="cn-img" id="cn-image-m7-c-40" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-40.jpg" alt="Figure 2.12 Screenshot of PLABMGMT"><figcaption>Figure 2.12 Screenshot of PLABMGMT: Displaying the Browse Flash dialog box. anyconnect-win-3.1.05182-k9.pkg is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m7-339"><b><i>Step 16</i></b></h4>
+<p id="cn-m7-340">On the <b>Add AnyConnect Client Image </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m7-341"></p><figure><img class="cn-img" id="cn-image-m7-c-41" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-41.jpg" alt="Figure 2.13 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.13 Screenshot of PLABMGMT: Screenshot of the Add AnyConnect Client 
+Image window: Notice the path of the image added to the AnyConnect Image
+ field. OK is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-344"><b><i>Step 17</i></b></h4>
+<p id="cn-m7-345">On the <b>AnyConnect VPN Connection Setup Wizard</b>, click <b>Next</b>.</p>
+<p id="cn-m7-346"></p><figure><img class="cn-img" id="cn-image-m7-c-42" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-42.jpg" alt="Figure 2.14 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.14 Screenshot of PLABMGMT: Screenshot of the Client Images page of 
+the AnyConnect VPN Connection Setup Wizard window: Notice the path of 
+the image added. Relevant details are displayed under the “Image” and 
+“Regular expression to match user agent” columns. Next is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-349"><b><i>Step 18</i></b></h4>
+<p id="cn-m7-350">On the <b>User Authentication </b>page, ensure <b>LOCAL </b>is selected in the <b>AAA Server Group </b>drop-down. As we already have a user created in the previous exercise we don’t need to create any more accounts, click <b>Next</b>.</p>
+<p id="cn-m7-351"></p><figure><img class="cn-img" id="cn-image-m7-c-43" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-43.jpg" alt="Figure 2.15 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.15 Screenshot of PLABMGMT: Screenshot of the Authentication Methods 
+page of the AnyConnect VPN Connection Setup Wizard window: Notice the 
+selection of LOCAL value in the “AAA Server Group” field.</figcaption></figure><p></p>
+<h4 id="cn-m7-354"><b><i>Step 19</i></b></h4>
+<p id="cn-m7-355">On the <b>Client Address Assignment </b>page, click <b>New </b>to create a new address pool.</p>
+<p id="cn-m7-356"></p><figure><img class="cn-img" id="cn-image-m7-c-44" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-44.jpg" alt="Figure 2.16 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.16 Screenshot of PLABMGMT: Screenshot of the initial screen of the 
+Client Address Assignment page of the AnyConnect VPN Connection Setup 
+Wizard window: User needs to add an address pool. The New button is 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-359"><b><i>Step 20</i></b></h4>
+<p id="cn-m7-360">In the <b>Add IPv4 Pool </b>dialog box, enter the following details and click <b>OK</b>.</p>
+<pre id="cn-m7-361"><code>Name: AnyConnect_POOL
+Starting IP Address: 192.168.18.15
+Ending IP Address: 192.168.18.254
+Subnet Mask: 255.255.255.0
+</code></pre>
+<p id="cn-m7-366"></p><figure><img class="cn-img" id="cn-image-m7-c-45" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-45.jpg" alt="Figure 2.17 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.17 Screenshot of PLABMGMT: Screenshot of the Add IPv4 Pool window: 
+User needs to create a new pool. Notice the values defines in various 
+fields.</figcaption></figure><p></p>
+<h4 id="cn-m7-370"><b><i>Step 21</i></b></h4>
+<p id="cn-m7-371">Back on the <b>Client Address Assignment </b>page, click <b>Next</b>.</p>
+<p id="cn-m7-372"></p><figure><img class="cn-img" id="cn-image-m7-c-46" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-46.jpg" alt="Figure 2.18 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.18 Screenshot of PLABMGMT: Screenshot of the filled Client Address 
+Assignment page of the AnyConnect VPN Connection Setup Wizard window: 
+Notice the defined IP address range.</figcaption></figure><p></p>
+<h4 id="cn-m7-375"><b><i>Step 22</i></b></h4>
+<p id="cn-m7-376">On the <b>Network Name Resolution Servers </b>page, enter the following settings and then click <b>Next</b>.</p>
+<pre id="cn-m7-377"><code>DNS Servers: 192.168.16.10
+WINS Servers: 192.168.16.10
+Domain Name: practice-labs.com
+</code></pre>
+<span class="cn-quote" id="cn-m7-380"><b><i>Note: </i></b><i>192.168.16.10 is not a DNS or WINS server. However, it's not necessary for this task.</i></span>
+<p id="cn-m7-382"></p><figure><img class="cn-img" id="cn-image-m7-c-47" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-47.jpg" alt="Figure 2.19 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.19 Screenshot of PLABMGMT: Screenshot of the Network Name Resolution 
+Servers page of the AnyConnect VPN Connection Setup Wizard window: User 
+needs to add the appropriate values in the “DNS Servers,” “WINS 
+Servers,” and “Domain Name” fields.</figcaption></figure><p></p>
+<h4 id="cn-m7-384"><b><i>Step 23</i></b></h4>
+<p id="cn-m7-385">On the <b>NAT Exempt </b>page, you need to exclude our inside network.</p>
+<p id="cn-m7-386">Select the <b>Exempt VPN traffic from network address translation </b>checkbox, ensure <b>inside </b>is selected in the Inside Interface drop-down.</p>
+<p id="cn-m7-387">Next to <b>Local Network</b>, click the <b>ellipses </b>button to select the correct internal address space. This selection should be <b>any4</b>.</p>
+<p id="cn-m7-388"></p><figure><img class="cn-img" id="cn-image-m7-c-48" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-48.jpg" alt="Figure 2.20 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.20 Screenshot of PLABMGMT: Screenshot of the NAT Exempt page of the 
+AnyConnect VPN Connection Setup Wizard window: User needs to select the 
+Exempt VPN traffic from network address translation. Notice the Inside 
+is selected in the “Inside Interface” field and any4 is selected for 
+“Local Network” field.</figcaption></figure><p></p>
+<h4 id="cn-m7-391"><b><i>Step 24</i></b></h4>
+<p id="cn-m7-392">In the <b>Browse Local Network </b>dialog box, select the following address space:</p>
+<pre id="cn-m7-393"><code>IP Address: 192.168.16.0
+Netmark: 255.255.255.0
+</code></pre>
+<p id="cn-m7-395">Click <b>OK</b>.</p>
+<p id="cn-m7-396"></p><figure><img class="cn-img" id="cn-image-m7-c-49" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-49.jpg" alt="Figure 2.21 Screenshot of PLABMGMT"><figcaption>Figure 2.21 Screenshot of PLABMGMT: Screenshot of Browse Local Network window: User needs to select an internal address space.</figcaption></figure><p></p>
+<h4 id="cn-m7-400"><b><i>Step 25</i></b></h4>
+<p id="cn-m7-401">Back on the <b>NAT Exempt </b>page, notice that the address space has been added in the Local Network textbox.</p>
+<p id="cn-m7-402">Click <b>Next</b>.</p>
+<p id="cn-m7-403"></p><figure><img class="cn-img" id="cn-image-m7-c-50" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-50.jpg" alt="Figure 2.22 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.22 Screenshot of PLABMGMT: Displaying the NAT Exempt page of the 
+AnyConnect VPN Connection Setup Wizard. Notice that the values in the 
+“Local Network” field are updated with the selection of internal address
+ space. Next is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-406"><b><i>Step 26</i></b></h4>
+<p id="cn-m7-407">On the <b>AnyConnect Client Deployment </b>page, leave
+ the defaults and allow web launch. Note that you may want to modify 
+this in your production environment and only deploy the client manually.</p>
+<p id="cn-m7-408">Click <b>Next</b>.</p>
+<p id="cn-m7-409"></p><figure><img class="cn-img" id="cn-image-m7-c-51" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-51.jpg" alt="Figure 2.23 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.23 Screenshot of PLABMGMT: Displaying the AnyConnect Client 
+Deployment page of the AnyConnect VPN Connection Setup Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m7-411"><b><i>Step 27</i></b></h4>
+<p id="cn-m7-412">Finally, click <b>Finish </b>to deploy the configuration.</p>
+<p id="cn-m7-413"></p><figure><img class="cn-img" id="cn-image-m7-c-52" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-52.jpg" alt="Figure 2.24 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.24 Screenshot of PLABMGMT: Displaying the Summary page of the 
+AnyConnect VPN Connection Setup Wizard.  The user needs to review the 
+configuration before finalizing it. Finish is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-415"><b><i>Step 28</i></b></h4>
+<p id="cn-m7-416">You are back on the <b>Configuration </b>main page. Notice that the <b>ANYCONNECT </b>configuration is now added.</p>
+<p id="cn-m7-417"></p><figure><img class="cn-img" id="cn-image-m7-c-53" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-53.jpg" alt="Figure 2.25 Screenshot of PLABMGMT"><figcaption>Figure 2.25 Screenshot of PLABMGMT: Displaying the selection of ANYCONNECT on the AnyConnect Connection Profiles page.</figcaption></figure><p></p>
+<h4 id="cn-m7-420"><b><i>Step 29</i></b></h4>
+<p id="cn-m7-421">In the left panel of the ASDM software, ensure <b>Remote Access VPN </b>is selected in the left bottom pane.</p>
+<p id="cn-m7-422">In the left pane, expand <b>Network (Client) Access </b>if required and then click <b>the Group Policies </b>node.</p>
+<p id="cn-m7-423"></p><figure><img class="cn-img" id="cn-image-m7-c-54" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-54.jpg" alt="Figure 2.26 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.26 Screenshot of PLABMGMT: Displaying the Group Policies page of the 
+AnyConnect VPN Connection Setup Wizard. The relevant selections from the
+ instruction above have been made.</figcaption></figure><p></p>
+<h4 id="cn-m7-426"><b><i>Step 30</i></b></h4>
+<p id="cn-m7-427">Select the <b>GroupPolicy_ANYCONNECT </b>policy in the right pane and click <b>Assign</b>.</p>
+<p id="cn-m7-428"></p><figure><img class="cn-img" id="cn-image-m7-c-55" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-55.jpg" alt="Figure 2.27 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.27 Screenshot of PLABMGMT: Displaying the assignment of the 
+GroupPolicy_ANYCONNECT policy. The Assign button is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m7-430"><b><i>Step 31</i></b></h4>
+<p id="cn-m7-431">In the <b>Assign Group Policy </b>dialog box, select the <b>fred </b>checkbox and then click <b>OK</b>.</p>
+<p id="cn-m7-432"></p><figure><img class="cn-img" id="cn-image-m7-c-56" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-56.jpg" alt="Figure 2.28 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.28 Screenshot of PLABMGMT: Displaying the Assign Group Policy: 
+GroupPolicy_ANYCONNECT dialog box. Notice the availability of different 
+Group Policies. Fred has been selected and the OK button is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m7-435"><b><i>Step 32</i></b></h4>
+<p id="cn-m7-436">On the <b>Group Policies </b>page, click <b>Apply</b>.</p>
+<p id="cn-m7-437"></p><figure><img class="cn-img" id="cn-image-m7-c-57" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-57.jpg" alt="Figure 2.29 Screenshot of PLABMGMT"><figcaption>Figure 2.29 Screenshot of PLABMGMT: Displaying the Apply button to apply the selected Group Policy.</figcaption></figure><p></p>
+<h4 id="cn-m7-439"><b><i>Step 33</i></b></h4>
+<p id="cn-m7-440">Next, connect to <b>PLABEXTCLI</b>.</p>
+<p id="cn-m7-441">The <b>Clientless SSL VPN </b>connection should have logged out by now.</p>
+<span class="cn-quote" id="cn-m7-442"><b><i>Note: </i></b><i>In case it has not logged out automatically, click </i><b><i>Logout</i></b><i>.</i></span>
+<p id="cn-m7-443"></p><figure><img class="cn-img" id="cn-image-m7-c-58" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-58.jpg" alt="Figure 2.30 Screenshot of PLABEXTCLI"><figcaption>Figure 2.30 Screenshot of PLABEXTCLI: Displaying the logged-out screen.</figcaption></figure><p></p>
+<h4 id="cn-m7-445"><b><i>Step 34</i></b></h4>
+<p id="cn-m7-446">In the address bar of the Internet Explorer, overwrite the existing URL and enter the following:</p>
+<pre id="cn-m7-447"><code>https://213.16.48.1
+</code></pre>
+<p id="cn-m7-449">On the login page, in the <b>Group </b>drop-down, ensure <b>ANYCONNECT </b>is selected.</p>
+<p id="cn-m7-450">In the <b>USERNAME </b>textbox, enter the following:</p>
+<pre id="cn-m7-451"><code>fred
+</code></pre>
+<p id="cn-m7-452">In the <b>PASSWORD </b>text box, enter the following:</p>
+<span class="cn-password">cisco123</span>
+<p id="cn-m7-454">Click <b>Login</b>.</p>
+<p id="cn-m7-455"></p><figure><img class="cn-img" id="cn-image-m7-c-59" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-59.jpg" alt="Figure 2.31 Screenshot of PLABEXTCLI"><figcaption>Figure 2.31 Screenshot of PLABEXTCLI: Displaying the login screen with the credentials entered.</figcaption></figure><p></p>
+<h4 id="cn-m7-457"><b><i>Step 35</i></b></h4>
+<p id="cn-m7-458">After login, the <b>Internet Explorer </b>dialog box is displayed.</p>
+<p id="cn-m7-459">Click <b>OK </b>on the Java prompt.</p>
+<p id="cn-m7-460"></p><figure><img class="cn-img" id="cn-image-m7-c-60" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-60.jpg" alt="Figure 2.32 Screenshot of PLABEXTCLI"><figcaption>Figure 2.32 Screenshot of PLABEXTCLI: Displaying the Internet Explorer dialog box with the Java information. OK is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-462"><b><i>Step 36</i></b></h4>
+<p id="cn-m7-463">Click <b>Install </b>at the bottom right of the page:</p>
+<p id="cn-m7-464"></p><figure><img class="cn-img" id="cn-image-m7-c-61" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-61.jpg" alt="Figure 2.33 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.33 Screenshot of PLABEXTCLI: Displaying the post-login window. The 
+user needs to download and install the ActiveX control.</figcaption></figure><p></p>
+<h4 id="cn-m7-466"><b><i>Step 37</i></b></h4>
+<p id="cn-m7-467">On the <b>Internet Explorer - Security Warning </b>dialog box, click <b>Install</b>.</p>
+<p id="cn-m7-468"></p><figure><img class="cn-img" id="cn-image-m7-c-62" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-62.jpg" alt="Figure 2.34 Screenshot of PLABEXTCLI"><figcaption>Figure 2.34 Screenshot of PLABEXTCLI: Displaying the Internet Explorer - Security Warning dialog box with the Install button.</figcaption></figure><p></p>
+<p id="cn-m7-470">The downloader starts to analyze the computer.</p>
+<p id="cn-m7-471"></p><figure><img class="cn-img" id="cn-image-m7-c-63" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-63.jpg" alt="Figure 2.35 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.35 Screenshot of PLABEXTCLI: Displaying the AnyConnect Secure 
+Mobility Client Downloader dialog box.  Notice that the downloader 
+analyses the computer.</figcaption></figure><p></p>
+<h4 id="cn-m7-474"><b><i>Step 38</i></b></h4>
+<p id="cn-m7-475">You will receive a warning saying the untrusted VPN server has been blocked.</p>
+<p id="cn-m7-476">Click the <b>Change Setting </b>button.</p>
+<p id="cn-m7-477"></p><figure><img class="cn-img" id="cn-image-m7-c-64" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-64.jpg" alt="Figure 2.36 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.36 Screenshot of PLABEXTCLI: Displaying the AnyConnect Downloader 
+dialog box. Notice that the untrusted VPN Server is blocked. The Change 
+Setting button has been selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-479"><b><i>Step 39</i></b></h4>
+<p id="cn-m7-480">Click <b>Apply Change</b>.</p>
+<p id="cn-m7-481"></p><figure><img class="cn-img" id="cn-image-m7-c-65" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-65.jpg" alt="Figure 2.37 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.37 Screenshot of PLABEXTCLI: Displaying the AnyConnect Downloader 
+dialog box. The user can change the settings to allow the blocked 
+connections. Apply Change is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-484"><b><i>Step 40</i></b></h4>
+<p id="cn-m7-485">You now have to click the link <b>retry the connection </b>visible on the page.</p>
+<p id="cn-m7-486"></p><figure><img class="cn-img" id="cn-image-m7-c-66" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-66.jpg" alt="Figure 2.38 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.38 Screenshot of PLABEXTCLI: Displaying the AnyConnect Secure 
+Mobility Client dialog box. Notice that the untrusted VPN Servers are 
+now allowed. Retry the connection has been selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-489"><b><i>Step 41</i></b></h4>
+<p id="cn-m7-490">The process will restart again.</p>
+<p id="cn-m7-491">This time, you will get a security warning, now you can click <b>Connect Anyway</b>.</p>
+<p id="cn-m7-492"></p><figure><img class="cn-img" id="cn-image-m7-c-67" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-67.jpg" alt="Figure 2.39 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.39 Screenshot of PLABEXTCLI: Displaying the AnyConnect Downloader 
+dialog box. Notice that this window displays the security warning about 
+connecting with an untrusted VPN Server. It also notifies of the IP 
+address of the untrusted VPN server. Connect Anyway is selected.</figcaption></figure><p></p>
+<p id="cn-m7-495">The client will start to install.</p>
+<p id="cn-m7-496"></p><figure><img class="cn-img" id="cn-image-m7-c-68" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-68.jpg" alt="Figure 2.40 Screenshot of PLABMGMT"><figcaption>Figure 2.40 Screenshot of PLABMGMT: Displaying the installation of the Cisco AnyConnect client.</figcaption></figure><p></p>
+<h4 id="cn-m7-498"><b><i>Step 42</i></b></h4>
+<p id="cn-m7-499">In the bottom system tray, you will notice a new icon 
+appear (this will disappear but is still running) for the AnyConnect 
+client. It looks like a small globe.</p>
+<p id="cn-m7-500"></p><figure><img class="cn-img" id="cn-image-m7-c-69" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-69.jpg" alt="Figure 2.41 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.41 Screenshot of PLABEXTCLI: Displaying the Cisco AnyConnect Secure 
+Mobility Client connection dialog box. Notice after user acceptance to 
+proceed, the Cisco AnyConnect Secure Mobility Client attempts to 
+connect.</figcaption></figure><p></p>
+<h4 id="cn-m7-503"><b><i>Step 43</i></b></h4>
+<p id="cn-m7-504">Click the <b>Connect Anyway </b>button again. An error will appear. Click <b>OK</b>.</p>
+<p id="cn-m7-505"></p><figure><img class="cn-img" id="cn-image-m7-c-70" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-70.jpg" alt="Figure 2.42 Screenshot of PLABEXTCLI"><figcaption>Figure 2.42 Screenshot of PLABEXTCLI: Displaying the Cisco AnyConnect dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m7-508"><b><i>Step 44</i></b></h4>
+<p id="cn-m7-509">In the lab, you are using a remote desktop connection to connect to the ASA. Therefore, you need to allow this in policy.</p>
+<p id="cn-m7-510">Connect to <b>PLABMGMT</b>.</p>
+<p id="cn-m7-511">In the ASDM navigate to <b>Configuration &gt; Remote Access VPN &gt; Network (Client) Access &gt; AnyConnect Client Profile</b>.</p>
+<span class="cn-quote" id="cn-m7-512"><b><i>Note: </i></b><i>If an error related to admin access appears, click OK.</i></span>
+<p id="cn-m7-513">Click the <b>Edit </b>button.</p>
+<p id="cn-m7-514"></p><figure><img class="cn-img" id="cn-image-m7-c-71" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-71.jpg" alt="Figure 2.43 Screenshot of PLABMGMT"><figcaption>Figure 2.43 Screenshot of PLABMGMT: Clicking the Edit button on the AnyConnect Client Profile page.</figcaption></figure><p></p>
+<h4 id="cn-m7-517"><b><i>Step 45</i></b></h4>
+<p id="cn-m7-518">In the <b>AnyConnect Client Profile Editor </b>dialog box, scroll down the options until you find <b>Windows VPN Establishment</b>. Change this drop-down from <b>Local users only </b>to <b>AllowRemoteUsers</b>.</p>
+<p id="cn-m7-519"></p><figure><img class="cn-img" id="cn-image-m7-c-72" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-72.jpg" alt="Figure 2.44 Screenshot of PLABMGMT"><figcaption>Figure
+ 2.44 Screenshot of PLABMGMT: Displaying the Preferences (Part 1) page 
+of the AnyConnect Client Profile Editor window. Local users only value 
+is changed to AllowRemoteUsers.</figcaption></figure><p></p>
+<h4 id="cn-m7-521"><b><i>Step 46</i></b></h4>
+<p id="cn-m7-522">On the <b>AnyConnect Client Profile Editor </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m7-523">Then click <b>Apply</b>.</p>
+<p id="cn-m7-524"></p><figure><img class="cn-img" id="cn-image-m7-c-73" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-73.jpg" alt="Figure 2.45 Screenshot of PLABMGMT"><figcaption>Figure 2.45 Screenshot of PLABMGMT: Clicking the Apply button to confirm the changes.</figcaption></figure><p></p>
+<h4 id="cn-m7-526"><b><i>Step 47</i></b></h4>
+<p id="cn-m7-527">Flip back to <b>PLABEXTCLI</b>.</p>
+<p id="cn-m7-528">Click <b>OK </b>to any errors or warnings that are on the page.</p>
+<p id="cn-m7-529">You can also close <b>Internet Explorer</b>.</p>
+<p id="cn-m7-530"></p><figure><img class="cn-img" id="cn-image-m7-c-74" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-74.jpg" alt="Figure 2.46 Screenshot of PLABEXTCLI"><figcaption>Figure 2.46 Screenshot of PLABEXTCLI: Displaying the Cisco AnyConnect dialog box. OK is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-532"><b><i>Step 48</i></b></h4>
+<p id="cn-m7-533">In the bottom right should be the Cisco AnyConnect client. If it’s not there, start it from <b>Start &gt; All Programs &gt; Cisco &gt; Cisco AnyConnect Secure Mobility Client</b>.</p>
+<p id="cn-m7-534"></p><figure><img class="cn-img" id="cn-image-m7-c-75" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-75.jpg" alt="Figure 2.47 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.47 Screenshot of PLABEXTCLI: Displaying the Programs menu with the 
+selection of Cisco AnyConnect Secure Mobility Client option from the 
+Cisco menu.</figcaption></figure><p></p>
+<h4 id="cn-m7-537"><b><i>Step 49</i></b></h4>
+<p id="cn-m7-538">In the <b>Cisco AnyConnect Secure Mobility Client </b>dialog box, notice the VPN server name mentioned is <b>LDNFWASA01 (IPsec) IPv4</b>.</p>
+<p id="cn-m7-539">Click <b>Connect</b>.</p>
+<p id="cn-m7-540"></p><figure><img class="cn-img" id="cn-image-m7-c-76" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-76.jpg" alt="Figure 2.48 Screenshot of PLABEXTCLI"><figcaption>Figure 2.48 Screenshot of PLABEXTCLI: Screenshot of the Cisco AnyConnect Secure Mobility Client window. Connect is selected.</figcaption></figure><p></p>
+<h4 id="cn-m7-543"><b><i>Step 50</i></b></h4>
+<p id="cn-m7-544">You will see the security warning again.</p>
+<p id="cn-m7-545">Click <b>Connect Anyway</b>.</p>
+<p id="cn-m7-546"></p><figure><img class="cn-img" id="cn-image-m7-c-77" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-77.jpg" alt="Figure 2.49 Screenshot of PLABEXTCLI"><figcaption>Figure 2.49 Screenshot of PLABEXTCLI: Displaying the Cisco AnyConnect Secure Mobility Client security warning window.</figcaption></figure><p></p>
+<h4 id="cn-m7-549"><b><i>Step 51</i></b></h4>
+<p id="cn-m7-550">Enter the following credentials and click <b>OK</b>:</p>
+<p id="cn-m7-551">Username:</p>
+<pre id="cn-m7-552"><code>fred
+</code></pre>
+<p id="cn-m7-553">Password:</p>
+<span class="cn-password">cisco123</span>
+<p id="cn-m7-555"></p><figure><img class="cn-img" id="cn-image-m7-c-78" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-78.jpg" alt="Figure 2.50 Screenshot of PLABEXTCLI"><figcaption>Figure 2.50 Screenshot of PLABEXTCLI: Displaying the login dialog box for the Cisco AnyConnect.</figcaption></figure><p></p>
+<h4 id="cn-m7-558"><b><i>Step 52</i></b></h4>
+<p id="cn-m7-559">You may get the security warning again. If you do, click <b>Connect Anyway</b>.</p>
+<p id="cn-m7-560"></p><figure><img class="cn-img" id="cn-image-m7-c-79" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-79.jpg" alt="Figure 2.51 Screenshot of PLABEXTCLI"><figcaption>Figure 2.51 Screenshot of PLABEXTCLI: Displaying the AnyConnect Downloader dialog box with a warning.</figcaption></figure><p></p>
+<h4 id="cn-m7-563"><b><i>Step 53</i></b></h4>
+<p id="cn-m7-564"><b>You will notice that the connection freezes! </b></p>
+<p id="cn-m7-565">This is because the routing is modified by the VPN 
+client and you can no longer connect. After a few minutes, the RDP 
+connection will drop (try clicking in the window or moving the mouse 
+around).</p>
+<p id="cn-m7-566">Press <b>OK </b>to this error message.</p>
+<p id="cn-m7-567"></p><figure><img class="cn-img" id="cn-image-m7-c-80" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-80.jpg" alt="Figure 2.52 Screenshot of the Terminal Server Communication Error window"><figcaption>Figure 2.52 Screenshot of the Terminal Server Communication Error window: Notice that an error is generated.</figcaption></figure><p></p>
+<h4 id="cn-m7-570"><b><i>Step 54</i></b></h4>
+<p id="cn-m7-571">Reconnect to <b>PLABEXTCLI </b>by clicking the <b>On </b>button.</p>
+<p id="cn-m7-572"><b><i>Note: </i></b>You are likely to see an error message relating to the disconnection of remote console. Click <b>OK </b>to close the error message</p><figure><img class="cn-img" id="cn-image-m7-c-81" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-81.jpg" alt="Figure 2.53 Screenshot of the list of devices in the PLAB environment"><figcaption>Figure 2.53 Screenshot of the list of devices in the PLAB environment: Clicking the On button to start PLABEXTCLI.</figcaption></figure><p></p>
+<h4 id="cn-m7-575"><b><i>Step 55</i></b></h4>
+<p id="cn-m7-576">To configure split tunneling, connect to <b>PLABMGMT </b>and in the ASDM (in the left pane), navigate to <b>Group Policies </b>under <b>Network (Client) Access</b>.</p>
+<p id="cn-m7-577">Select the <b>GroupPolicy_ANYCONNECT </b>profile and click <b>Edit</b>.</p>
+<p id="cn-m7-578"></p><figure><img class="cn-img" id="cn-image-m7-c-82" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-82.jpg" alt="Figure 2.54 Screenshot of PLABMGMT"><figcaption>Figure 2.54 Screenshot of PLABMGMT: Displaying the Group Policies window.</figcaption></figure><p></p>
+<h4 id="cn-m7-581"><b><i>Step 56</i></b></h4>
+<p id="cn-m7-582">In the left pane, expand <b>Advanced </b>and select <b>Split Tunneling</b>.</p>
+<p id="cn-m7-583"></p><figure><img class="cn-img" id="cn-image-m7-c-83" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-83.jpg" alt="Figure 2.55 Screenshot of PLABMGMT"><figcaption>Figure 2.55 Screenshot of PLABMGMT: Editing the Internal Group Policy. The Split Tunneling window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m7-585"><b><i>Step 57</i></b></h4>
+<p id="cn-m7-586">Deselect <b>Policy: inherit </b>and ensure <b>Policy </b>mentions <b>Exclude Network List Below</b>.</p>
+<p id="cn-m7-587">Deselect <b>Network List: inherit </b>then scroll to the right and click the <b>Manage </b>button next to the <b>Network List </b>box.</p>
+<span class="cn-quote" id="cn-m7-588"><b><i>Note: </i></b><i>You will need to scroll to the right to see the </i><b><i>Manage </i></b><i>button.</i></span>
+<p id="cn-m7-589"></p><figure><img class="cn-img" id="cn-image-m7-c-84" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-84.jpg" alt="Figure 2.56 Screenshot of PLABMGMT"><figcaption>Figure 2.56 Screenshot of PLABMGMT: Displaying the split tunnelling settings.</figcaption></figure><p></p>
+<h4 id="cn-m7-592"><b><i>Step 58</i></b></h4>
+<p id="cn-m7-593">In the <b>ACL Manager </b>dialog box, click <b>Add </b>and select <b>Add ACL. </b></p>
+<p id="cn-m7-594"></p><figure><img class="cn-img" id="cn-image-m7-c-85" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-85.jpg" alt="Figure 2.57 Screenshot of PLABMGMT"><figcaption>Figure 2.57 Screenshot of PLABMGMT: Adding an ACL in the ACL Manager dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m7-597"><b><i>Step 59</i></b></h4>
+<p id="cn-m7-598">In the <b>Add ACL </b>dialog box, type <b>split_tunnel </b>in the <b>ACL Name </b>text box.</p>
+<p id="cn-m7-599">Click <b>OK</b>.</p>
+<p id="cn-m7-600"></p><figure><img class="cn-img" id="cn-image-m7-c-86" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-86.jpg" alt="Figure 2.58 Screenshot of PLABMGMT"><figcaption>Figure 2.58 Screenshot of PLABMGMT: Defining the name in the Add ACL dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m7-602"><b><i>Step 60</i></b></h4>
+<p id="cn-m7-603">Notice that split tunneling is now added in the <b>ACL Manager </b>dialog box. Select the ACL and then click the <b>Add </b>down arrow again; this time, select <b>Add ACE</b>.</p>
+<p id="cn-m7-604"></p><figure><img class="cn-img" id="cn-image-m7-c-87" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-87.jpg" alt="Figure 2.59 Screenshot of PLABMGMT"><figcaption>Figure 2.59 Screenshot of PLABMGMT: Adding an ACE in the ACL Manager.</figcaption></figure><p></p>
+<h4 id="cn-m7-607"><b><i>Step 61</i></b></h4>
+<p id="cn-m7-608">On the <b>Add ACE </b>dialog box, enter in <b>10.44.24.0/24 </b>in the Address drop-down. Ensure the <b>Permit </b>action is selected.</p>
+<p id="cn-m7-609">Click <b>OK</b>.</p>
+<p id="cn-m7-610"></p><figure><img class="cn-img" id="cn-image-m7-c-88" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-88.jpg" alt="Figure 2.60 Screenshot of PLABMGMT"><figcaption>Figure 2.60 Screenshot of PLABMGMT: Adding the IP range in the Add ACE dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m7-613"><b><i>Step 62</i></b></h4>
+<p id="cn-m7-614">On the <b>ACL Manager </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m7-615"></p><figure><img class="cn-img" id="cn-image-m7-c-89" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-89.jpg" alt="Figure 2.61 Screenshot of PLABMGMT"><figcaption>Figure 2.61 Screenshot of PLABMGMT: Displaying the ACL Manager with the IP address range added.</figcaption></figure><p></p>
+<h4 id="cn-m7-618"><b><i>Step 63</i></b></h4>
+<p id="cn-m7-619">Click <b>OK </b>to any open dialog boxes.</p>
+<p id="cn-m7-620">On the <b>Configuration </b>page, click <b>Apply </b>when back at the main ASDM page.</p>
+<p id="cn-m7-621"></p><figure><img class="cn-img" id="cn-image-m7-c-90" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-90.jpg" alt="Figure 2.62 Screenshot of PLABMGMT"><figcaption>Figure 2.62 Screenshot of PLABMGMT: Applying the modified Group Policy.</figcaption></figure><p></p>
+<h4 id="cn-m7-623"><b><i>Step 64</i></b></h4>
+<p id="cn-m7-624">Switch back to <b>PLABEXTCLI </b>and reconnect the VPN again.</p>
+<p id="cn-m7-625">Again, you will be prompted with the security warning and your credentials. Click <b>Connect anyway </b>and enter the following credentials:</p>
+<p id="cn-m7-626">In the <b>USERNAME </b>textbox, enter the following:</p>
+<pre id="cn-m7-627"><code>fred
+</code></pre>
+<p id="cn-m7-628">In the <b>PASSWORD </b>text box, enter the following:</p>
+<span class="cn-password">cisco123</span>
+<p id="cn-m7-630">Click <b>Login</b>.</p>
+<p id="cn-m7-631">Notice that this time the connection succeeds.</p>
+<p id="cn-m7-632"></p><figure><img class="cn-img" id="cn-image-m7-c-91" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-91.jpg" alt="Figure 2.63 Screenshot of PLABEXTCLI"><figcaption>Figure
+ 2.63 Screenshot of PLABEXTCLI: Displaying the Cisco AnyConnect Secure 
+Mobility Client dialog box. Notice that VPN is now connected.</figcaption></figure><p></p>
+<span class="cn-quote" id="cn-m7-633"><b><i>Note: </i></b><i>In the real
+ world, if you have a valid security certificate, this installation is a
+ little smoother. However, its good practice to have seen a few issues 
+in this lab to get the client up and running!</i></span>
+<h4 id="cn-m7-635"><b><i>Step 65</i></b></h4>
+<p id="cn-m7-636">To fully test you are connected, you need to now test remote desktop from <b>PLABEXTCLI </b>to <b>PLABMGMT </b>at <b>192.168.16.10</b>.</p>
+<p id="cn-m7-637">Click <b>Start </b>and select <b>Run</b>.</p>
+<p id="cn-m7-638">Type the following command in the <b>Open </b>drop-down and click <b>OK</b>:</p>
+<pre id="cn-m7-639"><code>mstsc
+</code></pre>
+<p id="cn-m7-640"></p><figure><img class="cn-img" id="cn-image-m7-c-92" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-92.jpg" alt="Figure 2.64 Screenshot of PLABEXTCLI"><figcaption>Figure 2.64 Screenshot of PLABEXTCLI: Displaying the Run dialog box with the mstsc command entered.</figcaption></figure><p></p>
+<h4 id="cn-m7-643"><b><i>Step 66</i></b></h4>
+<p id="cn-m7-644">In the <b>Remote Desktop Connection </b>dialog box, enter the following IP address in the <b>Computer </b>drop-down and click <b>Connect</b>:</p>
+<pre id="cn-m7-645"><code>192.168.16.10
+</code></pre>
+<p id="cn-m7-646"></p><figure><img class="cn-img" id="cn-image-m7-c-93" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-93.jpg" alt="Figure 2.65 Screenshot of PLABEXTCLI"><figcaption>Figure 2.65 Screenshot of PLABEXTCLI: displaying the Remote Desktop Connection dialog box with the IP address to connect to.</figcaption></figure><p></p>
+<h4 id="cn-m7-649"><b><i>Step 67</i></b></h4>
+<p id="cn-m7-650">In the <b>Windows Security </b>dialog box, enter the following credentials:</p>
+<pre id="cn-m7-651"><code>Administrator
+</code></pre>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m7-653">Click <b>OK</b>.</p>
+<p id="cn-m7-654"></p><figure><img class="cn-img" id="cn-image-m7-c-94" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-94.jpg" alt="Figure 2.66 Screenshot of PLABEXTCLI"><figcaption>Figure 2.66 Screenshot of PLABEXTCLI: Displaying the Windows Security window with the user credentials entered.</figcaption></figure><p></p>
+<h4 id="cn-m7-657"><b><i>Step 68</i></b></h4>
+<p id="cn-m7-658">In the <b>Remote Desktop Connection </b>dialog box, a certificate warning is displayed. Click <b>Yes</b>.</p>
+<p id="cn-m7-659"></p><figure><img class="cn-img" id="cn-image-m7-c-95" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-95.jpg" alt="Figure 2.67 Screenshot of PLABMGMT"><figcaption>Figure 2.67 Screenshot of PLABMGMT: Displaying the Remote Desktop Connection dialog box.</figcaption></figure><p></p>
+<p id="cn-m7-661">You are now connected to <b>192.168.16.10</b>. This proves that the split tunnel is working and VPN is operational.</p>
+<p id="cn-m7-662"></p><figure><img class="cn-img" id="cn-image-m7-c-96" src="ImplementSSLVPNusingASADeviceManager_files/image-m7-c-96.jpg" alt="Figure 2.68 Screenshot of the 192.168.16.10 window"><figcaption>Figure 2.68 Screenshot of the 192.168.16.10 window: Displaying the successful connection to the remote server.</figcaption></figure><p></p>
+<span class="atom-code hidden">a071c347-2fd6-4e2a-9392-73e4cb0edabe</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m7-668"><b>Review</b></h2>
+<p id="cn-m7-669">Well done, you have completed the <b>Implement SSL VPN using ASA Device Manager </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">0f201006-d13f-4483-a522-53d6ea30b771</span>
+<span class="atom-code hidden">35b09798-aaae-4814-96a1-251f09d7fffb</span>
+<span class="atom-code hidden">23a837fd-754a-47ce-9eff-a9e4855b2b19</span>
+<span class="atom-code hidden">3453bfff-958e-4bb6-a7d5-338d36fcea03</span>
+<span class="atom-code hidden">de0c01c3-3dba-44b9-b01b-d7a7a6b2a804</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m7-680">You completed the following exercises:</p>
+<ul id="cn-m7-681">
+<li id="cn-m7-681">Implement a Clientless SSL VPN using the Cisco ASA Device Manager</li>
+<li id="cn-m7-682">Implement an AnyConnect using the Cisco ASA Device Manager</li>
+</ul>
+<p id="cn-m7-683">You should now be able to:</p>
+<ul id="cn-m7-684">
+<li id="cn-m7-684">Configure a Clientless SSL VPN</li>
+<li id="cn-m7-685">Configure the AnyConnect Client</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m7-689">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

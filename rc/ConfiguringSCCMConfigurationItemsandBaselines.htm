@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ConfiguringSCCMConfigurationItemsandBaselines_files/print-styles.css" rel="stylesheet">
+    <script src="ConfiguringSCCMConfigurationItemsandBaselines_files/jquery.min.js"></script>
+    <script src="ConfiguringSCCMConfigurationItemsandBaselines_files/jspdf.js"></script>
+    <script src="ConfiguringSCCMConfigurationItemsandBaselines_files/from_html.js"></script>
+    <script src="ConfiguringSCCMConfigurationItemsandBaselines_files/addimage.js"></script>
+    <script src="ConfiguringSCCMConfigurationItemsandBaselines_files/filesaver.js"></script>
+    <script src="ConfiguringSCCMConfigurationItemsandBaselines_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="GCtNk+DrvrYThaCmJq79clR0b56GfWjU+jqf5S1bTgkjqvdOC0YulmyRbhAVwc9YVdHCkpFhOeB0pq/8Hg53VJlVDTW3txxYk8HsOL47J8I=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Configuring SCCM Configuration Items and Baselines</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Create Windows Configuration Items for Compliance Settings</li><li>Exercise 2 - Create Configuration Baseline and Deploy the Baseline</li><li>Exercise 3 - Create Windows Configuration Items for Compliance Settings</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m3-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>SCCM</div>
+</div>
+<p id="cn-m3-3">Welcome to the <b>Configuring SCCM Configuration Items and Baselines </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m3-7">In this module, you will complete the following exercises:</p>
+<ul id="cn-m3-8">
+<li id="cn-m3-8">Creating a Windows configuration item for compliance settings in SCCM 2012</li>
+<li id="cn-m3-9">Creating and deploying a configuration baseline</li>
+<li id="cn-m3-10">Importing configuration data in SCCM 2012</li>
+</ul>
+<p id="cn-m3-11">After completing this lab, you will be able to:</p>
+<ul id="cn-m3-12">
+<li id="cn-m3-12">Create Configuration Items</li>
+<li id="cn-m3-13">Create and Deploy a Configuration Baseline</li>
+<li id="cn-m3-14">Import Configuration Data</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m3-16">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m3-17">
+<li id="cn-m3-17"><b>CAS-003 </b>1.4 Analyze risk metric scenarios to secure the enterprise.</li>
+</ul>
+<span class="cn-quote" id="cn-m3-18"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m3-20">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m3-24">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m3-25">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m3-27"><b>Lab Topology</b></h2>
+<p id="cn-m3-28">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m3-29">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m3-30">
+<li id="cn-m3-30"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m3-31"><b>PLABSYS01 </b>(System Center2012 Server)</li>
+<li id="cn-m3-32"><b>PLABSYS02 </b>(System Center2012 Server)</li>
+<li id="cn-m3-33"><b>PLABSYS03 </b>(System Center2012 Server)</li>
+<li id="cn-m3-34"><b>PLABVMM01 </b>(VM Server)</li>
+</ul>
+<p id="cn-m3-35"><img class="cn-img" id="cn-image-m3-c-0" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m3-36">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m3-37"><b>Exercise 1 - Create Windows Configuration Items for Compliance Settings</b></h2>
+<p id="cn-m3-38">In this exercise, you will learn how to create 
+configuration items to define configurations for managing and accessing 
+compliance on devices.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m3-40">After completing this exercise, you will be able to:</p>
+<ul id="cn-m3-41">
+<li id="cn-m3-41">Create a Configuration Item</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m3-43">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m3-44">
+<li id="cn-m3-44"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m3-45"><b>PLABSYS01 </b>(System Center2012 Server)</li>
+</ul>
+<p id="cn-m3-46"><img class="cn-img" id="cn-image-m3-c-1" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m3-47"><b>Task 1 - Create a Configuration Item</b></h3>
+<p id="cn-m3-48">In this task, you will create a configuration item to 
+determine compliance for settings related to operating systems and its 
+configuration.</p>
+<h4 id="cn-m3-49"><b><i>Step 1</i></b></h4>
+<p id="cn-m3-50">Ensure you have powered on the required devices and connect to <b>PLABSYS01</b>.</p>
+<p id="cn-m3-51">Close <b>Server Manager</b>.</p>
+<p id="cn-m3-52">From <b>PLABSYS01 </b>desktop, double-click <b>Configuration Manager Console</b>.</p>
+<p id="cn-m3-53"></p><figure><img class="cn-img" id="cn-image-m3-c-2" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-2.jpg" alt="Figure 1.1 Screenshot of PLABSYS01"><figcaption>Figure 1.1 Screenshot of PLABSYS01: Double-clicking the Configuration Manager Console icon.</figcaption></figure><p></p>
+<h4 id="cn-m3-54"><b><i>Step 2</i></b></h4>
+<p id="cn-m3-55"><b>System Center 2012 R2 Configuration Manager </b>opens.</p>
+<p id="cn-m3-56">In the <b>Assets and Compliance </b>workspace, under <b>Overview</b>, expand <b>Compliance Settings</b>.</p>
+<p id="cn-m3-57"></p><figure><img class="cn-img" id="cn-image-m3-c-3" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-3.jpg" alt="Figure 1.2 Screenshot of PLABSYS01"><figcaption>Figure 1.2 Screenshot of PLABSYS01: Selecting Compliance Settings in the left pane.</figcaption></figure><p></p>
+<h4 id="cn-m3-58"><b><i>Step 3</i></b></h4>
+<p id="cn-m3-59">Under <b>Compliance Settings</b>, select the <b>Configuration Items </b>node, right-click and from the context menu, select <b>Create Configuration Item.</b></p>
+<p id="cn-m3-60"></p><figure><img class="cn-img" id="cn-image-m3-c-4" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-4.jpg" alt="Figure 1.3 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.3 Screenshot of PLABSYS01: Right-clicking the Configuration Items 
+option in the left pane and selecting Create Configuration Item from the
+ context menu.</figcaption></figure><p></p>
+<h4 id="cn-m3-61"><b><i>Step 4</i></b></h4>
+<p id="cn-m3-62"><b>Create Configuration Item Wizard </b>opens.</p>
+<p id="cn-m3-63">On the <b>General </b>page, in the <b>Name </b>box, type:</p>
+<pre id="cn-m3-64"><code>Home Page Setting
+</code></pre>
+<p id="cn-m3-65">In <b>Assigned categories to improve searching and filtering</b>, click <b>Categories</b>.</p>
+<p id="cn-m3-66"></p><figure><img class="cn-img" id="cn-image-m3-c-5" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-5.jpg" alt="Figure 1.4 Screenshot of PLABSYS01"><figcaption>Figure 1.4 Screenshot of PLABSYS01: Clicking the Categories button on the General page of the Create Configuration Item Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-67"><b><i>Step 5</i></b></h4>
+<p id="cn-m3-68"><b>Manage Administrative Categories </b>dialog box opens.</p>
+<p id="cn-m3-69">In the <b>Administrative Categories </b>section, select <b>IT Infrastructure.</b></p>
+<p id="cn-m3-70">Click <b>OK.</b></p>
+<p id="cn-m3-71"></p><figure><img class="cn-img" id="cn-image-m3-c-6" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-6.jpg" alt="Figure 1.5 Screenshot of PLABSYS01"><figcaption>Figure 1.5 Screenshot of PLABSYS01: Selecting administrative categories on the Manage Administrative Categories dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-72"><b><i>Step 6</i></b></h4>
+<p id="cn-m3-73">On the <b>General page </b>of the <b>Create Configuration Item Wizard</b>, click <b>Next.</b></p>
+<p id="cn-m3-74"></p><figure><img class="cn-img" id="cn-image-m3-c-7" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-7.jpg" alt="Figure 1.6 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.6 Screenshot of PLABSYS01: Displaying the assigned categories on the 
+General page of the Create Configuration Item Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-75"><b><i>Step 7</i></b></h4>
+<p id="cn-m3-76">On the <b>Supported Platforms </b>page, select the versions of Windows that will access this configuration item for compliance.</p>
+<p id="cn-m3-77">For this demonstration, keep the <b>Windows Server 2012 R2 </b>checkbox selected and deselect all other selections.</p>
+<p id="cn-m3-78">Click <b>Next.</b></p>
+<p id="cn-m3-79"></p><figure><img class="cn-img" id="cn-image-m3-c-8" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-8.jpg" alt="Figure 1.7 Screenshot of PLABSYS01"><figcaption>Figure 1.7 Screenshot of PLABSYS01: Selecting Windows Server 2012 R2 as the Windows version.</figcaption></figure><p></p>
+<h4 id="cn-m3-80"><b><i>Step 8</i></b></h4>
+<p id="cn-m3-81">On the <b>Settings </b>page, click <b>New.</b></p>
+<p id="cn-m3-82"></p><figure><img class="cn-img" id="cn-image-m3-c-9" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-9.jpg" alt="Figure 1.8 Screenshot of PLABSYS01"><figcaption>Figure 1.8 Screenshot of PLABSYS01: Creation of new settings on the Settings page of the Create Configuration Item Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-83"><b><i>Step 9</i></b></h4>
+<p id="cn-m3-84"><b>Create Setting </b>dialog box opens.</p>
+<p id="cn-m3-85">On the <b>General </b>page, in the <b>Name </b>box, type <b>Home Page Setting</b>.</p>
+<p id="cn-m3-86">From the <b>Data type </b>drop-down, select <b>String.</b></p>
+<p id="cn-m3-87"></p><figure><img class="cn-img" id="cn-image-m3-c-10" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-10.jpg" alt="Figure 1.9 Screenshot of PLABSYS01"><figcaption>Figure 1.9 Screenshot of PLABSYS01: Adding the Name and Data type for the new setting on the Create Setting dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-88"><b><i>Step 10</i></b></h4>
+<p id="cn-m3-89">In the <b>Specify the registry value to access compliance on computer </b>section, click <b>Browse.</b></p>
+<p id="cn-m3-90"></p><figure><img class="cn-img" id="cn-image-m3-c-11" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-11.jpg" alt="Figure 1.10 Screenshot of PLABSYS01"><figcaption>Figure 1.10 Screenshot of PLABSYS01: Clicking the Browse button on the Create Setting dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-91"><b><i>Step 11</i></b></h4>
+<p id="cn-m3-92">In the <b>Browse Registry </b>dialog box that opens, in the tree view pane, expand <b>HKEY_Current_User</b>, expand <b>Software, </b>expand <b>Microsoft</b>, expand <b>Internet Explorer</b>, and select <b>Main</b>.</p>
+<p id="cn-m3-93">In the <b>Registry Value </b>section, select <b>Default Page URL.</b></p>
+<p id="cn-m3-94">Select the <b>The selected registry value must not exist on client devices </b>radio button.</p>
+<p id="cn-m3-95">Click <b>OK</b>. </p><figure><img class="cn-img" id="cn-image-m3-c-12" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-12.jpg" alt="Figure 1.11 Screenshot of PLABSYS01"><figcaption>Figure 1.11 Screenshot of PLABSYS01: Configuring the required settings on Browse Registry dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-96"><b><i>Step 12</i></b></h4>
+<p id="cn-m3-97">Back to <b>Create Setting </b>dialog box.</p>
+<p id="cn-m3-98">Click <b>Apply.</b></p>
+<p id="cn-m3-99"></p><figure><img class="cn-img" id="cn-image-m3-c-13" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-13.jpg" alt="Figure 1.12 Screenshot of PLABSYS01"><figcaption>Figure 1.12 Screenshot of PLABSYS01: Applying settings on the Creating Setting dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-100"><b><i>Step 13</i></b></h4>
+<p id="cn-m3-101">Click the <b>Compliance Rules </b>tab.</p>
+<p id="cn-m3-102">Select the default compliance rule and click <b>Delete.</b></p>
+<p id="cn-m3-103"></p><figure><img class="cn-img" id="cn-image-m3-c-14" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-14.jpg" alt="Figure 1.13 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.13 Screenshot of PLABSYS01: Deleting the existing compliance rule on 
+the Compliance Rules tab of the Create Setting dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-104"><b><i>Step 14</i></b></h4>
+<p id="cn-m3-105">With the compliance rule deleted, click <b>New </b>to create a new compliance rule</p><figure><img class="cn-img" id="cn-image-m3-c-15" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-15.jpg" alt="Figure 1.14 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.14 Screenshot of PLABSYS01: Creating a new compliance rule on the 
+Compliance Rules tab of the Create Setting dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-106"><b><i>Step 15</i></b></h4>
+<p id="cn-m3-107">In the <b>Create Rule </b>dialog box that opens, in the <b>Name </b>box, type <b>Correct Home Page</b>.</p>
+<p id="cn-m3-108">In <b>the following values </b>section, type the following text:</p>
+<pre id="cn-m3-109"><code>WWW.PRACTICELABS.COM
+</code></pre>
+<p id="cn-m3-110">Select the following checkboxes:</p>
+<ul id="cn-m3-111">
+<li id="cn-m3-111">Remediate noncompliance rules when supported</li>
+<li id="cn-m3-112">Report noncompliance if this setting instance is not found</li>
+</ul>
+<p id="cn-m3-113">Click <b>OK</b>.</p>
+<p id="cn-m3-114"></p><figure><img class="cn-img" id="cn-image-m3-c-16" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-16.jpg" alt="Figure 1.15 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.15 Screenshot of PLABSYS01: Defining settings in a new rule on the 
+Compliance Rules tab of the Create Setting dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-115"><b><i>Step 16</i></b></h4>
+<p id="cn-m3-116">On the <b>Create Settings </b>dialog box:</p>
+<p id="cn-m3-117">Click <b>Apply</b>.</p>
+<p id="cn-m3-118">Click <b>OK</b>.</p>
+<h4 id="cn-m3-119"><b><i>Step 17</i></b></h4>
+<p id="cn-m3-120">On the <b>Settings </b>page of the <b>Configuration Item Wizard</b>, click <b>Next.</b></p>
+<p id="cn-m3-121"></p><figure><img class="cn-img" id="cn-image-m3-c-17" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-17.jpg" alt="Figure 1.16 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.16 Screenshot of PLABSYS01: Displaying the new compliance rule on the
+ Settings page of the Create Configuration Item Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-122"><b><i>Step 18</i></b></h4>
+<p id="cn-m3-123">On the <b>Compliance Rules </b>page, click <b>Next.</b></p>
+<h4 id="cn-m3-124"><b><i>Step 19</i></b></h4>
+<p id="cn-m3-125">On the <b>Summary </b>page, click <b>Next.</b></p>
+<h4 id="cn-m3-126"><b><i>Step 20</i></b></h4>
+<p id="cn-m3-127">Wait for the process to complete.</p>
+<p id="cn-m3-128"></p><figure><img class="cn-img" id="cn-image-m3-c-18" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-18.jpg" alt="Figure 1.17 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.17 Screenshot of PLABSYS01: Displaying the progress of the new 
+compliance rule creation on the Progress page of the Create 
+Configuration Item Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-129"><b><i>Step 21</i></b></h4>
+<p id="cn-m3-130">On the <b>Completion </b>page, click <b>Close</b>.</p>
+<p id="cn-m3-131"></p><figure><img class="cn-img" id="cn-image-m3-c-19" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-19.jpg" alt="This image is described in the fig caption that follows this image."><figcaption>Figure
+ 1.18 Screenshot of PLABSYS01Displaying the completion status of the 
+compliance rule on the Completion page of the Create Configuration Item 
+Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-132"><b><i>Step 22</i></b></h4>
+<p id="cn-m3-133">Find the newly created configuration item listed in the <b>Configuration Items </b>section.</p>
+<p id="cn-m3-134"></p><figure><img class="cn-img" id="cn-image-m3-c-20" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-20.jpg" alt="Figure 1.19 Screenshot of PLABSYS01"><figcaption>Figure 1.19 Screenshot of PLABSYS01: Displaying the configuration item in the Configuration Items category.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="cn-alert" id="cn-m3-137">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m3-138"><b>Exercise 2 - Create Configuration Baseline and Deploy the Baseline</b></h2>
+<p id="cn-m3-139">You can evaluate compliance in SCCM by defining 
+configuration baselines. Configuration baselines contain predefined 
+configuration items that you want to evaluate. It can also contain 
+another configuration baseline. In this exercise, you will create a 
+configuration baseline for a Windows configuration item.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m3-141">After completing this exercise, you will be able to:</p>
+<ul id="cn-m3-142">
+<li id="cn-m3-142">Create and Deploy a Configuration Baseline</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m3-144">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m3-145">
+<li id="cn-m3-145"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m3-146"><b>PLABSYS01 </b>(System Center2012 Server)</li>
+</ul>
+<p id="cn-m3-147"><img class="cn-img" id="cn-image-m3-c-21" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-21.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m3-148"><b>Task 1 - Create and Deploy a Configuration Baseline</b></h3>
+<p id="cn-m3-149">In this task, you will create a configuration baseline using the Configuration Manager on the PLABSYS01 server.</p>
+<h4 id="cn-m3-150"><b><i>Step 1</i></b></h4>
+<p id="cn-m3-151">Ensure you are connected to <b>PLABSYS01</b>.</p>
+<p id="cn-m3-152">In the <b>Configuration Manager Console</b>, ensure <b>Assets and Compliance </b>workspace is selected.</p>
+<p id="cn-m3-153">Under <b>Compliance Settings</b>, select <b>Configuration Baselines</b>.</p>
+<p id="cn-m3-154">On the <b>Home </b>tab, in the <b>Create </b>group, select <b>Create Configuration Baseline</b>.</p>
+<p id="cn-m3-155"></p><figure><img class="cn-img" id="cn-image-m3-c-22" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-22.jpg" alt="Figure 2.1 Screenshot of PLABSYS01"><figcaption>Figure
+ 2.1 Screenshot of PLABSYS01: Displaying the selection of Create 
+Configuration Baseline option on the context menu of the Configuration 
+Baselines.</figcaption></figure><p></p>
+<h4 id="cn-m3-156"><b><i>Step 2</i></b></h4>
+<p id="cn-m3-157"><b>Create Configuration Baseline </b>dialog box opens.</p>
+<p id="cn-m3-158">In the <b>Name </b>box, type</p>
+<pre id="cn-m3-159"><code>Home Page
+</code></pre>
+<p id="cn-m3-160">In the <b>Configuration Data </b>section, click <b>ADD </b>and select <b>Configuration items</b></p><figure><img class="cn-img" id="cn-image-m3-c-23" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-23.jpg" alt="Figure 2.2 Screenshot of PLABSYS01"><figcaption>Figure 2.2 Screenshot of PLABSYS01: Adding the configuration data on the Create Configuration Baseline dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-161"><b><i>Step 3</i></b></h4>
+<p id="cn-m3-162"><b>Add Configuration Items </b>dialog box opens.</p>
+<p id="cn-m3-163">Select the configuration item that you created earlier. For example, select <b>Home Page Setting </b>and click <b>Add</b>.</p>
+<p id="cn-m3-164"></p><figure><img class="cn-img" id="cn-image-m3-c-24" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-24.jpg" alt="Figure 2.3 Screenshot of PLABSYS01"><figcaption>Figure 2.3 Screenshot of PLABSYS01: Selecting the available configuration item from the Add Configuration Items dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-165"><b><i>Step 4</i></b></h4>
+<p id="cn-m3-166">The selected configuration item gets added to the configuration baseline.</p>
+<p id="cn-m3-167">Click <b>OK</b>.</p>
+<p id="cn-m3-168"></p><figure><img class="cn-img" id="cn-image-m3-c-25" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-25.jpg" alt="Figure 2.4 Screenshot of PLABSYS01"><figcaption>Figure
+ 2.4 Screenshot of PLABSYS01: Displaying the added configuration items 
+in the configuration baseline on the Add Configuration Items.</figcaption></figure><p></p>
+<h4 id="cn-m3-169"><b><i>Step 5</i></b></h4>
+<p id="cn-m3-170">Back to <b>Create Configuration Baseline </b>dialog box.</p>
+<p id="cn-m3-171">In the <b>Assigned categories to improve searching and filtering </b>section, click <b>Categories.</b></p>
+<p id="cn-m3-172"></p><figure><img class="cn-img" id="cn-image-m3-c-26" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-26.jpg" alt="Figure 2.5 Screenshot of PLABSYS01"><figcaption>Figure 2.5 Screenshot of PLABSYS01: Clicking the Categories button on the Create Configuration Baseline dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-173"><b><i>Step 6</i></b></h4>
+<p id="cn-m3-174">In the <b>Manage Administrative Categories </b>dialog box, select <b>IT Infrastructure </b>and click <b>OK.</b></p>
+<p id="cn-m3-175"></p><figure><img class="cn-img" id="cn-image-m3-c-27" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-27.jpg" alt="Figure 2.6 Screenshot of PLABSYS01"><figcaption>Figure 2.6 Screenshot of PLABSYS01: Selecting the administrative categories in the Manage Administrative Categories dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-176"><b><i>Step 7</i></b></h4>
+<p id="cn-m3-177">In the <b>Create Configuration Baseline </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m3-178"></p><figure><img class="cn-img" id="cn-image-m3-c-28" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-28.jpg" alt="Figure 2.7 Screenshot of PLABSYS01"><figcaption>Figure 2.7 Screenshot of PLABSYS01: Added administrative category on the Create Configuration Baseline.</figcaption></figure><p></p>
+<h4 id="cn-m3-179"><b><i>Step 8</i></b></h4>
+<p id="cn-m3-180">Find the newly created configuration baseline listed 
+in the Configuration Baseline section. Deploy the configuration baseline
+ to users through collections for evaluating its settings for compliance
+ on a specified schedule.</p>
+<p id="cn-m3-181">Select the baseline.</p>
+<p id="cn-m3-182">On the <b>Home </b>tab, in the <b>Deployment </b>group, click <b>Deploy</b>.</p>
+<span class="cn-quote" id="cn-m3-183"><b><i>Note: </i></b><i>You can also deploy configuration baselines to devices through collections.</i></span>
+<p id="cn-m3-184"></p><figure><img class="cn-img" id="cn-image-m3-c-29" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-29.jpg" alt="Figure 2.8 Screenshot of PLABSYS01"><figcaption>Figure 2.8 Screenshot of PLABSYS01: Clicking Deploy from the Deployment group on the ribbon.</figcaption></figure><p></p>
+<h4 id="cn-m3-185"><b><i>Step 9</i></b></h4>
+<p id="cn-m3-186">In the <b>Deploy Configuration Baselines </b>dialog box that opens, in the <b>Select the collection for this configuration baseline deployment</b>, click <b>Browse</b>.</p>
+<p id="cn-m3-187"></p><figure><img class="cn-img" id="cn-image-m3-c-30" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-30.jpg" alt="Figure 2.9 Screenshot of PLABSYS01"><figcaption>Figure 2.9 Screenshot of PLABSYS01: Clicking the Browse button on the Deploy Configuration Baselines dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-188"><b><i>Step 10</i></b></h4>
+<p id="cn-m3-189">The <b>Select Collection </b>dialog box opens.</p>
+<p id="cn-m3-190">Select <b>All Users</b>. This will be input into the <b>Collection </b>field.</p>
+<p id="cn-m3-191">Click <b>OK</b>.</p>
+<p id="cn-m3-192"></p><figure><img class="cn-img" id="cn-image-m3-c-31" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-31.jpg" alt="Figure 2.10 Screenshot of PLABSYS01"><figcaption>Figure 2.10 Screenshot of PLABSYS01: Selecting All Users from the Select Collection dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-193"><b><i>Step 11</i></b></h4>
+<p id="cn-m3-194">In the <b>Deploy Configuration Baseline </b>dialog box, keep the default schedule.</p>
+<p id="cn-m3-195">Click <b>OK</b>.</p>
+<p id="cn-m3-196"></p><figure><img class="cn-img" id="cn-image-m3-c-32" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-32.jpg" alt="Figure 2.11 Screenshot of PLABSYS01"><figcaption>Figure
+ 2.11 Screenshot of PLABSYS01: Displaying the All Users group in the 
+Collection field on the Deploy Configuration Baselines dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-197"><b><i>Step 12</i></b></h4>
+<p id="cn-m3-198">The configuration baseline is deployed to <b>All Users </b>collection.</p>
+<p id="cn-m3-199"></p><figure><img class="cn-img" id="cn-image-m3-c-33" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-33.jpg" alt="Figure 2.12 Screenshot of PLABSYS01"><figcaption>Figure 2.12 Screenshot of PLABSYS01: Deploying configuration baseline to the All Users group.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="cn-alert" id="cn-m3-202">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m3-203"><b>Exercise 3 - Create Windows Configuration Items for Compliance Settings</b></h2>
+<p id="cn-m3-204">You can import configuration data from the Microsoft 
+site in SCCM Configuration Packs. Microsoft and other vendors define 
+these configuration data.</p>
+<p id="cn-m3-205">In this exercise, you will learn to import 
+configuration data in SCCM Configuration Manager Packs from the web into
+ Configuration Manager.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m3-207">After completing this exercise, you will be able to:</p>
+<ul id="cn-m3-208">
+<li id="cn-m3-208">Import Configuration Data</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m3-210">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m3-211">
+<li id="cn-m3-211"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m3-212"><b>PLABSYS01 </b>(System Center2012 Server)</li>
+</ul>
+<p id="cn-m3-213"><img class="cn-img" id="cn-image-m3-c-34" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-34.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m3-214"><b>Task 1 - Import Configuration Data</b></h3>
+<p id="cn-m3-215">In this task, you will download configuration data 
+from the Practice Labs Intranet Website and then import it in the 
+Configuration Manager.</p>
+<h4 id="cn-m3-216"><b><i>Step 1</i></b></h4>
+<p id="cn-m3-217">Ensure you are connected to <b>PLABSYS01</b>.</p>
+<p id="cn-m3-218">Open <b>Internet Explorer</b>.</p>
+<p id="cn-m3-219">On the Practice Labs Intranet home page, click <b>Installation Files</b>.</p>
+<h4 id="cn-m3-220"><b><i>Step 2</i></b></h4>
+<p id="cn-m3-221">Click <b>Configuration Pack from SCCM</b>.</p>
+<p id="cn-m3-222"></p><figure><img class="cn-img" id="cn-image-m3-c-35" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-35.jpg" alt="Figure 3.1 Screenshot of PLABSYS01"><figcaption>Figure 3.1 Screenshot of PLABSYS01: Clicking the Configuration Packs for SCCM folder on the Intranet Website.</figcaption></figure><p></p>
+<h4 id="cn-m3-223"><b><i>Step 3</i></b></h4>
+<p id="cn-m3-224">Click <b>ConfigMgr2012ConfigPack.msi</b>.</p>
+<p id="cn-m3-225">In the notification bar, click <b>Run</b>.</p>
+<p id="cn-m3-226"></p><figure><img class="cn-img" id="cn-image-m3-c-36" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-36.jpg" alt="Figure 3.2 Screenshot of PLABSYS01"><figcaption>Figure 3.2 Screenshot of PLABSYS01: Clicking the Run option on the notification bar, which appears after clicking on the file.</figcaption></figure><p></p>
+<h4 id="cn-m3-227"><b><i>Step 4</i></b></h4>
+<p id="cn-m3-228">On the <b>Welcome </b>page of the installer wizard, click <b>Next</b>.</p>
+<h4 id="cn-m3-229"><b><i>Step 5</i></b></h4>
+<p id="cn-m3-230">On the <b>License Agreement </b>page, select <b>I agree</b>.</p>
+<p id="cn-m3-231">Click <b>Next</b>.</p>
+<p id="cn-m3-232"></p><figure><img class="cn-img" id="cn-image-m3-c-37" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-37.jpg" alt="Figure 3.3 Screenshot of PLABSYS01"><figcaption>Figure 3.3 Screenshot of PLABSYS01: Selecting I Agree on the License Agreement page.</figcaption></figure><p></p>
+<h4 id="cn-m3-233"><b><i>Step 6</i></b></h4>
+<p id="cn-m3-234">On the <b>Select Installation Folder </b>page, keep the default selections and click <b>Next</b>.</p>
+<h4 id="cn-m3-235"><b><i>Step 7</i></b></h4>
+<p id="cn-m3-236">On the <b>Confirm Installation </b>page, click <b>Next </b>to start the installation.</p>
+<h4 id="cn-m3-237"><b><i>Step 8</i></b></h4>
+<p id="cn-m3-238">On the <b>Installation Complete </b>page, click <b>Close</b>.</p>
+<p id="cn-m3-239"></p><figure><img class="cn-img" id="cn-image-m3-c-38" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-38.jpg" alt="Figure 3.4 Screenshot of PLABSYS01"><figcaption>Figure 3.4 Screenshot of PLABSYS01: Completing the installation on the Installation Complete.</figcaption></figure><p></p>
+<h4 id="cn-m3-240"><b><i>Step 9</i></b></h4>
+<p id="cn-m3-241">Close <b>Internet Explorer</b>.</p>
+<p id="cn-m3-242">Navigate to <b>Configuration Manager Console</b>.</p>
+<p id="cn-m3-243">In the <b>Assets and Compliance </b>workspace, under <b>Compliance Settings</b>, select <b>Configuration Baselines </b>if already not selected</p>
+<p id="cn-m3-244">On the <b>Home </b>tab, in the <b>Create </b>group, click <b>Import Configuration Data</b>.</p>
+<p id="cn-m3-245"></p><figure><img class="cn-img" id="cn-image-m3-c-39" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-39.jpg" alt="Figure 3.5 Screenshot of PLABSYS01"><figcaption>Figure 3.5 Screenshot of PLABSYS01: Clicking the Import Configuration Data button from the Create drop-down.</figcaption></figure><p></p>
+<h4 id="cn-m3-246"><b><i>Step 10</i></b></h4>
+<p id="cn-m3-247">On the <b>Select Files </b>page of the <b>Import Configuration Data Wizard</b>, click <b>Add.</b></p>
+<p id="cn-m3-248"></p><figure><img class="cn-img" id="cn-image-m3-c-40" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-40.jpg" alt="Figure 3.6 Screenshot of PLABSYS01"><figcaption>Figure 3.6 Screenshot of PLABSYS01: Clicking the Add button on the Select Files page of the Import Configuration Data Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-249"><b><i>Step 11</i></b></h4>
+<p id="cn-m3-250">In the <b>Open </b>dialog box, browse to the following location of the configuration pack:</p>
+<pre id="cn-m3-251"><code>C:\Program Files (x86)\Configuration Pack for System Center 2012 Configuration Manager
+</code></pre>
+<p id="cn-m3-252">Select <b>CM2012ServerRolesConfigpack </b>and click <b>Open</b></p><figure><img class="cn-img" id="cn-image-m3-c-41" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-41.jpg" alt="Figure 3.7 Screenshot of PLABSYS01"><figcaption>Figure 3.7 Screenshot of PLABSYS01: Selecting the configuration pack in the Open dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m3-253"><b><i>Step 12</i></b></h4>
+<p id="cn-m3-254">On the <b>Select Files </b>page of the <b>Import Configuration Data Wizard</b>, click <b>Next</b>.</p>
+<p id="cn-m3-255"></p><figure><img class="cn-img" id="cn-image-m3-c-42" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-42.jpg" alt="Figure 3.8 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.8 Screenshot of PLABSYS01: Added the configuration file in the Select
+ Files on the Select Files page of the Import Configuration Data Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-256"><b><i>Step 13</i></b></h4>
+<p id="cn-m3-257">On the <b>Summary </b>page, click <b>Next.</b></p>
+<p id="cn-m3-258">Wait for the process to complete.</p>
+<h4 id="cn-m3-259"><b><i>Step 14</i></b></h4>
+<p id="cn-m3-260">On the <b>Confirmation </b>page, click <b>Close</b>.</p>
+<p id="cn-m3-261"></p><figure><img class="cn-img" id="cn-image-m3-c-43" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-43.jpg" alt="Figure 3.9 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.9 Screenshot of PLABSYS01: Completing the import configuration data 
+wizard on the Confirmation page of the Import Configuration Data Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m3-262"><b><i>Step 15</i></b></h4>
+<p id="cn-m3-263">Find the newly imported configuration baseline listed in the <b>Configuration Baselines </b>section. </p><figure><img class="cn-img" id="cn-image-m3-c-44" src="ConfiguringSCCMConfigurationItemsandBaselines_files/image-m3-c-44.jpg" alt="Figure 3.10 Screenshot of PLABSYS01"><figcaption>Figure 3.10 Screenshot of PLABSYS01: Showing the added configuration pack in the console.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m3-267"><b>Review</b></h2>
+<p id="cn-m3-268">Well done, you have completed the <b>Configuring SCCM Configuration Items and Baselines </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">27ea9c29-d428-4c48-ad36-1d9be9369a65</span>
+<span class="atom-code hidden">d0e9d298-5647-40e2-96c6-ce5cb80f8230</span>
+<span class="atom-code hidden">04fa0b90-d5ee-4183-93b6-71f3f4159af3</span>
+<span class="atom-code hidden">9974092c-5ad2-429a-9c6e-af26ca1976c0</span>
+<span class="atom-code hidden">fd12e100-55b0-455e-901f-390b4e9320fc</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m3-278">You completed the following exercises:</p>
+<ul id="cn-m3-279">
+<li id="cn-m3-279">Creating a Windows configuration item for compliance settings in SCCM 2012</li>
+<li id="cn-m3-280">Creating and deploying a configuration baseline</li>
+<li id="cn-m3-281">Importing configuration data in SCCM 20012</li>
+</ul>
+<p id="cn-m3-282">You should now be able to:</p>
+<ul id="cn-m3-283">
+<li id="cn-m3-283">Create Configuration Items</li>
+<li id="cn-m3-284">Create and Deploy a Configuration Baseline</li>
+<li id="cn-m3-285">Import Configuration Data</li>
+<li id="cn-m3-286">Feedback</li>
+</ul>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m3-289">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

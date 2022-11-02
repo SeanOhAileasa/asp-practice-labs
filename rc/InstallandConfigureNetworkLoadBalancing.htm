@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="InstallandConfigureNetworkLoadBalancing_files/print-styles.css" rel="stylesheet">
+    <script src="InstallandConfigureNetworkLoadBalancing_files/jquery.min.js"></script>
+    <script src="InstallandConfigureNetworkLoadBalancing_files/jspdf.js"></script>
+    <script src="InstallandConfigureNetworkLoadBalancing_files/from_html.js"></script>
+    <script src="InstallandConfigureNetworkLoadBalancing_files/addimage.js"></script>
+    <script src="InstallandConfigureNetworkLoadBalancing_files/filesaver.js"></script>
+    <script src="InstallandConfigureNetworkLoadBalancing_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="MrBnxSt/UZiIw9tzyhq+n7mv0rp6/aC2OQw5dgm8p6pq8AmhaVCDi7yeHUAGyZg0nHDIoJ1AlHzgHjR2TBB3mwjle/ZDiyVT7MqGaoQoxE4=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Install and Configure Network Load Balancing</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Installing Network Load Balancing Nodes</li><li>Exercise 2 - Configuring a New NLB Cluster</li><li>Exercise 3 - Adding a Secondary Node to an NLB Cluster</li><li>Exercise 4 - Examining the Working of an NLB Cluster</li><li>Exercise 5 - Configuring and Validating Port Rules for NLB</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m5-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Security</div>
+<div>Network Load Balancing</div>
+<div>NLB</div>
+<div>IIS</div>
+<div>DNS</div>
+</div>
+<p id="cn-m5-7">Welcome to the <b>Install and Configure Network Load Balancing </b>Practice Lab. In this module, you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m5-11">In this module, you will complete the following exercises:</p>
+<ul id="cn-m5-12">
+<li id="cn-m5-12">Installing Network Load Balancing Nodes</li>
+<li id="cn-m5-13">Configuring a New NLB Cluster</li>
+<li id="cn-m5-14">Adding a Secondary Node to an NLB Cluster</li>
+<li id="cn-m5-15">Examining the working of an NLB cluster</li>
+<li id="cn-m5-16">Configuring and validating port rules for NLB cluster</li>
+</ul>
+<p id="cn-m5-17">After completing this lab, you will be able to:</p>
+<ul id="cn-m5-18">
+<li id="cn-m5-18">Install IIS</li>
+<li id="cn-m5-19">Install NLB on Servers</li>
+<li id="cn-m5-20">Create the First NLB Cluster Node</li>
+<li id="cn-m5-21">Configure DNS</li>
+<li id="cn-m5-22">Add a Second Server to the Cluster</li>
+<li id="cn-m5-23">Study the Working of an NLB Cluster</li>
+<li id="cn-m5-24">Configure Port Rules</li>
+<li id="cn-m5-25">Validate Port Rules</li>
+<li id="cn-m5-26">Validate High Availability of NLB Cluster</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m5-28">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m5-29">
+<li id="cn-m5-29">2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+</ul>
+<span class="cn-quote" id="cn-m5-30"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m5-32">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m5-36">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m5-37">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m5-49"><b>Lab Topology</b></h2>
+<p id="cn-m5-50">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m5-51">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m5-52">
+<li id="cn-m5-52"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m5-53"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m5-54"><b>PLABDM02 </b>(Windows Server 2012 R2 - Domain Member Server)</li>
+<li id="cn-m5-55"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+<li id="cn-m5-56"><b>PLABWIN810 </b>(Windows 8.1 - Domain Workstation)</li>
+<li id="cn-m5-57"><b>PLABWIN10 </b>(Windows 10 - Domain Workstation)</li>
+</ul>
+<p id="cn-m5-58"><img class="cn-img" id="cn-image-m5-c-0" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m5-59">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m5-60"><b>Exercise 1 - Installing Network Load Balancing Nodes</b></h2>
+<p id="cn-m5-61">Network Load Balancing (NLB) service is a feature 
+included in Windows Server 2016 and earlier versions. This service 
+balances network traffic load sent to the NLB cluster on a TCP/IP 
+network. The NLB cluster is a configuration of multiple virtual IP 
+addresses. The network traffic load is balanced among the multiple 
+servers on the cluster. Moreover, load balancers provide built-in 
+redundancy by sensing any device failures on the network and 
+redistributing their load over other devices. Load balancers are 
+normally used to ensure reliable delivery of mission-critical web 
+applications to a large user population base.</p>
+<p id="cn-m5-62">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m5-64">After completing this exercise, you will be able to:</p>
+<ul id="cn-m5-65">
+<li id="cn-m5-65">Install IIS</li>
+<li id="cn-m5-66">Install NLB on Servers</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m5-68">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m5-69">
+<li id="cn-m5-69"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m5-70"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m5-71"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+</ul>
+<ol id="cn-m5-72">
+</ol>
+<p id="cn-m5-73"><img class="cn-img" id="cn-image-m5-c-1" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m5-75"><b>Task 1 - Install IIS</b></h3>
+<p id="cn-m5-76">Internet Information Service, or IIS, is included as a 
+component with Windows 2003 and later versions. The service needs to be 
+installed to allow the users access to Web services. Activating IIS 
+enables the IIS-based applications, including HTTP, FTP, etc., to take 
+full advantage of NLB. In this task, you will install the IIS on two 
+servers - <b>PLABDM01 </b>and the <b>PLABSA01</b>.</p>
+<p id="cn-m5-77">To install IIS, perform the following steps:</p>
+<h4 id="cn-m5-78"><b><i>Step 1 </i></b></h4>
+<p id="cn-m5-79">Ensure you have powered on the required devices as defined in the introduction.</p>
+<p id="cn-m5-80">Connect to <b>PLABDM01</b>.</p>
+<p id="cn-m5-81">On the <b>Server Manager Dashboard</b>, click <b>Add roles and features</b>.</p>
+<p id="cn-m5-82"></p><figure><img class="cn-img" id="cn-image-m5-c-2" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-2.jpg" alt="Figure 1.1 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.1 Screenshot of the PLABDM01 desktop: Server Manager console is 
+displayed showing the Add roles and features link highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-84"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-85">The <b>Add Roles and Features Wizard </b>is displayed.</p>
+<p id="cn-m5-86">On the <b>Before you begin </b>page, click <b>Next</b>.</p>
+<p id="cn-m5-87"></p><figure><img class="cn-img" id="cn-image-m5-c-3" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-3.jpg" alt="Figure 1.2 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.2 Screenshot of the PLABDM01 desktop: Before you begin page on the 
+Add Roles and Features Wizard is displayed showing the Next button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-89"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-90">On the <b>Select installation type </b>page, keep the default selections and click <b>Next</b>.</p>
+<p id="cn-m5-91"></p><figure><img class="cn-img" id="cn-image-m5-c-4" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-4.jpg" alt="Figure 1.3 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.3 Screenshot of the PLABDM01 desktop: Select installation type page 
+on the Add Roles and Features Wizard is displayed showing default 
+settings and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-94"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-95">On the <b>Select destination server </b>page, keep the default selections and click <b>Next</b>.</p>
+<p id="cn-m5-96"></p><figure><img class="cn-img" id="cn-image-m5-c-5" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-5.jpg" alt="Figure 1.4 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.4 Screenshot of the PLABDM01 desktop: Select destination server page 
+on the Add Roles and Features Wizard is displayed showing default 
+settings and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-98"><b><i>Step 5</i></b></h4>
+<p id="cn-m5-99">On the <b>Select server roles </b>page, scroll down the <b>Roles </b>list and select <b>Web Server (IIS) </b>check box.</p>
+<p id="cn-m5-100"></p><figure><img class="cn-img" id="cn-image-m5-c-6" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-6.jpg" alt="Figure 1.5 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.5 Screenshot of the PLABDM01 desktop: Select server roles page on the
+ Add Roles and Features Wizard is displayed showing required selections 
+performed and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-103"><b><i>Step 6</i></b></h4>
+<p id="cn-m5-104"><b>Add Roles and Features Wizard </b>dialog box automatically appears.</p>
+<p id="cn-m5-105">Read the information mentioned and click <b>Add Features</b>.</p>
+<p id="cn-m5-106"></p><figure><img class="cn-img" id="cn-image-m5-c-7" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-7.jpg" alt="Figure 1.6 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.6 Screenshot of the PLABDM01 desktop: Add Roles and Features Wizard 
+dialog box is displayed showing default settings, and the Add Features 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-109"><b><i>Step 7</i></b></h4>
+<p id="cn-m5-110">You redirected back to the <b>Select server roles </b>page.</p>
+<p id="cn-m5-111">Keep the default selections and click <b>Next</b>.</p>
+<p id="cn-m5-112"></p><figure><img class="cn-img" id="cn-image-m5-c-8" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-8.jpg" alt="Figure 1.7 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.7 Screenshot of the PLABDM01 desktop: Select server roles page on the
+ Add Roles and Features Wizard is displayed showing default settings and
+ the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-115"><b><i>Step 8</i></b></h4>
+<p id="cn-m5-116">On the <b>Select features </b>page, keep the default selections and click <b>Next</b>.</p>
+<p id="cn-m5-117"></p><figure><img class="cn-img" id="cn-image-m5-c-9" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-9.jpg" alt="Figure 1.8 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.8 Screenshot of the PLABDM01 desktop: Select features page on the Add
+ Roles and Features Wizard is displayed showing default settings and the
+ Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-120"><b><i>Step 9</i></b></h4>
+<p id="cn-m5-121">On the <b>Web Server Role (IIS) </b>page, read the information and click <b>Next</b>.</p>
+<p id="cn-m5-122"></p><figure><img class="cn-img" id="cn-image-m5-c-10" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-10.jpg" alt="Figure 1.9 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.9 Screenshot of the PLABDM01 desktop: Web Server Role (IIS) page on 
+the Add Roles and Features Wizard is displayed introducing the feature, 
+and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-125"><b><i>Step 10</i></b></h4>
+<p id="cn-m5-126">On the <b>Select role services </b>page, notice that the required components are automatically selected.</p>
+<p id="cn-m5-127">Click <b>Next</b>.</p>
+<p id="cn-m5-128"></p><figure><img class="cn-img" id="cn-image-m5-c-11" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-11.jpg" alt="Figure 1.10 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.10 Screenshot of the PLABDM01 desktop: Select role services page on 
+the Add Roles and Features Wizard is displayed showing default 
+selections performed, and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-131"><b><i>Step 11</i></b></h4>
+<p id="cn-m5-132">On the <b>Confirm installation selections </b>page, check-out the installation specifications and click <b>Install</b>.</p>
+<p id="cn-m5-133"></p><figure><img class="cn-img" id="cn-image-m5-c-12" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-12.jpg" alt="Figure 1.11 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.11 Screenshot of the PLABDM01 desktop: Confirm installation 
+selections page on the Add Roles, and Features Wizard is displayed 
+listing the installation specifications, and the Install button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-136"><b><i>Step 12</i></b></h4>
+<p id="cn-m5-137">Please wait while <b>Installation progress </b>page is installing the Windows feature.</p>
+<span class="cn-quote" id="cn-m5-138"><b><i>Note</i></b><i>: The installation may take a while to complete.</i></span>
+<p id="cn-m5-139"></p><figure><img class="cn-img" id="cn-image-m5-c-13" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-13.jpg" alt="Figure 1.12 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.12 Screenshot of the PLABDM01 desktop: Installation progress page on 
+the Add Roles and Features Wizard is displayed tracking the feature 
+installation.</figcaption></figure><p></p>
+<h4 id="cn-m5-142"><b><i>Step 13</i></b></h4>
+<p id="cn-m5-143">Click <b>Close </b>when installation is successfully completed.</p>
+<p id="cn-m5-144">Close <b>Server Manager</b>.</p>
+<p id="cn-m5-145"></p><figure><img class="cn-img" id="cn-image-m5-c-14" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-14.jpg" alt="Figure 1.13 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.13 Screenshot of the PLABDM01 desktop: Installation progress page on 
+the Add Roles and Features Wizard is displayed showing the status of the
+ installation and the Close button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-148"><b><i>Step 14</i></b></h4>
+<p id="cn-m5-149">Connect to <b>PLABSA01 </b>device.</p>
+<span class="cn-quote" id="cn-m5-150"><b><i>Note</i></b><i>: If the </i><b><i>Networks </i></b><i>fly out menu appears, click </i><b><i>Yes</i></b><i>. You may get temporarily disconnected. If this happens, reconnect to the same device using Practice Labs web application.</i></span>
+<p id="cn-m5-151">Install the <b>Web Server (IIS) </b>component using the same steps you followed earlier on <b>PLABDM01</b>.</p>
+<p id="cn-m5-152"></p><figure><img class="cn-img" id="cn-image-m5-c-15" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-15.jpg" alt="Figure 1.14 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 1.14 Screenshot of the PLABSA01 desktop: Confirm installation 
+selections page on the Add Roles, and Features Wizard is displayed 
+listing the installation specifications and the Install button 
+available.</figcaption></figure><p></p>
+<h4 id="cn-m5-155"><b><i>Step 15</i></b></h4>
+<p id="cn-m5-156">Click <b>Close </b>when <b>Web Server (IIS) </b>is installed.</p>
+<p id="cn-m5-157">Close <b>Server Manager</b>.</p>
+<p id="cn-m5-158"></p><figure><img class="cn-img" id="cn-image-m5-c-16" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-16.jpg" alt="Figure 1.15 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 1.15 Screenshot of the PLABSA01 desktop: Installation progress page on 
+the Add Roles and Features Wizard is displayed showing the status of the
+ installation and the Close button highlighted.</figcaption></figure><p></p>
+<h3 id="cn-m5-161"><b>Task 2 - Install NLB on Servers</b></h3>
+<p id="cn-m5-162">NLB component of the Windows OS must be installed on 
+the servers to enable the servers to implement NLB for the 
+domain-network. In this task, you will install NLB on the two servers - <b>PLABSA01 </b>and <b>PLABDM01</b>.</p>
+<p id="cn-m5-163">To install NLB on servers, perform the following steps:</p>
+<h4 id="cn-m5-164"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-165">On the <b>PLABSA01 </b>device, click the <b>Windows </b>charm and type <b>powershell</b>.</p>
+<p id="cn-m5-166">Notice that <b>Windows PowerShell </b>is displayed in the search results. Select <b>Windows PowerShell</b>.</p>
+<p id="cn-m5-167"></p><figure><img class="cn-img" id="cn-image-m5-c-17" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-17.jpg" alt="Figure 1.16 Screenshot of the PLABSA01 desktop"><figcaption>Figure 1.16 Screenshot of the PLABSA01 desktop: Windows PowerShell option is selected on the Start menu.</figcaption></figure><p></p>
+<h4 id="cn-m5-170"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-171">On the Windows PowerShell prompt, type the following command:</p>
+<pre id="cn-m5-172"><code>cd\
+</code></pre>
+<p id="cn-m5-173">Press <b>Enter</b>.</p>
+<p id="cn-m5-174">On the next command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m5-175"><code>Install-WindowsFeature -Name nlb -IncludeAllSubFeature -IncludeManagementTools
+</code></pre>
+<p id="cn-m5-177"></p><figure><img class="cn-img" id="cn-image-m5-c-18" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-18.jpg" alt="Figure 1.17 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 1.17 Screenshot of the PLABSA01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the commands to access the root 
+directory and to install the nlb feature on the server typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m5-179"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-180">Notice the installation of NLB is in progress.</p>
+<p id="cn-m5-181"></p><figure><img class="cn-img" id="cn-image-m5-c-19" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-19.jpg" alt="Figure 1.18 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 1.18 Screenshot of the PLABSA01 desktop: Administrator: Windows 
+PowerShell window is displayed showing system-response to the command 
+typed-in in the previous step.</figcaption></figure><p></p>
+<h4 id="cn-m5-184"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-185">The <b>Windows PowerShell </b>window displays the successful installation of NLB as well as Remote Server Administration Tool (RSAT) services on <b>PLABSA01</b>.</p>
+<p id="cn-m5-186">On the next command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m5-187"><code>exit
+</code></pre>
+<p id="cn-m5-189"></p><figure><img class="cn-img" id="cn-image-m5-c-20" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-20.jpg" alt="Figure 1.19 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 1.19 Screenshot of the PLABSA01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the status of the installation 
+and then the command to exit the console typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m5-192"><b><i>Step 5</i></b></h4>
+<p id="cn-m5-193">Switch to <b>PLABDM01</b>.</p>
+<p id="cn-m5-194">Invoke Windows PowerShell.</p>
+<p id="cn-m5-195">On the <b>Windows PowerShell </b>prompt, type the following command:</p>
+<pre id="cn-m5-196"><code>cd\
+</code></pre>
+<p id="cn-m5-197">Press <b>Enter</b>.</p>
+<p id="cn-m5-198">On the next command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m5-199"><code>Install-WindowsFeature -Name nlb -IncludeAllSubFeature -IncludeManagementTools
+</code></pre>
+<p id="cn-m5-201"></p><figure><img class="cn-img" id="cn-image-m5-c-21" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-21.jpg" alt="Figure 1.20 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.20 Screenshot of the PLABDM01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the commands to access root 
+directory and to install the nlb feature on the server typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m5-203"><b><i>Step 6</i></b></h4>
+<p id="cn-m5-204">Notice the installation of NLB in progress on <b>PLABDM01</b>.</p>
+<p id="cn-m5-205"></p><figure><img class="cn-img" id="cn-image-m5-c-22" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-22.jpg" alt="Figure 1.21 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.21 Screenshot of the PLABDM01 desktop: Administrator: Windows 
+PowerShell window is displayed showing system-response to the command 
+typed-in in the previous step.</figcaption></figure><p></p>
+<h4 id="cn-m5-207"><b><i>Step 7</i></b></h4>
+<p id="cn-m5-208">Installation of <b>Network Load Balancing </b>service is successfully completed.</p>
+<p id="cn-m5-209">Keep <b>Windows PowerShell </b>window open for the next activity.</p>
+<p id="cn-m5-210"></p><figure><img class="cn-img" id="cn-image-m5-c-23" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-23.jpg" alt="Figure 1.22 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 1.22 Screenshot of the PLABDM01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the status of the installation.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<span class="cn-alert" id="cn-m5-213">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m5-215"><b>Exercise 2 - Configuring a New NLB Cluster</b></h2>
+<p id="cn-m5-216">A virtual cluster is a virtual combination of the 
+resources of more than one computer on the network. The augmentation of 
+resources in a virtual cluster offers enhanced reliability and 
+scalability compared to limited features offered by the resources of a 
+single server.</p>
+<p id="cn-m5-217">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m5-219">After completing this exercise, you will be able to:</p>
+<ul id="cn-m5-220">
+<li id="cn-m5-220">Create the First NLB Cluster Node</li>
+<li id="cn-m5-221">Configure DNS</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m5-223">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m5-224">
+<li id="cn-m5-224"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m5-225"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m5-226"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+</ul>
+<p id="cn-m5-227"><img class="cn-img" id="cn-image-m5-c-24" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-24.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m5-228"><b>Task 1 - Create the First NLB Cluster Node</b></h3>
+<p id="cn-m5-229">You begin creating a cluster by configuring the first 
+cluster node. In this task, you will create and configure the first NLB 
+cluster node on the <b>PLABDM01 </b>server.</p>
+<p id="cn-m5-230">To create the first NLB cluster node, perform the following steps:</p>
+<h4 id="cn-m5-231"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-232">On <b>PLABDM01 </b>device, click the <b>Windows </b>charm, select <b>Windows Administrative Tools </b>and then select <b>Network Load Balancing Manager</b>.</p>
+<p id="cn-m5-233"></p><figure><img class="cn-img" id="cn-image-m5-c-25" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-25.jpg" alt="Figure 2.1 Screenshot of the PLABDM01 desktop"><figcaption>Figure 2.1 Screenshot of the PLABDM01 desktop: Required option is selected on the Start menu invoked on the PLABDM01 desktop.</figcaption></figure><p></p>
+<h4 id="cn-m5-236"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-237">In the <b>Network Load Balancing Manager </b>window, right-click <b>Network Load Balancing Cluster </b>in the left pane and select <b>New Cluster</b>.</p>
+<p id="cn-m5-238"></p><figure><img class="cn-img" id="cn-image-m5-c-26" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-26.jpg" alt="Figure 2.2 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.2 Screenshot of the PLABDM01 desktop: Context menu (that appears on 
+right-clicking the Network Load Balancing Cluster node) &gt; New Cluster
+ menu-options are displayed on the Network Load Balancing Manager 
+console.</figcaption></figure><p></p>
+<h4 id="cn-m5-240"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-241">In the <b>Host </b>text box, enter <b>PLABDM01 </b>and click <b>Connect</b>.</p>
+<p id="cn-m5-242"></p><figure><img class="cn-img" id="cn-image-m5-c-27" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-27.jpg" alt="Figure 2.3 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.3 Screenshot of the PLABDM01 desktop: Host dialog box is displayed 
+showing the required value typed-in, and the Connect button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-244"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-245">Notice that the interfaces available on <b>PLABDM01 </b>are now displayed. Select <b>192.168.0.2 </b>and click <b>Next</b>.</p>
+<p id="cn-m5-246"></p><figure><img class="cn-img" id="cn-image-m5-c-28" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-28.jpg" alt="Figure 2.4 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.4 Screenshot of the PLABDM01 desktop: New Cluster: Connect dialog box
+ is displayed showing the required interface selected, and the Next 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-248"><b><i>Step 5</i></b></h4>
+<p id="cn-m5-249">On the <b>New Cluster: Host Parameters </b>page, keep the default parameters and click <b>Next</b>.</p>
+<p id="cn-m5-250"></p><figure><img class="cn-img" id="cn-image-m5-c-29" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-29.jpg" alt="Figure 2.5 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.5 Screenshot of the PLABDM01 desktop: New Cluster: Host Parameters 
+dialog box is displayed showing default settings and the Next button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-252"><b><i>Step 6</i></b></h4>
+<p id="cn-m5-253">On the <b>New Cluster: Cluster IP Addresses </b>page, click <b>Add</b>.</p>
+<p id="cn-m5-254"></p><figure><img class="cn-img" id="cn-image-m5-c-30" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-30.jpg" alt="Figure 2.6 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.6 Screenshot of the PLABDM01 desktop: New Cluster: Cluster IP 
+Addresses dialog box is displayed showing the Add button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-257"><b><i>Step 7</i></b></h4>
+<p id="cn-m5-258">Add the following configuration:</p>
+<p id="cn-m5-259"><b>IP address: 192.168.0.20</b></p>
+<p id="cn-m5-260"><b>Subnet mask: 255.255.255.0</b></p>
+<p id="cn-m5-261">Click <b>OK</b>.</p>
+<p id="cn-m5-262"></p><figure><img class="cn-img" id="cn-image-m5-c-31" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-31.jpg" alt="Figure 2.7 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.7 Screenshot of the PLABDM01 desktop: Add IP Address dialog box is 
+displayed showing the required values typed-in and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-264"><b><i>Step 8</i></b></h4>
+<p id="cn-m5-265">Notice that the new IP is added on the <b>New Cluster: Cluster IP Addresses </b>page. Click <b>Next</b>.</p>
+<p id="cn-m5-266"></p><figure><img class="cn-img" id="cn-image-m5-c-32" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-32.jpg" alt="Figure 2.8 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.8 Screenshot of the PLABDM01 desktop: New Cluster: Cluster IP 
+Addresses dialog box is displayed listing the added cluster IP address 
+and the Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-269"><b><i>Step 9</i></b></h4>
+<p id="cn-m5-270">On the <b>New Cluster: Cluster Parameters </b>page, enter the following in the <b>Full Internet name </b>textbox:</p>
+<pre id="cn-m5-271"><code>PLABDM01-NLB
+</code></pre>
+<p id="cn-m5-272">Select <b>Multicast </b>and click <b>Next</b>.</p>
+<p id="cn-m5-273"></p><figure><img class="cn-img" id="cn-image-m5-c-33" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-33.jpg" alt="Figure 2.9 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.9 Screenshot of the PLABDM01 desktop: New Cluster: Cluster Parameters
+ dialog box is displayed showing the required settings performed and the
+ Next button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-275"><b><i>Step 10</i></b></h4>
+<p id="cn-m5-276">On the <b>New Cluster: Port Rules </b>page, click <b>Finish</b>.</p>
+<p id="cn-m5-277"></p><figure><img class="cn-img" id="cn-image-m5-c-34" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-34.jpg" alt="Figure 2.10 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 2.10 Screenshot of the PLABDM01 desktop: New Cluster: Port Rules dialog
+ box is displayed showing the Finish button highlighted.</figcaption></figure><p></p>
+<p id="cn-m5-279">Notice that the NLB cluster is now created.</p>
+<p id="cn-m5-280"></p><figure><img class="cn-img" id="cn-image-m5-c-35" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-35.jpg" alt="Figure 2.11 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 2.11 Screenshot of the PLABSA01 desktop: Network Load Balancing Manager
+ console is displayed listing on the navigation pane at the left the 
+newly added cluster node and showing on the details pane at the right 
+the configuration of the node.</figcaption></figure><p></p>
+<p id="cn-m5-281">Keep all devices powered on in their current state and proceed to the next task</p>
+<h3 id="cn-m5-284"><b>Task 2 - Configure DNS</b></h3>
+<p id="cn-m5-285">After creating the initial cluster node, you configure the DNS server on the network to provide a <b>hostname </b>to <b>IP address </b>mapping that points to <b>PLABDM01-NLB</b>.</p>
+<p id="cn-m5-286">To configure DNS for the new cluster node, perform the following steps:</p>
+<h4 id="cn-m5-287"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-288">Switch to the <b>PLABDC01 </b>device.</p>
+<p id="cn-m5-289">On the <b>Server Manager </b>window, click <b>Tools </b>from the menu on the top, and select <b>DNS</b>.</p>
+<p id="cn-m5-290"></p><figure><img class="cn-img" id="cn-image-m5-c-36" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-36.jpg" alt="Figure 2.12 Screenshot of the PLABDC01 desktop"><figcaption>Figure 2.12 Screenshot of the PLABDC01 desktop: Tools &gt; DNS menu-options are selected on the Server Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m5-292"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-293">On the <b>DNS Manager</b>, access the <b>DNS </b>console tree on the left pane.</p>
+<p id="cn-m5-294">Expand <b>PLABDC01</b>, then expand <b>Forward Lookup Zones</b>, and then expand <b>PRACTICELABS.COM</b>.</p>
+<p id="cn-m5-295"></p><figure><img class="cn-img" id="cn-image-m5-c-37" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-37.jpg" alt="Figure 2.13 Screenshot of the PLABDC01 desktop"><figcaption>Figure
+ 2.13 Screenshot of the PLABDC01 desktop: DNS Manager console is 
+displayed showing the required node-path selected on the navigation pane
+ at the left.</figcaption></figure><p></p>
+<h4 id="cn-m5-297"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-298">Right-click <b>PRACTICELABS.COM </b>and select <b>New Host (A or AAAA</b>).</p>
+<p id="cn-m5-299"></p><figure><img class="cn-img" id="cn-image-m5-c-38" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-38.jpg" alt="Figure 2.14 Screenshot of the PLABDC01 desktop"><figcaption>Figure
+ 2.14 Screenshot of the PLABDC01 desktop: Context menu (that appears on 
+right-clicking the domain name-node) &gt; New Host (A or AAAA) menu 
+options are displayed on the DNS Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m5-301"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-302">On the <b>New Host </b>dialog box, specify the following information:</p>
+<p id="cn-m5-303"><b>Name: PLABDM01-NLB</b></p>
+<p id="cn-m5-304"><b>IP address: 192.168.0.20</b></p>
+<p id="cn-m5-305">Click <b>Add Host</b></p><figure><img class="cn-img" id="cn-image-m5-c-39" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-39.jpg" alt="Figure 2.15 Screenshot of the PLABDC01 desktop"><figcaption>Figure
+ 2.15 Screenshot of the PLABDC01 desktop: The New Host dialog box is 
+displayed showing the required settings performed, and the Add Host 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-307"><b><i>Step 5</i></b></h4>
+<p id="cn-m5-308">The <b>DNS </b>dialog box appears confirming the successful creation of the FQDN for the cluster node.</p>
+<p id="cn-m5-309">Click <b>OK </b>to close the dialog box.</p>
+<p id="cn-m5-310"></p><figure><img class="cn-img" id="cn-image-m5-c-40" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-40.jpg" alt="Figure 2.16 Screenshot of the PLABDC01 desktop"><figcaption>Figure
+ 2.16 Screenshot of the PLABDC01 desktop: DNS dialog box is displayed 
+confirming the successful creation of the FQDN for cluster node and the 
+OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-313"><b><i>Step 6</i></b></h4>
+<p id="cn-m5-314">You are navigated back to the <b>New Host </b>dialog box.</p>
+<p id="cn-m5-315">Click <b>Done </b>to close the dialog box.</p>
+<p id="cn-m5-316">Exit <b>DNS Manager </b>console window.</p>
+<p id="cn-m5-317"></p><figure><img class="cn-img" id="cn-image-m5-c-41" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-41.jpg" alt="Figure 2.17 Screenshot of the PLABDC01 desktop"><figcaption>Figure 2.17 Screenshot of the PLABDC01 desktop: The New Host dialog box is displayed showing the Done button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-320"><b><i>Step 7</i></b></h4>
+<p id="cn-m5-321">The new host record is now created.</p>
+<p id="cn-m5-322"></p><figure><img class="cn-img" id="cn-image-m5-c-42" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-42.jpg" alt="Figure 2.18 Screenshot of the PLABDC01 desktop"><figcaption>Figure 2.18 Screenshot of the PLABDC01 desktop: The newly created host record is listed on the DNS Manager console.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<span class="cn-alert" id="cn-m5-325">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m5-327"><b>Exercise 3 - Adding a Secondary Node to an NLB Cluster</b></h2>
+<p id="cn-m5-328">You can add servers to an existing cluster to augment 
+the resources available with the cluster. Before adding servers to a 
+cluster, ensure that:</p>
+<ul id="cn-m5-329">
+<li id="cn-m5-329">You have administrative rights on the server(s) you 
+are configuring. However, this pre-requisite is not applicable in case 
+the configuration is done from a remote server.</li>
+<li id="cn-m5-330">You refresh the NLB Manager on the server you are configuring.</li>
+</ul>
+<p id="cn-m5-331">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m5-333">After completing this exercise, you will be able to:</p>
+<ul id="cn-m5-334">
+<li id="cn-m5-334">Add a Second Server to the Cluster</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m5-336">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m5-337">
+<li id="cn-m5-337"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m5-338"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m5-339"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+</ul>
+<p id="cn-m5-340"><img class="cn-img" id="cn-image-m5-c-43" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-43.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m5-342"><b>Task 1 - Add a Second Server to the Cluster</b></h3>
+<p id="cn-m5-343">After configuring the first node of the cluster, you 
+can grow the cluster by adding more servers to the cluster. In this 
+task, you will add the second server to the cluster node PLABDM01-NLB.</p>
+<p id="cn-m5-344">To add the second server to the cluster, perform the following steps:</p>
+<h4 id="cn-m5-345"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-346">Switch back to <b>PLABSA01. </b>Open <b>Server Manager </b>window if already not opened.</p>
+<p id="cn-m5-347">On the <b>Server Manager </b>window, click on <b>Tools </b>from the menu on the top, and select <b>Network Load Balancing Manager</b>.</p>
+<p id="cn-m5-348"></p><figure><img class="cn-img" id="cn-image-m5-c-44" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-44.jpg" alt="Figure 3.1 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.1 Screenshot of the PLABSA01 desktop: Tools &gt; Network Load 
+Balancing Manager menu-options are selected on the Server Manager 
+console.</figcaption></figure><p></p>
+<h4 id="cn-m5-351"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-352">The <b>Network Load Balancing Manager </b>window is displayed.</p>
+<p id="cn-m5-353">Notice that the details of the NLB Manager session are displayed in the lower pane of the window.</p>
+<p id="cn-m5-354">Right-click the <b>Network Load Balancing Clusters </b>node on the left pane and select <b>Connect to Existing</b>.</p>
+<p id="cn-m5-355"></p><figure><img class="cn-img" id="cn-image-m5-c-45" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-45.jpg" alt="Figure 3.2 Screenshot of the PLABSA01 desktop"><figcaption>Figure 3.2 Screenshot of the PLABSA01 desktop: Network Load Balancing Manager console is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m5-358"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-359">On the <b>Connect to Existing: Connect </b>dialog box, type <b>plabdm01-nlb </b>as the host to connect.</p>
+<p id="cn-m5-360">Click <b>Connect</b>.</p>
+<p id="cn-m5-361"></p><figure><img class="cn-img" id="cn-image-m5-c-46" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-46.jpg" alt="Figure 3.3 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.3 Screenshot of the PLABSA01 desktop: The Connect to Existing: 
+Connect dialog box is displayed showing the required value typed-in, and
+ the Connect button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-364"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-365">Notice that the display in the <b>Connection Status </b>pane changes to <b>Connected.</b></p>
+<p id="cn-m5-366">The <b>Clusters </b>text box displays the following specifications about the cluster on the host:</p>
+<p id="cn-m5-367"><b>Cluster name: plabdm01-nlb</b></p>
+<p id="cn-m5-368"><b>Cluster IP: 192.168.0.20</b></p>
+<p id="cn-m5-369"><b>Interface name: Ethernet</b></p>
+<p id="cn-m5-370">Click <b>Finish </b>after all this information is displayed.</p>
+<p id="cn-m5-371"></p><figure><img class="cn-img" id="cn-image-m5-c-47" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-47.jpg" alt="Figure 3.4 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.4 Screenshot of the PLABSA01 desktop: The Connect to Existing: 
+Connect dialog box is displayed listing details of the cluster on the 
+specified host and the Finish button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-374"><b><i>Step 5</i></b></h4>
+<p id="cn-m5-375">Back on the <b>Network Load Balancing Manager </b>window, notice that the console tree on the left pane now shows additional entries.</p>
+<p id="cn-m5-376">Right-click <b>PLABDM01-NLB (192.168.0.20) </b>and select <b>Add Host to Cluster</b>.</p>
+<p id="cn-m5-377"></p><figure><img class="cn-img" id="cn-image-m5-c-48" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-48.jpg" alt="Figure 3.5 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.5 Screenshot of the PLABSA01 desktop: Context menu (that appears on 
+right-clicking a listed node) &gt; Add Host To Cluster menu-options are 
+displayed on the Network Load Balancing Manager console.</figcaption></figure><p></p>
+<h4 id="cn-m5-380"><b><i>Step 6</i></b></h4>
+<p id="cn-m5-381">On the <b>Add Host to Cluster: Connect </b>dialog box, in the <b>Host </b>text box, type:</p>
+<pre id="cn-m5-382"><code>plabsa01.practicelabs.com
+</code></pre>
+<p id="cn-m5-383">Click <b>Connect</b>.</p>
+<p id="cn-m5-384"></p><figure><img class="cn-img" id="cn-image-m5-c-49" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-49.jpg" alt="Figure 3.6 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.6 Screenshot of the PLABSA01 desktop: Add Host to Cluster: Connect 
+wizard is displayed showing the required value typed-in and the Connect 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-387"><b><i>Step 7</i></b></h4>
+<p id="cn-m5-388">When prompted to select an available interface for configuring the cluster, select <b>192.168.0.4 </b>and click <b>Next</b>.</p>
+<p id="cn-m5-389"></p><figure><img class="cn-img" id="cn-image-m5-c-50" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-50.jpg" alt="Figure 3.7 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.7 Screenshot of the PLABSA01 desktop: Add Host to Cluster: Connect 
+wizard is displayed showing the relevant interface selected and the Next
+ button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-392"><b><i>Step 8</i></b></h4>
+<p id="cn-m5-393">On the <b>Add Host to Cluster: Host Parameters </b>dialog box, keep the default selections and click <b>Next</b>.</p>
+<p id="cn-m5-394"></p><figure><img class="cn-img" id="cn-image-m5-c-51" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-51.jpg" alt="Figure 3.8 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.8 Screenshot of the PLABSA01 desktop: Add Host to Cluster: Host 
+Parameters wizard is displayed showing default settings and the Next 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-397"><b><i>Step 9</i></b></h4>
+<p id="cn-m5-398">On the <b>Add Host to Cluster: Port Rules </b>dialog box, keep the default selections and click <b>Finish</b>.</p>
+<span class="cn-quote" id="cn-m5-399"><b><i>Note</i></b><i>: The </i><b><i>Network Load Balancing Manager</i></b><i>, may appear to have stopped responding. In addition, you may get disconnected from </i><b><i>PLABSA01</i></b><i>. If this happens, reconnect to it using the Practice Labs web application.</i></span>
+<p id="cn-m5-400"></p><figure><img class="cn-img" id="cn-image-m5-c-52" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-52.jpg" alt="Figure 3.9 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.9 Screenshot of the PLABSA01 desktop: Add Host to Cluster: Port Rules
+ wizard is displayed showing default settings, and the Finish button 
+highlighted.</figcaption></figure><p></p>
+<p id="cn-m5-403">Notice that the server is added but is in pending state. It may take a while for the server to be operationalized.</p>
+<p id="cn-m5-404"></p><figure><img class="cn-img" id="cn-image-m5-c-53" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-53.jpg" alt="Figure 3.10 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.10 Screenshot of the PLABSA01 desktop: Network Load Balancing Manager
+ console is displayed listing the newly added host in the pending state.</figcaption></figure><p></p>
+<h4 id="cn-m5-407"><b><i>Step 10</i></b></h4>
+<p id="cn-m5-408">Back on <b>Network Load Balancing Manager </b>console window, notice that <b>PLABSA01 </b>is added as another node in the console tree on the left pane. This indicates that <b>PLABSA01 </b>is another host added to the NLB cluster. You might have to wait for some time to see the new entry.</p>
+<p id="cn-m5-409">You now have two servers in the <b>PLABDM01-NLB </b>cluster. In the configuration information pane on the right, verify that both servers display a <b>Converged </b>status.</p>
+<span class="cn-quote" id="cn-m5-410"><b><i>Note: </i></b><i>If either one of the servers continues to be in the </i><b><i>Converging </i></b><i>status longer than it should, you should close </i><b><i>Network Load Balancing Manager </i></b><i>console and then reopen it to refresh.</i></span>
+<p id="cn-m5-411"></p><figure><img class="cn-img" id="cn-image-m5-c-54" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-54.jpg" alt="Figure 3.11 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.11 Screenshot of the PLABSA01 desktop: Network Load Balancing Manager
+ console is displayed listing on the navigation pane at the left the 
+newly added server and showing on the details pane at the right the 
+Converged status of servers on the cluster.</figcaption></figure><p></p>
+<h4 id="cn-m5-414"><b><i>Step 11</i></b></h4>
+<p id="cn-m5-415">Click on <b>Network Load Balancing Clusters </b>- the top node in the console tree on the left pane and verify that <b>Cluster mode </b>parameter on the right pane displays <b>multicast </b>operations mode.</p>
+<p id="cn-m5-416">Keep the <b>Network Load Balancing Clusters </b>window open for the next activity.</p>
+<p id="cn-m5-417"></p><figure><img class="cn-img" id="cn-image-m5-c-55" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-55.jpg" alt="Figure 3.12 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 3.12 Screenshot of the PLABSA01 desktop: Network Load Balancing Manager
+ console is displayed listing on the details pane at the right the 
+configuration details of the cluster selected on the navigation pane at 
+the left.</figcaption></figure><p></p>
+<span class="atom-code hidden">f4b668ae-6731-4fec-956d-91344aefd689</span>
+<span class="cn-alert" id="cn-m5-420">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m5-422"><b>Exercise 4 - Examining the Working of an NLB Cluster</b></h2>
+<p id="cn-m5-423">NLB manages traffic to each host on the cluster by 
+distributing the client requests as per the rules configured for the 
+cluster. The client requests can be from a single client or from 
+multiple clients. The hosts on the cluster receive the requests and 
+respond according to the configuration rules specified for each of them.</p>
+<p id="cn-m5-424">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m5-426">After completing this exercise, you will be able to:</p>
+<ul id="cn-m5-427">
+<li id="cn-m5-427">Study the Working of an NLB Cluster</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m5-429">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m5-430">
+<li id="cn-m5-430"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m5-431"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m5-432"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+</ul>
+<p id="cn-m5-433"><img class="cn-img" id="cn-image-m5-c-56" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-56.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m5-435"><b>Task 1 - Study the Working of an NLB Cluster</b></h3>
+<p id="cn-m5-436">NLB can help speed up data transfer from client to 
+server by routing packets of the same data through different hosts on 
+the cluster. These packets then converge at the requesting host. In this
+ task, you will create two separate Web pages on the two hosts on the 
+NLB cluster. Then you will access the web page on the cluster browser 
+and differentiate how the client requests are coming from both the hosts
+ on the cluster.</p>
+<p id="cn-m5-437">To study the working of an NLB cluster, perform the following steps:</p>
+<h4 id="cn-m5-438"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-439">Switch to <b>PLABDM01.</b></p>
+<p id="cn-m5-440">Click <b>File Explorer </b>on the taskbar.</p>
+<p id="cn-m5-441"></p><figure><img class="cn-img" id="cn-image-m5-c-57" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-57.jpg" alt="Figure 4.1 Screenshot of the PLABDM01 desktop"><figcaption>Figure 4.1 Screenshot of the PLABDM01 desktop: File Explorer icon on the taskbar is highlighted on the PLABDM01 Windows desktop.</figcaption></figure><p></p>
+<h4 id="cn-m5-444"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-445">Navigate to <b>c:\inetpub\wwwroot, </b>right-click <b>iisstart</b>, and select <b>Edit</b>.</p>
+<p id="cn-m5-446"></p><figure><img class="cn-img" id="cn-image-m5-c-58" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-58.jpg" alt="Figure 4.2 Screenshot of the PLABDM01 desktop"><figcaption>Figure 4.2 Screenshot of the PLABDM01 desktop: The required file is listed on the file explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m5-449"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-450">The file <b>iisstart </b>opens in <b>Paint</b>.</p>
+<p id="cn-m5-451">Locate the color palette and select <b>Yellow</b>.</p>
+<p id="cn-m5-452"></p><figure><img class="cn-img" id="cn-image-m5-c-59" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-59.jpg" alt="Figure 4.3 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 4.3 Screenshot of the PLABDM01 desktop: The iis-85 - Paint window is 
+displayed showing the required color on the color palette selected.</figcaption></figure><p></p>
+<h4 id="cn-m5-455"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-456">Select the text tool by clicking <b>A </b>in the toolbar on the top.</p>
+<p id="cn-m5-457"></p><figure><img class="cn-img" id="cn-image-m5-c-60" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-60.jpg" alt="Figure 4.4 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 4.4 Screenshot of the PLABDM01 desktop: The iis-85 - Paint window is 
+displayed showing the Text tool on the options ribbon at the top 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-460"><b><i>Step 5</i></b></h4>
+<p id="cn-m5-461">Add the text <b>NLB-Test </b>on top of the bitmap file and save changes.</p>
+<p id="cn-m5-462">Close the <b>iisstart </b>bitmap file.</p>
+<p id="cn-m5-463">Exit from <b>File Explorer</b>.</p>
+<p id="cn-m5-464"></p><figure><img class="cn-img" id="cn-image-m5-c-61" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-61.jpg" alt="Figure 4.5 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 4.5 Screenshot of the PLABDM01 desktop: The iis-85 - Paint window is 
+displayed showing the updated image file with the newly added text at 
+the top.</figcaption></figure><p></p>
+<h4 id="cn-m5-467"><b><i>Step 6</i></b></h4>
+<p id="cn-m5-468">On the <b>taskbar, </b>click <b>Internet Explorer</b>.</p>
+<p id="cn-m5-469"></p><figure><img class="cn-img" id="cn-image-m5-c-62" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-62.jpg" alt="Figure 4.6 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 4.6 Screenshot of the PLABDM01 desktop: Internet Explorer icon on the 
+taskbar is highlighted on the PLABDM01 Windows desktop.</figcaption></figure><p></p>
+<h4 id="cn-m5-472"><b><i>Step 7</i></b></h4>
+<p id="cn-m5-473">In the <b>Internet Explorer 11 </b>dialog box, select <b>Use recommended security and compatibility settings</b>.</p>
+<p id="cn-m5-474">Click <b>OK</b>.</p>
+<span class="cn-quote" id="cn-m5-475"><b><i>Note: </i></b><i>you can skip this step in case the </i><b><i>Internet Explorer 11 </i></b><i>dialog box does not appear.</i></span>
+<p id="cn-m5-476"></p><figure><img class="cn-img" id="cn-image-m5-c-63" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-63.jpg" alt="Figure 4.7 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 4.7 Screenshot of the PLABDM01 desktop: Internet Explorer 11 dialog box
+ is displayed showing the required selection performed and the OK button
+ highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-479"><b><i>Step 8</i></b></h4>
+<p id="cn-m5-480">In the address bar on the Internet Explorer, type:</p>
+<pre id="cn-m5-481"><code>http://plabdm01
+</code></pre>
+<p id="cn-m5-482">Press <b>Enter</b>.</p>
+<p id="cn-m5-483"></p><figure><img class="cn-img" id="cn-image-m5-c-64" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-64.jpg" alt="Figure 4.8 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 4.8 Screenshot of the PLABDM01 desktop: Internet Explorer window is 
+displayed showing the required URL typed in the address bar.</figcaption></figure><p></p>
+<h4 id="cn-m5-486"><b><i>Step 9</i></b></h4>
+<p id="cn-m5-487">You should see the bitmap image with the text <b>NLB Test </b>.</p>
+<p id="cn-m5-488">Close <b>Internet Explorer</b>.</p>
+<p id="cn-m5-489"></p><figure><img class="cn-img" id="cn-image-m5-c-65" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-65.jpg" alt="Figure 4.9 Screenshot of the PLABDM01 desktop"><figcaption>Figure 4.9 Screenshot of the PLABDM01 desktop: The updated image file is displayed in the Internet Explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m5-492"><b><i>Step 10</i></b></h4>
+<p id="cn-m5-493">Switch to <b>PLABSA01</b>.</p>
+<p id="cn-m5-494">Launch <b>Internet Explorer</b>.</p>
+<span class="cn-quote" id="cn-m5-495"><b><i>Note</i></b><i>: If you get 
+the Internet Explorer dialog box, about a website being blocked, click 
+Add. Click Add. Then click Close after adding the intranet site.</i></span>
+<p id="cn-m5-496">If you get the <b>Set up Internet Explorer 11 </b>message box, click the <b>Use recommended security </b>option, then click <b>OK</b>.</p>
+<p id="cn-m5-497"></p><figure><img class="cn-img" id="cn-image-m5-c-66" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-66.jpg" alt="Figure 4.10 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 4.10 Screenshot of the PLABSA01 desktop: Internet Explorer 11 dialog 
+box is displayed showing the required selection performed and the OK 
+button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-500"><b><i>Step 11</i></b></h4>
+<p id="cn-m5-501">Type <b>http://plabsa01 </b>in the address bar.</p>
+<p id="cn-m5-502"></p><figure><img class="cn-img" id="cn-image-m5-c-67" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-67.jpg" alt="Figure 4.11 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 4.11 Screenshot of the PLABSA01 desktop: Internet Explorer window is 
+displayed showing the required URL typed in the address bar.</figcaption></figure><p></p>
+<h4 id="cn-m5-505"><b><i>Step 12</i></b></h4>
+<p id="cn-m5-506">Notice that the bitmap image displayed here is different from the one displayed in <b>Step 10. </b>The text NLB Test is missing from this image.</p>
+<p id="cn-m5-507">This confirms that the default web page of the two servers, <b>PLABSA01 </b>and <b>PLABDM01, </b>on the cluster <b>plabdm01-nlb, </b>are distinguishable from each other.</p>
+<p id="cn-m5-508">Close <b>Internet Explorer</b>.</p>
+<p id="cn-m5-509"></p><figure><img class="cn-img" id="cn-image-m5-c-68" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-68.jpg" alt="Figure 4.12 Screenshot of the PLABSA01 desktop"><figcaption>Figure
+ 4.12 Screenshot of the PLABSA01 desktop: Internet Explorer window is 
+displayed showing the original image file without updating.</figcaption></figure><p></p>
+<span class="atom-code hidden">f4b668ae-6731-4fec-956d-91344aefd689</span>
+<span class="cn-alert" id="cn-m5-512">Leave the devices you have powered on in their current state and proceed to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m5-514"><b>Exercise 5 - Configuring and Validating Port Rules for NLB</b></h2>
+<p id="cn-m5-515">Port rules for an NLB control the traffic management 
+and working of the cluster. Any host added to the cluster after the 
+first host automatically inherits the cluster port rules from the 
+initial host.</p>
+<p id="cn-m5-516">Rules specify the values for parameters including the IP addresses, the port range, and the protocol of operation.</p>
+<p id="cn-m5-517">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m5-519">After completing this exercise, you will be able to:</p>
+<ul id="cn-m5-520">
+<li id="cn-m5-520">Configure Port Rules</li>
+<li id="cn-m5-521">Validate Port Rules</li>
+<li id="cn-m5-522">Validate High Availability of NLB Cluster</li>
+</ul>
+<h2 class="cn-devices"><b> Your Devices</b></h2>
+<p id="cn-m5-524">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m5-525">
+<li id="cn-m5-525"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m5-526"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m5-527"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+<li id="cn-m5-528"><b>PLABWIN810 </b>(Windows 8.1 - Domain Workstation)</li>
+</ul>
+<p id="cn-m5-529"><img class="cn-img" id="cn-image-m5-c-69" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-69.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m5-531"><b>Task 1 - Configure Port Rules</b></h3>
+<p id="cn-m5-532">The NLB port rules control how the NLB cluster functions. A port rule mainly defines the following two operational parameters:</p>
+<ul id="cn-m5-533">
+<li id="cn-m5-533">Affinity - This is a method used to associate client 
+requests to cluster hosts. When no affinity is specified, all network 
+requests by clients are load-balanced across the cluster without regard 
+to their source.</li>
+<li id="cn-m5-534">Filtering mode - Can be a single host or multiple 
+hosts. This specifies how the cluster handles traffic described by the 
+port range and protocols.</li>
+</ul>
+<p id="cn-m5-535">In this task, you will define the port rules for the 
+two hosts added to the cluster. To configure port rules, perform the 
+following steps:</p>
+<h4 id="cn-m5-536"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-537">Connect to <b>PLABDM01 </b>and open the previously 
+minimized PowerShell window. If PowerShell window was closed, open it 
+once again. Clear the screen with the clear command.</p>
+<p id="cn-m5-538">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m5-539"><code>md nlbport
+</code></pre>
+<p id="cn-m5-540">Notice that this creates the <b>nlbport </b>folder under the <b>C:</b></p>
+<p id="cn-m5-541"></p><figure><img class="cn-img" id="cn-image-m5-c-70" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-70.jpg" alt="Figure 5.1 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.1 Screenshot of the PLABDM01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the commands to access root 
+directory and to create the nlb port folder typed-in.</figcaption></figure><p></p>
+<h4 id="cn-m5-542"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-543">Clear the screen with the clear command. You will now copy the contents of <b>\inetpub\wwwroot </b>to the <b>nlbport </b>folder.</p>
+<p id="cn-m5-544">On the next command prompt, type the following command:</p>
+<pre id="cn-m5-545"><code>xcopy /s c:\inetpub\wwwroot c:\nlbport
+</code></pre>
+<p id="cn-m5-546">Press <b>Enter</b>.</p>
+<p id="cn-m5-547"></p><figure><img class="cn-img" id="cn-image-m5-c-71" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-71.jpg" alt="Figure 5.2 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.2 Screenshot of the PLABDM01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the command to copy contents of 
+one directory to the other typed-in and system response to the command.</figcaption></figure><p></p>
+<h4 id="cn-m5-550"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-551">Notice the command copied the following two files to the nlbport folder:</p>
+<p id="cn-m5-552"><b>iisstart.png</b></p>
+<p id="cn-m5-553"><b>iisstart.htm</b></p>
+<p id="cn-m5-554">Clear the screen with the clear command. After copying the contents of the <b>wwwroot </b>folder, type the following command:</p>
+<pre id="cn-m5-555"><code>New-Website -Name nlbport -PhysicalPath "c:\nlbport" -port 6789
+</code></pre>
+<p id="cn-m5-556">Press <b>Enter</b>.</p>
+<p id="cn-m5-557">Notice that the command creates a new website with the following specifications:</p>
+<p id="cn-m5-558"><b>Name: nlbport</b></p>
+<p id="cn-m5-559"><b>ID: 2</b></p>
+<p id="cn-m5-560"><b>State: Started</b></p>
+<p id="cn-m5-561"><b>Physical Path: c:\nlbport</b></p>
+<p id="cn-m5-562"><b>Bindings: http *:6789: </b></p>
+<p id="cn-m5-563"></p><figure><img class="cn-img" id="cn-image-m5-c-72" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-72.jpg" alt="Figure 5.3 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.3 Screenshot of the PLABDM01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the command to create a new 
+website with the given specifications typed-in and system response to 
+the command.</figcaption></figure><p></p>
+<h4 id="cn-m5-566"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-567">On the next PowerShell prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m5-568"><code>New-NetFirewallRule -DisplayName NLBPort -Protocol TCP -LocalPort 6789
+</code></pre>
+<p id="cn-m5-569">Notice that the command creates an inbound rule for the firewall on <b>nlb </b>host.</p>
+<p id="cn-m5-570">Minimize the <b>Windows PowerShell </b>window.</p>
+<p id="cn-m5-571"></p><figure><img class="cn-img" id="cn-image-m5-c-73" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-73.jpg" alt="Figure 5.4 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.4 Screenshot of the PLABDM01 desktop: Administrator: Windows 
+PowerShell window is displayed showing the command to create an inbound 
+rule for the firewall on nlb host typed-in and system-response to the 
+command.</figcaption></figure><p></p>
+<h4 id="cn-m5-574"><b><i>Step 5</i></b></h4>
+<p id="cn-m5-575">Connect to <b>PLABWIN10. </b></p>
+<p id="cn-m5-576">Click the <b>Internet Explorer </b>icon on the taskbar.</p>
+<p id="cn-m5-577"></p><figure><img class="cn-img" id="cn-image-m5-c-74" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-74.jpg" alt="Figure 5.5 Screenshot of the PLABWIN10 desktop"><figcaption>Figure
+ 5.5 Screenshot of the PLABWIN10 desktop: Internet Explorer icon on the 
+taskbar is highlighted on the PLABWIN810 Windows desktop.</figcaption></figure><p></p>
+<h4 id="cn-m5-580"><b><i>Step 6</i></b></h4>
+<p id="cn-m5-581">On the browser window, type <b>http://plabdm01:6789 </b>in the address bar and press <b>Enter</b>.</p>
+<p id="cn-m5-582"></p><figure><img class="cn-img" id="cn-image-m5-c-75" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-75.jpg" alt="Figure 5.6 Screenshot of the PLABWIN10 desktop"><figcaption>Figure
+ 5.6 Screenshot of the PLABWIN10 desktop: Internet Explorer window is 
+displayed showing the required URL typed in the address bar.</figcaption></figure><p></p>
+<h4 id="cn-m5-585"><b><i>Step 7</i></b></h4>
+<p id="cn-m5-586">Notice that the connection works. The default web page on <b>PLABDM01 </b>- the image with the text <b>NLB Test - </b>is displayed.</p>
+<p id="cn-m5-587">Close <b>Internet Explorer</b>.</p>
+<p id="cn-m5-588"></p><figure><img class="cn-img" id="cn-image-m5-c-76" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-76.jpg" alt="Figure 5.7 Screenshot of the PLABWIN10 desktop"><figcaption>Figure
+ 5.7 Screenshot of the PLABWIN10 desktop: The default webpage of the 
+relevant server is displayed in the Internet Explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m5-591"><b><i>Step 8</i></b></h4>
+<p id="cn-m5-592">Switch back to <b>PLABDM01 </b>and click the <b>Server Manager </b>icon on the taskbar.</p>
+<span class="cn-quote" id="cn-m5-593"><b><i>Note</i></b><i>: If </i><b><i>Server Manager </i></b><i>is unavailable on the taskbar, open via the </i><b><i>Start </i></b><i>charm. </i></span>
+<p id="cn-m5-594">On the <b>Server Manager </b>window, click <b>Tools </b>from the top menu<b>, </b>and select <b>Network Load Balancing Manager</b>.</p>
+<p id="cn-m5-595"></p><figure><img class="cn-img" id="cn-image-m5-c-77" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-77.jpg" alt="Figure 5.8 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.8 Screenshot of the PLABDM01 desktop: Tools &gt; Network Load 
+Balancing Manager menu-options are selected on the Server Manager 
+console.</figcaption></figure><p></p>
+<h4 id="cn-m5-598"><b><i>Step 9</i></b></h4>
+<p id="cn-m5-599">On the <b>Network Load Balancing Manager </b>window, right-click <b>plabdm01-nlb (192.168.20) </b>and select <b>Cluster Properties</b>.</p>
+<p id="cn-m5-600"></p><figure><img class="cn-img" id="cn-image-m5-c-78" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-78.jpg" alt="Figure 5.9 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.9 Screenshot of the PLABDM01 desktop: Context menu (that appears on 
+right-clicking a listed cluster node) &gt; Cluster Properties 
+menu-options are highlighted on the Network Load Balancing Manager 
+console.</figcaption></figure><p></p>
+<h4 id="cn-m5-603"><b><i>Step 10</i></b></h4>
+<p id="cn-m5-604">On the <b>plabdm01-nlb (192.168.0.20) Properties </b>dialog box, access the <b>Port Rules </b>tab.</p>
+<p id="cn-m5-605"></p><figure><img class="cn-img" id="cn-image-m5-c-79" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-79.jpg" alt="Figure 5.10 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.10 Screenshot of the PLABDM01 desktop: Port Rules tab on the 
+PLABDM01-NLB(192.168.0.20) Properties dialog box is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m5-608"><b><i>Step 11</i></b></h4>
+<p id="cn-m5-609">On the <b>Port Rules </b>tab, select the existing rule and click <b>Remove.</b></p>
+<p id="cn-m5-610"></p><figure><img class="cn-img" id="cn-image-m5-c-80" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-80.jpg" alt="Figure 5.11 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.11 Screenshot of the PLABDM01 desktop: Port Rules tab on the 
+PLABDM01-NLB(192.168.0.20) Properties dialog box is displayed showing 
+the required rule selected, and the Remove button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-613"><b><i>Step 12</i></b></h4>
+<p id="cn-m5-614">Notice that the entry in the <b>Defined port rules </b>text box is removed.</p>
+<p id="cn-m5-615">Now, click <b>Add</b>.</p>
+<p id="cn-m5-616"></p><figure><img class="cn-img" id="cn-image-m5-c-81" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-81.jpg" alt="Figure 5.12 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.12 Screenshot of the PLABDM01 desktop: Port Rules tab on the 
+PLABDM01-NLB(192.168.0.20) Properties dialog box is displayed showing 
+system-response to the previous step performed and the Add button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-619"><b><i>Step 13</i></b></h4>
+<p id="cn-m5-620">On the <b>Add/Edit Port Rule </b>dialog box, clear the <b>All </b>checkbox.</p>
+<p id="cn-m5-621">Then specify the following settings:</p>
+<p id="cn-m5-622"><b>Port range: 80 to 80</b></p>
+<p id="cn-m5-623"><b>Protocols: Both</b></p>
+<p id="cn-m5-624"><b>Filtering mode: Multiple host</b></p>
+<p id="cn-m5-625"><b>Affinity: None</b></p>
+<p id="cn-m5-626">Click <b>OK</b>.</p>
+<p id="cn-m5-627"></p><figure><img class="cn-img" id="cn-image-m5-c-82" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-82.jpg" alt="Figure 5.13 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.13 Screenshot of the PLABDM01 desktop: Add/Edit Port Rule dialog box 
+is displayed showing required settings performed and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-630"><b><i>Step 14</i></b></h4>
+<p id="cn-m5-631">Back on the <b>PLABDM01-NLB (192.168.0.20) Properties </b>dialog box, click <b>Add</b>.</p>
+<p id="cn-m5-632"></p><figure><img class="cn-img" id="cn-image-m5-c-83" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-83.jpg" alt="Figure 5.14 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.14 Screenshot of the PLABDM01 desktop: PLABDM01-NLB(192.168.0.20) 
+Properties dialog box is displayed showing the Add button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-635"><b><i>Step 15</i></b></h4>
+<p id="cn-m5-636">On the <b>Add/Edit Port Rule </b>dialog box, clear the <b>All </b>checkbox.</p>
+<p id="cn-m5-637">Then specify the following settings:</p>
+<p id="cn-m5-638"><b>Port range: 6789 to 6789</b></p>
+<p id="cn-m5-639"><b>Protocols: Both</b></p>
+<p id="cn-m5-640"><b>Filtering mode: Multiple host</b></p>
+<p id="cn-m5-641"><b>Affinity: Single</b></p>
+<p id="cn-m5-642">Click <b>OK</b>.</p>
+<p id="cn-m5-643"></p><figure><img class="cn-img" id="cn-image-m5-c-84" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-84.jpg" alt="Figure 5.15 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.15 Screenshot of the PLABDM01 desktop: Add/Edit Port Rule dialog box 
+is displayed showing required settings performed and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-646"><b><i>Step 16</i></b></h4>
+<p id="cn-m5-647">Back on the <b>PLABDM01-NLB (192.168.0.20) Properties </b>dialog box, click <b>OK </b>to close the dialog box.</p>
+<p id="cn-m5-648"></p><figure><img class="cn-img" id="cn-image-m5-c-85" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-85.jpg" alt="Figure 5.16 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.16 Screenshot of the PLABDM01 desktop: PLABDM01-NLB(192.168.0.20) 
+Properties dialog box is displayed showing the OK button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-651"><b><i>Step 17</i></b></h4>
+<p id="cn-m5-652">Back on the <b>Network Load Balancing Manager </b>window, right-click the <b>PLABDM01 </b>on the console tree in the left pane and select <b>Host Properties</b>.</p>
+<p id="cn-m5-653"></p><figure><img class="cn-img" id="cn-image-m5-c-86" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-86.jpg" alt="Figure 5.17 Screenshot of the PLABDM01 desktop"><figcaption>Figure 5.17 Screenshot of the PLABDM01 desktop: Network Load Balancing Manager console is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m5-656"><b><i>Step 18</i></b></h4>
+<p id="cn-m5-657">On the <b>PLABDM01 (Ethernet) Properties </b>dialog box, click the <b>Port Rules </b>tab.</p>
+<p id="cn-m5-658"></p><figure><img class="cn-img" id="cn-image-m5-c-87" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-87.jpg" alt="Figure 5.18 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.18 Screenshot of the PLABDM01 desktop: Context menu (that appears on 
+right-clicking a listed cluster-member) &gt; Host Properties 
+menu-options are displayed on the Network Load Balancing Manager 
+console.</figcaption></figure><p></p>
+<h4 id="cn-m5-661"><b><i>Step 19</i></b></h4>
+<p id="cn-m5-662">On the <b>Defined port rules </b>text box, select <b>192.168.0.20 6789 </b>and click <b>Edit</b>.</p>
+<p id="cn-m5-663"></p><figure><img class="cn-img" id="cn-image-m5-c-88" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-88.jpg" alt="Figure 5.19 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.19 Screenshot of the PLABDM01 desktop: Port Rules tab on the 
+PLABDM01(Ethernet) Properties dialog box is displayed showing required 
+rule selected and the Edit button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-666"><b><i>Step 20</i></b></h4>
+<p id="cn-m5-667">On the <b>Add/Edit Port Rule </b>dialog box, view the configuration and click <b>OK</b>.</p>
+<p id="cn-m5-668">Close the other dialog boxes.</p>
+<p id="cn-m5-669"></p><figure><img class="cn-img" id="cn-image-m5-c-89" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-89.jpg" alt="Figure 5.20 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.20 Screenshot of the PLABDM01 desktop: Add/Edit Port Rule dialog box 
+is displayed showing the settings performed, and the OK button 
+highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m5-672"><b><i>Step 21</i></b></h4>
+<p id="cn-m5-673">You are redirected back to the <b>Network Load Balancing Manager </b>console.</p>
+<p id="cn-m5-674">Select <b>PLABDM01-NLB </b>node in the left pane. Notice that both members of the NLB cluster will have a Status of <b>Pending </b>then <b>Converging</b>.</p>
+<span class="cn-quote" id="cn-m5-675"><b><i>Note</i></b><i>: If the server stays in the “</i><b><i>Converging</i></b><i>” status longer than it a few minutes, close Network Load Balancing Manager console and reopen it.</i></span>
+<p id="cn-m5-676"></p><figure><img class="cn-img" id="cn-image-m5-c-90" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-90.jpg" alt="Figure 5.21 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.21 Screenshot of the PLABDM01 desktop: Network Load Balancing Manager
+ console is displayed listing on the details pane at the right the 
+status of servers on the cluster.</figcaption></figure><p></p>
+<h4 id="cn-m5-679"><b><i>Step 22</i></b></h4>
+<p id="cn-m5-680">In the following screenshot, both servers are now in a converged state.</p>
+<p id="cn-m5-681">Keep the <b>Network Load Balancing Manager </b>console open.</p>
+<p id="cn-m5-682"></p><figure><img class="cn-img" id="cn-image-m5-c-91" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-91.jpg" alt="Figure 5.22 Screenshot of the PLABDM01 desktop"><figcaption>Figure
+ 5.22 Screenshot of the PLABDM01 desktop: Network Load Balancing Manager
+ console is displayed listing the updated status of the servers on the 
+cluster.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m5-684">Keep all devices powered on in their current state and proceed to the next task.</span>
+<h3 id="cn-m5-687"><b>Task 2 - Validate Port Rules</b></h3>
+<p id="cn-m5-688">Port rules by default, distribute the traffic load 
+equally to all the servers on the cluster, until otherwise specified. In
+ this task, you will access the <b>plabdm01-nlb </b>cluster on the <b>PLABDM02 </b>workstation and verify that the image is fed to the nlb alternately by both the hosts on the cluster.</p>
+<p id="cn-m5-689">To validate the port rules, perform the following steps:</p>
+<h4 id="cn-m5-690"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-691">Connect to <b>PLABDM02</b>, close <b>Server Manager</b>, and click <b>Internet Explorer</b>.</p>
+<p id="cn-m5-692"></p><figure><img class="cn-img" id="cn-image-m5-c-92" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-92.jpg" alt="Figure 5.23 Screenshot of the PLABDM02 desktop"><figcaption>Figure 5.23 Screenshot of the PLABDM02 desktop: Internet Explorer icon is available on the Start screen.</figcaption></figure><p></p>
+<h4 id="cn-m5-695"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-696">In the address bar on the browser, type the following in the address bar and press <b>Enter</b>:</p>
+<pre id="cn-m5-697"><code>http://plabdm01-nlb
+</code></pre>
+<span class="cn-quote" id="cn-m5-698"><b><i>Note: </i></b><i>You may be prompted with the </i><b><i>Internet Explorer 11 </i></b><i>dialog box. Select </i><b><i>Use recommended security and compatibility settings </i></b><i>and click </i><b><i>OK</i></b><i>.</i></span>
+<p id="cn-m5-699"></p><figure><img class="cn-img" id="cn-image-m5-c-93" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-93.jpg" alt="Figure 5.24 Screenshot of the PLABDM02 desktop"><figcaption>Figure
+ 5.24 Screenshot of the PLABDM02 desktop: Internet Explorer window is 
+displayed showing the required URL typed in the address bar.</figcaption></figure><p></p>
+<h4 id="cn-m5-702"><b><i>Step 3</i></b></h4>
+<p id="cn-m5-703">Notice that the web page displayed is the one without the text <b>NLB-Test</b>.</p>
+<span class="cn-quote" id="cn-m5-704"><b><i>Note</i></b><i>: The web page that you may get displayed on your lab can be the one with the “</i><b><i>NLB-Test</i></b><i>”
+ keyword. NLB uses a distributed algorithm to map incoming clients to 
+the member servers of the cluster based on their IP address and port. 
+When an NLB cluster receives an incoming request, all hosts in the NLB 
+cluster perform a mapping to determine which host should handle the 
+request quickly.</i></span>
+<p id="cn-m5-705"></p><figure><img class="cn-img" id="cn-image-m5-c-94" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-94.jpg" alt="Figure 5.25 Screenshot of the PLABDM02 desktop"><figcaption>Figure
+ 5.25 Screenshot of the PLABDM02 desktop: The original webpage without 
+the added text is displayed in the Internet Explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m5-708"><b><i>Step 4</i></b></h4>
+<p id="cn-m5-709">Press <b>F5 </b>to refresh the Web page.</p>
+<p id="cn-m5-710">Notice that the other Web page, with the <b>NLB Test </b>text, appears.</p>
+<p id="cn-m5-711">This confirms that Web content is delivered alternately by <b>PLABDM01 </b>and <b>PLABSA01 </b>through the NLB service.</p>
+<span class="cn-alert" id="cn-m5-712"><b>Important</b>: Clicking the <b>Refresh </b>button again will not immediately switch you back to the web page that was displayed initially, because <b>NLB </b>acts
+ as a filter between the cluster adapter driver and the TCP/IP protocol 
+stack in order to distribute the traffic between hosts in the NLB 
+cluster. There will be a lag if you attempt to refresh. However, you can
+ try a few mouse clicks on the <b>Refresh </b>button to manually refresh the web page. Keep going until the web page changes.</span>
+<p id="cn-m5-713">Close <b>Internet Explorer</b>.</p>
+<p id="cn-m5-714"></p><figure><img class="cn-img" id="cn-image-m5-c-95" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-95.jpg" alt="Figure 5.26 Screenshot of the PLABDM02 desktop"><figcaption>Figure
+ 5.26 Screenshot of the PLABDM02 desktop: The updated webpage with the 
+added text is displayed in the Internet Explorer window.</figcaption></figure><p></p>
+<h3 id="cn-m5-716"><b>Task 3 - Validate High Availability of NLB Cluster</b></h3>
+<p id="cn-m5-717">NLB cluster ensures high availability of resources to 
+various applications running on the cluster. NLB hosts emit and receive 
+“alive” signals from other hosts on the cluster. If hosts do not receive
+ the “alive” signal from any of the host(s) on the cluster, the 
+surviving hosts converge on the cluster to take on the load of the 
+failed host. In this task, you will remove one of the servers from the 
+cluster and analyze the effect of the same on the output.</p>
+<p id="cn-m5-718">To validate the high availability of the NLB cluster, perform the following steps:</p>
+<h4 id="cn-m5-719"><b><i>Step 1</i></b></h4>
+<p id="cn-m5-720">On your computer, access the <b>Practice Labs </b>Web application.</p>
+<p id="cn-m5-721">Select the <b>PLABDM01 </b>device and then click the <b>|| Suspend </b>button.</p>
+<p id="cn-m5-722">Wait until <b>PLABDM01 </b>is fully suspended. You should get the <b>Power on </b>option.</p>
+<span class="cn-quote" id="cn-m5-723"><b><i>Note: </i></b><i>In the 
+Practice Labs environment, when you suspend a running device, you are 
+left with only two choices: either Power On or Refresh. Power On will 
+bring the device back from the Suspended state. Refresh will refresh the
+ device but it does not bring it out of the Suspended state.</i></span>
+<h4 id="cn-m5-727"><b><i>Step 2</i></b></h4>
+<p id="cn-m5-728">Switch to <b>PLABDM02 </b>and reopen Internet Explorer if required.</p>
+<p id="cn-m5-729">In the address bar on the browser, type <b>http://plabdm01-nlb</b></p>
+<p id="cn-m5-730">Press <b>Enter. </b>Press <b>F5 </b>a few times to refresh the display.</p>
+<p id="cn-m5-731">Notice that the text <b>NLB-Test </b>does not appear on the image because the <b>PLABDM01 </b>device is currently switched off. Therefore, all web content comes only from <b>PLABSA01</b></p><figure><img class="cn-img" id="cn-image-m5-c-96" src="InstallandConfigureNetworkLoadBalancing_files/image-m5-c-96.jpg" alt="Figure 5.27 Screenshot of the PLABDM02 desktop"><figcaption>Figure
+ 5.27 Screenshot of the PLABDM02 desktop: The original webpage without 
+the added text is displayed in the Internet Explorer window.</figcaption></figure><p></p>
+<span class="atom-code hidden">2f3a72e0-1653-4da5-99b7-b0568416525c</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m5-736"><b>Review</b></h2>
+<p id="cn-m5-737">Well done, you have completed the <b>Understand and Configure Switching Concepts </b>Practice Lab.</p>
+<p id="cn-m5-738">Well done, you have completed the <b>Introduction to the OSI Model </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">881291de-6fb6-4b7d-a1f1-6cf1e83834b1</span>
+<span class="atom-code hidden">2b19917d-6911-4666-b39a-1dd621a1fcab</span>
+<span class="atom-code hidden">5e26f94b-d036-4f4a-9725-6ffb36d05b10</span>
+<span class="atom-code hidden">92c711b7-becb-4d08-8de6-f2a99f5e7810</span>
+<span class="atom-code hidden">42fc240d-ccb2-40db-bf98-951b2d7c0861</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m5-748">You completed the following exercises:</p>
+<ul id="cn-m5-749">
+<li id="cn-m5-749">Installing Network Load Balancing Nodes</li>
+<li id="cn-m5-750">Configuring a New NLB Cluster</li>
+<li id="cn-m5-751">Adding a Secondary Node to an NLB Cluster</li>
+<li id="cn-m5-752">Examining the working of an NLB cluster</li>
+<li id="cn-m5-753">Configuring and validating port rules for NLB cluster</li>
+</ul>
+<p id="cn-m5-754">You should now be able to:</p>
+<ul id="cn-m5-755">
+<li id="cn-m5-755">Install IIS</li>
+<li id="cn-m5-756">Install NLB on Servers</li>
+<li id="cn-m5-757">Create the First NLB Cluster Node</li>
+<li id="cn-m5-758">Configure DNS</li>
+<li id="cn-m5-759">Add a Second Server to the Cluster</li>
+<li id="cn-m5-760">Study the Working of an NLB Cluster</li>
+<li id="cn-m5-761">Configure Port Rules</li>
+<li id="cn-m5-762">Validate Port Rules</li>
+<li id="cn-m5-763">Validate High Availability of NLB Cluster</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m5-767">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

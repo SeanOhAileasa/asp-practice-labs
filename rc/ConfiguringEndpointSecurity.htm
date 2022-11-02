@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ConfiguringEndpointSecurity_files/print-styles.css" rel="stylesheet">
+    <script src="ConfiguringEndpointSecurity_files/jquery.min.js"></script>
+    <script src="ConfiguringEndpointSecurity_files/jspdf.js"></script>
+    <script src="ConfiguringEndpointSecurity_files/from_html.js"></script>
+    <script src="ConfiguringEndpointSecurity_files/addimage.js"></script>
+    <script src="ConfiguringEndpointSecurity_files/filesaver.js"></script>
+    <script src="ConfiguringEndpointSecurity_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="97eMr55xeEmXZ5mwkEn/FLtYDULyRUJKRVuv/5fsBiQPjszUcP24xeoxoY7nc1xCPUTX1QabTs6DmyxabZFHhKQS++xisIrGfscp3Wxmon4=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Configuring Endpoint Security</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Use Anti-virus Programs</li><li>Exercise 2 - Use Anti Spyware</li><li>Exercise 3 - Installing an Endpoint Protection Site System Role</li><li>Exercise 4 - Configure Definition Updates for Endpoint Protection</li><li>Exercise 5 - Create and Deploy Antimalware policies for Endpoint Protection</li><li>Exercise 6 - Configure Custom Client Settings for Endpoint Protection</li><li>Exercise 7 - Provision Endpoint Protection</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m12-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Windows Defender</div>
+<div>Security</div>
+<div>Spyware</div>
+<div>Malware</div>
+<div>Virus</div>
+<div>Endpoint Protection</div>
+</div>
+<p id="cn-m12-8">Welcome to the <b>Configuring Endpoint Security </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-12">In this module, you will complete the following exercises:</p>
+<ul id="cn-m12-13">
+<li id="cn-m12-13">Use anti-virus Programs</li>
+<li id="cn-m12-14">Install and configure an anti-spyware application</li>
+<li id="cn-m12-15">Create an Endpoint Protection site system role</li>
+<li id="cn-m12-16">Configure alerts for Endpoint Protection</li>
+<li id="cn-m12-17">Configure definition updates for Endpoint Protection</li>
+<li id="cn-m12-18">Create and deploy antimalware policies for Endpoint Protection</li>
+<li id="cn-m12-19">Configure custom client settings for Endpoint Protection</li>
+<li id="cn-m12-20">Provision the Endpoint Protection client in a disk image</li>
+</ul>
+<p id="cn-m12-21">After completing this lab, you will be able to:</p>
+<ul id="cn-m12-22">
+<li id="cn-m12-22">Update Windows Defender</li>
+<li id="cn-m12-23">Use an Online Anti-Malware Scanner</li>
+<li id="cn-m12-24">Explore Internet Explorer Browser Security</li>
+<li id="cn-m12-25">Install an Antispyware</li>
+<li id="cn-m12-26">Use SUPERAntiSpyware</li>
+<li id="cn-m12-27">Install an Endpoint Protection Site System Role</li>
+<li id="cn-m12-28">Configure Alerts for Endpoint Protection</li>
+<li id="cn-m12-29">Configure Definition Updates</li>
+<li id="cn-m12-30">Create and Deploy Antimalware Policies for Endpoint Protection</li>
+<li id="cn-m12-31">Configure Client Settings for Endpoint Protection</li>
+<li id="cn-m12-32">Verify the Endpoint Protection Client Installation</li>
+<li id="cn-m12-33">Configure the Endpoint Protection Client</li>
+<li id="cn-m12-34">Verify the Endpoint Protection Client Installation</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m12-36">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m12-37">
+<li id="cn-m12-37"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+</ul>
+<span class="cn-quote" id="cn-m12-38"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m12-40">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m12-44">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m12-45">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-50"><b>Lab Topology</b></h2>
+<p id="cn-m12-51">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m12-52">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<p id="cn-m12-53"><b>Exercise 1 and 2:</b></p>
+<ul id="cn-m12-54">
+<li id="cn-m12-54"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m12-55"><b>PLABDM01 </b>(Windows Server 2016 - Member Server)</li>
+<li id="cn-m12-56"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m12-57"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m12-58"><b>PLABDVWA </b>(Fedora)</li>
+<li id="cn-m12-59"><b>PLABSECON </b>(Ubuntu-Security Onion)</li>
+<li id="cn-m12-60"><b>PLABWIN701 </b>(Windows 7)</li>
+<li id="cn-m12-61"><b>PLABXP01 </b>(Windows XP)</li>
+</ul>
+<p id="cn-m12-63"><img class="cn-img" id="cn-image-m12-c-0" src="ConfiguringEndpointSecurity_files/image-m12-c-0.jpg" alt="Practice Labs screenshot."></p>
+<p id="cn-m12-65"><b>Exercise 3-7: </b></p>
+<ul id="cn-m12-66">
+<li id="cn-m12-66"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m12-67"><b>PLABSYS01 </b>(System Center 2012 Server - Domain Member)</li>
+<li id="cn-m12-68"><b>PLABSYS02 </b>(System Center 2012 Server - Domain Member)</li>
+<li id="cn-m12-69"><b>PLABSYS03 </b>(System Center 2012 Server - Domain Member)</li>
+<li id="cn-m12-70"><b>PLABVMM01 </b>(Virtual Machine Manager - Domain Member)</li>
+</ul>
+<p id="cn-m12-71"><img class="cn-img" id="cn-image-m12-c-1" src="ConfiguringEndpointSecurity_files/image-m12-c-1.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m12-72">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-74"><b>Exercise 1 - Use Anti-virus Programs</b></h2>
+<p id="cn-m12-75">Most operating systems have built-in anti-malware 
+programs that may help with warding off the virus, unwanted email 
+messages, spyware and other annoyances that can cause anomalies within a
+ computer system.</p>
+<p id="cn-m12-76">In this exercise, you will explore a built-in anti-malware application in Windows 10 called Microsoft Security Essentials.</p>
+<p id="cn-m12-77">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-79">After completing this exercise, you will be able to:</p>
+<ul id="cn-m12-80">
+<li id="cn-m12-80">Update Windows Defender</li>
+<li id="cn-m12-81">Use an Online Anti-Malware Scanner</li>
+<li id="cn-m12-82">Exploring Internet Explorer Browser Security</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m12-84">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m12-85">
+<li id="cn-m12-85"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m12-86"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m12-87"><img class="cn-img" id="cn-image-m12-c-2" src="ConfiguringEndpointSecurity_files/image-m12-c-2.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m12-90"><b>Task 1 - Update Windows Defender</b></h3>
+<p id="cn-m12-91"><b>Windows Defender </b>is the built-in anti-malware 
+software in Windows 10. It is essential that you keep this software 
+updated with the latest signatures to keep malware at bay while using 
+your computer.</p>
+<p id="cn-m12-92">To update Windows Defender, follow these steps:</p>
+<h4 id="cn-m12-93"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-94">Ensure you have powered on the required devices and connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m12-95">Click the <b>Start </b>charm to invoke the <b>Start </b>screen.</p>
+<h4 id="cn-m12-96"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-97">From the <b>Start </b>screen, type the following:</p>
+<pre id="cn-m12-98"><code>defender
+</code></pre>
+<p id="cn-m12-99">From the <b>Search </b>flyout menu, click <b>Windows Defender </b>and then press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m12-100"><b><i>Note</i></b><i>: You may also see the Settings screen. If it appears, close it. You will require it later on.</i></span>
+<p id="cn-m12-101"></p><figure><img class="cn-img" id="cn-image-m12-c-3" src="ConfiguringEndpointSecurity_files/image-m12-c-3.jpg" alt="Figure 1.1 Screenshot of PLABWIN10"><figcaption>Figure 1.1 Screenshot of PLABWIN10: Displaying Windows Defender in the flyout menu.</figcaption></figure><p></p>
+<h4 id="cn-m12-102"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-103">Click <b>Close </b>to any defender popups.</p>
+<p id="cn-m12-104">Click <b>Scan now</b>.</p>
+<span class="cn-quote" id="cn-m12-105"><b><i>Note: </i></b><i>On the </i><b><i>Windows Defender </i></b><i>screen, in the </i><b><i>Virus and spyware definitions </i></b><i>section,
+ its signatures are outdated. The number of days since the definitions 
+were created will differ in your lab environment. Therefore, this 
+computer is at risk.</i></span>
+<p id="cn-m12-106"></p><figure><img class="cn-img" id="cn-image-m12-c-4" src="ConfiguringEndpointSecurity_files/image-m12-c-4.jpg" alt="Figure 1.2 Screenshot of PLABWIN10"><figcaption>Figure 1.2 Screenshot of PLABWIN10: Displaying the Windows Defender home screen. Scan now is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m12-109"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-110">On the <b>Your PC is being scanned </b>screen, <b>Windows Defender </b>starts the scan of the system for malware. The scanning may take a little while to complete.</p>
+<span class="cn-quote" id="cn-m12-111"><b><i>Note: </i></b><i>When you click Scan now, a quick scan is initiated, which is now being performed.</i></span>
+<p id="cn-m12-112"></p><figure><img class="cn-img" id="cn-image-m12-c-5" src="ConfiguringEndpointSecurity_files/image-m12-c-5.jpg" alt="Figure 1.3 Screenshot of PLABWIN10"><figcaption>Figure 1.3 Screenshot of PLABWIN10: Scanning the system using Quick Scan in Windows Defender.</figcaption></figure><p></p>
+<h4 id="cn-m12-115"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-116">After the scan is completed, click the <b>Update </b>tab.</p>
+<p id="cn-m12-117"></p><figure><img class="cn-img" id="cn-image-m12-c-6" src="ConfiguringEndpointSecurity_files/image-m12-c-6.jpg" alt="Figure 1.4 Screenshot of PLABWIN10"><figcaption>Figure 1.4 Screenshot of PLABWIN10: Clicking the Update tab in Windows Defender after displaying the scan results.</figcaption></figure><p></p>
+<h4 id="cn-m12-120"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-121">On the <b>Update </b>tab, click <b>Update definitions</b>.</p>
+<p id="cn-m12-122"></p><figure><img class="cn-img" id="cn-image-m12-c-7" src="ConfiguringEndpointSecurity_files/image-m12-c-7.jpg" alt="Figure 1.5 Screenshot of PLABWIN10"><figcaption>Figure 1.5 Screenshot of PLABWIN10: Clicking the Update definitions button on the Update tab in Windows Defender.</figcaption></figure><p></p>
+<h4 id="cn-m12-125"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-126">The update process starts and will take a few minutes to complete.</p>
+<p id="cn-m12-127"></p><figure><img class="cn-img" id="cn-image-m12-c-8" src="ConfiguringEndpointSecurity_files/image-m12-c-8.jpg" alt="Figure 1.6 Screenshot of PLABWIN10"><figcaption>Figure 1.6 Screenshot of PLABWIN10: Displaying the signature update progress in Windows Defender.</figcaption></figure><p></p>
+<h4 id="cn-m12-130"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-131">When the update is completed, click <b>Settings</b>.</p>
+<p id="cn-m12-132"></p><figure><img class="cn-img" id="cn-image-m12-c-9" src="ConfiguringEndpointSecurity_files/image-m12-c-9.jpg" alt="Figure 1.7 Screenshot of PLABWIN10"><figcaption>Figure 1.7 Screenshot of PLABWIN10: Displaying the update completed with a new timestamp in Windows Defender.</figcaption></figure><p></p>
+<h4 id="cn-m12-135"><b><i>Step 9</i></b></h4>
+<p id="cn-m12-136">From the <b>Settings </b>page, scroll to the <b>Exclusions </b>section.</p>
+<p id="cn-m12-137">Click <b>Add an exclusion</b>.</p>
+<p id="cn-m12-138"></p><figure><img class="cn-img" id="cn-image-m12-c-10" src="ConfiguringEndpointSecurity_files/image-m12-c-10.jpg" alt="Figure 1.8 Screenshot of PLABWIN10"><figcaption>Figure 1.8 Screenshot of PLABWIN10: Adding an exclusion in the Exclusions section in Windows Settings.</figcaption></figure><p></p>
+<h4 id="cn-m12-141"><b><i>Step 10</i></b></h4>
+<p id="cn-m12-142">On the <b>Add an exclusion </b>page, click <b>Exclude a folder</b>.</p>
+<p id="cn-m12-143"></p><figure><img class="cn-img" id="cn-image-m12-c-11" src="ConfiguringEndpointSecurity_files/image-m12-c-11.jpg" alt="Figure 1.9 Screenshot of PLABWIN10"><figcaption>Figure 1.9 Screenshot of PLABWIN10: Displaying the Add an Exclusion screen with the Exclude a folder option</figcaption></figure><p></p>
+<p id="cn-m12-146">Navigate to the <b>C Drive</b>, select <b>IEAK </b>and then click <b>Exclude this folder</b>.</p>
+<p id="cn-m12-147"></p><figure><img class="cn-img" id="cn-image-m12-c-12" src="ConfiguringEndpointSecurity_files/image-m12-c-12.jpg" alt="Figure 1.10 Screenshot of PLABWIN10"><figcaption>Figure 1.10 Screenshot of PLABWIN10: Displaying the Windows Settings adding an exclusion file for scanning profile.</figcaption></figure><p></p>
+<h4 id="cn-m12-150"><b><i>Step 11</i></b></h4>
+<p id="cn-m12-151">This folder is now added to the exclusions.</p>
+<p id="cn-m12-152">Click the <b>Back </b>arrow button to return to <b>Settings</b>.</p>
+<p id="cn-m12-153"></p><figure><img class="cn-img" id="cn-image-m12-c-13" src="ConfiguringEndpointSecurity_files/image-m12-c-13.jpg" alt="Figure 1.11 Screenshot of PLABWIN10"><figcaption>Figure 1.11 Screenshot of PLABWIN10: Displaying the Windows Settings screen with the excluded folder.</figcaption></figure><p></p>
+<h4 id="cn-m12-155"><b><i>Step 12</i></b></h4>
+<p id="cn-m12-156">You are back on the <b>Settings </b>page.</p>
+<p id="cn-m12-157">Click <b>Open Windows Defender</b>.</p>
+<p id="cn-m12-158"></p><figure><img class="cn-img" id="cn-image-m12-c-14" src="ConfiguringEndpointSecurity_files/image-m12-c-14.jpg" alt="Figure 1.12 Screenshot of PLABWIN10"><figcaption>Figure 1.12 Screenshot of PLABWIN10: Opening Windows Defender from the Windows Settings screen.</figcaption></figure><p></p>
+<h4 id="cn-m12-160"><b><i>Step 13</i></b></h4>
+<p id="cn-m12-161">On the <b>Windows Defender </b>window, you are now on the <b>Home </b>tab.</p>
+<p id="cn-m12-162">In the Scan options section, select <b>Custom </b>and then click <b>Scan Now</b>.</p>
+<p id="cn-m12-163"></p><figure><img class="cn-img" id="cn-image-m12-c-15" src="ConfiguringEndpointSecurity_files/image-m12-c-15.jpg" alt="Figure 1.13 Screenshot of PLABWIN10"><figcaption>Figure 1.13 Screenshot of PLABWIN10: Displaying the Home tab with the Custom scan selected in Windows Defender.</figcaption></figure><p></p>
+<h4 id="cn-m12-167"><b><i>Step 14</i></b></h4>
+<p id="cn-m12-168">The <b>Windows Defender </b>dialog box is displayed.</p>
+<p id="cn-m12-169">Expand <b>Local Disk (C</b>:), expand <b>Windows </b>and then select <b>System32</b>.</p>
+<p id="cn-m12-170">Click <b>OK</b>.</p>
+<p id="cn-m12-171"></p><figure><img class="cn-img" id="cn-image-m12-c-16" src="ConfiguringEndpointSecurity_files/image-m12-c-16.jpg" alt="Figure 1.14 Screenshot of PLABWIN10"><figcaption>Figure 1.14 Screenshot of PLABWIN10: Displaying the Windows Defender dialog box with the System32 folder selected.</figcaption></figure><p></p>
+<p id="cn-m12-174">This will automatically begin the scan of that folder.</p>
+<p id="cn-m12-175">This scan will take a few minutes to complete.</p>
+<p id="cn-m12-176"></p><figure><img class="cn-img" id="cn-image-m12-c-17" src="ConfiguringEndpointSecurity_files/image-m12-c-17.jpg" alt="Figure 1.15 Screenshot of PLABWIN10"><figcaption>Figure 1.15 Screenshot of PLABWIN10: Performing a custom scan in Windows Defender.</figcaption></figure><p></p>
+<h4 id="cn-m12-178"><b><i>Step 15</i></b></h4>
+<p id="cn-m12-179">After the scan is finished, close <b>Windows Defender </b>and <b>Settings </b>windows.</p>
+<h3 id="cn-m12-182"><b>Task 2 - Using an Online Anti-Malware Scanner</b></h3>
+<p id="cn-m12-183">In addition to anti-malware programs installed 
+locally on a computer, you can take advantage of free online anti-virus 
+scanners to check your system for suspicious activity.</p>
+<p id="cn-m12-184">Please note that web page appearance may change, and 
+URL links may become outdated. You can use your search engine to find 
+online anti-malware scanners.</p>
+<h4 id="cn-m12-185"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-186">Ensure you are connected to <b>PLABWIN10</b>.</p>
+<p id="cn-m12-187">Type <b>Internet Explorer </b>into the search bar and select <b>Internet Explorer </b>from <b>Best Match</b>.</p>
+<p id="cn-m12-188"></p><figure><img class="cn-img" id="cn-image-m12-c-18" src="ConfiguringEndpointSecurity_files/image-m12-c-18.jpg" alt="Figure 1.16 Screenshot of PLABWIN10"><figcaption>Figure 1.16 Screenshot of PLABWIN10: Launching Internet Explorer from the flyout menu.</figcaption></figure><p></p>
+<h4 id="cn-m12-191"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-192">In the address bar, type the following URL:</p>
+<pre id="cn-m12-193"><code>http://www.microsoft.com/security/scanner/
+</code></pre>
+<p id="cn-m12-194">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m12-195"><b><i>Note</i></b><i>: If the URL indicated above did not work, use your search engine to search for Microsoft online safety and security centre.</i></span>
+<h4 id="cn-m12-197"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-198">The Microsoft Safety Scanner Webpage is displayed.</p>
+<p id="cn-m12-199">Click <b>Download 64-bit</b>.</p>
+<p id="cn-m12-200"></p><figure><img class="cn-img" id="cn-image-m12-c-19" src="ConfiguringEndpointSecurity_files/image-m12-c-19.jpg" alt="Figure 1.17 Screenshot of PLABWIN10"><figcaption>Figure 1.17 Screenshot of PLABWIN10: Displaying the Microsoft Safety Scanner Webpage.</figcaption></figure><p></p>
+<p id="cn-m12-203">When the notification bar appears on the bottom of the screen, click <b>Run</b>.</p>
+<p id="cn-m12-204"></p><figure><img class="cn-img" id="cn-image-m12-c-20" src="ConfiguringEndpointSecurity_files/image-m12-c-20.jpg" alt="Figure 1.18 Screenshot of PLABWIN10"><figcaption>Figure 1.18 Screenshot of PLABWIN10: Displaying the notification bar to run the msert.exe.</figcaption></figure><p></p>
+<h4 id="cn-m12-206"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-207">The file download starts.</p>
+<p id="cn-m12-208">After the download is finished, the <b>User Account Control </b>dialog box is displayed.</p>
+<p id="cn-m12-209">Click <b>Yes </b>to accept the changes to the device.</p>
+<h4 id="cn-m12-212"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-213">The <b>End User License Agreement </b>page appears.</p>
+<p id="cn-m12-214">Click <b>Accept all terms of the preceding license agreement</b>.</p>
+<p id="cn-m12-215">Click <b>Next</b>.</p>
+<p id="cn-m12-216"></p><figure><img class="cn-img" id="cn-image-m12-c-21" src="ConfiguringEndpointSecurity_files/image-m12-c-21.jpg" alt="Figure 1.19 Screenshot of PLABWIN10"><figcaption>Figure 1.19 Screenshot of PLABWIN10: Displaying the License agreement page of the Microsoft Safety Scanner wizard.</figcaption></figure><p></p>
+<h4 id="cn-m12-219"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-220">In <b>Welcome to the Microsoft Safety Scanner</b>, click <b>Next.</b></p>
+<h4 id="cn-m12-222"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-223">In <b>Scan Type </b>page, keep the default selection of <b>Quick scan </b>and then click <b>Next</b>.</p>
+<p id="cn-m12-224"></p><figure><img class="cn-img" id="cn-image-m12-c-22" src="ConfiguringEndpointSecurity_files/image-m12-c-22.jpg" alt="Figure 1.20 Screenshot of PLABWIN10"><figcaption>Figure 1.20 Screenshot of PLABWIN10: Displaying the Scan type page of the Microsoft Safety Scanner wizard.</figcaption></figure><p></p>
+<h4 id="cn-m12-226"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-227">On the <b>Scanning your computer </b>page, the scanning progress is displayed.</p>
+<p id="cn-m12-228">This will take about 2 minutes to complete.</p>
+<p id="cn-m12-229"></p><figure><img class="cn-img" id="cn-image-m12-c-23" src="ConfiguringEndpointSecurity_files/image-m12-c-23.jpg" alt="Figure 1.21 Screenshot of PLABWIN10"><figcaption>Figure 1.21 Screenshot of PLABWIN10: Performing a scan in Microsoft Safety Scanner wizard.</figcaption></figure><p></p>
+<h4 id="cn-m12-232"><b><i>Step 9</i></b></h4>
+<p id="cn-m12-233">After the scan is completed on the <b>Scan results </b>page, click <b>Finish</b>.</p>
+<p id="cn-m12-234"></p><figure><img class="cn-img" id="cn-image-m12-c-24" src="ConfiguringEndpointSecurity_files/image-m12-c-24.jpg" alt="Figure 1.22 Screenshot of PLABWIN10"><figcaption>Figure 1.22 Screenshot of PLABWIN10: Clicking Finish that displays the scan result in Microsoft Safety Scanner wizard.</figcaption></figure><p></p>
+<h4 id="cn-m12-236"><b><i>Step 10</i></b></h4>
+<p id="cn-m12-237">Keep <b>Internet Explorer </b>open for the next task.</p>
+<p id="cn-m12-238">Keep all devices powered on in their current state and proceed to the next task.</p>
+<h3 id="cn-m12-241"><b>Task 3 - Exploring Internet Explorer Browser Security</b></h3>
+<p id="cn-m12-242">Most web browsers have taken a lot of improvements in
+ battling malware by implementing filter, pop-up blockers and protecting
+ your privacy.</p>
+<p id="cn-m12-243">To explore some of Internet Explorer’s browser security, follow these steps:</p>
+<h4 id="cn-m12-244"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-245">On <b>PLABWIN10 </b>while <b>Internet Explorer </b>is open, press the <b>ALT </b>key to expose the top menu.</p>
+<p id="cn-m12-246">Click <b>Tools </b>and then select <b>Manage Add-ons</b>.</p>
+<p id="cn-m12-247"></p><figure><img class="cn-img" id="cn-image-m12-c-25" src="ConfiguringEndpointSecurity_files/image-m12-c-25.jpg" alt="Figure 1.23 Screenshot of PLABWIN10"><figcaption>Figure 1.23 Screenshot of PLABWIN10: Selecting the Manage add-ons option in Internet Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m12-250"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-251">From the <b>Manage Add-ons </b>dialog box, in the <b>Add-on types </b>section, select <b>Tracking Protection</b>.</p>
+<p id="cn-m12-252"></p><figure><img class="cn-img" id="cn-image-m12-c-26" src="ConfiguringEndpointSecurity_files/image-m12-c-26.jpg" alt="Figure 1.24 Screenshot of PLABWIN10"><figcaption>Figure 1.24 Screenshot of PLABWIN10: Selecting the Tracking Protection option in Internet Explorer on Manage add-ons.</figcaption></figure><p></p>
+<h4 id="cn-m12-255"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-256">On the right-details pane, click <b>Your Personalised List </b>and then click <b>Enable</b>.</p>
+<p id="cn-m12-257"></p><figure><img class="cn-img" id="cn-image-m12-c-27" src="ConfiguringEndpointSecurity_files/image-m12-c-27.jpg" alt="Figure 1.25 Screenshot of PLABWIN10"><figcaption>Figure 1.25 Screenshot of PLABWIN10: Selecting the Your Personalised List in the Manage add-ons dialog box in Internet Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m12-260"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-261">Click <b>Close </b>when <b>Your Personalized List </b>is <b>Enabled</b>.</p>
+<p id="cn-m12-262">Press <b>ALT </b>and then click <b>Tools</b>, select <b>Pop-up blocker</b>, and then select &gt; <b>Pop-up Blocker Settings</b>.</p>
+<p id="cn-m12-263"></p><figure><img class="cn-img" id="cn-image-m12-c-28" src="ConfiguringEndpointSecurity_files/image-m12-c-28.jpg" alt="Figure 1.26 Screenshot of PLABWIN10"><figcaption>Figure 1.26 Screenshot of PLABWIN10: Enabling Pop-up Blocker in Internet Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m12-265"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-266">In the <b>Pop-up Blocker Settings </b>dialog box, click in the <b>Address of website to allow </b>box and type the following URL:</p>
+<pre id="cn-m12-267"><code>https://www.practice-labs.com
+</code></pre>
+<p id="cn-m12-268">Click <b>Add</b>.</p>
+<p id="cn-m12-269"></p><figure><img class="cn-img" id="cn-image-m12-c-29" src="ConfiguringEndpointSecurity_files/image-m12-c-29.jpg" alt="Figure 1.27 Screenshot of PLABWIN10"><figcaption>Figure
+ 1.27 Screenshot of PLABWIN10: Adding the https :// www . practice - 
+labs . com Website in the Address of website to allow textbox in the 
+Pop-up Blocker Settings dialog box.</figcaption></figure><p></p>
+<h4 id="cn-m12-270"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-271">The URL is now added to the <b>Allowed sites </b>section.</p>
+<p id="cn-m12-272">Click <b>Close </b>after adding <b>https://www.practice-labs.com</b>.</p>
+<p id="cn-m12-273"></p><figure><img class="cn-img" id="cn-image-m12-c-30" src="ConfiguringEndpointSecurity_files/image-m12-c-30.jpg" alt="Figure 1.28 Screenshot of PLABWIN10"><figcaption>Figure
+ 1.28 Screenshot of PLABWIN10: Displaying the Pop-up Blocker Settings 
+dialog box with the www . practice - labs . com Website added in the 
+Allowed sites section.</figcaption></figure><p></p>
+<h4 id="cn-m12-279"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-280">Press the <b>ALT </b>key and go to <b>Tools </b>&gt; <b>Smart Screen Filter</b>.</p>
+<p id="cn-m12-281">Select <b>Check this website</b>.</p>
+<p id="cn-m12-282"></p><figure><img class="cn-img" id="cn-image-m12-c-31" src="ConfiguringEndpointSecurity_files/image-m12-c-31.jpg" alt="Figure 1.29 Screenshot of PLABWIN10"><figcaption>Figure 1.29 Screenshot of PLABWIN10: Enabling the Check this Website feature of SmartScreen Filter in Internet Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m12-284"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-285">The <b>SmartScreen Filter </b>dialog box prompts you that website addresses will be sent to Microsoft to be checked against a list of unsafe websites.</p>
+<p id="cn-m12-286">Click <b>OK</b>.</p>
+<p id="cn-m12-287"></p><figure><img class="cn-img" id="cn-image-m12-c-32" src="ConfiguringEndpointSecurity_files/image-m12-c-32.jpg" alt="Figure 1.30 Screenshot of PLABWIN10"><figcaption>Figure 1.30 Screenshot of PLABWIN10: Internet Explorer on Smart Screen Filter choosing to check the current Website.</figcaption></figure><p></p>
+<h4 id="cn-m12-290"><b><i>Step 9</i></b></h4>
+<p id="cn-m12-291">Click <b>OK </b>to close the dialog box.</p>
+<p id="cn-m12-292">SmartScreen Filter reports no threats were detected.</p>
+<p id="cn-m12-293"></p><figure><img class="cn-img" id="cn-image-m12-c-33" src="ConfiguringEndpointSecurity_files/image-m12-c-33.jpg" alt="Figure 1.31 Screenshot of PLABWIN10"><figcaption>Figure 1.31 Screenshot of PLABWIN10: Internet Explorer on Smart Screen Filter with the Website results.</figcaption></figure><p></p>
+<h4 id="cn-m12-296"><b><i>Step 10</i></b></h4>
+<p id="cn-m12-297">Press the <b>ALT </b>key and click the <b>Tools </b>tab.</p>
+<p id="cn-m12-298">Select <b>ActiveX Filtering</b>.</p>
+<span class="cn-quote" id="cn-m12-299"><b><i>Note</i></b><i>: ActiveX 
+programs are small programs in the form of control buttons that adds 
+functionality to your web page. You can safely download ActiveX controls
+ if they’re coming from trusted software publishers.</i></span>
+<p id="cn-m12-300"></p><figure><img class="cn-img" id="cn-image-m12-c-34" src="ConfiguringEndpointSecurity_files/image-m12-c-34.jpg" alt="Figure 1.32 Screenshot of PLABWIN10"><figcaption>Figure 1.32 Screenshot of PLABWIN10: Enabling ActiveX Filtering in Internet Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m12-303"><b><i>Step 11</i></b></h4>
+<p id="cn-m12-304">Press <b>ALT </b>to display menu. Go to <b>Tools </b>and verify that <b>ActiveX Filtering </b>is checked.</p>
+<p id="cn-m12-305"></p><figure><img class="cn-img" id="cn-image-m12-c-35" src="ConfiguringEndpointSecurity_files/image-m12-c-35.jpg" alt="Figure 1.33 Screenshot of PLABWIN10"><figcaption>Figure 1.33 Screenshot of PLABWIN10: Verifying the status of ActiveX Filtering in Internet Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m12-308"><b><i>Step 12</i></b></h4>
+<p id="cn-m12-309">Press <b>ALT </b>to display menu.</p>
+<p id="cn-m12-310">Go to <b>Tools </b>and select <b>InPrivate Browsing</b>.</p>
+<p id="cn-m12-311"></p><figure><img class="cn-img" id="cn-image-m12-c-36" src="ConfiguringEndpointSecurity_files/image-m12-c-36.jpg" alt="Figure 1.34 Screenshot of PLABWIN10"><figcaption>Figure 1.34 Screenshot of PLABWIN10: Enabling the InPrivate Browsing in Internet Explorer.</figcaption></figure><p></p>
+<h4 id="cn-m12-313"><b><i>Step 13 </i></b></h4>
+<p id="cn-m12-314">Within the URL bar, there is a padlock sign, which means that the <b>InPrivate </b>mode is now on. The InPrivate mode ensures that no private data is left after the browsing session is over.</p>
+<p id="cn-m12-315"></p><figure><img class="cn-img" id="cn-image-m12-c-37" src="ConfiguringEndpointSecurity_files/image-m12-c-37.jpg" alt="Figure 1.35 Screenshot of PLABWIN10"><figcaption>Figure 1.35 Screenshot of PLABWIN10: Displaying the InPrivate Browsing turned on.</figcaption></figure><p></p>
+<h4 id="cn-m12-317"><b><i>Step 14</i></b></h4>
+<p id="cn-m12-318">Now, enter the following URL:</p>
+<pre id="cn-m12-319"><code>https://www.microsoft.com
+</code></pre>
+<p id="cn-m12-320">Click on the <b>padlock </b>for a brief security report on the site.</p>
+<p id="cn-m12-322">Here we can see the website has been signed by DigiCert.</p>
+<h4 id="cn-m12-325"><b><i>Step 15</i></b></h4>
+<p id="cn-m12-326">Click on <b>View Certificates</b>.</p>
+<p id="cn-m12-327"></p><figure><img class="cn-img" id="cn-image-m12-c-39" src="ConfiguringEndpointSecurity_files/image-m12-c-39.jpg" alt="Figure 1.37 Screenshot of PLABWIN10"><figcaption>Figure 1.37 Screenshot of PLABWIN10: Displaying the digital certificate details for the Website.</figcaption></figure><p></p>
+<h4 id="cn-m12-329"><b><i>Step 16</i></b></h4>
+<p id="cn-m12-330">You can see from the general report more information 
+about the certificate details, who it was issued to, by and the valid 
+dates.</p>
+<p id="cn-m12-332"></p><figure><img class="cn-img" id="cn-image-m12-c-40" src="ConfiguringEndpointSecurity_files/image-m12-c-40.jpg" alt="Figure 1.38 Screenshot of PLABWIN10"><figcaption>Figure 1.38 Screenshot of PLABWIN10: Checking the Website certificates in Certificate dialog box.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<p id="cn-m12-335">Click <b>OK </b>to close the certificate and then close <b>Internet Explorer</b>.</p>
+<span class="cn-alert" id="cn-m12-336">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-339"><b>Exercise 2 - Use Anti Spyware</b></h2>
+<p id="cn-m12-340">An anti-spyware program is designed to catch spyware 
+in your system, which cannot be caught with a usual antivirus program. 
+Spyware is a malware that silently sits inside your system and collects 
+information. There are different activities that spyware can perform, 
+some of which are installing additional software without your knowledge 
+or redirect your Web browser to an unwanted Website.</p>
+<p id="cn-m12-341">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-343">After completing this exercise, you will be able to:</p>
+<ul id="cn-m12-344">
+<li id="cn-m12-344">Install Antispyware</li>
+<li id="cn-m12-345">Use SUPERAntiSpyware</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m12-347">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m12-348">
+<li id="cn-m12-348"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m12-349"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m12-350"><img class="cn-img" id="cn-image-m12-c-41" src="ConfiguringEndpointSecurity_files/image-m12-c-41.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m12-352"><b>Task 1 - Install Anti-Spyware </b></h3>
+<p id="cn-m12-353">An anti-spyware can detect the spyware either using 
+the rule-based methods or by using the latest definition files. An 
+anti-spyware can be an independent program or part of a security suite.</p>
+<p id="cn-m12-354">To install anti-spyware, follow these steps:</p>
+<h4 id="cn-m12-355"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-356">Ensure you are connected to <b>PLABWIN10</b>.</p>
+<p id="cn-m12-357">Download the <b>SuperAntiSpyware </b>application from the following URL and store it in the <b>Downloads </b>folder:</p>
+<pre id="cn-m12-358"><code>https://www.superantispyware.com/downloadfile.html?productid=SUPERANTISPYWAREFREE
+</code></pre>
+<h4 id="cn-m12-360"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-361">Close <b>Internet Explorer</b>.</p>
+<p id="cn-m12-362">Navigate to the <b>Downloads </b>folder and double-click the <b>SUPERAntiSpyware </b>file.</p>
+<p id="cn-m12-363"></p><figure><img class="cn-img" id="cn-image-m12-c-42" src="ConfiguringEndpointSecurity_files/image-m12-c-42.jpg" alt="Figure 2.1 Screenshot of PLABWIN10"><figcaption>Figure 2.1 Screenshot of PLABWIN10: Displaying the downloaded SUPERAntiSpyware file in the Downloads folder.</figcaption></figure><p></p>
+<h4 id="cn-m12-364"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-365">On the <b>Open File - Security Warning </b>dialog box, click <b>Run</b>.</p>
+<span class="cn-quote" id="cn-m12-366"><b><i>Note: </i></b><i>If the </i><b><i>User Access Control </i></b><i>dialog box is displayed, click </i><b><i>Yes</i></b><i>.</i></span>
+<h4 id="cn-m12-367"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-368">On the <b>Welcome to SUPERAntiSpyware Free Edition Installation Wizard </b>page of the <b>SUPERAntiSpyware Free Edition Setup </b>wizard, click <b>Next</b>.</p>
+<h4 id="cn-m12-369"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-370">On the <b>License Agreement </b>page, read the license agreement and click <b>I Agree</b>.</p>
+<h4 id="cn-m12-371"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-372">On the SUPERAntiSpyware recommends Google Chrome page, <b>deselect </b>the following options:</p>
+<ul id="cn-m12-373">
+<li id="cn-m12-373">Include Google Chrome along with SUPERAntiSpyware for improved security</li>
+<li id="cn-m12-374">Make Google Chrome my default browser</li>
+</ul>
+<p id="cn-m12-375">Click <b>Next</b>.</p>
+<p id="cn-m12-376"></p><figure><img class="cn-img" id="cn-image-m12-c-43" src="ConfiguringEndpointSecurity_files/image-m12-c-43.jpg" alt="Figure 2.2 Screenshot of PLABWIN10"><figcaption>Figure 2.2 Screenshot of PLABWIN10: Displaying the SUPERAntiSpyware recommends Google Chrome page of the installation wizard</figcaption></figure><p></p>
+<h4 id="cn-m12-377"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-378">On the <b>User Information and Registration </b>page, keep the default selection and click <b>Next</b>.</p>
+<h4 id="cn-m12-379"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-380">On the <b>Destination Folder </b>page, keep the default installation path and click <b>Next</b>.</p>
+<h4 id="cn-m12-381"><b><i>Step 9</i></b></h4>
+<p id="cn-m12-382">On the <b>Install Progress </b>page, the installation progress is displayed.</p>
+<p id="cn-m12-383"></p><figure><img class="cn-img" id="cn-image-m12-c-44" src="ConfiguringEndpointSecurity_files/image-m12-c-44.jpg" alt="Figure 2.3 Screenshot of PLABWIN10"><figcaption>Figure 2.3 Screenshot of PLABWIN10: Displaying the Install Progress page in the installation wizard.</figcaption></figure><p></p>
+<h4 id="cn-m12-384"><b><i>Step 10</i></b></h4>
+<p id="cn-m12-385">After the installation, you are automatically navigated to the <b>Email </b>page.</p>
+<p id="cn-m12-386">For the time being, skip this page by clicking <b>Next</b>.</p>
+<p id="cn-m12-387">On the <b>SUPERAntiSpyware Configuration </b>page, keep the default selection and click <b>Next</b>.</p>
+<p id="cn-m12-388"></p><figure><img class="cn-img" id="cn-image-m12-c-45" src="ConfiguringEndpointSecurity_files/image-m12-c-45.jpg" alt="Figure 2.4 Screenshot of PLABWIN10"><figcaption>Figure 2.4 Screenshot of PLABWIN10: Displaying the SUPERAntiSpyware Configuration page in the installation wizard.</figcaption></figure><p></p>
+<h4 id="cn-m12-389"><b><i>Step 11</i></b></h4>
+<p id="cn-m12-390">On the <b>SUPERAntiSpyware Free Edition </b>has been successfully installed page, click <b>Finished</b>.</p>
+<p id="cn-m12-391"></p><figure><img class="cn-img" id="cn-image-m12-c-46" src="ConfiguringEndpointSecurity_files/image-m12-c-46.jpg" alt="Figure 2.5 Screenshot of PLABWIN10"><figcaption>Figure 2.5 Screenshot of PLABWIN10: Displaying the successful installation on the last page of the installation wizard.</figcaption></figure><p></p>
+<h4 id="cn-m12-392"><b><i>Step 12</i></b></h4>
+<p id="cn-m12-393">The <b>SUPERAntiSpyware Professional Trial </b>dialog box is now displayed.</p>
+<p id="cn-m12-394">Click <b>Start Trial</b>.</p>
+<p id="cn-m12-395"></p><figure><img class="cn-img" id="cn-image-m12-c-47" src="ConfiguringEndpointSecurity_files/image-m12-c-47.jpg" alt="Figure 2.6 Screenshot of PLABWIN10"><figcaption>Figure 2.6 Screenshot of PLABWIN10: Clicking Start Trial on the SUPERAntiSpyware Professional Trial dialog box.</figcaption></figure><p></p>
+<p id="cn-m12-397">Keep the existing windows <b>open</b>. You will run SUPERAntiSpyware in the next task.</p>
+<h3 id="cn-m12-400"><b>Task 2 - Use SUPERAntiSpyware</b></h3>
+<p id="cn-m12-401">After SuperAntiSpyware is installed, you need to 
+configure it to use it. For example, you need to update its database 
+with the latest signatures and then perform a scan.</p>
+<p id="cn-m12-402">In this task, you will use SuperAntiSpyware. To do this, perform the following steps:</p>
+<h4 id="cn-m12-403"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-404">Ensure that you are connected to <b>PLABWIN10</b>.</p>
+<p id="cn-m12-405">After starting the trial, <b>SUPERAntiSpyware </b>starts the malware database update.</p>
+<p id="cn-m12-406">This screen may appear during the database update.</p>
+<p id="cn-m12-407"></p><figure><img class="cn-img" id="cn-image-m12-c-48" src="ConfiguringEndpointSecurity_files/image-m12-c-48.jpg" alt="Figure 2.7 Screenshot of PLABWIN10"><figcaption>Figure 2.7 Screenshot of PLABWIN10: Updating the signature database on the Malware Database Update page.</figcaption></figure><p></p>
+<p id="cn-m12-408">After the database update, you are navigated to the main screen of <b>SUPERAntiSpyware</b>.</p>
+<p id="cn-m12-409">Notice the black bubble at the bottom right corner of the screen. It confirms that the database definitions have been updated.</p>
+<p id="cn-m12-410">Click <b>Scan This Computer</b>.</p>
+<p id="cn-m12-411"></p><figure><img class="cn-img" id="cn-image-m12-c-49" src="ConfiguringEndpointSecurity_files/image-m12-c-49.jpg" alt="Figure 2.8 Screenshot of PLABWIN10"><figcaption>Figure 2.8 Screenshot of PLABWIN10: Clicking the Scan This Computer option on the SUPERAntiSpyware main screen.</figcaption></figure><p></p>
+<h4 id="cn-m12-413"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-414">On the scan screen, click <b>Quick Scan</b>.</p>
+<p id="cn-m12-415"></p><figure><img class="cn-img" id="cn-image-m12-c-50" src="ConfiguringEndpointSecurity_files/image-m12-c-50.jpg" alt="Figure 2.9 Screenshot of PLABWIN10"><figcaption>Figure 2.9 Screenshot of PLABWIN10: Selecting Quick Scan to run in the scan options.</figcaption></figure><p></p>
+<h4 id="cn-m12-417"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-418">Quick Scan now starts.</p>
+<span class="cn-quote" id="cn-m12-419"><b><i>Note: </i></b><i>It may take a while for the scan to finish.</i></span>
+<p id="cn-m12-420"></p><figure><img class="cn-img" id="cn-image-m12-c-51" src="ConfiguringEndpointSecurity_files/image-m12-c-51.jpg" alt="Figure 2.10 Screenshot of PLABWIN10"><figcaption>Figure 2.10 Screenshot of PLABWIN10: Displaying the scan progress.</figcaption></figure><p></p>
+<p id="cn-m12-422">After the scan is finished, notice that one infected item has been caught.</p>
+<p id="cn-m12-423">Click <b>Continue</b>.</p>
+<p id="cn-m12-424"></p><figure><img class="cn-img" id="cn-image-m12-c-52" src="ConfiguringEndpointSecurity_files/image-m12-c-52.jpg" alt="Figure 2.11 Screenshot of PLABWIN10"><figcaption>Figure 2.11 Screenshot of PLABWIN10: Displaying the scan results after the scan is completed.</figcaption></figure><p></p>
+<h4 id="cn-m12-427"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-428">On the scan screen, expand <b>Adware.Tracking.Cookie</b>. The child node provides the details of the cookie details.</p>
+<p id="cn-m12-429">Click <b>Continue</b>.</p>
+<p id="cn-m12-430"></p><figure><img class="cn-img" id="cn-image-m12-c-53" src="ConfiguringEndpointSecurity_files/image-m12-c-53.jpg" alt="Figure 2.12 Screenshot of PLABWIN10"><figcaption>Figure 2.12 Screenshot of PLABWIN10: Clicking Continue to clean the threat.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<h4 id="cn-m12-433"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-434">On the <b>SUPERAntiSpyware Item Removal </b>splash screen, click <b>Continue </b>after the removal process is complete.</p>
+<p id="cn-m12-435"></p><figure><img class="cn-img" id="cn-image-m12-c-54" src="ConfiguringEndpointSecurity_files/image-m12-c-54.jpg" alt="Figure 2.13 Screenshot of PLABWIN10"><figcaption>Figure 2.13 Screenshot of PLABWIN10: Showing the success in removal of the threat.</figcaption></figure><p></p>
+<h4 id="cn-m12-438"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-439">You are back on the main screen of <b>SUPERAntiSpyware</b>.</p>
+<p id="cn-m12-440"></p><figure><img class="cn-img" id="cn-image-m12-c-55" src="ConfiguringEndpointSecurity_files/image-m12-c-55.jpg" alt="Figure 2.14 Screenshot of PLABWIN10"><figcaption>Figure 2.14 Screenshot of PLABWIN10: Displaying the main screen of SUPERAntiSpyware.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m12-442">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-444"><b>Exercise 3 - Installing an Endpoint Protection Site System Role</b></h2>
+<p id="cn-m12-445">Before using Endpoint Protection, the Endpoint 
+Protection site system role must be installed on any one site system 
+server.  In this exercise, you will learn how to install an Endpoint 
+Protection site system role.</p>
+<p id="cn-m12-446">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-448">After completing this exercise, you will be able to:</p>
+<ul id="cn-m12-449">
+<li id="cn-m12-449">Install an Endpoint Protection Site System Role</li>
+<li id="cn-m12-450">Configure Alerts for Endpoint Protection</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m12-452">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m12-453">
+<li id="cn-m12-453"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m12-454"><b>PLABSYS01 </b>(System Center 2012 Server)</li>
+</ul>
+<p id="cn-m12-455"><img class="cn-img" id="cn-image-m12-c-56" src="ConfiguringEndpointSecurity_files/image-m12-c-56.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m12-458"><b>Task 1 - Install an Endpoint Protection Site System Role</b></h3>
+<p id="cn-m12-459">You must install the Endpoint Protection site system 
+role at the top of a stand-alone primary site. In this task, you will 
+add Endpoint protection role to the stand-alone primary site in 
+PLABSYS01 server.</p>
+<p id="cn-m12-460">To install an endpoint protection site system role, perform the following steps:</p>
+<h4 id="cn-m12-461"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-462">Ensure you have powered on the required devices.</p>
+<p id="cn-m12-463">Connect to <b>PLABSYS01</b>.</p>
+<p id="cn-m12-464">Close <b>Server Manager</b>.</p>
+<p id="cn-m12-465">From the <b>PLABSYS01 </b>desktop, double-click the <b>Configuration Manager Console </b>shortcut.</p>
+<h4 id="cn-m12-466"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-467">The <b>System Center 2012 R2 Configuration Manager </b>console opens.</p>
+<p id="cn-m12-468">Click <b>Administration</b>.</p>
+<p id="cn-m12-469"></p><figure><img class="cn-img" id="cn-image-m12-c-57" src="ConfiguringEndpointSecurity_files/image-m12-c-57.jpg" alt="Figure 3.1 Screenshot of PLABSYS01"><figcaption>Figure 3.1 Screenshot of PLABSYS01: Clicking Administration in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-470"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-471">In the <b>Administration </b>workspace, expand <b>Site Configuration</b>, and select <b>Servers and Site System Roles</b>.</p>
+<p id="cn-m12-472">The <b>Servers and Site system Roles </b>page displays.</p>
+<p id="cn-m12-473"></p><figure><img class="cn-img" id="cn-image-m12-c-58" src="ConfiguringEndpointSecurity_files/image-m12-c-58.jpg" alt="Figure 3.2 Screenshot of PLABSYS01"><figcaption>Figure 3.2 Screenshot of PLABSYS01: Selecting Servers and Site System Roles in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-476"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-477">Select the standalone primary site <b>\\PLABSYS01.PRACTICELAB.COM</b>, right-click and select <b>Add Site System Roles</b>.</p>
+<p id="cn-m12-478"></p><figure><img class="cn-img" id="cn-image-m12-c-59" src="ConfiguringEndpointSecurity_files/image-m12-c-59.jpg" alt="Figure 3.3 Screenshot of PLABSYS01"><figcaption>Figure 3.3 Screenshot of PLABSYS01: Selecting Add Site System Roles in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-481"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-482">On the <b>General </b>page of the <b>Add Site System Roles Wizard</b>, keep the default settings and click <b>Next</b>.</p>
+<p id="cn-m12-483"></p><figure><img class="cn-img" id="cn-image-m12-c-60" src="ConfiguringEndpointSecurity_files/image-m12-c-60.jpg" alt="Figure 3.4 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.4 Screenshot of PLABSYS01: Displaying the General page of the Add 
+Site System Roles Wizard in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-485"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-486">On the <b>Proxy </b>page, keep the default settings and click <b>Next</b>.</p>
+<h4 id="cn-m12-489"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-490">On the <b>System Role Selection </b>page, select <b>Endpoint Protection Point</b>.</p>
+<p id="cn-m12-491">On the <b>Configuration Manager </b>dialog box, click <b>OK</b>.</p>
+<p id="cn-m12-492"></p><figure><img class="cn-img" id="cn-image-m12-c-61" src="ConfiguringEndpointSecurity_files/image-m12-c-61.jpg" alt="Figure 3.5 Screenshot of PLABSYS01"><figcaption>Figure 3.5 Screenshot of PLABSYS01: Displaying the Configuration Manager dialog box in System Center 2012 R2 Configuration.</figcaption></figure><p></p>
+<h4 id="cn-m12-494"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-495">Back on the <b>System Role Selection </b>page, notice that the <b>Endpoint Protection point </b>is now selected.</p>
+<p id="cn-m12-496">Click <b>Next</b>.</p>
+<p id="cn-m12-497"></p><figure><img class="cn-img" id="cn-image-m12-c-62" src="ConfiguringEndpointSecurity_files/image-m12-c-62.jpg" alt="Figure 3.6 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.6 Screenshot of PLABSYS01: Displaying the selection of Endpoint 
+Protection Point on the System Role Selection page in System Center 2012
+ R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-499"><b><i>Step 9</i></b></h4>
+<p id="cn-m12-500">On the <b>Endpoint Protection </b>page, select the <b>I accept the Endpoint Protection license terms </b>checkbox.</p>
+<p id="cn-m12-501">Click <b>Next</b>.</p>
+<h4 id="cn-m12-503"><b><i>Step 10</i></b></h4>
+<p id="cn-m12-504">On the <b>Microsoft Active Protection Service </b>page, select <b>do not join MAPS.</b></p>
+<p id="cn-m12-505">Click <b>Next</b>.</p>
+<p id="cn-m12-506"></p><figure><img class="cn-img" id="cn-image-m12-c-63" src="ConfiguringEndpointSecurity_files/image-m12-c-63.jpg" alt="Figure 3.7 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.7 Screenshot of PLABSYS01: Displaying the options on the Microsoft 
+Active Protection Service page in System Center 2012 R2 Configuration 
+Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-507"><b><i>Step 11</i></b></h4>
+<p id="cn-m12-508">On the <b>Summary </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m12-510"><b><i>Step 12</i></b></h4>
+<p id="cn-m12-511">On the <b>Completion </b>page, click <b>Close.</b></p>
+<p id="cn-m12-512">The EndPoint site system role is added to the primary site.</p>
+<p id="cn-m12-513"></p><figure><img class="cn-img" id="cn-image-m12-c-64" src="ConfiguringEndpointSecurity_files/image-m12-c-64.jpg" alt="Figure 3.8 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.8 Screenshot of PLABSYS01: Displaying the Completion page of the Add 
+Site System Roles Wizard in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h3 id="cn-m12-516"><b>Task 2 - Configure Alerts for Endpoint Protection</b></h3>
+<p id="cn-m12-517">Alerts inform the administrator when specific events 
+such as malware malfunctioning have occurred. In this task, you will 
+configure alerts for Endpoint Protection.</p>
+<h4 id="cn-m12-518"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-519">In the <b>System Center 2012 R2 Configuration Manager </b>console, click <b>Assets and Compliance</b>. The right pane displays <b>the Assets and Compliance </b>- <b>Navigation Index</b>.</p>
+<p id="cn-m12-520">Click <b>Device Collections</b>.</p>
+<p id="cn-m12-521"></p><figure><img class="cn-img" id="cn-image-m12-c-65" src="ConfiguringEndpointSecurity_files/image-m12-c-65.jpg" alt="Figure 3.9 Screenshot of PLABSYS01"><figcaption>Figure 3.9 Screenshot of PLABSYS01: Selecting Device Collection in System Center 2012 R2 Configuration.</figcaption></figure><p></p>
+<h4 id="cn-m12-524"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-525">On the <b>Device Collections </b>page, right-click <b>All Systems </b>and select <b>Properties</b>.</p>
+<p id="cn-m12-526"></p><figure><img class="cn-img" id="cn-image-m12-c-66" src="ConfiguringEndpointSecurity_files/image-m12-c-66.jpg" alt="Figure 3.10 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.10 Screenshot of PLABSYS01: Selecting Properties from the context 
+menu of All Systems in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-528"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-529">The <b>All System Properties </b>dialog box displays.</p>
+<p id="cn-m12-530">Click the <b>Alerts </b>tab.</p>
+<p id="cn-m12-531">Click <b>Add </b>to create a new alert threshold.</p>
+<p id="cn-m12-532"></p><figure><img class="cn-img" id="cn-image-m12-c-67" src="ConfiguringEndpointSecurity_files/image-m12-c-67.jpg" alt="Figure 3.11 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.11 Screenshot of PLABSYS01: Clicking the Add button on the Alerts tab
+ of the All System Properties dialog box in System Center 2012 R2 
+Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-534"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-535">The <b>Add New Collection Alerts </b>dialog box opens.</p>
+<p id="cn-m12-536">Select the following from <b>Endpoint protection </b>options:</p>
+<ul id="cn-m12-537">
+<li id="cn-m12-537">Malware is detected.</li>
+<li id="cn-m12-538">The same type malware is detected on a number of computers.</li>
+<li id="cn-m12-539">The same type malware is repeatedly detected within the specified interval on a computer.</li>
+<li id="cn-m12-540">Multiple types of malware are detected on the same computer within the specified interval.</li>
+</ul>
+<p id="cn-m12-541">Click <b>OK</b>.</p>
+<p id="cn-m12-542"></p><figure><img class="cn-img" id="cn-image-m12-c-68" src="ConfiguringEndpointSecurity_files/image-m12-c-68.jpg" alt="Figure 1.12 Screenshot of PLABSYS01"><figcaption>Figure
+ 1.12 Screenshot of PLABSYS01: Selecting the options in the Add New 
+Collection Alerts dialog box in  System Center 2012 R2 Configuration 
+Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-545"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-546">In the <b>All Systems Properties </b>dialog box, click <b>Apply</b>.</p>
+<p id="cn-m12-547"></p><figure><img class="cn-img" id="cn-image-m12-c-69" src="ConfiguringEndpointSecurity_files/image-m12-c-69.jpg" alt="Figure 3.13 Screenshot of PLABSYS01"><figcaption>Figure
+ 3.13 Screenshot of PLABSYS01: Applying the settings in the All Systems 
+Properties dialog box in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-548"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-549">Click <b>OK</b>.</p>
+<h4 id="cn-m12-550"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-551">In the <b>System Center 2012 R2 Configuration Manager </b>console, click <b>Monitoring</b>.</p>
+<p id="cn-m12-553"></p><figure><img class="cn-img" id="cn-image-m12-c-70" src="ConfiguringEndpointSecurity_files/image-m12-c-70.jpg" alt="Figure 3.14 Screenshot of PLABSYS01"><figcaption>Figure 3.14 Screenshot of PLABSYS01: Clicking the Monitoring tab  in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-555"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-556">In the <b>Monitoring </b>workspace, click <b>Alerts </b>from the left pane and then select <b>All Alerts</b>.</p>
+<p id="cn-m12-557">You can see all the alerts that you just created for Endpoint protection.</p>
+<p id="cn-m12-558"></p><figure><img class="cn-img" id="cn-image-m12-c-71" src="ConfiguringEndpointSecurity_files/image-m12-c-71.jpg" alt="Figure 3.15 Screenshot of PLABSYS01"><figcaption>Figure 3.15 Screenshot of PLABSYS01: Clicking All Alerts in the left pane in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="cn-alert" id="cn-m12-561">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-563"><b>Exercise 4 - Configure Definition Updates for Endpoint Protection</b></h2>
+<p id="cn-m12-564">With Endpoint Protection, you can update antimalware definitions on client computers.</p>
+<p id="cn-m12-565">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-567">After completing this exercise, you will be able to:</p>
+<ul id="cn-m12-568">
+<li id="cn-m12-568">Configure Definition Updates</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m12-570">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m12-571">
+<li id="cn-m12-571"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m12-572"><b>PLABSYS01 </b>(System Center 2012 Server)</li>
+</ul>
+<p id="cn-m12-573"><img class="cn-img" id="cn-image-m12-c-72" src="ConfiguringEndpointSecurity_files/image-m12-c-72.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m12-575"><b>Task 1 - Configure Definition Updates</b></h3>
+<p id="cn-m12-576">In this task, you will learn how to configure definition updates for Endpoint Protection.</p>
+<h4 id="cn-m12-577"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-578">In the <b>System Center 2012 R2 Configuration Manager </b>console, click <b>Software Library</b>.</p>
+<p id="cn-m12-579">Expand <b>Software Updates</b>.</p>
+<p id="cn-m12-580">Select <b>Automatic Deployment Rules</b>.</p>
+<p id="cn-m12-581"></p><figure><img class="cn-img" id="cn-image-m12-c-73" src="ConfiguringEndpointSecurity_files/image-m12-c-73.jpg" alt="Figure 4.1 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.1 Screenshot of PLABSYS01: Displaying the Automatic Deployment Rules 
+option in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-583"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-584">On the <b>Home </b>tab, in the <b>Create </b>group, click <b>Create Automatic Deployment Rule</b>.</p>
+<p id="cn-m12-585"></p><figure><img class="cn-img" id="cn-image-m12-c-74" src="ConfiguringEndpointSecurity_files/image-m12-c-74.jpg" alt="Figure 4.2 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.2 Screenshot of PLABSYS01: Creating the automatic deployment rule 
+using the Create Automatic Deployment Role option in System Center 2012 
+R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-588"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-589">On the <b>General </b>page of the <b>Create Automatic Deployment Rule Wizard</b>, in the <b>Name </b>text box, type <b>ADR Endpoint protection.</b></p>
+<p id="cn-m12-590">In the <b>Description </b>box, type <b>Automatic deployment rule for Endpoint protection definitions</b>.</p>
+<p id="cn-m12-591"></p><figure><img class="cn-img" id="cn-image-m12-c-75" src="ConfiguringEndpointSecurity_files/image-m12-c-75.jpg" alt="Figure 4.3 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.3 Screenshot of PLABSYS01: Adding the name and description in the 
+General tab of the Create Automatic Deployment Rule Wizard in System 
+Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-593"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-594">In the <b>Template </b>section, click <b>Manage Templates.</b></p>
+<p id="cn-m12-595">In the <b>Select a Template </b>dialog box, select <b>Definition Updates </b>and click <b>OK</b>.</p>
+<p id="cn-m12-596"></p><figure><img class="cn-img" id="cn-image-m12-c-76" src="ConfiguringEndpointSecurity_files/image-m12-c-76.jpg" alt="Figure 4.4 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.4 Screenshot of PLABSYS01: Displaying the Select a Template dialog 
+box on the General tab of the Create Automatic Deployment Rule Wizard in
+ System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-597"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-598">Back to <b>Create Automatic Rule Wizard</b>.</p>
+<p id="cn-m12-599">In the <b>Collections </b>section, click <b>Browse.</b></p>
+<h4 id="cn-m12-601"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-602">In the <b>Select Collection </b>dialog box, select <b>All Systems</b>.</p>
+<p id="cn-m12-603">Click <b>OK</b>.</p>
+<p id="cn-m12-604"></p><figure><img class="cn-img" id="cn-image-m12-c-77" src="ConfiguringEndpointSecurity_files/image-m12-c-77.jpg" alt="Figure 4.5 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.5 Screenshot of PLABSYS01: Displaying the Select Collection dialog 
+box on the General tab of the Create Automatic Deployment Rule Wizard in
+ System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-606"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-607">On the <b>General </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m12-609"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-610">On the <b>Deployment Settings </b>page, keep the default selections and click <b>Next</b>.</p>
+<h4 id="cn-m12-612"><b><i>Step 9</i></b></h4>
+<p id="cn-m12-613">On the <b>Software Updates </b>page, in the <b>Property Filters </b>section, ensure that <b>Product </b>and <b>Update Classification </b>are selected.</p>
+<p id="cn-m12-614">Click <b>Next</b>.</p>
+<p id="cn-m12-615"></p><figure><img class="cn-img" id="cn-image-m12-c-78" src="ConfiguringEndpointSecurity_files/image-m12-c-78.jpg" alt="Figure 4.6 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.6 Screenshot of PLABSYS01: Selecting the property filters on the 
+Software Updates tab of the Create Automatic Deployment Rule Wizard in 
+System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-617"><b><i>Step 10</i></b></h4>
+<p id="cn-m12-618">On the <b>Evaluation Schedule </b>page, specify the recurring schedule for this rule.</p>
+<p id="cn-m12-619">For this demonstration, ensure <b>Run the rule after any software update point synchronization </b>is selected.</p>
+<p id="cn-m12-620">Click <b>Next</b>.</p>
+<p id="cn-m12-621"></p><figure><img class="cn-img" id="cn-image-m12-c-79" src="ConfiguringEndpointSecurity_files/image-m12-c-79.jpg" alt="Figure 4.7 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.7 Screenshot of PLABSYS01: Selecting the Run the rule after any 
+software point synchronization option and the Evaluation Schedule on the
+ Automatic Deployment Rule Wizard in System Center 2012 R2 Configuration
+ Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-624"><b><i>Step 11</i></b></h4>
+<p id="cn-m12-625">On the <b>Deployment Schedule </b>page, configure schedule details for this deployment.</p>
+<p id="cn-m12-626">For this demonstration, in the <b>Time based on </b>section, select <b>Client local time</b>.</p>
+<h4 id="cn-m12-627"><b><i>Step 12</i></b></h4>
+<p id="cn-m12-628">Then, in the <b>Software available time </b>section, select <b>As soon as possible. </b></p>
+<p id="cn-m12-629">Click <b>Next</b>.</p>
+<p id="cn-m12-630"></p><figure><img class="cn-img" id="cn-image-m12-c-80" src="ConfiguringEndpointSecurity_files/image-m12-c-80.jpg" alt="Figure 4.8 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.8 Screenshot of PLABSYS01: Selecting options on the Deployment 
+Schedule page of the Create Automatic Deployment Rule Wizard in System 
+Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-632"><b><i>Step 13</i></b></h4>
+<p id="cn-m12-633">On the <b>User Experience </b>page, specify the user experience for this deployment.</p>
+<p id="cn-m12-634">For this demonstration, for <b>User notifications</b>, ensure <b>Hide in Software Centre and all notifications </b>is selected.</p>
+<p id="cn-m12-635">Also, ensure the following options are selected:</p>
+<ul id="cn-m12-636">
+<li id="cn-m12-636">Software Installation</li>
+<li id="cn-m12-637">Servers</li>
+<li id="cn-m12-638">Workstations</li>
+</ul>
+<p id="cn-m12-639">Click <b>Next</b>.</p>
+<p id="cn-m12-640"></p><figure><img class="cn-img" id="cn-image-m12-c-81" src="ConfiguringEndpointSecurity_files/image-m12-c-81.jpg" alt="Figure 4.9 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.9 Screenshot of PLABSYS01: Selecting the required options on the User
+ Experience page of the Create Automatic Deployment Rule Wizard in 
+System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-642"><b><i>Step 14</i></b></h4>
+<p id="cn-m12-643">On the <b>Alerts </b>page, specify the required software update alert options.</p>
+<p id="cn-m12-644">For this demonstration, keep the default settings and click <b>Next</b>.</p>
+<h4 id="cn-m12-646"><b><i>Step 15</i></b></h4>
+<p id="cn-m12-647">On the <b>Download Settings </b>page, specify the software update download behavior for clients on slow site boundaries.</p>
+<p id="cn-m12-648">For this demonstration, keep the default setting.</p>
+<p id="cn-m12-649">Click <b>Next</b>.</p>
+<h4 id="cn-m12-651"><b><i>Step 16</i></b></h4>
+<p id="cn-m12-652">On the <b>Deployment Package </b>page, ensure <b>Create a new deployment package </b>is selected.</p>
+<p id="cn-m12-653">In the <b>Name </b>text box, type:</p>
+<pre id="cn-m12-654"><code>EPDefinitionupdates
+</code></pre>
+<p id="cn-m12-655">In the <b>Package source </b>text box, type the following path and click <b>Next</b>.</p>
+<pre id="cn-m12-656"><code>\\plabdc01\SW\EPDefinitionupdates
+</code></pre>
+<span class="cn-alert" id="cn-m12-657"><b>Alert: </b>In the <b>Package source </b>textbox, you will need to <b>type the path manually</b>. If you attempt to click <b>Browse </b>to find the path, you will not be able to locate the EPDefinitionupdates folder.</span>
+<p id="cn-m12-658"></p><figure><img class="cn-img" id="cn-image-m12-c-82" src="ConfiguringEndpointSecurity_files/image-m12-c-82.jpg" alt="Figure 4.10 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.10 Screenshot of PLABSYS01: Adding the package source path on the 
+Deployment Package page of the Create Automatic Deployment Rule Wizard 
+in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-660"><b><i>Step 17</i></b></h4>
+<p id="cn-m12-661">On the <b>Distribution Points </b>page, click <b>Add</b>, and then select <b>Distribution Point</b>.</p>
+<p id="cn-m12-662"></p><figure><img class="cn-img" id="cn-image-m12-c-83" src="ConfiguringEndpointSecurity_files/image-m12-c-83.jpg" alt="Figure 4.11 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.11 Screenshot of PLABSYS01: Clicking Add to add a distribution point 
+on the Distribution Points page of the Create Automatic Deployment Rule 
+Wizard in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-663"><b><i>Step 18</i></b></h4>
+<p id="cn-m12-664">In the <b>Add Distribution Points </b>dialog box, select <b>PLABSYS01.PRACTICELABS.COM</b>.</p>
+<p id="cn-m12-665">Click <b>OK</b>.</p>
+<p id="cn-m12-666"></p><figure><img class="cn-img" id="cn-image-m12-c-84" src="ConfiguringEndpointSecurity_files/image-m12-c-84.jpg" alt="Figure 4.12 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.12 Screenshot of PLABSYS01: Displaying the Add Distribution Point 
+dialog box on the Distribution Point dialog box on the Deployment 
+Schedule page of the Create Automatic Deployment Rule Wizard in System 
+Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-668"><b><i>Step 19</i></b></h4>
+<p id="cn-m12-669">Click <b>Next</b>.</p>
+<p id="cn-m12-670"></p><figure><img class="cn-img" id="cn-image-m12-c-85" src="ConfiguringEndpointSecurity_files/image-m12-c-85.jpg" alt="Figure 4.13 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.13 Screenshot of PLABSYS01: Clicking Next on the Distribution Points 
+page of the Create Automatic Deployment Rule Wizard in System Center 
+2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-672"><b><i>Step 20</i></b></h4>
+<p id="cn-m12-673">On the <b>Download Location </b>page, ensure <b>Download software updates from the Internet </b>is selected.</p>
+<p id="cn-m12-674">Click <b>Next</b>.</p>
+<h4 id="cn-m12-676"><b><i>Step 21</i></b></h4>
+<p id="cn-m12-677">On the <b>Language Selection </b>page, select the required language.</p>
+<p id="cn-m12-678">For this demonstration, select only <b>English </b>and click <b>Next</b>.</p>
+<p id="cn-m12-679"></p><figure><img class="cn-img" id="cn-image-m12-c-86" src="ConfiguringEndpointSecurity_files/image-m12-c-86.jpg" alt="Figure 4.14 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.14 Screenshot of PLABSYS01: Selecting English on the Language 
+Selections page of the Create Automatic Deployment Rule Wizard in System
+ Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-681"><b><i>Step 22</i></b></h4>
+<p id="cn-m12-682">On the <b>Summary </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m12-684"><b><i>Step 23</i></b></h4>
+<p id="cn-m12-685">The <b>Status </b>page displays.</p>
+<p id="cn-m12-686">Wait for the process to complete.</p>
+<h4 id="cn-m12-687"><b><i>Step 24</i></b></h4>
+<p id="cn-m12-688">On the <b>Completion </b>page, click <b>Close</b>.</p>
+<p id="cn-m12-689"></p><figure><img class="cn-img" id="cn-image-m12-c-87" src="ConfiguringEndpointSecurity_files/image-m12-c-87.jpg" alt="Figure 4.15 Screenshot of PLABSYS01"><figcaption>Figure
+ 4.15 Screenshot of PLABSYS01: Clicking Close on the Completion page of 
+the Create Automatic Deployment Rule Wizard in System Center 2012 R2 
+Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-692"><b><i>Step 25</i></b></h4>
+<p id="cn-m12-693">On completion of the task, you will see the automatic
+ deployment rule that was created for configuring updates for Endpoint 
+Protection.</p>
+<p id="cn-m12-694"></p><figure><img class="cn-img" id="cn-image-m12-c-88" src="ConfiguringEndpointSecurity_files/image-m12-c-88.jpg" alt="Figure 4.16 Screenshot of PLABSYS01"><figcaption>Figure 4.16 Screenshot of PLABSYS01: Displaying the automatic deployment rule in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="cn-alert" id="cn-m12-697">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-699"><b>Exercise 5 - Create and Deploy Antimalware policies for Endpoint Protection</b></h2>
+<p id="cn-m12-700">The Configuration Manager allows you to deploy 
+antimalware policies and specify how Endpoint Protection protects them 
+from malware and other threats. You can include information about the 
+scan schedule, the actions to take when malware is detected and the 
+types of files and folder to scan in the antimalware policy setting.</p>
+<p id="cn-m12-701">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-703">After completing this exercise, you will be able to:</p>
+<ul id="cn-m12-704">
+<li id="cn-m12-704">Create and Deploy Antimalware Policies for Endpoint Protection</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m12-706">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m12-707">
+<li id="cn-m12-707"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m12-708"><b>PLABSYS01 </b>(System Center 2012 Server)</li>
+</ul>
+<p id="cn-m12-709"><img class="cn-img" id="cn-image-m12-c-89" src="ConfiguringEndpointSecurity_files/image-m12-c-89.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m12-711"><b>Task 1 - Create and Deploy Antimalware Policies for Endpoint Protection</b></h3>
+<p id="cn-m12-712">Typically, on a standalone anti-malware application, 
+you can directly update the policies and signatures from the developer’s
+ Website. However, when you have a centralized server, you can configure
+ it to deploy the same set of policies to all the systems that have 
+endpoint protection installed. In this task, you will create and deploy 
+an antimalware policy for Endpoint Protection.</p>
+<h4 id="cn-m12-713"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-714">In the <b>System Center 2012 R2 Configuration Manager </b>console, click <b>Assets and Compliance</b>, and expand <b>Endpoint Protection</b>.</p>
+<h4 id="cn-m12-716"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-717">Click <b>Antimalware Policies</b>.</p>
+<h4 id="cn-m12-718"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-719">On the <b>Home </b>tab, in the <b>Create </b>group, click <b>Create Antimalware Policy</b>.</p>
+<p id="cn-m12-720"></p><figure><img class="cn-img" id="cn-image-m12-c-90" src="ConfiguringEndpointSecurity_files/image-m12-c-90.jpg" alt="Figure 5.1 Screenshot of PLABSYS01"><figcaption>Figure 5.1 Screenshot of PLABSYS01: Displaying Antimalware Policies in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-721"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-722">On the <b>General </b>page of the <b>Create Antimalware Policy </b>dialog box, in the <b>Name </b>box, type <b>EPAntimalware Policy Servers.</b></p>
+<p id="cn-m12-723">Then, <b>select the following checkboxes </b>to configure different policy settings.</p>
+<ul id="cn-m12-724">
+<li id="cn-m12-724">Scheduled scans</li>
+<li id="cn-m12-725">Scan settings</li>
+<li id="cn-m12-726">Default actions</li>
+<li id="cn-m12-727">Real-time protection</li>
+<li id="cn-m12-728">Exclusion settings</li>
+<li id="cn-m12-729">Advanced</li>
+<li id="cn-m12-730">Threat overrides</li>
+<li id="cn-m12-731">Microsoft Active Protection Service</li>
+<li id="cn-m12-732">Definition updates</li>
+</ul>
+<p id="cn-m12-733"></p><figure><img class="cn-img" id="cn-image-m12-c-91" src="ConfiguringEndpointSecurity_files/image-m12-c-91.jpg" alt="Figure 5.2 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.2 Screenshot of PLABSYS01: Selecting options for antimalware policy 
+in the Create Antimalware Policy dialog box in System Center 2012 R2 
+Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-736"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-737">Click <b>Schedule Scans</b>.</p>
+<p id="cn-m12-738">Specify the required settings for scheduled scans.</p>
+<p id="cn-m12-739">For this demonstration, keep the default settings.</p>
+<p id="cn-m12-740"></p><figure><img class="cn-img" id="cn-image-m12-c-92" src="ConfiguringEndpointSecurity_files/image-m12-c-92.jpg" alt="Figure 5.3 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.3 Screenshot of PLABSYS01: Scheduling scan in the Create Antimalware 
+Policy dialog box in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-743"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-744">Click <b>Scan Settings</b>.</p>
+<p id="cn-m12-745">Specify the required settings for this policy.</p>
+<p id="cn-m12-746">For this demonstration, keep the default settings.</p>
+<p id="cn-m12-747"></p><figure><img class="cn-img" id="cn-image-m12-c-93" src="ConfiguringEndpointSecurity_files/image-m12-c-93.jpg" alt="Figure 5.4 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.4 Screenshot of PLABSYS01: Configuring scan settings in the Create 
+Antimalware Policy dialog box in System Center 2012 R2 Configuration 
+Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-749"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-750">Click <b>Default actions</b>.</p>
+<p id="cn-m12-751">Specify how Endpoint Protection responds to threats based on the given recommended response.</p>
+<p id="cn-m12-752">For this demonstration, keep the default selections.</p>
+<p id="cn-m12-753"></p><figure><img class="cn-img" id="cn-image-m12-c-94" src="ConfiguringEndpointSecurity_files/image-m12-c-94.jpg" alt="Figure 5.5 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.5 Screenshot of PLABSYS01: Configuring default actions in the Create 
+Antimalware Policy dialog box in System Center 2012 R2 Configuration 
+Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-756"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-757">Click <b>Exclusion Settings</b>.</p>
+<p id="cn-m12-758">Specify the path of the files and folders to exclude from Endpoint Protection scan.</p>
+<p id="cn-m12-759">For this demonstration, keep the default settings.</p>
+<p id="cn-m12-760"></p><figure><img class="cn-img" id="cn-image-m12-c-95" src="ConfiguringEndpointSecurity_files/image-m12-c-95.jpg" alt="Figure 5.6 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.6 Screenshot of PLABSYS01: Configuring exclusion settings in the 
+Create Antimalware Policy dialog box in System Center 2012 R2 
+Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-763"><b><i>Step 9</i></b></h4>
+<p id="cn-m12-764">Click <b>Advanced</b>.</p>
+<p id="cn-m12-765">Specify the required advanced settings.</p>
+<p id="cn-m12-766">For this demonstration, keep the default selections.</p>
+<p id="cn-m12-767"></p><figure><img class="cn-img" id="cn-image-m12-c-96" src="ConfiguringEndpointSecurity_files/image-m12-c-96.jpg" alt="Figure 5.7 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.7 Screenshot of PLABSYS01: Configuring advanced settings in the 
+Create Antimalware Policy dialog box in System Center 2012 R2 
+Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-768"><b><i>Step 10</i></b></h4>
+<p id="cn-m12-769">Click <b>Threat Overrides</b>.</p>
+<p id="cn-m12-770">Customize the remedial action to take for each threat ID when detected during a scan.</p>
+<p id="cn-m12-771">For this demonstration, leave the default setting.</p>
+<p id="cn-m12-772"></p><figure><img class="cn-img" id="cn-image-m12-c-97" src="ConfiguringEndpointSecurity_files/image-m12-c-97.jpg" alt="Figure 5.8 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.8 Screenshot of PLABSYS01: Configuring threat override settings in 
+the Create Antimalware Policy dialog box in System Center 2012 R2 
+Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-774"><b><i>Step 11</i></b></h4>
+<p id="cn-m12-775">Click <b>Microsoft Active Protection Service</b>.</p>
+<p id="cn-m12-776">Specify <b>Microsoft Active Protection Service settings </b>in the <b>Create Antimalware Policy </b>dialog box.</p>
+<p id="cn-m12-777">For this demonstration, enable the following settings:</p>
+<ul id="cn-m12-778">
+<li id="cn-m12-778">In the <b>Microsoft Act Protection Service membership type </b>drop-down, ensure <b>Do not join MAPS </b>is selected.</li>
+<li id="cn-m12-779">In <b>Allow users to modify Microsoft Act Protection Service settings, </b>ensure <b>No </b>is selected.</li>
+</ul>
+<p id="cn-m12-780"></p><figure><img class="cn-img" id="cn-image-m12-c-98" src="ConfiguringEndpointSecurity_files/image-m12-c-98.jpg" alt="Figure 5.9 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.9 Screenshot of PLABSYS01: Enabling settings in the Create 
+Antimalware Policy dialog box in System Center 2012 R2 Configuration 
+Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-782"><b><i>Step 12</i></b></h4>
+<p id="cn-m12-783">Click <b>Definition Updates</b>.</p>
+<p id="cn-m12-784">Specify how Endpoint Protection clients will receive definition updates.</p>
+<p id="cn-m12-785">For this demonstration, keep the default settings.</p>
+<p id="cn-m12-786">Click <b>OK</b>.</p>
+<p id="cn-m12-787"></p><figure><img class="cn-img" id="cn-image-m12-c-99" src="ConfiguringEndpointSecurity_files/image-m12-c-99.jpg" alt="Figure 5.10 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.10 Screenshot of PLABSYS01: Displaying the Create Antimalware Policy 
+dialog box in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-790"><b><i>Step 13</i></b></h4>
+<p id="cn-m12-791">Find the newly created antimalware policy listed in the Antimalware policies page.</p>
+<p id="cn-m12-792"></p><figure><img class="cn-img" id="cn-image-m12-c-100" src="ConfiguringEndpointSecurity_files/image-m12-c-100.jpg" alt="Figure 5.11 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.11 Screenshot of PLABSYS01: Displaying the newly created antimalware 
+policy in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-794"><b><i>Step 14</i></b></h4>
+<p id="cn-m12-795">Deploy the newly created policy.</p>
+<p id="cn-m12-796">Select <b>EPAntimalware policy Servers</b>.</p>
+<p id="cn-m12-797">On the <b>Home </b>tab, in the <b>Deployment </b>group, click <b>Deploy</b>.</p>
+<h4 id="cn-m12-800"><b><i>Step 15</i></b></h4>
+<p id="cn-m12-801">In the <b>Select Collection </b>dialog box, select <b>All Systems </b>and click <b>OK</b>.</p>
+<p id="cn-m12-802"></p><figure><img class="cn-img" id="cn-image-m12-c-101" src="ConfiguringEndpointSecurity_files/image-m12-c-101.jpg" alt="Figure 5.12 Screenshot of PLABSYS01"><figcaption>Figure
+ 5.12 Screenshot of PLABSYS01: Selecting All Systems in the Select 
+Collection dialog box in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="cn-alert" id="cn-m12-805">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-807"><b>Exercise 6 - Configure Custom Client Settings for Endpoint Protection</b></h2>
+<p id="cn-m12-808">In this exercise, you will configure client settings 
+for Endpoint Protection. You can deploy these settings to a collection 
+of computers in the hierarchy.</p>
+<p id="cn-m12-809">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-811">After completing this exercise, you will be able to:</p>
+<ul id="cn-m12-812">
+<li id="cn-m12-812">Configure Client Settings for Endpoint Protection</li>
+<li id="cn-m12-813">Verify the Endpoint Protection Client Installation</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m12-815">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m12-816">
+<li id="cn-m12-816"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m12-817"><b>PLABSYS01 </b>(System Center 2012 Server)</li>
+</ul>
+<p id="cn-m12-818"><img class="cn-img" id="cn-image-m12-c-102" src="ConfiguringEndpointSecurity_files/image-m12-c-102.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m12-822"><b>Task 1 - Configure Client Settings for Endpoint Protection</b></h3>
+<p id="cn-m12-823">For the centralized server to deploy the policies 
+properly, you must configure the policies. For example, if previous 
+updates are installed, the policies can be configured to remove the 
+previous updates. You can always create custom policies to meet your 
+organization’s requirements. In this task, you will create a custom 
+client device setting for Endpoint protection. To do this, perform the 
+following steps:</p>
+<h4 id="cn-m12-824"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-825">In the <b>System Center 2012 R2 Configuration Manager </b>console, click <b>Administration</b>.</p>
+<p id="cn-m12-826"></p><figure><img class="cn-img" id="cn-image-m12-c-103" src="ConfiguringEndpointSecurity_files/image-m12-c-103.jpg" alt="Figure 6.1 Screenshot of PLABSYS01"><figcaption>Figure 6.1 Screenshot of PLABSYS01: Clicking Administration in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-828"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-829">In the <b>Administration </b>workspace, click <b>Client Settings</b>.</p>
+<p id="cn-m12-830"></p><figure><img class="cn-img" id="cn-image-m12-c-104" src="ConfiguringEndpointSecurity_files/image-m12-c-104.jpg" alt="Figure 6.2 Screenshot of PLABSYS01"><figcaption>Figure 6.2 Screenshot of PLABSYS01: Clicking Client Settings in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-832"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-833">On the <b>Home </b>tab, in the <b>Create </b>group, click <b>Create Custom Client Device Settings</b>.</p>
+<h4 id="cn-m12-835"><b><i>Step 4</i></b></h4>
+<p id="cn-m12-836">The <b>Create Custom Client Device Settings </b>dialog box is displayed.</p>
+<p id="cn-m12-837">On the <b>Custom Device Settings </b>page, in the <b>Name </b>box type:</p>
+<pre id="cn-m12-838"><code>Client Settings for Endpoint
+</code></pre>
+<p id="cn-m12-839">Select <b>Endpoint Protection </b>from the list of selections and deselect any other selection.</p>
+<p id="cn-m12-840"></p><figure><img class="cn-img" id="cn-image-m12-c-105" src="ConfiguringEndpointSecurity_files/image-m12-c-105.jpg" alt="Figure 6.3 Screenshot of PLABSYS01"><figcaption>Figure
+ 6.3 Screenshot of PLABSYS01: Selecting Endpoint Protection in Create 
+Custom Client Device Settings  in System Center 2012 R2 Configuration 
+Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-842"><b><i>Step 5</i></b></h4>
+<p id="cn-m12-843">Click <b>Endpoint Protection </b>page.</p>
+<p id="cn-m12-844">On the <b>Custom Device Setting </b>page, from <b>Device Settings </b>section, for <b>Manage Endpoint Protection client on client computers</b>, select <b>Yes</b>.</p>
+<p id="cn-m12-845">Click <b>OK</b>.</p>
+<p id="cn-m12-846"></p><figure><img class="cn-img" id="cn-image-m12-c-106" src="ConfiguringEndpointSecurity_files/image-m12-c-106.jpg" alt="Figure 6.4 Screenshot of PLABSYS01"><figcaption>Figure
+ 6.4 Screenshot of PLABSYS01: Displaying the Create Custom Client Device
+ Settings dialog box in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-847"><b><i>Step 6</i></b></h4>
+<p id="cn-m12-848">Find the newly created client device settings listed. Deploy the client device settings to appropriate collections.</p>
+<p id="cn-m12-849">Select the client device settings.</p>
+<p id="cn-m12-850">On the <b>Home </b>tab, in the <b>Client Settings </b>group, click <b>Deploy</b>.</p>
+<p id="cn-m12-851"></p><figure><img class="cn-img" id="cn-image-m12-c-107" src="ConfiguringEndpointSecurity_files/image-m12-c-107.jpg" alt="Figure 6.5 Screenshot of PLABSYS01"><figcaption>Figure 6.5 Screenshot of PLABSYS01: Clicking the Deploy button from the ribbon in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<h4 id="cn-m12-852"><b><i>Step 7</i></b></h4>
+<p id="cn-m12-853">In the <b>Select Collection </b>dialog box, select <b>All Systems. </b></p>
+<p id="cn-m12-854">Click <b>OK</b>.</p>
+<h4 id="cn-m12-857"><b><i>Step 8</i></b></h4>
+<p id="cn-m12-858">Click the <b>Deployments </b>tab at the bottom pane to view the collection for which the client setting was deployed.</p>
+<p id="cn-m12-859">You have deployed the client device settings to <b>All Systems </b>collection.</p>
+<p id="cn-m12-860">Close <b>Configuration Manager Console</b>.</p>
+<p id="cn-m12-861"></p><figure><img class="cn-img" id="cn-image-m12-c-108" src="ConfiguringEndpointSecurity_files/image-m12-c-108.jpg" alt="Figure 6.6 Screenshot of PLABSYS01"><figcaption>Figure 6.6 Screenshot of PLABSYS01: Displaying the Client Settings tab in System Center 2012 R2 Configuration Manager.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="cn-alert" id="cn-m12-864">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-866"><b>Exercise 7 - Provision Endpoint Protection</b></h2>
+<p id="cn-m12-867">In this exercise, you will learn how to provision the
+ Endpoint Protection client on a computer that is to be used as a disk 
+image source for Configuration Manager operating system deployment. This
+ computer is referred to as a reference computer.</p>
+<p id="cn-m12-868">To get a better understanding of this technology, 
+please refer to your course material or use your preferred search engine
+ to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m12-870">After completing this exercise, you will be able to:</p>
+<ul id="cn-m12-871">
+<li id="cn-m12-871">Configure the Endpoint Protection Client</li>
+<li id="cn-m12-872">Verify the Endpoint Protection Client Installation</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m12-874">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m12-875">
+<li id="cn-m12-875"><b>PLABDC01 </b>(Domain Controller)</li>
+<li id="cn-m12-876"><b>PLABSYS01 </b>(System Center 2012 Server)</li>
+</ul>
+<p id="cn-m12-877"><img class="cn-img" id="cn-image-m12-c-109" src="ConfiguringEndpointSecurity_files/image-m12-c-109.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m12-879"><b>Task 1 - Configure the Endpoint Protection Client</b></h3>
+<p id="cn-m12-880">This demonstration assumes <b>PLABSYS01 </b>as the 
+reference computer. In this task, you will learn how to install the 
+Endpoint Protection client locally from a command prompt using the 
+installation file scepinstall.exe.</p>
+<h4 id="cn-m12-881"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-882">On <b>PLABSYS01</b>, right-click <b>Start </b>and select <b>Command Prompt (Admin</b>).</p>
+<h4 id="cn-m12-884"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-885"><b>Administrator: Command Prompt </b>opens.</p>
+<p id="cn-m12-886">The installation file, <b>scepinstall.exe</b>, is available on the <b>Client </b>folder on the <b>System Center 2012 Configuration Manager </b>installation media. Navigate to the folder.</p>
+<p id="cn-m12-887">Type the following path:</p>
+<pre id="cn-m12-888"><code>cd C:\Program Files\Microsoft Configuration Manager\Client
+</code></pre>
+<p id="cn-m12-889">Press <b>Enter</b>.</p>
+<p id="cn-m12-890"></p><figure><img class="cn-img" id="cn-image-m12-c-110" src="ConfiguringEndpointSecurity_files/image-m12-c-110.jpg" alt="Figure 7.1 Screenshot of PLABSYS01"><figcaption>Figure 7.1 Screenshot of PLABSYS01: Displaying the command prompt window.</figcaption></figure><p></p>
+<h4 id="cn-m12-892"><b><i>Step 3</i></b></h4>
+<p id="cn-m12-893">Type the following command:</p>
+<pre id="cn-m12-894"><code>scepinstall.exe /s
+</code></pre>
+<p id="cn-m12-895">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m12-896"><b><i>Note: </i></b><i>Option ‘s’ in the command specifies that a silent installation will be performed.</i></span>
+<p id="cn-m12-897">The Endpoint Protection client installation completes
+ successfully. The client performs the definition update check 
+automatically.</p>
+<p id="cn-m12-898"><b>Minimize </b>the command prompt window.</p>
+<p id="cn-m12-900"></p><figure><img class="cn-img" id="cn-image-m12-c-111" src="ConfiguringEndpointSecurity_files/image-m12-c-111.jpg" alt="Figure 7.2 Screenshot of PLABSYS01"><figcaption>Figure 7.2 Screenshot of PLABSYS01: Displaying the command prompt window with the executed commands.</figcaption></figure><p></p>
+<h3 id="cn-m12-902"><b>Task 2 - Verify the Endpoint Protection Client Installation</b></h3>
+<p id="cn-m12-903">In this task, you will learn how to verify that the 
+Endpoint Protection Client is installed successfully on the reference 
+computer.</p>
+<h4 id="cn-m12-904"><b><i>Step 1</i></b></h4>
+<p id="cn-m12-905">From the rightmost corner of the taskbar, click <b>Show hidden icons </b>(Windows notification area).</p>
+<p id="cn-m12-906">Then, double-click the <b>PC status: Protected </b>icon to launch <b>System Center Endpoint Protection</b>.</p>
+<p id="cn-m12-907">The <b>System Center Endpoint Protection </b>console opens.</p>
+<span class="cn-quote" id="cn-m12-908"><b><i>Note: </i></b><i>If you get the status as </i><b><i>PC status: Risk </i></b><i>you navigate to the </i><b><i>Update </i></b><i>tab and click Update. The client will then turn Green with the status PC Status: Protected. Click the </i><b><i>Update </i></b><i>tab to begin updating the client. The client will then turn Green with the status PC Status: Protected. </i></span>
+<p id="cn-m12-910"></p><figure><img class="cn-img" id="cn-image-m12-c-112" src="ConfiguringEndpointSecurity_files/image-m12-c-112.jpg" alt="Figure 7.3 Screenshot of PLABSYS01"><figcaption>Figure 7.3 Screenshot of PLABSYS01: Displaying the Home tab of the System Center Endpoint Protection.</figcaption></figure><p></p>
+<h4 id="cn-m12-912"><b><i>Step 2</i></b></h4>
+<p id="cn-m12-913">On the <b>Settings </b>tab, verify that you get the following notification: <b>For your protection, some settings are managed by your security administrator</b>. This confirms that the settings are being rolled by Endpoint Protection.</p>
+<p id="cn-m12-914"></p><figure><img class="cn-img" id="cn-image-m12-c-113" src="ConfiguringEndpointSecurity_files/image-m12-c-113.jpg" alt="Figure 7.4 Screenshot of PLABSYS01"><figcaption>Figure
+ 7.4 Screenshot of PLABSYS01: Displaying the Settings tab of the System 
+Center Endpoint Protection with the notification bar.</figcaption></figure><p></p>
+<span class="atom-code hidden">a7892781-36ea-4a63-a59d-d4d373417931</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m12-918"><b>Review</b></h2>
+<p id="cn-m12-919">Well done, you have completed the <b>Understand and Configure Switching Concepts </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">4577dd18-ea80-47b3-a37a-b3663f7cd063</span>
+<span class="atom-code hidden">a1cde2e8-e159-4416-9ca7-d5f140b7a2a8</span>
+<span class="atom-code hidden">71b56113-a053-43c7-a045-65a1057ed7cc</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m12-927">You completed the following exercises:</p>
+<ul id="cn-m12-928">
+<li id="cn-m12-928">Use anti-virus Programs</li>
+<li id="cn-m12-929">Install and configure an anti-spyware application</li>
+<li id="cn-m12-930">Create an Endpoint Protection site system role</li>
+<li id="cn-m12-931">Configure alerts for Endpoint Protection</li>
+<li id="cn-m12-932">Configure definition updates for Endpoint Protection</li>
+<li id="cn-m12-933">Create and deploy antimalware policies for Endpoint Protection</li>
+<li id="cn-m12-934">Configure custom client settings for Endpoint Protection</li>
+<li id="cn-m12-935">Provision the Endpoint Protection client in a disk image</li>
+</ul>
+<p id="cn-m12-937"><b> </b>You should now be able to:</p>
+<ul id="cn-m12-938">
+<li id="cn-m12-938">Update Windows Defender</li>
+<li id="cn-m12-939">Use an Online Anti-Malware Scanner</li>
+<li id="cn-m12-940">Explore Internet Explorer Browser Security</li>
+<li id="cn-m12-941">Install an Antispyware</li>
+<li id="cn-m12-942">Use SUPERAntiSpyware</li>
+<li id="cn-m12-943">Install an Endpoint Protection Site System Role</li>
+<li id="cn-m12-944">Configure Alerts for Endpoint Protection</li>
+<li id="cn-m12-945">Configure Definition Updates</li>
+<li id="cn-m12-946">Create and Deploy Antimalware Policies for Endpoint Protection</li>
+<li id="cn-m12-947">Configure Client Settings for Endpoint Protection</li>
+<li id="cn-m12-948">Verify the Endpoint Protection Client Installation</li>
+<li id="cn-m12-949">Configure the Endpoint Protection Client</li>
+<li id="cn-m12-950">Verify the Endpoint Protection Client Installation</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m12-954">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

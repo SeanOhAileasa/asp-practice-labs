@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="PerformSecurityAssessmentUsingMBSA_files/print-styles.css" rel="stylesheet">
+    <script src="PerformSecurityAssessmentUsingMBSA_files/jquery.min.js"></script>
+    <script src="PerformSecurityAssessmentUsingMBSA_files/jspdf.js"></script>
+    <script src="PerformSecurityAssessmentUsingMBSA_files/from_html.js"></script>
+    <script src="PerformSecurityAssessmentUsingMBSA_files/addimage.js"></script>
+    <script src="PerformSecurityAssessmentUsingMBSA_files/filesaver.js"></script>
+    <script src="PerformSecurityAssessmentUsingMBSA_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="vjYmnnmJlCUZ19TuSoMQkgrlokSjcCdeNOH+phpWdcqCY96QLdEWeHaGw3bIeAeOmXNmsvPxAjARQTrXmbEggMeaUFYKFSdUS4rypcFgOSw=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Perform Security Assessment Using MBSA</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Introduction to Microsoft Baseline Security Analyzer</li><li>Exercise 2 - Implementing Recommendations</li><li>Exercise 3 - Saving Microsoft Baseline Security Analyzer Reports</li><li>Exercise 4 - Reviewing Configuration Changes</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m17-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>MBSA</div>
+<div>Microsoft Baseline Security Analyzer</div>
+<div>Security</div>
+</div>
+<p id="cn-m17-5">Welcome to the <b>Perform Security Assessment Using MBSA </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m17-9">In this module, you will complete the following exercises:</p>
+<ul id="cn-m17-10">
+<li id="cn-m17-10">Introduction to Microsoft Baseline Security Analyzer</li>
+<li id="cn-m17-11">Implementing Recommendations</li>
+<li id="cn-m17-12">Saving Microsoft Baseline Security Analyzer Reports</li>
+<li id="cn-m17-13">Reviewing Configuration Changes</li>
+</ul>
+<p id="cn-m17-14">After completing this lab, you will be able to:</p>
+<ul id="cn-m17-15">
+<li id="cn-m17-15">Set up MBSA Configuration</li>
+<li id="cn-m17-16">Scan an IP range</li>
+<li id="cn-m17-17">Review the results of the scan</li>
+<li id="cn-m17-18">Clear password settings</li>
+<li id="cn-m17-19">Save a report</li>
+<li id="cn-m17-20">Activate the scanner</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m17-22">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m17-23">
+<li id="cn-m17-23"><b>CAS-003 </b>3.2 Analyze a scenario or output and select the appropriate tool for a security assessment.</li>
+</ul>
+<span class="cn-quote" id="cn-m17-24"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. You recommend referring to course material or a search 
+engine to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m17-26">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m17-30">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m17-31">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m17-33"><b>Lab Topology</b></h2>
+<p id="cn-m17-34">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m17-35">Depending on the exercises you may or may not use all 
+the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m17-36">
+<li id="cn-m17-36"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m17-37"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m17-38"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m17-39"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m17-40"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m17-41"><img class="cn-img" id="cn-image-m17-c-0" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m17-42">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m17-43"><b>Exercise 1 - Introduction to Microsoft Baseline Security Analyzer</b></h2>
+<p id="cn-m17-44">Microsoft Baseline Security Analyzer (MBSA) checks for available updates for:</p>
+<ul id="cn-m17-45">
+<li id="cn-m17-45">The operating system</li>
+<li id="cn-m17-46">Microsoft Data Access Components (MDAC)</li>
+<li id="cn-m17-47">MSXML (Microsoft XML Parser)</li>
+<li id="cn-m17-48">.NET Framework</li>
+<li id="cn-m17-49">SQL Server</li>
+</ul>
+<p id="cn-m17-50">MBSA also scans a computer for insecure configuration 
+settings. When MBSA checks for Windows service packs and patches, it 
+includes in its scan Windows components, such as Internet Information 
+Services (IIS) and COM+.&nbsp;</p>
+<p id="cn-m17-51">To get additional information about using MBSA, please
+ refer to your course material or use your favorite search engine to 
+research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m17-53">After completing this exercise, you will be able to:</p>
+<ul id="cn-m17-54">
+<li id="cn-m17-54">Set up MBSA Configuration</li>
+<li id="cn-m17-55">Scan an IP range</li>
+<li id="cn-m17-56">Review the results of the scan</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m17-58">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m17-59">
+<li id="cn-m17-59"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m17-60"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+</ul>
+<p id="cn-m17-61"><img class="cn-img" id="cn-image-m17-c-1" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m17-62"><b>Task 1 - Setting up MBSA Configuration</b></h3>
+<p id="cn-m17-63">Configuration specifications can take place against a 
+single computer or multiple machines within a domain or range of IP’s. 
+You will be focusing on using an IP range and then focusing on the 
+results of PLABDM01 after the scan has been completed.</p>
+<h4 id="cn-m17-64"><b><i>Step 1 </i></b></h4>
+<p id="cn-m17-65">Ensure all the lab devices stated in the introduction are powered on.</p>
+<p id="cn-m17-66">Connect to <b>PLABDM01</b>.</p>
+<p id="cn-m17-67">Close <b>Server Manager</b>.</p>
+<p id="cn-m17-68">Double-click on the <b>Microsoft Baseline Security Analyzer 2.3 </b>desktop shortcut.</p>
+<p id="cn-m17-69"></p><figure><img class="cn-img" id="cn-image-m17-c-2" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-2.jpg" alt="Figure 1.1 Screenshot of PLABDM01"><figcaption>Figure 1.1 Screenshot of PLABDM01: Displaying the Desktop after login.</figcaption></figure><p></p>
+<h4 id="cn-m17-70"><b><i>Step 2</i></b></h4>
+<p id="cn-m17-71">The <b>Microsoft Baseline Security Analyzer </b>application launches.</p>
+<p id="cn-m17-72">Click on <b>Scan multiple computers</b>.</p>
+<p id="cn-m17-73"></p><figure><img class="cn-img" id="cn-image-m17-c-3" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-3.jpg" alt="Figure 1.2 Screenshot of PLABDM01"><figcaption>Figure 1.2 Screenshot of PLABDM01: Showing the main screen of MBSA.</figcaption></figure><p></p>
+<h4 id="cn-m17-74"><b><i>Step 3</i></b></h4>
+<p id="cn-m17-75">The <b>Which computers do you want to scan? </b>page is displayed.</p>
+<p id="cn-m17-76">In the <b>IP address range </b>field enter the following:</p>
+<pre id="cn-m17-77"><code>192.168.0.1 to 192.168.0.2
+</code></pre>
+<p id="cn-m17-78">You could either enter the details of the computer 
+name you are interested in checking, or enter an IP range to be checked.
+ For example, the device itself is:</p>
+<pre id="cn-m17-79"><code>PLABDM01
+</code></pre>
+<p id="cn-m17-80">Note: You cannot enter values both in the Domain name 
+and IP address range text boxes. You need to enter the values in either 
+one of them. In this instance, you have entered an IP range.</p>
+<p id="cn-m17-81">Click <b>Start Scan</b>.</p>
+<p id="cn-m17-82"></p><figure><img class="cn-img" id="cn-image-m17-c-4" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-4.jpg" alt="Figure 1.3 Screenshot of PLABDM01"><figcaption>Figure
+ 1.3 Screenshot of PLABDM01: Displaying the IP address range being added
+ on the Which computers do you want to scan? window of MBSA.</figcaption></figure><p></p>
+<h3 id="cn-m17-83"><b>Task 2 - Scanning an IP range</b></h3>
+<p id="cn-m17-84">When working on a live system, you can scan for the following problems within a Windows environment:</p>
+<ul id="cn-m17-85">
+<li id="cn-m17-85">Windows administrative vulnerabilities</li>
+<li id="cn-m17-86">Weak passwords</li>
+<li id="cn-m17-87">IIS administrative vulnerabilities</li>
+<li id="cn-m17-88">SQL administrative vulnerabilities</li>
+<li id="cn-m17-89">Security updates</li>
+</ul>
+<p id="cn-m17-90">In this task, you will scan an IP range for vulnerabilities.</p>
+<span class="cn-quote" id="cn-m17-91"><b><i>Note: </i></b><i>Before proceeding with this task, ensure that you have completed the previous task. </i></span>
+<h4 id="cn-m17-92"><b><i>Step 1 </i></b></h4>
+<p id="cn-m17-93">Next, after <b>Start Scan </b>is clicked, the Scanning process starts.</p>
+<span class="cn-quote" id="cn-m17-94"><b><i>Note: </i></b><i>The scanning process may take a while to complete.</i></span>
+<p id="cn-m17-95"></p><figure><img class="cn-img" id="cn-image-m17-c-5" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-5.jpg" alt="Figure 1.4 Screenshot of PLABDM01"><figcaption>Figure 1.4 Screenshot of PLABDM01: MBSA performing the scan.</figcaption></figure><p></p>
+<h4 id="cn-m17-96"><b><i>Step 2</i></b></h4>
+<p id="cn-m17-97">You will notice that Windows begins the scanning 
+process by updating security information and downloading data from the 
+Windows site.</p>
+<p id="cn-m17-98">After a few minutes, a summary of scanned devices will be displayed in descending order.</p>
+<p id="cn-m17-99">You will focus on the results of for <b>PLABDM01</b>.</p>
+<p id="cn-m17-100">Click the <b>PRACTICELABS\PLABDM01 </b>assessment, which is rated as <b>Severe Risk. </b></p>
+<span class="cn-quote" id="cn-m17-101"><b><i>Note: </i></b><i>Scores cannot be changed or reassigned for system configuration checks.</i></span>
+<p id="cn-m17-102"></p><figure><img class="cn-img" id="cn-image-m17-c-6" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-6.jpg" alt="Figure 1.5 Screenshot of PLABDM01"><figcaption>Figure 1.5 Screenshot of PLABDM01: MBSA results summary menu.</figcaption></figure><p></p>
+<h3 id="cn-m17-103"><b>Task 3 - Reviewing the results of the scan</b></h3>
+<p id="cn-m17-104">MBSA generates a report file and sends to the profile directory under the name titled by the MBSA tool.</p>
+<p id="cn-m17-105">The results display several icons:</p>
+<ul id="cn-m17-106">
+<li id="cn-m17-106"><b>A red exclamation mark </b>is used when a critical check has failed (for example, a user has a blank password) for the administrative vulnerability checks.</li>
+<li id="cn-m17-107"><b>A yellow exclamation mark </b>is used when a non-critical check failed (for example, an account has a password that does not expire).</li>
+<li id="cn-m17-108"><b>A green checked mark </b>shows a check pass.</li>
+<li id="cn-m17-109"><b>A blue asterisk </b>presents information on best practice checks (for example, checking if auditing is enabled).</li>
+<li id="cn-m17-110"><b>A blue informational icon </b>is used for checks 
+that simply provide information about the computer that is being scanned
+ (for example, the operating system version of the scanned computer).</li>
+</ul>
+<p id="cn-m17-111">When reviewing security updates:</p>
+<ul id="cn-m17-112">
+<li id="cn-m17-112"><b>A red exclamation mark </b>confirms a security update is missing or a security check was not performed on the scanned computer.</li>
+<li id="cn-m17-113"><b>A yellow X </b>is used for warning messages (for example, the computer does not have the latest service pack or update rollup).</li>
+<li id="cn-m17-114"><b>A blue star </b>is used for informational 
+messages indicating that an update is not available to the computer 
+because it has not been approved on the Update Services server.</li>
+</ul>
+<h4 id="cn-m17-115"><b><i>Step 1</i></b></h4>
+<p id="cn-m17-116">After clicking the outcome of the report for <b>PLABDM01</b>, you can see a generated report for this device.</p>
+<p id="cn-m17-117"></p><figure><img class="cn-img" id="cn-image-m17-c-7" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-7.jpg" alt="Figure 1.6 Screenshot of PLABDM01"><figcaption>Figure 1.6 Screenshot of PLABDM01: MBSA report screen.</figcaption></figure><p></p>
+<h4 id="cn-m17-118"><b><i>Step 2</i></b></h4>
+<p id="cn-m17-119">On each Issue, you will find a <b>Result </b>tab typically providing three options:</p>
+<ul id="cn-m17-120">
+<li id="cn-m17-120">What was scanned</li>
+<li id="cn-m17-121">Result details</li>
+<li id="cn-m17-122">How to correct this</li>
+</ul>
+<span class="cn-quote" id="cn-m17-123"><b><i>Note: </i></b><i>You have 
+deliberately switched off Windows Update. Therefore,the updates that 
+will be collected by the device may not be as numerous as a Windows 
+device that has been receiving updates on a regular basis. </i></span>
+<p id="cn-m17-124">Under the <b>Windows Scan Results - Administrative Vulnerabilities </b>heading, locate <b>Password Expiration</b>.</p>
+<p id="cn-m17-125">There are three tabs that you will explore in turn.</p>
+<p id="cn-m17-126"></p><figure><img class="cn-img" id="cn-image-m17-c-8" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-8.jpg" alt="Figure 1.7 Screenshot of PLABDM01"><figcaption>Figure 1.7 Screenshot of PLABDM01: MBSA report screen.</figcaption></figure><p></p>
+<h4 id="cn-m17-127"><b><i>Step 3</i></b></h4>
+<p id="cn-m17-128">Click <b>What was Scanned </b>next to <b>Password Expiration</b>.</p>
+<p id="cn-m17-129"></p><figure><img class="cn-img" id="cn-image-m17-c-9" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-9.jpg" alt="Figure 1.8 Screenshot of PLABDM01"><figcaption>Figure 1.8 Screenshot of PLABDM01: MBSA report screen - Administrative Vulnerabilities.</figcaption></figure><p></p>
+<p id="cn-m17-130">This will automatically open a page in Internet Explorer where further information can be read.</p>
+<p id="cn-m17-131">MBSA gives us some information about <b>Password Expiration </b>in <b>Internet Explorer </b>with a description of the issue identified.</p>
+<p id="cn-m17-132"></p><figure><img class="cn-img" id="cn-image-m17-c-10" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-10.jpg" alt="Figure 1.9 Screenshot of PLABDM01"><figcaption>Figure 1.9 Screenshot of PLABDM01: MBSA description page of a result.</figcaption></figure><p></p>
+<h4 id="cn-m17-133"><b><i>Step 4</i></b></h4>
+<p id="cn-m17-134">Close the <b>Internet Explorer </b>window. You are back on the MBSA window.</p>
+<p id="cn-m17-135">Next to <b>Password Expiration</b>, click <b>Result Details</b>.</p>
+<p id="cn-m17-136">You are presented with information detailing the user
+ accounts with non-expiring passwords; these accounts will need to be 
+checked.</p>
+<p id="cn-m17-137"></p><figure><img class="cn-img" id="cn-image-m17-c-11" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-11.jpg" alt="Figure 1.10 Screenshot of PLABDM01"><figcaption>Figure 1.10 Screenshot of PLABDM01: MBSA report result details screen.</figcaption></figure><p></p>
+<h4 id="cn-m17-138"><b><i>Step 5</i></b></h4>
+<p id="cn-m17-139">Close the <b>Result Details</b>. You are back on the <b>MBSA </b>window.</p>
+<p id="cn-m17-140">Next to <b>Password Expiration</b>, click <b>How to Correct this</b>.</p>
+<p id="cn-m17-141">In a new <b>Internet Explorer </b>window, <b>Password Expiration </b>details are displayed. This Webpage displays details, such as <b>Caution</b>, <b>Solution</b>, and <b>Instructions</b>. The <b>Instructions </b>section displays the step-wise instructions to clear the password never expires setting on the Windows platforms.</p>
+<p id="cn-m17-142">You will now follow these steps to make sure you are protected against this for the <b>Guest </b>and <b>Administrator </b>accounts.</p>
+<p id="cn-m17-143"></p><figure><img class="cn-img" id="cn-image-m17-c-12" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-12.jpg" alt="Figure 1.11 Screenshot of PLABDM01"><figcaption>Figure 1.11 Screenshot of PLABDM01: MBSA remediation details.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<p id="cn-m17-146">Minimize <b>Internet Explorer </b>and <b>MBSA </b>windows.</p>
+<span class="cn-alert" id="cn-m17-147">Leave the devices in their current states and continue to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m17-148"><b>Exercise 2 - Implementing Recommendations</b></h2>
+<p id="cn-m17-149">Once a result has been confirmed, you must action 
+changes against the configuration recommendations or at least have valid
+ arguments for maintaining the device specifications. Here you will 
+reset the password controls to keep them in line with best practice.</p>
+<p id="cn-m17-150">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m17-152">After completing this exercise, you will be able to:</p>
+<ul id="cn-m17-153">
+<li id="cn-m17-153">Clear password settings</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m17-155">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m17-156">
+<li id="cn-m17-156"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m17-157"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+</ul>
+<p id="cn-m17-158"><img class="cn-img" id="cn-image-m17-c-13" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-13.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m17-159"><b>Task 1 - Clearing password settings</b></h3>
+<p id="cn-m17-160">You begin by tracking down the area where password controls are stored and edited.</p>
+<h4 id="cn-m17-161"><b><i>Step 1 </i></b></h4>
+<p id="cn-m17-162">On <b>PLABDM01</b>, right-click <b>Start</b>, then select <b>Control Panel</b>.</p>
+<p id="cn-m17-163"></p><figure><img class="cn-img" id="cn-image-m17-c-14" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-14.jpg" alt="Figure 2.1 Screenshot of PLABDM01"><figcaption>Figure 2.1 Screenshot of PLABDM01: Control Panel</figcaption></figure><p></p>
+<h4 id="cn-m17-164"><b><i>Step 2</i></b></h4>
+<p id="cn-m17-165">Click <b>System and Security</b>.</p>
+<h4 id="cn-m17-166"><b><i>Step 3</i></b></h4>
+<p id="cn-m17-167">The <b>Administrative Tools </b>option is located at the bottom of the right pane.</p>
+<p id="cn-m17-168">Click <b>Administrative Tools</b>.</p>
+<span class="cn-quote" id="cn-m17-169"><b><i>Note: </i></b><i>Alternatively,
+ you can search for the Administrative tool with the search bar of 
+windows if preferred. Sometimes this can be faster and less convoluted. </i></span>
+<p id="cn-m17-170"></p><figure><img class="cn-img" id="cn-image-m17-c-15" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-15.jpg" alt="Figure 2.2 Screenshot of PLABDM01"><figcaption>Figure 2.2 Screenshot of PLABDM01: Systems and Security panel.</figcaption></figure><p></p>
+<h4 id="cn-m17-171"><b><i>Step 4</i></b></h4>
+<p id="cn-m17-172">The Administrative Tools window opens.</p>
+<p id="cn-m17-173">Now, double-click <b>Computer Management</b>.</p>
+<p id="cn-m17-174"></p><figure><img class="cn-img" id="cn-image-m17-c-16" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-16.jpg" alt="Figure 2.3 Screenshot of PLABDM01"><figcaption>Figure 2.3 Screenshot of PLABDM01: Administrative Tools panel.</figcaption></figure><p></p>
+<h4 id="cn-m17-175"><b><i>Step 5</i></b></h4>
+<p id="cn-m17-176">The <b>Computer Management </b>window is displayed.</p>
+<p id="cn-m17-177">Expand the <b>Local Users and Groups </b>node in the left pane, and then click the <b>Users </b>folder to display the accounts for <b>Administrator </b>and <b>Guest</b>.</p>
+<p id="cn-m17-178"></p><figure><img class="cn-img" id="cn-image-m17-c-17" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-17.jpg" alt="Figure 2.4 Screenshot of PLABDM01"><figcaption>Figure 2.4 Screenshot of PLABDM01: Computer Management interface.</figcaption></figure><p></p>
+<h4 id="cn-m17-179"><b><i>Step 6</i></b></h4>
+<p id="cn-m17-180">In the left pane, right-click <b>Guest </b>and select <b>Properties</b>.</p>
+<p id="cn-m17-181">On the <b>General </b>tab of the <b>Guest Properties </b>dialog box, deselect the <b>Password never expires </b>option.</p>
+<p id="cn-m17-182">Click <b>OK</b>.</p>
+<p id="cn-m17-183"></p><figure><img class="cn-img" id="cn-image-m17-c-18" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-18.jpg" alt="Figure 2.5 Screenshot of PLABDM01"><figcaption>Figure 2.5 Screenshot of PLABDM01: Guest Properties being accessed to change the Password Expiration.</figcaption></figure><p></p>
+<h4 id="cn-m17-184"><b><i>Step 7</i></b></h4>
+<p id="cn-m17-185">Perform the same actions for the <b>Administrator </b>role.</p>
+<p id="cn-m17-186"></p><figure><img class="cn-img" id="cn-image-m17-c-19" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-19.jpg" alt="Figure 2.6 Screenshot of PLABDM01"><figcaption>Figure 2.6 Screenshot of PLABDM01: Administrator Properties being accessed to change the Password Expiration.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<h4 id="cn-m17-189"><b><i>Step 8</i></b></h4>
+<p id="cn-m17-190">As seen above you have now completed those security actions for both the <b>Guest </b>and <b>Administrator </b>user accounts.</p>
+<p id="cn-m17-191">Close <b>Computer Management</b>.</p>
+<p id="cn-m17-192"><b>Minimize </b>all other open windows.</p>
+<span class="cn-alert" id="cn-m17-193">Leave the devices in their current states and continue to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m17-194"><b>Exercise 3 - Saving Microsoft Baseline Security Analyzer Reports</b></h2>
+<p id="cn-m17-195">Reports are a key feature of the audit trail; here 
+you are auditing the configuration a server device and logging the 
+information for the situation in the future where accountability is a 
+necessity for tracking changes to the network topology.</p>
+<p id="cn-m17-196">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m17-198">After completing this exercise, you will be able to:</p>
+<ul id="cn-m17-199">
+<li id="cn-m17-199">Save a report</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m17-201">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m17-202">
+<li id="cn-m17-202"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m17-203"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+</ul>
+<p id="cn-m17-204"><img class="cn-img" id="cn-image-m17-c-20" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-20.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m17-205"><b>Task 1 - Saving the report</b></h3>
+<p id="cn-m17-206">In this task, you will save a generated report as an XPS document, which is an open format designed and supported by Microsoft.</p>
+<h4 id="cn-m17-207"><b><i>Step 1 </i></b></h4>
+<p id="cn-m17-208">On <b>PLABDM01</b>, invoke the <b>MBSA </b>console.</p>
+<p id="cn-m17-209">Click on the <b>Print this report </b>button, located towards the bottom left-hand corner of the application.</p>
+<p id="cn-m17-210">You will print the report to a file since the lab environment does not have a printer.</p>
+<p id="cn-m17-211"></p><figure><img class="cn-img" id="cn-image-m17-c-21" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-21.jpg" alt="Figure 3.1 Screenshot of PLABDM01"><figcaption>Figure 3.1 Screenshot of PLABDM01: MBSA menu screen with Print this report found bottom left.</figcaption></figure><p></p>
+<h4 id="cn-m17-212"><b><i>Step 2</i></b></h4>
+<p id="cn-m17-213">In the <b>Print </b>dialog box, <b>Microsoft XPS Document Writer </b>is selected by default.</p>
+<p id="cn-m17-214">Click <b>Print</b>.</p>
+<p id="cn-m17-215"></p><figure><img class="cn-img" id="cn-image-m17-c-22" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-22.jpg" alt="Figure 3.2 Screenshot of PLABDM01"><figcaption>Figure 3.2 Screenshot of PLABDM01: MBSA print interface.</figcaption></figure><p></p>
+<h4 id="cn-m17-216"><b><i>Step 3</i></b></h4>
+<p id="cn-m17-217">Name the file <b>PLABDM01</b>, keep the extension as .<b>oxps </b>and click <b>Save </b>to save the file to the <b>Documents </b>folder.</p>
+<p id="cn-m17-218"></p><figure><img class="cn-img" id="cn-image-m17-c-23" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-23.jpg" alt="Figure 3.3 Screenshot of PLABDM01"><figcaption>Figure 3.3 Screenshot of PLABDM01: Saving the file in the Documents folder.</figcaption></figure><p></p>
+<h4 id="cn-m17-219"><b><i>Step 4</i></b></h4>
+<p id="cn-m17-220">From the Windows taskbar, click File Explorer and navigate to the <b>Documents </b>folder.</p>
+<p id="cn-m17-221">Double-click the <b>PLABDM01 </b>file to read the output of the report.</p>
+<span class="cn-quote" id="cn-m17-222"><b><i>Note: </i></b><i>The 
+results file is a part of the auditing performed against windows 
+machines, and typically, it would be kept as a record of actions that 
+have been taken and recognized. It will provide a verbose amount of 
+information. For example, it displays the list of Windows updates that 
+need to be updated on </i><b><i>PLABDM01</i></b><i>. </i></span>
+<p id="cn-m17-223"></p><figure><img class="cn-img" id="cn-image-m17-c-24" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-24.jpg" alt="Figure 3.4 Screenshot of PLABDM01"><figcaption>Figure 3.4 Screenshot of PLABDM01: Opening the MBSA report in XPS viewer.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<p id="cn-m17-226">Close the <b>PLABDM01.oxps </b>file.</p>
+<span class="cn-alert" id="cn-m17-227">Leave the devices in their current states and continue to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m17-228"><b>Exercise 4 - Reviewing Configuration Changes</b></h2>
+<p id="cn-m17-229">Once changes have been made to the device, these need
+ to be checked by MBSA to see that they pass the configuration 
+requirements. Therefore, you will move through these steps more briskly 
+to complete this requirement.</p>
+<p id="cn-m17-230">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m17-232">After completing this exercise, you will be able to:</p>
+<ul id="cn-m17-233">
+<li id="cn-m17-233">Activate the scanner</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m17-235">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m17-236">
+<li id="cn-m17-236"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m17-237"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+</ul>
+<p id="cn-m17-238"><img class="cn-img" id="cn-image-m17-c-25" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-25.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m17-239"><b>Task 1 - Activate the scanner</b></h3>
+<p id="cn-m17-240">Maximize the scanner and use the <b>Back </b>button to navigate through the screen results to the Start Scan page where you placed the IP range into the device.</p>
+<h4 id="cn-m17-241"><b><i>Step 1</i></b></h4>
+<p id="cn-m17-242">On <b>PLABDM01</b>, ensure the <b>MBSA </b>window is open. Navigate back to the <b>main screen </b>of MBSA.</p>
+<p id="cn-m17-243">Click <b>Scan multiple computers</b>.</p>
+<span class="cn-quote" id="cn-m17-244"><b><i>Note: </i></b><i>The IP address range is already defined from the previous scan.</i></span>
+<p id="cn-m17-245">Now, click <b>Start Scan </b>again to activate the scan.</p>
+<p id="cn-m17-246"></p><figure><img class="cn-img" id="cn-image-m17-c-26" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-26.jpg" alt="Figure 4.1 Screenshot of PLABDM01"><figcaption>Figure 4.1 Screenshot of PLABDM01: Reactivating the scanner in MBSA window.</figcaption></figure><p></p>
+<h4 id="cn-m17-247"><b><i>Step 2 </i></b></h4>
+<p id="cn-m17-248">The scan window will be displayed.</p>
+<span class="cn-quote" id="cn-m17-249"><b><i>Note: </i></b><i>The scanning process may take a while to complete.</i></span>
+<p id="cn-m17-250">After the scanning process is complete, the result window will be displayed.</p>
+<p id="cn-m17-251">In the result window, click <b>PRACTICELABS\PLABDM01</b>. The report for <b>PLABDM01 </b>is displayed.</p>
+<p id="cn-m17-252">Again, scroll to the area where you see the results for <b>Administrative Vulnerabilities</b>, if all was completed correctly, you should no longer see that issue.</p>
+<p id="cn-m17-253">Again, following the previous procedure, if you look at the scan results, the <b>Password Expiration </b>is now marked with a green tick. This result shows that you have configured the requirement correctly.</p>
+<p id="cn-m17-254"></p><figure><img class="cn-img" id="cn-image-m17-c-27" src="PerformSecurityAssessmentUsingMBSA_files/image-m17-c-27.jpg" alt="Figure 4.2 Screenshot of PLABDM01"><figcaption>Figure 4.2 Screenshot of PLABDM01: MBSA window displaying the results again.</figcaption></figure><p></p>
+<span class="atom-code hidden">3d9412db-3fcc-4499-a79c-422150866a6f</span>
+<p id="cn-m17-257">Close all open windows.</p>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m17-259"><b>Review</b></h2>
+<p id="cn-m17-260">Well done, you have completed the <b>Perform Security Assessment Using MBSA </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">d65f640e-210e-4fe2-827c-588ae4a16143</span>
+<span class="atom-code hidden">72f35ce0-86e9-40c5-98a9-f7be36c2f0df</span>
+<span class="atom-code hidden">e7fca0b0-63f3-4f88-a98b-b043dade7dac</span>
+<span class="atom-code hidden">535fa5c8-c16f-4b3d-951d-4dd8d2e19abe</span>
+<span class="atom-code hidden">c80fdebe-3af3-4cdf-80ff-d92218a514b2</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m17-270">You completed the following exercises:</p>
+<ul id="cn-m17-271">
+<li id="cn-m17-271">Introduction to Microsoft Baseline Security Analyzer</li>
+<li id="cn-m17-272">Implementing Recommendations</li>
+<li id="cn-m17-273">Saving Microsoft Baseline Security Analyzer Reports</li>
+<li id="cn-m17-274">Reviewing Configuration Changes</li>
+</ul>
+<p id="cn-m17-275">You should now be able to:</p>
+<ul id="cn-m17-276">
+<li id="cn-m17-276">Set up MBSA Configuration</li>
+<li id="cn-m17-277">Scan an IP range</li>
+<li id="cn-m17-278">Review the results of the scan</li>
+<li id="cn-m17-279">Clear password settings</li>
+<li id="cn-m17-280">Save a report</li>
+<li id="cn-m17-281">Activate the scanner</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m17-285">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/print-styles.css" rel="stylesheet">
+    <script src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/jquery.min.js"></script>
+    <script src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/jspdf.js"></script>
+    <script src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/from_html.js"></script>
+    <script src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/addimage.js"></script>
+    <script src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/filesaver.js"></script>
+    <script src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="rZSoBD/E/sp3T2PHjGEPH69g0FwQuOYFeRvQmyxfC4avAD6RRt5G2hjiLFLs1IyEPLh6IxqGRyKVT4NRpptR0Bq0fjoYwFVmCPCkbV6zsR4=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Configure Verify and Troubleshoot GRE Tunnel Connectivity</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Configure Static and Dynamic Port Security</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m24-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>GRE Tunnel</div>
+</div>
+<p id="cn-m24-3">Welcome to the <b>Configure Verify and Troubleshoot GRE Tunnel Connectivity </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m24-7">In this module, you will complete the following exercises:</p>
+<ul id="cn-m24-8">
+<li id="cn-m24-8">Configuring a GRE Tunnel</li>
+</ul>
+<p id="cn-m24-9">After completing this lab, you will be able to:</p>
+<ul id="cn-m24-10">
+<li id="cn-m24-10">Create a GRE Tunnel</li>
+<li id="cn-m24-11">Enable Routing</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m24-13">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m24-14">
+<li id="cn-m24-14"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+<li id="cn-m24-15"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+<li id="cn-m24-16"><b>CAS-003 3.1 </b>Given a scenario, conduct a security assessment using the appropriate methods.</li>
+<li id="cn-m24-17"><b>CAS-003 4.1 </b>Given a scenario, integrate hosts, storage, networks and applications into a secure enterprise architecture.</li>
+</ul>
+<span class="cn-quote" id="cn-m24-18"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m24-20">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">224291c3-27b3-42c4-b914-fb1c51bbd8ff</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m24-24">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m24-25">Click <b>Next </b>to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m24-27"><b>Lab Topology</b></h2>
+<p id="cn-m24-28">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m24-29">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m24-30">
+<li id="cn-m24-30"><b>NYEDGE1 </b>(CISCO2911/K9)</li>
+<li id="cn-m24-31"><b>NYEDGE2 </b>(CISCO2911/K9)</li>
+<li id="cn-m24-32"><b>NYWAN1 </b>(CISCO2911)</li>
+</ul>
+<p id="cn-m24-33"><img class="cn-img" id="cn-image-m24-c-0" src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/image-m24-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m24-34">Click <b>Next </b>to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m24-35"><b>Exercise 1 - Configure Static and Dynamic Port Security</b></h2>
+<p id="cn-m24-36"><b>GRE </b>tunnels don’t just have to run across the <b>Internet</b>; you can use them to join networks that couldn’t normally occur, perhaps enabling <b>dynamic </b>routing across a firewall for example. <b>GRE </b>tunnels can solve a few headaches in the real world so understanding them is very important.</p>
+<p id="cn-m24-37">One important point to note about <b>GRE </b>tunnels is that they do not inherently encrypt data. Everything that is sent across the tunnel is simply wrapped in <b>GRE ‘</b>packets’,
+ if you like. You will solve this issue in the next exercise by 
+encrypting the data that is passed over the tunnel. This is especially 
+important when creating a <b>GRE </b>tunnel over insecure networks such as the <b>Internet</b>.</p>
+<p id="cn-m24-38">In this exercise, you will create a GRE tunnel between
+ NYEDGE2 and NYWAN1. NYEDGE1 will the router that joins the two 
+environments together, simulating the Internet.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m24-40">After completing this exercise, you will be able to:</p>
+<ul id="cn-m24-41">
+<li id="cn-m24-41">Create a GRE Tunnel</li>
+<li id="cn-m24-42">Enable Routing</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m24-44">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m24-45">
+<li id="cn-m24-45"><b>NYEDGE1 </b>(CISCO2911/K9)</li>
+<li id="cn-m24-46"><b>NYEDGE2 </b>(CISCO2911/K9)</li>
+<li id="cn-m24-47"><b>NYWAN1 </b>(CISCO2911)</li>
+</ul>
+<p id="cn-m24-48"><img class="cn-img" id="cn-image-m24-c-1" src="ConfigureVerifyandTroubleshootGRETunnelConnectivity_files/image-m24-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m24-49"><b>Task 1 - Create a GRE Tunnel</b></h3>
+<p id="cn-m24-50">The purpose of the GRE tunnel is to enable the LAN attached to <b>NYEDGE2 </b>with a network address of <b>192.168.17.0/24 </b>and the LAN attached to <b>NYWAN1 </b>with a network address of <b>192.168.16.0/24 </b>to be able to communicate. To do this, perform the following steps:</p>
+<h4 id="cn-m24-51"><b><i>Step 1</i></b></h4>
+<p id="cn-m24-52">Configure the tunnel interface on <b>NYWAN1</b>. To do this, you will require the following information:</p>
+<ul id="cn-m24-53">
+<li id="cn-m24-53">Tunnel source interface</li>
+<li id="cn-m24-54">Tunnel IP Address</li>
+<li id="cn-m24-55">Destination IP Address</li>
+</ul>
+<p id="cn-m24-56">Looking at <b>NYWAN1 </b>in the diagram, confirm that the following satisfies these requirements:</p>
+<ul id="cn-m24-57">
+<li id="cn-m24-57">Serial 0/1/0</li>
+<li id="cn-m24-58">172.16.16.1</li>
+<li id="cn-m24-59">193.177.16.10</li>
+</ul>
+<p id="cn-m24-60">Create the <b>tunnel 0 </b>interface in the <b>NYWAN1 </b>router with the above information:</p>
+<p id="cn-m24-61">NYWAN1#configure terminal</p>
+<p id="cn-m24-62">Enter the configuration commands below, one per line. End with CNTL/Z.</p>
+<pre id="cn-m24-63"><code>NYWAN1(config)#interface tunnel 0
+*Sep 28 16:53:08.239: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to down
+NYWAN1(config-if)#ip address 172.16.16.1 255.255.255.0
+NYWAN1(config-if)#tunnel source serial 0/1/0
+NYWAN1(config-if)#tunnel destination 193.177.16.10
+NYWAN1(config-if)#exit
+NYWAN1(config)#
+*Sep 28 16:53:36.555: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to up
+NYWAN1(config)#
+</code></pre>
+<h4 id="cn-m24-73"><b><i>Step 2</i></b></h4>
+<p id="cn-m24-74">Next, create the tunnel interface on <b>NYEDGE2</b>, in the same way you did on the <b>NYWAN1 </b>router, using the following information:</p>
+<ul id="cn-m24-75">
+<li id="cn-m24-75">Tunnel source interface <b>Serial 0/0/0</b></li>
+<li id="cn-m24-76">Tunnel IP Address <b>172.16.16.2</b></li>
+<li id="cn-m24-77">Destination IP Address <b>193.188.16.10</b></li>
+</ul>
+<p id="cn-m24-78">NYEDGE2#configure terminal</p>
+<p id="cn-m24-79">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m24-80"><code>NYEDGE2(config)#interface tunnel 0
+NYEDGE2(config-if)#ip address 172.16.16.2 255.255.255.0
+NYEDGE2(config-if)#
+*Sep 28 16:52:59.771: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to down
+NYEDGE2(config-if)#tunnel source serial 0/0/0
+NYEDGE2(config-if)#tunnel destination 193.188.16.10
+NYEDGE2(config-if)#exit
+NYEDGE2(config)#
+*Sep 28 16:53:38.327: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, changed state to up
+NYEDGE2(config)#
+</code></pre>
+<p id="cn-m24-90">The syslog messages indicate that the tunnel has successfully been created.</p>
+<h3 id="cn-m24-91"><b>Task 2 - Enable Routing</b></h3>
+<p id="cn-m24-92">Now in most cases, when building a <b>GRE </b>tunnel, you will require the use of multicast over this link. To test this, build an <b>EIGRP AS </b>over the network to try and get the <b>192.168.16.0/24 </b>and <b>192.168.17.0/24 </b>networks added to the routing tables of both routers. To do this, perform the following steps:</p>
+<h4 id="cn-m24-93"><b><i>Step 1</i></b></h4>
+<p id="cn-m24-94">Create an <b>EIGRP AS 800 </b>on <b>NYWAN1 </b>and add in the subnets for the <b>GigabitEthernet 0/0 </b>and <b>Tunnel0 </b>interfaces:</p>
+<p id="cn-m24-95">NYWAN1#configure terminal</p>
+<p id="cn-m24-96">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m24-97"><code>NYWAN1(config)#router eigrp 800
+NYWAN1(config-router)#network 192.168.16.0
+NYWAN1(config-router)#network 172.16.16.0 0.0.0.255
+NYWAN1(config-router)#no auto
+NYWAN1(config-router)#no auto-summary
+NYWAN1(config-router)#exit
+NYWAN1(config)#exit
+NYWAN1#
+</code></pre>
+<h4 id="cn-m24-105"><b><i>Step 2</i></b></h4>
+<p id="cn-m24-106">Do the same on <b>NYEDGE2 </b>with its respective networks:</p>
+<p id="cn-m24-107">NYEDGE2#configure terminal</p>
+<p id="cn-m24-108">Enter configuration commands, one per line.  End with CNTL/Z.</p>
+<pre id="cn-m24-109"><code>NYEDGE2(config)#router eigrp 800
+NYEDGE2(config-router)#network 192.168.17.0
+NYEDGE2(config-router)#network 172.16.16.0 0.0.0.255
+NYEDGE2(config-router)#
+*Sep 28 17:04:12.839: %DUAL-5-NBRCHANGE: EIGRP-IPv4 800: Neighbor 172.16.16.1 (Tunnel0) is up: new adjacency
+NYEDGE2(config-router)#no auto-summary
+NYEDGE2(config-router)#exit
+NYEDGE2(config)#exit
+NYEDGE2#
+</code></pre>
+<p id="cn-m24-118">Notice the neighbor adjacency that is created that is indicated by the syslog message.</p>
+<h4 id="cn-m24-119"><b><i>Step 3</i></b></h4>
+<p id="cn-m24-120">Confirm that the networks have been propagated to both routers. Start with <b>NYEDGE2</b>:</p>
+<pre id="cn-m24-121"><code>NYEDGE2#show ip route eigrp | begin Gateway
+Gateway of last resort is 193.177.16.1 to network 0.0.0.0
+D     192.168.16.0/24 [90/26882560] via 172.16.16.1, 00:02:35, Tunnel0
+NYEDGE2#
+</code></pre>
+<p id="cn-m24-125">The <b>192.168.16.0 </b>network which is directly connected to the <b>NYWAN1 </b>router has indeed been advertised to the <b>NYEDGE2 </b>router via <b>EIGRP </b>through the <b>GRE </b>tunnel.</p>
+<h4 id="cn-m24-126"><b><i>Step 4</i></b></h4>
+<p id="cn-m24-127">Similarly, examine the routing table on <b>NYWAN1</b>:</p>
+<pre id="cn-m24-128"><code>NYWAN1#show ip route eigrp | begin Gateway
+Gateway of last resort is 193.188.16.1 to network 0.0.0.0
+D     192.168.17.0/24 [90/26882560] via 172.16.16.2, 00:04:53, Tunnel0
+NYWAN1#
+</code></pre>
+<p id="cn-m24-132">The <b>192.168.17.0 </b>network, which is directly connected to the <b>NYEDGE2 </b>router, has indeed been advertised to the <b>NYWAN1 </b>router via <b>EIGRP </b>through the <b>GRE </b>tunnel.</p>
+<h4 id="cn-m24-133"><b><i>Step 5</i></b></h4>
+<p id="cn-m24-134">Confirm that you can also ping across the link from <b>NYWAN1 </b>to <b>NYEDGE2</b>:</p>
+<pre id="cn-m24-135"><code>NYWAN1#ping 192.168.17.5
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.17.5, timeout is 2 seconds:
+.!!!!
+Success rate is 80 percent (4/5), round-trip min/avg/max = 1/4/8 ms
+NYWAN1#
+</code></pre>
+<p id="cn-m24-141">The ping is successful.</p>
+<p id="cn-m24-142">You have successfully created a GRE tunnel between <b>NYWAN1 </b>and <b>NYEDGE2</b>.</p>
+<p id="cn-m24-143">You have successfully completed this lab.</p>
+<span class="atom-code hidden">e6e083cf-eec0-42e8-8fff-efa0ad14aafd</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m24-147"><b>Review</b></h2>
+<p id="cn-m24-148">Well done, you have completed the <b>Configuring a GRE Tunnel </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">d40c4353-a57a-41a7-abb9-c812264194d7</span>
+<span class="atom-code hidden">33b61a44-c7bf-4958-b06f-648c47940629</span>
+<span class="atom-code hidden">313b68b4-cd4d-49a6-ade4-997f6dedb0d3</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m24-155">You completed the following exercises:</p>
+<ul id="cn-m24-156">
+<li id="cn-m24-156">Configuring a GRE Tunnel</li>
+</ul>
+<p id="cn-m24-157">After completing this lab, you will be able to:</p>
+<ul id="cn-m24-158">
+<li id="cn-m24-158">Create a GRE Tunnel</li>
+<li id="cn-m24-159">Enable Routing</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m24-163">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

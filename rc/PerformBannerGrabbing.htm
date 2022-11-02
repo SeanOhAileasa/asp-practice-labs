@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="PerformBannerGrabbing_files/print-styles.css" rel="stylesheet">
+    <script src="PerformBannerGrabbing_files/jquery.min.js"></script>
+    <script src="PerformBannerGrabbing_files/jspdf.js"></script>
+    <script src="PerformBannerGrabbing_files/from_html.js"></script>
+    <script src="PerformBannerGrabbing_files/addimage.js"></script>
+    <script src="PerformBannerGrabbing_files/filesaver.js"></script>
+    <script src="PerformBannerGrabbing_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="e6xzJlpmexQ4RTLa9yFDorby++P2ks3eNj1iVsvA4Nx/ZTr/C0YwWr4hQgo9aJrgPiLqWIAvRrQPtCereLvB952rYUppaK2+Nj7sITBzuYY=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Perform Banner Grabbing</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Performing Banner Grabbing</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m27-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Banner Grabbing</div>
+<div>Telnet</div>
+<div>Netcat</div>
+<div>Nmap</div>
+</div>
+<p id="cn-m27-6">Welcome to the <b>Perform Banner Grabbing </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m27-10">In this module, you will complete the following exercises:</p>
+<ul id="cn-m27-11">
+<li id="cn-m27-11">Performing Banner Grabbing</li>
+</ul>
+<p id="cn-m27-12">After completing this lab, you will be able to:</p>
+<ul id="cn-m27-13">
+<li id="cn-m27-13">Enable HTTP Web Service on PLABSA01</li>
+<li id="cn-m27-14">Perform Banner Grabbing using Telnet</li>
+<li id="cn-m27-15">Perform Banner Grabbing using Netcat</li>
+<li id="cn-m27-16">Perform Banner Grabbing using Nmap</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m27-18">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m27-19">
+<li id="cn-m27-19"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+<li id="cn-m27-20"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+<li id="cn-m27-21"><b>CAS-003 </b>3.2 Analyze a scenario or output and select the appropriate tool for a security assessment.</li>
+</ul>
+<span class="cn-quote" id="cn-m27-22"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m27-24">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">224291c3-27b3-42c4-b914-fb1c51bbd8ff</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m27-28">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m27-29">Click <b>Next </b>to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m27-31"><b>Lab Topology</b></h2>
+<p id="cn-m27-32">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m27-33">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m27-34">
+<li id="cn-m27-34"><b>PLABSA01 </b>(Windows XAMPP Web Server DVWA- Firewall OFF)</li>
+<li id="cn-m27-35"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m27-36"><b>PLABWIN10 </b>(Windows 10)</li>
+</ul>
+<p id="cn-m27-37"><img class="cn-img" id="cn-image-m27-c-0" src="PerformBannerGrabbing_files/image-m27-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m27-38">Click <b>Next </b>to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m27-39"><b>Exercise 1 - Performing Banner Grabbing</b></h2>
+<p id="cn-m27-40">Banners are text-based welcome screens from remote 
+hosts that display system information. Banner grabbing enables you to 
+retrieve information about a computer system on a network and capture 
+banners of open ports. You can perform banner grabbing using tools such 
+as Telnet, Netcat, and Nmap.</p>
+<p id="cn-m27-41">In this exercise, you will grab banners served by the 
+DVWA application running on port 80 on the PLABSA01 device. You will use
+ Telnet, Netcat and Nmap to perform this technique.</p>
+<p id="cn-m27-42">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m27-44">After completing this exercise, you will be able to:</p>
+<ul id="cn-m27-45">
+<li id="cn-m27-45">Enable HTTP Web Service on PLABSA01</li>
+<li id="cn-m27-46">Perform Banner Grabbing using Telnet</li>
+<li id="cn-m27-47">Perform Banner Grabbing using Netcat</li>
+<li id="cn-m27-48">Perform Banner Grabbing using Nmap</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m27-50">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m27-51">
+<li id="cn-m27-51"><b>PLABSA01 </b>(Windows XAMPP Web Server DVWA- Firewall OFF)</li>
+<li id="cn-m27-52"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m27-53"><b>PLABWIN10 </b>(Windows 10)</li>
+</ul>
+<p id="cn-m27-54"><img class="cn-img" id="cn-image-m27-c-1" src="PerformBannerGrabbing_files/image-m27-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m27-55"><b>Task 1 - Enable HTTP Web Service on PLABSA01</b></h3>
+<p id="cn-m27-56">In this task, you will enable the HTTP web service on port 80 on the PLABSA01 device. To do this, perform the following steps:</p>
+<h4 id="cn-m27-57"><b><i>Step 1</i></b></h4>
+<p id="cn-m27-58">Ensure you have powered on the required devices and connect to <b>PLABSA01</b>.</p>
+<p id="cn-m27-59">Close the <b>Server Manager </b>window.</p>
+<p id="cn-m27-60">Click the <b>XAMPP </b>application icon from the taskbar.</p>
+<p id="cn-m27-61">The <b>XAMP Control Panel v3.2.2 </b>opens.</p>
+<p id="cn-m27-62">The <b>Apache </b>web service with <b>Damn Vulnerable Web Application (DVWA) </b>running on port 80 is enabled.</p>
+<p id="cn-m27-63"></p><figure><img class="cn-img" id="cn-image-m27-c-2" src="PerformBannerGrabbing_files/image-m27-c-2.jpg" alt="Figure 1.1 Screenshot of PLABSA01"><figcaption>Figure 1.1 Screenshot of PLABSA01: XAMPP application is started.</figcaption></figure><p></p>
+<h4 id="cn-m27-64"><b><i>Step 2</i></b></h4>
+<p id="cn-m27-65">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m27-66">Open <b>Internet Explorer </b>from the taskbar.</p>
+<p id="cn-m27-67">To access the DVWA application on <b>PLABSA01</b>, type the following URL in the address bar and press <b>Enter</b>:</p>
+<pre id="cn-m27-68"><code>http://192.168.0.1/dvwa/login.php
+</code></pre>
+<p id="cn-m27-69">DVWA login page opens.</p>
+<p id="cn-m27-70"></p><figure><img class="cn-img" id="cn-image-m27-c-3" src="PerformBannerGrabbing_files/image-m27-c-3.jpg" alt="Figure 1.2 Screenshot of PLABWIN10"><figcaption>Figure 1.2 Screenshot of PLABWIN10: DVWA application running on PLABSA01 is accessed, and the DVWA login page is displayed.</figcaption></figure><p></p>
+<p id="cn-m27-71">Minimize <b>Internet Explorer</b>.</p>
+<h3 id="cn-m27-72"><b>Task 2 - Perform Banner Grabbing using Telnet</b></h3>
+<p id="cn-m27-73">In this task, you will use telnet to grab banners served by the DVWA application.</p>
+<h4 id="cn-m27-74"><b><i>Step 1</i></b></h4>
+<p id="cn-m27-75">Ensure you have powered on the required devices and connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m27-76">Type <b>root </b>in the <b>Username </b>field.</p>
+<p id="cn-m27-77">Type the following password in the <b>Password </b>field.</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m27-79">Click <b>Log In.</b></p>
+<p id="cn-m27-80"></p><figure><img class="cn-img" id="cn-image-m27-c-4" src="PerformBannerGrabbing_files/image-m27-c-4.jpg" alt="Figure 1.3 Screenshot of PLABKALI01"><figcaption>Figure 1.3 Screenshot of PLABKALI01: Login screen is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m27-81"><b><i>Step 2</i></b></h4>
+<p id="cn-m27-82">The PLABKALI01 <b>desktop </b>is displayed.</p>
+<p id="cn-m27-83"></p><figure><img class="cn-img" id="cn-image-m27-c-5" src="PerformBannerGrabbing_files/image-m27-c-5.jpg" alt="Figure 1.4 Screenshot of PLABKALI01"><figcaption>Figure 1.4 Screenshot of PLABKALI01: Desktop is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m27-84"><b><i>Step 3</i></b></h4>
+<p id="cn-m27-85">Click the Kali icon located at the top left.</p>
+<p id="cn-m27-86">Point to <b>Usual applications &gt; System Tools &gt; QTerminal</b></p>
+<p id="cn-m27-87">Click the result of <b>QTerminal.</b></p>
+<p id="cn-m27-88"></p><figure><img class="cn-img" id="cn-image-m27-c-6" src="PerformBannerGrabbing_files/image-m27-c-6.jpg" alt="Figure 1.5 Screenshot of PLABKALI01"><figcaption>Figure 1.5 Screenshot of PLABKALI01: Clicking the Terminal icon in the Usual applications</figcaption></figure><p></p>
+<h4 id="cn-m27-89"><b><i>Step 4</i></b></h4>
+<p id="cn-m27-90">Establish a remote connection with port 80 on 192.168.0.1 using Telnet.</p>
+<p id="cn-m27-91">Type the following command at the <b>root terminal</b>:</p>
+<pre id="cn-m27-92"><code>telnet 192.168.0.1 80
+</code></pre>
+<p id="cn-m27-93">Press <b>Enter.</b></p>
+<p id="cn-m27-94">Connection to <b>192.168.0.1 </b>is established.</p>
+<p id="cn-m27-95"></p><figure><img class="cn-img" id="cn-image-m27-c-7" src="PerformBannerGrabbing_files/image-m27-c-7.jpg" alt="Figure 1.6 Screenshot of PLABKALI01"><figcaption>Figure 1.6 Screenshot of PLABKALI01: The telnet command is executed on 192.168.0.1 port 80, and the connection is established.</figcaption></figure><p></p>
+<h4 id="cn-m27-96"><b><i>Step 5</i></b></h4>
+<p id="cn-m27-97">To grab the banners served by the DVWA application, type the following command at the root terminal and press <b>Enter</b>:</p>
+<pre id="cn-m27-98"><code>GET /dvwa/ HTTP/1.1
+</code></pre>
+<p id="cn-m27-99">Then, type the following switch:</p>
+<pre id="cn-m27-100"><code>Host: 192.168.0.1
+</code></pre>
+<p id="cn-m27-101">Press <b>Enter</b>.</p>
+<p id="cn-m27-102">The given command specifies the following switches:</p>
+<ol id="cn-m27-103">
+<li id="cn-m27-103">GET = To obtain data from the web server</li>
+<li id="cn-m27-104">HTTP = Protocol to connect with</li>
+<li id="cn-m27-105">Host = IP address/domain name of the remote host</li>
+</ol>
+<p id="cn-m27-106">The command has successfully grabbed the banners 
+served by the web server.  Notice the server field in the output 
+specifies the name of the web server, which is in this case, Apache.</p>
+<p id="cn-m27-107"></p><figure><img class="cn-img" id="cn-image-m27-c-8" src="PerformBannerGrabbing_files/image-m27-c-8.jpg" alt="Figure 1.7 Screenshot of PLABKALI01"><figcaption>Figure 1.7 Screenshot of PLABKALI01: The GET command is executed to grab the banner served by the DVWA web server.</figcaption></figure><p></p>
+<h3 id="cn-m27-108"><b>Task 3 - Perform Banner Grabbing using Netcat</b></h3>
+<p id="cn-m27-109">Netcat (often abbreviated to nc) is a computer 
+networking utility for reading and writing from and to network 
+connections using Transmission Control Protocol (TCP) or User Datagram 
+Protocol (UDP). Netcat can be used for port scanning, transferring files
+ and port listening.</p>
+<p id="cn-m27-110">In this task, you will perform banner grabbing using Netcat. To do this, perform the following steps:</p>
+<h4 id="cn-m27-111"><b><i>Step 1</i></b></h4>
+<p id="cn-m27-112">Type the following command at the root terminal of Kali Linux and press <b>Enter</b>:</p>
+<pre id="cn-m27-113"><code>nc 192.168.0.1 80
+</code></pre>
+<p id="cn-m27-114"></p><figure><img class="cn-img" id="cn-image-m27-c-9" src="PerformBannerGrabbing_files/image-m27-c-9.jpg" alt="Figure 1.8 Screenshot of PLABKALI01"><figcaption>Figure 1.8 Screenshot of PLABKALI01: The nc command is executed to listen on port 80 on 192.168.0.1 device.</figcaption></figure><p></p>
+<h4 id="cn-m27-115"><b><i>Step 2</i></b></h4>
+<p id="cn-m27-116">To grab the banner served by the DVWA application, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m27-117"><code>GET /dvwa/ HTTP/1.1
+</code></pre>
+<p id="cn-m27-118">Then, type the following switch:</p>
+<pre id="cn-m27-119"><code>Host: 192.168.0.1
+</code></pre>
+<p id="cn-m27-120">Press <b>Enter</b>.</p>
+<p id="cn-m27-121">The command has successfully grabbed the banners 
+served by the web server.  Notice the server field in the output that 
+specifies the name of the web server, which is in this case, Apache.</p>
+<p id="cn-m27-122"></p><figure><img class="cn-img" id="cn-image-m27-c-10" src="PerformBannerGrabbing_files/image-m27-c-10.jpg" alt="Figure 1.9 Screenshot of PLABKALI01"><figcaption>Figure 1.9 Screenshot of PLABKALI01: The GET command is executed to grab the banner served by the DVWA web server</figcaption></figure><p></p>
+<h3 id="cn-m27-123"><b>Task 4 - Perform Banner Grabbing using Nmap</b></h3>
+<p id="cn-m27-124">In this task, you will grab the banner served by the DVWA application using Nmap. To do this, perform the following steps:</p>
+<h4 id="cn-m27-125"><b><i>Step 1</i></b></h4>
+<p id="cn-m27-126">Type the following command at the root terminal and press <b>Enter</b>:</p>
+<pre id="cn-m27-127"><code>nmap -sS -p 80 -A 192.168.0.1
+</code></pre>
+<p id="cn-m27-128">The given command uses the following switches:</p>
+<ol id="cn-m27-129">
+<li id="cn-m27-129">-sS = SYN Scan</li>
+<li id="cn-m27-130">-p = Port Number</li>
+<li id="cn-m27-131">-A = Aggressive mode</li>
+</ol>
+<p id="cn-m27-132">Notice the output displays information about the operating system of the target system and the services running on open ports.</p>
+<p id="cn-m27-133"></p><figure><img class="cn-img" id="cn-image-m27-c-11" src="PerformBannerGrabbing_files/image-m27-c-11.jpg" alt="Figure 1.10 Screenshot of PLABKALI01"><figcaption>Figure 1.10 Screenshot of PLABKALI01: The Nmap command is executed to grab the banner served by the DVWA web server on port 80.</figcaption></figure><p></p>
+<span class="atom-code hidden">5e1d502e-2771-4deb-a3e2-7881a321dc64</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m27-137"><b>Review</b></h2>
+<p id="cn-m27-138">Well done, you have completed the <b>Perform Banner Grabbing </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">70d994e7-2315-419a-9714-11c0a3d9663c</span>
+<span class="atom-code hidden">39bb0aa6-bb1e-45d9-a533-083aa83c9b04</span>
+<span class="atom-code hidden">80dd0dea-bd23-4482-a462-bb8c64a2df68</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m27-145">You completed the following exercises:</p>
+<ul id="cn-m27-146">
+<li id="cn-m27-146">Performing banner grabbing</li>
+</ul>
+<p id="cn-m27-147">You should now be able to:</p>
+<ul id="cn-m27-148">
+<li id="cn-m27-148">Enable HTTP Web Service on PLABSA01</li>
+<li id="cn-m27-149">Perform Banner Grabbing using Telnet</li>
+<li id="cn-m27-150">Perform Banner Grabbing using Netcat</li>
+<li id="cn-m27-151">Perform Banner Grabbing using Nmap</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m27-155">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

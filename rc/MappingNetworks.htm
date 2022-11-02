@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="MappingNetworks_files/print-styles.css" rel="stylesheet">
+    <script src="MappingNetworks_files/jquery.min.js"></script>
+    <script src="MappingNetworks_files/jspdf.js"></script>
+    <script src="MappingNetworks_files/from_html.js"></script>
+    <script src="MappingNetworks_files/addimage.js"></script>
+    <script src="MappingNetworks_files/filesaver.js"></script>
+    <script src="MappingNetworks_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="teEQ7Ybfwmkv+jwwvq8a/4wxAlxcF7AIt+bfDH7GjtLIV8VCvxTE7xwOKJ0/RNNoD4Z1qlWtFGIdB03iwjECMBJleNBTt+lJAd7FJn654+s=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Mapping Networks</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Working With Network Diagrams</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m19-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Zenmap</div>
+</div>
+<p id="cn-m19-3">Welcome to the <b>Mapping Networks </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m19-7">In this module, you will complete the following exercises:</p>
+<ul id="cn-m19-8">
+<li id="cn-m19-8">Working with Network Diagrams</li>
+</ul>
+<p id="cn-m19-9">After completing this lab, you will be able to:</p>
+<ul id="cn-m19-10">
+<li id="cn-m19-10">Install Zenmap</li>
+<li id="cn-m19-11">Identify Live Systems in the Network Using Zenmap</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m19-13">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m19-14">
+<li id="cn-m19-14"><b>CAS-003 </b>4.1 Given a scenario, integrate hosts, storage, networks and applications into a secure enterprise architecture.</li>
+</ul>
+<span class="cn-quote" id="cn-m19-15"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m19-17">It will take approximately <b>20 minutes </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m19-21">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m19-22">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m19-24"><b>Lab Topology</b></h2>
+<p id="cn-m19-25">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m19-26">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m19-27">
+<li id="cn-m19-27"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m19-28"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m19-29"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m19-30"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m19-31"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m19-32"><img class="cn-img" id="cn-image-m19-c-0" src="MappingNetworks_files/image-m19-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m19-33">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m19-34"><b>Exercise 1 - Working with Network Diagrams</b></h2>
+<p id="cn-m19-35">Network mapping is the process of identifying or 
+discovering the physical connectivity of computers in the network. You 
+can perform network mapping with the help of Network Management Software
+ (NMS). You can administer, monitor, manage, and scan the network using 
+NMS. The visual network maps or diagrams provide help in the network 
+mapping process. You can use the network topology mapper to plot the 
+network automatically.</p>
+<p id="cn-m19-36">In this exercise, you will work with the Zenmap 
+utility to obtain a graphic representation of the devices in the 
+network. You will also work with ManageEngine OpManager application to 
+demonstrate the mapping of the network.</p>
+<p id="cn-m19-37">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m19-39">After completing this exercise, you will be able to:</p>
+<ul id="cn-m19-40">
+<li id="cn-m19-40">Install Zenmap</li>
+<li id="cn-m19-41">Identify Live Systems in the Network Using Zenmap</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m19-43">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m19-44">
+<li id="cn-m19-44"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m19-45"><img class="cn-img" id="cn-image-m19-c-1" src="MappingNetworks_files/image-m19-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m19-46"><b>Task 1 - Install Zenmap</b></h3>
+<p id="cn-m19-47">In this task, you will install Zenmap. Netcat utility 
+comes built-in with Zenmap GUI, which is the GUI version of Nmap. Netcat
+ that comes prebuilt with Zenmap is called Ncat.</p>
+<h4 id="cn-m19-48"><b><i>Step 1</i></b></h4>
+<p id="cn-m19-49">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m19-50">Access the Intranet Website by launching <b>Internet Explorer</b>.</p>
+<p id="cn-m19-51"></p><figure><img class="cn-img" id="cn-image-m19-c-2" src="MappingNetworks_files/image-m19-c-2.jpg" alt="Figure 1.1 Screenshot PLABWIN10"><figcaption>Figure 1.1 Screenshot PLABWIN10: The Internet Explorer home page is set to the Intranet by default.</figcaption></figure><p></p>
+<h4 id="cn-m19-52"><b><i>Step 2</i></b></h4>
+<p id="cn-m19-53">Navigate to <b>Tools </b>&gt; <b>Zenmap</b>.</p>
+<p id="cn-m19-54"></p><figure><img class="cn-img" id="cn-image-m19-c-3" src="MappingNetworks_files/image-m19-c-3.jpg" alt="Figure 1.2 Screenshot PLABWIN10"><figcaption>Figure 1.2 Screenshot PLABWIN10: Intranet is showing the Zenmap folder.</figcaption></figure><p></p>
+<h4 id="cn-m19-55"><b><i>Step 3</i></b></h4>
+<p id="cn-m19-56">Click on <b>nmap-7.60-setup.exe. </b></p>
+<p id="cn-m19-57">When prompted, click <b>Run</b>.</p>
+<p id="cn-m19-58"></p><figure><img class="cn-img" id="cn-image-m19-c-4" src="MappingNetworks_files/image-m19-c-4.jpg" alt="Figure 1.3 Screenshot PLABWIN10"><figcaption>Figure 1.3 Screenshot PLABWIN10: Internet Explorer with the application Run prompt.</figcaption></figure><p></p>
+<span class="cn-quote" id="cn-m19-59"><b><i>Note: </i></b><i>If you are prompted with the </i><b><i>User Account Control </i></b><i>dialog box, click </i><b><i>Yes</i></b><i>. </i></span>
+<p id="cn-m19-60">On the License Agreement page of the Nmap Setup wizard, read the license agreement and click <b>I Agree</b>.</p>
+<span class="cn-alert" id="cn-m19-61"><b>Alert: </b>Follow the installation steps through until completion. Keep all the default settings.</span>
+<h4 id="cn-m19-62"><b><i>Step 4</i></b></h4>
+<p id="cn-m19-63">On the <b>Choose Components </b>page, keep the default selection and click <b>Next</b>.</p>
+<h4 id="cn-m19-64"><b><i>Step 5</i></b></h4>
+<p id="cn-m19-65">On the <b>Choose Install Location </b>page, keep the default path and click <b>Install</b>.</p>
+<h4 id="cn-m19-66"><b><i>Step 6</i></b></h4>
+<p id="cn-m19-67">The <b>Installing </b>page is displayed. It shows the installation progress.</p>
+<p id="cn-m19-68">On the <b>License Agreement </b>page of the <b>Npcap 0.93 Setup </b>wizard, read the license agreement and click <b>Next</b>.</p>
+<h4 id="cn-m19-69"><b><i>Step 7</i></b></h4>
+<p id="cn-m19-70">On the <b>Installation Options </b>page, keep the default selection and click <b>Install</b>.</p>
+<h4 id="cn-m19-71"><b><i>Step 8</i></b></h4>
+<p id="cn-m19-72">On the <b>Installation Complete </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m19-73"><b><i>Step 9</i></b></h4>
+<p id="cn-m19-74">Click <b>Finish </b>when the installation is complete.</p>
+<p id="cn-m19-75">Close Internet Explorer.</p>
+<p id="cn-m19-76"></p><figure><img class="cn-img" id="cn-image-m19-c-5" src="MappingNetworks_files/image-m19-c-5.jpg" alt="Figure 1.4 Screenshot PLABWIN10"><figcaption>Figure 1.4 Screenshot PLABWIN10: Zenmap Finish screen is displayed.</figcaption></figure><p></p>
+<p id="cn-m19-77">You are now back on the desktop. Note that the Nmap - Zenmap GUI icon is now placed on the desktop.</p>
+<p id="cn-m19-78"></p><figure><img class="cn-img" id="cn-image-m19-c-6" src="MappingNetworks_files/image-m19-c-6.jpg" alt="Figure 1.5 Screenshot PLABWIN10"><figcaption>Figure 1.5 Screenshot PLABWIN10: Desktop.</figcaption></figure><p></p>
+<h3 id="cn-m19-79"><b>Task 2 - Identify Live Systems in the Network Using Zenmap</b></h3>
+<p id="cn-m19-80">Zenmap is the official Nmap security scanner graphical
+ user interface (GUI). In this task, you will use Zenmap to perform the 
+following actions:</p>
+<ul id="cn-m19-81">
+<li id="cn-m19-81">Identify live hosts in the network.</li>
+<li id="cn-m19-82">Display the identified hosts in a graphical presentation.</li>
+<li id="cn-m19-83">Set the configuration options, if required.</li>
+</ul>
+<h4 id="cn-m19-84"><b><i>Step 1</i></b></h4>
+<p id="cn-m19-85">Ensure you have powered on the required devices and connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m19-86">From <b>PLABWIN10 </b>desktop, double-click <b>Nmap - Zenmap GUI</b>.The Zenmap window is now displayed.</p>
+<p id="cn-m19-87"></p><figure><img class="cn-img" id="cn-image-m19-c-7" src="MappingNetworks_files/image-m19-c-7.jpg" alt="Figure 1.6 Screenshot of the PLABWIN10 desktop"><figcaption>Figure 1.6 Screenshot of the PLABWIN10 desktop: Nmap - Zenmap GUI is selected on the desktop.</figcaption></figure><p></p>
+<h4 id="cn-m19-88"><b><i>Step 2</i></b></h4>
+<p id="cn-m19-89">The <b>Zenmap </b>window opens.</p>
+<p id="cn-m19-90">To identify live hosts in the network, in the <b>Command </b>box, type the following command:</p>
+<pre id="cn-m19-91"><code>nmap -sn 192.168.0.1/24
+</code></pre>
+<p id="cn-m19-92">Press <b>Enter</b>.</p>
+<p id="cn-m19-93">The Nmap scan report of the devices in the network is displayed.</p>
+<p id="cn-m19-94"></p><figure><img class="cn-img" id="cn-image-m19-c-8" src="MappingNetworks_files/image-m19-c-8.jpg" alt="Figure 1.7 Screenshot of PLABWIN10"><figcaption>Figure
+ 1.7 Screenshot of PLABWIN10: Zenmap window: The command is entered in 
+the Command box. The command is executed, and the output is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m19-95"><b><i>Step 3</i></b></h4>
+<p id="cn-m19-96">To display the identified hosts in GUI format, click the <b>Topology </b>tab.</p>
+<p id="cn-m19-97"></p><figure><img class="cn-img" id="cn-image-m19-c-9" src="MappingNetworks_files/image-m19-c-9.jpg" alt="Figure 1.8 Screenshot of PLABWIN10"><figcaption>Figure 1.8 Screenshot of PLABWIN10: Zenmap window: Topology tab is selected.</figcaption></figure><p></p>
+<h4 id="cn-m19-98"><b><i>Step 4</i></b></h4>
+<p id="cn-m19-99">To display the identified network topology in Fisheye view, under the <b>Topology </b>tab, click the <b>Fisheye </b>tab.</p>
+<p id="cn-m19-100"></p><figure><img class="cn-img" id="cn-image-m19-c-10" src="MappingNetworks_files/image-m19-c-10.jpg" alt="Figure 1.9 Screenshot of PLABWIN10"><figcaption>Figure 1.9 Screenshot of PLABWIN10: Zenmap window: Under the Topology tab, Fisheye tab is selected.</figcaption></figure><p></p>
+<h4 id="cn-m19-101"><b><i>Step 5</i></b></h4>
+<p id="cn-m19-102">In the <b>Fisheye </b>tab, you can click and drag any host point to focus and change the view.</p>
+<p id="cn-m19-103">For the purpose of this demonstration, the host points are realigned.</p>
+<p id="cn-m19-104"></p><figure><img class="cn-img" id="cn-image-m19-c-11" src="MappingNetworks_files/image-m19-c-11.jpg" alt="Figure 1.10 Screenshot of PLABWIN10"><figcaption>Figure 1.10 Screenshot of PLABWIN10: Zenmap window: The host names are realigned in the Fisheye tab.</figcaption></figure><p></p>
+<h4 id="cn-m19-105"><b><i>Step 6</i></b></h4>
+<p id="cn-m19-106">To set more configuration options, click the <b>Controls </b>tab.</p>
+<p id="cn-m19-107">The <b>Controls </b>pane appears.</p>
+<span class="cn-quote" id="cn-m19-108"><b><i>Note</i></b><i>: The Controls pane provides multiple control options such as Action, Interpolation, Layout, View, and so on.</i></span>
+<p id="cn-m19-109">You can set the desired options.</p>
+<p id="cn-m19-110"></p><figure><img class="cn-img" id="cn-image-m19-c-12" src="MappingNetworks_files/image-m19-c-12.jpg" alt="Figure 1.11 Screenshot of Zenmap window ON PLABWIN10"><figcaption>Figure 1.11 Screenshot of Zenmap window ON PLABWIN10: The Controls tab is selected. The Controls pane is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<p id="cn-m19-112"><b>Close </b>all open windows.</p>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m19-115"><b>Review</b></h2>
+<p id="cn-m19-116">Well done, you have completed the <b>Mapping Networks </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">0395bd69-9a92-4e37-b819-e52b81a8a2dd</span>
+<span class="atom-code hidden">ccb190ef-9868-4499-badf-84a852230d61</span>
+<span class="atom-code hidden">7791e325-ece9-4d75-9eef-bccf38f2d8d8</span>
+<span class="atom-code hidden">709d86fa-5e48-4b33-814f-74647837e103</span>
+<span class="atom-code hidden">7b6ae8b8-c079-4ec2-aa50-1bef8280a22b</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m19-126">You completed the following exercises:</p>
+<ul id="cn-m19-127">
+<li id="cn-m19-127">Working with Network Diagrams</li>
+</ul>
+<p id="cn-m19-128">You should now be able to:</p>
+<ul id="cn-m19-129">
+<li id="cn-m19-129">Install Zenmap</li>
+<li id="cn-m19-130">Identify Live Systems in the Network Using Zenmap</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m19-134">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/print-styles.css" rel="stylesheet">
+    <script src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/jquery.min.js"></script>
+    <script src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/jspdf.js"></script>
+    <script src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/from_html.js"></script>
+    <script src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/addimage.js"></script>
+    <script src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/filesaver.js"></script>
+    <script src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2+NuXm3Ogkz2n4Mj5H7roLWuown7qdW516ROh8K4wuGMdymvPg9JB1vwvX0n2+gPrbquz4VFLx04JAp9Vtg+i74rK+BAFgvHDYW3CGCCqOA=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Scanning and Remediating Vulnerabilities with OpenVAS</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - OpenVAS Scanning</li><li>Exercise 2 - Securing Active Directory Access LDAP</li><li>Exercise 3 - Validating Security Changes with OpenVAS</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m9-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Security</div>
+<div>OpenVAS</div>
+</div>
+<p id="cn-m9-4">Welcome to the <b>Scanning and Remediating Vulnerabilities with OpenVAS </b>Practice Lab. In this module, you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m9-8">In this module, you will complete the following exercises:</p>
+<ul id="cn-m9-9">
+<li id="cn-m9-9">OpenVAS Scanning</li>
+<li id="cn-m9-10">Security Active Directory Access LDAP</li>
+<li id="cn-m9-11">Validating Security Changes with OpenVAS</li>
+</ul>
+<p id="cn-m9-12">After completing this lab, you will be able to:</p>
+<ul id="cn-m9-13">
+<li id="cn-m9-13">Connect to Win10 and Kali</li>
+<li id="cn-m9-14">Start OpenVAS</li>
+<li id="cn-m9-15">Use OpenVAS</li>
+<li id="cn-m9-16">Perform OpenVAS Scanning</li>
+<li id="cn-m9-17">Edit Security Advanced Security Settings for Pre-Windows</li>
+<li id="cn-m9-18">Edit Network Access</li>
+<li id="cn-m9-19">Reconfigure Regedit Values</li>
+<li id="cn-m9-20">Configure Network Configuration for NetBIOS</li>
+<li id="cn-m9-21">Perform Advanced Firewall Configurations</li>
+<li id="cn-m9-22">Rescan with OpenVAS</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m9-24">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m9-25">
+<li id="cn-m9-25"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts, and architectures to meet security requirements.</li>
+<li id="cn-m9-26"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+<li id="cn-m9-27"><b>CAS-003 </b>4.3 Given a scenario, integrate and 
+troubleshoot advanced authentication and authorization technologies to 
+support enterprise security objectives</li>
+</ul>
+<span class="cn-quote" id="cn-m9-28"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m9-30">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m9-34">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m9-35">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m9-47"><b>Lab Topology</b></h2>
+<p id="cn-m9-48">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m9-49">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m9-50">
+<li id="cn-m9-50"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m9-51"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m9-52"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+<li id="cn-m9-53"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m9-54"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<ol id="cn-m9-55">
+</ol>
+<p id="cn-m9-56"><img class="cn-img" id="cn-image-m9-c-0" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m9-57">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m9-58"><b>Exercise 1 - OpenVAS Scanning</b></h2>
+<p id="cn-m9-59">OpenVAS stands for Open Vulnerability Assessment System
+ and is a fork from an older version of Nessus, formally known as 
+GNessUs. It’s a free tool to use and can be quite comprehensive in its 
+scanning techniques as well as assisting in finding vulnerabilities. It 
+can be used in conjunction with other Kali tools to help pen test 
+environments more efficiently.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m9-61">After completing this exercise, you will be able to:</p>
+<ul id="cn-m9-62">
+<li id="cn-m9-62">Connect to Win10 and Kali</li>
+<li id="cn-m9-63">Start OpenVAS</li>
+<li id="cn-m9-64">Use OpenVAS</li>
+<li id="cn-m9-65">Perform OpenVAS Scanning</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m9-67">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m9-68">
+<li id="cn-m9-68"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m9-69"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m9-70"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+</ul>
+<p id="cn-m9-71"><img class="cn-img" id="cn-image-m9-c-1" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m9-74"><b>Task 1 - Starting up OpenVAS</b></h3>
+<p id="cn-m9-75">In this task, we start up the OpenVAS services and access the Dashboard interface.</p>
+<h4 id="cn-m9-76"><b><i>Step 1</i></b></h4>
+<p id="cn-m9-77">Ensure you have powered on the required devices and connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m9-78">Type <b>root </b>in the <b>Username </b>field.</p>
+<p id="cn-m9-79">Type the following password in the <b>Password </b>field.</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m9-81">Click <b>Log In.</b></p>
+<p id="cn-m9-82"></p><figure><img class="cn-img" id="cn-image-m9-c-2" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-2.jpg" alt="Figure 1.1 Screenshot of PLABKALI01"><figcaption>Figure 1.1 Screenshot of PLABKALI01: Login screen is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m9-83"><b><i>Step 2</i></b></h4>
+<p id="cn-m9-84">The PLABKALI01 <b>desktop </b>is displayed.</p>
+<p id="cn-m9-85"></p><figure><img class="cn-img" id="cn-image-m9-c-3" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-3.jpg" alt="Figure 1.2 Screenshot of PLABKALI01"><figcaption>Figure 1.2 Screenshot of PLABKALI01: Desktop is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m9-86"><b><i>Step 3</i></b></h4>
+<p id="cn-m9-87">Click on the Applications button found in the top left.</p>
+<p id="cn-m9-88">Then use the following path.</p>
+<pre id="cn-m9-89"><code>02-Vulnerability Analysis &gt; OpenVAS Scanner &gt; openvas start
+</code></pre>
+<p id="cn-m9-90">The terminal screen will be opened to show that OpenVas has begun, give it a moment to initialize the processes.</p>
+<p id="cn-m9-91"></p><figure><img class="cn-img" id="cn-image-m9-c-4" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-4.jpg" alt="Figure 1.3 Screenshot of PLABKALI01"><figcaption>Figure 1.3 Screenshot of PLABKALI01: Starting up OpenVAS Services.</figcaption></figure><p></p>
+<h4 id="cn-m9-92"><b><i>Step 4</i></b></h4>
+<p id="cn-m9-93">Please wait while the openvas service starts up.</p>
+<p id="cn-m9-95"></p><figure><img class="cn-img" id="cn-image-m9-c-5" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-5.jpg" alt="Figure 1.4 Screenshot of PLABKALI01"><figcaption>Figure 1.4 Screenshot of PLABKALI01:  Screenshot showing the openvas service starting up</figcaption></figure><p></p>
+<h4 id="cn-m9-96"><b><i>Step 5</i></b></h4>
+<p id="cn-m9-97">Once Firefox has opened, click <b>Advanced </b>and then click <b>Accept the Risk and Continue.</b></p>
+<span class="cn-alert" id="cn-m9-98"><b>Note: </b>If you get the error “<b>Your Connection is not Secure</b>,” click “<b>Advanced</b>” and add an exception for this page.</span>
+<p id="cn-m9-99">Enter the following credentials.</p>
+<pre id="cn-m9-100"><code>admin
+<span class="cn-password">Passw0rd</span>
+</code></pre>
+<p id="cn-m9-117">We are now presented with the main front page of Greenbone Security Assistant.</p>
+<p id="cn-m9-118"></p><figure><img class="cn-img" id="cn-image-m9-c-7" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-7.jpg" alt="Figure 1.6 Screenshot of PLABKALI01"><figcaption>Figure 1.6 Screenshot of PLABKALI01: Greenbone main dashboard page.</figcaption></figure><p></p>
+<p id="cn-m9-120">There are quite a few options in this area.</p>
+<ul id="cn-m9-121">
+<li id="cn-m9-121">Scan Management where ‘New Tasks’ can be set,</li>
+<li id="cn-m9-122">Asset Management for monitoring and presenting a list of hosts where scans have been performed.</li>
+<li id="cn-m9-123">SecInfo Management, which is used to organize 
+vulnerability databases, Configuration works to organize target ports 
+and scanning types.</li>
+<li id="cn-m9-124">Extras allows for Web UI configuration itself.</li>
+<li id="cn-m9-125">Administration is used to organize User and Feed Management updates.</li>
+<li id="cn-m9-126">Help provides some useful hints and tips on the above.</li>
+</ul>
+<h3 id="cn-m9-128"><b>Task 2 - Using OpenVAS</b></h3>
+<p id="cn-m9-129">In this task, we will briefly explore OpenVAS and perform a scan with the application.</p>
+<h4 id="cn-m9-130"><b><i>Step 1</i></b></h4>
+<p id="cn-m9-131">We are now logged into the OpenVAS interface.</p>
+<p id="cn-m9-132">Let’s review some of the configuration files to familiarize ourselves with the scanner.</p>
+<p id="cn-m9-133">Click on <b>Configuration </b>then move down to <b>Port Lists</b>.</p>
+<p id="cn-m9-134"></p><figure><img class="cn-img" id="cn-image-m9-c-8" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-8.jpg" alt="Figure 1.7 Screenshot of PLABKALI01"><figcaption>Figure 1.7 Screenshot of PLABKALI01: Greenbone on the Configurations tab.</figcaption></figure><p></p>
+<h4 id="cn-m9-136"><b><i>Step 2</i></b></h4>
+<p id="cn-m9-137">Click on the first entry to the list which:</p>
+<pre id="cn-m9-138"><code>All TCP and NMAP 5.51 top 1000 UDP
+</code></pre>
+<p id="cn-m9-140"></p><figure><img class="cn-img" id="cn-image-m9-c-9" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-9.jpg" alt="Figure 1.8 Screenshot of PLABKALI01"><figcaption>Figure 1.8 Screenshot of PLABKALI01: Greenbone showing the Port lists for scanning.</figcaption></figure><p></p>
+<h4 id="cn-m9-142"><b><i>Step 3</i></b></h4>
+<p id="cn-m9-143">A brief review of this list shows all the ports that 
+the NMAP scanner will check against. This list is designed against the 
+NMAP version 5.5.1.</p>
+<p id="cn-m9-144">This is a very invasive scan as it takes place against
+ all the TCP ports from 1-65535 and then focuses on famous UDP ports, 
+which are more selectively chosen at a total of 999. UDP port scanning 
+can take a while longer to complete, so knowing which ports are 
+important can be a great time saver.</p>
+<p id="cn-m9-145">Reviewing this on your favorite search engine or theory support materials would be advisable.</p>
+<p id="cn-m9-146"></p><figure><img class="cn-img" id="cn-image-m9-c-10" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-10.jpg" alt="Figure 1.9 Screenshot of PLABKALI01"><figcaption>Figure 1.9 Screenshot of PLABKALI01: Greenbone showing the exact Port range used for a NMAP 5.51 scan type.</figcaption></figure><p></p>
+<h4 id="cn-m9-148"><b><i>Step 4</i></b></h4>
+<p id="cn-m9-149">Again hover over the Configuration tab and then move down to Scan Configs.</p>
+<p id="cn-m9-150"></p><figure><img class="cn-img" id="cn-image-m9-c-11" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-11.jpg" alt="Figure 1.10 Screenshot of PLABKALI01"><figcaption>Figure 1.10 Screenshot of PLABKALI01: Greenbone on the Configuration tab.</figcaption></figure><p></p>
+<p id="cn-m9-151">These are the scanning types which are installed by 
+default to OpenVAS, when performing a scan, one of these is typically 
+chosen. However, customized scans are possible.</p>
+<p id="cn-m9-153"></p><figure><img class="cn-img" id="cn-image-m9-c-12" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-12.jpg" alt="Figure 1.11 Screenshot of PLABKALI01"><figcaption>Figure 1.11 Screenshot of PLABKALI01: Greenbone showing the Scan Configurations.</figcaption></figure><p></p>
+<h4 id="cn-m9-155"><b><i>Step 5</i></b></h4>
+<p id="cn-m9-156">Click on:</p>
+<pre id="cn-m9-157"><code>Full and very deep ultimate
+</code></pre>
+<p id="cn-m9-159">Under <b>Network Vulnerability Test Families</b>.</p>
+<p id="cn-m9-160">This scan is very intrusive and provides a great deal 
+of depth; it looks for a very wide range of faults and some of which 
+might not be very useful depending on the device being scanned.</p>
+<p id="cn-m9-161">For example, this scan will check the device against 
+CISCO, CentOS, and Amazon Linux security checks. If you know the network
+ has multiple facing devices with these services, then this type of scan
+ can be very productive. Understanding the network and device scope is 
+important to maintaining useful scan types and results.</p>
+<p id="cn-m9-163"></p><figure><img class="cn-img" id="cn-image-m9-c-13" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-13.jpg" alt="Figure 1.12 Screenshot of PLABKALI01"><figcaption>Figure 1.12 Screenshot of PLABKALI01: Greenbone showing the Network Vulnerability Tests Families.</figcaption></figure><p></p>
+<h4 id="cn-m9-165"><b><i>Step 6 </i></b></h4>
+<p id="cn-m9-166">Click on the back button within Firefox.</p>
+<p id="cn-m9-167">Click on:</p>
+<pre id="cn-m9-168"><code>Full and fast
+</code></pre>
+<p id="cn-m9-170">Under <b>Network Vulnerability Test Families</b>.</p>
+<p id="cn-m9-171">Reviewing that scan type shows it’s similar to the 
+previous one except its quicker on a performance level. With multiple 
+tests for Buffer Overflow and multiple OS, scroll down, and there is a 
+section for Windows.</p>
+<p id="cn-m9-172"></p><figure><img class="cn-img" id="cn-image-m9-c-14" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-14.jpg" alt="Figure 1.13 Screenshot of PLABKALI01"><figcaption>Figure 1.13 Screenshot of PLABKALI01: Greenbone showing further settings for the Full and Fast option.</figcaption></figure><p></p>
+<h4 id="cn-m9-173"><b><i>Step 7</i></b></h4>
+<p id="cn-m9-174">Scroll down the page to view the <b>Network Vulnerability Test Preferences</b>.</p>
+<p id="cn-m9-175">Within this area, we can see multiple tests used 
+against SSL, LDAP, Services, etc. Review these to have a better 
+understanding of what exactly the test is going to perform.</p>
+<p id="cn-m9-176"></p><figure><img class="cn-img" id="cn-image-m9-c-15" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-15.jpg" alt="Figure 1.14 Screenshot of PLABKALI01"><figcaption>Figure 1.14 Screenshot of PLABKALI01: Greenbone showing settings in more detail.</figcaption></figure><p></p>
+<h4 id="cn-m9-177"><b><i>Step 8</i></b></h4>
+<p id="cn-m9-178">Feel free to choose any of interest; for this example, we will investigate the value:</p>
+<pre id="cn-m9-179"><code>Search in LDAP, Users with conf.LogonHours
+</code></pre>
+<p id="cn-m9-180">Click on the search icon in blue on the left-hand tab of the screen.</p>
+<p id="cn-m9-182"></p><figure><img class="cn-img" id="cn-image-m9-c-16" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-16.jpg" alt="Figure 1.15 Screenshot of PLABKALI01"><figcaption>Figure 1.15 Screenshot of PLABKALI01: Greenbone showing Scan Configurations for a vulnerability.</figcaption></figure><p></p>
+<p id="cn-m9-183">Here we can see the family this vulnerability belongs to:</p>
+<pre id="cn-m9-184"><code>IT-Grundschutz
+</code></pre>
+<p id="cn-m9-185">They are a German agency that specializes in security and are the authors of locating this vulnerability.</p>
+<p id="cn-m9-186">Moving to the bottom, we can see the Current Value and Default Value has been assigned to test against.</p>
+<h3 id="cn-m9-187"><b>Task 3 - OpenVAS Scanning</b></h3>
+<p id="cn-m9-188">In this task, we will perform the scanning procedure using OpenVAS.</p>
+<h4 id="cn-m9-189"><b><i>Step 1</i></b></h4>
+<p id="cn-m9-190">Let’s begin with a scan against some of the key devices on the system.</p>
+<p id="cn-m9-191"><b>Click </b>on <b>Scans - Tasks </b>to go onto the tasks page.</p>
+<p id="cn-m9-192"></p><figure><img class="cn-img" id="cn-image-m9-c-17" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-17.jpg" alt="Figure 1.16 Screenshot of PLABKALI01"><figcaption>Figure 1.16 Screenshot of PLABKALI01: Greenbone on the main dashboard.</figcaption></figure><p></p>
+<h4 id="cn-m9-193"><b><i>Step 2</i></b></h4>
+<p id="cn-m9-194">Now <b>hover </b>the mouse over the purple <b>Wand </b>icon to see a dropdown.</p>
+<p id="cn-m9-195">Click on <b>Advanced Task Wizard</b>.</p>
+<p id="cn-m9-196"></p><figure><img class="cn-img" id="cn-image-m9-c-18" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-18.jpg" alt="Figure 1.17 Screenshot of PLABKALI01"><figcaption>Figure 1.17 Screenshot of PLABKALI01: Greenbone on the Advanced Task Wizard.</figcaption></figure><p></p>
+<h4 id="cn-m9-198"><b><i>Step 3</i></b></h4>
+<p id="cn-m9-199">Change the details to the following.</p>
+<pre id="cn-m9-200"><code>Task Name: PLABDC01
+Scan Config: Full and fast ultimate
+Target Host: 192.168.0.1
+</code></pre>
+<span class="cn-quote" id="cn-m9-203"><i>Note: We have chosen Full and 
+fast ultimate to get a nice combination of speed with comprehensive 
+searching against the domain controller.</i></span>
+<span class="cn-alert" id="cn-m9-205">Alert: If the scan fails, please replace the <b>Target host </b>address to “<b>PLABDC01</b>” and retry.</span>
+<p id="cn-m9-206">Leave the rest as default options.</p>
+<p id="cn-m9-207">Click on <b>Create Task</b>.</p>
+<p id="cn-m9-208"></p><figure><img class="cn-img" id="cn-image-m9-c-19" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-19.jpg" alt="Figure 1.18 Screenshot of PLABKALI01"><figcaption>Figure 1.18 Screenshot of PLABKALI01: Greenbone on the Create a new Task.</figcaption></figure><p></p>
+<h4 id="cn-m9-210"><b><i>Step 4</i></b></h4>
+<p id="cn-m9-211">Greenbone will then generate the task, and it will be shown as <b>Orange </b>for <b>requested</b>.</p>
+<p id="cn-m9-212">It will automatically initiate and begin to scan the target against the scanning type.</p>
+<p id="cn-m9-213"></p><figure><img class="cn-img" id="cn-image-m9-c-20" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-20.jpg" alt="Figure 1.19 Screenshot of PLABKALI01"><figcaption>Figure 1.19 Screenshot of PLABKALI01: Greenbone dashboard showing the scan taking place.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m9-214"><b>Alert: </b>Give the scan a little time to complete; it will complete in about 5 minutes. <br>You will have to refresh the page to see the progress update.</span>
+<h4 id="cn-m9-215"><b><i>Step 5</i></b></h4>
+<p id="cn-m9-216">The report is generated and presented on a Dashboard; Greenbone gives us a High initial response.</p>
+<p id="cn-m9-217"></p><figure><img class="cn-img" id="cn-image-m9-c-21" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-21.jpg" alt="Figure 1.20 Screenshot of PLABKALI01"><figcaption>Figure 1.20 Screenshot of PLABKALI01: Greenbone dashboard showing the scan taking place.</figcaption></figure><p></p>
+<h4 id="cn-m9-219"><b><i>Step 6</i></b></h4>
+<p id="cn-m9-220">Click on the Name of the scan to review the results in more detail.</p>
+<pre id="cn-m9-221"><code>PLABDC01
+</code></pre>
+<p id="cn-m9-222">We see some more breakdown of the results, mainly 
+referring to dates and scanner type, which in this case the OpenVAS 
+Default type used against the Full and Fast Scan.</p>
+<p id="cn-m9-223">Now click on the Reports value, which in this case is 1.</p>
+<p id="cn-m9-225"></p><figure><img class="cn-img" id="cn-image-m9-c-22" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-22.jpg" alt="Figure 1.21 Screenshot of PLABKALI01"><figcaption>Figure 1.21 Screenshot of PLABKALI01: Greenbone showing scan results.</figcaption></figure><p></p>
+<h4 id="cn-m9-227"><b><i>Step 7</i></b></h4>
+<p id="cn-m9-228">A slightly more detailed breakdown is given with High,
+ medium and low results to be considered and confirmed, we are also 
+provided with a log output which might contain useful information, logs,
+ however, difficult to look over can hold information about possible 
+vulnerabilities which are yet undiscovered. Remember, it's possible some
+ of the results could be false positives.</p>
+<p id="cn-m9-229"></p><figure><img class="cn-img" id="cn-image-m9-c-23" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-23.jpg" alt="Figure 1.22 Screenshot of PLABKALI01"><figcaption>Figure 1.22 Screenshot of PLABKALI01: Greenbone showing scan results.</figcaption></figure><p></p>
+<h4 id="cn-m9-231"><b><i>Step 8</i></b></h4>
+<p id="cn-m9-232">Click on the <b>Date </b>to now view those results.</p>
+<p id="cn-m9-236"></p><figure><img class="cn-img" id="cn-image-m9-c-24" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-24.jpg" alt="Figure 1.23 Screenshot of PLABKALI01"><figcaption>Figure 1.23 Screenshot of PLABKALI01: Greenbone showing scan results.</figcaption></figure><p></p>
+<h4 id="cn-m9-238"><b><i>Step 9</i></b></h4>
+<p id="cn-m9-239">Click on the vulnerability listed as:</p>
+<pre id="cn-m9-240"><code>Microsoft Windows SMB Server Mulitple Vulnerabilities-Remote (4013389)
+</code></pre>
+<p id="cn-m9-241"></p><figure><img class="cn-img" id="cn-image-m9-c-25" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-25.jpg" alt="Figure 1.24 Screenshot of PLABKALI01"><figcaption>Figure 1.24 Screenshot of PLABKALI01: Greenbone showing scan results.</figcaption></figure><p></p>
+<span class="atom-code hidden">aefd7eb5-4dc3-4a7e-afbe-7199e483f47c</span>
+<p id="cn-m9-244">We see a more detailed output regarding this 
+vulnerability, Greenbone details that LDAP could be leaking data via an 
+enumeration which would allow information about Server and Site Names to
+ be disclosed. This could aid an attacker who is trying to credential 
+details and for use when logging into devices, or impersonating devices 
+on the network so that they appear legitimate. Additionally, it could be
+ used for social engineering, if the attacker was to learn key 
+information they could pose as an employee and call the IT office for 
+additional help and use keywords to hint at the fact they are legitimate
+ users accessing devices.</p>
+<p id="cn-m9-245">Greenbone provides us with a solution option to 
+consider (if we are not concern about compatibility with pre-Windows 
+2000 devices). This very useful and something we will be implementing 
+very soon.</p>
+<span class="cn-quote" id="cn-m9-246"><b><i>Note: </i></b><i>Best 
+Practice is to rescan the device again to have repeatable results. The 
+solution’s given don’t always have an effect due to complexities with 
+LDAP and Active Directory and are not necessarily best-practice methods,
+ so use with caution.</i></span>
+<span class="cn-alert" id="cn-m9-247">Leave the devices you have powered on in their current state and proceed to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m9-248"><b>Exercise 2 - Applying Windows Secure Updates</b></h2>
+<p id="cn-m9-249">In this exercise, we will be applying a windows update
+ that will resolve the vulnerability (Microsoft Windows SMB Server 
+Mulitple Vulnerabilities-Remote (4013389)) that we discovered in the 
+previous exercise.</p>
+<h4 id="cn-m9-251"><b><i>Step 1</i></b></h4>
+<p id="cn-m9-252">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m9-253">Click <b>Internet Explorer </b>from the taskbar.</p>
+<p id="cn-m9-254"></p><figure><img class="cn-img" id="cn-image-m9-c-26" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-26.jpg" alt="Figure 2.1 Screenshot of PLABDC01"><figcaption>Figure 2.1 Screenshot of PLABDC01: Showing the desktop with Internet Explorer highlighted in the taskbar.</figcaption></figure><p></p>
+<h4 id="cn-m9-256"><b><i>Step 2</i></b></h4>
+<p id="cn-m9-257">In the Intranet page, click <b>Tools</b>.</p>
+<p id="cn-m9-258"></p><figure><img class="cn-img" id="cn-image-m9-c-27" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-27.jpg" alt="Figure 2.2 Screenshot of PLABDC01"><figcaption>Figure 2.2 Screenshot of PLABDC01: Showing the Intranet page with Tools highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m9-260"><b><i>Step 3</i></b></h4>
+<p id="cn-m9-261">Scroll down and click <b>Windows_Server_2012</b></p>
+<p id="cn-m9-262"></p><figure><img class="cn-img" id="cn-image-m9-c-28" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-28.jpg" alt="Figure 2.3 Screenshot of PLABDC01"><figcaption>Figure 2.3 Screenshot of PLABDC01: Showing the Intranet page with Windows_Server_2012 highlighted.</figcaption></figure><p></p>
+<p id="cn-m9-263">Click <b>windows8.1-kb4015553-x64_7e9371da8cfd9aed1dc43600ff659ff8e9a17c62.msu.</b></p>
+<p id="cn-m9-264"></p><figure><img class="cn-img" id="cn-image-m9-c-29" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-29.jpg" alt="Figure 2.4 Screenshot of PLABDC01"><figcaption>Figure
+ 2.4 Screenshot of PLABDC01: Showing the Intranet page with 
+windows8.1-kb4015553-x64_7e9371da8cfd9aed1dc43600ff659ff8e9a17c62.msu 
+application highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m9-265"><b><i>Step 5</i></b></h4>
+<p id="cn-m9-266">Click <b>Open</b>.</p>
+<p id="cn-m9-267"></p><figure><img class="cn-img" id="cn-image-m9-c-30" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-30.jpg" alt="Figure 2.5 Screenshot of PLABDC01"><figcaption>Figure 2.5 Screenshot of PLABDC01: Showing the Intranet page with the open button highlighted from the pop-up.</figcaption></figure><p></p>
+<h4 id="cn-m9-269"><b><i>Step 6</i></b></h4>
+<p id="cn-m9-270">Click <b>Yes </b>on the <b>Windows Update Standalone Installer.</b></p>
+<p id="cn-m9-271"></p><figure><img class="cn-img" id="cn-image-m9-c-31" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-31.jpg" alt="Figure 2.5 Screenshot of PLABDC01"><figcaption>Figure 2.5 Screenshot of PLABDC01: Showing the Windows Update Standalone Installer with the Yes button highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m9-272"><b><i>Step 7</i></b></h4>
+<p id="cn-m9-273">Please wait a couple of minutes while the update installs.</p>
+<p id="cn-m9-274"></p><figure><img class="cn-img" id="cn-image-m9-c-32" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-32.jpg" alt="Figure 2.7 Screenshot of PLABDC01"><figcaption>Figure 2.7 Screenshot of PLABDC01: Showing the Windows Update Standalone Installer and the download is progressing.</figcaption></figure><p></p>
+<h4 id="cn-m9-275"><b><i>Step 8</i></b></h4>
+<p id="cn-m9-276">Click <b>Restart Now</b>.</p>
+<p id="cn-m9-277">Please wait for a minute while the <b>PLABDC01 </b>is restarting.</p>
+<p id="cn-m9-282"></p><figure><img class="cn-img" id="cn-image-m9-c-33" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-33.jpg" alt="Figure 2.8 Screenshot of PLABDC01"><figcaption>Figure 2.8 Screenshot of PLABDC01: Showing the Windows Update Standalone Installer and the Restart Now button is highlighted.</figcaption></figure><p></p>
+<h4 id="cn-m9-283"><b><i>Step 9</i></b></h4>
+<p id="cn-m9-284">Once the <b>PLABDC01 </b>machine is back up and running, please continue to the next exercise.</p>
+<p id="cn-m9-285"></p><figure><img class="cn-img" id="cn-image-m9-c-34" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-34.jpg" alt="Figure 2.9 Screenshot of PLABDC01"><figcaption>Figure 2.9 Screenshot of PLABDC01: Showing the PLABDC01 Desktop once it has been restarted.</figcaption></figure><p></p>
+<span class="atom-code hidden">f7e46b08-8a3c-4753-8a8f-41f9d34f35a1</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m9-288"><b>Exercise 3 - Validating Security Changes with OpenVAS</b></h2>
+<p id="cn-m9-289">Once changes have been made to any system, a recheck 
+of the system must be made to confirm that updates, patches, and 
+security configuration have taken place and are functioning correctly as
+ expected.</p>
+<h3 id="cn-m9-290"><b>Task 1 - Rescanning with OpenVAS</b></h3>
+<p id="cn-m9-291">In this task, we will be rescanning PLABDC01 with 
+OpenVAS to confirm that our changes have had an effect on the system and
+ that we have configured the system correctly.</p>
+<h4 id="cn-m9-292"><b><i>Step 1</i></b></h4>
+<p id="cn-m9-293">Connect back to PLABKALI01;</p>
+<p id="cn-m9-294">The session will most likely have expired, though.</p>
+<p id="cn-m9-295">If so, then enter the credentials to enter Greenbone again.</p>
+<pre id="cn-m9-296"><code>admin
+<span class="cn-password">Passw0rd</span>
+</code></pre>
+<h4 id="cn-m9-298"><b><i>Step 2</i></b></h4>
+<p id="cn-m9-299">On the Tasks Dashboard, move to the Actions tab found towards the right-hand side.</p>
+<p id="cn-m9-300"><b>Click </b>on the <b>green arrow</b>.</p>
+<p id="cn-m9-301">This will start the scanning process again.</p>
+<p id="cn-m9-302"></p><figure><img class="cn-img" id="cn-image-m9-c-35" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-35.jpg" alt="Figure 3.1 Screenshot of PLABKALI01"><figcaption>Figure 3.1 Screenshot of PLABKALI01: Greenbone Security Assistant report screen with the Start button highlighted.</figcaption></figure><p></p>
+<p id="cn-m9-303">Once more, give the scan about 5 minutes to complete 
+the objective. You will notice it has changed to requested and then 
+moves to a progress bar, which begins to change as the scan is 
+completed.</p>
+<h4 id="cn-m9-304"><b><i>Step 3</i></b></h4>
+<p id="cn-m9-305">Once completed, click on the <b>Name </b>of the Scan, which is <b>PLABDC01</b>.</p>
+<p id="cn-m9-306">Click on Reports value, which is now <b>2</b>.</p>
+<p id="cn-m9-307">Then choose the latest of the reports by Time.</p>
+<p id="cn-m9-309"></p><figure><img class="cn-img" id="cn-image-m9-c-36" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-36.jpg" alt="Figure 3.2 Screenshot of PLABKALI01"><figcaption>Figure 3.2 Screenshot of PLABKALI01: Greenbone Security Assistant restarting the scan.</figcaption></figure><p></p>
+<p id="cn-m9-311">Notice that the Medium count changed; in fact, what we
+ will see is that sometimes rescanning the device can highlight new 
+vulnerabilities not found in the first attempt.</p>
+<p id="cn-m9-312">The changes we made do not affect SSL certificates. 
+Therefore the new vulnerabilities were something picked up on the second
+ scan attempt and are strongly related to SSL.</p>
+<p id="cn-m9-313">This is excellent practice, and it shows that scanning
+ a device once is not enough to confirm that it has passed all the 
+tests. Certainly, in a production environment, multiple scans are 
+commonplace.</p>
+<h4 id="cn-m9-314"><b><i>Step 4</i></b></h4>
+<p id="cn-m9-315"><b>Click </b>on the latest report by date and time.</p>
+<p id="cn-m9-316"></p><figure><img class="cn-img" id="cn-image-m9-c-37" src="ScanningandRemediatingVulnerabilitieswithOpenVAS_files/image-m9-c-37.jpg" alt="Figure 3.3 Screenshot of PLABKALI01"><figcaption>Figure 3.3 Screenshot of PLABKALI01: Greenbone results from the second scan.</figcaption></figure><p></p>
+<p id="cn-m9-317">From the above results, we have now removed the problem with LDAP leaking data with NULL input.</p>
+<pre id="cn-m9-318"><code>Microsoft Windows SMB Server Multiple Vulnerabilities-Remote(4013389)
+</code></pre>
+<p id="cn-m9-319">This is no longer present as it has been corrected by installing a windows update.</p>
+<p id="cn-m9-320">This tells us about the CVSS value, the detection 
+result again, the solution, and the detection method used to pull the 
+information.</p>
+<span class="atom-code hidden">aefd7eb5-4dc3-4a7e-afbe-7199e483f47c</span>
+<span class="cn-alert" id="cn-m9-323">Shutdown all virtual machines used
+ in this lab, before proceeding to the next module. Alternatively you 
+can log out of the lab platform.</span>
+<span class="atom-code hidden">5e1d502e-2771-4deb-a3e2-7881a321dc64</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m9-326"><b>Review</b></h2>
+<p id="cn-m9-327">Well done, you have completed the <b>Scanning and Remediating Vulnerabilities with OpenVAS </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">c0e2aa96-4e00-41f4-acf5-1be11c4e471c</span>
+<span class="atom-code hidden">1082b753-8431-439b-8412-498d9f0bcaf4</span>
+<span class="atom-code hidden">b2812408-95fb-4d20-8980-4087fbccf434</span>
+<span class="atom-code hidden">be910674-ccee-416a-86e7-15cfc628b608</span>
+<span class="atom-code hidden">f3d45905-d067-4bd7-b058-9708e64d585c</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m9-338">You completed the following exercises:</p>
+<ul id="cn-m9-339">
+<li id="cn-m9-339">OpenVAS Scanning</li>
+<li id="cn-m9-340">Security Active Directory Access LDAP</li>
+<li id="cn-m9-341">Validating Security Changes with OpenVAS</li>
+</ul>
+<p id="cn-m9-342">You should now be able to:</p>
+<ul id="cn-m9-343">
+<li id="cn-m9-343">Connect to Win10 and Kali</li>
+<li id="cn-m9-344">Start OpenVAS</li>
+<li id="cn-m9-345">Use OpenVAS</li>
+<li id="cn-m9-346">Perform OpenVAS Scanning</li>
+<li id="cn-m9-347">Edit Security Advanced Security Settings for Pre-Windows</li>
+<li id="cn-m9-348">Edit Network Access</li>
+<li id="cn-m9-349">Reconfigure Regedit Values</li>
+<li id="cn-m9-350">Configure Network Configuration for NetBIOS</li>
+<li id="cn-m9-351">Perform Advanced Firewall Configurations</li>
+<li id="cn-m9-352">Rescan with OpenVAS</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m9-356">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

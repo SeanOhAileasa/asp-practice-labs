@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="ImplementingDNSSEC_files/print-styles.css" rel="stylesheet">
+    <script src="ImplementingDNSSEC_files/jquery.min.js"></script>
+    <script src="ImplementingDNSSEC_files/jspdf.js"></script>
+    <script src="ImplementingDNSSEC_files/from_html.js"></script>
+    <script src="ImplementingDNSSEC_files/addimage.js"></script>
+    <script src="ImplementingDNSSEC_files/filesaver.js"></script>
+    <script src="ImplementingDNSSEC_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="uzsRslLK7JrfZuF5bQ/7z/EHryNHND0MZz2Dr+BwmzHagu+KgE00DevXqSHbszM1aIDfvajAj922FdzgKdgwh/Tp3sny3NBoFKHe3SgdDVQ=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Implementing DNSSEC</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Preparing DNS Setup for DNSSEC</li><li>Exercise 2 - Configuring DNSSEC</li><li>Exercise 3 - Customizing DNSSEC</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m21-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>DNSSEC</div>
+<div>DNS</div>
+</div>
+<p id="cn-m21-4">Welcome to the <b>Implementing DNSSEC </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m21-8">In this module, you will complete the following exercises:</p>
+<ul id="cn-m21-9">
+<li id="cn-m21-9">Preparing DNS Setup for DNSSEC</li>
+<li id="cn-m21-10">Configuring DNSSEC</li>
+<li id="cn-m21-11">Customizing DNSSEC</li>
+</ul>
+<p id="cn-m21-12">After completing this lab, you will be able to:</p>
+<ul id="cn-m21-13">
+<li id="cn-m21-13">Create a Zone</li>
+<li id="cn-m21-14">Create Sample Resource Records</li>
+<li id="cn-m21-15">Create a Non-Authoritative DNS Server</li>
+<li id="cn-m21-16">Create a Secondary Domain Controller</li>
+<li id="cn-m21-17">Sign the Zone Using Default Settings</li>
+<li id="cn-m21-18">Distribute the TA to a Non-Authoritative DNS Server</li>
+<li id="cn-m21-19">Verify DNSKEY Trust Anchors</li>
+<li id="cn-m21-20">Distribute TAs to a Secondary Domain Controller</li>
+<li id="cn-m21-21">Query a Signed Zone without DNSSEC Validation Required</li>
+<li id="cn-m21-22">Configure Support for DNSSEC in GPO</li>
+<li id="cn-m21-23">Query a Signed Zone with DNSSEC Validation Required</li>
+<li id="cn-m21-24">Unsign the Secure Zone</li>
+<li id="cn-m21-25">Re-Sign secure.practicelabs.com with Custom Parameters</li>
+<li id="cn-m21-26">Show Failed and Unsecured Validation</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m21-28">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m21-29">
+<li id="cn-m21-29"><b>CAS-003 </b>3.1 Given a scenario, conduct a security assessment using the appropriate methods.</li>
+<li id="cn-m21-30"><b>CAS-003 </b>4.1 Given a scenario, integrate hosts, storage, networks and applications into a secure enterprise architecture.</li>
+</ul>
+<span class="cn-quote" id="cn-m21-31"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m21-33">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m21-37">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m21-38">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m21-40"><b>Lab Topology</b></h2>
+<p id="cn-m21-41">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m21-42">Depending on the exercises you may or may not use all 
+the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m21-43">
+<li id="cn-m21-43"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m21-44"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m21-45"><b>PLABSA01 </b>(Windows Server 2016 - Standalone Server)</li>
+<li id="cn-m21-46"><b>PLABWIN810 </b>(Windows 8.1 Workstation)</li>
+<li id="cn-m21-47"><b>PLABDM02 </b>(Windows Server 2012 R2 - Domain Member Server)</li>
+<li id="cn-m21-48"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m21-49"><img class="cn-img" id="cn-image-m21-c-0" src="ImplementingDNSSEC_files/image-m21-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m21-51">Click <b>Next </b>to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m21-52"><b>Exercise 1 - Preparing DNS Setup for DNSSEC</b></h2>
+<p id="cn-m21-53">Domain Name System Security Extensions, or DNSSEC, is a
+ set of extensions that add an additional layer of security on a DNS 
+server by enabling responses sent to DNS clients (resolvers) to be 
+validated.  When a DNS resolver queries a zone that is signed by DNSSEC,
+ the authenticity and integrity of its responses are ensured with the 
+use of security keys.</p>
+<p id="cn-m21-54">For this exercise, you will prepare the requirements 
+to successfully test DNSSEC on Windows Server 2016 by creating a new 
+zone, adding Resource Records, installing a non-authoritative DNS 
+server, and, lastly, installing a secondary domain controller.</p>
+<p id="cn-m21-55">Please refer to your course material or use your favorite search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m21-57">After completing this exercise, you will be able to:</p>
+<ul id="cn-m21-58">
+<li id="cn-m21-58">Create a Zone</li>
+<li id="cn-m21-59">Create Sample Resource Records</li>
+<li id="cn-m21-60">Create a Non-Authoritative DNS Server</li>
+<li id="cn-m21-61">Create a Secondary Domain Controller</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m21-63">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m21-64">
+<li id="cn-m21-64"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m21-65"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m21-66"><b>PLABSA01 </b>(Windows Server 2016 - Domain Member Server)</li>
+</ul>
+<p id="cn-m21-67"><img class="cn-img" id="cn-image-m21-c-1" src="ImplementingDNSSEC_files/image-m21-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m21-69"><b>Task 1 - Create a Zone</b></h3>
+<p id="cn-m21-70">You can use a Primary zone, which is the writeable 
+zone in DNS, to test zone signing using DNSSEC. To keep the current 
+configuration on the servers safe, you will create a new zone for 
+testing purposes. In this task, you will create the <b>secure.practicelabs.com </b>zone on the <b>PLABDC01 </b>server.</p>
+<p id="cn-m21-71">To create a zone, perform the following steps:</p>
+<h4 id="cn-m21-72"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-73">Ensure you have powered on the required devices and connect to the <b>PLABDC01 </b>server.</p>
+<p id="cn-m21-74">The <b>Server Manager &gt; Dashboard </b>window is displayed by default.</p>
+<p id="cn-m21-75">Click on the <b>Tools </b>menu and select <b>DNS</b>.</p>
+<h4 id="cn-m21-76"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-77">In the <b>DNS Manager </b>window, expand <b>PLABDC01 </b>&gt; <b>Forward Lookup Zone</b>.</p>
+<p id="cn-m21-78">Click and right-click <b>Forward Lookup  Zone </b>and select <b>New Zone</b>.</p>
+<p id="cn-m21-80"></p><figure><img class="cn-img" id="cn-image-m21-c-2" src="ImplementingDNSSEC_files/image-m21-c-2.jpg" alt="Figure 1.1 Screenshot of PLABDC01"><figcaption>Figure 1.1 Screenshot of PLABDC01: The Forward Lookup Zones is right-clicked, and New Zone is selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-82"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-83">In the <b>New Zone Wizard</b>, the <b>Welcome to the New Zone Wizard </b>page is displayed.</p>
+<p id="cn-m21-84">Read the introductory information and click <b>Next</b>.</p>
+<h4 id="cn-m21-86"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-87">On the <b>Zone Type </b>page, verify that the <b>Primary zone </b>option and the <b>Store the zone in Active Directory </b>check boxes are selected.</p>
+<p id="cn-m21-88">Click <b>Next</b>.</p>
+<h4 id="cn-m21-90"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-91">On the <b>Active Directory Zone Replication Scope </b>page, the <b>To all DNS servers running on domain controllers in this domain: PRACTICELABS.COM </b>option is selected by default.</p>
+<p id="cn-m21-92">Leave this selected and click <b>Next</b>.</p>
+<h4 id="cn-m21-94"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-95">On the <b>Zone Name </b>page, type the following and click <b>Next</b>:</p>
+<pre id="cn-m21-96"><code>secure.practicelabs.com
+</code></pre>
+<p id="cn-m21-97"></p><figure><img class="cn-img" id="cn-image-m21-c-3" src="ImplementingDNSSEC_files/image-m21-c-3.jpg" alt="Figure 1.2 Screenshot of PLABDC01"><figcaption>Figure 1.2 Screenshot of PLABDC01: On the New Zone Wizard, a new zone is entered.</figcaption></figure><p></p>
+<h4 id="cn-m21-99"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-100">On the <b>Dynamic Update </b>page, keep the default selection to <b>Allow only secure dynamic updates</b>.</p>
+<p id="cn-m21-101">Click <b>Next</b>.</p>
+<p id="cn-m21-102"></p><figure><img class="cn-img" id="cn-image-m21-c-4" src="ImplementingDNSSEC_files/image-m21-c-4.jpg" alt="Figure 1.3 Screenshot of PLABDC01"><figcaption>Figure 1.3 Screenshot of PLABDC01: The New Zone Wizard is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m21-105"><b><i>Step 8</i></b></h4>
+<p id="cn-m21-106">On the <b>Completing the New Zone Wizard </b>page, review the summary about the newly-created zone.</p>
+<p id="cn-m21-107">Click <b>Finish</b>.</p>
+<h4 id="cn-m21-108"><b><i>Step 9</i></b></h4>
+<p id="cn-m21-109">Notice that a new zone with the name <b>secure.practicelabs.com </b>is now created.</p>
+<p id="cn-m21-110"></p><figure><img class="cn-img" id="cn-image-m21-c-5" src="ImplementingDNSSEC_files/image-m21-c-5.jpg" alt="Figure 1.4 Screenshot of PLABDC01"><figcaption>Figure 1.4 Screenshot of PLABDC01: The secure.practicelabs.com zone is now created.</figcaption></figure><p></p>
+<p id="cn-m21-111">Keep the <b>DNS Manager </b>window open.</p>
+<h3 id="cn-m21-114"><b>Task 2 - Create Sample Resource Records</b></h3>
+<p id="cn-m21-115">In this task, you will create sample records, like Host (A), that will be used later for testing name resolution with DNSSEC.</p>
+<h4 id="cn-m21-116"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-117">Connect to the <b>PLABDC01 </b>server and ensure that the <b>DNS Manager </b>window is open.</p>
+<p id="cn-m21-118">Expand the <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-119">Right-click <b>secure.practicelabs.com </b>in the left pane and select <b>New Host (A or AAAA</b>).</p>
+<h4 id="cn-m21-120"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-121">In the <b>New Host </b>window, in the <b>Name (uses parent domain if blank) </b>text field, type the following:</p>
+<pre id="cn-m21-122"><code>www
+</code></pre>
+<p id="cn-m21-123">In the <b>IP address </b>text field, type the following:</p>
+<pre id="cn-m21-124"><code>192.168.0.1
+</code></pre>
+<p id="cn-m21-125">Click <b>Add Host</b>.</p>
+<p id="cn-m21-126"></p><figure><img class="cn-img" id="cn-image-m21-c-6" src="ImplementingDNSSEC_files/image-m21-c-6.jpg" alt="Figure 1.5 Screenshot of PLABDC01"><figcaption>Figure 1.5 Screenshot of PLABDC01: The New Host window is displayed with the required settings.</figcaption></figure><p></p>
+<h4 id="cn-m21-127"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-128">Click <b>OK </b>on the <b>DNS </b>dialog box indicating the Host record was successfully created.</p>
+<h4 id="cn-m21-130"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-131">Back in the <b>New Host </b>window, in the <b>Name (uses parent domain name if blank) </b>text field, type the following:</p>
+<pre id="cn-m21-132"><code>www2
+</code></pre>
+<p id="cn-m21-133">In the <b>IP address </b>text box, type:</p>
+<pre id="cn-m21-134"><code>192.168.0.2
+</code></pre>
+<p id="cn-m21-135">Click <b>Add Host</b>.</p>
+<p id="cn-m21-136"></p><figure><img class="cn-img" id="cn-image-m21-c-7" src="ImplementingDNSSEC_files/image-m21-c-7.jpg" alt="Figure 1.6 Screenshot of PLABDC01"><figcaption>Figure 1.6 Screenshot of PLABDC01: The New Host window is displayed with the required settings.</figcaption></figure><p></p>
+<h4 id="cn-m21-139"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-140">As before, click <b>OK </b>in the <b>DNS </b>dialog box confirming the successful creation of the Host record.</p>
+<p id="cn-m21-141">Click <b>Done </b>to close <b>New Host </b>window. You should now have two new records added in the DNS Manager window.</p>
+<p id="cn-m21-142"></p><figure><img class="cn-img" id="cn-image-m21-c-8" src="ImplementingDNSSEC_files/image-m21-c-8.jpg" alt="Figure 1.7 Screenshot of PLABDC01"><figcaption>Figure 1.7 Screenshot of PLABDC01: The DNS Manager window displays two new records.</figcaption></figure><p></p>
+<p id="cn-m21-143">Keep the <b>DNS Manager </b>window open.</p>
+<h3 id="cn-m21-145"><b>Task 3 - Create a Non-Authoritative DNS Server</b></h3>
+<p id="cn-m21-146">In this task, you will install and configure a new non-authoritative DNS server on the <b>PLABDM01 </b>device.
+ This server will not be used for resolving names in the lab network as 
+it will not host any writable DNS zone. It will be used instead for 
+storing DNSSEC keys from the <b>PLABDC01 </b>server that is hosting the <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-147">This DNS server will be used with DNSSEC for distribution of DNSSEC Trust Anchor keys.</p>
+<h4 id="cn-m21-148"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-149">Connect to the <b>PLABDM01 </b>server.</p>
+<p id="cn-m21-150">The <b>Server Manager &gt; Dashboard </b>window is displayed by default.</p>
+<p id="cn-m21-151">On the menu bar at the top, click on <b>Tools </b>and select <b>Windows PowerShell</b>.</p>
+<span class="cn-quote" id="cn-m21-152"><b><i>Note: Windows PowerShell </i></b><i>commands are not case-sensitive. </i></span>
+<h4 id="cn-m21-153"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-154">To install DNS on the <b>PLABDM01 </b>server, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m21-155"><code>Add-WindowsFeature DNS -IncludeManagementTools
+</code></pre>
+<p id="cn-m21-156"></p><figure><img class="cn-img" id="cn-image-m21-c-9" src="ImplementingDNSSEC_files/image-m21-c-9.jpg" alt="Figure 1.8 Screenshot of PLABDM01"><figcaption>Figure 1.8 Screenshot of PLABDM01: A command is entered to install DNS server.</figcaption></figure><p></p>
+<h4 id="cn-m21-157"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-158">Please wait while the <b>DNS </b>feature is being installed. This will take a few moments.</p>
+<h4 id="cn-m21-160"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-161"><b>Windows PowerShell </b>will confirm the successful installation of <b>DNS</b>.</p>
+<p id="cn-m21-162">Minimize the <b>Windows PowerShell </b>window.</p>
+<p id="cn-m21-163"></p><figure><img class="cn-img" id="cn-image-m21-c-10" src="ImplementingDNSSEC_files/image-m21-c-10.jpg" alt="Figure 1.9 Screenshot of PLABDM01"><figcaption>Figure 1.9 Screenshot of PLABDM01: DNS server is successfully installed.</figcaption></figure><p></p>
+<h4 id="cn-m21-165"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-166">In the <b>Server Manager &gt; Dashboard </b>window, click <b>Tools </b>and select <b>DNS</b>.</p>
+<h4 id="cn-m21-168"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-169">In the <b>DNS Manager </b>window, click and expand the <b>PLABDM01 </b>node.</p>
+<p id="cn-m21-170">Now, right-click <b>PLABDM01 </b>and select <b>Properties</b>.</p>
+<p id="cn-m21-171"></p><figure><img class="cn-img" id="cn-image-m21-c-11" src="ImplementingDNSSEC_files/image-m21-c-11.jpg" alt="Figure 1.10 Screenshot of PLABDM01"><figcaption>Figure 1.10 Screenshot of PLABDM01: Properties is selected on the shortcut menu in the DNS Manager window.</figcaption></figure><p></p>
+<h4 id="cn-m21-173"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-174">In the <b>PLABDM01 Properties </b>window, select the <b>Forwarders </b>tab.</p>
+<h4 id="cn-m21-176"><b><i>Step 8</i></b></h4>
+<p id="cn-m21-177">In the <b>Forwarders </b>tab, click <b>Edit</b>…</p>
+<p id="cn-m21-179"></p><figure><img class="cn-img" id="cn-image-m21-c-12" src="ImplementingDNSSEC_files/image-m21-c-12.jpg" alt="Figure 1.11 Screenshot of PLABDM01"><figcaption>Figure 1.11 Screenshot of PLABDM01: The PLABDM01 Properties window is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m21-182"><b><i>Step 9</i></b></h4>
+<p id="cn-m21-183">In the <b>Edit Forwarders </b>window, in the highlighted text field, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m21-184"><code>192.168.0.1
+</code></pre>
+<p id="cn-m21-185">This sets the <b>192.168.0.1 </b>IP - the <b>PLABDC01 </b>server - as a forwarder server.</p>
+<p id="cn-m21-186"></p><figure><img class="cn-img" id="cn-image-m21-c-13" src="ImplementingDNSSEC_files/image-m21-c-13.jpg" alt="Figure 1.12 Screenshot of PLABDM01"><figcaption>Figure 1.12 Screenshot of PLABDM01: Edit Forwarders window displays a new IP address is entered.</figcaption></figure><p></p>
+<h4 id="cn-m21-188"><b><i>Step 10</i></b></h4>
+<p id="cn-m21-189">DNS will attempt to resolve <b>192.168.0.1 </b>to its Host name <b>PLABDC01</b>; this will take a few moments.</p>
+<p id="cn-m21-190">Please note that you don’t need to wait for the name to be resolved to its IP address.</p>
+<p id="cn-m21-191">Click the <b>OK </b>button.</p>
+<p id="cn-m21-192"></p><figure><img class="cn-img" id="cn-image-m21-c-14" src="ImplementingDNSSEC_files/image-m21-c-14.jpg" alt="Figure 1.13 Screenshot of PLABDM01"><figcaption>Figure
+ 1.13 Screenshot of PLABDM01: The Edit Forwarders window, show an IP 
+address successfully resolved to its hostname counterpart.</figcaption></figure><p></p>
+<h4 id="cn-m21-194"><b><i>Step 11</i></b></h4>
+<p id="cn-m21-195">Back in the <b>PLABDM01 Properties </b>dialog box, notice that the specified server is now listed as a forwarder.</p>
+<p id="cn-m21-196">Click <b>OK </b>to exit the dialog box.</p>
+<p id="cn-m21-197">Keep the <b>DNS Manager </b>window open.</p>
+<p id="cn-m21-198"></p><figure><img class="cn-img" id="cn-image-m21-c-15" src="ImplementingDNSSEC_files/image-m21-c-15.jpg" alt="Figure 1.14 Screenshot of PLABDM01"><figcaption>Figure
+ 1.14 Screenshot of PLABDM01: On the PLABDM01 Properties window, the 
+Forwarders tab shows an IP address with the matching hostname.</figcaption></figure><p></p>
+<h3 id="cn-m21-201"><b>Task 4 - Create a Secondary Domain Controller</b></h3>
+<p id="cn-m21-202">In this task, you will create a secondary domain 
+controller that will be used to demonstrate how DNSSEC keys are 
+transferred between DNS servers that are running as domain controllers.</p>
+<p id="cn-m21-203">To create a secondary domain controller, perform the following steps:</p>
+<h4 id="cn-m21-204"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-205">Connect to the <b>PLABSA01 </b>device.</p>
+<p id="cn-m21-206">Minimize the <b>Server Manager </b>window.</p>
+<p id="cn-m21-207">Right-click <b>Start </b>and select <b>Command Prompt (Admin</b>).</p>
+<h4 id="cn-m21-209"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-210">In the <b>Administrator: Command Prompt </b>window, type the following:</p>
+<pre id="cn-m21-211"><code>runas /user:practicelabs\administrator powershell.exe
+</code></pre>
+<p id="cn-m21-212">Press <b>Enter</b>.</p>
+<p id="cn-m21-213">In the password prompt, type:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<span class="cn-quote" id="cn-m21-215"><b><i>Note</i></b><i>: The password will not appear as masked characters.</i></span>
+<p id="cn-m21-216">Press <b>Enter</b>.</p>
+<p id="cn-m21-217">A new <b>Windows PowerShell </b>window will open.</p>
+<p id="cn-m21-220"></p><figure><img class="cn-img" id="cn-image-m21-c-16" src="ImplementingDNSSEC_files/image-m21-c-16.jpg" alt="Figure 1.15 Screenshot of PLABSA01"><figcaption>Figure
+ 1.15 Screenshot of PLABSA01: On the Windows PowerShell window, a 
+command is entered to launch powershell.exe as the 
+practicelabs\administrator account.</figcaption></figure><p></p>
+<h4 id="cn-m21-223"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-224">In the <b>PS </b>prompt, to install <b>Active Directory Domain Services</b>, type the following:</p>
+<pre id="cn-m21-225"><code>Add-WindowsFeature AD-Domain-Services -IncludeManagementTools
+</code></pre>
+<p id="cn-m21-226">Press <b>Enter</b>.</p>
+<p id="cn-m21-227"></p><figure><img class="cn-img" id="cn-image-m21-c-17" src="ImplementingDNSSEC_files/image-m21-c-17.jpg" alt="Figure 1.16 Screenshot of PLABSA01"><figcaption>Figure 1.16 Screenshot of PLABSA01: On the Windows PowerShell window, a command is entered to install AD Domain Services.</figcaption></figure><p></p>
+<h4 id="cn-m21-229"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-230">It may take a while for the AD Domain Services to be installed.</p>
+<p id="cn-m21-231">After the <b>AD Domain Services </b>are installed, you are prompted with the success message. You have successfully installed the <b>AD Domain Services </b>support files.</p>
+<p id="cn-m21-232"></p><figure><img class="cn-img" id="cn-image-m21-c-18" src="ImplementingDNSSEC_files/image-m21-c-18.jpg" alt="Figure 1.17 Screenshot of PLABSA01"><figcaption>Figure 1.17 Screenshot of PLABSA01: On the Windows PowerShell window, AD Domain Services installed successfully.</figcaption></figure><p></p>
+<h4 id="cn-m21-235"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-236">In the next prompt, to install a secondary domain controller for the <b>PRACTICELABS.COM </b>domain, type the following:</p>
+<pre id="cn-m21-237"><code>Install-ADDSDomainController -DomainName PRACTICELABS.COM
+</code></pre>
+<p id="cn-m21-238">Press <b>Enter</b>.</p>
+<p id="cn-m21-239">In the <b>SafeModeAdministratorPassword </b>and <b>ConfirmSafeModeAdministratorPassword </b>prompts, type the following:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m21-241">Press <b>Enter</b>.</p>
+<p id="cn-m21-242">When asked if you want to continue with this operation, type the following:</p>
+<pre id="cn-m21-243"><code>a
+</code></pre>
+<p id="cn-m21-244">Press <b>Enter</b>.</p>
+<p id="cn-m21-245"></p><figure><img class="cn-img" id="cn-image-m21-c-19" src="ImplementingDNSSEC_files/image-m21-c-19.jpg" alt="Figure 1.18 Screenshot of PLABSA01"><figcaption>Figure
+ 1.18 Screenshot of PLABSA01: On the Windows PowerShell window, a 
+command is entered to install a secondary domain controller. It is 
+followed by a series of system prompts to confirm the installation.</figcaption></figure><p></p>
+<h4 id="cn-m21-247"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-248">Please wait while the secondary domain controller for <b>PRACTICELABS.COM </b>is being installed.</p>
+<p id="cn-m21-249">This will take a few minutes to finish.</p>
+<h4 id="cn-m21-251"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-252">After a successful installation of the secondary domain controller, the computer will restart. You are prompted to click <b>Close </b>to restart the secondary domain controller. However, if you do not click <b>Close</b>, the secondary domain controller restarts automatically.</p>
+<p id="cn-m21-253">Let <b>PLABSA01 </b>restart and finish the initialization of the additional domain controller role.</p>
+<p id="cn-m21-254"></p><figure><img class="cn-img" id="cn-image-m21-c-20" src="ImplementingDNSSEC_files/image-m21-c-20.jpg" alt="Figure 1.19 Screenshot of PLABSA01"><figcaption>Figure
+ 1.19 Screenshot of PLABSA01: Clicking Close to restart the secondary 
+domain controller. After the restart, PLABSA01 will start working like 
+the secondary domain controller.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<p id="cn-m21-259">You can move on to the next exercise of this module.</p>
+<span class="cn-alert" id="cn-m21-261">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m21-263"><b>Exercise 2 - Configuring DNSSEC</b></h2>
+<p id="cn-m21-264">Configuring DNSSEC on a zone is an easy and straightforward process using the <b>DNS Manager</b>, as most of the important settings for signing the zone are provided by the DNSSEC wizard.</p>
+<p id="cn-m21-265">In this exercise, you will enable DNSSEC on the <b>secure.practicelabs.com </b>zone, distribute the keys with the use of <b>Trust Anchors </b>among
+ servers, and verify the configuration. A Trust Anchor (TA) is a public 
+key that is associated with a specific zone that’s been protected with 
+DNSSEC. When distributed among DNS servers, the TAs form a chain of 
+trust that is useful for validating DNSSEC data among servers.</p>
+<p id="cn-m21-266">Please refer to your course material or use your favorite search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m21-268">After completing this exercise, you will be able to:</p>
+<ul id="cn-m21-269">
+<li id="cn-m21-269">Sign the Zone Using Default Settings</li>
+<li id="cn-m21-270">Distribute the TA to a Non-Authoritative DNS Server</li>
+<li id="cn-m21-271">Verify DNSKEY Trust Anchors</li>
+<li id="cn-m21-272">Distribute TAs to a Secondary Domain Controller</li>
+<li id="cn-m21-273">Query a Signed Zone without DNSSEC Validation Required.</li>
+<li id="cn-m21-274">Configure Support for DNSSEC in GPO</li>
+<li id="cn-m21-275">Query a Signed Zone with DNSSEC Validation Required</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m21-277">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m21-278">
+<li id="cn-m21-278"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m21-279"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m21-280"><b>PLABSA01 </b>(Windows Server 2016 - Domain Member Server)</li>
+</ul>
+<p id="cn-m21-281"><img class="cn-img" id="cn-image-m21-c-21" src="ImplementingDNSSEC_files/image-m21-c-21.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m21-283"><b>Task 1 - Sign the Zone Using Default Settings </b></h3>
+<p id="cn-m21-284">In this task, you will use the <b>DNS Manager </b>to sign the <b>secure.practicelabs.com </b>zone with DNSSEC using default settings on the <b>PLABDC01 </b>server.</p>
+<p id="cn-m21-285">To sign a zone for DNSSEC, perform the following steps:</p>
+<h4 id="cn-m21-286"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-287">Connect to the <b>PLABDC01 </b>server. Ensure that the <b>DNS Manager </b>window is open.</p>
+<p id="cn-m21-288">Expand the <b>PLABDC01 </b>&gt; <b>Forward Lookup Zones </b>node.</p>
+<p id="cn-m21-289">Click on the <b>secure.practicelabs.com </b>node. Notice that details pane on the right lists the sample Resource Records.</p>
+<p id="cn-m21-290">Right-click <b>secure.practicelabs.com</b>, hover over <b>DNSSEC </b>and click on <b>Sign the Zone</b>.</p>
+<p id="cn-m21-291"></p><figure><img class="cn-img" id="cn-image-m21-c-22" src="ImplementingDNSSEC_files/image-m21-c-22.jpg" alt="Figure 2.1 Screenshot of PLABDC01"><figcaption>Figure 2.1 Screenshot of PLABDC01: On the DNS Manager window, a zone is right-clicked to be enabled with DNSSEC.</figcaption></figure><p></p>
+<h4 id="cn-m21-293"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-294">In the <b>Zone Signing Wizard</b>, the <b>DNS Security Extensions (DNSSEC) </b>page is displayed.</p>
+<p id="cn-m21-295">Read through the relevant information and click <b>Next</b>.</p>
+<p id="cn-m21-296"></p><figure><img class="cn-img" id="cn-image-m21-c-23" src="ImplementingDNSSEC_files/image-m21-c-23.jpg" alt="Figure 2.2 Screenshot of PLABDC01"><figcaption>Figure
+ 2.2 Screenshot of PLABDC01: On the Zone Signing Wizard window, a 
+description about this DNS security feature is briefly described.</figcaption></figure><p></p>
+<h4 id="cn-m21-298"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-299">On the <b>Signing Options </b>page, select the <b>Use default settings to sign the zone </b>option.</p>
+<p id="cn-m21-300">Click <b>Next</b>.</p>
+<p id="cn-m21-301"></p><figure><img class="cn-img" id="cn-image-m21-c-24" src="ImplementingDNSSEC_files/image-m21-c-24.jpg" alt="Figure 2.3 Screenshot of PLABDC01"><figcaption>Figure 2.3 Screenshot of PLABDC01: On the Zone Signing Wizard the lab prescribed setting is selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-303"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-304">On the <b>DNS Security Extensions (DNSSEC) </b>page, review the summary about the signed zone.</p>
+<p id="cn-m21-305">Click <b>Next</b>.</p>
+<p id="cn-m21-306"></p><figure><img class="cn-img" id="cn-image-m21-c-25" src="ImplementingDNSSEC_files/image-m21-c-25.jpg" alt="Figure 2.4 Screenshot of PLABDC01"><figcaption>Figure 2.4 Screenshot of PLABDC01: On the Zone Signing Wizard window, a summary is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m21-308"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-309">The zone signing process appears momentarily.</p>
+<p id="cn-m21-310">The <b>Signing the Zone </b>page indicates that the zone is successfully signed.</p>
+<p id="cn-m21-311">Click <b>Finish</b>.</p>
+<p id="cn-m21-312"></p><figure><img class="cn-img" id="cn-image-m21-c-26" src="ImplementingDNSSEC_files/image-m21-c-26.jpg" alt="Figure 2.5 Screenshot of PLABDC01"><figcaption>Figure 2.5 Screenshot of PLABDC01: The Zone Signing Wizard, indicates a successful operation.</figcaption></figure><p></p>
+<h4 id="cn-m21-314"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-315">Back in the <b>DNS Manager </b>window, you may not see the change right away.</p>
+<p id="cn-m21-316">Right-click the <b>secure.practicelabs.com </b>zone and select <b>Refresh </b>or press <b>F5</b>.</p>
+<h4 id="cn-m21-318"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-319">Notice that the updated contents of the secure zone 
+show a padlock icon appended to the zone folder. Similarly, the Resource
+ Record types have been further expanded to show Resource Records that 
+are signed by DNSSEC.</p>
+<p id="cn-m21-320">Keep the <b>DNS Manager </b>window open.</p>
+<p id="cn-m21-321"></p><figure><img class="cn-img" id="cn-image-m21-c-27" src="ImplementingDNSSEC_files/image-m21-c-27.jpg" alt="Figure 2.6 Screenshot of PLABDC01"><figcaption>Figure 2.6 Screenshot of PLABDC01: The DNS Manager window displays the zone signed by DNSSEC.</figcaption></figure><p></p>
+<h3 id="cn-m21-323"><b>Task 2 - Distribute the TA to a Non-Authoritative DNS Server</b></h3>
+<p id="cn-m21-324">In an earlier task, you installed and configured a 
+non-authoritative DNS server on PLABDM01. The purpose of setting up a 
+non-authoritative DNS server is to test the distribution of DNSSEC keys,
+ also called a Trust Anchor (TA), among DNS servers, such as a 
+non-authoritative DNS server and a domain controller that is running as a
+ DNS server.</p>
+<p id="cn-m21-325">A Trust Anchor (TA) is a set of keys that protect a 
+DNS server, as it signs the zone and validates DNS responses to 
+DNSSEC-aware client computers.</p>
+<p id="cn-m21-326">To share a Trust Anchor among DNS servers, perform the following steps:</p>
+<h4 id="cn-m21-327"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-328">Connect to the <b>PLABDC01 </b>server and click on the <b>File Explorer </b>icon on the taskbar.</p>
+<h4 id="cn-m21-329"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-330">In the <b>File Explorer </b>window, expand the <b>This PC </b>&gt; <b>Local Disk (C:) </b>&gt; <b>Windows </b>&gt; <b>system 32 </b>folders.</p>
+<p id="cn-m21-331">Right-click <b>DNS </b>and select <b>Share with </b>&gt; <b>Advanced sharing</b>…</p>
+<p id="cn-m21-332"></p><figure><img class="cn-img" id="cn-image-m21-c-28" src="ImplementingDNSSEC_files/image-m21-c-28.jpg" alt="Figure 2.7 Screenshot of PLABDC01"><figcaption>Figure 2.7 Screenshot of PLABDC01: On the File Explorer window dns folder is right-clicked to be shared.</figcaption></figure><p></p>
+<h4 id="cn-m21-334"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-335">In the <b>dns Properties </b>dialog box, click <b>Advanced Sharing</b>….</p>
+<h4 id="cn-m21-337"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-338">In the <b>Advanced Sharing </b>dialog box, select the <b>Share this folder </b>checkbox.</p>
+<p id="cn-m21-339">Click <b>OK </b>to save the settings and exit the dialog box.</p>
+<p id="cn-m21-340">Similarly, click <b>Close </b>on the <b>dns Properties </b>dialog box.</p>
+<p id="cn-m21-341">Then, exit the <b>File Explorer </b>window.</p>
+<p id="cn-m21-342"></p><figure><img class="cn-img" id="cn-image-m21-c-29" src="ImplementingDNSSEC_files/image-m21-c-29.jpg" alt="Figure 2.8 Screenshot of PLABDC01"><figcaption>Figure 2.8 Screenshot of PLABDC01: On the Advanced Sharing window, dns folder is enabled for sharing.</figcaption></figure><p></p>
+<h4 id="cn-m21-345"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-346">Connect to the <b>PLABDM01 </b>server. Ensure that the <b>DNS Manager </b>window is open.</p>
+<p id="cn-m21-347">Expand the <b>PLABDM01 </b>node, then click on the <b>Trust Points </b>folder.</p>
+<p id="cn-m21-348">Right-click <b>Trust Points</b>, hover over <b>Import </b>and click on <b>DNSKEY</b>.</p>
+<p id="cn-m21-349"></p><figure><img class="cn-img" id="cn-image-m21-c-30" src="ImplementingDNSSEC_files/image-m21-c-30.jpg" alt="Figure 2.9 Screenshot of PLABDM01"><figcaption>Figure 2.9 Screenshot of PLABDM01: On the DNS Manager window, Trust Points is right-clicked, and Import &gt; DNSKEY is selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-351"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-352">In the <b>Import DNSKEY </b>dialog box, in the <b>File to import </b>text box, type the following:</p>
+<pre id="cn-m21-353"><code>\\plabdc01\dns\keyset-secure.practicelabs.com
+</code></pre>
+<p id="cn-m21-354">Click <b>OK</b>.</p>
+<p id="cn-m21-355"></p><figure><img class="cn-img" id="cn-image-m21-c-31" src="ImplementingDNSSEC_files/image-m21-c-31.jpg" alt="Figure 2.10 Screenshot of PLABDM01"><figcaption>Figure 2.10 Screenshot of PLABDM01: On the Import DNSKEY window, a network path is typed in.</figcaption></figure><p></p>
+<h4 id="cn-m21-358"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-359">In the <b>DNS Manager </b>window, expand <b>Trust Points </b>&gt; <b>com </b>&gt; <b>practicelabs</b>, then click on the <b>secure </b>folder.</p>
+<p id="cn-m21-360">Notice that the contents of the <b>secure </b>folder, displayed in the details pane to the right, are DNS Keys imported from the signed domain on the authoritative server - <b>PLABDC01</b>.</p>
+<p id="cn-m21-361">Keep the <b>DNS Manager </b>window open.</p>
+<p id="cn-m21-362"></p><figure><img class="cn-img" id="cn-image-m21-c-32" src="ImplementingDNSSEC_files/image-m21-c-32.jpg" alt="Figure 2.11 Screenshot of PLABDM01"><figcaption>Figure 2.11 Screenshot of PLABDM01: The DNS Manager window shows the contents of the Trust Points folder.</figcaption></figure><p></p>
+<h3 id="cn-m21-365"><b>Task 3 - Verify DNSKEY Trust Anchors</b></h3>
+<p id="cn-m21-366">After the distribution of the DNSKEY Trust Anchor to 
+the non-authoritative DNS server, you will now test if the Trust Anchor 
+can be detected by DNSSEC-aware clients such as Windows 8 and higher 
+versions. In this task, you will use <b>PLABWIN10 </b>- a Windows 10 device - to detect the DNSKEY TAs on the <b>Practice Labs </b>network.</p>
+<p id="cn-m21-367">To verify the DNSKEY TA on a network, perform the following steps:</p>
+<h4 id="cn-m21-368"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-369">Connect to the <b>PLABWIN10 </b>device.</p>
+<p id="cn-m21-370">Click inside the <b>Ask me anything </b>text box and type the following:</p>
+<pre id="cn-m21-371"><code>powershell
+</code></pre>
+<p id="cn-m21-372">In the pop-up menu, right-click <b>Windows PowerShell </b>and select <b>Run as administrator</b>.</p>
+<span class="cn-quote" id="cn-m21-373"><b><i>Note</i></b><i>: In Windows 10, User Account Control (UAC) policy mandates that elevated rights are required to run certain command line tools.</i></span>
+<p id="cn-m21-375"></p><figure><img class="cn-img" id="cn-image-m21-c-33" src="ImplementingDNSSEC_files/image-m21-c-33.jpg" alt="Figure 2.12 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.12 Screenshot of PLABWIN10: Windows PowerShell is right-clicked on 
+the pop-up menu and Run as administrator is selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-378"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-379">Click <b>Yes </b>in the <b>User Account Control </b>dialog box is displayed.</p>
+<h4 id="cn-m21-381"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-382">In the <b>Command Prompt </b>window, type the following and press <b>Enter</b>:</p>
+<pre id="cn-m21-383"><code>Resolve-DNSName -Name secure.practicelabs.com.trustanchors -Type dnskey -Server plabdm01
+</code></pre>
+<p id="cn-m21-384">The command detects and lists the DNS KEY TA wherever it is found on the network.</p>
+<p id="cn-m21-385"></p><figure><img class="cn-img" id="cn-image-m21-c-34" src="ImplementingDNSSEC_files/image-m21-c-34.jpg" alt="Figure 2.13 Screenshot of PLABWIN10"><figcaption>Figure 2.13 Screenshot of PLABWIN10: On the Windows PowerShell window, a command is entered to find DNSSEC trust anchors.</figcaption></figure><p></p>
+<h4 id="cn-m21-388"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-389">The two Trust Anchors are listed - one each on the <b>PLABDC01 </b>and the <b>PLABDM01 </b>DNS servers.</p>
+<p id="cn-m21-390"></p><figure><img class="cn-img" id="cn-image-m21-c-35" src="ImplementingDNSSEC_files/image-m21-c-35.jpg" alt="Figure 2.14 Screenshot of PLABWIN10"><figcaption>Figure 2.14 Screenshot of PLABWIN10: The Windows PowerShell displays the results of the resolve DNS Name command.</figcaption></figure><p></p>
+<h3 id="cn-m21-393"><b>Task 4 - Distribute TAs to a Secondary Domain Controller</b></h3>
+<p id="cn-m21-394">Typically, DNSSEC keys are copied to other DNS 
+servers for redundancy, and they create an island of trust between the 
+DNS servers that host the signed DNS zone. In this task, you will 
+replicate the DNSSEC Trust Anchors to a secondary domain controller that
+ you previously configured.</p>
+<p id="cn-m21-395">To distribute TAs to a secondary domain controller, perform the following steps:</p>
+<h4 id="cn-m21-396"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-397">Connect to the <b>PLABDC01 </b>server.</p>
+<p id="cn-m21-398">In the <b>DNS Manager </b>window, click on <b>secure.practicelabs.com.</b></p>
+<p id="cn-m21-399">Right-click <b>secure.practicelabs.com </b>and select <b>DNSSEC </b>&gt; <b>Properties</b>.</p>
+<p id="cn-m21-400"></p><figure><img class="cn-img" id="cn-image-m21-c-36" src="ImplementingDNSSEC_files/image-m21-c-36.jpg" alt="Figure 2.15 Screenshot of PLABDC01"><figcaption>Figure
+ 2.15 Screenshot of PLABDC01: On the DNS Manager window, 
+secure.practicelabs.com is right-clicked, and Properties is selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-402"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-403">In the <b>DNSSEC properties for secure.practicelabs.com zone </b>dialog box, click on the <b>Trust Anchor </b>tab.</p>
+<h4 id="cn-m21-405"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-406">In the <b>Trust Anchor </b>tab, select the <b>Enable the distribution of trust anchors for this zone </b>check box.</p>
+<p id="cn-m21-407">Click <b>OK</b>.</p>
+<p id="cn-m21-408"></p><figure><img class="cn-img" id="cn-image-m21-c-37" src="ImplementingDNSSEC_files/image-m21-c-37.jpg" alt="Figure 2.16 Screenshot of PLABDC01"><figcaption>Figure
+ 2.16 Screenshot of PLABDC01: On the DNSSEC properties for 
+secure.practicelabs.com window, a checkbox is selected to enable 
+replication.</figcaption></figure><p></p>
+<h4 id="cn-m21-411"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-412">In the <b>DNS </b>message box, click <b>Yes </b>to proceed with the replication of this DNSSEC-enabled zone.</p>
+<p id="cn-m21-413"></p><figure><img class="cn-img" id="cn-image-m21-c-38" src="ImplementingDNSSEC_files/image-m21-c-38.jpg" alt="Figure 2.17 Screenshot of PLABDC01"><figcaption>Figure 2.17 Screenshot of PLABDC01: The DNS message box asks for confirmation to continue with the operation.</figcaption></figure><p></p>
+<h4 id="cn-m21-416"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-417">The <b>Updating secure.practicelabs.com </b>message box confirms the successful configuration of DNSSEC parameters.</p>
+<p id="cn-m21-418">Click <b>OK</b>.</p>
+<p id="cn-m21-419">Keep the <b>DNS Manager </b>window open.</p>
+<p id="cn-m21-420"></p><figure><img class="cn-img" id="cn-image-m21-c-39" src="ImplementingDNSSEC_files/image-m21-c-39.jpg" alt="Figure 2.18 Screenshot of PLABDC01"><figcaption>Figure 2.18 Screenshot of PLABDC01: The Updating secure.practicelabs.com message box confirms a successful operation.</figcaption></figure><p></p>
+<h4 id="cn-m21-422"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-423">Connect to the <b>PLABSA01 </b>device.</p>
+<p id="cn-m21-424">Recall that the <b>PLABSA01 </b>server was previously configured to assume the role of a secondary domain controller.</p>
+<p id="cn-m21-425">In the <b>Server Manager Dashboard </b>window, click on the <b>Tools </b>menu and select <b>DNS</b>.</p>
+<h4 id="cn-m21-427"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-428">In the <b>DNS Manager </b>window, click and expand the <b>PLABSA01 </b>node.</p>
+<p id="cn-m21-429">Expand the <b>Trust Points </b>&gt; <b>com </b>&gt; <b>practicelabs </b>folder.</p>
+<p id="cn-m21-430">Then, click on the <b>secure </b>folder.</p>
+<p id="cn-m21-431">Notice that the <b>DNSKEY Trust Anchors </b>are present on this secondary domain controller of <b>PRACTICELABS.COM</b>.</p>
+<span class="cn-alert" id="cn-m21-432"><b>Important</b>: If the <b>Trust Points </b>folder appears to be empty, restart DNS. Right-click the server, hover over <b>All Tasks </b>and select <b>Restart</b>. After the DNS service restarts and Trust Points folder still appears empty, press F5 to refresh the window.</span>
+<p id="cn-m21-434"></p><figure><img class="cn-img" id="cn-image-m21-c-40" src="ImplementingDNSSEC_files/image-m21-c-40.jpg" alt="Figure 2.19 Screenshot of PLABSA01"><figcaption>Figure 2.19 Screenshot of PLABSA01: DNS Manager shows the Trust Points from the zone signed with DNSSEC.</figcaption></figure><p></p>
+<h4 id="cn-m21-436"><b><i>Step 8</i></b></h4>
+<p id="cn-m21-437">Similarly, in the <b>DNS Manager </b>window, select the <b>Forward Lookup Zones </b>&gt; <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-438">Notice the replicated Resource Records from <b>secure.practicelabs.com </b>zone on <b>PLABDC01</b>.</p>
+<p id="cn-m21-439">Keep the <b>DNS Manager </b>window open.</p>
+<p id="cn-m21-440"></p><figure><img class="cn-img" id="cn-image-m21-c-41" src="ImplementingDNSSEC_files/image-m21-c-41.jpg" alt="Figure 2.20 Screenshot of PLABSA01"><figcaption>Figure 2.20 Screenshot of PLABSA01: DNS Manager shows the replicated secure.practicelabs.com zone.</figcaption></figure><p></p>
+<h3 id="cn-m21-441"><b>Task 5 - Query a Signed Zone without DNSSEC Validation Required</b></h3>
+<p id="cn-m21-442">The <b>secure.practicelabs.com </b>zone has been signed with DNSSEC. In this task, you will test if a signed zone can be queried without the DNNSEC validation.</p>
+<p id="cn-m21-443">To query a signed zone without DNSSEC validation required, perform the following steps:</p>
+<h4 id="cn-m21-444"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-445">Connect to the <b>PLABWIN10 </b>device.</p>
+<p id="cn-m21-446">Ensure that the <b>Administrator: Windows PowerShell </b>window is open.</p>
+<p id="cn-m21-447">Type the following commands:</p>
+<pre id="cn-m21-448"><code>Resolve-DnsName www.secure.practicelabs.com -Server plabdm01 -DnssecOk
+</code></pre>
+<p id="cn-m21-449">Press <b>Enter</b>.</p>
+<p id="cn-m21-450"></p><figure><img class="cn-img" id="cn-image-m21-c-42" src="ImplementingDNSSEC_files/image-m21-c-42.jpg" alt="Figure 2.21 Screenshot of PLABWIN10"><figcaption>Figure 2.21 Screenshot of PLABWIN10: A command is entered to resolve a DNS name.</figcaption></figure><p></p>
+<h4 id="cn-m21-451"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-452">The result of the resolve DNS name query command is displayed.</p>
+<p id="cn-m21-453">Notice that the workstation shows a successful 
+response as the DNSSEC Trust Anchors are successfully in place in the 
+lab network.</p>
+<p id="cn-m21-454"></p><figure><img class="cn-img" id="cn-image-m21-c-43" src="ImplementingDNSSEC_files/image-m21-c-43.jpg" alt="Figure 2.22 Screenshot of PLABWIN10"><figcaption>Figure 2.22 Screenshot of PLABWIN10: Windows PowerShell shows the results of the resolve DNS name command.</figcaption></figure><p></p>
+<h4 id="cn-m21-456"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-457">To verify that DNSSEC validation is not required, type the following command:</p>
+<pre id="cn-m21-458"><code>Get-DnsClientNrptPolicy
+</code></pre>
+<p id="cn-m21-459">Press <b>Enter</b>.</p>
+<h4 id="cn-m21-461"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-462">Since no result is given, it means that there is a policy for DNSSEC validation.</p>
+<p id="cn-m21-463">Keep the <b>Windows PowerShell </b>window open.</p>
+<p id="cn-m21-464"></p><figure><img class="cn-img" id="cn-image-m21-c-44" src="ImplementingDNSSEC_files/image-m21-c-44.jpg" alt="Figure 2.23 Screenshot of PLABWIN10"><figcaption>Figure 2.23 Screenshot of PLABWIN10: A command is entered to determine DNS client policy and no policy is returned.</figcaption></figure><p></p>
+<h3 id="cn-m21-467"><b>Task 6 - Configure Support for DNSSEC in GPO</b></h3>
+<p id="cn-m21-468">The Name Resolution Policy Table (NRPT) is used to 
+require DNSSEC validation when a DNSSEC-aware client queries a DNS 
+server. NRPT is configurable via Local GPO for local testing or Domain 
+GPO for domain environments. In this task, you will configure a 
+domain-based GPO to require DNSSEC validation to query the signed <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-469">To configure support for DNSSEC in GPO, perform the following steps:</p>
+<h4 id="cn-m21-470"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-471">Connect to the <b>PLABDC01 </b>server.</p>
+<p id="cn-m21-472">Restore the Server Manager window if already not restored.</p>
+<p id="cn-m21-473">In the <b>Server Manager Dashboard </b>window, click on the <b>Tools </b>menu and select <b>Group Policy Management</b>.</p>
+<h4 id="cn-m21-475"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-476">In the <b>Group Policy Management </b>window, expand the <b>Forest: PRACTICELABS.COM </b>&gt; <b>Domains </b>&gt; <b>PRACTICELABS.COM </b>node-path.</p>
+<p id="cn-m21-477">Right-click <b>PRACTICELABS.COM </b>and select <b>Create a GPO in this domain and link it here...</b></p>
+<h4 id="cn-m21-479"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-480">In the <b>New GPO </b>dialog box, type the following:</p>
+<pre id="cn-m21-481"><code>DNSSEC
+</code></pre>
+<p id="cn-m21-482">Click <b>OK</b>.</p>
+<p id="cn-m21-484"></p><figure><img class="cn-img" id="cn-image-m21-c-45" src="ImplementingDNSSEC_files/image-m21-c-45.jpg" alt="Figure 2.24 Screenshot of PLABDC01"><figcaption>Figure 2.24 Screenshot of PLABDC01: On the New GPO window, a name for the new policy is typed in.</figcaption></figure><p></p>
+<h4 id="cn-m21-485"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-486">Notice that the <b>DNSSEC </b>GPO is now listed under the <b>PRACTICELABS.COM </b>node.</p>
+<p id="cn-m21-487">Right-click the <b>DNSSEC </b>group policy and select <b>Edit</b>.</p>
+<h4 id="cn-m21-489"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-490">In the <b>Group Policy Management Editor </b>window, expand the <b>Computer Configuration </b>&gt; <b>Policies </b>&gt; <b>Windows Settings </b>and click on the <b>Name Resolution Policy </b>folder.</p>
+<p id="cn-m21-491">The <b>Name Resolution Policy </b>details pane is displayed on the right.</p>
+<p id="cn-m21-492">In the <b>Create Rules </b>pane, in the <b>To which part of the namespace does this rule apply? </b>section, ensure that the drop-down list is set to <b>Suffix</b>.</p>
+<p id="cn-m21-493">In the provided text box, type the following:</p>
+<pre id="cn-m21-494"><code>secure.practicelabs.com
+</code></pre>
+<p id="cn-m21-495">In the <b>DNSSEC </b>folder tab, select the following checkbox: <b>Enable DNSSEC in this rule.</b></p>
+<p id="cn-m21-496">Under the <b>Validation </b>section, select the <b>Require DNS clients to check that name and address data has been validated by the DNS server </b>check box.</p>
+<p id="cn-m21-497">At the bottom right corner, click <b>Create</b>.</p>
+<p id="cn-m21-498"></p><figure><img class="cn-img" id="cn-image-m21-c-46" src="ImplementingDNSSEC_files/image-m21-c-46.jpg" alt="Figure 2.25 Screenshot of PLABDC01"><figcaption>Figure
+ 2.25 Screenshot of PLABDC01: On the Group Policy Management Editor 
+window, the lab prescribed settings are enabled in the Name Resolution 
+Policy folder.</figcaption></figure><p></p>
+<h4 id="cn-m21-501"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-502">Scroll down to see the <b>Name Resolution Policy Table</b>.</p>
+<p id="cn-m21-503">Select the on the <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-504">Click <b>Apply</b>.</p>
+<p id="cn-m21-505"></p><figure><img class="cn-img" id="cn-image-m21-c-47" src="ImplementingDNSSEC_files/image-m21-c-47.jpg" alt="Figure 2.26 Screenshot of PLABDC01"><figcaption>Figure 2.26 Screenshot of PLABDC01: On the Group Policy Management Editor window, the Name Resolution Policy table is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m21-507"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-508">Close the <b>Group Policy Management Editor </b>window.</p>
+<p id="cn-m21-509">Exit the <b>Group Policy Management </b>console.</p>
+<h4 id="cn-m21-511"><b><i>Step 8</i></b></h4>
+<p id="cn-m21-512">In the <b>Server Manager &gt; Dashboard </b>window, click on the <b>Tools </b>menu and select <b>Windows PowerShell</b>.</p>
+<h4 id="cn-m21-514"><b><i>Step 9</i></b></h4>
+<p id="cn-m21-515">To force a system propagation of the computer GPO settings, type the following:</p>
+<pre id="cn-m21-516"><code>gpupdate /force
+</code></pre>
+<p id="cn-m21-517">Press <b>Enter</b>.</p>
+<p id="cn-m21-518">In the next prompt, to get the DNS client NRPT policy, type the following:</p>
+<pre id="cn-m21-519"><code>Get-DnsClientNrptPolicy
+</code></pre>
+<p id="cn-m21-520">Press <b>Enter</b>.</p>
+<p id="cn-m21-521">Locate the <b>DnsSecValidationRequired </b>field, and notice that the value is set to “<b>True</b>.”</p>
+<span class="cn-alert" id="cn-m21-522"><b>Alert</b>: GPOs linked to <b>Computer Configuration </b>may encounter delays in propagating the newly-created policy. If you did not get an output after running the <b>Get</b>-<b>DnsClientNrptPolicy </b>cmdlet, restart (DO NOT TURN OFF or SHUTDOWN) the <b>PLABDC01 </b>server. Then retry lab <b>Step 9 </b>above.</span>
+<p id="cn-m21-523"></p><figure><img class="cn-img" id="cn-image-m21-c-48" src="ImplementingDNSSEC_files/image-m21-c-48.jpg" alt="Figure 2.27 Screenshot of PLABDC01"><figcaption>Figure
+ 2.27 Screenshot of PLABDC01: On the Windows PowerShell window, a 
+command is entered to reapply group policy. Followed by a command to 
+verify DNS client policy.</figcaption></figure><p></p>
+<p id="cn-m21-524">Minimize the <b>Windows PowerShell </b>window.</p>
+<h3 id="cn-m21-527"><b>Task 7 - Query a Signed Zone with DNSSEC Validation Required</b></h3>
+<p id="cn-m21-528">After setting up a domain-based GPO for DNSSEC validation, you will run a query to resolve a Resource Record (RR) on the signed <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-529">To query a signed zone with DNSSEC validation required, perform the following steps:</p>
+<h4 id="cn-m21-530"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-531">Connect to the <b>PLABWIN10 </b>device.</p>
+<p id="cn-m21-532">Ensure that the <b>Windows PowerShell </b>window is open.</p>
+<p id="cn-m21-533">To manually apply the newly-created policy to the Windows 10 client, type the following:</p>
+<pre id="cn-m21-534"><code>gpupdate /force
+</code></pre>
+<p id="cn-m21-535">Press <b>Enter</b>.</p>
+<p id="cn-m21-536">In the next prompt, type the following:</p>
+<pre id="cn-m21-537"><code>Get-DnsClientNrptPolicy
+</code></pre>
+<p id="cn-m21-538">Press <b>Enter</b>.</p>
+<h4 id="cn-m21-540"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-541">Notice that the DNS client policy is detected by <b>PLABWIN10 </b>(the Windows 10 device).</p>
+<p id="cn-m21-542">Observe that the <b>DNSSecValidationRequiredField </b>is set to “<b>True</b>.”</p>
+<p id="cn-m21-543"></p><figure><img class="cn-img" id="cn-image-m21-c-49" src="ImplementingDNSSEC_files/image-m21-c-49.jpg" alt="Figure 2.28 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.28 Screenshot of PLABWIN10: On the Windows PowerShell window, a 
+command is entered to reapply group policy. Followed by a command to 
+verify DNS client policy.</figcaption></figure><p></p>
+<h4 id="cn-m21-546"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-547">In the next prompt, to resolve a DNS name with DNSSEC validation configured, type the following:</p>
+<pre id="cn-m21-548"><code>Resolve-DnsName www.secure.practicelabs.com -Server plabdm01 -DnsSecOk
+</code></pre>
+<p id="cn-m21-549">Press <b>Enter</b>.</p>
+<h4 id="cn-m21-551"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-552">Notice that there is no difference between your earlier results and the resolved DNS name.</p>
+<p id="cn-m21-553">This is because a valid Trust Anchor is present on the <b>PLABDM01 </b>server. The query is successful even if DNSSEC validation is required, as it has been completed earlier via the domain GPO.</p>
+<p id="cn-m21-554">Keep the <b>Windows PowerShell </b>window open.</p>
+<p id="cn-m21-555"></p><figure><img class="cn-img" id="cn-image-m21-c-50" src="ImplementingDNSSEC_files/image-m21-c-50.jpg" alt="Figure 2.29 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.29 Screenshot of PLABWIN10: On the Windows PowerShell window, a 
+command is entered to resolve a DNS name, and the results are displayed.</figcaption></figure><p></p>
+<h4 id="cn-m21-556"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-557">In the next prompt, you will attempt to resolve some Resource Records (RRs) within the <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-558">Type the following command:</p>
+<pre id="cn-m21-559"><code>Resolve-DNSName -name www.secure.practicelabs.com -Type soa -Server plabdm01 -DnsSecOk
+</code></pre>
+<p id="cn-m21-560">Press <b>Enter</b>.</p>
+<p id="cn-m21-561">The Host (A) record “<b>www</b>” was successfully resolved. Scroll down through the results of the command to view other details about the Host record.</p>
+<span class="cn-quote" id="cn-m21-562"><b><i>Note</i></b><i>: There is another Resource Record Host (A) record called “</i><b><i>www2</i></b><i>” that you can likewise query if desired.</i></span>
+<p id="cn-m21-563"></p><figure><img class="cn-img" id="cn-image-m21-c-51" src="ImplementingDNSSEC_files/image-m21-c-51.jpg" alt="Figure 2.30 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.30 Screenshot of PLABWIN10: On the Windows PowerShell window, a 
+command is entered to resolve a DNS name’s SOA, and the results are 
+displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="cn-alert" id="cn-m21-566">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m21-567"><b>Exercise 3 - Customizing DNSSEC</b></h2>
+<p id="cn-m21-568">The DNSSEC wizard provides a set of default settings 
+for signing a zone. In a similar way, you can sign a zone using 
+customized settings by using the DNSSEC feature of the <b>DNS Manager</b>.</p>
+<p id="cn-m21-569">For example, a change in the security key on PLABDC01 (which hosts the <b>secure.practicelabs.com </b>zone)
+ will create a mismatch among the DNS servers that hold a copy of the 
+Trust Anchor (TA) key. Therefore, the new security key needs to be 
+updated on all the servers to enable validation.</p>
+<p id="cn-m21-570">In this exercise, you will unsign the <b>secure.practicelabs.com </b>zone
+ and re-sign it using custom parameters. You will notice the effect of 
+the re-signed DNS zone on the other servers that hold copies of the 
+DNSSEC keys or Trust Anchors from the first signing.</p>
+<p id="cn-m21-571">Please refer to your course material or use your favorite search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m21-573">After completing this exercise, you will be able to:</p>
+<ul id="cn-m21-574">
+<li id="cn-m21-574">Unsign the Secure Zone</li>
+<li id="cn-m21-575">Re-Sign secure.practicelabs.com with Custom Parameters</li>
+<li id="cn-m21-576">Show Failed and Unsecured Validation</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m21-578">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m21-579">
+<li id="cn-m21-579"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m21-580"><b>PLABDM01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m21-581"><b>PLABSA01 </b>(Windows Server 2016 - Domain Member Server)</li>
+<li id="cn-m21-582"><b>PLABWIN10 </b>(Windows 10 - Domain Workstation)</li>
+</ul>
+<p id="cn-m21-583"><img class="cn-img" id="cn-image-m21-c-52" src="ImplementingDNSSEC_files/image-m21-c-52.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m21-585"><b>Task 1 - Unsign the Secure Zone </b></h3>
+<p id="cn-m21-586">You can unsign a secure zone to define a new key. In this task, you will unsign the <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-587">To unsign a secure zone, perform the following steps:</p>
+<h4 id="cn-m21-588"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-589">Connect to the <b>PLABDC01 </b>server.</p>
+<p id="cn-m21-590">Ensure that the <b>DNS Manager </b>window is open.</p>
+<p id="cn-m21-591">Expand the <b>Forward Lookup Zones </b>node if not yet expanded.</p>
+<p id="cn-m21-592">Expand and right-click the <b>secure.practicelabs.com </b>zone and select <b>DNSSEC </b>&gt; <b>Unsign the zone</b>.</p>
+<p id="cn-m21-594"></p><figure><img class="cn-img" id="cn-image-m21-c-53" src="ImplementingDNSSEC_files/image-m21-c-53.jpg" alt="Figure 3.1 Screenshot of PLABDC01"><figcaption>Figure
+ 3.1 Screenshot of PLABDC01: On the DNS Manager window, 
+secure.practicelabs.com zone is right-clicked and Unsign the zone is 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-596"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-597">In the <b>Unsign zone </b>&gt; <b>DNS Security Extensions (DNSSEC) </b>window, click <b>Next</b>.</p>
+<h4 id="cn-m21-599"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-600">On the <b>Unsigning the Zone </b>page, you will get a confirmation that the zone has been successfully unsigned.</p>
+<p id="cn-m21-601">Click <b>Finish</b>.</p>
+<p id="cn-m21-602"></p><figure><img class="cn-img" id="cn-image-m21-c-54" src="ImplementingDNSSEC_files/image-m21-c-54.jpg" alt="Figure 3.2 Screenshot of PLABDC01"><figcaption>Figure 3.2 Screenshot of PLABDC01: On the Unsign the zone &gt; Unsigning the Zone window, indicates a successful operation.</figcaption></figure><p></p>
+<h4 id="cn-m21-605"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-606">Back in the <b>DNS Manager </b>window, click on the <b>Refresh </b>icon on the icon bar at the top.</p>
+<p id="cn-m21-607"></p><figure><img class="cn-img" id="cn-image-m21-c-55" src="ImplementingDNSSEC_files/image-m21-c-55.jpg" alt="Figure 3.3 Screenshot of PLABDC01"><figcaption>Figure 3.3 Screenshot of PLABDC01: The DNS Manager window shows the previously signed zone.</figcaption></figure><p></p>
+<h4 id="cn-m21-609"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-610">Notice that the updated records listed for the <b>secure.practicelabs.com </b>zone indicate that this is now a regular DNS zone.</p>
+<p id="cn-m21-611">Keep the <b>DNS Manager </b>window open.</p>
+<p id="cn-m21-612"></p><figure><img class="cn-img" id="cn-image-m21-c-56" src="ImplementingDNSSEC_files/image-m21-c-56.jpg" alt="Figure 3.4 Screenshot of PLABDC01"><figcaption>Figure 3.4 Screenshot of PLABDC01: The DNS Manager window shows the regular DNS zone after it was unsigned.</figcaption></figure><p></p>
+<h3 id="cn-m21-615"><b>Task 2 -  Re-Sign secure.practicelabs.com with Custom Parameters</b></h3>
+<p id="cn-m21-616">To sign a zone with customized keys, you will define the key master parameters and the new keys.</p>
+<p id="cn-m21-617">In this task, you will sign the 
+secure.practicelabs.com zone again using custom keys. Thereafter, you 
+will delete the existing key from other servers and specify a new key.</p>
+<p id="cn-m21-618">To sign a zone with custom key parameters, perform the following steps:</p>
+<h4 id="cn-m21-619"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-620">Connect to the <b>PLABDC01 </b>server and ensure that the <b>DNS Manager </b>is open.</p>
+<p id="cn-m21-621">Right-click <b>secure.practicelabs.com </b>and select <b>DNSSEC </b>&gt; <b>Sign the Zone</b>.</p>
+<h4 id="cn-m21-623"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-624">In the <b>Zone Signing Wizard</b>, the <b>DNS Security Extensions (DNSSEC) </b>page is displayed.</p>
+<p id="cn-m21-625">Read through the information and click <b>Next</b>.</p>
+<h4 id="cn-m21-627"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-628">On the <b>Signing Options </b>page, ensure that the <b>Customize zone signing parameters </b>option is selected.</p>
+<p id="cn-m21-629">Click <b>Next</b>.</p>
+<p id="cn-m21-631"></p><figure><img class="cn-img" id="cn-image-m21-c-57" src="ImplementingDNSSEC_files/image-m21-c-57.jpg" alt="Figure 3.5 Screenshot of PLABDC01"><figcaption>Figure
+ 3.5 Screenshot of PLABDC01: On the Zone Signing Wizard &gt; Signing 
+Options window, the lab prescribed setting is selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-633"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-634">On the <b>Key Master </b>page, ensure that the option <b>The DNS server PLABDC01 is the Key Master </b>is selected.</p>
+<p id="cn-m21-635">This is the required setting because the zone signing will be carried out on <b>PLABDC01</b>.</p>
+<p id="cn-m21-636">Click <b>Next</b>.</p>
+<p id="cn-m21-637"></p><figure><img class="cn-img" id="cn-image-m21-c-58" src="ImplementingDNSSEC_files/image-m21-c-58.jpg" alt="Figure 3.6 Screenshot of PLABDC01"><figcaption>Figure 3.6 Screenshot of PLABDC01: On the Zone Signing Wizard &gt; Key Master window, the default setting is indicated.</figcaption></figure><p></p>
+<h4 id="cn-m21-639"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-640">On the <b>Key Signing Key (KSK) </b>page describing the function of the KSK as an authentication key, click <b>Next</b>.</p>
+<h4 id="cn-m21-642"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-643">On the <b>Key Signing Key (KSK) Configure one or more KSKs </b>page, select the existing key and click <b>Remove</b>.</p>
+<p id="cn-m21-644"></p><figure><img class="cn-img" id="cn-image-m21-c-59" src="ImplementingDNSSEC_files/image-m21-c-59.jpg" alt="Figure 3.7 Screenshot of PLABDC01"><figcaption>Figure 3.7 Screenshot of PLABDC01: On the Zone Signing Wizard &gt; Key Signing Key (KSK) window, a key is removed.</figcaption></figure><p></p>
+<h4 id="cn-m21-646"><b><i>Step 7</i></b></h4>
+<p id="cn-m21-647">While still on the <b>Key Signing Key (KSK) Configure one or more KSKs </b>page, to add a new KSK, click <b>Add</b>.</p>
+<h4 id="cn-m21-649"><b><i>Step 8</i></b></h4>
+<p id="cn-m21-650">In the <b>New Key Signing Key (KSK) </b>dialog box, in the <b>Key Properties </b>section, click the drop-down list next to <b>Cryptographic algorithm </b>and select <b>RSA/SHA-512</b>.</p>
+<p id="cn-m21-651">In the <b>Key Properties </b>section, access the <b>Key length (bits) </b>drop-down list and select <b>4096</b>.</p>
+<p id="cn-m21-652">Please note that the stronger the cipher strength 
+(key length bits) is, the larger the overhead will be on the server to 
+perform the encryption process.</p>
+<p id="cn-m21-653">Click <b>OK</b>.</p>
+<p id="cn-m21-654"></p><figure><img class="cn-img" id="cn-image-m21-c-60" src="ImplementingDNSSEC_files/image-m21-c-60.jpg" alt="Figure 3.8 Screenshot of PLABDC01"><figcaption>Figure 3.8 Screenshot of PLABDC01: On the New Key Signing Key (KSK) window, the lab prescribed parameters are selected.</figcaption></figure><p></p>
+<h4 id="cn-m21-657"><b><i>Step 9</i></b></h4>
+<p id="cn-m21-658">Back on the <b>Key Signing Key (KSK) - Configure one more KSKs </b>page, notice that the newly configured key is listed.</p>
+<p id="cn-m21-659">Click <b>Next</b>.</p>
+<p id="cn-m21-660"></p><figure><img class="cn-img" id="cn-image-m21-c-61" src="ImplementingDNSSEC_files/image-m21-c-61.jpg" alt="Figure 3.9 Screenshot of PLABDC01"><figcaption>Figure 3.9 Screenshot of PLABDC01: The Key Signing Key (KSK) window displays the newly created key.</figcaption></figure><p></p>
+<h4 id="cn-m21-662"><b><i>Step 10</i></b></h4>
+<p id="cn-m21-663">On the <b>Zone Signing Key (ZSK) </b>page that describes the function of the ZSK, click <b>Next</b>.</p>
+<h4 id="cn-m21-665"><b><i>Step 11</i></b></h4>
+<p id="cn-m21-666">On the <b>Zone Signing Key (ZSK) - Configure one or more ZSKs </b>page, click <b>Next.</b></p>
+<h4 id="cn-m21-668"><b><i>Step 12</i></b></h4>
+<p id="cn-m21-669">On the <b>Next Secure (NSEC) </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m21-671"><b><i>Step 13</i></b></h4>
+<p id="cn-m21-672">On the <b>Trust Anchors (TAs</b>) page, click <b>Next</b>.</p>
+<h4 id="cn-m21-674"><b><i>Step 14</i></b></h4>
+<p id="cn-m21-675">On the <b>Signing and Polling Parameters </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m21-677"><b><i>Step 15</i></b></h4>
+<p id="cn-m21-678">On the <b>DNS Security Extensions (DNSSEC) </b>page, click <b>Next</b>.</p>
+<h4 id="cn-m21-680"><b><i>Step 16</i></b></h4>
+<p id="cn-m21-681">Please wait while the zone is being signed.</p>
+<p id="cn-m21-682">On the <b>Signing the Zone </b>window, click <b>Finish </b>when the zone has been successfully signed.</p>
+<p id="cn-m21-683"></p><figure><img class="cn-img" id="cn-image-m21-c-62" src="ImplementingDNSSEC_files/image-m21-c-62.jpg" alt="Figure 3.10 Screenshot of PLABDC01"><figcaption>Figure 3.10 Screenshot of PLABDC01: On the Zone Signing Wizard &gt; Signing the Zone window indicates a successful operation.</figcaption></figure><p></p>
+<h4 id="cn-m21-685"><b><i>Step 17</i></b></h4>
+<p id="cn-m21-686">As before, click the <b>Refresh </b>button or press <b>F5 </b>to refresh the <b>secure.practicelabs.com </b>zone.</p>
+<p id="cn-m21-687">The <b>secure.practicelabs.com </b>zone is now signed with a new key.</p>
+<p id="cn-m21-688"></p><figure><img class="cn-img" id="cn-image-m21-c-63" src="ImplementingDNSSEC_files/image-m21-c-63.jpg" alt="Figure 3.11 Screenshot of PLABDC01"><figcaption>Figure 3.11 Screenshot of PLABDC01: The DNS Manager window shows the signed secure.practicelabs.com zone.</figcaption></figure><p></p>
+<h4 id="cn-m21-691"><b><i>Step 18</i></b></h4>
+<p id="cn-m21-692">After signing the zone with custom parameters, you 
+must update the trust points created earlier between the PLABDC01, 
+PLABDM01, and PLABSA01 servers.</p>
+<p id="cn-m21-693">On the <b>PLABDC01 </b>server, restore the <b>Windows PowerShell </b>window from the taskbar.</p>
+<p id="cn-m21-694">Then type the following command:</p>
+<pre id="cn-m21-695"><code>Get-DnsServerTrustAnchor -name secure.practicelabs.com -computername PLABDC01
+</code></pre>
+<p id="cn-m21-696">Press <b>Enter</b>.</p>
+<p id="cn-m21-697">To refresh the <b>Trust Points </b>that were previously configured on the <b>PLABSA01 </b>and <b>PLABDM01 </b>servers, type the following:</p>
+<p id="cn-m21-698">In the next prompt, type the following command:</p>
+<pre id="cn-m21-699"><code>Get-DnsServerTrustAnchor -name secure.practicelabs.com -computername PLABDM01
+</code></pre>
+<p id="cn-m21-700">Press <b>Enter</b>.</p>
+<p id="cn-m21-701">In the next prompt, type the following command:</p>
+<pre id="cn-m21-702"><code>Get-DnsServerTrustAnchor -name secure.practicelabs.com -computername PLABSA01
+</code></pre>
+<p id="cn-m21-703">Press <b>Enter</b>.</p>
+<p id="cn-m21-704">Keep the <b>Windows PowerShell </b>window open.</p>
+<span class="cn-alert" id="cn-m21-705"><b>Important</b>: When running the third commandlet where the parameter is “-<b>computername PLABSA01</b>,”
+ you may get an error about the Trust Anchor. If this happens, please 
+wait for about 5 minutes and then retry the same command. The error is 
+due to delays in propagating the DNSSEC-enabled zone. If it still 
+doesn’t work, restart PLABSA01’s DNS server.</span>
+<p id="cn-m21-706"></p><figure><img class="cn-img" id="cn-image-m21-c-64" src="ImplementingDNSSEC_files/image-m21-c-64.jpg" alt="Figure 3.12 Screenshot of PLABDC01"><figcaption>Figure
+ 3.12 Screenshot of PLABDC01: A number of commands entered to verify the
+ trust anchor availability on the three servers. The results indicate 
+the trust anchors are present.</figcaption></figure><p></p>
+<h3 id="cn-m21-709"><b>Task 3 - Show Failed and Unsecured Validation</b></h3>
+<p id="cn-m21-710">On a non-authoritative DNS server, the DNSSEC keys 
+must be copied manually to enable validation. For this task, you will 
+now copy the keys on to <b>PLABDM01 </b>to test the validation on a non-authoritative DNS server.</p>
+<p id="cn-m21-711">To see failed and unsecure validation, perform the following steps:</p>
+<h4 id="cn-m21-712"><b><i>Step 1</i></b></h4>
+<p id="cn-m21-713">Connect to the <b>PLABDM01 </b>server.</p>
+<p id="cn-m21-714">Ensure that the <b>DNS Manager </b>window is displayed.</p>
+<p id="cn-m21-715">Right-click <b>PLABDM01 </b>and select <b>Clear Cache</b>.</p>
+<p id="cn-m21-716"></p><figure><img class="cn-img" id="cn-image-m21-c-65" src="ImplementingDNSSEC_files/image-m21-c-65.jpg" alt="Figure 3.13 Screenshot of PLABDM01"><figcaption>Figure 3.13 Screenshot of PLABDM01: On the DNS Manager, the DNS cache is cleared on PLABDM01 server.</figcaption></figure><p></p>
+<h4 id="cn-m21-719"><b><i>Step 2</i></b></h4>
+<p id="cn-m21-720">Connect to the <b>PLABWIN10 </b>device.</p>
+<p id="cn-m21-721">Ensure that the <b>Windows PowerShell </b>window is displayed.</p>
+<p id="cn-m21-722">Now type the following command:</p>
+<pre id="cn-m21-723"><code>Resolve-DnsName www.secure.practicelabs.com -server PLABDM01 -DnsSecOk
+</code></pre>
+<p id="cn-m21-724">Press <b>Enter</b>.</p>
+<p id="cn-m21-725">Notice that you get a failure. This is because automatic updating of Trust Anchors on a non-authoritative DNS (such as <b>PLABDM01</b>) is not supported. This means that the Trust Anchor must be manually imported to the <b>PLABDM01 </b>server</p><figure><img class="cn-img" id="cn-image-m21-c-66" src="ImplementingDNSSEC_files/image-m21-c-66.jpg" alt="Figure 3.14 Screenshot of PLABWIN10"><figcaption>Figure
+ 3.14 Screenshot of PLABWIN10: On the Windows PowerShell window, a 
+command is entered to resolve a DNS name. The results of the command 
+indicate the name is unresolvable.</figcaption></figure><p></p>
+<h4 id="cn-m21-727"><b><i>Step 3</i></b></h4>
+<p id="cn-m21-728">Connect to the <b>PLABDM01 </b>server.</p>
+<p id="cn-m21-729">Ensure that the <b>Windows PowerShell </b>window is open.</p>
+<p id="cn-m21-730">To remove the DNS Server Trust Anchor, type the following command:</p>
+<pre id="cn-m21-731"><code>Remove-DnsServerTrustAnchor secure.practicelabs.com
+</code></pre>
+<p id="cn-m21-732">Press <b>Enter</b>.</p>
+<p id="cn-m21-733">In the next prompt, type the following:</p>
+<pre id="cn-m21-734"><code>y
+</code></pre>
+<p id="cn-m21-735">Press <b>Enter</b>.</p>
+<p id="cn-m21-736">The DNS Trust Anchor has been successfully removed.</p>
+<p id="cn-m21-737"></p><figure><img class="cn-img" id="cn-image-m21-c-67" src="ImplementingDNSSEC_files/image-m21-c-67.jpg" alt="Figure 3.15 Screenshot of PLABDM01"><figcaption>Figure 3.15 Screenshot of PLABDM01: On the Windows PowerShell window, a command is entered to remove DNS server trust anchor.</figcaption></figure><p></p>
+<h4 id="cn-m21-739"><b><i>Step 4</i></b></h4>
+<p id="cn-m21-740">To resolve a name after removing the Trust Anchor, type the following command:</p>
+<pre id="cn-m21-741"><code>Resolve-Dnsname -Name www.secure.practicelabs.com -Server plabdm01 -DnsSecOk
+</code></pre>
+<p id="cn-m21-742">Press <b>Enter</b>.</p>
+<h4 id="cn-m21-744"><b><i>Step 5</i></b></h4>
+<p id="cn-m21-745">Notice that the DNS name resolution failed because the old Trust Anchor was previously removed.</p>
+<p id="cn-m21-746"></p><figure><img class="cn-img" id="cn-image-m21-c-68" src="ImplementingDNSSEC_files/image-m21-c-68.jpg" alt="Figure 3.16 Screenshot of PLABDM01"><figcaption>Figure
+ 3.16 Screenshot of PLABDM01: On the Windows PowerShell window, a 
+command is entered to resolve a DNS name. The result of the command 
+indicates a failed DNS server name resolution.</figcaption></figure><p></p>
+<h4 id="cn-m21-748"><b><i>Step 6</i></b></h4>
+<p id="cn-m21-749">Connect again to <b>PLABWIN10</b>.</p>
+<p id="cn-m21-750">Retype the following command:</p>
+<pre id="cn-m21-751"><code>Resolve-DnsName www.secure.practicelabs.com -server PLABDM01 -DnsSecOk
+</code></pre>
+<p id="cn-m21-752">Press <b>Enter</b>.</p>
+<p id="cn-m21-753">Notice the “<b>unsecured DNS packet</b>” message that appears in <b>Windows PowerShell</b>. This appears because the Trust Anchor on the <b>PLABDM01 </b>server was deleted.</p>
+<p id="cn-m21-754">You can substitute “<b>www2</b>” in the command indicated above to likewise test DNSSEC.</p>
+<span class="cn-alert" id="cn-m21-755"><b>Important</b>: The&nbsp;<b>Resolve-DnsName&nbsp;</b>cmdlet
+ was introduced in Windows Server 2012 and Windows 8 and can be used to 
+display DNS queries that include DNSSEC data. Do not use the&nbsp;<b>nslookup&nbsp;</b>command-line tool to test DNSSEC support for a zone. The&nbsp;<b>nslookup&nbsp;</b>tool uses an internal DNS client that is NOT DNSSEC-aware.</span>
+<p id="cn-m21-756"></p><figure><img class="cn-img" id="cn-image-m21-c-69" src="ImplementingDNSSEC_files/image-m21-c-69.jpg" alt="Figure 3.17 Screenshot of PLABWIN10"><figcaption>Figure
+ 3.17 Screenshot of PLABWIN10: On the Windows PowerShell window, a 
+command is entered to resolve a DNS name. The result of the command 
+indicates an unsecured DNS packet was sent.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m21-760"><b>Review</b></h2>
+<p id="cn-m21-761">Well done, you have completed the <b>Implementing DNSSEC </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">4539f634-ba0d-41ee-82bc-4a241dd64b3c</span>
+<span class="atom-code hidden">889f40f6-110f-4215-af82-b585fec9187f</span>
+<span class="atom-code hidden">9e0830ce-af5b-4346-8f37-79018ad9bec9</span>
+<span class="atom-code hidden">94f8a78d-dd1b-414c-aee4-d9690e18e4db</span>
+<span class="atom-code hidden">b5bcc5af-d517-4130-adeb-c89e82a09b35</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m21-771">You completed the following exercises:</p>
+<ul id="cn-m21-772">
+<li id="cn-m21-772">Preparing DNS Setup for DNSSEC</li>
+<li id="cn-m21-773">Configuring DNSSEC</li>
+<li id="cn-m21-774">Customizing DNSSEC</li>
+</ul>
+<p id="cn-m21-775">You should now be able to:</p>
+<ul id="cn-m21-776">
+<li id="cn-m21-776">Create a Zone</li>
+<li id="cn-m21-777">Create Sample Resource Records</li>
+<li id="cn-m21-778">Create a Non-Authoritative DNS Server</li>
+<li id="cn-m21-779">Create a Secondary Domain Controller</li>
+<li id="cn-m21-780">Sign the Zone Using Default Settings</li>
+<li id="cn-m21-781">Distribute the TA to a Non-Authoritative DNS Server</li>
+<li id="cn-m21-782">Verify DNSKEY Trust Anchors</li>
+<li id="cn-m21-783">Distribute TAs to a Secondary Domain Controller</li>
+<li id="cn-m21-784">Query a Signed Zone without DNSSEC Validation Required</li>
+<li id="cn-m21-785">Configure Support for DNSSEC in GPO</li>
+<li id="cn-m21-786">Query a Signed Zone with DNSSEC Validation Required</li>
+<li id="cn-m21-787">Unsign the Secure Zone</li>
+<li id="cn-m21-788">Re-Sign secure.practicelabs.com with Custom Parameters</li>
+<li id="cn-m21-789">Show Failed and Unsecured Validation</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m21-793">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

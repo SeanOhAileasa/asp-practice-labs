@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="Performingsecurityassessmentusingvarioustools_files/print-styles.css" rel="stylesheet">
+    <script src="Performingsecurityassessmentusingvarioustools_files/jquery.min.js"></script>
+    <script src="Performingsecurityassessmentusingvarioustools_files/jspdf.js"></script>
+    <script src="Performingsecurityassessmentusingvarioustools_files/from_html.js"></script>
+    <script src="Performingsecurityassessmentusingvarioustools_files/addimage.js"></script>
+    <script src="Performingsecurityassessmentusingvarioustools_files/filesaver.js"></script>
+    <script src="Performingsecurityassessmentusingvarioustools_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="+cImdKpXPOXvB+dbQbOlUWncP132BtiU5/YZ8C9DmyOpxCGeVRqHzrbVMsAguBWGllS03yr7HZ30vo9gawfgX7FNOADVZflzsA9j3ctlsXU=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Performing security assessment using various tools</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Identifying Live Systems</li><li>Exercise 2 - Performing Zone Transfers</li><li>Exercise 3 - Working with Remote Targets</li><li>Exercise 4 - Working with Finger Command</li><li>Exercise 5 - Social Engineering Reconnaissance</li><li>Exercise 6 - Use the Social Engineering Toolkit (SET) in Kali Linux</li><li>Exercise 7 - Perform Routing Table Verification</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m15-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Nmap</div>
+<div>Hping3</div>
+<div>Security</div>
+</div>
+<p id="cn-m15-5">Welcome to the <b>Performing Security Assessment using Various Tools </b>Practice Lab. In this module, you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-9">In this module, you will complete the following exercises:</p>
+<ul id="cn-m15-10">
+<li id="cn-m15-10">Connect to Kali</li>
+<li id="cn-m15-11">Identify Live Hosts using nmap</li>
+<li id="cn-m15-12">Identify Live Hosts using hping3</li>
+</ul>
+<p id="cn-m15-13">After completing this lab, you will be able to:</p>
+<ul id="cn-m15-14">
+<li id="cn-m15-14">Connect to Kali</li>
+<li id="cn-m15-15">Identify Live Hosts using nmap</li>
+<li id="cn-m15-16">Identify Live Hosts using hping3</li>
+<li id="cn-m15-17">Connect to Windows 10 and Kali</li>
+<li id="cn-m15-18">Use Nslookup to Perform Zone Transfer</li>
+<li id="cn-m15-19">Use the DIG Tool to Perform Zone Transfer</li>
+<li id="cn-m15-20">Use PsInfo Command-line Tool</li>
+<li id="cn-m15-21">Use the Finger Command</li>
+<li id="cn-m15-22">Log into MyBook</li>
+<li id="cn-m15-23">Explore and Gather Information</li>
+<li id="cn-m15-24">Connect to Windows 10 and Kali</li>
+<li id="cn-m15-25">Create an Exploit</li>
+<li id="cn-m15-26">Setup the FTP Server</li>
+<li id="cn-m15-27">Download the Payload</li>
+<li id="cn-m15-28">Exploit the Victim’s System</li>
+<li id="cn-m15-29">Using the Netstat command-line tool</li>
+<li id="cn-m15-30">Using the Route command line tool</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m15-32">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m15-33">
+<li id="cn-m15-33"><b>CAS-003 </b>3.1 Given a scenario, conduct a security assessment using the appropriate methods.</li>
+</ul>
+<span class="cn-quote" id="cn-m15-34"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m15-36">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m15-40">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m15-41">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-43"><b>Lab Topology</b></h2>
+<p id="cn-m15-44">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m15-45">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m15-46">
+<li id="cn-m15-46"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-47"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m15-48"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-49"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m15-50"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m15-51"><img class="cn-img" id="cn-image-m15-c-0" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m15-52">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-53"><b>Exercise 1 - Identifying Live Systems</b></h2>
+<p id="cn-m15-54">The basic and foremost step in studying the physical 
+connectivity of networks is scanning. Scanning, also known as probing, 
+is a process of leading the target machines to reveal useful information
+ about them. A network scanner is a tool that will aid in scanning 
+networks. Some of the popularly used network scanner tools are nmap and 
+hping3. Both nmap and hping3 have several features that give complete 
+control over the scans that you perform. You can download the 
+appropriate nmap and hping3 tools for your operating system from the 
+following respective links:</p>
+<ul id="cn-m15-55">
+<li id="cn-m15-55">http://nmap.org</li>
+<li id="cn-m15-56">http://www.hping.org</li>
+</ul>
+<p id="cn-m15-57">For this demonstration, nmap &amp; hping3 are bundled with the default installation of Kali Linux.</p>
+<p id="cn-m15-58">In this exercise, you will learn to identify live systems using nmap and hping3.</p>
+<p id="cn-m15-59">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-61">After completing this exercise, you will be able to:</p>
+<ul id="cn-m15-62">
+<li id="cn-m15-62">Connect to Kali</li>
+<li id="cn-m15-63">Identify Live Hosts using nmap</li>
+<li id="cn-m15-64">Identify Live Hosts using hping3</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m15-66">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m15-67">
+<li id="cn-m15-67"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-68"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-69"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m15-70"><img class="cn-img" id="cn-image-m15-c-1" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m15-71"><b>Task 1 - Connecting Kali</b></h3>
+<p id="cn-m15-72">In this task, you will power on and connect to the lab devices used within this exercise.</p>
+<h4 id="cn-m15-73"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-74">Ensure you have powered on the required devices and connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m15-75">Type <b>root </b>in the <b>Username </b>field.</p>
+<p id="cn-m15-76">Type the following password in the <b>Password </b>field.</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m15-78">Click <b>Log In.</b></p>
+<p id="cn-m15-79"></p><figure><img class="cn-img" id="cn-image-m15-c-2" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-2.jpg" alt="Figure 1.1 Screenshot of PLABKALI01"><figcaption>Figure 1.1 Screenshot of PLABKALI01: Login screen is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m15-80"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-81">The PLABKALI01 <b>desktop </b>is displayed.</p>
+<p id="cn-m15-82"></p><figure><img class="cn-img" id="cn-image-m15-c-3" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-3.jpg" alt="Figure 1.2 Screenshot of PLABKALI01"><figcaption>Figure 1.2 Screenshot of PLABKALI01: Desktop is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m15-84"><b>Task 2 - Identify Live Hosts using nmap </b></h3>
+<p id="cn-m15-85">In this task, you will use the nmap tool to identify 
+live hosts in the Practice Labs environment. As the first step, you will
+ run the ifconfig command in Kali Linux to display information about all
+ network interfaces currently in operation.</p>
+<h4 id="cn-m15-87"><b><i>Step 1 </i></b></h4>
+<p id="cn-m15-88">Click the Kali icon located at the top left.</p>
+<p id="cn-m15-89">Point to <b>Usual applications &gt; System Tools &gt; QTerminal</b></p>
+<p id="cn-m15-90">Click the result of <b>QTerminal.</b></p>
+<p id="cn-m15-91"></p><figure><img class="cn-img" id="cn-image-m15-c-4" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-4.jpg" alt="Figure 1.3 Screenshot of PLABKALI01"><figcaption>Figure 1.3 Screenshot of PLABKALI01: Clicking the Terminal icon in the Usual applications</figcaption></figure><p></p>
+<h4 id="cn-m15-92"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-93">At the command prompt of the root terminal window, type the following command:</p>
+<pre id="cn-m15-94"><code>ifconfig
+</code></pre>
+<p id="cn-m15-95">Press <b>Enter</b>.</p>
+<p id="cn-m15-96">As seen in the output, eth0 is the first, and the only
+ ethernet interface in the network and lo is the loopback interface that
+ the system uses to communicate with itself.</p>
+<p id="cn-m15-97">Find that the Kali Linux’s IP address is 192.168.0.3.</p>
+<p id="cn-m15-100"></p><figure><img class="cn-img" id="cn-image-m15-c-5" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-5.jpg" alt="Figure 1.4 Screenshot of PLABKALI01"><figcaption>Figure 1.4 Screenshot of PLABKALI01: The command ifconfig is executed, and the output is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m15-102"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-103">To display the help summary page of nmap, type the following command:</p>
+<pre id="cn-m15-104"><code>nmap -h
+</code></pre>
+<p id="cn-m15-105">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m15-106"><b><i>Note: </i></b><i>You can view the help summary of nmap to learn various switches and scanning techniques supported by the tool. </i></span>
+<p id="cn-m15-107"></p><figure><img class="cn-img" id="cn-image-m15-c-6" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-6.jpg" alt="Figure 1.5 Screenshot of PLABKALI01"><figcaption>Figure
+ 1.5 Screenshot of PLABKALI01: The utility nmap with the switch -h is 
+executed, and the nmap help summary page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m15-109"><b><i>Step 4</i></b></h4>
+<p id="cn-m15-110">In nmap, you can specify the IP scan targets in the following formats:</p>
+<ol id="cn-m15-111">
+<li id="cn-m15-111">Domain name: target.com</li>
+<li id="cn-m15-112">Target IP address: 192.168.0.1</li>
+<li id="cn-m15-113">IP address range of the subnet: 192.168.0.1-255</li>
+<li id="cn-m15-114">CIDR (Classless Inter-Domain Routing) - 192.168.0.1/24</li>
+</ol>
+<p id="cn-m15-115">For this demonstration, you will perform a simple 
+ping sweep, also known as the ICMP scan, to determine how many hosts 
+respond to the ping request sent by nmap on the 192.168.0.1/24 subnet.</p>
+<p id="cn-m15-116">Type the following command at the command prompt:</p>
+<pre id="cn-m15-117"><code>nmap -sn 192.168.0.1/24
+</code></pre>
+<p id="cn-m15-118">Press <b>Enter</b>.</p>
+<p id="cn-m15-119">The output shows that the devices with the IP address
+ 192.168. 0.1 (PLABDC01), 192.168.0.2 (PLABDM01), 192.168.0.4 
+(PLABWIN01), 192.168.0.5 (PLABWIN801) and 192.168.0.3 (Kali Linux) are 
+up.</p>
+<span class="cn-quote" id="cn-m15-120"><b><i>Note: </i></b><i>The nmap 
+switch for the ping scan is ‘-sn.’ The -sn switch disables port scan by 
+default and only sends ping requests to the specified target machines. 
+All hosts that respond to the requests with valid responses are treated 
+as live hosts, and the rest of the hosts that do not respond to the ping
+ request are considered as being not live.</i></span>
+<span class="cn-alert" id="cn-m15-123">Leave the devices you have powered on in their current state and proceed to the next exercise.</span>
+<h3 id="cn-m15-124"><b>Task 3 - Identify Live Hosts using hping3</b></h3>
+<p id="cn-m15-125">Similar to nmap, you can also use hping3 to identify 
+if a host is live or not.  It is not possible to specify an IP address 
+range as a target in the hping3 utility. Only one target at a time can 
+be specified.</p>
+<p id="cn-m15-126">In this task, you will use the hping3 tool to identify live hosts in the Practice Labs environment.</p>
+<h4 id="cn-m15-127"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-128">Clear the screen using the clear command.</p>
+<p id="cn-m15-129">You can view the help summary page of hping3 to learn various switches and scanning techniques supported by the tool.</p>
+<p id="cn-m15-130">To display the help summary page of hping3, type the following command:</p>
+<pre id="cn-m15-131"><code>hping3 -h
+</code></pre>
+<p id="cn-m15-132">Press <b>Enter</b>.</p>
+<p id="cn-m15-133"></p><figure><img class="cn-img" id="cn-image-m15-c-8" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-8.jpg" alt="Figure 1.7 Screenshot of PLABKALI01"><figcaption>Figure
+ 1.7 Screenshot of PLABKALI01: The utility hping3 with the switch -h is 
+run, and the hping3 help summary page is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m15-135"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-136">To perform a simple ping scan (known as an ICMP scan)
+ to determine if a host responds to the ping request sent by hping3, 
+type the following command at the command prompt:</p>
+<pre id="cn-m15-137"><code>hping3 -1 192.168.0.1
+</code></pre>
+<p id="cn-m15-138">This command determines if the host 192.168.0.1 is live or not.</p>
+<p id="cn-m15-139">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m15-140"><b><i>Note: </i></b><i>The hping3 switch for the ping scan is ‘-1’. This switch enables the ICMP mode in hping3 utility.</i></span>
+<p id="cn-m15-141">From the output, you can observe that the host 
+192.168.0.1 responds with a valid ICMP response for every ICMP request 
+sent. This ensures that the host 192.168.0.1 is live.</p>
+<p id="cn-m15-142"></p><figure><img class="cn-img" id="cn-image-m15-c-9" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-9.jpg" alt="Figure 1.8 Screenshot PLABKALI01"><figcaption>Figure
+ 1.8 Screenshot PLABKALI01: A ping scan is performed using the utility 
+hping3, and the hping3 packets are sent and received from the specified 
+host successfully.</figcaption></figure><p></p>
+<h4 id="cn-m15-144"><b><i>Step 3 </i></b></h4>
+<p id="cn-m15-145">Press <b>Ctrl+C </b>to cancel the packet transmission.</p>
+<p id="cn-m15-146">You can perform similar ping scans technique against 
+other hosts in the Practice Labs environment to determine if they are 
+live or not.</p>
+<p id="cn-m15-148"></p><figure><img class="cn-img" id="cn-image-m15-c-10" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-10.jpg" alt="Figure 1.9 Screenshot of PLABKALI01"><figcaption>Figure
+ 1.9 Screenshot of PLABKALI01: Output of the hping3 command after typing
+ Ctrl+C. The packet transmission shows as cancelled.</figcaption></figure><p></p>
+<span class="atom-code hidden">5e1d502e-2771-4deb-a3e2-7881a321dc64</span>
+<h4 id="cn-m15-151"><b><i>Step 4</i></b></h4>
+<p id="cn-m15-152">Close the terminal window using the exit command.</p>
+<span class="cn-alert" id="cn-m15-153">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-154"><b>Exercise 2 - Performing Zone Transfers</b></h2>
+<p id="cn-m15-155">The DNS (Domain Name System) server service provides 
+three types of zones, such as primary, secondary, and stub zones. Zone 
+transfer is a mechanism in which the changes that are made to the zone 
+on a master server are replicated on all the secondary servers for that 
+particular zone.</p>
+<p id="cn-m15-156">In this exercise, you will learn to perform zone transfers using command-line tools such as nslookup and dig.</p>
+<p id="cn-m15-157">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-159">After completing this exercise, you will be able to:</p>
+<ul id="cn-m15-160">
+<li id="cn-m15-160">Connect to Kali</li>
+<li id="cn-m15-161">Use Nslookup to Perform Zone Transfer</li>
+<li id="cn-m15-162">Use the DIG Tool to Perform Zone Transfer</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m15-164">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m15-165">
+<li id="cn-m15-165"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-166"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-167"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m15-168"><img class="cn-img" id="cn-image-m15-c-11" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-11.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m15-169"><b>Task 1 - Use Nslookup to Perform Zone Transfer</b></h3>
+<p id="cn-m15-170">The nslookup command-line tool displays information related to a DNS domain.</p>
+<p id="cn-m15-171">In this task, you will use the nslookup command-line tool to perform a zone transfer.</p>
+<h4 id="cn-m15-172"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-173">Ensure you have powered on the required devices and connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m15-174">To open <b>Command Prompt</b>, right-click the <b>Windows Start </b>icon on the taskbar and select <b>Command Prompt </b>from the menu.</p>
+<p id="cn-m15-175"></p><figure><img class="cn-img" id="cn-image-m15-c-12" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-12.jpg" alt="Figure 2.1 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.1 Screenshot of PLABWIN10: On the taskbar, Window Start is 
+right-clicked, and the Command Prompt Desktop app is selected.</figcaption></figure><p></p>
+<p id="cn-m15-177"><b>Command Prompt </b>window opens.</p>
+<p id="cn-m15-178"></p><figure><img class="cn-img" id="cn-image-m15-c-13" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-13.jpg" alt="Figure 2.2 Screenshot of PLABWIN10"><figcaption>Figure
+ 2.2 Screenshot of PLABWIN10: On the taskbar, Search is selected. In the
+ Search box, the text “cmd” is entered. The Best match menu appears. 
+From the Best match menu, the Command Prompt Desktop app is selected.</figcaption></figure><p></p>
+<h4 id="cn-m15-179"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-180">At the prompt, type the following command:</p>
+<pre id="cn-m15-181"><code>nslookup
+</code></pre>
+<p id="cn-m15-182">Press <b>Enter</b>.</p>
+<p id="cn-m15-183">The command prompt will change to a <b>&gt; </b>symbol.</p>
+<p id="cn-m15-184"></p><figure><img class="cn-img" id="cn-image-m15-c-14" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-14.jpg" alt="Figure 2.3 Screenshot of PLABWIN10"><figcaption>Figure 2.3 Screenshot of PLABWIN10: The command is entered and executed.</figcaption></figure>ser<p></p>
+<h4 id="cn-m15-185"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-186">At the next prompt, type the following command:</p>
+<pre id="cn-m15-187"><code>server 192.168.0.1
+</code></pre>
+<p id="cn-m15-188">Press <b>Enter</b>.</p>
+<p id="cn-m15-189">For this demonstration, 192.168.0.1 is considered as the IP address of the DNS server.</p>
+<p id="cn-m15-191"></p><figure><img class="cn-img" id="cn-image-m15-c-15" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-15.jpg" alt="Figure 2.4 Screenshot of the Command Prompt window on PLABWIN10"><figcaption>Figure 2.4 Screenshot of the Command Prompt window on PLABWIN10: The command is entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m15-192"><b><i>Step 4</i></b></h4>
+<p id="cn-m15-193">At the next prompt, type the following command:</p>
+<pre id="cn-m15-194"><code>set type=any
+</code></pre>
+<p id="cn-m15-195">Press <b>Enter</b>.</p>
+<p id="cn-m15-196">This command retrieves all the records from the server.</p>
+<p id="cn-m15-197"></p><figure><img class="cn-img" id="cn-image-m15-c-16" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-16.jpg" alt="Figure 2.5 Screenshot of the Command Prompt window on PLABWIN10"><figcaption>Figure 2.5 Screenshot of the Command Prompt window on PLABWIN10: The command is entered and executed.</figcaption></figure>ls<p></p>
+<h4 id="cn-m15-198"><b><i>Step 5</i></b></h4>
+<p id="cn-m15-199">At the next prompt, type the following command:</p>
+<pre id="cn-m15-200"><code>ls -d practise-labs.com
+</code></pre>
+<p id="cn-m15-201">Press <b>Enter</b>.</p>
+<p id="cn-m15-202">This command allows the DNS server to transfer the practise-labs.com zone to PLABWIN10.</p>
+<span class="cn-quote" id="cn-m15-203"><b><i>Note</i></b><i>: The DNS 
+server used in this demonstration is not vulnerable to zone transfers. 
+In addition, the external domain practise-labs.com is fictitious and is 
+not available in the environment. Therefore, the command will not 
+display any successful output.</i></span>
+<p id="cn-m15-204"></p><figure><img class="cn-img" id="cn-image-m15-c-17" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-17.jpg" alt="Figure 2.6 Screenshot of the Command Prompt window on PLABWIN10"><figcaption>Figure 2.6 Screenshot of the Command Prompt window on PLABWIN10: The command is entered and executed.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m15-205">Leave the devices you have powered on in their current state and proceed to the next task.</span>
+<h3 id="cn-m15-206"><b>Task 2 - Connecting Kali</b></h3>
+<p id="cn-m15-207">In this task, you will power on and connect to the lab devices used within this exercise.</p>
+<p id="cn-m15-208">Ensure you have powered on the required devices and connect to <b>PLABKALI01</b>.</p>
+<p id="cn-m15-209">Type <b>root </b>in the <b>Username </b>field.</p>
+<p id="cn-m15-210">Type the following password in the <b>Password </b>field.</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m15-212">Click <b>Log In.</b></p>
+<p id="cn-m15-213"></p><figure><img class="cn-img" id="cn-image-m15-c-18" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-18.jpg" alt="Figure 2.7 Screenshot of PLABKALI01"><figcaption>Figure 2.7 Screenshot of PLABKALI01: Login screen is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m15-214"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-215">The PLABKALI01 <b>desktop </b>is displayed.</p>
+<p id="cn-m15-216"></p><figure><img class="cn-img" id="cn-image-m15-c-19" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-19.jpg" alt="Figure 2.8 Screenshot of PLABKALI01"><figcaption>Figure 2.8 Screenshot of PLABKALI01: Desktop is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m15-218"><b>Task 3 - Use the DIG Tool to Perform Zone Transfer</b></h3>
+<p id="cn-m15-219">The DIG (Domain Information Groper) command-line tool
+ is used to query DNS servers. It helps the network administrations to 
+troubleshoot network-related issues. You can use the DIG command-line 
+tool if you want to perform the zone transfer from a Linux system. This 
+tool exists on KALI by default.</p>
+<p id="cn-m15-220">In this task, you will connect to PLABKALI01 and use the DIG tool to query the DNS server.</p>
+<h4 id="cn-m15-221"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-222">Click the Kali icon located at the top left.</p>
+<p id="cn-m15-223">Point to <b>Usual applications &gt; System Tools &gt; QTerminal</b></p>
+<p id="cn-m15-224">Click the result of <b>QTerminal.</b></p>
+<p id="cn-m15-225"></p><figure><img class="cn-img" id="cn-image-m15-c-20" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-20.jpg" alt="Figure 2.9 Screenshot of PLABKALI01"><figcaption>Figure 2.9 Screenshot of PLABKALI01: Clicking the Terminal icon in the Usual applications</figcaption></figure><p></p>
+<h4 id="cn-m15-227"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-228">The root terminal window opens.</p>
+<p id="cn-m15-229"></p><figure><img class="cn-img" id="cn-image-m15-c-21" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-21.jpg" alt="Figure 2.10 Screenshot of PLABKALI01"><figcaption>Figure 2.10 Screenshot of PLABKALI01: the terminal screen is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m15-230"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-231">To perform the zone transfer, at the command prompt of the root terminal window, type the following command:</p>
+<pre id="cn-m15-232"><code>dig axfr practise-labs.com 192.168.0.1
+</code></pre>
+<p id="cn-m15-233">Press <b>Enter</b>.</p>
+<p id="cn-m15-234">This axfr parameter provides the complete listing of the domain records.</p>
+<span class="cn-quote" id="cn-m15-235"><b><i>Note</i></b><i>: The server
+ used in this demonstration is not vulnerable to zone transfers. In 
+addition, the external domain practise-labs.com is fictitious and is not
+ available in the environment. Therefore, the command will not display 
+any successful output.</i></span>
+<p id="cn-m15-236"></p><figure><img class="cn-img" id="cn-image-m15-c-22" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-22.jpg" alt="Figure 2.11 Screenshot of root terminal window"><figcaption>Figure 2.11 Screenshot of root terminal window: The command is entered and executed.</figcaption></figure><p></p>
+<span class="atom-code hidden">5e1d502e-2771-4deb-a3e2-7881a321dc64</span>
+<span class="cn-alert" id="cn-m15-239">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-240"><b>Exercise 3 - Working with Remote Targets</b></h2>
+<p id="cn-m15-241">PsInfo is a command-line tool that comes bundled with
+ Microsoft Sysinternals suite. By default, this tool provides local 
+system information. However, you can use this tool to retrieve 
+information about remote systems in the network.</p>
+<p id="cn-m15-242">In this exercise, you will use the PsInfo command-line tool.</p>
+<p id="cn-m15-243">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-245">After completing this exercise, you will be able to:</p>
+<ul id="cn-m15-246">
+<li id="cn-m15-246">Use PsInfo Command-line Tool</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m15-248">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m15-249">
+<li id="cn-m15-249"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-250"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-251"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m15-252"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m15-253"><img class="cn-img" id="cn-image-m15-c-23" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-23.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m15-254"><b>Task 1 - Use PsInfo Command-line Tool</b></h3>
+<p id="cn-m15-255">In this task, you will use the PsInfo command-line tool to retrieve the system information of PLABDC01.</p>
+<h4 id="cn-m15-256"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-257">Connect to <b>PLABWIN801</b>.</p>
+<p id="cn-m15-258">From the <b>PLABWIN801 </b>desktop, double-click the <b>PsTools </b>folder.</p>
+<p id="cn-m15-259"></p><figure><img class="cn-img" id="cn-image-m15-c-24" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-24.jpg" alt="Figure 3.1 Screenshot of PLABWIN801"><figcaption>Figure 3.1 Screenshot of PLABWIN801: PsTools folder on the desktop is double-clicked.</figcaption></figure><p></p>
+<h4 id="cn-m15-260"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-261">The <b>File Explorer </b>window opens, and the <b>PsTools </b>folder list is displayed.</p>
+<p id="cn-m15-262"></p><figure><img class="cn-img" id="cn-image-m15-c-25" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-25.jpg" alt="Figure 3.2 Screenshot of PLABWIN801"><figcaption>Figure 3.2 Screenshot of PLABWIN801: The folder list is displayed in the File Explorer window.</figcaption></figure><p></p>
+<h4 id="cn-m15-263"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-264">To copy the <b>PsInfo.exe </b>file to the desktop, in the details pane, right-click <b>PsInfo</b>.</p>
+<p id="cn-m15-265">A context menu appears.</p>
+<p id="cn-m15-266">From the context menu, click <b>Copy</b>.</p>
+<p id="cn-m15-267">In the console tree, click <b>Desktop</b>.</p>
+<p id="cn-m15-268">In the details pane of the <b>Desktop </b>folder, right-click.</p>
+<p id="cn-m15-269">From the context menu, click <b>Paste</b>.</p>
+<p id="cn-m15-270">The <b>PsInfo.exe </b>file is copied on the desktop.</p>
+<p id="cn-m15-271"></p><figure><img class="cn-img" id="cn-image-m15-c-26" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-26.jpg" alt="Figure 3.3 Screenshot of PLABWIN801"><figcaption>Figure
+ 3.3 Screenshot of PLABWIN801: PsInfo.exe file is right-clicked. From 
+the context menu, Copy is selected. In the console tree, Desktop is 
+selected. In the details pane of the Desktop folder, after the 
+right-click, a context menu appears. From the context menu, Paste is 
+selected. PsInfo.exe file is copied on the desktop.</figcaption></figure><p></p>
+<h4 id="cn-m15-272"><b><i>Step 4</i></b></h4>
+<p id="cn-m15-273">To open <b>Command Prompt</b>, click the <b>Start </b>charm.</p>
+<p id="cn-m15-274">In the <b>Search </b>box, type:</p>
+<pre id="cn-m15-275"><code>cmd
+</code></pre>
+<p id="cn-m15-276">From the search list, click <b>Command Prompt</b>.</p>
+<p id="cn-m15-277"></p><figure><img class="cn-img" id="cn-image-m15-c-27" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-27.jpg" alt="Figure 3.4 Screenshot of PLABWIN801"><figcaption>Figure
+ 3.4 Screenshot of PLABWIN801: The Start charm is selected. In the 
+Search box, the text “cmd” is entered. From the search list, Command 
+Prompt is selected.</figcaption></figure><p></p>
+<h4 id="cn-m15-278"><b><i>Step 5</i></b></h4>
+<p id="cn-m15-279"><b>Command Prompt </b>window opens.</p>
+<p id="cn-m15-280">To navigate to the desktop folder, at the prompt, type the following command:</p>
+<pre id="cn-m15-281"><code>cd Desktop
+</code></pre>
+<p id="cn-m15-282">Press <b>Enter</b>.</p>
+<p id="cn-m15-283"></p><figure><img class="cn-img" id="cn-image-m15-c-28" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-28.jpg" alt="Figure 3.5 Screenshot of PLABWIN801"><figcaption>Figure 3.5 Screenshot of PLABWIN801: The command to navigate to the desktop folder is entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m15-284"><b><i>Step 6</i></b></h4>
+<p id="cn-m15-285">To retrieve and display the system information of <b>PLABDC01</b>, at the prompt, type the following command:</p>
+<pre id="cn-m15-286"><code>Psinfo.exe \\192.168.0.1 -h -d
+</code></pre>
+<p id="cn-m15-287">Press <b>Enter</b>.</p>
+<p id="cn-m15-288">The parameter -h displays a list of installed hotfixes. The parameter -d displays the information related to the disk volume.</p>
+<span class="cn-quote" id="cn-m15-289"><b><i>Note</i></b><i>: If the PsInfo tool’s license agreement window appears, click </i><b><i>Agree</i></b><i>. </i></span>
+<p id="cn-m15-290"></p><figure><img class="cn-img" id="cn-image-m15-c-29" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-29.jpg" alt="Figure 3.6 Screenshot of PLABWIN801"><figcaption>Figure 3.6 Screenshot of PLABWIN801: The command is entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m15-291"><b><i>Step 7</i></b></h4>
+<p id="cn-m15-292"><b>PsInfo </b>tool displays the system information of <b>PLABDC01</b>.</p>
+<p id="cn-m15-293"></p><figure><img class="cn-img" id="cn-image-m15-c-30" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-30.jpg" alt="Figure 3.7 Screenshot of PLABWIN801"><figcaption>Figure 3.7 Screenshot of PLABWIN801: The command output is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">09144aba-611a-486d-b22e-e9472e284a8f</span>
+<span class="cn-alert" id="cn-m15-296">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-297"><b>Exercise 4 - Working with Finger Command</b></h2>
+<p id="cn-m15-298">In Unix/Linux, you can use the finger command to retrieve information about the system users in the network.</p>
+<p id="cn-m15-299">In this exercise, you will work with the finger command.</p>
+<p id="cn-m15-300">Please refer to your course material or use your preferred search engine to research this topic in more detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-302">After completing this exercise, you will be able to:</p>
+<ul id="cn-m15-303">
+<li id="cn-m15-303">Use the Finger Command</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m15-305">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m15-306">
+<li id="cn-m15-306"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-307"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-308"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m15-309"><img class="cn-img" id="cn-image-m15-c-31" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-31.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m15-310"><b>Task 1 - Use the Finger Command</b></h3>
+<p id="cn-m15-311">In this task, you will use the finger command with different parameters.</p>
+<h4 id="cn-m15-312"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-313">Connect to <b>PLABKALI01 </b>from <b>PLABWIN10</b>.</p>
+<p id="cn-m15-314">The root terminal window is open on <b>PLABKALI01</b>.</p>
+<p id="cn-m15-315">At the command prompt of the root terminal window, type the following command:</p>
+<pre id="cn-m15-316"><code>finger -s root
+</code></pre>
+<p id="cn-m15-317">Press <b>Enter</b>.</p>
+<p id="cn-m15-318">This command displays information about all the users available on the system.</p>
+<p id="cn-m15-319"></p><figure><img class="cn-img" id="cn-image-m15-c-32" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-32.jpg" alt="Figure 4.1 Screenshot of PLABKALI01"><figcaption>Figure 4.1 Screenshot of PLABKALI01: The command is entered and executed. The output is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<p id="cn-m15-322"><b>Close </b>all open windows.</p>
+<span class="cn-alert" id="cn-m15-323">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-324"><b>Exercise 5 - Social Engineering Reconnaissance</b></h2>
+<p id="cn-m15-325">Often a compromise in a company begins by attackers 
+searching through social media for personal information that might aid 
+them in gaining legitimate details or by impersonating that person to 
+business.</p>
+<p id="cn-m15-326">The aim usually is to get access to the initial 
+system that the person either owns or has access to, from here the 
+attacker will try to escalate and move through a building or network 
+gaining access to more interesting areas.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-328">After completing this exercise, you will be able to:</p>
+<ul id="cn-m15-329">
+<li id="cn-m15-329">Log into MyBook</li>
+<li id="cn-m15-330">Explore and gather information</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m15-332">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m15-333">
+<li id="cn-m15-333"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-334"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-335"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m15-336"><img class="cn-img" id="cn-image-m15-c-33" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-33.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m15-337"><b>Task 1 - Log into MyBook</b></h3>
+<p id="cn-m15-338">In this task, you are going to login to MyBook, which is a Website hosted by Practice Labs.</p>
+<h4 id="cn-m15-339"><b><i>Step 1 </i></b></h4>
+<p id="cn-m15-340">Ensure the required devices from the introduction are powered on and connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m15-341">You will see the internet explorer icon in the taskbar.</p>
+<p id="cn-m15-342">Invoke Internet Explorer from the taskbar.</p>
+<p id="cn-m15-343"></p><figure><img class="cn-img" id="cn-image-m15-c-34" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-34.jpg" alt="Figure 5.1 Screenshot of PLABWIN10"><figcaption>Figure 5.1 Screenshot of PLABWIN10: The desktop of the PLABWIN10 device.</figcaption></figure><p></p>
+<h4 id="cn-m15-344"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-345">The <b>Internet Explorer </b>window is displayed. The <b>Internet Explorer 11 </b>dialog box is also displayed. Select <b>Use recommended security and compatibility settings </b>and click <b>OK</b>.</p>
+<span class="cn-quote" id="cn-m15-346"><b><i>Note: </i></b><i>If a new tab opens with Microsoft Website, close it.</i></span>
+<h4 id="cn-m15-347"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-348">In the address bar, type the following URL and press <b>Enter</b>:</p>
+<pre id="cn-m15-349"><code>http://mybook
+</code></pre>
+<p id="cn-m15-350">You are presented immediately with the profile of Phillip Nomad, on this very select site of MyBook.</p>
+<p id="cn-m15-351">Currently, you are viewing the Timeline page where 
+recent activities regarding his life are being posted publicly and can 
+be viewed by everyone.</p>
+<p id="cn-m15-352"></p><figure><img class="cn-img" id="cn-image-m15-c-35" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-35.jpg" alt="Figure 5.2 Screenshot of PLABWIN10"><figcaption>Figure 5.2 Screenshot of PLABWIN10: MyBook Phillip Nomad Timeline page</figcaption></figure><p></p>
+<h3 id="cn-m15-353"><b>Task 2 - Exploring and Gathering Information</b></h3>
+<p id="cn-m15-354">Information gathering is a key part used in any 
+attack; you are going to review the types of details that an attacker 
+might use to gain the confidence of others by impersonating Philip in 
+some manner.</p>
+<h4 id="cn-m15-355"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-356">Exploring this site, a little further, you can see 
+that Phillip is quite popular with 1,325 followers, and his job role is 
+as a Front-End Software Engineer. This makes Phillip an interesting 
+target given its highly likely he has personal information that could be
+ used to trick a company into thinking the attacker is Phillip.</p>
+<h4 id="cn-m15-357"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-358">He is an active member of this site with a posting 
+just 5 minutes ago, where he has commented on someone else’s photo, and 
+he is sharing his album with what might be a friend.</p>
+<p id="cn-m15-359"></p><figure><img class="cn-img" id="cn-image-m15-c-36" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-36.jpg" alt="Figure 5.3 Screenshot of PLABWIN10"><figcaption>Figure 5.3 Screenshot of PLABWIN10: MyBook Phillip Nomad Timeline page</figcaption></figure><p></p>
+<p id="cn-m15-360">You can see that Phillip is married. Note the type of
+ clothes worn on the wedding day, and the background location of the 
+wedding might be key if work employees were also invited to the wedding.</p>
+<p id="cn-m15-361">There are two friends, namely John and Alexis, who 
+are close enough to Phillip to comment on his pictures, and you learn 
+that there is the possibility of a baby.</p>
+<p id="cn-m15-362"></p><figure><img class="cn-img" id="cn-image-m15-c-37" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-37.jpg" alt="Figure 5.4 Screenshot of PLABWIN10"><figcaption>Figure 5.4 Screenshot of PLABWIN10: MyBook Phillip Nomad Timeline page</figcaption></figure><p></p>
+<p id="cn-m15-363"><b>Scroll </b>down a little further.</p>
+<p id="cn-m15-364">Interestingly, Phillip's car has broken down; this 
+might be a very useful piece of information for the attacker to begin 
+investigating Phillip's personal life further. The attacker could use it
+ to make contact with a car garage to inquire about the vehicle while 
+posing as Phillip.</p>
+<p id="cn-m15-365"></p><figure><img class="cn-img" id="cn-image-m15-c-38" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-38.jpg" alt="Figure 5.5 Screenshot of PLABWIN10"><figcaption>Figure 5.5 Screenshot of PLABWIN10: MyBook Phillip Nomad Timeline page</figcaption></figure><p></p>
+<h4 id="cn-m15-366"><b><i>Step 3 </i></b></h4>
+<p id="cn-m15-367">Now, <b>Scroll </b>back up and click the <b>About </b>tab.</p>
+<p id="cn-m15-368"></p><figure><img class="cn-img" id="cn-image-m15-c-39" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-39.jpg" alt="Figure 5.6 Screenshot of PLABWIN10"><figcaption>Figure 5.6 Screenshot of PLABWIN10: MyBook Phillip Nomad Bio page</figcaption></figure><p></p>
+<p id="cn-m15-369">Phillip has been kind enough to provide us with his 
+phone number, date of birth, and where he was educated. Key information,
+ such as this, is used by attackers to gain the confidence of personnel 
+who might be performing security checks. One of the most common 
+questions used is “what is your date of birth?”. Now, you have a 
+legitimate answer to respond with.</p>
+<p id="cn-m15-370">If Phillip was real, you could also begin to search 
+the Oxford University for personal information and see if you get any 
+hits for him attending the university, all information that aids the 
+reconnaissance process.</p>
+<p id="cn-m15-371"></p><figure><img class="cn-img" id="cn-image-m15-c-40" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-40.jpg" alt="Figure 5.7 Screenshot of PLABWIN10"><figcaption>Figure 5.7 Screenshot of PLABWIN10: MyBook Phillip Nomad Bio page</figcaption></figure><p></p>
+<p id="cn-m15-372">Here, you are presented with his past working 
+experience of working with HP, and previous to that, you can see Costa. 
+Again, you could search the HP site to see what details come up about 
+Phillip; it might lead an attacker to more useful information to 
+convince an IT department that Phillip needs his password changed and 
+can they do that for him.</p>
+<p id="cn-m15-373">Another piece of the puzzle is a possible home 
+location-based in Kingston upon Thames, often mobile software these days
+ populates images or posts with details of the user’s location at the 
+time of posting.</p>
+<h4 id="cn-m15-374"><b><i>Step 4</i></b></h4>
+<p id="cn-m15-375">Scroll up and click the <b>Album </b>tab.</p>
+<p id="cn-m15-376"></p><figure><img class="cn-img" id="cn-image-m15-c-41" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-41.jpg" alt="Figure 5.8 Screenshot of PLABWIN10"><figcaption>Figure 5.8 Screenshot of PLABWIN10: MyBook Phillip Nomad Album page</figcaption></figure><p></p>
+<p id="cn-m15-377">Notice here that Phillips job title has developed, it
+ has him listed as a Creative Director, who works in Front End Software 
+Design. A Director role means some very important things; Phillip has 
+access to important resources and information; his passwords likely 
+provide him with Admin level or root access to domains or servers full 
+of data, which in situations like corporate espionage could be very 
+lucrative.</p>
+<p id="cn-m15-378">This is an album which was shared, and you can see 
+that he enjoys going to raves, scenic views and possibly has a small pug
+ dog, again a classic question asked insecure questions is “what is/was 
+the name of your first pet/dog/cat?”</p>
+<p id="cn-m15-379">Additionally, many people use their pet names as their passwords, and Date of Births for passwords or pins to accounts.</p>
+<h4 id="cn-m15-380"><b><i>Step 5 </i></b></h4>
+<p id="cn-m15-381">Scroll up and click the <b>Friends </b>tab.</p>
+<p id="cn-m15-382"></p><figure><img class="cn-img" id="cn-image-m15-c-42" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-42.jpg" alt="Figure 5.9 Screenshot of PLABWIN10"><figcaption>Figure 5.9 Screenshot of PLABWIN10: MyBook Phillip Nomad Friends page</figcaption></figure><p></p>
+<p id="cn-m15-383">Here, you can see that Phillip has a few contacts, of
+ which some could be worth learning more about. Notice that Sophia Lee 
+is at Oxford, and its possible they attended University at the same as 
+each other.</p>
+<p id="cn-m15-384">Robert Cook, being a photographer, might have more 
+interesting photos of Phillip's life, providing more insight into the 
+type of person he is, giving away characteristics to be used when 
+impersonating him.</p>
+<p id="cn-m15-385"></p><figure><img class="cn-img" id="cn-image-m15-c-43" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-43.jpg" alt="Figure 5.10 Screenshot of PLABWIN10"><figcaption>Figure 5.10 Screenshot of PLABWIN10: MyBook Philip Nomad Friends page</figcaption></figure><p></p>
+<p id="cn-m15-386">You can see a posting for Nina Nomad who might be a 
+family relation, and you see Linda who is also a Software Engineer that 
+might work with Phillip; additionally, you see James who is a CEO of a 
+company called IT Farm, he could have a working relationship that might 
+be useful to learn more about in terms of the type of work performed and
+ what access Philip has to IT Farm.</p>
+<p id="cn-m15-387">The next stage used by an attacker is to request a 
+“friendship,” usually by setting up a fake account with information that
+ might trick Phillip into accepting it, like pretending to work at IT 
+Farm and using that as an excuse to get Phillip to access a friendship 
+link. The purpose, of course, is to gain information that leads to a 
+possible email phishing attack against the CEO of IT Farm, James Carter,
+ or to social engineer the IT/HR department of Google to get them to 
+change Philip's password, providing them access.</p>
+<p id="cn-m15-388">You can now close this browser tab and move onto the next exercise when ready.</p>
+<span class="cn-alert" id="cn-m15-389">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-390"><b>Exercise 6 - Use the Social Engineering Toolkit (SET) in Kali Linux</b></h2>
+<p id="cn-m15-391">With a little skillset, you can always break 
+someone’s password using various methods, such as brute-force or 
+dictionary attack. However, it is much easier to trick someone to simply
+ share the password with you without them even knowing that they have 
+shared it. You can also control their system without letting them know, 
+but you should trick them into installing something or opening a file, 
+which contains a specific payload. When you perform such tricks with 
+people, to share their confidential information, or run a malicious file
+ or payload, you are performing a social engineering attack, which is an
+ art of manipulating people to perform a task that allows you to gain 
+their confidential information or even control their system.</p>
+<p id="cn-m15-392">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-394">After completing this exercise, you will be able to:</p>
+<ul id="cn-m15-395">
+<li id="cn-m15-395">Connect to Windows 10 and Kali</li>
+<li id="cn-m15-396">Create an Exploit</li>
+<li id="cn-m15-397">Setup the FTP Server</li>
+<li id="cn-m15-398">Download the Payload</li>
+<li id="cn-m15-399">Exploit the Victim’s System</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m15-401">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m15-402">
+<li id="cn-m15-402"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-403"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-404"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m15-405"><img class="cn-img" id="cn-image-m15-c-44" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-44.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m15-406"><b>Task 1 - Connecting to Windows 10 and Kali</b></h3>
+<p id="cn-m15-407">In this task, you will power on and connect to the lab devices used within this exercise.</p>
+<h4 id="cn-m15-408"><b><i>Step 1 </i></b></h4>
+<p id="cn-m15-409">Ensure you have powered on all the devices listed in the introduction and connect to <b>PLABKALI01. </b></p>
+<p id="cn-m15-410">Type <b>root </b>in the <b>Username </b>field.</p>
+<p id="cn-m15-411">Type the following password in the <b>Password </b>field.</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m15-413">Click <b>Log In.</b></p>
+<p id="cn-m15-414"></p><figure><img class="cn-img" id="cn-image-m15-c-45" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-45.jpg" alt="Figure 6.1 Screenshot of PLABKALI01"><figcaption>Figure 6.1 Screenshot of PLABKALI01: Login screen is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m15-415"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-416">The PLABKALI01 <b>desktop </b>is displayed.</p>
+<p id="cn-m15-417"></p><figure><img class="cn-img" id="cn-image-m15-c-46" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-46.jpg" alt="Figure 6.2 Screenshot of PLABKALI01"><figcaption>Figure 6.2 Screenshot of PLABKALI01: Desktop is displayed.</figcaption></figure><p></p>
+<h3 id="cn-m15-418"><b>Task 2 - Create an Exploit</b></h3>
+<p id="cn-m15-419">You can perform social engineering using various 
+methods, such as simply talking to the people and tricking them or use 
+the sophisticated method with the help of the Social Engineering Toolkit
+ (SET), which is a python-driven suite of custom tools that focus on 
+attacking the human element.</p>
+<span class="cn-quote" id="cn-m15-420"><b><i>Note: </i></b><i>SET 
+provides many tools. In this task, you will focus on specific tools, but
+ in your spare time, you are free to try all these tools to enhance your
+ learning.</i></span>
+<p id="cn-m15-421">To use the SET, perform the following steps:</p>
+<h4 id="cn-m15-422"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-423">Ensure that you have logged into the <b>Kali Linux </b>system.</p>
+<p id="cn-m15-424"></p><figure><img class="cn-img" id="cn-image-m15-c-47" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-47.jpg" alt="Figure 6.3 Screenshot of PLABKALI01"><figcaption>Figure 6.3 Screenshot of PLABKALI01: Showing the initial screen presented by PLABKALI01.</figcaption></figure><p></p>
+<h4 id="cn-m15-425"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-426">You can start SET either from the menu or from the command prompt.</p>
+<p id="cn-m15-427">To start from the menu, click <b>Applications </b>from the top taskbar, select <b>Exploitation Tools</b>, and then select <b>social engineering toolkit</b>, which may appear as <b>social engi</b>….</p>
+<p id="cn-m15-428">In this lab, you will use a command to start <b>SET</b>. On the desktop, double-click <b>Root Terminal </b>if it is already not opened.</p>
+<h4 id="cn-m15-429"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-430">The terminal window is displayed. Enter the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-431"><code>setoolkit
+</code></pre>
+<p id="cn-m15-432"><img class="cn-img" id="cn-image-m15-c-48" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-48.jpg" alt="Practice Labs screenshot."></p>
+<h4 id="cn-m15-434"><b><i>Step 4 </i></b></h4>
+<p id="cn-m15-435">If you are using <b>SET </b>for the first time, you need to accept the terms of service.</p>
+<p id="cn-m15-436">Type the following letter and press <b>Enter</b>:</p>
+<pre id="cn-m15-437"><code>Y
+</code></pre>
+<p id="cn-m15-438"></p><figure><img class="cn-img" id="cn-image-m15-c-49" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-49.jpg" alt="Figure 6.5 Screenshot of PLABKALI01"><figcaption>Figure 6.5 Screenshot of PLABKALI01: Accepting the terms of service to start the Social Engineering Toolkit (SET).</figcaption></figure><p></p>
+<h4 id="cn-m15-439"><b><i>Step 5 </i></b></h4>
+<p id="cn-m15-440">You are now on the main menu. You will notice that 
+there are multiple options displayed. Each option is designed to perform
+ a specific task. For example, you can update the <b>Social Engineering Toolkit </b>by selecting option <b>5</b>.</p>
+<p id="cn-m15-441">To continue with this lab, you will need to select the <b>1) Social-Engineering Attacks </b>option.</p>
+<p id="cn-m15-442">Type the following number and press <b>Enter</b>:</p>
+<pre id="cn-m15-443"><code>1
+</code></pre>
+<p id="cn-m15-444"><img class="cn-img" id="cn-image-m15-c-50" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-50.jpg" alt="Practice Labs screenshot."></p>
+<h4 id="cn-m15-446"><b><i>Step 6 </i></b></h4>
+<p id="cn-m15-447">Next, you will see another menu that relates to the <b>Social-Engineering Attacks </b>option. Out of the given choices, you can choose <b>4) Create a Payload and Listener</b>. Type the following number and press <b>Enter</b>:</p>
+<pre id="cn-m15-448"><code>4
+</code></pre>
+<p id="cn-m15-449"></p><figure><img class="cn-img" id="cn-image-m15-c-51" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-51.jpg" alt="Figure 6.7 Screenshot of PLABKALI01"><figcaption>Figure 6.7 Screenshot of PLABKALI01: Selecting the option 4 to create a payload and listener.</figcaption></figure><p></p>
+<h4 id="cn-m15-450"><b><i>Step 7 </i></b></h4>
+<p id="cn-m15-451">Next, you will be prompted to select an option. Out of the given choices, you can choose <b>5) Windows Meterpreter Reverse_TCP X64</b>.</p>
+<p id="cn-m15-452">Type the following number and press <b>Enter</b>:</p>
+<pre id="cn-m15-453"><code>5
+</code></pre>
+<p id="cn-m15-454"></p><figure><img class="cn-img" id="cn-image-m15-c-52" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-52.jpg" alt="Figure 6.8 Screenshot of PLABKALI01"><figcaption>Figure 6.8 Screenshot of PLABKALI01: Selecting the option 5 to choose Windows Meterpreter Reverse payload.</figcaption></figure><p></p>
+<h4 id="cn-m15-455"><b><i>Step 8 </i></b></h4>
+<p id="cn-m15-456">You will be prompted to provide the IP address for 
+the payload listener. This is the IP address for your system, which is 
+the Kali Linux. In this lab environment, the IP address for the <b>Kali Linux </b>is <b>192.168.0.3</b>.</p>
+<p id="cn-m15-457">For the IP address for the payload listener option, enter the following IP address and press <b>Enter</b>:</p>
+<pre id="cn-m15-458"><code>192.168.0.3
+</code></pre>
+<span class="cn-quote" id="cn-m15-459"><b><i>Note: </i></b><i>In the 
+real environment, you will have a different IP address. You should not 
+be using this IP address as it is applicable only in this lab 
+environment. If you do not know the IP address of your Kali Linux, 
+simply open another command prompt window, and run ifconfig. If you know
+ the network adapter name, then you can run ifconfig eth0, where eth0 is
+ the name of the network adapter. You will have to check your system. </i></span>
+<p id="cn-m15-460"></p><figure><img class="cn-img" id="cn-image-m15-c-53" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-53.jpg" alt="Figure 6.9 Screenshot of PLABKALI01"><figcaption>Figure 6.9 Screenshot of PLABKALI01: Entering the IP address of the Kali Linux for the payload listener.</figcaption></figure><p></p>
+<h4 id="cn-m15-461"><b><i>Step 9</i></b></h4>
+<p id="cn-m15-462">Next, you will be prompted to enter the port number.</p>
+<p id="cn-m15-463">Type the following port number in the <b>Enter the PORT for the reverse listener </b>option and press <b>Enter</b>:</p>
+<pre id="cn-m15-464"><code>443
+</code></pre>
+<p id="cn-m15-465"></p><figure><img class="cn-img" id="cn-image-m15-c-54" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-54.jpg" alt="Figure 6.10 Screenshot of PLABKALI01"><figcaption>Figure 6.10 Screenshot of PLABKALI01: Entering the port number for the reverse listener.</figcaption></figure><p></p>
+<h4 id="cn-m15-466"><b><i>Step 10 </i></b></h4>
+<p id="cn-m15-467">Notice that the backdooring a legit executable 
+process starts. An executable is now being packaged in a manner that the
+ antivirus cannot detect it. After the executable is created, it is 
+stored in the <b>/root/.set</b>. The default name for the file is <b>payload.exe</b>, which you will change after transporting it to the victim’s system.</p>
+<p id="cn-m15-468">You are now prompted to start the payload and listener.</p>
+<p id="cn-m15-469">Type the following and press <b>Enter</b>:</p>
+<pre id="cn-m15-470"><code>yes
+</code></pre>
+<p id="cn-m15-471"></p><figure><img class="cn-img" id="cn-image-m15-c-55" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-55.jpg" alt="Figure 6.11 Screenshot of PLABKALI01"><figcaption>Figure 6.11 Screenshot of PLABKALI01: Entering YES to start the payload and listener.</figcaption></figure><p></p>
+<p id="cn-m15-472">The Metasploit framework now starts. You are now 
+ready to move to the next level, which is sharing the payload with the 
+victim and then capturing the information when the victim executes the 
+payload.</p>
+<span class="cn-alert" id="cn-m15-473"><b>Note: </b>To be able to 
+complete the next set of tasks in this exercise, you need to keep this 
+console window open. Do NOT shut it down or exit from it.</span>
+<p id="cn-m15-474">You are now at the <b>msf exploit (handler) </b>prompt.</p>
+<p id="cn-m15-475"></p><figure><img class="cn-img" id="cn-image-m15-c-56" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-56.jpg" alt="Figure 6.12 Screenshot of PLABKALI01"><figcaption>Figure 6.12 Screenshot of PLABKALI01: Showing the successful start of the payload handler.</figcaption></figure><p></p>
+<h3 id="cn-m15-476"><b>Task 3 - Setup the FTP Server</b></h3>
+<p id="cn-m15-477">After you have created the payload, you need to share
+ it with the victim. In the real environment, you will have different 
+methods of transporting this payload to the victim’s system. For 
+example, some of the common transport methods are:</p>
+<ul id="cn-m15-478">
+<li id="cn-m15-478"><b>E-mail </b>- attach the payload with an E-mail and send it to the victim.</li>
+<li id="cn-m15-479"><b>USB </b>- copy the payload in a USB, and when the victim plugs-in the USB to the system, it can be triggered.</li>
+<li id="cn-m15-480"><b>Download </b>- keep the infected file in a download repository from where the victim downloads the payload.</li>
+<li id="cn-m15-481"><b>FTP </b>- Share it through FTP - making it look like a legitimate file.</li>
+</ul>
+<p id="cn-m15-482">In this task, you will setup an FTP server and share the file with the victim.</p>
+<span class="cn-quote" id="cn-m15-483"><b><i>Note: </i></b><i>SET 
+provides many tools. In this task, you will focus on specific tools, but
+ in your spare time, you are free to try all these tools to enhance your
+ learning.</i></span>
+<p id="cn-m15-484">To setup the FTP server, perform the following steps:</p>
+<h4 id="cn-m15-485"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-486">Ensure that you have logged into the <b>Kali Linux </b>system and ensure that the <b>Metasploit </b>window is opened. Notice that the payload handler is in running state.</p>
+<p id="cn-m15-487"></p><figure><img class="cn-img" id="cn-image-m15-c-57" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-57.jpg" alt="Figure 6.13 Screenshot of PLABKALI01"><figcaption>Figure 6.13 Screenshot of PLABKALI01: Showing the successful start of the payload handler.</figcaption></figure><p></p>
+<h4 id="cn-m15-488"><b><i>Step 2 </i></b></h4>
+<p id="cn-m15-489">Next, you need to first setup an FTP server. There 
+are multiple options. Either you can setup an independent FTP server or 
+use an auxiliary FTP server of the Metasploit.</p>
+<p id="cn-m15-490">To setup the FTP server, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-491"><code>use auxiliary/server/ftp
+</code></pre>
+<p id="cn-m15-492"></p><figure><img class="cn-img" id="cn-image-m15-c-58" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-58.jpg" alt="Figure 6.14 Screenshot of PLABKALI01"><figcaption>Figure 6.14 Screenshot of PLABKALI01: Starting the auxiliary FTP server of the Metasploit.</figcaption></figure><p></p>
+<h4 id="cn-m15-493"><b><i>Step 3 </i></b></h4>
+<p id="cn-m15-494">Notice that the command prompt is now changed to <b>msf auxiliary(ftp</b>). You need to set the FTP root directory now.</p>
+<p id="cn-m15-495">To do this, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-496"><code>set FTPROOT /root/.set/
+</code></pre>
+<p id="cn-m15-497"></p><figure><img class="cn-img" id="cn-image-m15-c-59" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-59.jpg" alt="Figure 6.15 Screenshot of PLABKALI01"><figcaption>Figure 6.15 Screenshot of PLABKALI01: Setting the FTPROOT directory of the FTP server.</figcaption></figure><p></p>
+<h4 id="cn-m15-498"><b><i>Step 4 </i></b></h4>
+<p id="cn-m15-499">Next, you need to type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-500"><code>exploit
+</code></pre>
+<span class="cn-quote" id="cn-m15-501"><b><i>Note: </i></b><i>If you miss this step, you will not be able to connect to the FTP server. This is a critical step.</i></span>
+<p id="cn-m15-503">You are back on the prompt.</p>
+<p id="cn-m15-504"></p><figure><img class="cn-img" id="cn-image-m15-c-60" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-60.jpg" alt="Figure 6.17 Screenshot of PLABKALI01"><figcaption>Figure 6.17 Screenshot of PLABKALI01: Initiating the auxiliary module execution.</figcaption></figure><p></p>
+<h4 id="cn-m15-505"><b><i>Step 5 </i></b></h4>
+<p id="cn-m15-506">Minimize the <b>PLABKALI01 </b>window. Connect to <b>PLABWIN10</b>.</p>
+<span class="cn-quote" id="cn-m15-507"><b><i>Note: </i></b><i>Do not close the Metasploit window or PLABKALI01 window. </i></span>
+<p id="cn-m15-508"></p><figure><img class="cn-img" id="cn-image-m15-c-61" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-61.jpg" alt="Figure 6.18 Screenshot of PLABWIN10"><figcaption>Figure 6.18 Screenshot of PLABWIN10: Showing the desktop screen of the Windows system.</figcaption></figure><p></p>
+<span class="cn-alert" id="cn-m15-509">Leave the devices you have powered on in their current state and proceed to the next task.</span>
+<h3 id="cn-m15-510"><b>Task 4 - Download the Payload</b></h3>
+<p id="cn-m15-511">After you have setup the FTP server, you need to next
+ download the file on the victim’s system. You do not need an FTP client
+ to download the file. In this task, you will use the Windows command 
+prompt to connect to the FTP server.</p>
+<span class="cn-quote" id="cn-m15-512"><b><i>Note: </i></b><i>In the 
+real environment, you will probably not be the one who will be 
+downloading the file on the victim’s system. You will convince the 
+victim to download the file. For the sake of completing this exercise, 
+you will download the file from the FTP server to the victim’s system.</i></span>
+<p id="cn-m15-513">To download the payload, perform the following steps:</p>
+<h4 id="cn-m15-514"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-515">Ensure that you have logged into <b>PLABWIN10</b>.</p>
+<p id="cn-m15-516"></p><figure><img class="cn-img" id="cn-image-m15-c-62" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-62.jpg" alt="Figure 6.19 Screenshot of PLABWIN10"><figcaption>Figure 6.19 Screenshot of PLABWIN10: Showing the desktop screen of the Windows system.</figcaption></figure><p></p>
+<h4 id="cn-m15-517"><b><i>Step 2 </i></b></h4>
+<p id="cn-m15-518">Right-click <b>Start </b>and select <b>Run</b>.</p>
+<p id="cn-m15-519"></p><figure><img class="cn-img" id="cn-image-m15-c-63" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-63.jpg" alt="Figure 6.20 Screenshot of PLABWIN10"><figcaption>Figure 6.20 Screenshot of PLABWIN10: Selecting the Run options from the menu.</figcaption></figure><p></p>
+<h4 id="cn-m15-520"><b><i>Step 3 </i></b></h4>
+<p id="cn-m15-521">The <b>Run </b>dialog box is displayed.</p>
+<p id="cn-m15-522">In the <b>Open </b>text box, type the following and press <b>Enter</b>:</p>
+<p id="cn-m15-523">cmd</p>
+<p id="cn-m15-524">Alternatively, you can click <b>OK</b>.</p>
+<p id="cn-m15-525"></p><figure><img class="cn-img" id="cn-image-m15-c-64" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-64.jpg" alt="Figure 6.21 Screenshot of PLABWIN10"><figcaption>Figure 6.21 Screenshot of PLABWIN10: Showing the Run dialog box with the cmd command in the Open textbox.</figcaption></figure><p></p>
+<h4 id="cn-m15-526"><b><i>Step 4 </i></b></h4>
+<p id="cn-m15-527">The command prompt window is displayed. You will now connect with the FTP server and download the file.</p>
+<p id="cn-m15-528">To connect with the FTP server, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-529"><code>ftp  192 . 168 . 0 . 3
+</code></pre>
+<p id="cn-m15-530"></p><figure><img class="cn-img" id="cn-image-m15-c-65" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-65.jpg" alt="Figure 6.22 Screenshot of PLABWIN10"><figcaption>Figure 6.22 Screenshot of PLABWIN10: Using the command prompt to connect with the FTP server 192.168.0.3.</figcaption></figure><p></p>
+<h4 id="cn-m15-531"><b><i>Step 5 </i></b></h4>
+<p id="cn-m15-532">You are now connected with the FTP server. You will now authenticate as the <b>anonymous </b>user.</p>
+<p id="cn-m15-533">Type the following name as the <b>User </b>and press <b>Enter</b>:</p>
+<pre id="cn-m15-534"><code>anonymous
+</code></pre>
+<p id="cn-m15-535"></p><figure><img class="cn-img" id="cn-image-m15-c-66" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-66.jpg" alt="Figure 6.23 Screenshot of PLABWIN10"><figcaption>Figure 6.23 Screenshot of PLABWIN10: Entering the username as Anonymous to connect with the FTP server.</figcaption></figure><p></p>
+<h4 id="cn-m15-536"><b><i>Step 6 </i></b></h4>
+<p id="cn-m15-537">Next, you are prompted for the password.</p>
+<p id="cn-m15-538">Leave it blank and press <b>Enter</b>.</p>
+<p id="cn-m15-539"></p><figure><img class="cn-img" id="cn-image-m15-c-67" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-67.jpg" alt="Figure 6.24 Screenshot of PLABWIN10"><figcaption>Figure 6.24 Screenshot of PLABWIN10: Entering the password to authenticate the Anonymous user.</figcaption></figure><p></p>
+<p id="cn-m15-540">You are now successfully authenticated with the FTP server.</p>
+<p id="cn-m15-541"></p><figure><img class="cn-img" id="cn-image-m15-c-68" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-68.jpg" alt="Figure 6.25 Screenshot of PLABWIN10"><figcaption>Figure 6.25 Screenshot of PLABWIN10: Showing the successful connection with the FTP server 192.168.0.3.</figcaption></figure><p></p>
+<h4 id="cn-m15-542"><b><i>Step 7 </i></b></h4>
+<p id="cn-m15-543">You need to now list the files on the FTP server.</p>
+<p id="cn-m15-544">To be able to do this, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-545"><code>dir
+</code></pre>
+<p id="cn-m15-546">Notice that the <b>payload.exe </b>is present on the FTP server.</p>
+<p id="cn-m15-547"></p><figure><img class="cn-img" id="cn-image-m15-c-69" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-69.jpg" alt="Figure 6.26 Screenshot of PLABWIN10"><figcaption>Figure 6.26 Screenshot of PLABWIN10: Listing the files on the FTP server 192.168.0.3.</figcaption></figure><p></p>
+<h4 id="cn-m15-548"><b><i>Step 8 </i></b></h4>
+<p id="cn-m15-549">Now, set the transfer to binary.</p>
+<p id="cn-m15-550">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-551"><code>binary
+</code></pre>
+<p id="cn-m15-552"><b>Type </b>is now set to binary.</p>
+<p id="cn-m15-553"></p><figure><img class="cn-img" id="cn-image-m15-c-70" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-70.jpg" alt="Figure 6.27 Screenshot of PLABWIN10"><figcaption>Figure 6.27 Screenshot of PLABWIN10: Setting the TYPE to binary.</figcaption></figure><p></p>
+<h4 id="cn-m15-554"><b><i>Step 9 </i></b></h4>
+<p id="cn-m15-555">Next, transfer the file on to the victim’s system.</p>
+<p id="cn-m15-556">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-557"><code>get payload.exe
+</code></pre>
+<p id="cn-m15-558">Notice that the transfer is successful.</p>
+<span class="cn-quote" id="cn-m15-559"><b><i>Note: </i></b><i>Ensure 
+that you have turned off Windows Defender on PLABWIN10. If you keep it 
+enabled, then you will not be able to locate that file. As soon as the 
+payload.exe file is transferred, it will get deleted automatically.</i></span>
+<p id="cn-m15-560"></p><figure><img class="cn-img" id="cn-image-m15-c-71" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-71.jpg" alt="Figure 6.28 Screenshot of PLABWIN10"><figcaption>Figure 6.28 Screenshot of PLABWIN10: Downloading the payload.exe file using the GET command.</figcaption></figure><p></p>
+<h4 id="cn-m15-561"><b><i>Step 10 </i></b></h4>
+<p id="cn-m15-562">You can now safely close the FTP server. Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-563"><code>quit
+</code></pre>
+<p id="cn-m15-564">Notice that the FTP prompt is no longer available. You are back on the command prompt.</p>
+<p id="cn-m15-565"></p><figure><img class="cn-img" id="cn-image-m15-c-72" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-72.jpg" alt="Figure 6.29 Screenshot of PLABWIN10"><figcaption>Figure 6.29 Screenshot of PLABWIN10: Closing the session with the FTP server using the quit command.</figcaption></figure><p></p>
+<h4 id="cn-m15-566"><b><i>Step 11 </i></b></h4>
+<p id="cn-m15-567">Open the <b>Windows Explorer </b>from the taskbar and navigate to the following path:</p>
+<pre id="cn-m15-568"><code>C:\Users\administrator.PRACTICELABS
+</code></pre>
+<p id="cn-m15-569">Notice that the <b>payload.exe </b>file is present.</p>
+<p id="cn-m15-570"></p><figure><img class="cn-img" id="cn-image-m15-c-73" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-73.jpg" alt="Figure 6.30 Screenshot of PLABWIN10"><figcaption>Figure 6.30 Screenshot of PLABWIN10: Showing the successful download of the payload.exe on the Windows system.</figcaption></figure><p></p>
+<h4 id="cn-m15-571"><b><i>Step 12 </i></b></h4>
+<p id="cn-m15-572">Move the file to the <b>Downloads </b>folder by dragging it. You should then see the file in the <b>Downloads </b>folder.</p>
+<p id="cn-m15-573"></p><figure><img class="cn-img" id="cn-image-m15-c-74" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-74.jpg" alt="Figure 6.31 Screenshot of PLABWIN10"><figcaption>Figure 6.31 Screenshot of PLABWIN10: Moving the file, payload.exe, to the Downloads folder.</figcaption></figure><p></p>
+<h4 id="cn-m15-574"><b><i>Step 13 </i></b></h4>
+<p id="cn-m15-575">Navigate to the <b>Downloads </b>folder. Notice that the <b>payload.exe </b>is now present in this folder.</p>
+<p id="cn-m15-576"></p><figure><img class="cn-img" id="cn-image-m15-c-75" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-75.jpg" alt="Figure 6.32 Screenshot of PLABWIN10"><figcaption>Figure 6.32 Screenshot of PLABWIN10: Showing the file, payload.exe, in the Downloads folder.</figcaption></figure><p></p>
+<h4 id="cn-m15-577"><b><i>Step 14 </i></b></h4>
+<p id="cn-m15-578">After the file is moved, rename the file to <b>setup</b>. Then, double-click the file to execute it.</p>
+<p id="cn-m15-579"></p><figure><img class="cn-img" id="cn-image-m15-c-76" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-76.jpg" alt="Figure 6.33 Screenshot of PLABWIN10"><figcaption>Figure 6.33 Screenshot of PLABWIN10: Renaming the file, payload.exe, to setup.exe.</figcaption></figure><p></p>
+<p id="cn-m15-580">Quickly, switch back to <b>PLABKALI01</b>. Notice that the connection with the victim’s system is already opened.</p>
+<span class="cn-alert" id="cn-m15-581"><b>Note: </b>To be able to 
+complete the next set of tasks in this exercise, you need to keep this 
+console window open. Do NOT shut it down or exit from it.</span>
+<p id="cn-m15-582"></p><figure><img class="cn-img" id="cn-image-m15-c-77" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-77.jpg" alt="Figure 6.34 Screenshot of PLABKALI01"><figcaption>Figure
+ 6.34 Screenshot of PLABKALI01: Showing a successful connection with the
+ victim’s system after the payload.exe file is executed.</figcaption></figure><p></p>
+<h3 id="cn-m15-583"><b>Task 5 - Exploit the Victim’s System</b></h3>
+<p id="cn-m15-584">The payload is now running on the victim’s system. You need to exploit the victim’s system now.</p>
+<p id="cn-m15-585">To exploit a victim’s system, perform the following steps:</p>
+<h4 id="cn-m15-586"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-587">Ensure that you are connected to the <b>PLABWIN10, </b>and <b>PLABKALI01 </b>is running. You need to open the session with the victim’s system now.</p>
+<p id="cn-m15-588">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-589"><code>sessions -i 1
+</code></pre>
+<p id="cn-m15-590">The session is now successfully established.</p>
+<p id="cn-m15-591"></p><figure><img class="cn-img" id="cn-image-m15-c-78" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-78.jpg" alt="Figure 6.35 Screenshot of PLABKALI01"><figcaption>Figure
+ 6.35 Screenshot of PLABKALI01: Showing a successful connection with the
+ victim’s system after the payload.exe file is executed.</figcaption></figure><i>ps</i><p></p>
+<h4 id="cn-m15-592"><b><i>Step 2 </i></b></h4>
+<p id="cn-m15-593">Notice the interaction with the victim’s system has 
+now started. You are now virtually controlling the victim’s system. 
+Let’s see the processes that are running on the victim’s system.</p>
+<p id="cn-m15-594">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-595"><code>ps
+</code></pre>
+<p id="cn-m15-596">Notice that the processes running on the victim’s system are now displayed. It is important to note the last running process, <b>setup.exe</b>, which is the payload that you have executed on the victim’s system.</p>
+<p id="cn-m15-597"></p><figure><img class="cn-img" id="cn-image-m15-c-79" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-79.jpg" alt="Figure 6.36 Screenshot of PLABKALI01"><figcaption>Figure 6.36 Screenshot of PLABKALI01: Listing the running processes on the victim’s system.</figcaption></figure><p></p>
+<h4 id="cn-m15-598"><b><i>Step 3 </i></b></h4>
+<p id="cn-m15-599">Next, you need to escalate privileges. Type the following command press <b>Enter</b>:</p>
+<pre id="cn-m15-600"><code>getsystem
+</code></pre>
+<p id="cn-m15-601">Notice the result. It shows a failure of privileges escalation.</p>
+<p id="cn-m15-602"></p><figure><img class="cn-img" id="cn-image-m15-c-80" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-80.jpg" alt="Figure 6.37 Screenshot of PLABKALI01"><figcaption>Figure 6.37 Screenshot of PLABKALI01: Executing the getsystem command to escalate privileges on the victim’s system.</figcaption></figure><p></p>
+<h4 id="cn-m15-603"><b><i>Step 4 </i></b></h4>
+<p id="cn-m15-604">Let’s now check if the victim’s system has a webcam and take a picture.</p>
+<p id="cn-m15-605">To check this, enter the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-606"><code>webcam_snap
+</code></pre>
+<p id="cn-m15-607">Notice the output, which states that the victim’s system does not have a webcam.</p>
+<p id="cn-m15-608"></p><figure><img class="cn-img" id="cn-image-m15-c-81" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-81.jpg" alt="Figure 6.38 Screenshot of PLABKALI01"><figcaption>Figure 6.38 Screenshot of PLABKALI01: Using the webcam on the victim’s system to take a picture.</figcaption></figure><p></p>
+<h4 id="cn-m15-609"><b><i>Step 5 </i></b></h4>
+<p id="cn-m15-610">Let’s try to capture the keystrokes on the victim’s system.</p>
+<p id="cn-m15-611">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-612"><code>keyscan_start
+</code></pre>
+<p id="cn-m15-613">Notice that the sniffer has now started.</p>
+<p id="cn-m15-614"></p><figure><img class="cn-img" id="cn-image-m15-c-82" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-82.jpg" alt="Figure 6.39 Screenshot of PLABKALI01"><figcaption>Figure 6.39 Screenshot of PLABKALI01: Starting the keystroke sniffer on the victim’s system.</figcaption></figure><i>key</i><p></p>
+<h4 id="cn-m15-615"><b><i>Step 6 </i></b></h4>
+<p id="cn-m15-616">Let’s now see the keys that have been pressed on the victim’s system.</p>
+<p id="cn-m15-617">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-618"><code>keyscan_dump
+</code></pre>
+<p id="cn-m15-619">Notice that several keys were pressed since the sniffer has started.</p>
+<p id="cn-m15-620"></p><figure><img class="cn-img" id="cn-image-m15-c-83" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-83.jpg" alt="Figure 6.40 Screenshot of PLABKALI01"><figcaption>Figure 6.40 Screenshot of PLABKALI01: Capturing the keystrokes on the victim’s system.</figcaption></figure><p></p>
+<h4 id="cn-m15-621"><b><i>Step 7 </i></b></h4>
+<p id="cn-m15-622">Since the privilege escalation failed, you can try to do something else with the system. First, let’s background the session.</p>
+<p id="cn-m15-623">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-624"><code>background
+</code></pre>
+<p id="cn-m15-625">Notice that session <b>1 </b>is now running in the 
+background. Here, you can run more exploits if you desire. There are a 
+lot of options available, and you can explore them in your free time.</p>
+<p id="cn-m15-626"></p><figure><img class="cn-img" id="cn-image-m15-c-84" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-84.jpg" alt="Figure 6.41 Screenshot of PLABKALI01"><figcaption>Figure 6.41 Screenshot of PLABKALI01: Putting the session into the background.</figcaption></figure><p></p>
+<span class="atom-code hidden">5e1d502e-2771-4deb-a3e2-7881a321dc64</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-628"><b>Exercise 7 - Perform Routing Table Verification</b></h2>
+<p id="cn-m15-629">Various tools can be used for routing table verification. Two such tools are netstat and route.</p>
+<p id="cn-m15-630">Please refer to your course material or use your favorite search engine to research for more information about this topic.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m15-632">After completing this exercise, you will be able to:</p>
+<ul id="cn-m15-633">
+<li id="cn-m15-633">Use the Netstat command-line tool</li>
+<li id="cn-m15-634">Use the Route command line tool</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m15-636">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m15-637">
+<li id="cn-m15-637"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m15-638"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m15-639"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m15-640"><img class="cn-img" id="cn-image-m15-c-85" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-85.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m15-641"><b>Task 1 - Using the Netstat command-line tool</b></h3>
+<p id="cn-m15-642">The routing table is a key piece of information to 
+display topologies directly related to the device and its surrounding 
+environment. It details types of adapters used to make connections, the 
+gateways that traffic is flowing through, and primarily it is used as a 
+troubleshooting tool when investigating where traffic bottlenecks might 
+be occurring.</p>
+<p id="cn-m15-643">In this task, you will be using the Netstat command-line tool to display the routing tables.</p>
+<h4 id="cn-m15-644"><b><i>Step 1</i></b></h4>
+<p id="cn-m15-645">Ensure you have powered on all the devices listed in the introduction and connect to <b>PLABWIN10. </b></p>
+<h4 id="cn-m15-646"><b><i>Step 2</i></b></h4>
+<p id="cn-m15-647">Right-click <b>Start </b>and select <b>Command Prompt</b>.</p>
+<h4 id="cn-m15-648"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-649">To display the routing table, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-650"><code>netstat -r
+</code></pre>
+<p id="cn-m15-651"></p><figure><img class="cn-img" id="cn-image-m15-c-86" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-86.jpg" alt="Figure 7.1 Screenshot of PLABWIN10"><figcaption>Figure 7.1 Screenshot of PLABWIN10: The netstat -r command.</figcaption></figure><p></p>
+<p id="cn-m15-652">The output of the netstat -r command is displayed. The output of this command is divided into several sections, such as:</p>
+<ul id="cn-m15-653">
+<li id="cn-m15-653">Interface list</li>
+<li id="cn-m15-654">IPv4 Route Table</li>
+<li id="cn-m15-655">Persistent Routes</li>
+<li id="cn-m15-656">IPv6 Routing Table</li>
+<li id="cn-m15-657">Persistent Routes</li>
+</ul>
+<p id="cn-m15-658"></p><figure><img class="cn-img" id="cn-image-m15-c-87" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-87.jpg" alt="Figure 7.2 Screenshot of PLABWIN10"><figcaption>Figure 7.2 Screenshot of PLABWIN10:  Output of the netstat -r command.</figcaption></figure><p></p>
+<h3 id="cn-m15-659"><b>Task 2 - Using the Route Tool</b></h3>
+<p id="cn-m15-660">In this task, you will be using the route command to 
+display the route information, similar to the netstat -r command. It is 
+useful to know a variety of commands which have similar functions.</p>
+<p id="cn-m15-661">To use the route tool, perform the following steps:</p>
+<h4 id="cn-m15-662"><b><i>Step 1 </i></b></h4>
+<p id="cn-m15-663">Restore the command prompt window from the taskbar.</p>
+<p id="cn-m15-664">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-665"><code>cls
+</code></pre>
+<h4 id="cn-m15-666"><b><i>Step 2 </i></b></h4>
+<p id="cn-m15-667">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m15-668"><code>route PRINT
+</code></pre>
+<p id="cn-m15-669"></p><figure><img class="cn-img" id="cn-image-m15-c-88" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-88.jpg" alt="Figure 7.3 Screenshot of PLABWIN10"><figcaption>Figure 7.3 Screenshot of PLABWIN10: The route print command.</figcaption></figure><p></p>
+<p id="cn-m15-670">The output of the route print command is displayed. 
+The output of this command is divided into several sections - just like 
+netstat -r. The output contains the following sections:</p>
+<ul id="cn-m15-671">
+<li id="cn-m15-671">Interface list</li>
+<li id="cn-m15-672">IPv4 Route Table</li>
+<li id="cn-m15-673">Persistent Routes</li>
+<li id="cn-m15-674">IPv6 Routing Table</li>
+<li id="cn-m15-675">Persistent Routes</li>
+</ul>
+<p id="cn-m15-676">You are presented with an Interface List attached to 
+the device, which can be key to learning more about the network 
+configurations.</p>
+<p id="cn-m15-677">Importantly, you are then presented with an IPv4 
+Route Table, which shows the Active Routes being applied to the network 
+adapters. Finally, the output shows if there are any persistent routes 
+on the devices. The route command displays if no persistent routing 
+paths are being used with this device on IPv6.</p>
+<p id="cn-m15-678"></p><figure><img class="cn-img" id="cn-image-m15-c-89" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-89.jpg" alt="Figure 7.4 Screenshot of PLABWIN10"><figcaption>Figure 7.4 Screenshot of PLABWIN10: Output of the route print command.</figcaption></figure><p></p>
+<h4 id="cn-m15-679"><b><i>Step 3</i></b></h4>
+<p id="cn-m15-680">Scroll down to view the IPv6 persistent routes.</p>
+<p id="cn-m15-681"></p><figure><img class="cn-img" id="cn-image-m15-c-90" src="Performingsecurityassessmentusingvarioustools_files/image-m15-c-90.jpg" alt="Figure 7.5 Screenshot of PLABWIN10"><figcaption>Figure 7.5 Screenshot of PLABWIN10: Output of the route print command.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m15-686"><b>Review</b></h2>
+<p id="cn-m15-687">Well done, you have completed the <b>Performing security assessment using various tools </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">2f3b02be-0c3e-4548-8162-78cbfb10a137</span>
+<span class="atom-code hidden">0042b6a7-a061-48ca-a557-db810cbe4d13</span>
+<span class="atom-code hidden">a0d9089f-c668-4d2b-9b76-56c890eb624d</span>
+<span class="atom-code hidden">b44bd26e-503f-4bd3-a293-74d1d02a22db</span>
+<span class="atom-code hidden">406f97cb-a56f-4d49-bda0-7ecb39e538cc</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m15-697">You completed the following exercises:</p>
+<ul id="cn-m15-698">
+<li id="cn-m15-698">Connect to PLABKALI01</li>
+<li id="cn-m15-699">Identify Live Hosts using nmap</li>
+<li id="cn-m15-700">Identify Live Hosts using hping3</li>
+</ul>
+<p id="cn-m15-701">You should now be able to:</p>
+<ul id="cn-m15-702">
+<li id="cn-m15-702">Connect to PLABKALI01</li>
+<li id="cn-m15-703">Identify Live Hosts using nmap</li>
+<li id="cn-m15-704">Identify Live Hosts using hping3</li>
+<li id="cn-m15-705">Connect to Windows 10 and Kali</li>
+<li id="cn-m15-706">Use Nslookup to Perform Zone Transfer</li>
+<li id="cn-m15-707">Use the DIG Tool to Perform Zone Transfer</li>
+<li id="cn-m15-708">Use PsInfo Command-line Tool</li>
+<li id="cn-m15-709">Use the Finger Command</li>
+<li id="cn-m15-710">Log into MyBook</li>
+<li id="cn-m15-711">Explore and Gather Information</li>
+<li id="cn-m15-712">Connect to Windows 10 and Kali</li>
+<li id="cn-m15-713">Create an Exploit</li>
+<li id="cn-m15-714">Setup the FTP Server</li>
+<li id="cn-m15-715">Download the Payload</li>
+<li id="cn-m15-716">Exploit the Victim’s System</li>
+<li id="cn-m15-717">Using the Netstat command-line tool</li>
+<li id="cn-m15-718">Using the Route command line tool</li>
+</ul>
+<h2 class="cn-feedback"><b> Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m15-722">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

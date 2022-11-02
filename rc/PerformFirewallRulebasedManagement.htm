@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="PerformFirewallRulebasedManagement_files/print-styles.css" rel="stylesheet">
+    <script src="PerformFirewallRulebasedManagement_files/jquery.min.js"></script>
+    <script src="PerformFirewallRulebasedManagement_files/jspdf.js"></script>
+    <script src="PerformFirewallRulebasedManagement_files/from_html.js"></script>
+    <script src="PerformFirewallRulebasedManagement_files/addimage.js"></script>
+    <script src="PerformFirewallRulebasedManagement_files/filesaver.js"></script>
+    <script src="PerformFirewallRulebasedManagement_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ItynIznIva2J8oEfp+aF6OdHDwkSq9tW76duq/KSlEtLnjp/qujzbcbyimHZmapJqkTbygAZ0rFohtf95RNYddMPbgIhITVIgBXRqgfoKmc=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Perform Firewall Rule-based Management</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Configuring Firewall Rules Using Windows Firewall</li><li>Exercise 2 - Configuring Firewall Rules using Windows Firewall with Advanced Security</li><li>Exercise 3 - Configuring Firewall Rules using Remote Desktop</li><li>Exercise 4 - Configuring Firewall Rules from the Command Line Interface</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m6-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Firewall</div>
+<div>Security</div>
+</div>
+<p id="cn-m6-4">Welcome to the <b>Perform Firewall Rule-Based Management </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m6-8">In this module, you will complete the following exercises:</p>
+<ul id="cn-m6-9">
+<li id="cn-m6-9">Configuring Firewall Rules using Windows Firewall</li>
+<li id="cn-m6-10">Configuring Firewall Rules using Windows Firewall with Advanced Security</li>
+<li id="cn-m6-11">Configuring Firewall Rules using Remote Desktop</li>
+<li id="cn-m6-12">Configuring Firewall Rules from the Command Line Interface</li>
+</ul>
+<p id="cn-m6-13">After completing this lab, you will be able to:</p>
+<ul id="cn-m6-14">
+<li id="cn-m6-14">Verify the Enabled Network Connection</li>
+<li id="cn-m6-15">Create a Windows Firewall Rule</li>
+<li id="cn-m6-16">Test the Firewall Rule</li>
+<li id="cn-m6-17">Reconfigure the Firewall Rule</li>
+<li id="cn-m6-18">Verify the Connection</li>
+<li id="cn-m6-19">Create a Firewall Rule using Windows Firewall with Advanced Security</li>
+<li id="cn-m6-20">Reconfigure the Firewall Rule</li>
+<li id="cn-m6-21">Setup a Remote Session</li>
+<li id="cn-m6-22">Create a Firewall Rule</li>
+<li id="cn-m6-23">Verify the Firewall Rule</li>
+<li id="cn-m6-24">Reconfigure the Firewall Rule Using the Remote Desktop Connection</li>
+<li id="cn-m6-25">Verify Blocked Ping Packets</li>
+<li id="cn-m6-26">Configure the Firewall using CLI Commands</li>
+<li id="cn-m6-27">Verify the efficacy of the Firewall Rule</li>
+<li id="cn-m6-28">Reconfigure the Firewall using CLI</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m6-30">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m6-31">
+<li id="cn-m6-31"><b>CAS-003 </b>2.1 Analyze a scenario and integrate network and security components, concepts and architectures to meet security requirement.</li>
+<li id="cn-m6-32"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+<li id="cn-m6-33"><b>CAS-003 </b>4.3 Given a scenario, integrate and 
+troubleshoot advanced authentication and authorization technologies to 
+support enterprise security objectives</li>
+</ul>
+<span class="cn-quote" id="cn-m6-34"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m6-36">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m6-40">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m6-41">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m6-50"><b>Lab Topology</b></h2>
+<p id="cn-m6-51">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m6-52">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m6-53">
+<li id="cn-m6-53"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m6-54"><b>PLABDM01 </b>(Windows Server 2016 - Member Server)</li>
+<li id="cn-m6-55"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m6-56"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m6-57"><b>PLABDVWA </b>(Fedora)</li>
+<li id="cn-m6-58"><b>PLABSECON </b>(Ubuntu-Security Onion)</li>
+<li id="cn-m6-59"><b>PLABWIN701 </b>(Windows 7)</li>
+<li id="cn-m6-60"><b>PLABXP01 </b>(Windows XP)</li>
+</ul>
+<p id="cn-m6-61"><img class="cn-img" id="cn-image-m6-c-0" src="PerformFirewallRulebasedManagement_files/image-m6-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m6-62">Click Next to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m6-63"><b>Exercise 1 - Configuring Firewall Rules Using Windows Firewall</b></h2>
+<p id="cn-m6-64">A firewall protects your computer from unauthorized 
+access by users or applications outside of your corporate network. To 
+make the firewall effective, you need to define/edit the firewall rules.
+ These rules analyze the packets coming to the computer or network and 
+compare whether the specified conditions are satisfied and then 
+allow/deny access to the computer or network accordingly. Windows 
+Firewall application enables you to configure and edit firewall rules.</p>
+<p id="cn-m6-65">In this exercise, you will create firewall rules using 
+Windows firewall and verify their efficiency in managing access to the 
+computer.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m6-67">After completing this exercise, you will be able to:</p>
+<ul id="cn-m6-68">
+<li id="cn-m6-68">Verify the Enabled Network Connection</li>
+<li id="cn-m6-69">Create a Windows Firewall Rule</li>
+<li id="cn-m6-70">Test the Firewall Rule</li>
+<li id="cn-m6-71">Reconfigure the Firewall Rule</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m6-73">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m6-74">
+<li id="cn-m6-74"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m6-75"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m6-76"><img class="cn-img" id="cn-image-m6-c-1" src="PerformFirewallRulebasedManagement_files/image-m6-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m6-79"><b>Task 1 - Verify the Enabled Network Connection</b></h3>
+<p id="cn-m6-80">Two computers connected to each over a network have a 
+live connection when they can communicate with each other over the 
+connection. You can verify a live connection by pinging one computer 
+from the other one. In this task, you will ping the <b>PLABWIN10 </b>computer from the <b>PLABDC01 </b>computer to verify that the connection between them is live.</p>
+<p id="cn-m6-81">To verify that connection is live, perform the following steps:</p>
+<h4 id="cn-m6-82"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-83">Ensure that you have powered on the devices.</p>
+<p id="cn-m6-84">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m6-85">Close <b>Server Manager</b>.</p>
+<p id="cn-m6-86">Right-click <b>Start </b>and select <b>Command Prompt (Admin</b>).</p>
+<p id="cn-m6-87"></p><figure><img class="cn-img" id="cn-image-m6-c-2" src="PerformFirewallRulebasedManagement_files/image-m6-c-2.jpg" alt="Figure 1.1 Screenshot of PLABDC01"><figcaption>Figure 1.1 Screenshot of PLABDC01 :Selecting the Command Prompt (Admin) option from the Start context menu.</figcaption></figure><p></p>
+<h4 id="cn-m6-88"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-89">On the command prompt window displayed, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-90"><code>ping PLABWIN10
+</code></pre>
+<h4 id="cn-m6-91"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-92">Notice that the command pings <b>PLABWIN10.PRACTICELABS.COM</b>, the fully qualified domain name (FQDN) of <b>PLABWIN10</b>. The command also displays the IP address of <b>PLABWIN10</b>, which is <b>192.168.0.4</b>.</p>
+<p id="cn-m6-93">Notice also that the connection is live as <b>PLABWIN10 </b>responds to ping requests from <b>PLABDC01</b>.</p>
+<p id="cn-m6-94"></p><figure><img class="cn-img" id="cn-image-m6-c-3" src="PerformFirewallRulebasedManagement_files/image-m6-c-3.jpg" alt="Figure 1.2 Screenshot of PLABDC01"><figcaption>Figure 1.2 Screenshot of PLABDC01: Command prompt is showing the results of a ping test.</figcaption></figure><p></p>
+<h4 id="cn-m6-95"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-96">Minimize the command prompt window.</p>
+<h3 id="cn-m6-97"><b>Task 2 - Create a Windows Firewall Rule</b></h3>
+<p id="cn-m6-98">A firewall rule defines whether the inbound/outbound 
+traffic to/from a specified software/computer/user is to be 
+fully/partially/completely blocked/allowed. You can also specify whether
+ the rule applies to the LAN/WAN/remote access or all of these modes of 
+operation of the computer. Further, these rules can be easily 
+reconfigured with the evolving IT environment.</p>
+<p id="cn-m6-99">In this task, you will create a rule that will block incoming ping packets to the <b>PLABWIN10 </b>device. To do this, perform the following steps.</p>
+<h4 id="cn-m6-100"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-101">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-102">In the <b>Search programs and files </b>text box, type the following text:</p>
+<pre id="cn-m6-103"><code>Windows Firewall
+</code></pre>
+<p id="cn-m6-104">Select <b>Windows Firewall </b>in the <b>Best match </b>section.</p>
+<p id="cn-m6-105"></p><figure><img class="cn-img" id="cn-image-m6-c-4" src="PerformFirewallRulebasedManagement_files/image-m6-c-4.jpg" alt="Figure 1.3 Screenshot of PLABWIN10"><figcaption>Figure 1.3 Screenshot of PLABWIN10: Using the search bar to access windows firewall.</figcaption></figure><p></p>
+<h4 id="cn-m6-106"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-107">On the <b>Windows Firewall </b>window, notice that the <b>Windows Firewall State </b>is <b>OFF </b>for the <b>Domain networks </b>profile.</p>
+<p id="cn-m6-108">Click the <b>Allow an app or feature through Windows Firewall </b>link in the left pane.</p>
+<p id="cn-m6-109"></p><figure><img class="cn-img" id="cn-image-m6-c-5" src="PerformFirewallRulebasedManagement_files/image-m6-c-5.jpg" alt="Figure 1.4 Screenshot of PLABWIN10"><figcaption>Figure 1.4 Screenshot of PLABWIN10: Windows Firewall.</figcaption></figure><p></p>
+<h4 id="cn-m6-112"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-113">On the <b>Allow apps to communicate through Windows Firewall </b>page, click <b>Change Settings</b>.</p>
+<p id="cn-m6-114">On the <b>Allowed Programs </b>window, locate the <b>File and Printer Sharing </b>on the <b>Allowed programs and features </b>list and clear the checkbox.</p>
+<p id="cn-m6-115">Then, click <b>OK</b>.</p>
+<p id="cn-m6-116"></p><figure><img class="cn-img" id="cn-image-m6-c-6" src="PerformFirewallRulebasedManagement_files/image-m6-c-6.jpg" alt="Figure 1.5 Screenshot of PLABWIN10"><figcaption>Figure 1.5 Screenshot of PLABWIN10: Windows Firewall on the Allowed Apps settings.</figcaption></figure><p></p>
+<h4 id="cn-m6-119"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-120">You are redirected back to <b>Windows Firewall</b>.</p>
+<p id="cn-m6-121">In the left pane, click <b>Turn Windows Firewall on or off</b>.</p>
+<p id="cn-m6-122"></p><figure><img class="cn-img" id="cn-image-m6-c-7" src="PerformFirewallRulebasedManagement_files/image-m6-c-7.jpg" alt="Figure 1.6 Screenshot of PLABWIN10"><figcaption>Figure 1.6 Screenshot of PLABWIN10: Clicking the Turn Windows Firewall on or off option in the left pane</figcaption></figure><p></p>
+<h4 id="cn-m6-124"><b><i>Step 5</i></b></h4>
+<p id="cn-m6-125">In the <b>Domain network settings </b>section, select <b>Turn on Windows Firewall </b>and click <b>OK</b>.</p>
+<p id="cn-m6-126"></p><figure><img class="cn-img" id="cn-image-m6-c-8" src="PerformFirewallRulebasedManagement_files/image-m6-c-8.jpg" alt="Figure 1.7 Screenshot of PLABWIN10"><figcaption>Figure 1.7 Screenshot of PLABWIN10: Windows Firewall on Customize Settings.</figcaption></figure><p></p>
+<p id="cn-m6-129">Notice the firewall for the <b>Domain networks </b>is now turned on.</p>
+<p id="cn-m6-130"></p><figure><img class="cn-img" id="cn-image-m6-c-9" src="PerformFirewallRulebasedManagement_files/image-m6-c-9.jpg" alt="Figure 1.8 Screenshot of PLABWIN10"><figcaption>Figure 1.8 Screenshot of PLABWIN10: Windows Firewall showing the Domain Network Firewall is active.</figcaption></figure><p></p>
+<h3 id="cn-m6-133"><b>Task 3 - Test the Firewall Rule</b></h3>
+<p id="cn-m6-134">After defining a firewall rule, you test its 
+effectiveness to ensure the security of your computer. In this task, you
+ will test whether the ping requests to <b>PLABWIN10 </b>are blocked, as specified by the firewall rule you created.</p>
+<h4 id="cn-m6-135"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-136">Switch to <b>PLABDC01</b>.</p>
+<p id="cn-m6-137">Restore the command prompt window from the taskbar. Clear the screen with the cls command.</p>
+<p id="cn-m6-138">Type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-139"><code>ping PLABWIN10
+</code></pre>
+<p id="cn-m6-140">The command again pings the FQDN of <b>PLABWIN10</b>, 
+but this time there is no response from the computer, and the request is
+ timed out. This is because the firewall rule you created blocks any 
+ping packets going to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-141"></p><figure><img class="cn-img" id="cn-image-m6-c-10" src="PerformFirewallRulebasedManagement_files/image-m6-c-10.jpg" alt="Figure 1.9 Screenshot of PLABDC01"><figcaption>Figure 1.9 Screenshot of PLABDC01: Using Command Prompt to perform a ping test.</figcaption></figure><p></p>
+<h3 id="cn-m6-142"><b>Task 4 - Reconfigure the Firewall Rule</b></h3>
+<p id="cn-m6-143">You can easily edit the firewall rules once 
+configured. Access the firewall settings as you do to create a rule and 
+specify the new rule. In this task, you will reconfigure the rule to 
+allow incoming ping packets to the <b>PLABWIN10 </b>device and verify the same. To do this, perform the following steps:</p>
+<h4 id="cn-m6-144"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-145">Switch back to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-146">On the <b>Windows Firewall </b>window, click the <b>Allow an app or feature through Windows Firewall </b>link.</p>
+<p id="cn-m6-147"></p><figure><img class="cn-img" id="cn-image-m6-c-11" src="PerformFirewallRulebasedManagement_files/image-m6-c-11.jpg" alt="Figure 1.10 Screenshot of PLABWIN10"><figcaption>Figure 1.10 Screenshot of PLABWIN10: Clicking the Allow an app or feature through Windows Firewall option.</figcaption></figure><p></p>
+<h4 id="cn-m6-150"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-151">On the <b>Allowed apps and features </b>window, select the <b>File and Printer Sharing </b>checkbox. Ensure that the <b>Domain </b>and <b>Private </b>checkboxes for this selection are enabled.</p>
+<p id="cn-m6-152">Click <b>OK</b>.</p>
+<p id="cn-m6-153"></p><figure><img class="cn-img" id="cn-image-m6-c-12" src="PerformFirewallRulebasedManagement_files/image-m6-c-12.jpg" alt="Figure 1.11 Screenshot of PLABWIN10"><figcaption>Figure 1.11 Screenshot of PLABWIN10: Windows Firewall on Allowed Apps.</figcaption></figure><p></p>
+<h4 id="cn-m6-154"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-155">Close all the open windows. You should now be back on the <b>PLABWIN10 </b>desktop.</p>
+<h4 id="cn-m6-158"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-159">Switch back to <b>PLABDC01</b>.</p>
+<p id="cn-m6-160">On the command prompt window, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-161"><code>ping PLABWIN10
+</code></pre>
+<p id="cn-m6-162">Notice that <b>PLABDC01 </b>receives the response from <b>PLABWIN10</b>. This verifies that the reconfigured firewall rule to allow the <b>File and Print </b>access to pinging servers is effective.</p>
+<p id="cn-m6-163"></p><figure><img class="cn-img" id="cn-image-m6-c-13" src="PerformFirewallRulebasedManagement_files/image-m6-c-13.jpg" alt="Figure 1.12 Screenshot of PLABDC01"><figcaption>Figure 1.12 Screenshot of PLABDC01: Command Prompt showing the results of a ping test.</figcaption></figure><p></p>
+<span class="atom-code hidden">2904fde5-033a-49e0-91ee-c6e2e905aed6</span>
+<h4 id="cn-m6-166"><b><i>Step 5</i></b></h4>
+<p id="cn-m6-167">Close the <b>command prompt </b>window.</p>
+<span class="cn-alert" id="cn-m6-168">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m6-169"><b>Exercise 2 - Configuring Firewall Rules using Windows Firewall with Advanced Security</b></h2>
+<p id="cn-m6-170">Windows versions including Vista, 2008, and later, 
+provide another built-in application for system security - Windows 
+Firewall with Advanced Security. This application offers an expansive 
+view of firewall security and has additional features compared to the 
+scaled down version of the firewall in Windows XP.</p>
+<p id="cn-m6-171">In this exercise, you will create firewall rules using
+ the Windows Firewall with Advanced Security and verify their efficiency
+ in securing your computer.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m6-173">After completing this exercise, you will be able to:</p>
+<ul id="cn-m6-174">
+<li id="cn-m6-174">Verify the Connection</li>
+<li id="cn-m6-175">Create a Firewall Rule using Windows Firewall with Advanced Security</li>
+<li id="cn-m6-176">Test the Firewall Rule</li>
+<li id="cn-m6-177">Reconfigure the Firewall Rule</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m6-179">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m6-180">
+<li id="cn-m6-180"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m6-181"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m6-182"><b> </b><img class="cn-img" id="cn-image-m6-c-14" src="PerformFirewallRulebasedManagement_files/image-m6-c-14.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m6-185"><b>Task 1 - Verify the Connection</b></h3>
+<p id="cn-m6-186">The connection between two computers on a network is 
+live if the computers can exchange data like sending ping packets with 
+each other over the connection. To verify whether a connection is live, 
+ping one computer from the other. In this task, you will ping the <b>PLABDC01 </b>computer from the <b>PLABWIN10 </b>computer
+ to verify that the connection between them is live. In this task, you 
+will verify that the connection between creating a simple firewall rule 
+using the Windows Firewall with Advanced Security.</p>
+<p id="cn-m6-187">To verify that the connection is live, perform the following steps:</p>
+<h4 id="cn-m6-188"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-189">Ensure that you have powered on the devices.</p>
+<p id="cn-m6-190">Connect to <b>PLABDC01.</b></p>
+<p id="cn-m6-191">Right-click the network icon in the system tray and select <b>Open Network and Sharing Center</b>.</p>
+<p id="cn-m6-192"></p><figure><img class="cn-img" id="cn-image-m6-c-15" src="PerformFirewallRulebasedManagement_files/image-m6-c-15.jpg" alt="Figure 2.1 Screenshot of PLABDC01"><figcaption>Figure 2.1 Screenshot of PLABDC01: Selecting the Open Network and Sharing Center option.</figcaption></figure><p></p>
+<h4 id="cn-m6-193"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-194">On <b>Network and Sharing Center</b>, click <b>Windows Firewall </b>on the lower left pane.</p>
+<p id="cn-m6-195"></p><figure><img class="cn-img" id="cn-image-m6-c-16" src="PerformFirewallRulebasedManagement_files/image-m6-c-16.jpg" alt="Figure 2.2 Screenshot of PLABDC01"><figcaption>Figure 2.2 Screenshot of PLABDC01: Network and Sharing Center window with the selection of Windows Firewall option.</figcaption></figure><p></p>
+<h4 id="cn-m6-198"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-199">Notice that the firewall is now activated for all the three network profiles - <b>Domain networks</b>, <b>Home or work (private) networks</b>, and <b>Public networks</b>.</p>
+<p id="cn-m6-200"></p><figure><img class="cn-img" id="cn-image-m6-c-17" src="PerformFirewallRulebasedManagement_files/image-m6-c-17.jpg" alt="Figure 2.3 Screenshot of PLABDC01"><figcaption>Figure 2.3 Screenshot of PLABDC01: Windows Firewall with all the firewalls turned on.</figcaption></figure><p></p>
+<h4 id="cn-m6-201"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-202">Leave the <b>Windows Firewall </b>window open.</p>
+<h4 id="cn-m6-205"><b><i>Step 5</i></b></h4>
+<p id="cn-m6-206">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-207">Click <b>Start</b>.</p>
+<p id="cn-m6-208">In the <b>Type here to search </b>textbox, type:</p>
+<pre id="cn-m6-209"><code>cmd
+</code></pre>
+<p id="cn-m6-210">Under the Best match section, Right-click <b>Command Prompt </b>and select <b>Run as administrator</b>.</p>
+<span class="cn-quote" id="cn-m6-211"><b><i>Note: </i></b><i>In the </i><b><i>User Access Control </i></b><i>dialog box, click </i><b><i>Yes</i></b><i>. </i></span>
+<p id="cn-m6-212"></p><figure><img class="cn-img" id="cn-image-m6-c-18" src="PerformFirewallRulebasedManagement_files/image-m6-c-18.jpg" alt="Figure 2.4 Screenshot of PLABWIN10"><figcaption>Figure 2.4 Screenshot of PLABWIN10: Search Bar being used to access Command Prompt.</figcaption></figure><p></p>
+<h4 id="cn-m6-215"><b><i>Step 6</i></b></h4>
+<p id="cn-m6-216">On the command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-217"><code>ping plabdc01
+</code></pre>
+<h4 id="cn-m6-219"><b><i>Step 7 </i></b></h4>
+<p id="cn-m6-220">Notice that the <b>PLABDC01 </b>computer responds to the ping request from the <b>PLABWIN10 </b>computer.</p>
+<p id="cn-m6-221"></p><figure><img class="cn-img" id="cn-image-m6-c-19" src="PerformFirewallRulebasedManagement_files/image-m6-c-19.jpg" alt="Figure 2.5 Screenshot of PLABWIN10"><figcaption>Figure 2.5 Screenshot of PLABWIN10: Command Prompt showing the results of a ping test.</figcaption></figure><p></p>
+<p id="cn-m6-222">Leave the command prompt window open.</p>
+<h3 id="cn-m6-224"><b>Task 2 - Create a Firewall Rule using Windows Firewall with Advanced Security</b></h3>
+<p id="cn-m6-225">You can create firewall rules using the <b>Windows Firewall with Advanced Security </b>feature. In this task, you will create a simple firewall rule to block the ping response from <b>PLABDC01</b>.</p>
+<p id="cn-m6-226">To create a firewall rule using the <b>Windows Firewall with Advanced Security</b>, perform the following steps:</p>
+<h4 id="cn-m6-227"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-228">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m6-229">On the <b>Windows Firewall </b>window, click <b>Advanced Settings </b>in the left pane.</p>
+<p id="cn-m6-230"></p><figure><img class="cn-img" id="cn-image-m6-c-20" src="PerformFirewallRulebasedManagement_files/image-m6-c-20.jpg" alt="Figure 2.6 Screenshot of PLABDC01"><figcaption>Figure 2.6 Screenshot of PLABDC01: Windows Firewall.</figcaption></figure><p></p>
+<h4 id="cn-m6-232"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-233">On the <b>Windows Firewall with Advanced Security </b>window, select the <b>Inbound Rules </b>node from the console tree on the left pane.</p>
+<h4 id="cn-m6-234"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-235"><b>Inbound Rules </b>pane in the middle of the window displays the details of various firewall inbound rules.</p>
+<p id="cn-m6-236">Scroll down in the <b>Inbound Rules </b>pane to find the <b>File and Printer Sharing (Echo Request-ICMPv4-In) </b>rule<b>. </b></p>
+<p id="cn-m6-237">Right-click the rule and select <b>Properties</b>.</p>
+<p id="cn-m6-238"></p><figure><img class="cn-img" id="cn-image-m6-c-21" src="PerformFirewallRulebasedManagement_files/image-m6-c-21.jpg" alt="Figure 2.7 Screenshot of PLABDC01"><figcaption>Figure 2.7 Screenshot of PLABDC01: Windows Firewall with Advanced Security.</figcaption></figure><p></p>
+<h4 id="cn-m6-241"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-242">On the <b>File and Printer Sharing (Echo Request-ICMPv4-In) Properties </b>dialog box, ensure that the <b>General </b>tab is selected.</p>
+<p id="cn-m6-243">In the <b>Action </b>section, select the <b>Block the connection </b>radio button and then click <b>OK</b>.</p>
+<p id="cn-m6-244"></p><figure><img class="cn-img" id="cn-image-m6-c-22" src="PerformFirewallRulebasedManagement_files/image-m6-c-22.jpg" alt="Figure 2.8 Screenshot of PLABDC01"><figcaption>Figure 2.8 Screenshot of PLABDC01: Windows Firewall with Advanced Security showing a popup with File and Printer Sharing.</figcaption></figure><p></p>
+<h4 id="cn-m6-247"><b><i>Step 5</i></b></h4>
+<p id="cn-m6-248">Notice that the <b>File and Printer Sharing (Echo Request-ICMPv4-In) </b>rule displays a blocked icon on the left.</p>
+<p id="cn-m6-249"></p><figure><img class="cn-img" id="cn-image-m6-c-23" src="PerformFirewallRulebasedManagement_files/image-m6-c-23.jpg" alt="Figure 2.9 Screenshot of PLABDC01"><figcaption>Figure 2.9 Screenshot of PLABDC01: Windows Firewall with Advanced Security showing the rule is active.</figcaption></figure><p></p>
+<p id="cn-m6-250">Leave the <b>Windows Firewall with Advanced Security </b>window open.</p>
+<h3 id="cn-m6-253"><b>Task 3 - Test the Firewall Rule</b></h3>
+<p id="cn-m6-254">Firewall rules created using any Windows application 
+are equally effective. In this task, you will test the effect of the 
+rule created using the Windows Firewall with Advanced Security feature.</p>
+<p id="cn-m6-255">To test the firewall rule using the <b>Windows Firewall with Advanced Security</b>, perform the following steps:</p>
+<h4 id="cn-m6-256"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-257">Switch back to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-258">On the command prompt, again type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-259"><code>ping plabdc01
+</code></pre>
+<h4 id="cn-m6-262"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-263">Notice that the ping request is timed out. There is no response from the <b>PLABDC01 </b>server. Therefore, you can conclude that the firewall rule is effective.</p>
+<p id="cn-m6-264"></p><figure><img class="cn-img" id="cn-image-m6-c-24" src="PerformFirewallRulebasedManagement_files/image-m6-c-24.jpg" alt="Figure 2.10 Screenshot of PLABWIN10"><figcaption>Figure 2.10 Screenshot of PLABWIN10: Command Prompt performing a ping test.</figcaption></figure><p></p>
+<p id="cn-m6-265">Leave the command prompt window open.</p>
+<h3 id="cn-m6-268"><b>Task 4 -  Reconfigure the Firewall Rule </b></h3>
+<p id="cn-m6-269">Firewall rules can be easily reconfigured. This helps 
+re-configure the computer in accordance with the evolving IT 
+environment. In this task, you will re-configure <b>PLABDC01 </b>to respond to the ping requests.</p>
+<p id="cn-m6-270">To reconfigure the firewall rule, perform the following steps:</p>
+<h4 id="cn-m6-271"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-272">Switch back to <b>PLABDC01</b>.</p>
+<p id="cn-m6-273">On the <b>Windows Firewall with Advanced Security </b>window, in the <b>Inbound Rules </b>pane, right-click <b>File and Printer Sharing (Echo Request-ICMPv4-In) </b>and select <b>Properties</b>.</p>
+<h4 id="cn-m6-274"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-275">On the <b>File and Printer Sharing (Echo Request-ICMPv4-In) Properties </b>dialog box, ensure that the <b>General </b>tab is selected.</p>
+<p id="cn-m6-276">In the <b>Action </b>section, select the <b>Allow the connection </b>radio button, click <b>Apply </b>and then click <b>OK</b>.</p>
+<p id="cn-m6-277"></p><figure><img class="cn-img" id="cn-image-m6-c-25" src="PerformFirewallRulebasedManagement_files/image-m6-c-25.jpg" alt="Figure 2.11 Screenshot of PLABDC01"><figcaption>Figure 2.11 Screenshot of PLABDC01: Windows Firewall with Advanced Security showing a popup with File and Printer Sharing.</figcaption></figure><p></p>
+<h4 id="cn-m6-278"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-279">Notice that the <b>File and Printer Sharing (Echo Request-ICMPv4-In) </b>rule displays an allowed icon on the left.</p>
+<p id="cn-m6-280">Close all windows.</p>
+<p id="cn-m6-281"></p><figure><img class="cn-img" id="cn-image-m6-c-26" src="PerformFirewallRulebasedManagement_files/image-m6-c-26.jpg" alt="Figure 2.12 Screenshot of PLABDC01"><figcaption>Figure 2.12 Screenshot of PLABDC01: Windows Firewall with Advanced Security showing the rule is active.</figcaption></figure><p></p>
+<h4 id="cn-m6-283"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-284">Switch back to <b>PLABWIN10.</b></p>
+<p id="cn-m6-285">On the <b>command prompt </b>window, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-286"><code>ping plabdc01
+</code></pre>
+<p id="cn-m6-287">Notice that <b>PLABDC01 </b>responds to the ping 
+request. Evidently, you could reconfigure the firewall rule and thereby,
+ reconfigure the server to respond to the ping requests.</p>
+<p id="cn-m6-288"></p><figure><img class="cn-img" id="cn-image-m6-c-27" src="PerformFirewallRulebasedManagement_files/image-m6-c-27.jpg" alt="Figure 2.13 Screenshot of PLABWIN10"><figcaption>Figure 2.13 Screenshot of PLABWIN10: Command Prompt showing the results from a ping test.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<h4 id="cn-m6-291"><b><i>Step 5</i></b></h4>
+<p id="cn-m6-292">Minimize the <b>Command Prompt</b>.</p>
+<span class="cn-alert" id="cn-m6-293">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m6-294"><b>Exercise 3 - Configuring Firewall Rules using Remote Desktop</b></h2>
+<p id="cn-m6-295">Remote desktop is a built-in feature of Windows XP and
+ later versions. Remote desktop enables you to setup a connection with 
+any remote computing device on your network such that you can access the
+ desktop of the computer and operate its resources as if they were local
+ on your computer. Although similar to a VPN connection, a remote 
+desktop connection gives you more control over the resources of the 
+remote device.</p>
+<p id="cn-m6-296">Please refer to your course book, or you can use your preferred search engine to research this topic in detail.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m6-298">After completing this exercise, you will be able to:</p>
+<ul id="cn-m6-299">
+<li id="cn-m6-299">Setup a Remote Session</li>
+<li id="cn-m6-300">Create a Firewall Rule</li>
+<li id="cn-m6-301">Verify the Firewall Rule</li>
+<li id="cn-m6-302">Reconfigure the Firewall Rule Using the Remote Desktop Connection</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m6-304">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m6-305">
+<li id="cn-m6-305"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m6-306"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m6-307"><b> </b><img class="cn-img" id="cn-image-m6-c-28" src="PerformFirewallRulebasedManagement_files/image-m6-c-28.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m6-310"><b>Task 1 - Setup a Remote Session</b></h3>
+<p id="cn-m6-311">You setup a remote desktop session to connect to and 
+to operate a computer on the network but present at a geographically 
+remote location. You can then use this session to create firewall rules.
+ In this task, you will setup a remote session with the PLABWIN10 
+computer accessing the PLABDC01 computer.</p>
+<p id="cn-m6-312">To setup a remote session, perform the following steps:</p>
+<h4 id="cn-m6-313"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-314">Ensure that you have powered on the devices.</p>
+<p id="cn-m6-315">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-316">Click <b>Start, </b>and in the <b>Search programs and files </b>text box, type <b>remote</b>.</p>
+<p id="cn-m6-317">Right-click <b>Remote Desktop Connection </b>and select <b>Run as administrator</b>.</p>
+<span class="cn-quote" id="cn-m6-318"><b><i>Note: </i></b><i>In the </i><b><i>User Access Control </i></b><i>dialog box, click </i><b><i>Yes</i></b><i>. </i></span>
+<p id="cn-m6-319"></p><figure><img class="cn-img" id="cn-image-m6-c-29" src="PerformFirewallRulebasedManagement_files/image-m6-c-29.jpg" alt="Figure 3.1 Screenshot of PLABWIN10"><figcaption>Figure 3.1 Screenshot of PLABWIN10: Search bar being used to find Remote Desktop Connection.</figcaption></figure><p></p>
+<h4 id="cn-m6-320"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-321">The <b>Remote Desktop Connection </b>dialog box is displayed.</p>
+<p id="cn-m6-322">Type the following in the <b>Computer </b>text field:</p>
+<pre id="cn-m6-323"><code>plabdc01
+</code></pre>
+<p id="cn-m6-324">Click <b>Connect</b>.</p>
+<p id="cn-m6-325"></p><figure><img class="cn-img" id="cn-image-m6-c-30" src="PerformFirewallRulebasedManagement_files/image-m6-c-30.jpg" alt="Figure 3.2 Screenshot of PLABWIN10"><figcaption>Figure 3.2 Screenshot of PLABWIN10: Remote Desktop Connection.</figcaption></figure><p></p>
+<h4 id="cn-m6-328"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-329">In the <b>Enter your credentials </b>dialog box, type the following password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m6-331">Click <b>OK</b>.</p>
+<p id="cn-m6-332"></p><figure><img class="cn-img" id="cn-image-m6-c-31" src="PerformFirewallRulebasedManagement_files/image-m6-c-31.jpg" alt="Figure 3.3 Screenshot of PLABWIN10"><figcaption>Figure 3.3 Screenshot of PLABWIN10: Remote Desktop Connection with password credentials being entered.</figcaption></figure><p></p>
+<h4 id="cn-m6-335"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-336">It takes a few seconds to set up the remote connection.</p>
+<p id="cn-m6-337">Notice that the <b>PLABDC01 </b>desktop is displayed on the <b>PLABWIN10 </b>computer. You can verify this by the <b>plabdc01 </b>connection bar displayed on the top of the screen. This confirms that the remote connection is setup.</p>
+<p id="cn-m6-338"></p><figure><img class="cn-img" id="cn-image-m6-c-32" src="PerformFirewallRulebasedManagement_files/image-m6-c-32.jpg" alt="Figure 3.4 Screenshot of PLABWIN10"><figcaption>Figure 3.4 Screenshot of PLABWIN10: Remote Desktop Connection to PLABDC01 showing Desktop.</figcaption></figure><p></p>
+<h3 id="cn-m6-340"><b>Task 2 - Create a Firewall Rule</b></h3>
+<p id="cn-m6-341">Once the remote desktop session is established, you 
+can access the desktop as well as the resources of the remote computer 
+as if they are available to you locally on your computer. You can also 
+use this connection to create firewall rules on the remote computer. In 
+this task, you will create a firewall rule to block the <b>PLABDC01 </b>computer from responding to any ping requests.</p>
+<p id="cn-m6-342">To create a firewall rule, perform the following steps:</p>
+<h4 id="cn-m6-343"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-344">On the <b>PLABDC01 </b>desktop, right-click the network icon on the system tray and select <b>Open Network and Sharing Center</b>.</p>
+<h4 id="cn-m6-345"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-346">Follow the same steps, as done in the earlier exercise of this module to navigate to <b>File and Printer Sharing (Echo Request-ICMPv4-In</b>).</p>
+<p id="cn-m6-347">Navigate to the <b>Inbound Rules </b>pane on the <b>Windows Firewall with Advanced Security </b>window.</p>
+<p id="cn-m6-348">Right-click <b>File and Printer Sharing (Echo Request-ICMPv4-In) </b>and select <b>Properties</b>.</p>
+<p id="cn-m6-349"></p><figure><img class="cn-img" id="cn-image-m6-c-33" src="PerformFirewallRulebasedManagement_files/image-m6-c-33.jpg" alt="Figure 3.5 Screenshot of PLABWIN10"><figcaption>Figure 3.5 Screenshot of PLABWIN10: Remote Desktop Connection to PLABDC01 showing Windows Firewall with Advanced Security.</figcaption></figure><p></p>
+<h4 id="cn-m6-350"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-351">In the <b>File and Printer Sharing (Echo Request-ICMPv4-In) Properties </b>dialog box, ensure that the <b>General </b>tab is selected.</p>
+<p id="cn-m6-352">In the <b>Action </b>section, select the <b>Block the connection </b>radio button, click <b>Apply</b>, and then click <b>OK</b>.</p>
+<p id="cn-m6-353"></p><figure><img class="cn-img" id="cn-image-m6-c-34" src="PerformFirewallRulebasedManagement_files/image-m6-c-34.jpg" alt="Figure 3.6 Screenshot of PLABWIN10"><figcaption>Figure
+ 3.6 Screenshot of PLABWIN10: Remote Desktop Connection to PLABDC01 
+showing Windows Firewall with Advanced Security with a popup on File and
+ Printer Sharing.</figcaption></figure><p></p>
+<h4 id="cn-m6-355"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-356">Notice that the icon next to the <b>File and Printer Sharing (Echo Request-ICMPv4-In) </b>option now displays a blocked sign.</p>
+<p id="cn-m6-357">Click the close icon on the <b>plabdc01 </b>connection bar on top of the screen to close the remote connection and access the <b>PLABWIN10 </b>desktop.</p>
+<p id="cn-m6-358"></p><figure><img class="cn-img" id="cn-image-m6-c-35" src="PerformFirewallRulebasedManagement_files/image-m6-c-35.jpg" alt="Figure 3.7 Screenshot of PLABWIN10"><figcaption>Figure 3.7 Screenshot of PLABWIN10: Remote Desktop Connection to PLABDC01 showing Windows Firewall with Advanced Security.</figcaption></figure><p></p>
+<h4 id="cn-m6-360"><b><i>Step 5</i></b></h4>
+<p id="cn-m6-361">The <b>Remote Desktop Connection </b>dialog box informs that this will disconnect the remote desktop session.</p>
+<p id="cn-m6-362">Click <b>OK</b>.</p>
+<p id="cn-m6-363"></p><figure><img class="cn-img" id="cn-image-m6-c-36" src="PerformFirewallRulebasedManagement_files/image-m6-c-36.jpg" alt="Figure 3.8 Screenshot of PLABWIN10"><figcaption>Figure
+ 3.8 Screenshot of PLABWIN10: Remote Desktop Connection to PLABDC01 
+showing Windows Firewall with Advanced Security showing a popup to 
+disconnect the RDP session.</figcaption></figure><p></p>
+<h3 id="cn-m6-365"><b>Task 3 - Verify the Firewall Rule</b></h3>
+<p id="cn-m6-366">You have created the firewall rule on the remote 
+computer using a remote desktop session. In this task, you will verify 
+that the firewall rule created blocks <b>PLABDC01 </b>from responding to ping requests.</p>
+<p id="cn-m6-367">To verify the firewall rule created, perform the following steps:</p>
+<h4 id="cn-m6-368"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-369">The <b>PLABWIN10 </b>desktop is displayed.</p>
+<p id="cn-m6-370">Access the command prompt window, if not displayed already.</p>
+<p id="cn-m6-371">In the command prompt, type the following:</p>
+<pre id="cn-m6-372"><code>ping plabdc01
+</code></pre>
+<p id="cn-m6-373">Press <b>Enter</b>.</p>
+<h4 id="cn-m6-374"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-375">The ping request is timed out. This confirms that the 
+connection is blocked as per the firewall rule created using the remote 
+session.</p>
+<p id="cn-m6-376">Minimize the command prompt window.</p>
+<p id="cn-m6-377"></p><figure><img class="cn-img" id="cn-image-m6-c-37" src="PerformFirewallRulebasedManagement_files/image-m6-c-37.jpg" alt="Figure 3.9 Screenshot of PLABWIN10"><figcaption>Figure 3.9 Screenshot of PLABWIN10: Command Prompt showing a ping test.</figcaption></figure><p></p>
+<p id="cn-m6-378">Leave the command prompt window open.</p>
+<h3 id="cn-m6-379"><b>Task 4 - Reconfigure the Firewall Rule Using the Remote Desktop Connection</b></h3>
+<p id="cn-m6-380">Just as you created the firewall rule, you can 
+reconfigure firewall rules using a remote desktop connection. This 
+offers a lot of convenience to the computer or network administrator who
+ might be remotely located and must re-configure the system to respond 
+to the evolving IT needs of the environment. In this task, you will 
+reconfigure the firewall rule you created on <b>PLABDC01 </b>using a remote desktop connection.</p>
+<p id="cn-m6-381">To reconfigure the firewall rule using a remote desktop connection, perform the following steps:</p>
+<h4 id="cn-m6-382"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-383">On the <b>PLABWIN10 </b>desktop, again access the <b>Remote Desktop Connection </b>option and setup a remote desktop connection with <b>PLABDC01</b>.</p>
+<p id="cn-m6-384">When prompted for a password, type the following password:</p>
+<span class="cn-password"><span class="cn-password">Passw0rd</span></span>
+<p id="cn-m6-386">Click <b>OK</b>.</p>
+<p id="cn-m6-387">&nbsp;&nbsp;</p>
+<h4 id="cn-m6-390"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-391">The <b>PLABDC01 </b>desktop is displayed. Notice that the <b>plabdc01 </b>connection bar re-appears on the top.</p>
+<p id="cn-m6-392">Access the <b>File and Printer Sharing (Echo Request-ICMPv4-In) Properties </b>dialog box and select the <b>Allow the connection </b>radio button in the <b>Action </b>section.</p>
+<p id="cn-m6-393">Click <b>Apply </b>and then click <b>OK</b>.</p>
+<p id="cn-m6-394"></p><figure><img class="cn-img" id="cn-image-m6-c-38" src="PerformFirewallRulebasedManagement_files/image-m6-c-38.jpg" alt="Figure 3.10 Screenshot of PLABWIN10"><figcaption>Figure 3.10 Screenshot of PLABWIN10: Remote Desktop Connection to PLABDC01 showing Windows Firewall with Advanced Security.</figcaption></figure><p></p>
+<h4 id="cn-m6-396"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-397">Close the <b>Windows Firewall with Advanced Security </b>window.</p>
+<p id="cn-m6-398">Click the close icon on the <b>plabdc01 </b>connection bar and click <b>OK </b>on the remote desktop connection dialog box.</p>
+<h4 id="cn-m6-399"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-400">Back on the <b>PLABWIN10 </b>desktop, access the command prompt window.</p>
+<p id="cn-m6-401">On the command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-402"><code>ping plabdc01
+</code></pre>
+<p id="cn-m6-403">Notice that <b>PLABDC01 </b>responds to the ping command. The firewall rule has been reconfigured using the remote desktop connection.</p>
+<p id="cn-m6-404"></p><figure><img class="cn-img" id="cn-image-m6-c-39" src="PerformFirewallRulebasedManagement_files/image-m6-c-39.jpg" alt="Figure 3.11 Screenshot of PLABWIN10"><figcaption>Figure 3.11 Screenshot of PLABWIN10: Command Prompt showing a ping test.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="cn-alert" id="cn-m6-407">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m6-408"><b>Exercise 4 - Configuring Firewall Rules from the Command Line Interface</b></h2>
+<p id="cn-m6-409">Command Line Interface (CLI) is one of the methods of 
+communicating with the operating system or other software such as 
+applications. In CLI, you issue commands and receive responses in the 
+format of text lines, delineated from each other by command prompts. CLI
+ commands are powerful and can achieve more with each command because 
+they communicate with the software directly. On the other hand, the CLI 
+commands are not intuitive and you must remember the commands, the 
+syntax, and the context to use them correctly.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m6-411">After completing this exercise, you will be able to:</p>
+<ul id="cn-m6-412">
+<li id="cn-m6-412">Verify Blocked Ping Packets</li>
+<li id="cn-m6-413">Configure the Firewall using CLI Commands</li>
+<li id="cn-m6-414">Verify the efficacy of the Firewall Rule</li>
+<li id="cn-m6-415">Reconfigure the Firewall using CLI</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m6-417">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m6-418">
+<li id="cn-m6-418"><b>PLABDC01 </b>(Windows Server 2016 - Domain Controller)</li>
+<li id="cn-m6-419"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m6-420"><b> </b><img class="cn-img" id="cn-image-m6-c-40" src="PerformFirewallRulebasedManagement_files/image-m6-c-40.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m6-422"><b>Task 1 - Verify Blocked Ping Packets</b></h3>
+<p id="cn-m6-423">You can use the CLI commands to configure the firewall
+ on a computer. To test the effectiveness of the firewall rules created,
+ you must first confirm the current state of the computer. In this task,
+ you will verify that all the incoming ping packets to the <b>PLABDC01 </b>computer are blocked.</p>
+<p id="cn-m6-424">To confirm that the inbound ping packets to <b>PLABDC01 </b>are blocked, perform the following steps:</p>
+<h4 id="cn-m6-425"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-426">Ensure that you have powered on the devices specified in the introduction.</p>
+<p id="cn-m6-427">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m6-428">Right-click the network icon in the system tray and select <b>Open Network and Sharing Center.</b></p>
+<h4 id="cn-m6-429"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-430">On <b>Network and Sharing Center</b>, click <b>Windows Firewall </b>on the lower left pane.</p>
+<h4 id="cn-m6-431"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-432">On the <b>Windows Firewall </b>window, confirm that the firewall is activated for all the three network profiles - <b>Domain networks</b>, <b>Home or work (private) networks</b>, and <b>Public networks</b>.</p>
+<span class="cn-quote" id="cn-m6-433"><b><i>Note: </i></b><i>You can click the down arrow next to Connected/Not Connected to expand the box.</i></span>
+<p id="cn-m6-434"></p><figure><img class="cn-img" id="cn-image-m6-c-41" src="PerformFirewallRulebasedManagement_files/image-m6-c-41.jpg" alt="Figure 4.1 Screenshot of PLABDC01"><figcaption>Figure 4.1 Screenshot of PLABDC01: Windows Firewall.</figcaption></figure><p></p>
+<h4 id="cn-m6-436"><b><i>Step 4</i></b></h4>
+<p id="cn-m6-437">Now, follow the same steps, as done in the earlier exercise of this module to access the <b>File and Printer Sharing (Echo Request-ICMPv4-In) Properties </b>dialog box.</p>
+<p id="cn-m6-438">In the <b>Action </b>section on the <b>General </b>tab, ensure that the <b>Block the connection </b>radio button is selected.</p>
+<p id="cn-m6-439">Click <b>OK</b>.</p>
+<p id="cn-m6-440">Minimize the <b>Windows Firewall with Advanced Security </b>and <b>Windows Firewall </b>windows.</p>
+<h4 id="cn-m6-441"><b><i>Step 5</i></b></h4>
+<p id="cn-m6-442">Connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-443">Access the command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-444"><code>ping plabdc01
+</code></pre>
+<h4 id="cn-m6-445"><b><i>Step 6</i></b></h4>
+<p id="cn-m6-446">Notice that the ping request is timed out. There is no response from the <b>PLABDC01 </b>server. This confirms that the incoming packets to <b>PLADC01 </b>are blocked.</p>
+<p id="cn-m6-447"></p><figure><img class="cn-img" id="cn-image-m6-c-42" src="PerformFirewallRulebasedManagement_files/image-m6-c-42.jpg" alt="Figure 4.2 Screenshot of PLABWIN10"><figcaption>Figure 4.2 Screenshot of PLABWIN10: Command Prompt showing a ping test.</figcaption></figure><p></p>
+<h4 id="cn-m6-448"><b><i>Step 7</i></b></h4>
+<p id="cn-m6-449">Leave the command prompt window open.</p>
+<h3 id="cn-m6-451"><b>Task 2 - Configure the Firewall using CLI Commands</b></h3>
+<p id="cn-m6-452">Use CLI commands to configure the firewall on <b>PLABDC01</b>. In this task, you will use CLI commands to switch off the firewall for all profiles on the <b>PLABDC01 </b>computer.</p>
+<p id="cn-m6-453">To use CLI commands to configure the firewall, perform the following steps:</p>
+<h4 id="cn-m6-454"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-455">Connect to <b>PLABDC01</b>.</p>
+<p id="cn-m6-456">Right-click <b>Start </b>and select <b>Command Prompt (Admin</b>).</p>
+<h4 id="cn-m6-457"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-458">The command prompt window is displayed.</p>
+<p id="cn-m6-459">On the command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-460"><code>netsh advfirewall set allprofiles state off
+</code></pre>
+<p id="cn-m6-461">Notice that you receive the <b>OK </b>response from the computer. This informs you that the firewall is switched off for all the network profiles on <b>PLABDC01</b>.</p>
+<p id="cn-m6-462"></p><figure><img class="cn-img" id="cn-image-m6-c-43" src="PerformFirewallRulebasedManagement_files/image-m6-c-43.jpg" alt="Figure 4.3 Screenshot of PLABDC01"><figcaption>Figure 4.3 Screenshot of PLABDC01: Command Prompt being using to enter firewall rules.</figcaption></figure><p></p>
+<h4 id="cn-m6-463"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-464">Minimize the command prompt window.</p>
+<h3 id="cn-m6-466"><b>Task 3 - Verify the efficacy of the Firewall Rule</b></h3>
+<p id="cn-m6-467">After defining the firewall rule using the CLI 
+command, you verify whether the commands modify the firewall as 
+specified. In this task, you will test whether the firewall on the <b>PLABDC01 </b>computer is switched off, as specified by the CLI command.</p>
+<p id="cn-m6-468">To verify the efficacy of the firewall rule, perform the following steps:</p>
+<h4 id="cn-m6-469"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-470">Restore the Windows Firewall window.</p>
+<span class="cn-quote" id="cn-m6-471"><b><i>Note: </i></b><i>If you had already closed the Windows Firewall window, open it once again. </i></span>
+<p id="cn-m6-472">Notice that the firewall is switched off for all the profiles on the <b>PLABDC01 </b>computer - <b>Domain networks, Home or work (private) networks</b>, and <b>Public networks</b>.</p>
+<p id="cn-m6-473"></p><figure><img class="cn-img" id="cn-image-m6-c-44" src="PerformFirewallRulebasedManagement_files/image-m6-c-44.jpg" alt="Figure 4.4 Screenshot of PLABDC01"><figcaption>Figure 4.4 Screenshot of PLABDC01: Windows Firewall showing all firewalls are inactive.</figcaption></figure><p></p>
+<h4 id="cn-m6-475"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-476">Switch back to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-477">Access the command prompt window if not already open.</p>
+<p id="cn-m6-478">On the command prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-479"><code>ping plabdc01
+</code></pre>
+<p id="cn-m6-480">Notice that the ping command receives a response from <b>PLABDC01 </b>although the connection to the File and Printer Sharing service is blocked.</p>
+<p id="cn-m6-481">This is because the CLI command switches off the 
+firewall for all the profiles and the firewall rules configured are no 
+longer effective.</p>
+<p id="cn-m6-482"></p><figure><img class="cn-img" id="cn-image-m6-c-45" src="PerformFirewallRulebasedManagement_files/image-m6-c-45.jpg" alt="Figure 4.5 Screenshot of PLABWIN01"><figcaption>Figure 4.5 Screenshot of PLABWIN01: Command Prompt showing the results from a ping test.</figcaption></figure><p></p>
+<h3 id="cn-m6-484"><b>Task 4 - Reconfigure the Firewall using CLI </b></h3>
+<p id="cn-m6-485">You can use CLI commands to reconfigure the firewall 
+rules. In this task, you will use CLI commands to switch on the firewall
+ on the <b>PLABDC01 </b>computer. In addition, you will verify that the firewall is switched on.</p>
+<p id="cn-m6-486">To reconfigure the firewall using a command, perform the following steps:</p>
+<h4 id="cn-m6-487"><b><i>Step 1</i></b></h4>
+<p id="cn-m6-488">Switch back to <b>PLABDC01</b>.</p>
+<p id="cn-m6-489">Access the command prompt and type the following command:</p>
+<pre id="cn-m6-490"><code>netsh advfirewall set allprofiles state on
+</code></pre>
+<p id="cn-m6-491">Press <b>Enter</b>.</p>
+<p id="cn-m6-492">Notice that you receive the <b>OK </b>response from the computer. This informs you that the firewall is switched on for all the profiles on <b>PLABDC01</b>.</p>
+<p id="cn-m6-493">Close the command prompt window.</p>
+<p id="cn-m6-494"></p><figure><img class="cn-img" id="cn-image-m6-c-46" src="PerformFirewallRulebasedManagement_files/image-m6-c-46.jpg" alt="Figure 4.6 Screenshot of PLABDC01"><figcaption>Figure 4.6 Screenshot of PLABDC01: Command Prompt being using to enter firewall commands.</figcaption></figure><p></p>
+<h4 id="cn-m6-495"><b><i>Step 2</i></b></h4>
+<p id="cn-m6-496">Access the <b>Windows Firewall </b>window and notice that the firewall is switched on for all the profiles. The firewall is now reconfigured using the CLI command.</p>
+<p id="cn-m6-497"></p><figure><img class="cn-img" id="cn-image-m6-c-47" src="PerformFirewallRulebasedManagement_files/image-m6-c-47.jpg" alt="Figure 4.7 Screenshot of PLABDC01"><figcaption>Figure 4.7 Screenshot of PLABDC01: Windows Firewall showing all three profiles as active.</figcaption></figure><p></p>
+<p id="cn-m6-499">In addition, access the <b>Windows Firewall with Advanced Security </b>window to confirm that the inbound packets to <b>File and Printer Sharing </b>service are still blocked.</p>
+<p id="cn-m6-500"></p><figure><img class="cn-img" id="cn-image-m6-c-48" src="PerformFirewallRulebasedManagement_files/image-m6-c-48.jpg" alt="Figure 4.8 Screenshot of PLABDC01"><figcaption>Figure 4.8 Screenshot of PLABDC01: Windows Firewall showing the selected rule as active.</figcaption></figure><p></p>
+<h4 id="cn-m6-502"><b><i>Step 3</i></b></h4>
+<p id="cn-m6-503">Switch back to <b>PLABWIN10</b>.</p>
+<p id="cn-m6-504">On the command prompt, again type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m6-505"><code>ping plabdc01
+</code></pre>
+<p id="cn-m6-506">Notice that now the request is timed out. This is 
+because the firewall is now switched on using the CLI command and the 
+firewall rules configured for individual services are not effective.</p>
+<p id="cn-m6-507"></p><figure><img class="cn-img" id="cn-image-m6-c-49" src="PerformFirewallRulebasedManagement_files/image-m6-c-49.jpg" alt="Figure 4.9 Screenshot of PLABWIN10"><figcaption>Figure 4.9 Screenshot of PLABWIN10: Command Prompt showing the results of a ping test.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m6-513"><b>Review</b></h2>
+<p id="cn-m6-514">Well done, you have completed the <b>Perform Firewall Rule-based Management </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">efc7eaa3-a776-4a06-aa26-6aaa89054196</span>
+<span class="atom-code hidden">0227b782-f956-4f7f-b9f3-4fe7931cdc66</span>
+<span class="atom-code hidden">6fbfff9c-2480-462c-a0ce-31aa3a9ad0f2</span>
+<span class="atom-code hidden">1a63d053-d3cb-4485-a0fb-0ddb44001f58</span>
+<span class="atom-code hidden">ac0c2198-8465-4799-9dda-e0ce73e6668f</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m6-524">You completed the following exercises:</p>
+<ul id="cn-m6-525">
+<li id="cn-m6-525">Configuring Firewall Rules using Windows Firewall</li>
+<li id="cn-m6-526">Configuring Firewall Rules using Windows Firewall with Advanced Security</li>
+<li id="cn-m6-527">Configuring Firewall Rules using Remote Desktop</li>
+<li id="cn-m6-528">Configuring Firewall Rules from the Command Line Interface</li>
+</ul>
+<p id="cn-m6-529">You should now be able to:</p>
+<ul id="cn-m6-530">
+<li id="cn-m6-530">Verify the Enabled Network Connection</li>
+<li id="cn-m6-531">Create a Windows Firewall Rule</li>
+<li id="cn-m6-532">Test the Firewall Rule</li>
+<li id="cn-m6-533">Reconfigure the Firewall Rule</li>
+<li id="cn-m6-534">Verify the Connection</li>
+<li id="cn-m6-535">Create a Firewall Rule using Windows Firewall with Advanced Security</li>
+<li id="cn-m6-536">Test the Firewall Rule</li>
+<li id="cn-m6-537">Reconfigure the Firewall Rule</li>
+<li id="cn-m6-538">Setup a Remote Session</li>
+<li id="cn-m6-539">Create a Firewall Rule</li>
+<li id="cn-m6-540">Verify the Firewall Rule</li>
+<li id="cn-m6-541">Reconfigure the Firewall Rule Using the Remote Desktop Connection</li>
+<li id="cn-m6-542">Verify Blocked Ping Packets</li>
+<li id="cn-m6-543">Configure the Firewall using CLI Commands</li>
+<li id="cn-m6-544">Verify the efficacy of the Firewall Rule</li>
+<li id="cn-m6-545">Reconfigure the Firewall using CLI</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m6-549">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>

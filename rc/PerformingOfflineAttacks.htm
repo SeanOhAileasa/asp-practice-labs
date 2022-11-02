@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+	Print content
+</title><link href="PerformingOfflineAttacks_files/print-styles.css" rel="stylesheet">
+    <script src="PerformingOfflineAttacks_files/jquery.min.js"></script>
+    <script src="PerformingOfflineAttacks_files/jspdf.js"></script>
+    <script src="PerformingOfflineAttacks_files/from_html.js"></script>
+    <script src="PerformingOfflineAttacks_files/addimage.js"></script>
+    <script src="PerformingOfflineAttacks_files/filesaver.js"></script>
+    <script src="PerformingOfflineAttacks_files/pl.js"></script>
+</head>
+<body>
+    <form method="post" action="./vn-print-content.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Zb05D74zF++S/JefFn/Oz0+C+fM6jLTVLnKKgKMRemdeaEaWlz1n7HPUIn3yBPXuhAnhJyO2CaE0UCOPNh/uIhTpzpHzMjw0nr+jC1v6g5o=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="918AB9A0">
+</div>
+    <div>
+        
+
+        
+        
+        <div id="panPrintAvailable">
+	
+            <div class="print-content-wrapper" id="print-content">
+                <!--<button class="save-pdf">PDF</button>-->
+                <h1>CompTIA CASP+</h1>
+                <h2>Performing Offline Attacks</h2>
+                <div class="print-content-index">
+                    <ul>
+                        <li>Introduction</li><li>Lab Topology</li><li>Exercise 1 - Extracting Hashes from a System</li><li>Exercise 2 - Cracking Extracted Hashes</li><li>Exercise 3 - Cracking Passwords</li><li>Review</li>
+                    </ul>
+                </div>
+                <div class="print-content-content">
+                    <h2 class="exercise-title" id="cn-m23-0"><b>Introduction</b></h2>
+<div class="cn-metadata"><div>CASP+</div>
+<div>Security</div>
+<div>Hashes</div>
+<div>Cracking Passwords</div>
+</div>
+<p id="cn-m23-5">Welcome to the <b>Performing Offline Attacks </b>Practice Lab. In this module you will be provided with the instructions and devices needed to develop your hands-on skills.</p>
+<span class="atom-code hidden">dc640c20-9434-45ea-b7c2-6d4d6a196bfc</span>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m23-9">In this module, you will complete the following exercises:</p>
+<ul id="cn-m23-10">
+<li id="cn-m23-10">Extracting Hashes from a System</li>
+<li id="cn-m23-11">Cracking Extracted Hashes</li>
+<li id="cn-m23-12">Cracking Passwords</li>
+</ul>
+<p id="cn-m23-13">After completing this lab, you will be able to:</p>
+<ul id="cn-m23-14">
+<li id="cn-m23-14">Use Pwdump Tool to Extract a Hash</li>
+<li id="cn-m23-15">Use a Wordlist to Crack the Extracted Hash</li>
+<li id="cn-m23-16">Use a Password Cracking Tool to Crack the Password</li>
+</ul>
+<h2 class="cn-examobjectives"><b>Exam Objectives</b></h2>
+<p id="cn-m23-18">The following exam objectives are covered in this lab:</p>
+<ul id="cn-m23-19">
+<li id="cn-m23-19"><b>CAS-003 </b>2.2 Analyze a scenario to integrate security controls for host devices to meet security requirements.</li>
+</ul>
+<span class="cn-quote" id="cn-m23-20"><b><i>Note: </i></b><i>Our main 
+focus is to cover the practical, hands-on aspects of the exam 
+objectives. We recommend referring to course material or a search engine
+ to research theoretical topics in more detail.</i></span>
+<h2 class="cn-labduration"><b>Lab Duration</b></h2>
+<p id="cn-m23-22">It will take approximately <b>1 hour </b>to complete this lab.</p>
+<span class="atom-code hidden">9f43323f-1fe9-4609-8ce3-8ca178040371</span>
+<h2 class="cn-helpdandsupport"><b>Help and Support</b></h2>
+<p id="cn-m23-26">For more information on using Practice Labs, please see our <b>Help and Support </b>page. You can also raise a technical support ticket from this page.</p>
+<span class="cn-alert" id="cn-m23-27">Click Next to view the Lab topology used in this module.</span>
+<span class="atom-code hidden">d2c53300-f951-45a9-9aa4-3d4ecae69e11</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m23-29"><b>Lab Topology</b></h2>
+<p id="cn-m23-30">During your session, you will have access to the following lab configuration.</p>
+<p id="cn-m23-31">Depending on the exercises you may or may not use all 
+of the devices, but they are shown here in the layout to get an overall 
+understanding of the topology of the lab.</p>
+<ul id="cn-m23-32">
+<li id="cn-m23-32"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m23-33"><b>PLABDM01 </b>(Windows Server 2012 R2 - Member Server)</li>
+<li id="cn-m23-34"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m23-35"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+<li id="cn-m23-36"><b>PLABWIN801 </b>(Windows 8.1 - Domain Member)</li>
+<li id="cn-m23-37"><b>PLABWIN802 </b>(Windows 8.1 - Domain Member)</li>
+</ul>
+<p id="cn-m23-38"><img class="cn-img" id="cn-image-m23-c-0" src="PerformingOfflineAttacks_files/image-m23-c-0.jpg" alt="Practice Labs screenshot."></p>
+<span class="cn-alert" id="cn-m23-39">Click <b>Next </b>to proceed to the first exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m23-40"><b>Exercise 1 - Extracting Hashes from a System</b></h2>
+<p id="cn-m23-41">Attackers use various offline attack techniques to 
+hack the target systems. Offline password attack is one of the 
+categories in offline attacks. In this type of attack, the attacker 
+tries to extract the password hashes from database files such as the 
+Security Accounts Manager (SAM) in the Windows operating system. SAM is a
+ database file in Windows operating system where the local user 
+credentials are stored in encrypted format.</p>
+<p id="cn-m23-42">In this exercise, you will learn to extract the 
+encrypted hashes that are present in the SAM file. You will use the 
+pwdump tool to perform the extraction.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m23-44">After completing this exercise, you will be able to:</p>
+<ul id="cn-m23-45">
+<li id="cn-m23-45">Use Pwdump Tool to Extract a Hash</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m23-47">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m23-48">
+<li id="cn-m23-48"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m23-49"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m23-50"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m23-51"><b> </b><img class="cn-img" id="cn-image-m23-c-1" src="PerformingOfflineAttacks_files/image-m23-c-1.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m23-52"><b>Task 1 - Use Pwdump Tool to Extract a Hash </b></h3>
+<p id="cn-m23-53">The pwdump is a hacking tool used for extracting password hashes.</p>
+<p id="cn-m23-54">In this task, you will perform the following actions to extract a hash using the pwdump tool:</p>
+<ul id="cn-m23-55">
+<li id="cn-m23-55">Connecting to the PLABWIN802 virtual machine using Hyper-V Manager on PLABWIN10.</li>
+<li id="cn-m23-56">Booting the virtual machine using the Kali Linux ISO file.</li>
+<li id="cn-m23-57">Extracting the encrypted hashes from the SAM file 
+using the pwdump tool. The tool extracts password hashes of three local 
+user accounts such as Administrator, Guest, and Student2.</li>
+<li id="cn-m23-58">Creating a new text file named extracted_hashes.txt using GNU nano editor to store the extracted hashes.</li>
+<li id="cn-m23-59">Creating a copy of the extracted_hashes.txt file by the name tocrack.txt using GNU nano editor.</li>
+<li id="cn-m23-60">Retaining the hash of Student2 user account only in a tocrack.txt file and deleting the other hashes.</li>
+</ul>
+<h4 id="cn-m23-61"><b><i>Step 1</i></b></h4>
+<p id="cn-m23-62">Ensure you have powered on the required devices (listed in the ‘Your Devices’ section) and connect to <b>PLABWIN10</b>.</p>
+<p id="cn-m23-63">To start <b>Hyper-V Manager </b>from the <b>PLABWIN10 </b>desktop, on the taskbar, click the <b>Hyper-V Manager </b>icon.</p>
+<p id="cn-m23-64"></p><figure><img class="cn-img" id="cn-image-m23-c-2" src="PerformingOfflineAttacks_files/image-m23-c-2.jpg" alt="Figure 1.1 Screenshot of PLABWIN10"><figcaption>Figure 1.1 Screenshot of PLABWIN10: On the taskbar, the Hyper-V Manager icon is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-65"><b><i>Step 2</i></b></h4>
+<p id="cn-m23-66">The <b>Hyper-V Manager </b>window opens.</p>
+<p id="cn-m23-67">To connect to a virtual machine, in the <b>Virtual Machines </b>pane, double-click <b>PLABWIN802</b>.</p>
+<p id="cn-m23-68"></p><figure><img class="cn-img" id="cn-image-m23-c-3" src="PerformingOfflineAttacks_files/image-m23-c-3.jpg" alt="Figure 1.2 Screenshot of PLABWIN10"><figcaption>Figure 1.2 Screenshot of PLABWIN10: In the Virtual Machines pane, PLABWIN802 is selected in Hyper-V.</figcaption></figure><p></p>
+<h4 id="cn-m23-69"><b><i>Step 3</i></b></h4>
+<p id="cn-m23-70"><b>PLABWIN802 on PLABWIN10 - Virtual Machine Connection </b>window opens.</p>
+<p id="cn-m23-71">To select the boot file, click <b>Media-&gt;DVD Drive-&gt;Insert Disk</b>.</p>
+<p id="cn-m23-72"></p><figure><img class="cn-img" id="cn-image-m23-c-4" src="PerformingOfflineAttacks_files/image-m23-c-4.jpg" alt="Figure 1.3 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure 1.3 Screenshot of PLABWIN802 on PLABWIN10: The menu option Media-&gt;DVD Drive-&gt;Insert Disk is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-73"><b><i>Step 4</i></b></h4>
+<p id="cn-m23-74">The <b>Open </b>dialog box appears.</p>
+<p id="cn-m23-75">To open the Kali Linux ISO boot file, navigate to <b>New Volume (D:)-&gt;ISO </b>folder.</p>
+<p id="cn-m23-76">Under the <b>ISO </b>folder, select the <b>kali-linux-2017.2-amd64</b>, and click <b>Open</b>.</p>
+<p id="cn-m23-77"></p><figure><img class="cn-img" id="cn-image-m23-c-5" src="PerformingOfflineAttacks_files/image-m23-c-5.jpg" alt="Figure 1.4 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.4 Screenshot of PLABWIN802 on PLABWIN10: The file 
+kali-linux-2017.2-amd64 under New Volume (D:)-&gt;ISO folder is 
+selected. Open is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-78"><b><i>Step 5</i></b></h4>
+<p id="cn-m23-79">To start the virtual machine, in the <b>PLABWIN802 on PLABWIN10 - Virtual Machine Connection </b>window, on the toolbar, click <b>Start</b>.</p>
+<p id="cn-m23-80"></p><figure><img class="cn-img" id="cn-image-m23-c-6" src="PerformingOfflineAttacks_files/image-m23-c-6.jpg" alt="Figure 1.5 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure 1.5 Screenshot of PLABWIN802 on PLABWIN10: On the toolbar, Start is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-81"><b><i>Step 6</i></b></h4>
+<p id="cn-m23-82">Please wait while the virtual machine boots in Kali.</p>
+<p id="cn-m23-83">The <b>KALI Boot menu </b>is displayed.</p>
+<p id="cn-m23-84">In the boot menu, navigate using the down arrow key, and select <b>Live (forensic mode</b>).</p>
+<p id="cn-m23-85">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m23-86"><b><i>Note</i></b><i>: In Live 
+(forensic mode), the internal hard disk of the device is never used and 
+the auto-mounting of removable media is disabled on the device.</i></span>
+<p id="cn-m23-87"></p><figure><img class="cn-img" id="cn-image-m23-c-7" src="PerformingOfflineAttacks_files/image-m23-c-7.jpg" alt="Figure 1.6 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.6 Screenshot of PLABWIN802 on PLABWIN10: The virtual machine boots in
+ Kali. The KALI Boot menu is displayed. In the boot menu, using the down
+ arrow key, Live (forensic mode) is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-88"><b><i>Step 7</i></b></h4>
+<p id="cn-m23-89">The Kali desktop in the virtual machine appears.</p>
+<p id="cn-m23-90"></p><figure><img class="cn-img" id="cn-image-m23-c-8" src="PerformingOfflineAttacks_files/image-m23-c-8.jpg" alt="Figure 1.7 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure 1.7 Screenshot of PLABWIN802 on PLABWIN10: The Kali desktop in the virtual machine is displayed.</figcaption></figure><p></p>
+<h4 id="cn-m23-91"><b><i>Step 8</i></b></h4>
+<p id="cn-m23-92">To open the file explorer in Kali, from Kali desktop, click the <b>Places </b>drop-down list.</p>
+<p id="cn-m23-93">From the drop-down list, click <b>Computer</b>.</p>
+<p id="cn-m23-94"></p><figure><img class="cn-img" id="cn-image-m23-c-9" src="PerformingOfflineAttacks_files/image-m23-c-9.jpg" alt="Figure 1.8 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.8 Screenshot of PLABWIN802 on PLABWIN10: From Kali desktop, the 
+Places drop-down list is selected. From the drop-down list, Computer is 
+selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-95"><b><i>Step 9</i></b></h4>
+<p id="cn-m23-96">The file explorer in Kali appears.</p>
+<p id="cn-m23-97">In the left pane, click <b>Other Locations</b>.</p>
+<p id="cn-m23-98"></p><figure><img class="cn-img" id="cn-image-m23-c-10" src="PerformingOfflineAttacks_files/image-m23-c-10.jpg" alt="Figure 1.9 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.9 Screenshot of PLABWIN802 on PLABWIN10: The file explorer in Kali is
+ displayed. In the left pane, Other Locations is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-99"><b><i>Step 10</i></b></h4>
+<p id="cn-m23-100">To select the virtual hard drive of Windows 8 device in Hyper-V Manager, in the <b>Other Locations </b>pane, click <b>136 GB Volume</b>.</p>
+<p id="cn-m23-101"></p><figure><img class="cn-img" id="cn-image-m23-c-11" src="PerformingOfflineAttacks_files/image-m23-c-11.jpg" alt="Figure 1.10 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure 1.10 Screenshot of PLABWIN802 on PLABWIN10: In the Other Locations pane, 136 GB Volume is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-102"><b><i>Step 11</i></b></h4>
+<p id="cn-m23-103">In <b>136 GB Volume</b>, navigate to <b>Windows-&gt;System32-&gt;config </b>folder.</p>
+<p id="cn-m23-104"></p><figure><img class="cn-img" id="cn-image-m23-c-12" src="PerformingOfflineAttacks_files/image-m23-c-12.jpg" alt="Figure 1.11 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure 1.11 Screenshot of PLABWIN802 on PLABWIN10: In 136 GB Volume, the folder Windows-&gt;System32-&gt;config is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-105"><b><i>Step 12</i></b></h4>
+<p id="cn-m23-106">In the <b>config </b>folder, observe the <b>SAM </b>file.</p>
+<p id="cn-m23-107">To open the SAM file in the root terminal in Kali, right-click the blank area.</p>
+<p id="cn-m23-108">A context menu appears.</p>
+<p id="cn-m23-109">From the context menu, click <b>Open in Terminal</b>.</p>
+<p id="cn-m23-110"></p><figure><img class="cn-img" id="cn-image-m23-c-13" src="PerformingOfflineAttacks_files/image-m23-c-13.jpg" alt="Figure 1.12 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.12 Screenshot of PLABWIN802 on PLABWIN10: The blank area is 
+right-clicked. From the context menu, Open in Terminal is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-111"><b><i>Step 13</i></b></h4>
+<p id="cn-m23-112">The root terminal window with the absolute path of the <b>config </b>folder appears.</p>
+<p id="cn-m23-113">To extract the hashes from the SAM file, at the prompt, type the following command:</p>
+<pre id="cn-m23-114"><code>pwdump SYSTEM SAM
+</code></pre>
+<p id="cn-m23-115">Press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m23-116"><b><i>Note</i></b><i>: In the command, the text “SYSTEM SAM” must be entered in upper case. </i></span>
+<p id="cn-m23-117"></p><figure><img class="cn-img" id="cn-image-m23-c-14" src="PerformingOfflineAttacks_files/image-m23-c-14.jpg" alt="Figure 1.13 Screenshot of PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.13 Screenshot of PLABWIN802 on PLABWIN10: The root terminal window 
+with the absolute path of the config folder is displayed. At the prompt,
+ the command to extract the hashes from the SAM file is entered and 
+executed.</figcaption></figure><p></p>
+<h4 id="cn-m23-118"><b><i>Step 14</i></b></h4>
+<p id="cn-m23-119">The <b>pwdump </b>tool extracts and displays the hashes of all the local user accounts stored on the system.</p>
+<p id="cn-m23-120">For the purpose of this demonstration, the <b>pwdump </b>tool has extracted and displayed the hashes of three user accounts such as <b>Administrator</b>, <b>Guest</b>, and <b>Student2</b>.</p>
+<p id="cn-m23-121"></p><figure><img class="cn-img" id="cn-image-m23-c-15" src="PerformingOfflineAttacks_files/image-m23-c-15.jpg" alt="Figure 1.14 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.14 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+hashes of all the local user account stored on the system is extracted 
+and displayed.</figcaption></figure><p></p>
+<h4 id="cn-m23-122"><b><i>Step 15</i></b></h4>
+<p id="cn-m23-123">To copy the extracted hashes to a new text file, select the extracted hashes, and right-click.</p>
+<p id="cn-m23-124">A context menu appears.</p>
+<p id="cn-m23-125">From the context menu, click <b>Copy</b>.</p>
+<p id="cn-m23-126"></p><figure><img class="cn-img" id="cn-image-m23-c-16" src="PerformingOfflineAttacks_files/image-m23-c-16.jpg" alt="Figure 1.15 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.15 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+extracted hashes are selected and right-clicked. From the context menu, 
+Copy is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-127"><b><i>Step 16</i></b></h4>
+<p id="cn-m23-128">To navigate to the root folder, at the next prompt, type the following command:</p>
+<pre id="cn-m23-129"><code>cd\
+</code></pre>
+<p id="cn-m23-130">Press <b>Enter</b>.</p>
+<p id="cn-m23-131">The Change Directory (cd) command enables you to change the current directory.</p>
+<p id="cn-m23-132"></p><figure><img class="cn-img" id="cn-image-m23-c-17" src="PerformingOfflineAttacks_files/image-m23-c-17.jpg" alt="Figure 1.16 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.16 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+command to change the directory is entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m23-133"><b><i>Step 17</i></b></h4>
+<p id="cn-m23-134">To navigate to the <b>Desktop </b>folder, at the next prompt, type the following command:</p>
+<pre id="cn-m23-135"><code>cd Desktop/
+</code></pre>
+<p id="cn-m23-136">Press <b>Enter</b>.</p>
+<p id="cn-m23-137"></p><figure><img class="cn-img" id="cn-image-m23-c-18" src="PerformingOfflineAttacks_files/image-m23-c-18.jpg" alt="Figure 1.17 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.17 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+command to navigate to the Desktop folder is entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m23-138"><b><i>Step 18</i></b></h4>
+<p id="cn-m23-139">To create a new text file on the desktop, at the next prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m23-140"><code>nano extracted_hashes.txt
+</code></pre>
+<p id="cn-m23-141">GNU nano is a text editor in Linux operating system. 
+The command will open the text editor and create a new text file named 
+extracted_hashes.txt.</p>
+<p id="cn-m23-142"></p><figure><img class="cn-img" id="cn-image-m23-c-19" src="PerformingOfflineAttacks_files/image-m23-c-19.jpg" alt="Figure 1.18 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.18 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+command to create a new text file is entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m23-143"><b><i>Step 19</i></b></h4>
+<p id="cn-m23-144">To paste the copied hashes in the new text file, in the GNU nano editor window, press <b>Ctrl+Shift+v</b>.</p>
+<p id="cn-m23-145">To write the hashes to the file, press <b>Ctrl+o</b>, and press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m23-146"><b><i>Note: </i></b><i>If prompted to confirm the filename, press </i><b><i>Enter</i></b><i>.</i></span>
+<p id="cn-m23-147">To exit the GNU nano editor, press <b>Ctrl+x</b>.</p>
+<p id="cn-m23-148"></p><figure><img class="cn-img" id="cn-image-m23-c-20" src="PerformingOfflineAttacks_files/image-m23-c-20.jpg" alt="Figure 1.19 Screenshot of the GNU nano editor in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.19 Screenshot of the GNU nano editor in PLABWIN802 on PLABWIN10: The 
+keys Ctrl+Shift+v are pressed to paste the copied hashes in the new text
+ file. The keys Ctrl+o are pressed to write the hashes to the file. The 
+keys Ctrl+x are pressed to exit the GNU nano editor.</figcaption></figure><p></p>
+<h4 id="cn-m23-149"><b><i>Step 20</i></b></h4>
+<p id="cn-m23-150">You are back at the command prompt.</p>
+<p id="cn-m23-151">To check if the new text file is created on the desktop, in the terminal and explorer windows, click the <b>Minimize </b>icon.</p>
+<p id="cn-m23-152"></p><figure><img class="cn-img" id="cn-image-m23-c-21" src="PerformingOfflineAttacks_files/image-m23-c-21.jpg" alt="Figure 1.20 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure 1.20 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The Minimize icon is selected.</figcaption></figure><p></p>
+<h4 id="cn-m23-153"><b><i>Step 21</i></b></h4>
+<p id="cn-m23-154">The new text file named <b>extracted_hashes.txt </b>is created on the desktop.</p>
+<p id="cn-m23-155"></p><figure><img class="cn-img" id="cn-image-m23-c-22" src="PerformingOfflineAttacks_files/image-m23-c-22.jpg" alt="Figure 1.21 Screenshot of the Kali desktop in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.21 Screenshot of the Kali desktop in PLABWIN802 on PLABWIN10: The new
+ text file named extracted_hashes.txt is created on the desktop.</figcaption></figure><p></p>
+<h4 id="cn-m23-156"><b><i>Step 22</i></b></h4>
+<p id="cn-m23-157">For the purpose of this demonstration, the password of <b>Student2 </b>user account from the extracted hashes will be cracked.</p>
+<p id="cn-m23-158">To crack the password, you need first to make a copy of the <b>extracted_hashes.txt </b>file.</p>
+<p id="cn-m23-159">Restore the terminal window from the left bar. In the terminal window, at the next prompt, type the following command:</p>
+<pre id="cn-m23-160"><code>cp extracted_hashes.txt tocrack.txt
+</code></pre>
+<p id="cn-m23-161">Press <b>Enter</b>.</p>
+<p id="cn-m23-162">The command creates a copy of the text file extracted_hashes.txt. The new file created is tocrack.txt.</p>
+<p id="cn-m23-163"></p><figure><img class="cn-img" id="cn-image-m23-c-23" src="PerformingOfflineAttacks_files/image-m23-c-23.jpg" alt="Figure 1.22 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.22 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+command to create a copy of the text file extracted_hashes.txt is 
+entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m23-164"><b><i>Step 23</i></b></h4>
+<p id="cn-m23-165">You need to delete the hashes of <b>Administrator </b>and <b>Guest </b>accounts in the <b>tocrack.txt </b>file.</p>
+<p id="cn-m23-166">To edit the <b>tocrack.txt </b>file, at the next prompt, type the following command:</p>
+<pre id="cn-m23-167"><code>nano tocrack.txt
+</code></pre>
+<p id="cn-m23-168">Press <b>Enter</b>.</p>
+<p id="cn-m23-169"></p><figure><img class="cn-img" id="cn-image-m23-c-24" src="PerformingOfflineAttacks_files/image-m23-c-24.jpg" alt="Figure 1.23 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure 1.23 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The contents of the tocrack.txt file are displayed.</figcaption></figure><p></p>
+<h4 id="cn-m23-170"><b><i>Step 24</i></b></h4>
+<p id="cn-m23-171">The <b>tocrack.txt </b>file opens in <b>GNU nano </b>editor.</p>
+<p id="cn-m23-172">To remove the <b>Administrator </b>and <b>Guest </b>account hashes, press the <b>Delete </b>key.</p>
+<p id="cn-m23-173"></p><figure><img class="cn-img" id="cn-image-m23-c-25" src="PerformingOfflineAttacks_files/image-m23-c-25.jpg" alt="Figure 1.24 Screenshot of the GNU nano editor in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.24 Screenshot of the GNU nano editor in PLABWIN802 on PLABWIN10: The 
+Delete key is pressed to remove the Administrator and Guest account 
+hashes.</figcaption></figure><p></p>
+<h4 id="cn-m23-174"><b><i>Step 25</i></b></h4>
+<p id="cn-m23-175">Ensure only the hash for <b>Student2 </b>account is present in the file.</p>
+<p id="cn-m23-176">To write the hash to the file, press <b>Ctrl+o</b>, and press <b>Enter</b>.</p>
+<span class="cn-quote" id="cn-m23-177"><b><i>Note: </i></b><i>If prompted to confirm the filename, press </i><b><i>Enter</i></b><i>.</i></span>
+<p id="cn-m23-178">To exit the GNU nano editor, press <b>Ctrl+x</b>.</p>
+<p id="cn-m23-179"></p><figure><img class="cn-img" id="cn-image-m23-c-26" src="PerformingOfflineAttacks_files/image-m23-c-26.jpg" alt="Figure 1.25 Screenshot of the GNU nano editor in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 1.25 Screenshot of the GNU nano editor in PLABWIN802 on PLABWIN10: The 
+keys Ctrl+o are pressed to write the hash to the file. The keys Ctrl+x 
+are pressed to exit the GNU nano editor.</figcaption></figure><p></p>
+<h4 id="cn-m23-180"><b><i>Step 26</i></b></h4>
+<p id="cn-m23-181">You are back at the root terminal.</p>
+<p id="cn-m23-182"></p><figure><img class="cn-img" id="cn-image-m23-c-27" src="PerformingOfflineAttacks_files/image-m23-c-27.jpg" alt="Figure 1.26 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure 1.26 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The root terminal is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="cn-alert" id="cn-m23-185">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m23-186"><b>Exercise 2 - Cracking Extracted Hashes</b></h2>
+<p id="cn-m23-187">To crack the extracted hashes, you will require a 
+wordlist. A wordlist is basically a text file that contains a collection
+ of words and is generally used in a dictionary attack.</p>
+<p id="cn-m23-188">In this exercise, you will learn to crack the hashes 
+that were extracted in the previous exercise. You will use the default 
+wordlist “rockyou.txt” that comes with Kali Linux. The “rockyou.txt” 
+wordlist comes compressed by default with most popular passwords.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m23-190">After completing this exercise, you will be able to:</p>
+<ul id="cn-m23-191">
+<li id="cn-m23-191">Use a Wordlist to Crack the Extracted Hash</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m23-193">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m23-194">
+<li id="cn-m23-194"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m23-195"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m23-196"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m23-197"><img class="cn-img" id="cn-image-m23-c-28" src="PerformingOfflineAttacks_files/image-m23-c-28.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m23-198"><b>Task 1 - Use a Wordlist to Crack the Extracted Hash </b></h3>
+<p id="cn-m23-199">In this task, you will decompress the rockyou.txt.gz file and use the “rockyou.txt” wordlist to crack the extracted hash.</p>
+<h4 id="cn-m23-200"><b><i>Step 1</i></b></h4>
+<p id="cn-m23-201">The root terminal in <b>PLABWIN802 on PLABWIN10 - Virtual Machine Connection </b>window is open. Clear the window with the clear command.</p>
+<p id="cn-m23-202">To decompress the wordlist, at the prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m23-203"><code>gzip -d /usr/share/wordlists/rockyou.txt.gz
+</code></pre>
+<p id="cn-m23-204">The “rockyou.txt” wordlist is present in the default folder /usr/share/wordlists.</p>
+<p id="cn-m23-205"></p><figure><img class="cn-img" id="cn-image-m23-c-29" src="PerformingOfflineAttacks_files/image-m23-c-29.jpg" alt="Figure 2.1 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 2.1 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+command to decompress the wordlist is entered and executed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<span class="cn-alert" id="cn-m23-208">Leave the devices in their current states and continue on to the next exercise.</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m23-209"><b>Exercise 3 - Cracking Passwords</b></h2>
+<p id="cn-m23-210">There are various tools available to crack passwords.
+ The tool “John the Ripper” is one of the password-cracking tools used 
+to crack passwords.</p>
+<p id="cn-m23-211">In this exercise, you will learn to crack the password of Student2 user account.</p>
+<h2 class="cn-learningobjectives"><b>Learning Outcomes</b></h2>
+<p id="cn-m23-213">After completing this exercise, you will be able to:</p>
+<ul id="cn-m23-214">
+<li id="cn-m23-214">Use a Password Cracking Tool to Crack the Password</li>
+</ul>
+<h2 class="cn-devices"><b>Your Devices</b></h2>
+<p id="cn-m23-216">You will be using the following devices in this lab. Please power these on now.</p>
+<ul id="cn-m23-217">
+<li id="cn-m23-217"><b>PLABDC01 </b>(Windows Server 2012 R2 - Domain Controller)</li>
+<li id="cn-m23-218"><b>PLABKALI01 </b>(Kali 2016.2)</li>
+<li id="cn-m23-219"><b>PLABWIN10 </b>(Windows 10 - Domain Member)</li>
+</ul>
+<p id="cn-m23-220"><img class="cn-img" id="cn-image-m23-c-30" src="PerformingOfflineAttacks_files/image-m23-c-30.jpg" alt="Practice Labs screenshot."></p>
+<h3 id="cn-m23-221"><b>Task 1 - Use a Password Cracking Tool to Crack the Password</b></h3>
+<p id="cn-m23-222">In this task, you will use “John the Ripper” tool for
+ cracking the password of Student2 user account. The password hash of 
+Student2 user account is stored in the tocrack.txt file.</p>
+<h4 id="cn-m23-223"><b><i>Step 1</i></b></h4>
+<p id="cn-m23-224">The root terminal in <b>PLABWIN802 on PLABWIN10 - Virtual Machine Connection </b>window is open. Clear the screen with the clear command. To crack the password of <b>Student2 </b>user account, at the prompt, type the following command and press <b>Enter</b>:</p>
+<pre id="cn-m23-225"><code>john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt tocrack.txt
+</code></pre>
+<p id="cn-m23-226">The password-cracking tool “John the Ripper” is used 
+in the command with the “format=NT” parameter. The “rockyou.txt” 
+wordlist and the hash file “tocrack.txt” are passed as parameters in the
+ command.</p>
+<p id="cn-m23-227"></p><figure><img class="cn-img" id="cn-image-m23-c-31" src="PerformingOfflineAttacks_files/image-m23-c-31.jpg" alt="Figure 3.1 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 3.1 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+command to crack the password is entered and executed.</figcaption></figure><p></p>
+<h4 id="cn-m23-228"><b><i>Step 2</i></b></h4>
+<p id="cn-m23-229">The tool <b>John the Ripper </b>successfully cracks the password for <b>Student2 </b>user account, and the password is displayed.</p>
+<p id="cn-m23-230"></p><figure><img class="cn-img" id="cn-image-m23-c-32" src="PerformingOfflineAttacks_files/image-m23-c-32.jpg" alt="Figure 3.2 Screenshot of the root terminal in PLABWIN802 on PLABWIN10"><figcaption>Figure
+ 3.2 Screenshot of the root terminal in PLABWIN802 on PLABWIN10: The 
+tool “John the Ripper” has successfully cracked the password for 
+Student2 user account and the password is displayed.</figcaption></figure><p></p>
+<span class="atom-code hidden">b37da085-94ca-435a-a29d-12cc61c29a9c</span>
+<p id="cn-m23-232"><b>Close </b>all open windows.</p>
+<span class="atom-code hidden">1e75eebe-3f44-4fa0-be78-130255ef5b59</span>
+<div class="print-exercise-break"></div><h2 class="exercise-title" id="cn-m23-234"><b>Review</b></h2>
+<p id="cn-m23-235">Well done, you have completed the <b>Performing Offline Attacks </b>Practice Lab.</p>
+<span class="atom-code hidden">f3a207dc-b8fb-459b-9555-a981a99fda16</span>
+<span class="atom-code hidden">73cfa1ce-67b8-482f-bd39-8d3888b6256f</span>
+<span class="atom-code hidden">694eede8-7393-4f23-aead-7429d8aacae0</span>
+<span class="atom-code hidden">78f2e97e-8881-4bb3-948d-de5ac33724a7</span>
+<span class="atom-code hidden">aaaaaaaa-1111-1111-1111-193f35a24fe3</span>
+<h2 class="cn-summary"><b>Summary</b></h2>
+<p id="cn-m23-242">You completed the following exercises:</p>
+<ul id="cn-m23-243">
+<li id="cn-m23-243">Extracting Hashes from a System</li>
+<li id="cn-m23-244">Cracking Extracted Hashes</li>
+<li id="cn-m23-245">Cracking Passwords</li>
+</ul>
+<p id="cn-m23-246">You should now be able to:</p>
+<ul id="cn-m23-247">
+<li id="cn-m23-247">Use Pwdump Tool to Extract a Hash</li>
+<li id="cn-m23-248">Use a Wordlist to Crack the Extracted Hash</li>
+<li id="cn-m23-249">Use a Password Cracking Tool to Crack the Password</li>
+</ul>
+<h2 class="cn-feedback"><b>Feedback</b></h2>
+<span class="atom-code hidden">067744a4-4299-4662-b5be-04dbb636a007</span>
+<span class="cn-alert" id="cn-m23-253">Shutdown all virtual machines used in this lab. Alternatively, you can log out of the lab platform.</span>
+
+                </div>
+            </div>
+        
+</div>
+    </div>
+    </form>
+
+
+</body></html>
